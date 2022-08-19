@@ -2,7 +2,11 @@ defaults:
   - scope:
       path: index
     values:
-      layout: default
+      layout: index
+  - scope:
+      path: week
+    values:
+      layout: week
 livereload: true
 sass:
   implementation: sass-embedded
