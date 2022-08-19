@@ -12,7 +12,7 @@ layout: default
 <ul>
 	{% for week in weeks %}
 		<li>
-			<a href="{{ week.url }}">{% include title.html %}</a>
+			<a href="{{ week.url }}">{% include title.html %}, {% include date.html %}</a>
 		</li>
 	{% endfor %}
 </ul>

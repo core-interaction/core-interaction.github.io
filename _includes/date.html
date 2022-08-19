@@ -1,0 +1,29 @@
+{%- if page.date -%}
+	{{- page.date | date: '%B %-d' -}}
+{%- elsif week.date -%}
+	{{- week.date | date: '%B %-d' -}}
+{%- else -%}
+	{%- assign weeks = site.pages | where: 'layout', 'week' -%}
+	{%- if page.layout == 'week' -%}
+		{%- assign current_week = page.name -%}
+	{%- else -%}
+		{%- assign current_week = week.name -%}
+	{%- endif -%}
+	{%- for week in weeks -%}
+		{%- if week.name == current_week -%}
+			{%- assign previous_week = forloop.index0 | minus: 1 -%}
+			{%- break -%}
+		{%- endif -%}
+	{%- endfor -%}
+	{%- for offset in (1..weeks.size) -%}
+		{%- if weeks[previous_week].date -%}
+			{% comment %} This offsets the date by a week (in seconds, thanks Liquid). {% endcomment %}
+			{% comment %} Plus a day, since it counts from midnight. {% endcomment %}
+			{%- assign offset_seconds = offset | times: 604800 | plus: 86400 -%}
+			{{- (weeks[previous_week].date | date: '%s' | plus: offset_seconds) | date: '%B %-d' -}}
+			{%- break -%}
+		{%- else -%}
+			{%- assign previous_week = previous_week | minus: 1 -%}
+		{%- endif -%}
+	{%- endfor -%}
+{%- endif -%}
