@@ -3,8 +3,8 @@
 	{%- assign week_number = page.name -%}
 {%- elsif week.name -%}
 	{%- assign week_number = week.name -%}
-{%- endif-%}
-{% if week_number %}
+{%- endif -%}
+{%- if week_number -%}
 	{{- week_number | split: '.' | first | prepend: 'Week ' -}}
 {%- else -%}
 	{{- index.title -}}
