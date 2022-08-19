@@ -8,3 +8,11 @@ layout: default
 <main>
 	{{ content }}
 </main>
+{% assign weeks = site.pages | where: 'layout', 'week' %}
+<ul>
+	{% for week in weeks %}
+		<li>
+			<a href="{{ week.url }}">{% include title.html %}</a>
+		</li>
+	{% endfor %}
+</ul>
