@@ -1,0 +1,6 @@
+{% assign index = site.pages | where: 'layout', 'index' | first %}
+{% if page.layout == 'week' %}
+	{{ page.name | split: '.' | first | prepend: 'Week ' }}
+{% else %}
+	{{ index.title }}
+{% endif %}
