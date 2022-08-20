@@ -76,4 +76,10 @@ body {
 	h1 { --typography--size: var(--typography--size--h1); }
 	h2 { --typography--size: var(--typography--size--h2); }
 	h3 { --typography--size: var(--typography--size--h3); }
+
+
+
+	> main {
+		margin-top: calc(var(--margin--vertical) * 4);
+	}
 }

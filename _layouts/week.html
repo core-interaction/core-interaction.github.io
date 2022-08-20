@@ -3,9 +3,10 @@ layout: default
 ---
 
 
-
-<main>
+<header>
 	<h1>{{ page.name | week_number }}</h1>
+</header>
+<main>
 	<p>{% include auto_date.html %}</p>
 	{{ content }}
 </main>
