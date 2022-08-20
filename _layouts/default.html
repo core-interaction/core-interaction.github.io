@@ -3,7 +3,13 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>{% include title.html %}</title>
+		{% assign index = site.pages | where: 'layout', 'index' | first %}
+		{% if page.layout == 'week' %}
+			{% assign title = page.name | week_number %}
+		{% else %}
+			{% assign title = index.title %}
+		{% endif %}
+		<title>{{ title }}</title>
 	</head>
 	<body>
 		{{ content }}

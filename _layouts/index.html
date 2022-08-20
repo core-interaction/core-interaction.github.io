@@ -4,7 +4,7 @@ layout: default
 
 
 
-<h1>{% include title.html %}</h1>
+<h1>{{ page.title }}</h1>
 <main>
 	{{ content }}
 </main>
@@ -12,7 +12,7 @@ layout: default
 <ul>
 	{% for week in weeks %}
 		<li>
-			<a href="{{ week.url }}">{% include title.html %}, {% include date.html %}</a>
+			<a href="{{ week.url }}">{{ week.name | week_number }}, {% include date.html %}</a>
 		</li>
 	{% endfor %}
 </ul>
