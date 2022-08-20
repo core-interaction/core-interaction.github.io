@@ -11,7 +11,7 @@ layout: default
 		{% include sorted_weeks.html %}
 		{% for week in weeks %}
 			<li>
-				<a href="{{ week.url | replace: '.html' }}">{{ week.name | week_number }}, {% include auto_date.html %}</a>
+				<p><a href="{{ week.url | replace: '.html' }}">{{ week.name | week_number }}, {% include auto_date.html %}</a></p>
 			</li>
 		{% endfor %}
 	</ul>
@@ -19,7 +19,7 @@ layout: default
 		{% assign topics = site.pages | where: 'layout', 'topic' | where_exp:'page', 'page.order != nil' | sort: 'order' %}
 		{% for topic in topics %}
 			<li>
-				<a href="{{ topic.url | replace: '.html' }}">{{ topic.title }}</a>
+				<p><a href="{{ topic.url | replace: '.html' }}">{{ topic.title }}</a></p>
 			</li>
 		{% endfor %}
 	</ul>
