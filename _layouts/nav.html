@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+
+
+{% assign index = site.pages | where: 'layout', 'index' | first %}
+<nav>
+	<div>
+		<a href="{{ index.url }}">
+			<p>← {{ index.title }}</p>
+		</a>
+	</div>
+</nav>
+
+{{ content }}

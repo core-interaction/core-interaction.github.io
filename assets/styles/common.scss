@@ -30,6 +30,8 @@
 	--color:             black;
 	--color--background: white;
 
+	--alpha--faded: 0.333;
+
 	scroll-behavior: smooth;
 
 	@include breakpoint(320) { --typography--size: calc((16/375) * 100vw); }
@@ -69,15 +71,50 @@ body {
 
 
 
-	// Inset text column.
-	> main {
-		margin-bottom:  50vh;
+	// The main column constraints.
+	%page--container {
 		margin-left:    auto;
 		margin-right:   auto;
 		max-width:      var(--page--width);
 		padding-left:   var(--margin);
 		padding-right:  var(--margin);
 		width:          100%;
+	}
+
+
+
+	// Breadcrumb thing.
+	> nav {
+		@extend %type--layout;
+
+		background-color: var(--color--background);
+		margin-bottom:    calc(var(--typography--cap) * -1);
+		padding-bottom:   var(--typography--cap);
+		padding-top:      var(--margin--vertical);
+		position:         sticky;
+		top:              calc(var(--typography--cap) - var(--margin--vertical));
+
+		> div {
+			@extend %page--container;
+
+			> a {
+				display:         flex;
+				justify-content: start;
+
+				> p {
+					opacity: var(--alpha--faded);
+				}
+			}
+		}
+	}
+
+
+
+	// Inset text column.
+	> main {
+		@extend %page--container;
+
+		margin-bottom:  50vh;
 
 		> header {
 			margin-bottom: calc(var(--margin--vertical) * 4);
