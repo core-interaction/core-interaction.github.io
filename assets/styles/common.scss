@@ -55,17 +55,6 @@
 
 
 body {
-	margin-left:    auto;
-	margin-right:   auto;
-	max-width:      var(--page--width);
-	padding-bottom: 50vh;
-	padding-left:   var(--margin);
-	padding-right:  var(--margin);
-	padding-top:    calc(var(--margin--vertical) * 4);
-	width:          100%;
-
-
-
 	h1,
 	h2,
 	h3 {
@@ -80,51 +69,66 @@ body {
 
 
 
-	// Parsed Markdown block.
+	// Inset text column.
 	> main {
-		margin-top: calc(var(--margin--vertical) * 4);
+		margin-bottom:  50vh;
+		margin-left:    auto;
+		margin-right:   auto;
+		max-width:      var(--page--width);
+		padding-left:   var(--margin);
+		padding-right:  var(--margin);
+		width:          100%;
 
-		h2,
-		h3,
-		p {
-			max-width: 60ch;
-		}
-
-		> h2 {
-			margin-bottom: calc(var(--margin--vertical) * 2);
+		> header {
+			margin-bottom: calc(var(--margin--vertical) * 4);
 			margin-top:    calc(var(--margin--vertical) * 4);
 		}
 
-		> h3 {
-			margin-top: calc(var(--margin--vertical) * 2);
-		}
+		// Parsed Markdown block.
+		> article {
+			h2,
+			h3,
+			p {
+				max-width: 60ch;
+			}
 
-		> * {
-			--typography--extra-lines: 1; // Sequential spacing.
-		}
+			> h2 {
+				margin-bottom: calc(var(--margin--vertical) * 2);
+				margin-top:    calc(var(--margin--vertical) * 4);
+			}
 
-		a {
-			@extend %font--underline;
+			> h3 {
+				margin-top: calc(var(--margin--vertical) * 2);
+			}
 
-			--color: blue;
+			> * {
+				--typography--extra-lines: 1; // Sequential spacing.
+			}
 
-			color: var(--color);
-		}
+			a {
+				@extend %font--underline;
 
-		p strong {
-			@extend %font--sf--bold;
+				--color: blue;
 
-			font-weight: var(--typography--weight);
-		}
+				color: var(--color);
+			}
+
+			p strong {
+				@extend %font--sf--bold;
+
+				font-weight: var(--typography--weight);
+			}
 
 
-		// Temp.
-		> ul {
-			margin-top: calc(var(--margin--vertical) * 4);
+			// Temp.
+			> ul {
+				margin-top: calc(var(--margin--vertical) * 4);
 
-			> li {
-				margin-top: var(--margin--vertical);
+				> li {
+					margin-top: var(--margin--vertical);
+				}
 			}
 		}
 	}
+
 }
