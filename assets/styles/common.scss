@@ -22,7 +22,7 @@
 	--typography--size--h2: calc(var(--typography--size) * 1.75);
 	--typography--size--h3: calc(var(--typography--size) * 1.25);
 
-	--margin:           calc(var(--typography--size) * 1.5);
+	--margin:           calc(var(--typography--size) * 1.333);
 	--margin--vertical: var(--margin);
 
 	--page--width: 100vw;
@@ -38,6 +38,7 @@
 		--typography--size: 2rem;
 
 		--typography--size--h1: calc(var(--typography--size) * 4);
+		--typography--size--h2: calc(var(--typography--size) * 2);
 
 		--margin: calc(var(--typography--size) * 1.8);
 	}
@@ -79,7 +80,46 @@ body {
 
 
 
+	// Parsed Markdown block.
 	> main {
 		margin-top: calc(var(--margin--vertical) * 4);
+
+		h2,
+		h3,
+		p {
+			max-width: 60ch;
+		}
+
+		> h2 {
+			margin-bottom: calc(var(--margin--vertical) * 2);
+			margin-top:    calc(var(--margin--vertical) * 4);
+		}
+
+		> h3 {
+			margin-top: calc(var(--margin--vertical) * 2);
+		}
+
+		> * {
+			--typography--extra-lines: 1; // Sequential spacing.
+		}
+
+		a {
+			@extend %font--underline;
+
+			--color: blue;
+
+			color: var(--color);
+		}
+
+
+
+		// Temp.
+		> ul {
+			margin-top: calc(var(--margin--vertical) * 4);
+
+			> li {
+				margin-top: var(--margin--vertical);
+			}
+		}
 	}
 }
