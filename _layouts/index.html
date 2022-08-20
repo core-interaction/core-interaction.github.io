@@ -4,24 +4,24 @@ layout: default
 
 
 
-<h1>{{ page.title }}</h1>
 <main>
+	<h1>{{ page.title }}</h1>
 	{{ content }}
+	<ul>
+		{% include sorted_weeks.html %}
+		{% for week in weeks %}
+			<li>
+				<a href="{{ week.url | replace: '.html' }}">{{ week.name | week_number }}, {% include auto_date.html %}</a>
+			</li>
+		{% endfor %}
+	</ul>
+	<ul>
+		{% assign topics = site.pages | where: 'layout', 'topic' | where_exp:'page', 'page.order != nil' | sort: 'order' %}
+		{% for topic in topics %}
+			<li>
+				<a href="{{ topic.url | replace: '.html' }}">{{ topic.title }}</a>
+			</li>
+		{% endfor %}
+	</ul>
 </main>
-<ul>
-	{% include sorted_weeks.html %}
-	{% for week in weeks %}
-		<li>
-			<a href="{{ week.url | replace: '.html' }}">{{ week.name | week_number }}, {% include auto_date.html %}</a>
-		</li>
-	{% endfor %}
-</ul>
-<ul>
-	{% assign topics = site.pages | where: 'layout', 'topic' | where_exp:'page', 'page.order != nil' | sort: 'order' %}
-	{% for topic in topics %}
-		<li>
-			<a href="{{ topic.url | replace: '.html' }}">{{ topic.title }}</a>
-		</li>
-	{% endfor %}
-</ul>
 
