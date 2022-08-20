@@ -32,6 +32,19 @@
 	--typography--underline--skip:   0.085; // Can’t exceed narrowest descender width, with this shadow implementation.
 }
 
+%font--sf--bold {
+	@extend %--sf;
+
+	--typography--weight: 600;
+
+	--typography--inset--left:  -0.062;
+	--typography--inset--right: -0.047;
+
+	--typography--underline:         0.082;
+	--typography--underline--shift: -0.007;
+	--typography--underline--skip:   0.090;
+}
+
 
 
 %font--underline {
