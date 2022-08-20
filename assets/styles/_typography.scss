@@ -1,10 +1,8 @@
 :root {
-	/* Our base size is 10/16, so that 1rem = 10px. Easy maths. */
 	font-size: 62.5%;
 }
 
 :root * {
-	/* Type rendering. */
 	-moz-osx-font-smoothing:  grayscale;
 	-webkit-font-smoothing:   antialiased;
 	-webkit-text-size-adjust: none;

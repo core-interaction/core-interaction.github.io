@@ -12,8 +12,8 @@ When building locally, the `--unpublished` flag will show everything.
 - [x] Auto-generate dates from previous/last
 - [x] Rough out topics
 - [x] Get style “pipeline” going
-- [ ] Set up basic type styles
-- [ ] Get basic `main` layout in place
+- [x] Set up basic type styles
+- [x] Get basic `main` layout in place
 - [ ] Set up more-advanced Markdown styles
   - [ ] `hr`
   - [ ] Inline and `code` blocks
