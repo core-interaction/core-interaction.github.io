@@ -32,7 +32,7 @@
 	--typography--underline--skip:   0.085; // Can’t exceed narrowest descender width, with this shadow implementation.
 }
 
-%font--sf--bold {
+%font--sf--semibold {
 	@extend %--sf;
 
 	--typography--weight: 600;
@@ -43,6 +43,20 @@
 	--typography--underline:         0.082;
 	--typography--underline--shift: -0.007;
 	--typography--underline--skip:   0.090;
+}
+
+
+%font--sf--bold {
+	@extend %--sf;
+
+	--typography--weight: 700;
+
+	--typography--inset--left:  -0.058;
+	--typography--inset--right: -0.044;
+
+	--typography--underline:         0.091;
+	--typography--underline--shift:  0.011;
+	--typography--underline--skip:   0.091;
 }
 
 
