@@ -1,5 +1,5 @@
 ---
-title: Typography and Interaction
+title: Typography and Interaction
 ---
 
 
