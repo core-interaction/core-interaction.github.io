@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		{% if page.layout == 'week' %}
 			{% assign title = page.name | week_number %}
-		{% elsif page.layout == 'index' %}
+		{% else %}
 			{% assign title = page.title %}
 		{% endif %}
 		<title>{{ title }}</title>
