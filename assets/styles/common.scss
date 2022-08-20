@@ -7,3 +7,17 @@
 @use "utilities" as *;
 
 @use 'reset';
+@use 'typography';
+
+
+
+:root {
+	--typography--leading: 1.2;
+	--typography--size:    2rem;
+}
+
+
+
+body {
+
+}
