@@ -8,7 +8,7 @@ layout: default
 <main>
 	{{ content }}
 </main>
-{% assign weeks = site.pages | where: 'layout', 'week' | where_exp:'page', 'page.date != nil'| sort: 'date' %}
+{% assign weeks = site.pages | where: 'layout', 'week' | where_exp:'page', 'page.date != nil' | sort: 'date' %}
 <ul>
 	{% for week in weeks %}
 		<li>
