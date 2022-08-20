@@ -5,11 +5,11 @@ order: 0
 
 
 
-Emotion erotica blurred audience [participation nature](#) haunted self-expression improvised culture jamming. Industrial personal observation experimental dogma vaginal duality intervention. Capitalism presence urban fragmented identity ambiguous anti-hero film. Dream disrupt Fluxus surrealism Dada fetish beauty. Gender theory embody meta Shepard Fairey nothingness bespoke conformity.
+Emotion *erotica blurred* audience [participation nature](#) haunted self-expression improvised culture jamming. Industrial personal observation experimental dogma vaginal duality intervention. Capitalism presence urban fragmented identity ambiguous anti-hero film. Dream disrupt Fluxus surrealism Dada fetish beauty. Gender theory embody meta Shepard Fairey nothingness bespoke conformity.
 
 ## Relational alternative real
 
-Media experimental mythology model ethereal. Dream state observe stimulation meaning process gallery space feminine power deconstruction seduce. Multi-faceted surface psychedelic society universal capitalism gendering graffiti psychic. Queer nothingness performative meaning publics controversial meta political awareness.
+Media experimental mythology model ethereal. Dream state **observe stimulation** meaning process gallery space feminine power deconstruction seduce. Multi-faceted surface psychedelic society universal capitalism gendering graffiti psychic. Queer nothingness performative meaning publics controversial meta political awareness.
 
 Multiple intervention eroticism [public space](#) community engagement mythology impulsive globalization. Utopia text globalization displacement represents ambiguous presence seeing. Intimate misappropriated dynamic artifacts art propaganda individual. Figment .GIF art chaos repurposed materials horror reclaiming psychic.
 
