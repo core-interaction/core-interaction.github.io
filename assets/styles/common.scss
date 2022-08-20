@@ -15,8 +15,12 @@
 :root {
 	@extend %font--sf--regular;
 
-	--typography--leading: 1.5;
-	--typography--size:    1.6rem;
+	--typography--leading:  1.5;
+	--typography--size:     1.6rem;
+
+	--typography--size--h1: calc(var(--typography--size) * 3);
+	--typography--size--h2: calc(var(--typography--size) * 1.75);
+	--typography--size--h3: calc(var(--typography--size) * 1.25);
 
 	--margin:           calc(var(--typography--size) * 1.5);
 	--margin--vertical: var(--margin);
@@ -28,10 +32,12 @@
 
 	scroll-behavior: smooth;
 
-	@include breakpoint(320) { --typography--size: calc((20/375) * 100vw); } // Scale it all down from 20 @ 375.
+	@include breakpoint(320) { --typography--size: calc((16/375) * 100vw); }
 
 	@include breakpoint(768) {
 		--typography--size: 2rem;
+
+		--typography--size--h1: calc(var(--typography--size) * 4);
 
 		--margin: calc(var(--typography--size) * 1.8);
 	}
@@ -57,4 +63,18 @@ body {
 	padding-right:  var(--margin);
 	padding-top:    calc(var(--margin--vertical) * 4);
 	width:          100%;
+
+
+
+	h1,
+	h2,
+	h3 {
+		@extend %font--sf--bold;
+
+		--typography--leading: 1;
+	}
+
+	h1 { --typography--size: var(--typography--size--h1); }
+	h2 { --typography--size: var(--typography--size--h2); }
+	h3 { --typography--size: var(--typography--size--h3); }
 }
