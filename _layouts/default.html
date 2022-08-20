@@ -3,11 +3,10 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		{% assign index = site.pages | where: 'layout', 'index' | first %}
 		{% if page.layout == 'week' %}
 			{% assign title = page.name | week_number %}
-		{% else %}
-			{% assign title = index.title %}
+		{% elsif page.layout == 'index' %}
+			{% assign title = page.title %}
 		{% endif %}
 		<title>{{ title }}</title>
 	</head>
