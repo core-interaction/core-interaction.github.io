@@ -8,11 +8,11 @@ layout: default
 <main>
 	{{ content }}
 </main>
-{% assign weeks = site.pages | where: 'layout', 'week' | where_exp:'page', 'page.date != nil' | sort: 'date' %}
 <ul>
+	{% include sorted_weeks.html %}
 	{% for week in weeks %}
 		<li>
-			<a href="{{ week.url | replace: '.html' }}">{{ week.name | week_number }}, {{ week.date | week_date }}</a>
+			<a href="{{ week.url | replace: '.html' }}">{{ week.name | week_number }}, {% include auto_date.html %}</a>
 		</li>
 	{% endfor %}
 </ul>

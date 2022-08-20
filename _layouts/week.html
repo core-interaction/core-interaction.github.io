@@ -5,7 +5,7 @@ layout: default
 
 
 <h1>{{ page.name | week_number }}</h1>
-<p>{{ page.date | week_date }}</p>
+<p>{% include auto_date.html %}</p>
 <main>
 	{{ content }}
 </main>

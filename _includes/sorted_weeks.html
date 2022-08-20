@@ -1,0 +1,13 @@
+{% comment %} Liquid/Jekyll lack a natural/numeric sort, so here we are. {% endcomment %}
+{% assign all_weeks = site.pages | where: 'layout', 'week' %}
+{% assign low_weeks = '' | split: ',' %} {% comment %} This is also dumb, Liquid. {% endcomment %}
+{% assign high_weeks = '' | split: ',' %}
+{% for week in all_weeks %}
+	{% assign week_number = week.name | split: '.' | first %}
+	{% if week_number.size == 1 %}
+		{% assign low_weeks = low_weeks | push: week %}
+	{% else %}
+		{% assign high_weeks = high_weeks | push: week %}
+	{% endif %}
+{% endfor %}
+{% assign weeks = low_weeks | concat: high_weeks %}
