@@ -5,7 +5,7 @@ module Jekyll
 		end
 		def week_date(input)
 			return input if input.to_s.empty?
-			time(input).strftime('%B %-d')
+			time(input).strftime('%B %-d')
 		end
 	end
 end
