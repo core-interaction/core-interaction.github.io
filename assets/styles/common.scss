@@ -23,10 +23,6 @@
 
 	--page--width: 100vw;
 
-	--link--enlargement: 0.4rem;
-	--link--highlight:   var(--color--link--reverse);
-	--link--outline:     0.2rem;
-
 	scroll-behavior: smooth;
 
 	@include breakpoint(320) { --typography--size: calc((20/375) * 100vw); } // Scale it all down from 20 @ 375.
@@ -35,8 +31,6 @@
 		--typography--size: 2rem;
 
 		--margin: calc(var(--typography--size) * 1.5);
-
-		--link--enlargement: 0.8rem;
 	}
 
 	@include breakpoint(980) {
