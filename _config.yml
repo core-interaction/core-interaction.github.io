@@ -4,6 +4,10 @@ defaults:
     values:
       layout: index
   - scope:
+      path: topic
+    values:
+      layout: topic
+  - scope:
       path: week
     values:
       layout: week
