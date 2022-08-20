@@ -1,0 +1,112 @@
+$--default-font-fize: 16;
+
+
+
+// For targeting lingering, different behaviors.
+@mixin browser-specific($browsers...) {
+	@if index($browsers, 'firefox') {
+		@supports (-moz-appearance: meterbar) {
+			@content;
+		}
+	}
+	@if index($browsers, 'safari') {
+		@supports (-webkit-hyphens: none) { // This might change, when Chrome plays ball.
+			@content;
+		}
+	}
+	@if index($browsers, 'safari--mobile') {
+		@supports (-webkit-hyphens: none) and (-webkit-touch-callout: none) { // Target iOS subset.
+			@content;
+		}
+	}
+	@if index($browsers, 'safari--iphone') {
+		@supports (-webkit-hyphens: none) and (-webkit-touch-callout: none) and (-webkit-overflow-scrolling: touch) { // Just iPhones.
+			@media // iPad “slide over” matches the overflow condition, so size-based queries.
+				(-webkit-min-device-pixel-ratio: 2) and (max-height: #{calc(526 / $--default-font-fize)}em), // Lil’ iPhone SE.
+				(-webkit-min-device-pixel-ratio: 2) and (min-width: #{calc(375 / $--default-font-fize)}em) and (max-height: #{calc(616 / $--default-font-fize)}em), // Bigger iPhone SE / 8.
+				(-webkit-min-device-pixel-ratio: 2) and (min-width: #{calc(414 / $--default-font-fize)}em), // iPhones 11 / XR.
+				(-webkit-min-device-pixel-ratio: 2) and (orientation: landscape), // All these in landscape.
+				(-webkit-min-device-pixel-ratio: 3) { // iPhones after 2020 or so, no iPads are @3x yet.
+				@content;
+			}
+		}
+	}
+	@if index($browsers, 'chrome') {
+		@media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
+			@supports not (-moz-appearance: meterbar) { // Scope out Firefox.
+				@content;
+			}
+		}
+	}
+	@if index($browsers, 'chrome--mobile') {
+		@media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) and (max-width: #{calc(767 / $--default-font-fize)}em) {
+			@supports not (-moz-appearance: meterbar) {
+				@content;
+			}
+		}
+	}
+}
+
+
+
+// Flexible breaks.
+@mixin breakpoint($break) {
+	@if $break == 320 { // These are sadly the exception, now.
+		@media (max-width: #{calc(374 / $--default-font-fize)}em) {
+			@content;
+		}
+	}
+	@else if $break == 768 {
+		@media
+			(min-width: #{calc($break / $--default-font-fize)}em) and (min-height: #{calc(480 / $--default-font-fize)}em), // Clear landscape iPhones.
+			(min-width: #{calc(930 / $--default-font-fize)}em) {
+			@content;
+		}
+	}
+	@else {
+		@media (min-width: #{calc($break / $--default-font-fize)}em) {
+			@content;
+		}
+	}
+}
+
+@mixin landscape($break: false) {
+	@if $break {
+		@media
+			(orientation: landscape),
+			(min-width: #{calc($break / $--default-font-fize)}em) {
+			@content;
+		}
+	}
+	@else {
+		@media
+			(orientation: landscape), // Actually landscape.
+			(min-width: #{calc(568 / $--default-font-fize)}em) and (min-height: #{calc(480 / $--default-font-fize)}em), // Clear landscape iPhones.
+			(min-width: #{calc(930 / $--default-font-fize)}em) {
+			@content;
+		}
+	}
+}
+
+@mixin tall {
+	@media (min-height: #{calc(1024 / $--default-font-fize)}em) {
+		@content;
+	}
+}
+
+@mixin retina($density: 2) {
+	@media (-webkit-min-device-pixel-ratio: #{$density}) {
+		@content;
+	}
+}
+
+
+
+// Scope hovers.
+@mixin hover {
+	@media (any-hover: hover) {
+		&:hover {
+			@content;
+		}
+	}
+}
