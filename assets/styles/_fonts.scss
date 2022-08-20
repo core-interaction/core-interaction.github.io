@@ -1,0 +1,27 @@
+%--shoulders {
+	--typography--shoulder:      calc(1 - var(--typography--cap-height)); // Remainder/overhang.
+	--typography--shoulder--top: calc(var(--typography--shoulder) - var(--typography--shoulder--bottom));
+}
+
+%--sf {
+	@extend %--shoulders;
+
+	--typography--cap-height:       0.705; // In em.
+	--typography--x-height:         0.508;
+	--typography--shoulder--bottom: 0.122; // Vertical centering in Chrome’s bounding box, across most sizes.
+
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+
+
+%font--sf--regular {
+	@extend %--sf;
+
+	--typography--weight: 400;
+
+	--typography--inset--left:  -0.068; // Optical insets, left edge of capital "M".
+	--typography--inset--right: -0.052; // Right edge of lowercase “m” (since lines tend to end lowercase).
+
+	--typography--underline:         0.066; // Height of crossbar on lowercase “e”.
+}

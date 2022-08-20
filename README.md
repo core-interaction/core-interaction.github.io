@@ -35,5 +35,6 @@ When building locally, the `--unpublished` flag will show everything.
 - [ ] “Brand” the index page
 - [ ] Add shortcuts for week recordings
 - [ ] Highlight current week in list
+- [ ] Add `@font-face` for SF in Windows
 
 

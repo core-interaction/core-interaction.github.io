@@ -8,12 +8,15 @@
 
 @use 'reset';
 @use 'typography';
+@use 'fonts';
 
 
 
 :root {
-	--typography--leading: 1.2;
-	--typography--size:    2rem;
+	@extend %font--sf--regular;
+
+	--typography--leading: 1.5;
+	--typography--size:    1.6rem;
 
 	--margin:           calc(var(--typography--size) * 1.2);
 	--margin--vertical: var(--margin);
@@ -29,7 +32,7 @@
 	@include breakpoint(320) { --typography--size: calc((20/375) * 100vw); } // Scale it all down from 20 @ 375.
 
 	@include breakpoint(768) {
-		--typography--size: 2.4rem;
+		--typography--size: 2rem;
 
 		--margin: calc(var(--typography--size) * 1.5);
 
