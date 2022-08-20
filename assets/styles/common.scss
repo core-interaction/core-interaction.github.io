@@ -18,7 +18,7 @@
 	--typography--leading: 1.5;
 	--typography--size:    1.6rem;
 
-	--margin:           calc(var(--typography--size) * 1.2);
+	--margin:           calc(var(--typography--size) * 1.5);
 	--margin--vertical: var(--margin);
 
 	--page--width: 100vw;
@@ -33,11 +33,11 @@
 	@include breakpoint(768) {
 		--typography--size: 2rem;
 
-		--margin: calc(var(--typography--size) * 1.5);
+		--margin: calc(var(--typography--size) * 1.8);
 	}
 
 	@include breakpoint(980) {
-		--margin:      calc(var(--typography--size) * 2);
+		--margin:      calc(var(--typography--size) * 2.4);
 		--page--width: 98rem;
 	}
 
