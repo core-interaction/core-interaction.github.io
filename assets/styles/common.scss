@@ -69,7 +69,7 @@ body {
 	h1,
 	h2,
 	h3 {
-		@extend %font--sf--bold;
+		@extend %font--sf--semibold;
 
 		--typography--leading: 1;
 	}
@@ -111,6 +111,11 @@ body {
 			color: var(--color);
 		}
 
+		p strong {
+			@extend %font--sf--bold;
+
+			font-weight: var(--typography--weight);
+		}
 
 
 		// Temp.
