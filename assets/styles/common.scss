@@ -15,9 +15,14 @@
 	--typography--leading: 1.2;
 	--typography--size:    2rem;
 
-	--margin: calc(var(--typography--size) * 1.2);
+	--margin:           calc(var(--typography--size) * 1.2);
+	--margin--vertical: var(--margin);
 
 	--page--width: 100vw;
+
+	--link--enlargement: 0.4rem;
+	--link--highlight:   var(--color--link--reverse);
+	--link--outline:     0.2rem;
 
 	scroll-behavior: smooth;
 
@@ -27,11 +32,17 @@
 		--typography--size: 2.4rem;
 
 		--margin: calc(var(--typography--size) * 1.5);
+
+		--link--enlargement: 0.8rem;
 	}
 
 	@include breakpoint(980) {
 		--margin:      calc(var(--typography--size) * 2);
 		--page--width: 98rem;
+	}
+
+	@include landscape {
+		--margin--vertical: calc(var(--margin) / 2);
 	}
 }
 
@@ -44,10 +55,6 @@ body {
 	padding-bottom: 50vh;
 	padding-left:   var(--margin);
 	padding-right:  var(--margin);
-	padding-top:    calc(var(--margin) * 4);
+	padding-top:    calc(var(--margin--vertical) * 4);
 	width:          100%;
-
-	@include landscape {
-		padding-top: calc(var(--margin) * 2);
-	}
 }
