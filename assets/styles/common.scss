@@ -16,7 +16,7 @@
 	@extend %font--times--regular;
 
 	--typography--leading:        1.333;
-	--typography--leading--tight: 0.75;
+	--typography--leading--tight: 1;
 
 	--typography--tracking: -0.015;
 
@@ -62,13 +62,29 @@
 
 body {
 	h1 {
+		// Kerning our “Tight Times” headings.
+
 		--typography--tracking: -0.020;
 
-		span.t { letter-spacing: -0.2em; }
-		span.y { letter-spacing:  0.01em; }
-		span.h { letter-spacing: -0.05em; }
-		span.n { letter-spacing: -0.02em; }
-		span.d { letter-spacing: -0.1em; }
+		span.space, span.nbsp, { letter-spacing: -0.1em; }
+
+		span.a + span.c { margin-left:  0.01em; }
+		span.a + span.n { margin-left:  0.03em; }
+		span.a + span.r { margin-left:  0.04em; }
+		span.g + span.r { margin-left:  0.04em; }
+		span.h + span.y { margin-left: -0.02em; }
+		span.I + span.n { margin-left: -0.02em; }
+		span.i + span.o { margin-left: -0.02em; }
+		span.i + span.n { margin-left: -0.02em; }
+		span.k + span.d { margin-left: -0.01em; }
+		span.o + span.g { margin-left: -0.03em; }
+		span.o + span.w { margin-left: -0.03em; }
+		span.p + span.h { margin-left: -0.01em; }
+		span.r + span.a { margin-left:  0.01em; }
+		span.t + span.i { margin-left:  0.02em; }
+		span.T + span.y { margin-left: -0.12em; }
+		span.w + span.n { margin-left:  0.02em; }
+		span.y + span.p { margin-left:  0.03em; }
 	}
 
 	h1,
