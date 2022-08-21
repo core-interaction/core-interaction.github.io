@@ -15,14 +15,14 @@
 :root {
 	@extend %font--times--regular;
 
-	--typography--leading:        1.25;
-	--typography--leading--tight: 0.8;
+	--typography--leading:        1.333;
+	--typography--leading--tight: 0.75;
 
 	--typography--tracking: -0.015;
 
-	--typography--size: 2rem;
+	--typography--size: 1.8rem;
 
-	--typography--size--h1: calc(var(--typography--size) * 2.75);
+	--typography--size--h1: calc(var(--typography--size) * 3);
 	--typography--size--h2: calc(var(--typography--size) * 1.75);
 	--typography--size--h3: calc(var(--typography--size) * 1.25);
 
@@ -34,14 +34,14 @@
 	--color:             black;
 	--color--background: white;
 
-	--color--links: #0044ff;
+	--color--links: blue;
 
 	scroll-behavior: smooth;
 
 	@include breakpoint(320) { --typography--size: calc((20/375) * 100vw); }
 
 	@include breakpoint(768) {
-		--typography--size: 2.4rem;
+		--typography--size: 2.2rem;
 
 		--typography--size--h1: calc(var(--typography--size) * 4);
 		--typography--size--h2: calc(var(--typography--size) * 2);
@@ -62,6 +62,8 @@
 
 body {
 	h1 {
+		--typography--tracking: -0.020;
+
 		span.t { letter-spacing: -0.2em; }
 		span.y { letter-spacing:  0.01em; }
 		span.h { letter-spacing: -0.05em; }
