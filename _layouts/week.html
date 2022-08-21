@@ -6,7 +6,7 @@ layout: nav
 
 <main>
 	<header>
-		<h1>{{ page.name | week_number }}</h1>
+		<h1>{{ page.name | week_number | kerning_spans }}</h1>
 	</header>
 	<article>
 		<p>{% include auto_date.html %}</p>
