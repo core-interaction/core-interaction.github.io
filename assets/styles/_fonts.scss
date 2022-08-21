@@ -245,23 +245,23 @@
 	text-decoration-thickness: var(--typography--decoration-thickness);
 	text-underline-offset:     calc(-1 * var(--typography--underline-offset) + var(--typography--decoration-thickness) + var(--typography--underline-offset--extra, 0em));
 
-	@include browser-specific(safari) {
+	@include browser-specific(safari, firefox) {
 		-webkit-text-stroke-color: var(--color--background);
-		-webkit-text-stroke-width: calc(var(--typography--decoration-thickness) * 2);
+		-webkit-text-stroke-width: calc(var(--typography--text-shadow) * 2);
 		paint-order:               stroke fill; // Fill on top!
 		text-decoration-skip-ink:  none;
 	}
 
-	@include browser-specific(chrome, firefox) { // Chrome doesn’t support `paint-order`, so use a shadow.
+	@include browser-specific(chrome) { // Chrome doesn’t support `paint-order`, so use a shadow.
 		text-shadow: // Clear the descenders, if we know the background color.
 			var(--color--background) var(--typography--text-shadow) 0, // “East”
-			var(--color--background) var(--typography--text-shadow) calc(var(--typography--text-shadow) / 2), // “Southeast”
-			var(--color--background) 0 calc(var(--typography--text-shadow) / 2), // “South”
-			var(--color--background) calc(-1 * var(--typography--text-shadow)) calc(var(--typography--text-shadow) / 2), // “Southwest”
+			var(--color--background) var(--typography--text-shadow) calc(var(--typography--text-shadow) / 6), // “Southeast”
+			var(--color--background) 0 calc(var(--typography--text-shadow) / 6), // “South”
+			var(--color--background) calc(-1 * var(--typography--text-shadow)) calc(var(--typography--text-shadow) / 6), // “Southwest”
 			var(--color--background) calc(-1 * var(--typography--text-shadow)) 0, // “West”
-			var(--color--background) calc(-1 * var(--typography--text-shadow)) calc(-1 * var(--typography--text-shadow) / 2), // “Northwest”
-			var(--color--background) 0 calc(-1 * var(--typography--text-shadow) / 2), // “North”
-			var(--color--background) var(--typography--text-shadow) calc(-1 * var(--typography--text-shadow) / 2) // “Northeast”
+			var(--color--background) calc(-1 * var(--typography--text-shadow)) calc(-1 * var(--typography--text-shadow) / 6), // “Northwest”
+			var(--color--background) 0 calc(-1 * var(--typography--text-shadow) / 6), // “North”
+			var(--color--background) var(--typography--text-shadow) calc(-1 * var(--typography--text-shadow) / 6) // “Northeast”
 			;
 	}
 }
