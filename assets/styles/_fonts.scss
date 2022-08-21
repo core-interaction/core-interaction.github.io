@@ -2,6 +2,11 @@
 
 
 
+// Cormorant Garamond.
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+
 %--shoulders {
 	--typography--shoulder:      calc(1 - var(--typography--cap-height)); // Remainder/overhang.
 	--typography--shoulder--top: calc(var(--typography--shoulder) - var(--typography--shoulder--bottom));
@@ -25,6 +30,16 @@
 	--typography--shoulder--bottom: 0.145;
 
 	font-family: SF Mono, ui-monospace, monospace;
+}
+
+%--garamond {
+	@extend %--shoulders;
+
+	--typography--cap-height:       0.621;
+	--typography--x-height:         0.382;
+	--typography--shoulder--bottom: 0.184;
+
+	font-family: Cormorant Garamond, serif;
 }
 
 
@@ -148,6 +163,74 @@
 	--typography--underline:        0.099;
 	--typography--underline--shift: 0.018;
 	--typography--underline--skip:  0.117;
+}
+
+
+
+// Cormorant Garamond.
+%font--garamond--light {
+	@extend %--garamond;
+
+	--typography--weight: 300;
+
+	--typography--inset--left:  -0.041;
+	--typography--inset--right: -0.020;
+
+	--typography--underline:         0.012; // Serif height.
+	--typography--underline--shift: -0.251;
+	--typography--underline--skip:   0.047;
+}
+
+%font--garamond--regular {
+	@extend %--garamond;
+
+	--typography--weight: 400;
+
+	--typography--inset--left:  -0.038;
+	--typography--inset--right: -0.019;
+
+	--typography--underline:         0.012;
+	--typography--underline--shift: -0.251;
+	--typography--underline--skip:   0.056;
+}
+
+%font--garamond--medium {
+	@extend %--garamond;
+
+	--typography--weight: 500;
+
+	--typography--inset--left:  -0.034;
+	--typography--inset--right: -0.018;
+
+	--typography--underline:         0.012;
+	--typography--underline--shift: -0.251;
+	--typography--underline--skip:   0.068;
+}
+
+%font--garamond--semibold {
+	@extend %--garamond;
+
+	--typography--weight: 600;
+
+	--typography--inset--left:  -0.029;
+	--typography--inset--right: -0.016;
+
+	--typography--underline:         0.012;
+	--typography--underline--shift: -0.251;
+	--typography--underline--skip:   0.081;
+}
+
+%font--garamond--bold {
+	@extend %--garamond;
+
+	--typography--weight: 700;
+
+	--typography--inset--left:  -0.025;
+	--typography--inset--right: -0.015;
+
+	--typography--underline:         0.012;
+	--typography--underline--shift: -0.251;
+	--typography--underline--skip:   0.093;
 }
 
 
