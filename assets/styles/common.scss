@@ -13,12 +13,12 @@
 
 
 :root {
-	@extend %font--garamond--medium;
+	@extend %font--times--regular;
 
 	--typography--leading:        1.25;
 	--typography--leading--tight: 0.8;
 
-	--typography--tracking: -0.010;
+	--typography--tracking: -0.015;
 
 	--typography--size: 2rem;
 
@@ -62,19 +62,11 @@
 
 body {
 	h1 {
-		@extend %font--garamond--light;
-
-		font-variant-numeric: lining-nums;
-
 		span.t { letter-spacing: -0.2em; }
 		span.y { letter-spacing:  0.01em; }
 		span.h { letter-spacing: -0.05em; }
-		span.n { letter-spacing: -0.03em; }
+		span.n { letter-spacing: -0.02em; }
 		span.d { letter-spacing: -0.1em; }
-	}
-
-	h2 {
-		@extend %font--garamond--regular;
 	}
 
 	h1,
@@ -123,7 +115,7 @@ body {
 					color: var(--color--links);
 
 					> span {
-						@extend %font--sf--thin;
+						@extend %font--sf--light;
 
 						display:     inline-flex;
 						font-weight: var(--typography--weight);
@@ -173,7 +165,7 @@ body {
 			}
 
 			p strong {
-				@extend %font--garamond--bold;
+				@extend %font--times--bold;
 
 				font-weight: var(--typography--weight);
 			}

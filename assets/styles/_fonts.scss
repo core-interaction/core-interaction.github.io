@@ -2,11 +2,6 @@
 
 
 
-// Cormorant Garamond.
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-
-
-
 %--shoulders {
 	--typography--shoulder:      calc(1 - var(--typography--cap-height)); // Remainder/overhang.
 	--typography--shoulder--top: calc(var(--typography--shoulder) - var(--typography--shoulder--bottom));
@@ -32,14 +27,14 @@
 	font-family: SF Mono, ui-monospace, monospace;
 }
 
-%--garamond {
+%--times {
 	@extend %--shoulders;
 
-	--typography--cap-height:       0.621;
-	--typography--x-height:         0.382;
-	--typography--shoulder--bottom: 0.184;
+	--typography--cap-height:       0.662;
+	--typography--x-height:         0.447;
+	--typography--shoulder--bottom: 0.163;
 
-	font-family: Cormorant Garamond, serif;
+	font-family: Times New Roman, monospace;
 }
 
 
@@ -245,71 +240,34 @@
 
 
 
-// Cormorant Garamond.
-%font--garamond--light {
-	@extend %--garamond;
-
-	--typography--weight: 300;
-
-	--typography--inset--left:  -0.041;
-	--typography--inset--right: -0.020;
-
-	--typography--underline:         0.014; // Serif height.
-	--typography--underline--shift: -0.246;
-	--typography--underline--skip:   0.047;
-}
-
-%font--garamond--regular {
-	@extend %--garamond;
+// Plain ol’ Times.
+%font--times--regular {
+	@extend %--times;
 
 	--typography--weight: 400;
 
-	--typography--inset--left:  -0.038;
-	--typography--inset--right: -0.019;
+	--typography--inset--left:  -0.017;
+	--typography--inset--right:  0.005;
 
-	--typography--underline:         0.014;
-	--typography--underline--shift: -0.246;
-	--typography--underline--skip:   0.056;
-}
-
-%font--garamond--medium {
-	@extend %--garamond;
-
-	--typography--weight: 500;
-
-	--typography--inset--left:  -0.034;
-	--typography--inset--right: -0.018;
-
-	--typography--underline:         0.014;
-	--typography--underline--shift: -0.246;
-	--typography--underline--skip:   0.068;
-}
-
-%font--garamond--semibold {
-	@extend %--garamond;
-
-	--typography--weight: 600;
-
-	--typography--inset--left:  -0.029;
-	--typography--inset--right: -0.016;
-
-	--typography--underline:         0.014;
-	--typography--underline--shift: -0.246;
+	--typography--underline:         0.018; // Serif height.
+	--typography--underline--shift: -0.178;
 	--typography--underline--skip:   0.081;
 }
 
-%font--garamond--bold {
-	@extend %--garamond;
+%font--times--bold {
+	@extend %--times;
 
-	--typography--weight: 700;
+	--typography--weight: 600;
 
-	--typography--inset--left:  -0.025;
-	--typography--inset--right: -0.015;
+	--typography--inset--left:  -0.020;
+	--typography--inset--right: -0.016;
 
-	--typography--underline:         0.014;
-	--typography--underline--shift: -0.246;
-	--typography--underline--skip:   0.093;
+	--typography--underline:         0.018;
+	--typography--underline--shift: -0.178;
+	--typography--underline--skip:   0.118;
 }
+
+
 
 
 
@@ -333,13 +291,13 @@
 	@include browser-specific(chrome) { // Chrome doesn’t support `paint-order`, so use a shadow.
 		text-shadow: // Clear the descenders, if we know the background color.
 			var(--color--background) var(--typography--text-shadow) 0, // “East”
-			var(--color--background) var(--typography--text-shadow) calc(var(--typography--text-shadow) / 6), // “Southeast”
-			var(--color--background) 0 calc(var(--typography--text-shadow) / 6), // “South”
-			var(--color--background) calc(-1 * var(--typography--text-shadow)) calc(var(--typography--text-shadow) / 6), // “Southwest”
+			var(--color--background) var(--typography--text-shadow) calc(var(--typography--text-shadow) / 7), // “Southeast”
+			var(--color--background) 0 calc(var(--typography--text-shadow) / 7), // “South”
+			var(--color--background) calc(-1 * var(--typography--text-shadow)) calc(var(--typography--text-shadow) / 7), // “Southwest”
 			var(--color--background) calc(-1 * var(--typography--text-shadow)) 0, // “West”
-			var(--color--background) calc(-1 * var(--typography--text-shadow)) calc(-1 * var(--typography--text-shadow) / 6), // “Northwest”
-			var(--color--background) 0 calc(-1 * var(--typography--text-shadow) / 6), // “North”
-			var(--color--background) var(--typography--text-shadow) calc(-1 * var(--typography--text-shadow) / 6) // “Northeast”
+			var(--color--background) calc(-1 * var(--typography--text-shadow)) calc(-1 * var(--typography--text-shadow) / 7), // “Northwest”
+			var(--color--background) 0 calc(-1 * var(--typography--text-shadow) / 7), // “North”
+			var(--color--background) var(--typography--text-shadow) calc(-1 * var(--typography--text-shadow) / 7) // “Northeast”
 			;
 	}
 }
