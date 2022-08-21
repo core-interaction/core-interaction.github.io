@@ -14,6 +14,7 @@ When building locally, the `--unpublished` flag will show everything.
 - [x] Get style “pipeline” going
 - [x] Set up basic type styles
 - [x] Get basic `main` layout in place
+- [x] Add home breadcrumb to interior pages
 - [ ] Set up more-advanced Markdown styles
   - [ ] `hr`
   - [ ] Inline and `code` blocks
@@ -30,11 +31,11 @@ When building locally, the `--unpublished` flag will show everything.
 - [ ] Add previous/next buttons to weeks
 - [ ] Show unit for each week
 - [ ] Group week list by units?
-- [ ] Add home breadcrumb to other pages
 - [ ] Add GitHub link to index
 - [ ] “Brand” the index page
 - [ ] Add shortcuts for week recordings
 - [ ] Highlight current week in list
-- [ ] Add `@font-face` for SF in Windows
+- [ ] Add `@font-face` for SFs in Windows
+- [ ] Add “current week” breadcrumb
 
 
