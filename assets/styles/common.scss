@@ -18,11 +18,11 @@
 	--typography--leading:        1.25;
 	--typography--leading--tight: 0.8;
 
-	--typography--tracking: -0.020;
+	--typography--tracking: -0.010;
 
 	--typography--size: 2rem;
 
-	--typography--size--h1: calc(var(--typography--size) * 3);
+	--typography--size--h1: calc(var(--typography--size) * 2.75);
 	--typography--size--h2: calc(var(--typography--size) * 1.75);
 	--typography--size--h3: calc(var(--typography--size) * 1.25);
 
@@ -34,7 +34,7 @@
 	--color:             black;
 	--color--background: white;
 
-	--alpha--faded: 0.333;
+	--color--links: #0044ff;
 
 	scroll-behavior: smooth;
 
@@ -63,6 +63,14 @@
 body {
 	h1 {
 		@extend %font--garamond--light;
+
+		font-variant-numeric: lining-nums;
+
+		span.t { letter-spacing: -0.2em; }
+		span.y { letter-spacing:  0.01em; }
+		span.h { letter-spacing: -0.05em; }
+		span.n { letter-spacing: -0.03em; }
+		span.d { letter-spacing: -0.1em; }
 	}
 
 	h2 {
@@ -112,7 +120,13 @@ body {
 				justify-content: start;
 
 				> p {
-					opacity: var(--alpha--faded);
+					color: var(--color--links);
+
+					> span {
+						@extend %font--sf--thin;
+
+						font-weight: var(--typography--weight);
+					}
 				}
 			}
 		}
@@ -153,11 +167,7 @@ body {
 			}
 
 			a {
-				@extend %font--underline;
-
-				--color: blue;
-
-				color: var(--color);
+				color: var(--color--links);
 			}
 
 			p strong {

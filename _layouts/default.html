@@ -8,7 +8,7 @@
 		{% else %}
 			{% assign title = page.title %}
 		{% endif %}
-		<title>{{ title }}</title>
+		<title>{{ title | strip_html }}</title>
 		<link href="/assets/styles/common.css" rel="stylesheet">
 	</head>
 	<body>

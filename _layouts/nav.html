@@ -8,7 +8,7 @@ layout: default
 <nav>
 	<div>
 		<a href="{{ index.url }}">
-			<p>← {{ index.title }}</p>
+			<p><span>←</span> {{ index.title | strip_html  }}</p>
 		</a>
 	</div>
 </nav>
