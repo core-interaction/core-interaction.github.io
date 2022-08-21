@@ -1,0 +1,88 @@
+@use "utilities" as *;
+
+
+
+%--outline {
+	border-radius: calc(var(--link--enlargement) / 4);
+	outline-color: var(--color--link);
+	outline-style: solid;
+	outline-width: var(--link--outline--override, var(--link--outline));
+}
+
+%--focus {
+	-webkit-tap-highlight-color: var(--link--highlight);
+	cursor:                     pointer;
+	transition-duration:        var(--link--hover--transition);
+	transition-property:        filter;
+	transition-timing-function: linear;
+
+
+	&:active {
+		background-color: var(--link--highlight);
+		border-radius:    calc(var(--link--enlargement) / 2);
+	}
+
+	&:focus {
+		outline: none;
+		z-index: 1;
+
+		&:focus-visible:not(:disabled) {
+			@extend %--outline;
+		}
+	}
+
+	@include hover {
+		$thanksNex3: 'opacity(var(--link--hover--opacity))'; // SCSS thinks `opacity` is its internal color function.
+
+		filter: unquote($thanksNex3);
+	}
+}
+
+
+
+%link--enlargement {
+	margin:  calc(var(--link--enlargement) * -1);
+	padding: var(--link--enlargement);
+}
+
+%link--element {
+	@extend %--focus;
+	@extend %link--enlargement;
+
+	display:        flex;
+	flex-direction: column;
+	width:          fit-content;
+}
+
+%link--text {
+	@extend %--focus;
+
+	border-color:        transparent;
+	border-left-width:   var(--link--enlargement);
+	border-right-width:  var(--link--enlargement);
+	border-bottom-width: calc(var(--link--enlargement) / 2); // Clear underlines.
+	border-top-width:    0;
+	border-style:        solid;
+	margin-left:         calc(-1 * var(--link--enlargement));
+	margin-right:        calc(-1 * var(--link--enlargement));
+	position:            relative;
+
+	&:active {
+		--color--active: var(--link--highlight);
+
+		background-color: initial; // Override above.
+		border-radius:    initial;
+	}
+
+	&:after {
+		background-color: var(--color--active);
+		border-radius:    calc(var(--link--enlargement) / 2);
+		bottom:           calc(var(--link--enlargement) / -2);
+		content:          '';
+		left:             calc(-1 * var(--link--enlargement));
+		pointer-events:   none;
+		position:         absolute;
+		right:            calc(-1 * var(--link--enlargement));
+		top:              calc(-1 * var(--link--enlargement) / 2);
+	}
+}

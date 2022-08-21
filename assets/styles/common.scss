@@ -9,6 +9,7 @@
 @use 'reset';
 @use 'typography';
 @use 'fonts';
+@use 'links';
 
 
 
@@ -36,7 +37,22 @@
 
 	--color--links: blue;
 
+	--link--enlargement: 0.4rem;
+	--link--highlight:   hsl(0, 0%, 0%, 3.333%);
+	--link--outline:     0.2rem;
+
+	--link--hover--opacity:    0.5;
+	--link--hover--transition: 100ms;
+
 	scroll-behavior: smooth;
+
+	@include hover {
+		--link--highlight: hsl(0, 0%, 0%, 6.666%); // Denser to offset hover opacity.
+	}
+
+	@include browser-specific(safari--mobile) {
+		--link--highlight: hsl(0, 0%, 0%, 10%);
+	}
 
 	@include breakpoint(320) { --typography--size: calc((20/375) * 100vw); }
 
@@ -47,6 +63,8 @@
 		--typography--size--h2: calc(var(--typography--size) * 2);
 
 		--margin: 3.6rem;
+
+		--link--enlargement: 0.8rem;
 	}
 
 	@include breakpoint(980) {
@@ -104,8 +122,7 @@ body {
 			@extend %page--container;
 
 			> a {
-				display:         flex;
-				justify-content: start;
+				@extend %link--element;
 
 				> p {
 					color: var(--color--links);
@@ -157,6 +174,8 @@ body {
 			}
 
 			a {
+				@extend %link--text;
+
 				color: var(--color--links);
 			}
 
