@@ -15,6 +15,8 @@ When building locally, the `--unpublished` flag will show everything.
 - [x] Set up basic type styles
 - [x] Get basic `main` layout in place
 - [x] Add home breadcrumb to interior pages
+- [ ] Add favicon
+- [ ] Add link `hover`/`focus` (use new `focus-visible`)
 - [ ] Set up more-advanced Markdown styles
   - [ ] `hr`
   - [ ] Inline and `code` blocks
