@@ -125,7 +125,9 @@ body {
 					> span {
 						@extend %font--sf--thin;
 
+						display:     inline-flex;
 						font-weight: var(--typography--weight);
+						transform:   translateY(0.05em);
 					}
 				}
 			}
