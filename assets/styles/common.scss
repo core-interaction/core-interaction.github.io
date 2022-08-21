@@ -38,7 +38,7 @@
 
 	scroll-behavior: smooth;
 
-	@include breakpoint(320) { --typography--size: calc((16/375) * 100vw); }
+	@include breakpoint(320) { --typography--size: calc((20/375) * 100vw); }
 
 	@include breakpoint(768) {
 		--typography--size: 2.4rem;
