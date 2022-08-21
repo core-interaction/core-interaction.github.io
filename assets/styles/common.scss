@@ -13,16 +13,20 @@
 
 
 :root {
-	@extend %font--sf--regular;
+	@extend %font--garamond--medium;
 
-	--typography--leading:  1.5;
-	--typography--size:     1.6rem;
+	--typography--leading:        1.25;
+	--typography--leading--tight: 0.8;
+
+	--typography--tracking: -0.020;
+
+	--typography--size: 2rem;
 
 	--typography--size--h1: calc(var(--typography--size) * 3);
 	--typography--size--h2: calc(var(--typography--size) * 1.75);
 	--typography--size--h3: calc(var(--typography--size) * 1.25);
 
-	--margin:           calc(var(--typography--size) * 1.333);
+	--margin:           2.4rem;
 	--margin--vertical: var(--margin);
 
 	--page--width: 100vw;
@@ -37,16 +41,16 @@
 	@include breakpoint(320) { --typography--size: calc((16/375) * 100vw); }
 
 	@include breakpoint(768) {
-		--typography--size: 2rem;
+		--typography--size: 2.4rem;
 
 		--typography--size--h1: calc(var(--typography--size) * 4);
 		--typography--size--h2: calc(var(--typography--size) * 2);
 
-		--margin: calc(var(--typography--size) * 1.8);
+		--margin: 3.6rem;
 	}
 
 	@include breakpoint(980) {
-		--margin:      calc(var(--typography--size) * 2.4);
+		--margin:      4.8rem;
 		--page--width: 98rem;
 	}
 
@@ -57,12 +61,18 @@
 
 
 body {
+	h1 {
+		@extend %font--garamond--light;
+	}
+
+	h2 {
+		@extend %font--garamond--regular;
+	}
+
 	h1,
 	h2,
 	h3 {
-		@extend %font--sf--semibold;
-
-		--typography--leading: 1;
+		--typography--leading: var(--typography--leading--tight);
 	}
 
 	h1 { --typography--size: var(--typography--size--h1); }
@@ -126,7 +136,7 @@ body {
 			h2,
 			h3,
 			p {
-				max-width: 60ch;
+				max-width: 65ch;
 			}
 
 			> h2 {
@@ -151,7 +161,7 @@ body {
 			}
 
 			p strong {
-				@extend %font--sf--bold;
+				@extend %font--garamond--bold;
 
 				font-weight: var(--typography--weight);
 			}
