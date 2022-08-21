@@ -45,17 +45,69 @@
 
 
 // Standard SF.
+%font--sf--ultra-light {
+	@extend %--sf;
+
+	--typography--weight: 100;
+
+	--typography--inset--left:  -0.060; // Optical insets, left edge of capital "M".
+	--typography--inset--right: -0.053; // Right edge of lowercase “m” (since lines tend to end lowercase).
+
+	--typography--underline:         0.022; // Height of crossbar on lowercase “e”.
+	--typography--underline--shift: -0.127; // Shift down from baseline, to line up with bottom of descenders.
+	--typography--underline--skip:   0.025; // Can’t exceed narrowest descender width, with this shadow implementation.
+}
+
+%font--sf--thin {
+	@extend %--sf;
+
+	--typography--weight: 200;
+
+	--typography--inset--left:  -0.062;
+	--typography--inset--right: -0.052;
+
+	--typography--underline:         0.032;
+	--typography--underline--shift: -0.107;
+	--typography--underline--skip:   0.038;
+}
+
+%font--sf--light {
+	@extend %--sf;
+
+	--typography--weight: 300;
+
+	--typography--inset--left:  -0.065;
+	--typography--inset--right: -0.053;
+
+	--typography--underline:         0.051;
+	--typography--underline--shift: -0.069;
+	--typography--underline--skip:   0.064;
+}
+
 %font--sf--regular {
 	@extend %--sf;
 
 	--typography--weight: 400;
 
-	--typography--inset--left:  -0.068; // Optical insets, left edge of capital "M".
-	--typography--inset--right: -0.052; // Right edge of lowercase “m” (since lines tend to end lowercase).
+	--typography--inset--left:  -0.068;
+	--typography--inset--right: -0.052;
 
-	--typography--underline:         0.066; // Height of crossbar on lowercase “e”.
-	--typography--underline--shift: -0.039; // Shift down from baseline, to line up with bottom of descenders.
-	--typography--underline--skip:   0.085; // Can’t exceed narrowest descender width, with this shadow implementation.
+	--typography--underline:         0.066;
+	--typography--underline--shift: -0.039;
+	--typography--underline--skip:   0.085;
+}
+
+%font--sf--medium {
+	@extend %--sf;
+
+	--typography--weight: 500;
+
+	--typography--inset--left:  -0.064;
+	--typography--inset--right: -0.049;
+
+	--typography--underline:         0.075;
+	--typography--underline--shift: -0.021;
+	--typography--underline--skip:   0.087;
 }
 
 %font--sf--semibold {
@@ -68,7 +120,7 @@
 
 	--typography--underline:         0.082;
 	--typography--underline--shift: -0.007;
-	--typography--underline--skip:   0.090;
+	--typography--underline--skip:   0.089;
 }
 
 %font--sf--bold {
@@ -82,6 +134,32 @@
 	--typography--underline:        0.091;
 	--typography--underline--shift: 0.011;
 	--typography--underline--skip:  0.091;
+}
+
+%font--sf--black {
+	@extend %--sf;
+
+	--typography--weight: 800;
+
+	--typography--inset--left:  -0.053;
+	--typography--inset--right: -0.040;
+
+	--typography--underline:        0.103;
+	--typography--underline--shift: 0.035;
+	--typography--underline--skip:  0.103;
+}
+
+%font--sf--black {
+	@extend %--sf;
+
+	--typography--weight: 900;
+
+	--typography--inset--left:  -0.048;
+	--typography--inset--right: -0.035;
+
+	--typography--underline:        0.113;
+	--typography--underline--shift: 0.055;
+	--typography--underline--skip:  0.113;
 }
 
 
