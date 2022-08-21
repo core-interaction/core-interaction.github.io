@@ -17,8 +17,19 @@
 	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+%--sf--mono {
+	@extend %--shoulders;
+
+	--typography--cap-height:       0.705;
+	--typography--x-height:         0.526;
+	--typography--shoulder--bottom: 0.145;
+
+	font-family: SF Mono, ui-monospace, monospace;
+}
 
 
+
+// Standard SF.
 %font--sf--regular {
 	@extend %--sf;
 
@@ -45,7 +56,6 @@
 	--typography--underline--skip:   0.090;
 }
 
-
 %font--sf--bold {
 	@extend %--sf;
 
@@ -54,9 +64,90 @@
 	--typography--inset--left:  -0.058;
 	--typography--inset--right: -0.044;
 
-	--typography--underline:         0.091;
-	--typography--underline--shift:  0.011;
-	--typography--underline--skip:   0.091;
+	--typography--underline:        0.091;
+	--typography--underline--shift: 0.011;
+	--typography--underline--skip:  0.091;
+}
+
+
+
+// SF Mono.
+%font--sf--mono--light {
+	@extend %--sf--mono;
+
+	--typography--weight: 300;
+
+	--typography--inset--left:  -0.058;
+	--typography--inset--right: -0.060;
+
+	--typography--underline:         0.053;
+	--typography--underline--shift: -0.072;
+	--typography--underline--skip:   0.064;
+}
+
+%font--sf--mono--regular {
+	@extend %--sf--mono;
+
+	--typography--weight: 400;
+
+	--typography--inset--left:  -0.055;
+	--typography--inset--right: -0.054;
+
+	--typography--underline:         0.063;
+	--typography--underline--shift: -0.052;
+	--typography--underline--skip:   0.085;
+}
+
+%font--sf--mono--medium {
+	@extend %--sf--mono;
+
+	--typography--weight: 500;
+
+	--typography--inset--left:  -0.052;
+	--typography--inset--right: -0.049;
+
+	--typography--underline:         0.069;
+	--typography--underline--shift: -0.041;
+	--typography--underline--skip:   0.101;
+}
+
+%font--sf--mono--semibold {
+	@extend %--sf--mono;
+
+	--typography--weight: 600;
+
+	--typography--inset--left:  -0.049;
+	--typography--inset--right: -0.043;
+
+	--typography--underline:         0.076;
+	--typography--underline--shift: -0.027;
+	--typography--underline--skip:   0.117;
+}
+
+%font--sf--mono--bold {
+	@extend %--sf--mono;
+
+	--typography--weight: 700;
+
+	--typography--inset--left:  -0.045;
+	--typography--inset--right: -0.037;
+
+	--typography--underline:         0.086;
+	--typography--underline--shift: -0.007;
+	--typography--underline--skip:   0.117;
+}
+
+%font--sf--mono--heavy {
+	@extend %--sf--mono;
+
+	--typography--weight: 800;
+
+	--typography--inset--left:  -0.037;
+	--typography--inset--right: -0.024;
+
+	--typography--underline:        0.099;
+	--typography--underline--shift: 0.018;
+	--typography--underline--skip:  0.117;
 }
 
 
