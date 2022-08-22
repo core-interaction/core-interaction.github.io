@@ -122,6 +122,7 @@ body {
 
 		background-color: var(--color--background);
 		margin-bottom:    calc(var(--typography--cap) * -1);
+		overflow:         hidden; // Fix horizontal scroll on Safari.
 		padding-bottom:   var(--typography--cap);
 		padding-top:      var(--margin--vertical);
 		position:         sticky;
