@@ -15,7 +15,7 @@ layout: default
 		</a>
 		{% if page.url != this_week.url %}
 			<a href="{{ this_week.url | replace: '.html'  }}">
-				<p>{{ index.strings.current }} <span class="center--x">→</span></p>
+				<p>{{ index.strings.current }} {%- if page.layout == 'week' -%}<span class="center--x">→</span>{%- else -%}<span>⤴</span>{%- endif -%}</p>
 			</a>
 		{% else %}
 			<a href="{{ last_week.url | replace: '.html'  }}">
