@@ -20,6 +20,7 @@ layout: default
 	{% assign siblings = weeks %}
 {% endif %}
 {% include auto_title.html %}
+{% include auto_date.html %}
 <nav>
 	<div>
 		<a href="{{ index.url }}">
@@ -28,7 +29,7 @@ layout: default
 		{% if siblings.size > 1 %}
 			<div>
 				<p>
-					{{ title }}
+					{{ title }}{% if date %}, {{ date }}{% endif %}
 					<select onchange="
 						document.activeElement.blur();
 						window.open(this.value,'_self');
@@ -36,10 +37,11 @@ layout: default
 						<optgroup label="{{ label }}">
 						{% for page in siblings %}
 							{% include auto_title.html %}
+							{% include auto_date.html %}
 							{% if page.url == current_url %}
-								<option selected disabled>{{ title }}</option>
+								<option selected disabled>{{ title }}{% if date %}, {{ date }}{% endif %}</option>
 							{% else %}
-								<option value="{{ page.url }}">{{ title }}</option>
+								<option value="{{ page.url }}">{{ title }}{% if date %}, {{ date }}{% endif %}</option>
 							{% endif %}
 						{% endfor %}
 						</optgroup>
