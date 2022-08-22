@@ -4,8 +4,8 @@ layout: default
 
 
 
-{% assign index = site.pages | where: 'layout', 'index' | first %}
 {% include sorted_weeks.html %}
+{% assign index = site.pages | where: 'layout', 'index' | first %}
 {% assign this_week = weeks | last %}
 {% assign last_week = weeks | pop | last %}
 <nav>
@@ -24,5 +24,4 @@ layout: default
 		{% endif %}
 	</div>
 </nav>
-
 {{ content }}
