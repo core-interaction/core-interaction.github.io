@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		{% if page.layout == 'week' %}
-			{% assign title = page.name | week_number %}
+			{% assign title = page.name | prepend_week %}
 		{% else %}
 			{% assign title = page.title %}
 		{% endif %}

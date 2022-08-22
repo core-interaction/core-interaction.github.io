@@ -1,9 +1,9 @@
 module Jekyll
 	module CustomFilters
-		def week_number(input)
+		def prepend_week(input)
 			"Week #{ input.split('.').first }"
 		end
-		def project_number(input)
+		def prepend_project(input)
 			"Project #{ input.split('.').first }"
 		end
 		def week_date(input)

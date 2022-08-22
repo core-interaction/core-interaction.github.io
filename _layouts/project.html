@@ -6,7 +6,7 @@ layout: nav
 
 <main>
 	<header>
-		<h1>{{ page.name | project_number | kerning_spans }}</h1>
+		<h1>{{ page.name | prepend_project | kerning_spans }}</h1>
 	</header>
 	<article>
 		<p>{{ page.date | week_date }}</p>
