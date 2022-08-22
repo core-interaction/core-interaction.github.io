@@ -1,13 +1,14 @@
 :root {
-	font-size: 62.5%;
+	font-feature-settings: 'liga', 'kern';
+	font-size:             62.5%;
 }
 
 :root * {
 	-moz-osx-font-smoothing:  grayscale;
 	-webkit-font-smoothing:   antialiased;
 	-webkit-text-size-adjust: none;
-	font-feature-settings:    'liga', 'kern';
 	font-kerning:             normal;
+	font-smooth:              always;
 	text-rendering:           optimizeLegibility;
 }
 

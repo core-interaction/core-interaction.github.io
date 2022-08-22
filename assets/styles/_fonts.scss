@@ -24,7 +24,7 @@
 	--typography--x-height:         0.526;
 	--typography--shoulder--bottom: 0.145;
 
-	font-family: SF Mono, ui-monospace, monospace;
+	font-family: 'SF Mono', ui-monospace, monospace;
 }
 
 %--times {
@@ -34,7 +34,9 @@
 	--typography--x-height:         0.447;
 	--typography--shoulder--bottom: 0.163;
 
-	font-family: Times New Roman, monospace;
+	font-family:          'Times New Roman', 'Times', serif;
+	font-feature-settings: 'hlig', 'dlig', 'onum', 'zero', 'swsh', 'kern', 'medi';
+	font-variant:          historical-ligatures;
 }
 
 
