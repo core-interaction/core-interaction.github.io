@@ -19,29 +19,33 @@ layout: default
 	{% assign label = index.strings.classes %}
 	{% assign siblings = weeks %}
 {% endif %}
+{% include auto_title.html %}
 <nav>
 	<div>
 		<a href="{{ index.url }}">
 			<p>{{ index.strings.home }}</p>
 		</a>
-		<p>
-			{% if siblings.size > 1 %}
-				<select onchange="window.open(this.value,'_self');">
-					<optgroup label="{{ label }}">
-					{% for page in siblings %}
-						{% include auto_title.html %}
-						{% if page.url == current_url %}
-							<option selected>{{ title }}</option>
-						{% else %}
-							<option value="{{ page.url }}">{{ title }}</option>
-						{% endif %}
-					{% endfor %}
-				</select>
-			{% else %}
-				{% include auto_title.html %}
-				{{ title }}
-			{% endif %}
-		</p>
+		{% if siblings.size > 1 %}
+			<div>
+				<p>
+					{{ title }}
+					<select onchange="window.open(this.value,'_self');">
+						<optgroup label="{{ label }}">
+						{% for page in siblings %}
+							{% include auto_title.html %}
+							{% if page.url == current_url %}
+								<option selected disabled>{{ title }}</option>
+							{% else %}
+								<option value="{{ page.url }}">{{ title }}</option>
+							{% endif %}
+						{% endfor %}
+						</optgroup>
+					</select>
+				</p>
+			</div>
+		{% else %}
+			<p>{{ title }}</p>
+		{% endif %}
 		{% if page.url != this_week.url %}
 			<a href="{{ this_week.url }}">
 				<p>{{ index.strings.current }} {%- if page.layout == 'week' -%}<span class="center--x">→</span>{%- else -%}<span>⤴</span>{%- endif -%}</p>

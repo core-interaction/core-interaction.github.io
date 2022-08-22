@@ -49,6 +49,8 @@
 	--link--hover--opacity:    0.666;
 	--link--hover--transition: 100ms;
 
+	--alpha--disabled: 0.333;
+
 	scroll-behavior: smooth;
 
 	@include hover {
@@ -129,47 +131,72 @@ body {
 		> div {
 			@extend %page--container;
 
-			align-items: end;
-			display:     flex;
-			gap:         var(--margin);
+			align-items:           end;
+			display:               grid;
+			gap:                   var(--margin);
+			grid-template-columns: max-content minmax(0, 1fr) max-content;
 
 			> a {
 				@extend %link--element;
 
 				> p {
 					color: var(--link--color);
-
-					> span {
-						@extend %font--sf--light;
-
-						font-weight: var(--typography--weight);
-
-						// Prevent bobbling.
-						&:last-child {
-							display:    inline-block;
-							text-align: right;
-							width:      1em;
-						}
-
-						// Center down to x-height;
-						&.center--x {
-							transform: translateY(0.066em);
-						}
-					}
 				}
+			}
 
-				// Ampersand/home link.
-				&:first-child {
-					> p {
-						--typography--scale: 1.1;
 
-						transform: translateY(0.015em); // Optical shift.
-					}
+
+			// Icons.
+			span:last-child {
+				@extend %font--sf--light;
+
+				font-weight: var(--typography--weight);
+				display:     inline-block;
+				text-align:  right;
+				width:       1em; // Prevent bobbling.
+
+				// Center down to x-height;
+				&.center--x {
+					transform: translateY(0.066em);
 				}
+			}
 
-				// The current/last week link.
-				&:last-child {
-					margin-left: auto;
+
+
+			// A solo title, no `select`.
+			> p {
+				opacity: var(--alpha--disabled);
+			}
+
+			// The `select` drop-down container.
+			> div {
+				--color: var(--color--links);
+
+				line-height:   initial;
+				margin:        calc(-1 * var(--typography--cap));
+				overflow:      hidden;
+				padding:       var(--typography--cap);
+
+				margin-right:  initial; // Lower to clear the all-around.
+				padding-right: initial;
+
+				> p {
+					color:          transparent; // Just here to set the width.
+					max-width:      calc(100% - var(--link--enlargement) - var(--link--outline));
+					pointer-events: none;
+					position:       relative;
+					white-space:    nowrap;
+					width:          fit-content;
+
+					> select {
+						@extend %link--select;
+
+						color:          var(--color);
+						left:           0;
+						pointer-events: auto;
+						position:       absolute;
+						text-overflow:  ellipsis;
+					}
 				}
 			}
 		}
