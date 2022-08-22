@@ -29,7 +29,10 @@ layout: default
 			<div>
 				<p>
 					{{ title }}
-					<select onchange="window.open(this.value,'_self');">
+					<select onchange="
+						document.activeElement.blur();
+						window.open(this.value,'_self');
+						">
 						<optgroup label="{{ label }}">
 						{% for page in siblings %}
 							{% include auto_title.html %}
