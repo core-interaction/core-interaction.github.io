@@ -44,3 +44,4 @@ When building locally, the `--unpublished` flag will show everything.
 - [ ] Add `@font-face` for SFs in Windows
 - [ ] Figure out round favicon background in Safari dark mode
 - [ ] Go back to JS-based focus, so the `select` doesn’t highlight
+- [ ] Apple Garamond… does work on Macs?
