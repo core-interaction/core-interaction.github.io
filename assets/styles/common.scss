@@ -173,16 +173,9 @@ body {
 				--color: var(--color--links);
 
 				line-height:   initial;
-				margin:        calc(-1 * var(--typography--cap));
-				overflow:      hidden;
-				padding:       var(--typography--cap);
-
-				margin-right:  initial; // Lower to clear the all-around.
-				padding-right: initial;
 
 				> p {
 					color:          transparent; // Just here to set the width.
-					max-width:      calc(100% - var(--link--enlargement) - var(--link--outline));
 					pointer-events: none;
 					position:       relative;
 					white-space:    nowrap;
@@ -193,6 +186,7 @@ body {
 
 						color:          var(--color);
 						left:           0;
+						overflow:       hidden;
 						pointer-events: auto;
 						position:       absolute;
 						text-overflow:  ellipsis;
