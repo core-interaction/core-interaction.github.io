@@ -11,15 +11,15 @@ layout: default
 <nav>
 	<div>
 		<a href="{{ index.url }}">
-			<p>&</p>
+			<p>{{ index.strings.home }}</p>
 		</a>
 		{% if page.url != this_week.url %}
 			<a href="{{ this_week.url }}">
-				<p>This week</p>
+				<p>{{ index.strings.current }}</p>
 			</a>
 		{% else %}
 			<a href="{{ last_week.url }}">
-				<p>Last week</p>
+				<p>{{ index.strings.last }}</p>
 			</a>
 		{% endif %}
 	</div>
