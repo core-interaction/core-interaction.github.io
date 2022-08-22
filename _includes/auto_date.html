@@ -1,3 +1,4 @@
+{%- assign date = nil -%}
 {%- if page.date -%}
 	{%- assign date = page.date | week_date -%}
 {%- elsif page.layout == 'week' -%}
