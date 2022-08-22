@@ -117,9 +117,14 @@ body {
 		padding-top:      var(--margin--vertical);
 		position:         sticky;
 		top:              calc(var(--typography--cap) - var(--margin--vertical));
+		z-index:          1;
 
 		> div {
 			@extend %page--container;
+
+			align-items:     end;
+			display:         flex;
+			justify-content: space-between;
 
 			> a {
 				@extend %link--element;
@@ -132,6 +137,11 @@ body {
 
 						font-weight: var(--typography--weight);
 					}
+				}
+
+				// Ampersand/home link.
+				&:first-child {
+					--typography--size: var(--typography--size--h3);
 				}
 			}
 		}

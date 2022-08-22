@@ -5,11 +5,23 @@ layout: default
 
 
 {% assign index = site.pages | where: 'layout', 'index' | first %}
+{% include sorted_weeks.html %}
+{% assign this_week = weeks | last %}
+{% assign last_week = weeks | pop | last %}
 <nav>
 	<div>
 		<a href="{{ index.url }}">
-			<p><span>←</span> {{ index.title | strip_html  }}</p>
+			<p>&</p>
 		</a>
+		{% if page.url != this_week.url %}
+			<a href="{{ this_week.url }}">
+				<p>This week</p>
+			</a>
+		{% else %}
+			<a href="{{ last_week.url }}">
+				<p>Last week</p>
+			</a>
+		{% endif %}
 	</div>
 </nav>
 
