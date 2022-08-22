@@ -1,0 +1,7 @@
+{%- if page.layout == 'project' -%}
+	{%- assign title = page.name | split: '.' | first | prepend: 'Project ' -%}
+{%- elsif page.layout == 'week' -%}
+	{%- assign title = page.name | split: '.' | first | prepend: 'Week ' -%}
+{%- else -%}
+	{%- assign title = page.title -%}
+{%- endif -%}

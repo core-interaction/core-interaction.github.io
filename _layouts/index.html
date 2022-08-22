@@ -14,11 +14,12 @@ layout: default
 		{{ content }}
 		<h2>{{page.strings.classes}}</h2>
 		<ul>
-			{% for week in weeks %}
+			{% for page in weeks %}
+				{% include auto_title.html %}
 				<li>
 					<p>
-						<a href="{{ week.url }}">
-							{{ week.name | prepend_week }}, {% include auto_date.html %}
+						<a href="{{ page.url }}">
+							{{ title }}, {% include auto_date.html %}
 						</a>
 					</p>
 				</li>
@@ -26,11 +27,11 @@ layout: default
 		</ul>
 		<h2>{{page.strings.topics}}</h2>
 		<ul>
-			{% for topic in topics %}
+			{% for page in topics %}
 				<li>
 					<p>
-						<a href="{{ topic.url }}">
-							{{ topic.title }}
+						<a href="{{ page.url }}">
+							{{ page.title }}
 						</a>
 					</p>
 				</li>
@@ -38,11 +39,12 @@ layout: default
 		</ul>
 		<h2>{{page.strings.projects}}</h2>
 		<ul>
-			{% for project in projects %}
+			{% for page in projects %}
+				{% include auto_title.html %}
 				<li>
 					<p>
-						<a href="{{ project.url }}">
-							{{ project.name | prepend_project }}
+						<a href="{{ page.url }}">
+							{{ title }}
 						</a>
 					</p>
 				</li>

@@ -4,9 +4,10 @@ layout: nav
 
 
 
+{% include auto_title.html %}
 <main>
 	<header>
-		<h1>{{ page.name | prepend_project | kerning_spans }}</h1>
+		<h1>{{ title | kerning_spans }}</h1>
 	</header>
 	<article>
 		<p>{{ page.date | week_date }}</p>

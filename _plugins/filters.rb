@@ -1,11 +1,5 @@
 module Jekyll
 	module CustomFilters
-		def prepend_week(input)
-			"Week #{ input.split('.').first }"
-		end
-		def prepend_project(input)
-			"Project #{ input.split('.').first }"
-		end
 		def week_date(input)
 			return input if input.to_s.empty?
 			time(input).strftime('%B %-d')
