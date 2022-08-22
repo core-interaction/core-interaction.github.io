@@ -35,23 +35,30 @@
 	--color:             black;
 	--color--background: white;
 
-	--color--links: blue;
+	--color--links:          blue;
+	--color--links--reverse: white ;
 
+	--color--highlight:          hsl(0, 0%, 0%, 3.333%);
+	--color--highlight--reverse: hsl(0, 0%, 100%, 6.666%);
+
+	--link--color:       var(--color--links);
 	--link--enlargement: 0.4rem;
-	--link--highlight:   hsl(0, 0%, 0%, 3.333%);
+	--link--highlight:   var(--color--highlight);
 	--link--outline:     0.2rem;
 
-	--link--hover--opacity:    0.5;
+	--link--hover--opacity:    0.666;
 	--link--hover--transition: 100ms;
 
 	scroll-behavior: smooth;
 
 	@include hover {
-		--link--highlight: hsl(0, 0%, 0%, 6.666%); // Denser to offset hover opacity.
+		--color--highlight:          hsl(0, 0%, 0%, 6.666%); // Denser to offset hover opacity.
+		--color--highlight--reverse: hsl(0, 0%, 100%, 13.333%);
 	}
 
 	@include browser-specific(safari--mobile) {
-		--link--highlight: hsl(0, 0%, 0%, 10%);
+		--color--highlight:          hsl(0, 0%, 0%, 10%);
+		--color--highlight--reverse: hsl(0, 0%, 100%, 20%);
 	}
 
 	@include breakpoint(320) { --typography--size: calc((20/375) * 100vw); }
@@ -130,7 +137,7 @@ body {
 				@extend %link--element;
 
 				> p {
-					color: var(--color--links);
+					color: var(--link--color);
 
 					> span {
 						@extend %font--sf--light;
@@ -196,7 +203,7 @@ body {
 			a {
 				@extend %link--text;
 
-				color: var(--color--links);
+				color: var(--link--color);
 			}
 
 			p strong {
@@ -217,4 +224,26 @@ body {
 		}
 	}
 
+
+
+	&.index {
+		@extend %--reverse;
+	}
+}
+
+
+
+	// Flip the colors.
+%--reverse {
+	--color--background--parent: var(--color--background);
+
+	--link--color:     var(--color--links--reverse);
+	--link--highlight: var(--color--highlight--reverse);
+
+	background-color: var(--color--links);
+
+	> * {
+		--color:             var(--color--background--parent);
+		--color--background: var(--color--links);
+	}
 }
