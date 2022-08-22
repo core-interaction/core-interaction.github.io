@@ -16,7 +16,11 @@ layout: default
 		<ul>
 			{% for week in weeks %}
 				<li>
-					<p><a href="{{ week.url | replace: '.html' }}">{{ week.name | prepend_week }}, {% include auto_date.html %}</a></p>
+					<p>
+						<a href="{{ week.url | replace: '.html' }}">
+							{{ week.name | prepend_week }}, {% include auto_date.html %}
+						</a>
+					</p>
 				</li>
 			{% endfor %}
 		</ul>
@@ -24,7 +28,11 @@ layout: default
 		<ul>
 			{% for topic in topics %}
 				<li>
-					<p><a href="{{ topic.url | replace: '.html' }}">{{ topic.title }}</a></p>
+					<p>
+						<a href="{{ topic.url | replace: '.html' }}">
+							{{ topic.title }}
+						</a>
+					</p>
 				</li>
 			{% endfor %}
 		</ul>
@@ -32,7 +40,11 @@ layout: default
 		<ul>
 			{% for project in projects %}
 				<li>
-					<p><a href="{{ project.url | replace: '.html' }}">{{ project.name | prepend_project }}</a></p>
+					<p>
+						<a href="{{ project.url | replace: '.html' }}">
+							{{ project.name | prepend_project }}
+						</a>
+					</p>
 				</li>
 			{% endfor %}
 		</ul>
