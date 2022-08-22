@@ -31,7 +31,7 @@ When building locally, the `--unpublished` flag will show everything.
 - [ ] Generate a [ToC](https://github.com/toshimaru/jekyll-toc) on topics
 - [ ] Add some kind of nice [link previews](https://github.com/ysk24ok/jekyll-linkpreview)
 - [ ] Add previous/next buttons to weeks
-- [ ] Show unit for each week
+- [ ] Show unit for each week (automatic for subsequent, like date)
 - [ ] Group week list by units?
 - [ ] Add GitHub link to index
 - [ ] “Brand” the index page
