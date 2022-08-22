@@ -3,6 +3,9 @@ module Jekyll
 		def week_number(input)
 			"Week #{ input.split('.').first }"
 		end
+		def project_number(input)
+			"Project #{ input.split('.').first }"
+		end
 		def week_date(input)
 			return input if input.to_s.empty?
 			time(input).strftime('%B %-d')

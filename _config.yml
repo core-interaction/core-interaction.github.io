@@ -4,6 +4,10 @@ defaults:
     values:
       layout: index
   - scope:
+      path: project
+    values:
+      layout: project
+  - scope:
       path: topic
     values:
       layout: topic

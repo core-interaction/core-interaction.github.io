@@ -3,7 +3,9 @@ layout: default
 ---
 
 
-
+{% include sorted_weeks.html %}
+{% assign projects = site.pages | where: 'layout', 'project' | sort: 'date' %}
+{% assign topics = site.pages | where: 'layout', 'topic' | where_exp:'page', 'page.order != nil' | sort: 'order' %}
 <main>
 	<header>
 		<h1>{{ page.title | kerning_spans }}</h1>
@@ -12,7 +14,6 @@ layout: default
 		{{ content }}
 		<h2>{{page.strings.classes}}</h2>
 		<ul>
-			{% include sorted_weeks.html %}
 			{% for week in weeks %}
 				<li>
 					<p><a href="{{ week.url | replace: '.html' }}">{{ week.name | week_number }}, {% include auto_date.html %}</a></p>
@@ -21,7 +22,6 @@ layout: default
 		</ul>
 		<h2>{{page.strings.topics}}</h2>
 		<ul>
-			{% assign topics = site.pages | where: 'layout', 'topic' | where_exp:'page', 'page.order != nil' | sort: 'order' %}
 			{% for topic in topics %}
 				<li>
 					<p><a href="{{ topic.url | replace: '.html' }}">{{ topic.title }}</a></p>
@@ -29,6 +29,13 @@ layout: default
 			{% endfor %}
 		</ul>
 		<h2>{{page.strings.projects}}</h2>
+		<ul>
+			{% for project in projects %}
+				<li>
+					<p><a href="{{ project.url | replace: '.html' }}">{{ project.name | project_number }}</a></p>
+				</li>
+			{% endfor %}
+		</ul>
 		<h2>{{page.strings.links}}</h2>
 	</article>
 </main>

@@ -17,13 +17,13 @@ When building locally, the `--unpublished` flag will show everything.
 - [x] Add home breadcrumb to interior pages
 - [x] Add favicon
 - [x] Add link `hover`/`focus` (use `focus-visible`)
+- [x] Rough out projects
 - [ ] Set up more-advanced Markdown styles
   - [ ] `hr`
   - [ ] Inline and `code` blocks
   - [ ] Lists
   - [ ] Blockquotes (attribution?)
   - [ ] Something for the Notion’s “callouts”
-- [ ] Rough out projects
 - [ ] Rough out other pages (syllabus and such?)
 - [ ] Get code/sandbox examples going (separate repo?)
 - [ ] Try out grid in Markdown (use inline classes?)
