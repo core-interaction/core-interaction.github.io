@@ -18,6 +18,8 @@ When building locally, the `--unpublished` flag will show everything.
 - [x] Add favicon
 - [x] Add link `hover`/`focus` (use `focus-visible`)
 - [x] Rough out projects
+- [x] Add previous/next buttons to weeks
+- [x] Add “current week” breadcrumb
 - [ ] Set up more-advanced Markdown styles
   - [ ] `hr`
   - [ ] Inline and `code` blocks
@@ -33,7 +35,6 @@ When building locally, the `--unpublished` flag will show everything.
 - [ ] Generate a [ToC](https://github.com/toshimaru/jekyll-toc) on topics
 - [ ] Add link list to topics
 - [ ] Add some kind of nice [link previews](https://github.com/ysk24ok/jekyll-linkpreview)
-- [ ] Add previous/next buttons to weeks
 - [ ] Show unit for each week (automatic for subsequent, like date)
 - [ ] Group week list by units?
 - [ ] Add GitHub link to index
@@ -41,7 +42,4 @@ When building locally, the `--unpublished` flag will show everything.
 - [ ] Add shortcuts for week recordings
 - [ ] Highlight current week in list
 - [ ] Add `@font-face` for SFs in Windows
-- [ ] Add “current week” breadcrumb
 - [ ] Figure out round favicon background in Safari dark mode
-
-
