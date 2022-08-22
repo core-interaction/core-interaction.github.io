@@ -16,10 +16,11 @@ layout: default
 		<ul>
 			{% for page in weeks %}
 				{% include auto_title.html %}
+				{% include auto_date.html %}
 				<li>
 					<p>
 						<a href="{{ page.url }}">
-							{{ title }}, {% include auto_date.html %}
+							{{ title }}{% if date %}, {{ date }}{% endif %}
 						</a>
 					</p>
 				</li>
@@ -41,10 +42,11 @@ layout: default
 		<ul>
 			{% for page in projects %}
 				{% include auto_title.html %}
+				{% include auto_date.html %}
 				<li>
 					<p>
 						<a href="{{ page.url }}">
-							{{ title }}
+							{{ title }}{% if date %}, {{ date }}{% endif %}
 						</a>
 					</p>
 				</li>

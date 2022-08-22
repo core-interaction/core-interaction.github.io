@@ -5,12 +5,12 @@ layout: nav
 
 
 {% include auto_title.html %}
+{% include auto_date.html %}
 <main>
 	<header>
-		<h1>{{ title | kerning_spans }}</h1>
+		<h1>{{ title | kerning_spans }}{% if date %}, {{ date }}{% endif %}</h1>
 	</header>
 	<article>
-		<p>{% include auto_date.html %}</p>
 		{{ content }}
 	</article>
 </main>

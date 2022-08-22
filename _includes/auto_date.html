@@ -1,5 +1,5 @@
 {%- if page.date -%}
-	{{- page.date | week_date -}}
+	{%- assign date = page.date | week_date -%}
 {%- elsif page.layout == 'week' -%}
 	{%- include sorted_weeks.html -%}
 	{%- assign current_week = page.name -%}
@@ -14,7 +14,7 @@
 			{% comment %} This offsets the date by a week (in seconds, thanks Liquid). {% endcomment %}
 			{% comment %} Plus a day, since it counts from midnight. {% endcomment %}
 			{%- assign offset_seconds = offset_week | times: 604800 | plus: 86400 -%}
-			{{- (weeks[previous_week].date | date: '%s' | plus: offset_seconds) | week_date -}}
+			{%- assign date = (weeks[previous_week].date | date: '%s' | plus: offset_seconds) | week_date -%}
 			{%- break -%}
 		{%- else -%}
 			{%- assign previous_week = previous_week | minus: 1 -%}
