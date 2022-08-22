@@ -17,7 +17,7 @@ layout: default
 			{% for week in weeks %}
 				<li>
 					<p>
-						<a href="{{ week.url | replace: '.html' }}">
+						<a href="{{ week.url }}">
 							{{ week.name | prepend_week }}, {% include auto_date.html %}
 						</a>
 					</p>
@@ -29,7 +29,7 @@ layout: default
 			{% for topic in topics %}
 				<li>
 					<p>
-						<a href="{{ topic.url | replace: '.html' }}">
+						<a href="{{ topic.url }}">
 							{{ topic.title }}
 						</a>
 					</p>
@@ -41,7 +41,7 @@ layout: default
 			{% for project in projects %}
 				<li>
 					<p>
-						<a href="{{ project.url | replace: '.html' }}">
+						<a href="{{ project.url }}">
 							{{ project.name | prepend_project }}
 						</a>
 					</p>
