@@ -10,6 +10,7 @@ layout: default
 	</header>
 	<article>
 		{{ content }}
+		<h2>{{page.strings.classes}}</h2>
 		<ul>
 			{% include sorted_weeks.html %}
 			{% for week in weeks %}
@@ -18,6 +19,7 @@ layout: default
 				</li>
 			{% endfor %}
 		</ul>
+		<h2>{{page.strings.topics}}</h2>
 		<ul>
 			{% assign topics = site.pages | where: 'layout', 'topic' | where_exp:'page', 'page.order != nil' | sort: 'order' %}
 			{% for topic in topics %}
@@ -26,6 +28,8 @@ layout: default
 				</li>
 			{% endfor %}
 		</ul>
+		<h2>{{page.strings.projects}}</h2>
+		<h2>{{page.strings.links}}</h2>
 	</article>
 </main>
 

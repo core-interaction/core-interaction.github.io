@@ -1,9 +1,13 @@
 ---
 title: Typography and Interaction
 strings:
-  home:    '&'
-  current: This week
-  last:    Last week
+  home:     '&'
+  current:  This week
+  last:     Last week
+  links:    Resources
+  projects: Projects
+  classes:  Sessions
+  topics:   Topics
 ---
 
 
