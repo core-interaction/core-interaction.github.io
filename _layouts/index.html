@@ -3,9 +3,10 @@ layout: default
 ---
 
 
+
 {% include sorted_weeks.html %}
-{% assign projects = site.pages | where: 'layout', 'project' | sort: 'date' %}
 {% assign topics = site.pages | where: 'layout', 'topic' | where_exp:'page', 'page.order != nil' | sort: 'order' %}
+{% assign projects = site.pages | where: 'layout', 'project' | sort: 'date' %}
 <main>
 	<header>
 		<h1>{{ page.title | kerning_spans }}</h1>
