@@ -98,5 +98,4 @@
 	@extend %link--enlargement--text;
 
 	margin-top: calc(var(--link--enlargement) / -2);
-	max-width:  calc(100% + var(--link--enlargement) * 2);
 }

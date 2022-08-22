@@ -176,20 +176,49 @@ body {
 
 				> p {
 					color:          transparent; // Just here to set the width.
+					padding-right:  1em; // For the icon.
 					pointer-events: none;
 					position:       relative;
 					white-space:    nowrap;
 					width:          fit-content;
 
+					// The actual drop-down.
 					> select {
 						@extend %link--select;
 
 						color:          var(--color);
 						left:           0;
+						max-width:      calc(100% + var(--link--enlargement) * 2); // Icon.
 						overflow:       hidden;
+						padding-right:  1em;
 						pointer-events: auto;
 						position:       absolute;
 						text-overflow:  ellipsis;
+
+						@include hover {
+							&:hover + span {
+								// Copied from links.
+								$thanksNex3: 'opacity(var(--link--hover--opacity))';
+
+								filter: unquote($thanksNex3);
+							}
+						}
+					}
+
+					// The icon.
+					> span:last-child {
+						@extend %font--sf--mono--light;
+
+						color:       var(--color);
+						font-weight: 100; // Force it.
+						position:    absolute;
+						right:       0;
+						width:       1em;
+
+						// Copied from links.
+						transition-duration:        var(--link--hover--transition);
+						transition-property:        filter;
+						transition-timing-function: linear;
 					}
 				}
 			}
