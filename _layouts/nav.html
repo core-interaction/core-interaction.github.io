@@ -8,11 +8,40 @@ layout: default
 {% assign index = site.pages | where: 'layout', 'index' | first %}
 {% assign this_week = weeks | last %}
 {% assign last_week = weeks | pop | last %}
+{% assign current_url = page.url %}
+{% if page.layout == 'project' %}
+	{% assign label = index.strings.projects %}
+	{% assign siblings = site.pages | where: 'layout', 'project' | sort: 'date' %}
+{% elsif page.layout == 'topic' %}
+{% assign label = index.strings.topics %}
+	{% assign siblings = site.pages | where: 'layout', 'topic' | where_exp:'page', 'page.order != nil' | sort: 'order' %}
+{% else %}
+	{% assign label = index.strings.classes %}
+	{% assign siblings = weeks %}
+{% endif %}
 <nav>
 	<div>
 		<a href="{{ index.url }}">
 			<p>{{ index.strings.home }}</p>
 		</a>
+		<p>
+			{% if siblings.size > 1 %}
+				<select onchange="window.open(this.value,'_self');">
+					<optgroup label="{{ label }}">
+					{% for page in siblings %}
+						{% include auto_title.html %}
+						{% if page.url == current_url %}
+							<option selected>{{ title }}</option>
+						{% else %}
+							<option value="{{ page.url }}">{{ title }}</option>
+						{% endif %}
+					{% endfor %}
+				</select>
+			{% else %}
+				{% include auto_title.html %}
+				{{ title }}
+			{% endif %}
+		</p>
 		{% if page.url != this_week.url %}
 			<a href="{{ this_week.url }}">
 				<p>{{ index.strings.current }} {%- if page.layout == 'week' -%}<span class="center--x">→</span>{%- else -%}<span>⤴</span>{%- endif -%}</p>

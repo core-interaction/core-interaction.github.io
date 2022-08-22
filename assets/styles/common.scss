@@ -129,9 +129,9 @@ body {
 		> div {
 			@extend %page--container;
 
-			align-items:     end;
-			display:         flex;
-			justify-content: space-between;
+			align-items: end;
+			display:     flex;
+			gap:         var(--margin);
 
 			> a {
 				@extend %link--element;
@@ -160,7 +160,16 @@ body {
 
 				// Ampersand/home link.
 				&:first-child {
-					--typography--size: var(--typography--size--h3);
+					> p {
+						--typography--scale: 1.1;
+
+						transform: translateY(0.015em); // Optical shift.
+					}
+				}
+
+				// The current/last week link.
+				&:last-child {
+					margin-left: auto;
 				}
 			}
 		}
