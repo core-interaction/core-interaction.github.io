@@ -14,12 +14,12 @@ layout: default
 			<p>{{ index.strings.home }}</p>
 		</a>
 		{% if page.url != this_week.url %}
-			<a href="{{ this_week.url }}">
-				<p>{{ index.strings.current }}</p>
+			<a href="{{ this_week.url | replace: '.html'  }}">
+				<p>{{ index.strings.current }} <span class="center--x">→</span></p>
 			</a>
 		{% else %}
-			<a href="{{ last_week.url }}">
-				<p>{{ index.strings.last }}</p>
+			<a href="{{ last_week.url | replace: '.html'  }}">
+				<p>{{ index.strings.last }} <span>⤴</span></p>
 			</a>
 		{% endif %}
 	</div>
