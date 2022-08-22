@@ -1,14 +1,8 @@
 {%- if page.date -%}
 	{{- page.date | week_date -}}
-{%- elsif week.date -%}
-	{{- week.date | week_date -}}
-{%- else -%}
-	{% include sorted_weeks.html %}
-	{%- if page.layout == 'week' -%}
-		{%- assign current_week = page.name -%}
-	{%- else -%}
-		{%- assign current_week = week.name -%}
-	{%- endif -%}
+{%- elsif page.layout == 'week' -%}
+	{%- include sorted_weeks.html -%}
+	{%- assign current_week = page.name -%}
 	{%- for week in weeks -%}
 		{%- if week.name == current_week -%}
 			{%- assign previous_week = forloop.index0 | minus: 1 -%}
