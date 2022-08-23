@@ -39,17 +39,17 @@
 						{% endfor %}
 						</optgroup>
 					</select>
-					<span class="center--x">↕</span>
+					<span class="icon center--x">↕</span>
 				</p>
 			{% endif %}
 		</div>
 		{% if page.url != this_week.url %}
 			<a href="{{ this_week.url }}">
-				<p>{{ index.strings.current }} {%- if page.layout == 'week' -%}<span class="center--x">→</span>{%- else -%}<span>⤴</span>{%- endif -%}</p>
+				<p>{{ index.strings.current }} {%- if page.layout == 'week' -%}<span class="icon center--x">→</span>{%- else -%}<span class="icon">⤴</span>{%- endif -%}</p>
 			</a>
 		{% elsif last_week.url %}
 			<a href="{{ last_week.url }}">
-				<p>{{ index.strings.last }} <span class="center--x">↺</span></p>
+				<p>{{ index.strings.last }} <span class="icon center--x">↺</span></p>
 			</a>
 		{% endif %}
 	</div>
