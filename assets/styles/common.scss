@@ -33,6 +33,8 @@
 
 	--page--width: 100vw;
 
+	--divider--width: 0.2rem; // Approx e-crossbar on the `h1`.
+
 	--color:             black;
 	--color--background: white;
 
@@ -74,6 +76,8 @@
 
 		--margin: 3.6rem;
 
+		--divider--width: 0.3rem;
+
 		--link--enlargement: 0.8rem;
 	}
 
@@ -90,6 +94,11 @@
 
 body {
 	h1 {
+		margin-bottom: calc(var(--typography--font-size) * (var(--typography--leading) + var(--typography--shoulder) - 1));
+	}
+
+	h1,
+	h2 {
 		@extend %font--times--kerning;
 	}
 
@@ -102,6 +111,11 @@ body {
 	h1 { --typography--size: var(--typography--size--h1); }
 	h2 { --typography--size: var(--typography--size--h2); }
 	h3 { --typography--size: var(--typography--size--h3); }
+
+	hr {
+		background-color: var(--color);
+		height:           var(--divider--width);
+	}
 
 
 
@@ -211,11 +225,14 @@ body {
 	> main {
 		@extend %page--container;
 
-		margin-bottom:  50vh;
+		padding-top:    calc(var(--margin--vertical) * 4);
+		padding-bottom: calc(var(--margin--vertical) * 4);
 
 		> header {
-			margin-bottom: calc(var(--margin--vertical) * 4);
-			margin-top:    calc(var(--margin--vertical) * 4);
+			border-bottom-color: var(--color);
+			border-bottom-style: solid;
+			border-bottom-width: var(--divider--width);
+			margin-bottom:       calc(var(--margin--vertical) * 4);
 		}
 
 		// Parsed Markdown block.
@@ -239,6 +256,11 @@ body {
 				--typography--extra-lines: 1; // Sequential spacing.
 			}
 
+			> hr {
+				margin-bottom: calc(var(--margin--vertical) * 4);
+				margin-top:    calc(var(--margin--vertical) * 4);
+			}
+
 			a {
 				@extend %link--text;
 
@@ -249,16 +271,6 @@ body {
 				@extend %font--times--bold;
 
 				font-weight: var(--typography--weight);
-			}
-
-
-			// Temp.
-			> ul {
-				margin-top: calc(var(--margin--vertical) * 4);
-
-				> li {
-					margin-top: var(--margin--vertical);
-				}
 			}
 		}
 
@@ -301,6 +313,16 @@ body {
 					}
 				}
 			}
+		}
+
+
+
+		// Border at the bottom.
+		> footer {
+			border-top-color: var(--color);
+			border-top-style: solid;
+			border-top-width: var(--divider--width);
+			margin-top:       max(calc(var(--margin--vertical) * 4), calc(66.66vh - var(--margin--vertical) * 4));
 		}
 	}
 
