@@ -13,9 +13,11 @@ layout: default
 	</header>
 	<article>
 		{{ content }}
+	</article>
+	<nav>
 		{% include page_list.html title=page.strings.classes  pages=weeks %}
 		{% include page_list.html title=page.strings.topics   pages=topics %}
 		{% include page_list.html title=page.strings.projects pages=projects %}
-	</article>
+	</nav>
 </main>
 

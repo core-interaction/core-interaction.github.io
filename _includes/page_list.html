@@ -1,14 +1,13 @@
-<h2>{{ include.title }}</h2>
-<ul>
-	{% for page in include.pages %}
-		{% include auto_title.html %}
-		{% include auto_date.html %}
-		<li>
-			<p>
+<div>
+	<h2>{{ include.title | kerning_spans }}</h2>
+	<menu>
+		{% for page in include.pages %}
+			{% include auto_title.html %}
+			<li>
 				<a href="{{ page.url }}">
-					{{ title }}{% if date %}, {{ date }}{% endif %}
+					<p>{{ title_date }} <span class="center--x">→</span></p>
 				</a>
-			</p>
-		</li>
-	{% endfor %}
-</ul>
+			</li>
+		{% endfor %}
+	</menu>
+</div>

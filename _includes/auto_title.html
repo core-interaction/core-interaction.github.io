@@ -1,7 +1,11 @@
+{%- include auto_date.html -%}
 {%- if page.layout == 'project' -%}
 	{%- assign title = page.name | split: '.' | first | prepend: 'Project ' -%}
+	{%- assign title_date = title | append: ', due ' | append: date-%}
 {%- elsif page.layout == 'week' -%}
 	{%- assign title = page.name | split: '.' | first | prepend: 'Week ' -%}
+	{%- assign title_date = title | append: ', ' | append: date -%}
 {%- else -%}
 	{%- assign title = page.title -%}
+	{%- assign title_date = title -%}
 {%- endif -%}

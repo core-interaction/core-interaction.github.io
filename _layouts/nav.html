@@ -20,7 +20,6 @@ layout: default
 	{% assign siblings = weeks %}
 {% endif %}
 {% include auto_title.html %}
-{% include auto_date.html %}
 <nav>
 	<div>
 		<a href="{{ index.url }}">
@@ -29,7 +28,7 @@ layout: default
 		{% if siblings.size > 1 %}
 			<div>
 				<p>
-					<strong>{{ title }}{% if date %}, {{ date }}{% endif %}</strong>{% comment %} Just for targeting. {% endcomment %}
+					<strong>{{ title_date }}</strong>{% comment %} Just for targeting. {% endcomment %}
 					<select onchange="
 						this.parentElement.querySelector('strong').innerHTML = this.querySelector(`[value='${this.value}']`).text;
 						document.activeElement.blur();
@@ -38,11 +37,10 @@ layout: default
 						<optgroup label="{{ label }}">
 						{% for page in siblings %}
 							{% include auto_title.html %}
-							{% include auto_date.html %}
 							{% if page.url == current_url %}
-								<option selected disabled>{{ title }}{% if date %}, {{ date }}{% endif %}</option>
+								<option selected disabled>{{ title_date }}</option>
 							{% else %}
-								<option value="{{ page.url }}">{{ title }}{% if date %}, {{ date }}{% endif %}</option>
+								<option value="{{ page.url }}">{{ title_date }}</option>
 							{% endif %}
 						{% endfor %}
 						</optgroup>
@@ -51,7 +49,7 @@ layout: default
 				</p>
 			</div>
 		{% else %}
-			<p>{{ title }}</p>
+			<p class="inactive">{{ title_date }}</p>
 		{% endif %}
 		{% if page.url != this_week.url %}
 			<a href="{{ this_week.url }}">

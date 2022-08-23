@@ -49,7 +49,7 @@
 	--link--hover--opacity:    0.666;
 	--link--hover--transition: 100ms;
 
-	--alpha--disabled: 0.333;
+	--alpha--inactive: 0.333;
 
 	scroll-behavior: smooth;
 
@@ -76,9 +76,9 @@
 		--link--enlargement: 0.8rem;
 	}
 
-	@include breakpoint(980) {
+	@include breakpoint(1000) {
 		--margin:      4.8rem;
-		--page--width: 98rem;
+		--page--width: 100rem;
 	}
 
 	@include landscape { --margin--vertical: calc(var(--margin) * 0.618); }
@@ -146,28 +146,6 @@ body {
 			}
 
 
-
-			// Icons.
-			span:last-child {
-				@extend %font--sf--light;
-
-				font-weight: var(--typography--weight);
-				display:     inline-block;
-				text-align:  right;
-				width:       1em; // Prevent bobbling.
-
-				// Center down to x-height;
-				&.center--x {
-					transform: translateY(0.066em);
-				}
-			}
-
-
-
-			// A solo title, no `select`.
-			> p {
-				opacity: var(--alpha--disabled);
-			}
 
 			// The `select` drop-down container.
 			> div {
@@ -282,12 +260,74 @@ body {
 				}
 			}
 		}
+
+
+
+		// Index indexes.
+		> nav {
+			column-gap: var(--margin);
+			display:    grid;
+			margin-top: calc(var(--margin--vertical) * 4);
+			row-gap:    calc(var(--margin--vertical) * 2);
+
+			@include breakpoint(568) {
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+			}
+
+			@include breakpoint(1000) {
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+			}
+
+			// Each list.
+			> div {
+				> h2 {
+					margin-bottom: var(--margin--vertical);
+				}
+
+				> menu {
+					@extend %type--layout;
+
+					display:        flex;
+					flex-direction: column;
+					gap:            var(--typography--between);
+
+					> li {
+						> a {
+							@extend %link--element;
+						}
+					}
+				}
+			}
+		}
 	}
 
 
 
 	&.index {
 		@extend %--reverse;
+	}
+
+
+
+	// Icons.
+	p > span:last-child {
+		@extend %font--sf--light;
+
+		font-weight: var(--typography--weight);
+		display:     inline-block;
+		text-align:  right;
+		width:       1em; // Prevent bobbling.
+
+		// Center down to x-height;
+		&.center--x {
+			transform: translateY(0.066em);
+		}
+	}
+
+
+
+	.inactive {
+		opacity: var(--alpha--inactive);
 	}
 }
 
