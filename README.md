@@ -45,3 +45,4 @@ When building locally, the `--unpublished` flag will show everything.
 - [ ] Figure out round favicon background in Safari dark mode
 - [ ] Go back to JS-based focus, so the `select` doesn’t highlight
 - [ ] Apple Garamond… does work on Macs?
+- [ ] Flip sticky header to blue on scroll
