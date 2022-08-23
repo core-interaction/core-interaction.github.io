@@ -1,0 +1,11 @@
+{% assign index = site.pages | where: 'layout', 'index' | first %}
+<footer>
+	<div>
+		<a href="{{ index.url }}">
+			<p>{{ index.title | kerning_spans }}, {{ index.strings.term | kerning_spans }}</p>
+		</a>
+		<a href="#">
+			<p>{{ index.strings.top | kerning_spans }}<span class="icon center--x">⤒</span></p>
+		</a>
+	</div>
+</footer>

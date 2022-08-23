@@ -2,11 +2,13 @@
 title: Typography and Interaction
 strings:
   home:     '&'
+  classes:  Sessions
   current:  This week
   last:     Last week
   links:    Resources
   projects: Projects
-  classes:  Sessions
+  term:     Fall 2022
+  top:      Top
   topics:   Topics
 ---
 
