@@ -11,6 +11,10 @@ module Jekyll
 					letterClass = "space"
 				elsif letter == " "
 					letterClass = "nbsp"
+				elsif letter == ","
+					letterClass = "comma"
+				elsif letter.to_i.to_s == letter
+					letterClass = "num#{letter}"
 				else
 					letterClass = letter
 				end

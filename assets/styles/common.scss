@@ -94,12 +94,9 @@
 
 body {
 	h1 {
-		margin-bottom: calc(var(--typography--font-size) * (var(--typography--leading) + var(--typography--shoulder) - 1));
-	}
+		--typography--tracking: -0.025;
 
-	h1,
-	h2 {
-		@extend %font--times--kerning;
+		margin-bottom: calc(var(--typography--font-size) * (var(--typography--leading) + var(--typography--shoulder) - 1));
 	}
 
 	h1,
