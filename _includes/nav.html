@@ -1,9 +1,3 @@
----
-layout: default
----
-
-
-
 {% include sorted_weeks.html %}
 {% assign index = site.pages | where: 'layout', 'index' | first %}
 {% assign this_week = weeks | last %}
@@ -25,8 +19,8 @@ layout: default
 		<a href="{{ index.url }}">
 			<p>{{ index.strings.home }}</p>
 		</a>
-		{% if siblings.size > 1 %}
-			<div>
+		<div>
+			{% if siblings.size > 1 %}
 				<p>
 					<strong>{{ title_date }}</strong>{% comment %} Just for targeting. {% endcomment %}
 					<select onchange="
@@ -47,10 +41,8 @@ layout: default
 					</select>
 					<span class="center--x">↕</span>
 				</p>
-			</div>
-		{% else %}
-			<p class="inactive">{{ title_date }}</p>
-		{% endif %}
+			{% endif %}
+		</div>
 		{% if page.url != this_week.url %}
 			<a href="{{ this_week.url }}">
 				<p>{{ index.strings.current }} {%- if page.layout == 'week' -%}<span class="center--x">→</span>{%- else -%}<span>⤴</span>{%- endif -%}</p>
@@ -62,4 +54,3 @@ layout: default
 		{% endif %}
 	</div>
 </nav>
-{{ content }}
