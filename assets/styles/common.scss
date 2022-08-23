@@ -77,9 +77,9 @@
 		--link--enlargement: 0.8rem;
 	}
 
-	@include breakpoint(1000) {
+	@include breakpoint(980) {
 		--margin:      4.8rem;
-		--page--width: 100rem;
+		--page--width: 98rem;
 	}
 
 	@include landscape { --margin--vertical: calc(var(--margin) * 0.618); }
@@ -266,17 +266,17 @@ body {
 
 		// Index indexes.
 		> nav {
-			column-gap: var(--margin);
-			display:    grid;
-			margin-top: calc(var(--margin--vertical) * 4);
-			row-gap:    calc(var(--margin--vertical) * 2);
+			column-gap:     var(--margin);
+			display:        grid;
+			margin-top:     calc(var(--margin--vertical) * 4);
+			row-gap:        calc(var(--margin--vertical) * 2);
+			grid-template-rows: min-content 1fr;
 
 			@include breakpoint(568) {
 				grid-template-columns: repeat(2, minmax(0, 1fr));
-			}
 
-			@include breakpoint(1000) {
-				grid-template-columns: repeat(3, minmax(0, 1fr));
+				#sessions { grid-row: span 2; }
+				#topics, #projects  { grid-column: 2; }
 			}
 
 			// Each list.
