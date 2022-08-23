@@ -1,7 +1,13 @@
 {%- include auto_date.html -%}
+{%- assign current_time = site.time | date: '%s' -%}
+{%- assign date_time = date | date: '%s' -%}
 {%- if page.layout == 'project' -%}
 	{%- assign title = page.name | split: '.' | first | prepend: 'Project ' -%}
-	{%- assign title_date = title | append: ', due ' | append: date-%}
+	{%- if (current_time) < date_time -%}
+		{%- assign title_date = title | append: ', due ' | append: date-%}
+	{%- else -%}
+		{%- assign title_date = title -%}
+	{%- endif -%}
 {%- elsif page.layout == 'week' -%}
 	{%- assign title = page.name | split: '.' | first | prepend: 'Week ' -%}
 	{%- assign title_date = title | append: ', ' | append: date -%}
