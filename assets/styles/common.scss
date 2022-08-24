@@ -262,6 +262,9 @@ body {
 
 			a {
 				@extend %link--text;
+				@extend %font--underline;
+
+				--color: var(--link--color);
 
 				color: var(--link--color);
 			}
