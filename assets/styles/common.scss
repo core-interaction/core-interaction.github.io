@@ -87,7 +87,7 @@
 		--page--width: 102.4rem;
 	}
 
-	@include landscape { --margin--vertical: calc(var(--margin) * 0.618); }
+	@include landscape { --margin--vertical: calc(var(--margin) * 0.75); }
 	@include tall      { --margin--vertical: var(--margin); }
 }
 
