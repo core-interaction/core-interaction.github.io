@@ -1,0 +1,36 @@
+> article {
+	> h1 { display: none; } // So we don’t forget.
+
+	> h2 {
+		&:not(:first-child) { margin-top: calc(var(--margin--vertical) * 4); }
+		&:not(:last-child)  { margin-bottom: calc(var(--margin--vertical) * 2); }
+	}
+
+	> h3 {
+		&:not(:first-child) { margin-top: calc(var(--margin--vertical) * 2); }
+	}
+
+	> hr {
+		&:not(:first-child) { margin-top: calc(var(--margin--vertical) * 4); }
+		&:not(:last-child)  { margin-bottom: calc(var(--margin--vertical) * 4); }
+	}
+
+	> * {
+		--typography--extra-lines: 1; // Sequential spacing between `p`.
+	}
+
+	a {
+		@extend %link--text;
+		@extend %font--underline;
+
+		--color: var(--link--color);
+
+		color: var(--link--color);
+	}
+
+	p strong {
+		@extend %font--times--bold;
+
+		font-weight: var(--typography--weight);
+	}
+}
