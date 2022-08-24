@@ -235,28 +235,24 @@ body {
 
 		// Parsed Markdown block.
 		> article {
-			h2,
-			h3,
-			p {
-				max-width: 72ch;
-			}
+			> h1 { display: none; } // So we don’t forget.
 
 			> h2 {
-				margin-bottom: calc(var(--margin--vertical) * 2);
-				margin-top:    calc(var(--margin--vertical) * 4);
+				&:not(:first-child) { margin-top: calc(var(--margin--vertical) * 4); }
+				&:not(:last-child)  { margin-bottom: calc(var(--margin--vertical) * 2); }
 			}
 
 			> h3 {
-				margin-top: calc(var(--margin--vertical) * 2);
-			}
-
-			> * {
-				--typography--extra-lines: 1; // Sequential spacing.
+				&:not(:first-child) { margin-top: calc(var(--margin--vertical) * 2); }
 			}
 
 			> hr {
-				margin-bottom: calc(var(--margin--vertical) * 4);
-				margin-top:    calc(var(--margin--vertical) * 4);
+				&:not(:first-child) { margin-top: calc(var(--margin--vertical) * 4); }
+				&:not(:last-child)  { margin-bottom: calc(var(--margin--vertical) * 4); }
+			}
+
+			> * {
+				--typography--extra-lines: 1; // Sequential spacing between `p`.
 			}
 
 			a {
