@@ -280,11 +280,17 @@
 	span.a + span.n { margin-left:  0.03em; }
 	span.A + span.n { margin-left: -0.01em; }
 	span.a + span.r { margin-left:  0.04em; }
+	span.A + span.u { margin-left: -0.04em; }
 	span.c + span.t { margin-left:  0.01em; }
 	span.e + span.c { margin-left:  0.01em; }
 	span.e + span.e { margin-left:  0.01em; }
+	span.e + span.m { margin-left:  0.02em; }
 	span.e + span.r { margin-left:  0.02em; }
+	span.E + span.v { margin-left: -0.04em; }
+	span.g + span.e { margin-left: -0.01em; }
 	span.g + span.r { margin-left:  0.04em; }
+	span.g + span.u { margin-left:  0.04em; }
+	span.h + span.i { margin-left: -0.02em; }
 	span.H + span.T { margin-left:  0.01em; }
 	span.h + span.y { margin-left: -0.02em; }
 	span.I + span.n { margin-left: -0.02em; }
@@ -292,22 +298,25 @@
 	span.i + span.o { margin-left: -0.02em; }
 	span.j + span.e { margin-left: -0.04em; }
 	span.k + span.d { margin-left: -0.01em; }
+	span.m + span.b { margin-left: -0.02em; }
+	span.m + span.b { margin-left: -0.02em; }
 	span.M + span.L { margin-left:  0.04em; }
+	span.n + span.g { margin-left: -0.01em; }
 	span.N + span.o { margin-left: -0.04em; }
-	span.e + span.m { margin-left:  0.02em; }
-	span.n + span.g { margin-left: -0.02em; }
 	span.n + span.s { margin-left:  0.02em; }
 	span.o + span.b { margin-left: -0.01em; }
 	span.o + span.g { margin-left: -0.03em; }
 	span.o + span.j { margin-left: -0.03em; }
 	span.o + span.p { margin-left:  0.01em; }
-	span.o + span.w { margin-left: -0.04em; }
 	span.o + span.v { margin-left: -0.03em; }
+	span.o + span.w { margin-left: -0.04em; }
 	span.p + span.h { margin-left: -0.02em; }
 	span.P + span.r { margin-left:  0.02em; }
 	span.r + span.a { margin-left:  0.01em; }
+	span.r + span.y { margin-left:  0.07em; }
 	span.S + span.e { margin-left: -0.01em; }
 	span.t + span.e { margin-left:  0.01em; }
+	span.t + span.h { margin-left:  0.03em; }
 	span.t + span.i { margin-left:  0.03em; }
 	span.T + span.M { margin-left:  0.02em; }
 	span.t + span.o { margin-left:  0.01em; }
@@ -316,16 +325,14 @@
 	span.t + span.s { margin-left:  0.02em; }
 	span.t + span.y { margin-left: -0.03em; }
 	span.T + span.y { margin-left: -0.12em; }
+	span.u + span.s { margin-left:  0.02em; }
+	span.v + span.e { margin-left: -0.04em; }
+	span.w + span.e { margin-left: -0.04em; }
 	span.W + span.e { margin-left: -0.12em; }
 	span.W + span.h { margin-left: -0.07em; }
 	span.w + span.n { margin-left:  0.03em; }
 	span.y + span.p { margin-left:  0.04em; }
-	span.A + span.u { margin-left: -0.04em; }
-	span.g + span.u { margin-left:  0.04em; }
-	span.u + span.s { margin-left:  0.02em; }
-	span.m + span.b { margin-left: -0.02em; }
-	span.m + span.b { margin-left: -0.02em; }
-	span.v + span.e { margin-left: -0.04em; }
+	span.y + span.t { margin-left:  0.06em; }
 
 	span.num0 {
 		letter-spacing: -0.05em;
