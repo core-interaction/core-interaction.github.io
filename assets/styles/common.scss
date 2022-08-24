@@ -231,6 +231,7 @@ body {
 			border-bottom-style: solid;
 			border-bottom-width: var(--divider--width--h1);
 			margin-bottom:       calc(var(--margin--vertical) * 4);
+			padding-bottom:      calc(var(--margin--vertical) * 1);
 		}
 
 		// Parsed Markdown block.
