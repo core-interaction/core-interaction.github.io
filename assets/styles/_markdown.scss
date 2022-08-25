@@ -28,9 +28,13 @@
 		color: var(--link--color);
 	}
 
-	p strong {
-		@extend %font--times--bold;
+	p {
+		max-width: 70ch;
 
-		font-weight: var(--typography--weight);
+		strong {
+			@extend %font--times--bold;
+
+			font-weight: var(--typography--weight);
+		}
 	}
 }
