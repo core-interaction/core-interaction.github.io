@@ -80,7 +80,7 @@
 		border-radius:    initial;
 	}
 
-	&:after {
+	&:before {
 		background-color: var(--color--active);
 		border-radius:    calc(var(--link--enlargement) / 2);
 		bottom:           calc(var(--link--enlargement) / -2);

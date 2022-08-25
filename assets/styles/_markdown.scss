@@ -48,6 +48,36 @@
 				width:        1em;
 			}
 		}
+
+		&.pull {
+			border-left-color: var(--color);
+			border-left-style: solid;
+			border-left-width: var(--divider--width);
+			padding-left:      var(--margin);
+			padding-right:     var(--margin);
+
+			// Credit.
+			> blockquote:last-child {
+				--typography--size: var(--typography--size--base);
+
+				font-style: normal;
+				margin-top: var(--margin);
+
+				> p > a:only-child {
+					text-decoration: none;
+
+					&:after {
+						@extend %font--sf--light;
+
+						content:     '↗';
+						display:     inline-block;
+						font-weight: var(--typography--weight);
+						margin-left: 0.5em;
+						transform:   translateY(0.066em); // Match to other icons.
+					}
+				}
+			}
+		}
 	}
 
 	> * {
