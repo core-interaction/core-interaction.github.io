@@ -34,26 +34,17 @@ nobr,
 
 
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-	// Face/weight.
+// Face/weight.
+%--face--variables {
 	--typography--tracking--override: var(--typography--tracking); // Allows reset/clear.
 	--typography--letter-spacing:     calc(var(--typography--tracking--override, var(--typography--tracking, 0)) * 1em); // Render the actual values.
 
 	--typography--margin--left:  calc(var(--typography--inset--left) * 1em);
 	--typography--margin--right: calc(var(--typography--inset--right) * 1em);
+}
 
-	font-weight:    var(--typography--weight);
-	letter-spacing: var(--typography--letter-spacing);
-
-
-
-	// Size/spacing.
+// Size/spacing.
+%--leading--variables {
 	--typography--font-size:   calc(var(--typography--scale, 1) * var(--typography--size--override, var(--typography--size))); // Map to property.
 	--typography--line-height: calc(var(--typography--leading) * var(--typography--size--override, var(--typography--size)));	 // Calculated exactly (not em/relative) to allow for scaled/super/subscript type sizes.
 
@@ -65,15 +56,30 @@ p {
 
 	--typography--margin--bottom: calc(-1 * var(--typography--leading--bottom) * var(--typography--size--override, var(--typography--size))); // Total space below—also rendered exactly for scaling.
 	--typography--margin--top:    calc(-1 * var(--typography--leading--top) *    var(--typography--size--override, var(--typography--size))); // And above.
+}
 
-	color:         var(--color);
-	display:       block; // Fallback in lieu of `flow-root` support.
-	font-size:     var(--typography--font-size);
-	line-height:   var(--typography--line-height);
-	margin-left:   var(--typography--margin--left);
-	margin-right:  var(--typography--margin--right);
-	max-width:     calc(100% - var(--typography--margin--left) - var(--typography--margin--right) + 1px); // Forces wrapping in flex containers, with a pixel for rounding cover.
-	overflow-wrap: break-word; // Prevent container-breaking.
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	@extend %--face--variables;
+	@extend %--leading--variables;
+
+	color:          var(--color);
+	display:        block; // Fallback in lieu of `flow-root` support.
+	font-size:      var(--typography--font-size);
+	font-weight:    var(--typography--weight);
+	letter-spacing: var(--typography--letter-spacing);
+	line-height:    var(--typography--line-height);
+	margin-left:    var(--typography--margin--left);
+	margin-right:   var(--typography--margin--right);
+	max-width:      calc(100% - var(--typography--margin--left) - var(--typography--margin--right) + 1px); // Forces wrapping in flex containers, with a pixel for rounding cover.
+	overflow-wrap:  break-word; // Prevent container-breaking.
 
 	@supports (display: flow-root) {
 		display: flow-root; // For the negative margins to work without flex parents, in recent browsers.
@@ -123,8 +129,7 @@ p {
 
 
 %type--layout {
-	--typography--font-size:      calc(var(--typography--scale, 1) * var(--typography--size--override, var(--typography--size))); // Map to property.
-	--typography--line-height:    calc(var(--typography--leading) * var(--typography--size--override, var(--typography--size))); // Calculated exactly (not em/relative) to allow for scaled/super/subscript type sizes.
+	@extend %--leading--variables;
 
 	--typography--cap:     calc(var(--typography--cap-height) * 1em);
 	--typography--between: calc(var(--typography--font-size) * (var(--typography--leading) + var(--typography--shoulder) - 1));
