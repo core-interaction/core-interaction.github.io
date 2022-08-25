@@ -22,8 +22,8 @@
 
 		font-style: italic;
 
-		&:not(:first-child) { margin-top:    calc(var(--margin--vertical) * 2); }
-		&:not(:last-child)  { margin-bottom: calc(var(--margin--vertical) * 2); }
+		&:not(:first-child) { margin-top:    calc(var(--margin--vertical) * 4); }
+		&:not(:last-child)  { margin-bottom: calc(var(--margin--vertical) * 4); }
 
 		&.callout {
 			--typography--size: var(--typography--size--base);
@@ -49,7 +49,7 @@
 			}
 		}
 
-		&.pull {
+		&.pull-quote {
 			border-left-color: var(--color);
 			border-left-style: solid;
 			border-left-width: var(--divider--width);
