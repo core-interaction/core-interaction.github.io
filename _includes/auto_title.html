@@ -4,7 +4,7 @@
 {%- if page.layout == 'project' -%}
 	{%- assign title = page.name | split: '.' | first | prepend: 'Project ' -%}
 	{%- if (current_time) < date_time -%}
-		{%- assign title_date = title | append: ', due ' | append: date -%}
+		{%- assign title_date = title | append: ', ' | append: date -%}
 	{%- else -%}
 		{%- assign title_date = title -%}
 	{%- endif -%}

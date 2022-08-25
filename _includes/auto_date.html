@@ -1,6 +1,9 @@
 {%- assign date = nil -%}
 {%- if page.date -%}
 	{%- assign date = page.date | week_date -%}
+	{%- if page.layout == 'project' -%}
+		{%- assign date = date | prepend: "due " -%}
+	{%- endif -%}
 {%- elsif page.layout == 'week' -%}
 	{%- include sorted_weeks.html -%}
 	{%- assign current_week = page.name -%}

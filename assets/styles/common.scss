@@ -228,11 +228,19 @@ body {
 		padding-bottom: calc(var(--margin--vertical) * 4);
 
 		> header {
+			align-items:         end;
 			border-bottom-color: var(--color);
 			border-bottom-style: solid;
 			border-bottom-width: var(--divider--width--h1);
+			column-gap:          var(--margin);
+			display:             flex;
+			justify-content:     space-between;
 			margin-bottom:       calc(var(--margin--vertical) * 4);
 			padding-bottom:      calc(var(--margin--vertical) * 1);
+			row-gap:             var(--margin--vertical);
+
+			// The date.
+			> p { --typography--size: var(--typography--size--h2); }
 		}
 
 

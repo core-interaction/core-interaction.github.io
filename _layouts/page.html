@@ -4,12 +4,14 @@ layout: default
 
 
 
+{% include nav.html %} {% comment %} Don’t reorder this or the titles will be wonky. {% endcomment %}
 {% include auto_title.html %}
-{% include auto_date.html %}
-{% include nav.html %}
 <main>
 	<header>
-		<h1>{{ title_date | kerning_spans }}</h1>
+		<h1>{{ title | kerning_spans }}</h1>
+		{% if date %}
+			<p>{{ date  | replace_first: 'd', "D" | kerning_spans }}</p>
+		{% endif %}
 	</header>
 	<article>
 		{{ content }}
