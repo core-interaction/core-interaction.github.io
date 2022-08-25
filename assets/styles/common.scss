@@ -322,29 +322,35 @@ body {
 
 
 
+	// Flip the landing to blue.
 	&.index {
 		@extend %--reverse;
 	}
 
 
 
-	// Icons.
-	span.icon {
-		@extend %font--sf--light;
-
-		font-weight: var(--typography--weight);
+	%--icon--span {
 		display:     inline-block;
-
-		// Prevent bobbling.
-		&:last-child {
-			text-align: right;
-			width:      1em;
-		}
+		font-weight: var(--typography--weight);
+		text-align:  right;
+		width:       1em;
 
 		// Center down to x-height;
-		&.center--x {
-			transform: translateY(0.066em);
-		}
+		&.center--x { transform: translateY(0.066em); }
+	}
+
+	span.icon--sf {
+		@extend %--icon--span;
+		@extend %font--sf--light;
+	}
+
+	span.icon--wingdings {
+		@extend %--icon--span;
+		@extend %font--wingdings;
+
+		transform: scale(1.333);
+
+		&.center--x { transform: translateY(0.066em) scale(1.333); }
 	}
 }
 
