@@ -18,30 +18,35 @@
 	> blockquote {
 		@extend %type--layout;
 
-		display: flex;
-		gap:     calc(var(--margin) / 2);
+		--typography--size: var(--typography--size--h3);
+
+		font-style: italic;
 
 		&:not(:first-child) { margin-top:    calc(var(--margin--vertical) * 2); }
 		&:not(:last-child)  { margin-bottom: calc(var(--margin--vertical) * 2); }
 
-		&:before {
-			@extend %font--wingdings;
+		&.callout {
+			--typography--size: var(--typography--size--base);
 
-			color:      var(--color);
-			content:    attr(icon);
-			font-style: normal;
-			height:     1em;
-			margin-top: var(--typography--margin--top);
-			text-align: center;
-			transform:  scale(1.5);
-			width:      1em;
-		}
-
-		&.aside {
 			border-color: var(--color);
 			border-style: solid;
 			border-width: var(--divider--width);
+			display:      flex;
+			font-style:   normal;
 			padding:      calc(var(--margin) / 2);
+
+			&[icon]:before {
+				@extend %font--wingdings;
+
+				color:        var(--color);
+				content:      attr(icon);
+				height:       1em;
+				margin-right: calc(var(--margin) / 2);
+				margin-top:   var(--typography--margin--top);
+				text-align:   center;
+				transform:    scale(1.5);
+				width:        1em;
+			}
 		}
 	}
 
