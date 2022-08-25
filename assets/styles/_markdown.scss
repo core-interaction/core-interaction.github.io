@@ -2,7 +2,7 @@
 	> h1 { display: none; } // So we don’t forget.
 
 	> h2 {
-		&:not(:first-child) { margin-top: calc(var(--margin--vertical) * 4); }
+		&:not(:first-child) { margin-top:    calc(var(--margin--vertical) * 4); }
 		&:not(:last-child)  { margin-bottom: calc(var(--margin--vertical) * 2); }
 	}
 
@@ -11,8 +11,23 @@
 	}
 
 	> hr {
-		&:not(:first-child) { margin-top: calc(var(--margin--vertical) * 4); }
+		&:not(:first-child) { margin-top:    calc(var(--margin--vertical) * 4); }
 		&:not(:last-child)  { margin-bottom: calc(var(--margin--vertical) * 4); }
+	}
+
+	> blockquote {
+		@extend %type--layout;
+
+		&:not(:first-child) { margin-top:    calc(var(--margin--vertical) * 2); }
+		&:not(:last-child)  { margin-bottom: calc(var(--margin--vertical) * 2); }
+
+		&.aside {
+			border-color: var(--color);
+			border-style: solid;
+			border-width: var(--divider--width);
+			font-style:   italic;
+			padding:      calc(var(--margin) / 2);
+		}
 	}
 
 	> * {
