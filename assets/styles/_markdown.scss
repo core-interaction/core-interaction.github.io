@@ -18,8 +18,24 @@
 	> blockquote {
 		@extend %type--layout;
 
+		display: flex;
+		gap:     calc(var(--margin) / 2);
+
 		&:not(:first-child) { margin-top:    calc(var(--margin--vertical) * 2); }
 		&:not(:last-child)  { margin-bottom: calc(var(--margin--vertical) * 2); }
+
+		&:before {
+			@extend %font--wingdings;
+
+			color:      var(--color);
+			content:    attr(icon);
+			font-style: normal;
+			height:     1em;
+			margin-top: var(--typography--margin--top);
+			text-align: center;
+			transform:  scale(1.5);
+			width:      1em;
+		}
 
 		&.aside {
 			border-color: var(--color);
@@ -44,7 +60,7 @@
 	}
 
 	p {
-		max-width: 70ch;
+		max-width: 75ch;
 
 		strong {
 			@extend %font--times--bold;

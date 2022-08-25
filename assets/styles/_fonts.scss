@@ -272,6 +272,11 @@
 
 
 
+// Olde Emojye.
+%font--wingdings { font-family: 'Wingdings'; }
+
+
+
 %font--times--kerning {
 	// Kerning our “Tight Times”.
 	span.space, span.nbsp, { letter-spacing: -0.05em; }
