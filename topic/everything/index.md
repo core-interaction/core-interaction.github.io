@@ -6,7 +6,7 @@ published: false
 
 
 
-**ROLL IN QUOTES, DESIGN EMPHASIS, WEB HISTORY**
+**ROLL IN QUOTES, DESIGN EMPHASIS, WEB HISTORY, FIX IMAGES**
 
 ## What is *the web*? What is a *web page*?
 

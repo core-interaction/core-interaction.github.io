@@ -20,29 +20,30 @@ When building locally, the `--unpublished` flag will show everything.
 - [x] Rough out projects
 - [x] Add previous/next buttons to weeks
 - [x] Add “current week” breadcrumb
+- [x] Structure lists on the index
+- [x] “Brand” the index page
 - [ ] Set up more-advanced Markdown styles
-  - [ ] `hr`
-  - [ ] Inline and `code` blocks
-  - [ ] Lists
-  - [ ] Blockquotes (attribution?)
-  - [ ] Something for the Notion’s “callouts”
-- [ ] Rough out other pages (syllabus and such?)
-- [ ] Structure lists on the index
-- [ ] Add resource/links list to index
-- [ ] Get code/sandbox examples going (separate repo?)
-- [ ] Try out grid in Markdown (use inline classes?)
+  - [x] `hr`
+  - [x] Blockquotes (attribution?)
+  - [x] Something for the Notion’s “callouts”
+  - [ ] Inline and full `code` blocks
+  - [ ] Lists (paragraph and plain)
+  - [ ] Figure out image floats/grid (use inline classes?)
 - [ ] Include for `figure`/`figcaption`
-- [ ] Generate a [ToC](https://github.com/toshimaru/jekyll-toc) on topics
-- [ ] Add link list to topics
+- [ ] Add course info/links to index (Slack and such)
+- [ ] Add resource/links list to index (MDN and so on)
+- [ ] Rough out other pages (syllabus and such?)
 - [ ] Add some kind of nice [link previews](https://github.com/ysk24ok/jekyll-linkpreview)
+- [ ] Flip sticky header to blue on scroll
+- [ ] Get code/sandbox examples going (separate repo?)
+- [ ] Generate a [ToC](https://github.com/toshimaru/jekyll-toc) on topics
+- [ ] “Agenda” ToC on weeks?
+- [ ] Add link list to topics (MDN, articles, etc.)
 - [ ] Show unit for each week (automatic for subsequent, like date)
-- [ ] Group week list by units?
-- [ ] Add GitHub link to index
-- [ ] “Brand” the index page
 - [ ] Add shortcuts for week recordings
-- [ ] Highlight current week in list
 - [ ] Add `@font-face` for SFs in Windows
 - [ ] Figure out round favicon background in Safari dark mode
 - [ ] Go back to JS-based focus, so the `select` doesn’t highlight
 - [ ] Apple Garamond… does work on Macs?
-- [ ] Flip sticky header to blue on scroll
+- [ ] Group week list by units?
+- [ ] Highlight current week in list
