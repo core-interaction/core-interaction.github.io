@@ -72,10 +72,4 @@
 			font-weight: var(--typography--weight);
 		}
 	}
-
-	> p {
-		@include breakpoint(568) {
-			max-width: calc((100% - var(--margin) * 2) / 3 * 2 + var(--margin));
-		}
-	}
 }
