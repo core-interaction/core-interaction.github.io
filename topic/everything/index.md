@@ -6,6 +6,8 @@ published: false
 
 
 
+**ROLL IN QUOTES, DESIGN EMPHASIS, WEB HISTORY**
+
 ## What is *the web*? What is a *web page*?
 
 *If we want to take a step further back, Tuan (Section B’s instructor) shared a [history deck](https://docs.google.com/presentation/d/1LEySqdbmwMVH41aFYtk54VjuyLN9BVUxeSL0QK0hrKE/edit#slide=id.geded19efc4_0_0) with us.*
