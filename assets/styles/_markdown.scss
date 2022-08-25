@@ -67,7 +67,8 @@
 					text-decoration: none;
 
 					&:after {
-						@extend %icon--sf;
+						@extend .center--x;
+						@extend .icon--sf;
 
 						content: '↗';
 					}

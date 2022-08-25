@@ -343,27 +343,23 @@ body {
 	%--icon--span {
 		display:     inline-block;
 		font-weight: var(--typography--weight);
+		transform:   translateY(var(--icon--shift, 0rem)) scale(var(--icon--scale, 1));
 
-		// Center down to x-height;
-		&.center--x { transform: translateY(0.066em); }
+		&.center--x { --icon--shift: 0.066em; } // Center down to x-height;
 
 		&:last-child { margin-left: 0.333em; }
 	}
 
-	%icon--sf,
 	.icon--sf {
 		@extend %--icon--span;
 		@extend %font--sf--light;
 	}
 
-	%icon--wingdings,
 	.icon--wingdings {
 		@extend %--icon--span;
 		@extend %font--wingdings;
 
-		transform: scale(1.333);
-
-		&.center--x { transform: translateY(0.066em) scale(1.333); }
+		--icon--scale: 1.333;
 	}
 }
 
