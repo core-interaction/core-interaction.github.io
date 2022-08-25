@@ -98,5 +98,19 @@
 
 			font-weight: var(--typography--weight);
 		}
+
+
+
+		// Prominence for link-only paragraphs.
+		&.link-only > a {
+			text-decoration: none;
+
+			&:after {
+				@extend .center--x;
+				@extend .icon--sf;
+
+				content: '→';
+			}
+		}
 	}
 }
