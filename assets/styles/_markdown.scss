@@ -109,8 +109,11 @@
 				@extend .center--x;
 				@extend .icon--sf;
 
-				content: '→';
+				content: var(--icon);
 			}
+
+			&[href^="/"] { --icon: '→'; } // Internal.
+			&[href^="http"] { --icon: '↗'; } // External.
 		}
 	}
 }
