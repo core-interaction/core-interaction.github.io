@@ -1,9 +1,20 @@
 ---
 title: Typography and Interaction
+links:
+  - name: Slack
+    url:  https://mpscd.slack.com/archives/C03UR0J71U5
+  - name: GitHub
+    url:  https://github.com/typography-interaction
+  - name: Drive
+    url:  https://drive.google.com/drive/folders/1Nyv0f8u8Nsc8OkEGwmZu-S9pI11D5Iil
+  - name: Zoom
+    url:  https://NewSchool.zoom.us/j/96694509534
 strings:
   home:     '&'
   classes:  Sessions
+  crn:      CRN 4253 / CRN 9023
   current:  This week
+  id:       PMCD 5001
   last:     Last week
   links:    Resources
   projects: Projects
