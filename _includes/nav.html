@@ -45,11 +45,11 @@
 		</div>
 		{% if page.url != this_week.url %}
 			<a href="{{ this_week.url }}">
-				<p>{{ index.strings.current }} {%- if page.layout == 'week' -%}<span class="icon--sf center--x">→</span>{%- else -%}<span class="icon--sf">⤴</span>{%- endif -%}</p>
+				<p>{{ index.strings.current }}{%- if page.layout == 'week' -%}<span class="icon--sf center--x">→</span>{%- else -%}<span class="icon--sf">⤴</span>{%- endif -%}</p>
 			</a>
 		{% elsif last_week.url %}
 			<a href="{{ last_week.url }}">
-				<p>{{ index.strings.last }} <span class="icon--sf center--x">↺</span></p>
+				<p>{{ index.strings.last }}<span class="icon--sf center--x">↺</span></p>
 			</a>
 		{% endif %}
 	</div>

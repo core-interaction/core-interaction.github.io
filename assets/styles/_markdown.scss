@@ -67,13 +67,9 @@
 					text-decoration: none;
 
 					&:after {
-						@extend %font--sf--light;
+						@extend %icon--sf;
 
-						content:     '↗';
-						display:     inline-block;
-						font-weight: var(--typography--weight);
-						margin-left: 0.5em;
-						transform:   translateY(0.066em); // Match to other icons.
+						content: '↗';
 					}
 				}
 			}
