@@ -23,6 +23,7 @@ When building locally, the `--unpublished` flag will show everything.
 - [x] Structure lists on the index
 - [x] “Brand” the index page
 - [x] Hide “nav” on unlisted topic page
+- [x] Add course info/links to index (Slack and such)
 - [ ] Set up more-advanced Markdown styles
   - [x] `hr`
   - [x] Blockquotes (attribution?)
@@ -31,7 +32,6 @@ When building locally, the `--unpublished` flag will show everything.
   - [ ] Inline and full `code` blocks
   - [ ] Figure out image floats/grid (use inline classes?)
 - [ ] Include for `figure`/`figcaption` (option for 100vh)
-- [ ] Add course info/links to index (Slack and such)
 - [ ] Add resource/links list to index (MDN and so on)
 - [ ] Rough out other pages (syllabus and such?)
 - [ ] Add some kind of nice [link previews](https://github.com/ysk24ok/jekyll-linkpreview)

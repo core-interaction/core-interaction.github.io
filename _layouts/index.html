@@ -12,6 +12,20 @@ layout: default
 		<h1>{{ page.title | kerning }}</h1>
 	</header>
 	<article>
+		{% if page.links %}
+			<aside class="float-right">
+				<h2>{{ page.strings.sites | kerning }}</h2>
+				<menu>
+					{% for link in page.links %}
+						<li>
+							<p class="link-only">
+								<a href="{{ link.url }}">{{ link.name }}</a>
+							</p>
+						</li>
+					{% endfor %}
+				</menu>
+			</aside>
+		{% endif %}
 		{{ content }}
 	</article>
 	<nav>

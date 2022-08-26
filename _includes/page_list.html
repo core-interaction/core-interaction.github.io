@@ -1,5 +1,5 @@
 {% if include.pages.size > 0 %}
-	<div id="{{ include.title | downcase }}">
+	<aside id="{{ include.title | downcase }}">
 		<h2>{{ include.title | kerning }}</h2>
 		<menu>
 			{% for page in include.pages %}
@@ -11,5 +11,5 @@
 				</li>
 			{% endfor %}
 		</menu>
-	</div>
+	</aside>
 {% endif %}

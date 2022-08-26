@@ -1,4 +1,17 @@
+// Ah, simpler times.
+%--clearfix {
+	&:after {
+		content: '';
+		clear:   both;
+		display: table;
+	}
+}
+
+
+
 > article {
+	@extend %--clearfix;
+
 	> h1 { display: none; } // So we don’t forget.
 
 	> h2 {
@@ -180,5 +193,17 @@
 		padding-left:    0.95em;
 
 		@include browser-specific(safari) { padding-left: 1.25em; }
+	}
+
+
+
+	// Floats, uh oh.
+	> .float-right {
+
+		@include breakpoint(568) {
+			float:       right;
+			margin-left: var(--margin);
+			width:       calc((100% - var(--margin) * 2) / 3);
+		}
 	}
 }

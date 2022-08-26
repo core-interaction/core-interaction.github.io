@@ -18,6 +18,7 @@ strings:
   last:     Last week
   links:    Resources
   projects: Projects
+  sites:    Elsewhere
   term:     Fall 2022
   top:      Top
   topics:   Topics
