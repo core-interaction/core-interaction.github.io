@@ -284,56 +284,6 @@ body {
 
 
 
-		// Index indexes.
-		> nav {
-			column-gap:     var(--margin);
-			display:        grid;
-			margin-top:     calc(var(--margin--vertical) * 4);
-			row-gap:        calc(var(--margin--vertical) * 2);
-			grid-template-rows: min-content 1fr;
-
-			@include breakpoint(568) {
-				grid-template-columns: repeat(2, minmax(0, 1fr));
-
-				#sessions { grid-row: span 2; }
-				#topics, #projects  { grid-column: 2; }
-			}
-
-			@include breakpoint(1024) {
-				grid-template-columns: repeat(3, minmax(0, 1fr));
-
-				#sessions,
-				#topics,
-				#projects {
-					grid-row:    initial;
-					grid-column: initial;
-				}
-			}
-
-			// Each list.
-			> div {
-				> h2 {
-					margin-bottom: var(--margin--vertical);
-				}
-
-				> menu {
-					@extend %type--layout;
-
-					display:        flex;
-					flex-direction: column;
-					gap:            var(--typography--between);
-
-					> li {
-						> a {
-							@extend %link--element;
-						}
-					}
-				}
-			}
-		}
-
-
-
 		// Home/top links at the end.
 		> footer {
 			border-top-color: var(--color);
@@ -381,5 +331,55 @@ body {
 	// Unique to the landing page.
 	&.index {
 		@extend %--reverse;
+
+		> main {
+			// Index indexes.
+			> nav {
+				column-gap:     var(--margin);
+				display:        grid;
+				margin-top:     calc(var(--margin--vertical) * 4);
+				row-gap:        calc(var(--margin--vertical) * 2);
+				grid-template-rows: min-content 1fr;
+
+				@include breakpoint(568) {
+					grid-template-columns: repeat(2, minmax(0, 1fr));
+
+					#sessions { grid-row: span 2; }
+					#topics, #projects  { grid-column: 2; }
+				}
+
+				@include breakpoint(1024) {
+					grid-template-columns: repeat(3, minmax(0, 1fr));
+
+					#sessions,
+					#topics,
+					#projects {
+						grid-row:    initial;
+						grid-column: initial;
+					}
+				}
+
+				// Each list.
+				> div {
+					> h2 {
+						margin-bottom: var(--margin--vertical);
+					}
+
+					> menu {
+						@extend %type--layout;
+
+						display:        flex;
+						flex-direction: column;
+						gap:            var(--typography--between);
+
+						> li {
+							> a {
+								@extend %link--element;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
