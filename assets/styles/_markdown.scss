@@ -117,7 +117,7 @@
 		}
 
 		&[href*="docs.google.com"]:after { --icon: '2'; } // Doc icon.
-		&[href*="slack.com"]:after { --icon: '%'; } // Bell.
+		&[href*="slack.com"]:after { --icon: '-'; --icon--scale: 1.2; } // Mailbox.
 		&[href*="github.com"]:after { --icon: '<'; } // Floppy.
 		&[href*="drive.google.com"]:after { --icon: '1';  --icon--scale: 1;} // Folder.
 		&[href*="zoom.us"]:after { --icon: ')'; --icon--scale: 1.333; } // Telephone.
@@ -135,8 +135,8 @@
 
 
 
-	ul,
-	ol {
+	> ul,
+	> ol {
 		@extend %type--layout;
 		@extend %typography--sequential;
 
@@ -168,14 +168,14 @@
 		}
 	}
 
-	ul {
+	> ul {
 		list-style-type: disc;
 		padding-left:    0.8em;
 
 		@include browser-specific(safari) { padding-left: 1em; }
 	}
 
-	ol {
+	> ol {
 		list-style-type: decimal;
 		padding-left:    0.95em;
 
