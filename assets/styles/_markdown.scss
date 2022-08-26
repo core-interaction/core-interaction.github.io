@@ -1,32 +1,47 @@
 > article {
-	--typography--extra-lines: 1; // Sequential spacing between `p`.
+	@extend %type--layout;
 
-
+	// Sequential spacing between `p`.
+	--typography--leading-shoulder: calc(var(--typography--font-size) * (var(--typography--leading) + var(--typography--shoulder) * 2));
 
 	// Basics.
 	h1 { display: none } // So we don’t forget.
 
+	> *:not(:first-child) {
+		margin-top: var(--margin--top, var(--typography--leading-shoulder));
+	}
+
 	h2 {
-		&:not(:first-child) { margin-top: calc(var(--margin--vertical) * 4) }
-		+ * { margin-top: calc(var(--margin--vertical) * 2) }
+		--margin--top: calc(var(--margin--vertical) * 4);
+
+		+ * {
+			--margin--top:           calc(var(--margin--vertical) * 2);
+			--margin--top--previous: calc(var(--margin--vertical) * 4);
+
+			+ * { --margin--top--previous: calc(var(--margin--vertical) * 2) }
+		}
 	}
 
 	h3 {
-		&:not(:first-child) { margin-top: calc(var(--margin--vertical) * 2) }
+		--margin--top: calc(var(--margin--vertical) * 2);
 	}
 
 	hr,
 	blockquote {
-		&:not(:first-child) { margin-top: calc(var(--margin--vertical) * 4) }
-		+ * { margin-top: calc(var(--margin--vertical) * 4) }
+		--margin--top: calc(var(--margin--vertical) * 4);
+
+		+ * {
+			--margin--top:           calc(var(--margin--vertical) * 4);
+			--margin--top--previous: calc(var(--margin--vertical) * 4);
+
+			+ * { --margin--top--previous: calc(var(--margin--vertical) * 4) }
+		}
 	}
 
 
 
 	// Quotes/callouts.
 	blockquote {
-		@extend %type--layout;
-
 		--typography--size: var(--typography--size--h3);
 
 		font-style: italic;
@@ -147,9 +162,6 @@
 	// Lists.
 	ul,
 	ol {
-		@extend %type--layout;
-		@extend %typography--sequential;
-
 		display:             grid;
 		gap:                 var(--typography--between);
 		list-style-position: outside;
@@ -194,21 +206,17 @@
 
 	// Link list from an include.
 	aside {
-		&:not(:first-child) { margin-top: calc(var(--margin--vertical) * 2) }
+		--margin--top: calc(var(--margin--vertical) * 2);
 
 		> h3 { margin-bottom: var(--margin--vertical) }
 
 		> menu {
-			@extend %type--layout;
-
 			display:        flex;
 			flex-direction: column;
 			gap:            var(--typography--between);
 
 			> li > a { @extend %link--element }
 		}
-
-		+ * { margin-top: calc(var(--margin--vertical) * 2) }
 	}
 
 
@@ -225,7 +233,7 @@
 			grid-column:   1 / span 2;
 			padding-right: var(--margin);
 
-			+ .right { margin-top: initial }
+			+ .right { --margin--top: var(--margin--top--previous) }
 		}
 
 		.right { grid-column: 3 / span 1 }

@@ -106,30 +106,6 @@ p {
 
 
 
-// For sequential type elements.
-%typography--sequential,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-	& + & {
-		--layout--typography--font-size: var(--layout--typography--size, var(--typography--size--override, var(--typography--size))); // Separate internal calculations for spacing.
-
-		--layout--typography--line-height:      var(--layout--typography--leading, var(--typography--leading)) * var(--layout--typography--font-size); // Same.
-		--layout--typography--extra-lines:      var(--layout--typography--line-height) * var(--typography--extra-lines, 0);
-		--layout--typography--leading--between: var(--layout--typography--font-size) * (var(--layout--typography--leading, var(--typography--leading)) - 1); // Same.
-		--layout--typography--shoulder:         var(--layout--typography--font-size) * var(--typography--shoulder); // Same.
-
-		--layout--typography--leading-shoulder: calc(var(--layout--typography--extra-lines) + var(--layout--typography--leading--between) + var(--layout--typography--shoulder));
-
-		margin-top: var(--layout--typography--leading-shoulder);
-	}
-}
-
-
-
 %type--layout {
 	@extend %--leading--variables;
 
