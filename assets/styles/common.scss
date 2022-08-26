@@ -119,7 +119,7 @@ body {
 
 
 	// The main column constraints.
-	%page--container {
+	%--page-container {
 		margin-left:    auto;
 		margin-right:   auto;
 		max-width:      var(--page--width);
@@ -188,7 +188,7 @@ body {
 		z-index:          1;
 
 		> div {
-			@extend %page--container;
+			@extend %--page-container;
 
 			align-items:           end;
 			display:               grid;
@@ -267,7 +267,7 @@ body {
 
 	// Inset text column.
 	> main {
-		@extend %page--container;
+		@extend %--page-container;
 
 		padding-top:    calc(var(--margin--vertical) * 4);
 		padding-bottom: calc(var(--margin--vertical) * 4);
