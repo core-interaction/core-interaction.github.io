@@ -236,6 +236,17 @@
 			+ .right { --margin--top: var(--margin--top--previous) }
 		}
 
-		.right { grid-column: 3 / span 1 }
+		.right {
+			grid-column: 3 / span 1;
+		}
+
+		.left,
+		.right {
+			@for $row from 1 through 8 {
+				&[rows="#{$row}"] {
+					grid-row: span $row;
+				}
+			}
+		}
 	}
 }
