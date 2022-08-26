@@ -27,8 +27,8 @@ When building locally, the `--unpublished` flag will show everything.
   - [x] `hr`
   - [x] Blockquotes (attribution?)
   - [x] Something for the Notion’s “callouts”
+  - [x] Lists (paragraph and plain)
   - [ ] Inline and full `code` blocks
-  - [ ] Lists (paragraph and plain)
   - [ ] Figure out image floats/grid (use inline classes?)
 - [ ] Include for `figure`/`figcaption` (option for 100vh)
 - [ ] Add course info/links to index (Slack and such)
@@ -36,6 +36,7 @@ When building locally, the `--unpublished` flag will show everything.
 - [ ] Rough out other pages (syllabus and such?)
 - [ ] Add some kind of nice [link previews](https://github.com/ysk24ok/jekyll-linkpreview)
 - [ ] Flip sticky header to blue on scroll
+- [ ] Fix arrow icons wrapping to new lines on middle breaks
 - [ ] Get code/sandbox examples going (separate repo?)
 - [ ] Generate a [ToC](https://github.com/toshimaru/jekyll-toc) on topics
 - [ ] “Agenda” ToC on weeks?
