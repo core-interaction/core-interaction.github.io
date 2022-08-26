@@ -123,7 +123,8 @@
 		&[href*="slack.com"]:after,
 		&[href*="github.com"]:after,
 		&[href*="drive.google.com"]:after,
-		&[href*="zoom.us"]:after {
+		&[href*="zoom.us"]:after,
+		&[href*="courses.newschool.edu"]:after {
 			@extend .icon--wingdings;
 
 			--icon--gap: 0.5em;
@@ -134,6 +135,7 @@
 		&[href*="github.com"]:after { --icon: '<'; } // Floppy.
 		&[href*="drive.google.com"]:after { --icon: '1';  --icon--scale: 1;} // Folder.
 		&[href*="zoom.us"]:after { --icon: ')'; --icon--scale: 1.333; } // Telephone.
+		&[href*="courses.newschool.edu"]:after { --icon: '5'; --icon--scale: 1.333; } // File cabinet.
 	}
 
 	p {

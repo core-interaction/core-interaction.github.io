@@ -9,6 +9,8 @@ links:
     url:  https://drive.google.com/drive/folders/1Nyv0f8u8Nsc8OkEGwmZu-S9pI11D5Iil
   - name: Zoom
     url:  https://NewSchool.zoom.us/j/96694509534
+  - name: Catalog
+    url:  https://courses.newschool.edu/courses/PMCD5001
 strings:
   home:     '&'
   classes:  Sessions
