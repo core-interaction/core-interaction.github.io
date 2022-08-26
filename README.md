@@ -29,7 +29,8 @@ When building locally, the `--unpublished` flag will show everything.
   - [ ] Inline and full `code` blocks
   - [ ] Lists (paragraph and plain)
   - [ ] Figure out image floats/grid (use inline classes?)
-- [ ] Include for `figure`/`figcaption`
+- [ ] Hide “nav” on unlisted topic page
+- [ ] Include for `figure`/`figcaption` (option for 100vh)
 - [ ] Add course info/links to index (Slack and such)
 - [ ] Add resource/links list to index (MDN and so on)
 - [ ] Rough out other pages (syllabus and such?)
