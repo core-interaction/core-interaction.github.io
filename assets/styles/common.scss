@@ -130,6 +130,50 @@ body {
 
 
 
+	// Flip the colors.
+	&.index {
+		--color--background--parent: var(--color--background);
+
+		--link--color:     var(--color--links--reverse);
+		--link--highlight: var(--color--highlight--reverse);
+
+		background-color: var(--color--links);
+
+		> * {
+			--color:             var(--color--background--parent);
+			--color--background: var(--color--links);
+		}
+	}
+
+
+
+	// Icon stuff.
+	%--icon--span {
+		--icon--gap: 0.333em;
+
+		display:     inline-block;
+		height:      1em;
+		font-weight: var(--typography--weight);
+		margin-left: var(--icon--gap);
+		transform:   translateY(var(--icon--shift, 0rem)) scale(var(--icon--scale, 1));
+
+		&.center--x { --icon--shift: 0.066em; } // Center down to x-height;
+	}
+
+	.icon--sf {
+		@extend %--icon--span;
+		@extend %font--sf--light;
+	}
+
+	.icon--wingdings {
+		@extend %--icon--span;
+		@extend %font--wingdings;
+
+		--icon--scale: 1.333;
+	}
+
+
+
 	// Breadcrumb thing.
 	> nav {
 		@extend %type--layout;
@@ -328,54 +372,5 @@ body {
 				}
 			}
 		}
-	}
-
-
-
-	// Flip the landing to blue.
-	&.index {
-		@extend %--reverse;
-	}
-
-
-
-	// Icon stuff.
-	%--icon--span {
-		display:     inline-block;
-		font-weight: var(--typography--weight);
-		transform:   translateY(var(--icon--shift, 0rem)) scale(var(--icon--scale, 1));
-
-		&.center--x { --icon--shift: 0.066em; } // Center down to x-height;
-
-		&:last-child { margin-left: 0.333em; }
-	}
-
-	.icon--sf {
-		@extend %--icon--span;
-		@extend %font--sf--light;
-	}
-
-	.icon--wingdings {
-		@extend %--icon--span;
-		@extend %font--wingdings;
-
-		--icon--scale: 1.333;
-	}
-}
-
-
-
-	// Flip the colors.
-%--reverse {
-	--color--background--parent: var(--color--background);
-
-	--link--color:     var(--color--links--reverse);
-	--link--highlight: var(--color--highlight--reverse);
-
-	background-color: var(--color--links);
-
-	> * {
-		--color:             var(--color--background--parent);
-		--color--background: var(--color--links);
 	}
 }

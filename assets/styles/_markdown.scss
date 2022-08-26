@@ -36,15 +36,15 @@
 			padding:      calc(var(--margin) / 2);
 
 			&[icon]:before {
-				@extend %font--wingdings;
+				@extend .icon--wingdings;
 
 				color:        var(--color);
 				content:      attr(icon);
 				height:       1em;
+				margin-left:  initial;
 				margin-right: calc(var(--margin) / 2);
 				margin-top:   var(--typography--margin--top);
 				text-align:   center;
-				transform:    scale(1.5);
 				width:        1em;
 			}
 		}
