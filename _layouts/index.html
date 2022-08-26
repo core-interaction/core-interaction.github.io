@@ -9,7 +9,7 @@ layout: default
 {% assign projects = site.pages | where: 'layout', 'project' | sort: 'date' %}
 <main>
 	<header>
-		<h1>{{ page.title | kerning_spans }}</h1>
+		<h1>{{ page.title | kerning }}</h1>
 	</header>
 	<article>
 		{{ content }}

@@ -1,12 +1,12 @@
 {% if include.pages.size > 0 %}
 	<div id="{{ include.title | downcase }}">
-		<h2>{{ include.title | kerning_spans }}</h2>
+		<h2>{{ include.title | kerning }}</h2>
 		<menu>
 			{% for page in include.pages %}
 				{% include auto_title.html %}
 				<li>
 					<a href="{{ page.url }}">
-						<p>{{ title_date | kerning_spans }}<span class="icon--sf center--x">→</span></p>
+						<p>{{ title_date | kerning }}<span class="icon--sf center--x">→</span></p>
 					</a>
 				</li>
 			{% endfor %}

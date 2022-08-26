@@ -8,9 +8,9 @@ layout: default
 {% include auto_title.html %}
 <main>
 	<header>
-		<h1>{{ title | kerning_spans }}</h1>
+		<h1>{{ title | kerning }}</h1>
 		{% if date %}
-			<p>{{ date  | replace_first: 'd', "D" | kerning_spans }}</p>
+			<p>{{ date  | replace_first: 'd', "D" | kerning }}</p>
 		{% endif %}
 	</header>
 	<article>
