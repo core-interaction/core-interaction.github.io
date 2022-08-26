@@ -1,34 +1,23 @@
-// Ah, simpler times.
-%--clearfix {
-	&:after {
-		content: '';
-		clear:   both;
-		display: table;
-	}
-}
-
-
-
 > article {
-	@extend %--clearfix;
+	--typography--extra-lines: 1; // Sequential spacing between `p`.
 
-	> h1 { display: none; } // So we don’t forget.
+	h1 { display: none; } // So we don’t forget.
 
-	> h2 {
+	h2 {
 		&:not(:first-child) { margin-top:    calc(var(--margin--vertical) * 4); }
 		&:not(:last-child)  { margin-bottom: calc(var(--margin--vertical) * 2); }
 	}
 
-	> h3 {
+	h3 {
 		&:not(:first-child) { margin-top: calc(var(--margin--vertical) * 2); }
 	}
 
-	> hr {
+	hr {
 		&:not(:first-child) { margin-top:    calc(var(--margin--vertical) * 4); }
 		&:not(:last-child)  { margin-bottom: calc(var(--margin--vertical) * 4); }
 	}
 
-	> blockquote {
+	blockquote {
 		@extend %type--layout;
 
 		--typography--size: var(--typography--size--h3);
@@ -92,7 +81,7 @@
 		}
 	}
 
-	> * {
+	* {
 		--typography--extra-lines: 1; // Sequential spacing between `p`.
 	}
 
@@ -152,8 +141,8 @@
 
 
 
-	> ul,
-	> ol {
+	ul,
+	ol {
 		@extend %type--layout;
 		@extend %typography--sequential;
 
@@ -185,29 +174,17 @@
 		}
 	}
 
-	> ul {
+	ul {
 		list-style-type: disc;
 		padding-left:    0.8em;
 
 		@include browser-specific(safari) { padding-left: 1em; }
 	}
 
-	> ol {
+	ol {
 		list-style-type: decimal;
 		padding-left:    0.95em;
 
 		@include browser-specific(safari) { padding-left: 1.25em; }
-	}
-
-
-
-	// Floats, uh oh.
-	> .float-right {
-
-		@include breakpoint(568) {
-			float:       right;
-			margin-left: var(--margin);
-			width:       calc((100% - var(--margin) * 2) / 3);
-		}
 	}
 }
