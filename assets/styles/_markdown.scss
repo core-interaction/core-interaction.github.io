@@ -38,6 +38,8 @@
 			&[icon]:before {
 				@extend .icon--wingdings;
 
+				--icon--scale: 1.5; // Bigger for these.
+
 				color:        var(--color);
 				content:      attr(icon);
 				height:       1em;
@@ -115,12 +117,21 @@
 			&[href^="/"] { --icon: '→'; } // Internal.
 			&[href^="http"] { --icon: '↗'; } // External.
 
-			&[href^="https://docs.google.com"]:after {
+			&[href*="docs.google.com"]:after,
+			&[href*="slack.com"]:after,
+			&[href*="github.com"]:after,
+			&[href*="drive.google.com"]:after,
+			&[href*="zoom.us"]:after {
 				@extend .icon--wingdings;
 
-				--icon:      '2'; // Doc icon.
 				--icon--gap: 0.5em;
 			}
+
+			&[href*="docs.google.com"]:after { --icon: '2'; } // Doc icon.
+			&[href*="slack.com"]:after { --icon: '%'; } // Bell.
+			&[href*="github.com"]:after { --icon: '<'; } // Floppy.
+			&[href*="drive.google.com"]:after { --icon: '1';  --icon--scale: 1;} // Folder.
+			&[href*="zoom.us"]:after { --icon: ')'; --icon--scale: 1.333; } // Telephone.
 		}
 	}
 }
