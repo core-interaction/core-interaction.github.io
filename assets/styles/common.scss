@@ -355,4 +355,34 @@ body {
 			}
 		}
 	}
+
+
+
+	// Class list.
+	&.class {
+		@extend %--reverse;
+
+		p { grid-column: 1 }
+
+		ul {
+			--typography--size: var(--typography--size--h3);
+
+			column-gap:            var(--margin);
+			display:               grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			list-style:            initial;
+			padding:               initial;
+
+			@include breakpoint(568) {
+				--margin--top:  0rem;
+
+				grid-column: 2 / span 2;
+			}
+
+			> li {
+				display: block;
+				padding: initial;
+			}
+		}
+	}
 }

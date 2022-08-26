@@ -1,0 +1,12 @@
+---
+title: Class list
+---
+
+
+
+<p>In no particular order:</p>
+<ul>
+	{% for student in site.data.class %}
+		<li>{{student.first}}</li>
+	{% endfor %}
+</ul>
