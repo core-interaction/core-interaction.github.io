@@ -421,6 +421,7 @@
 
 %font--underline--disable {
 	-webkit-text-stroke: initial;
+	paint-order:         initial;
 	text-decoration:     initial;
 	text-shadow:         initial;
 }
