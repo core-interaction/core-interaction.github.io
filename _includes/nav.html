@@ -6,10 +6,10 @@
 {% if page.layout == 'project' %}
 	{% assign label = index.strings.projects %}
 	{% assign siblings = site.pages | where: 'layout', 'project' | sort: 'date' %}
-{% elsif page.layout == 'topic' %}
-{% assign label = index.strings.topics %}
+{% elsif page.layout == 'topic' and page.order != nil %}
+	{% assign label = index.strings.topics %}
 	{% assign siblings = site.pages | where: 'layout', 'topic' | where_exp:'page', 'page.order != nil' | sort: 'order' %}
-{% else %}
+{% elsif page.layout == 'week' %}
 	{% assign label = index.strings.classes %}
 	{% assign siblings = weeks %}
 {% endif %}
