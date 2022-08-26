@@ -351,26 +351,24 @@ body {
 						grid-column: initial;
 					}
 				}
-			}
 
+				// Each list.
+				aside {
+					> h2 {
+						margin-bottom: var(--margin--vertical);
+					}
 
+					> menu {
+						@extend %type--layout;
 
-			// Each list.
-			aside {
-				> h2 {
-					margin-bottom: var(--margin--vertical);
-				}
+						display:        flex;
+						flex-direction: column;
+						gap:            var(--typography--between);
 
-				> menu {
-					@extend %type--layout;
-
-					display:        flex;
-					flex-direction: column;
-					gap:            var(--typography--between);
-
-					> li {
-						> a {
-							@extend %link--element;
+						> li {
+							> a {
+								@extend %link--element;
+							}
 						}
 					}
 				}
