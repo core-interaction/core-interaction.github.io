@@ -94,6 +94,51 @@
 
 
 
+	// The main column constraints.
+%--page-container {
+	margin-left:    auto;
+	margin-right:   auto;
+	max-width:      var(--page--width);
+	padding-left:   var(--margin);
+	padding-right:  var(--margin);
+	width:          100%;
+}
+
+
+
+// Flip the colors.
+%--reverse {
+	--color--background--parent: var(--color--background);
+
+	--link--color:     var(--color--links--reverse);
+	--link--highlight: var(--color--highlight--reverse);
+
+	background-color: var(--color--links);
+
+	> * {
+		--color:             var(--color--background--parent);
+		--color--background: var(--color--links);
+	}
+}
+
+
+
+// Icon stuff.
+%--icon--span {
+	--icon--gap: 0.333em;
+
+	display:     inline-block;
+	height:      1em;
+	font-weight: var(--typography--weight);
+	margin-left: var(--icon--gap);
+	transform:   translateY(var(--icon--shift, 0rem)) scale(var(--icon--scale, 1));
+
+	&.center--x { --icon--shift: 0.066em; } // Center down to x-height;
+}
+
+
+
+
 body {
 	h1 {
 		--typography--tracking: -0.025;
@@ -114,62 +159,6 @@ body {
 	hr {
 		background-color: var(--color);
 		height:           var(--divider--width);
-	}
-
-
-
-	// The main column constraints.
-	%--page-container {
-		margin-left:    auto;
-		margin-right:   auto;
-		max-width:      var(--page--width);
-		padding-left:   var(--margin);
-		padding-right:  var(--margin);
-		width:          100%;
-	}
-
-
-
-	// Flip the colors.
-	&.index {
-		--color--background--parent: var(--color--background);
-
-		--link--color:     var(--color--links--reverse);
-		--link--highlight: var(--color--highlight--reverse);
-
-		background-color: var(--color--links);
-
-		> * {
-			--color:             var(--color--background--parent);
-			--color--background: var(--color--links);
-		}
-	}
-
-
-
-	// Icon stuff.
-	%--icon--span {
-		--icon--gap: 0.333em;
-
-		display:     inline-block;
-		height:      1em;
-		font-weight: var(--typography--weight);
-		margin-left: var(--icon--gap);
-		transform:   translateY(var(--icon--shift, 0rem)) scale(var(--icon--scale, 1));
-
-		&.center--x { --icon--shift: 0.066em; } // Center down to x-height;
-	}
-
-	.icon--sf {
-		@extend %--icon--span;
-		@extend %font--sf--light;
-	}
-
-	.icon--wingdings {
-		@extend %--icon--span;
-		@extend %font--wingdings;
-
-		--icon--scale: 1.25;
 	}
 
 
@@ -330,8 +319,6 @@ body {
 				> menu {
 					@extend %type--layout;
 
-					--typography--leading: var(--typography--leading--loose);
-
 					display:        flex;
 					flex-direction: column;
 					gap:            var(--typography--between);
@@ -372,5 +359,27 @@ body {
 				}
 			}
 		}
+	}
+
+
+
+	// Icons.
+	.icon--sf {
+		@extend %--icon--span;
+		@extend %font--sf--light;
+	}
+
+	.icon--wingdings {
+		@extend %--icon--span;
+		@extend %font--wingdings;
+
+		--icon--scale: 1.25;
+	}
+
+
+
+	// Unique to the landing page.
+	&.index {
+		@extend %--reverse;
 	}
 }
