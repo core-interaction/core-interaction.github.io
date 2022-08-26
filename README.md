@@ -24,6 +24,7 @@ When building locally, the `--unpublished` flag will show everything.
 - [x] “Brand” the index page
 - [x] Hide “nav” on unlisted topic page
 - [x] Add course info/links to index (Slack and such)
+- [x] Add link list to topics (MDN, articles, etc.)
 - [ ] Set up more-advanced Markdown styles
   - [x] `hr`
   - [x] Blockquotes (attribution?)
@@ -31,16 +32,16 @@ When building locally, the `--unpublished` flag will show everything.
   - [x] Lists (paragraph and plain)
   - [ ] Inline and full `code` blocks
   - [ ] Figure out image floats/grid (use inline classes?)
+- [ ] Generate random class list
+- [ ] Rough out other pages (syllabus and such?)
 - [ ] Include for `figure`/`figcaption` (option for 100vh)
 - [ ] Add resource/links list to index (MDN and so on)
-- [ ] Rough out other pages (syllabus and such?)
-- [ ] Add some kind of nice [link previews](https://github.com/ysk24ok/jekyll-linkpreview)
 - [ ] Flip sticky header to blue on scroll
+- [ ] Add some kind of nice [link previews](https://github.com/ysk24ok/jekyll-linkpreview)
 - [ ] Fix arrow icons wrapping to new lines on middle breaks
 - [ ] Get code/sandbox examples going (separate repo?)
 - [ ] Generate a [ToC](https://github.com/toshimaru/jekyll-toc) on topics
 - [ ] “Agenda” ToC on weeks?
-- [ ] Add link list to topics (MDN, articles, etc.)
 - [ ] Show unit for each week (automatic for subsequent, like date)
 - [ ] Add shortcuts for week recordings
 - [ ] Add `@font-face` for SFs in Windows
