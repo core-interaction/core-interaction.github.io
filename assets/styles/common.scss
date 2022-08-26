@@ -163,6 +163,21 @@ body {
 
 
 
+	// Icons. Keep these up here so Markdown variants cascade.
+	.icon--sf {
+		@extend %--icon--span;
+		@extend %font--sf--light;
+	}
+
+	.icon--wingdings {
+		@extend %--icon--span;
+		@extend %font--wingdings;
+
+		--icon--scale: 1.25;
+	}
+
+
+
 	// Breadcrumb thing.
 	> nav {
 		@extend %type--layout;
@@ -309,21 +324,6 @@ body {
 				}
 			}
 		}
-	}
-
-
-
-	// Icons.
-	.icon--sf {
-		@extend %--icon--span;
-		@extend %font--sf--light;
-	}
-
-	.icon--wingdings {
-		@extend %--icon--span;
-		@extend %font--wingdings;
-
-		--icon--scale: 1.25;
 	}
 
 
