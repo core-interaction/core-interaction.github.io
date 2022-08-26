@@ -59,8 +59,8 @@
 	scroll-behavior: smooth;
 
 	@include hover {
-		--color--highlight:          hsl(0, 0%, 0%, 6.666%); // Denser to offset hover opacity.
-		--color--highlight--reverse: hsl(0, 0%, 100%, 13.333%);
+		--color--highlight:          hsl(0, 0%, 0%, 5%); // Denser to offset hover opacity.
+		--color--highlight--reverse: hsl(0, 0%, 100%, 20%);
 	}
 
 	@include browser-specific(safari--mobile) {
