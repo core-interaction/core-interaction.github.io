@@ -7,9 +7,7 @@
 	// Basics.
 	h1 { display: none } // So we don’t forget.
 
-	> *:not(:first-child) {
-		margin-top: var(--margin--top, var(--typography--leading-shoulder));
-	}
+	> *:not(:first-child) { margin-top: var(--margin--top, var(--typography--leading-shoulder)) }
 
 	h2 {
 		--margin--top: calc(var(--margin--vertical) * 4);
@@ -234,7 +232,8 @@
 			grid-column:   1 / span 2;
 			padding-right: var(--margin);
 
-			+ .right { --margin--top: var(--margin--top--previous) }
+			&:first-child + .right { --margin--top: 0rem; }
+			&:not(:first-child)+ .right { --margin--top: var(--margin--top--previous) }
 		}
 
 		.right {
