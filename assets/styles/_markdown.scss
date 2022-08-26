@@ -17,6 +17,9 @@
 		&:not(:last-child)  { margin-bottom: calc(var(--margin--vertical) * 4); }
 	}
 
+
+
+	// Quotes/callouts.
 	blockquote {
 		@extend %type--layout;
 
@@ -85,6 +88,9 @@
 		--typography--extra-lines: 1; // Sequential spacing between `p`.
 	}
 
+
+
+	// Links.
 	a {
 		@extend %link--text;
 		@extend %font--underline;
@@ -141,6 +147,7 @@
 
 
 
+	// Lists.
 	ul,
 	ol {
 		@extend %type--layout;
