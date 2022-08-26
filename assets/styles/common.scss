@@ -362,14 +362,21 @@ body {
 	&.class {
 		@extend %--reverse;
 
-		p { grid-column: 1 }
+		button {
+			@extend %link--element;
+
+			grid-column: 1;
+		}
 
 		ul {
+			--groups:           2;
 			--typography--size: var(--typography--size--h3);
 
 			column-gap:            var(--margin);
 			display:               grid;
-			grid-template-columns: repeat(2, minmax(0, 1fr));
+			grid-auto-columns:     minmax(0, 1fr);
+			grid-auto-flow:        column;
+			grid-template-rows:    repeat(calc(var(--count) / var(--groups) + 1 / var(--groups)), min-content);
 			list-style:            initial;
 			padding:               initial;
 

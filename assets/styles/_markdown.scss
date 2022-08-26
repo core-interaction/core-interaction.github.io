@@ -223,6 +223,7 @@
 
 	// Column stuff.
 	@include breakpoint(568) {
+		align-items:           start;
 		display:               grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 		column-gap:            var(--margin);

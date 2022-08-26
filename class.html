@@ -4,9 +4,29 @@ title: Class list
 
 
 
-<p>In no particular order:</p>
-<ul>
-	{% for student in site.data.class %}
+{% assign students = site.data.class | sort: 'first' %}
+<button>
+	<p>Shuffle list<span class="icon--sf center--x">⇅</span></p>
+</button>
+<ul id="class" style="--count: {{ students.size }};">
+	{% for student in students %}
 		<li>{{student.first}}</li>
 	{% endfor %}
 </ul>
+<script>
+	const shuffleStudents = () => {
+		const students = document.getElementById('class')
+
+		for (index = 0; index < students.children.length; index++) {
+			students.appendChild(students.children[Math.random() * index | 0])
+		}
+	}
+
+	document.addEventListener('DOMContentLoaded', () => {
+		shuffleStudents()
+
+		const shuffle = document.querySelector('button')
+
+		shuffle.onclick = () => shuffleStudents()
+	})
+</script>
