@@ -1,5 +1,5 @@
 {% if page.links  %}
-<aside markdown="0"> {% comment %} You can’t indent this or it’ll make a code block. {% endcomment %}
+<aside class="right" markdown="0"> {% comment %} You can’t indent this or it’ll make a code block. {% endcomment %}
 	{% if include.heading %}<h3>{{ include.heading | kerning }}</h3>{% endif %}
 	<menu>
 		{% for link in page.links %}
