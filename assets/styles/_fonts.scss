@@ -418,3 +418,9 @@
 			;
 	}
 }
+
+%font--underline--disable {
+	-webkit-text-stroke: initial;
+	text-decoration:     initial;
+	text-shadow:         initial;
+}
