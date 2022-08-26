@@ -273,77 +273,77 @@
 
 
 // Olde Emojye.
-%font--wingdings { font-family: 'Wingdings'; }
+%font--wingdings { font-family: 'Wingdings' }
 
 
 
 %font--times--kerning {
 	// Kerning our “Tight Times”.
-	span.space, span.nbsp, { letter-spacing: -0.05em; }
+	span.space, span.nbsp, { letter-spacing: -0.05em }
 
-	span.a + span.c { margin-left:  0.01em; }
-	span.a + span.n { margin-left:  0.03em; }
-	span.A + span.n { margin-left: -0.01em; }
-	span.a + span.r { margin-left:  0.04em; }
-	span.a + span.s { margin-left:  0.01em; }
-	span.A + span.u { margin-left: -0.04em; }
-	span.c + span.t { margin-left:  0.01em; }
-	span.e + span.c { margin-left:  0.01em; }
-	span.e + span.e { margin-left:  0.01em; }
-	span.e + span.m { margin-left:  0.02em; }
-	span.e + span.r { margin-left:  0.02em; }
-	span.E + span.v { margin-left: -0.04em; }
-	span.f + span.i { margin-left:  0.07em; }
-	span.g + span.e { margin-left: -0.01em; }
-	span.g + span.r { margin-left:  0.04em; }
-	span.g + span.u { margin-left:  0.04em; }
-	span.h + span.i { margin-left: -0.02em; }
-	span.H + span.T { margin-left:  0.01em; }
-	span.h + span.y { margin-left: -0.02em; }
-	span.i + span.g { margin-left: -0.03em; }
-	span.I + span.n { margin-left: -0.02em; }
-	span.i + span.n { margin-left: -0.02em; }
-	span.i + span.o { margin-left: -0.02em; }
-	span.i + span.t { margin-left: -0.01em; }
-	span.j + span.e { margin-left: -0.04em; }
-	span.k + span.d { margin-left: -0.01em; }
-	span.l + span.e { margin-left: -0.02em; }
-	span.l + span.o { margin-left: -0.03em; }
-	span.m + span.b { margin-left: -0.02em; }
-	span.m + span.b { margin-left: -0.02em; }
-	span.M + span.L { margin-left:  0.04em; }
-	span.n + span.g { margin-left: -0.01em; }
-	span.N + span.o { margin-left: -0.04em; }
-	span.n + span.s { margin-left:  0.02em; }
-	span.o + span.b { margin-left: -0.01em; }
-	span.o + span.g { margin-left: -0.03em; }
-	span.o + span.j { margin-left: -0.03em; }
-	span.o + span.p { margin-left:  0.01em; }
-	span.o + span.v { margin-left: -0.03em; }
-	span.o + span.w { margin-left: -0.04em; }
-	span.p + span.h { margin-left: -0.02em; }
-	span.P + span.r { margin-left:  0.02em; }
-	span.r + span.a { margin-left:  0.01em; }
-	span.r + span.y { margin-left:  0.06em; }
-	span.S + span.e { margin-left: -0.01em; }
-	span.t + span.e { margin-left:  0.01em; }
-	span.t + span.h { margin-left:  0.03em; }
-	span.t + span.i { margin-left:  0.03em; }
-	span.T + span.M { margin-left:  0.02em; }
-	span.t + span.o { margin-left:  0.01em; }
-	span.T + span.o { margin-left: -0.14em; }
-	span.t + span.r { margin-left:  0.05em; }
-	span.t + span.s { margin-left:  0.02em; }
-	span.t + span.y { margin-left: -0.02em; }
-	span.T + span.y { margin-left: -0.12em; }
-	span.u + span.s { margin-left:  0.02em; }
-	span.v + span.e { margin-left: -0.04em; }
-	span.w + span.e { margin-left: -0.04em; }
-	span.W + span.e { margin-left: -0.12em; }
-	span.W + span.h { margin-left: -0.07em; }
-	span.w + span.n { margin-left:  0.03em; }
-	span.y + span.p { margin-left:  0.04em; }
-	span.y + span.t { margin-left: -0.02em; }
+	span.a + span.c { margin-left:  0.01em }
+	span.a + span.n { margin-left:  0.03em }
+	span.A + span.n { margin-left: -0.01em }
+	span.a + span.r { margin-left:  0.04em }
+	span.a + span.s { margin-left:  0.01em }
+	span.A + span.u { margin-left: -0.04em }
+	span.c + span.t { margin-left:  0.01em }
+	span.e + span.c { margin-left:  0.01em }
+	span.e + span.e { margin-left:  0.01em }
+	span.e + span.m { margin-left:  0.02em }
+	span.e + span.r { margin-left:  0.02em }
+	span.E + span.v { margin-left: -0.04em }
+	span.f + span.i { margin-left:  0.07em }
+	span.g + span.e { margin-left: -0.01em }
+	span.g + span.r { margin-left:  0.04em }
+	span.g + span.u { margin-left:  0.04em }
+	span.h + span.i { margin-left: -0.02em }
+	span.H + span.T { margin-left:  0.01em }
+	span.h + span.y { margin-left: -0.02em }
+	span.i + span.g { margin-left: -0.03em }
+	span.I + span.n { margin-left: -0.02em }
+	span.i + span.n { margin-left: -0.02em }
+	span.i + span.o { margin-left: -0.02em }
+	span.i + span.t { margin-left: -0.01em }
+	span.j + span.e { margin-left: -0.04em }
+	span.k + span.d { margin-left: -0.01em }
+	span.l + span.e { margin-left: -0.02em }
+	span.l + span.o { margin-left: -0.03em }
+	span.m + span.b { margin-left: -0.02em }
+	span.m + span.b { margin-left: -0.02em }
+	span.M + span.L { margin-left:  0.04em }
+	span.n + span.g { margin-left: -0.01em }
+	span.N + span.o { margin-left: -0.04em }
+	span.n + span.s { margin-left:  0.02em }
+	span.o + span.b { margin-left: -0.01em }
+	span.o + span.g { margin-left: -0.03em }
+	span.o + span.j { margin-left: -0.03em }
+	span.o + span.p { margin-left:  0.01em }
+	span.o + span.v { margin-left: -0.03em }
+	span.o + span.w { margin-left: -0.04em }
+	span.p + span.h { margin-left: -0.02em }
+	span.P + span.r { margin-left:  0.02em }
+	span.r + span.a { margin-left:  0.01em }
+	span.r + span.y { margin-left:  0.06em }
+	span.S + span.e { margin-left: -0.01em }
+	span.t + span.e { margin-left:  0.01em }
+	span.t + span.h { margin-left:  0.03em }
+	span.t + span.i { margin-left:  0.03em }
+	span.T + span.M { margin-left:  0.02em }
+	span.t + span.o { margin-left:  0.01em }
+	span.T + span.o { margin-left: -0.14em }
+	span.t + span.r { margin-left:  0.05em }
+	span.t + span.s { margin-left:  0.02em }
+	span.t + span.y { margin-left: -0.02em }
+	span.T + span.y { margin-left: -0.12em }
+	span.u + span.s { margin-left:  0.02em }
+	span.v + span.e { margin-left: -0.04em }
+	span.w + span.e { margin-left: -0.04em }
+	span.W + span.e { margin-left: -0.12em }
+	span.W + span.h { margin-left: -0.07em }
+	span.w + span.n { margin-left:  0.03em }
+	span.y + span.p { margin-left:  0.04em }
+	span.y + span.t { margin-left: -0.02em }
 
 	span.num0 {
 		letter-spacing: -0.05em;
@@ -355,33 +355,33 @@
 		margin-left:    -0.05em;
 	}
 
-	span.num2 { letter-spacing: -0.03em; }
-	span.num3 { letter-spacing: -0.02em; }
-	span.num4 { letter-spacing: -0.05em; }
-	span.num5 { letter-spacing: -0.05em; }
-	span.num6 { letter-spacing: -0.05em; }
-	span.num7 { letter-spacing: -0.10em; }
-	span.num8 { letter-spacing: -0.05em; }
-	span.num9 { letter-spacing: -0.05em; }
+	span.num2 { letter-spacing: -0.03em }
+	span.num3 { letter-spacing: -0.02em }
+	span.num4 { letter-spacing: -0.05em }
+	span.num5 { letter-spacing: -0.05em }
+	span.num6 { letter-spacing: -0.05em }
+	span.num7 { letter-spacing: -0.10em }
+	span.num8 { letter-spacing: -0.05em }
+	span.num9 { letter-spacing: -0.05em }
 
-	span.num1 + span.num1 { margin-left: -0.10em; }
-	span.num1 + span.num3 { margin-left: -0.02em; }
-	span.num1 + span.num4 { margin-left: -0.05em; }
-	span.num1 + span.num5 { margin-left: -0.03em; }
-	span.num1 + span.num6 { margin-left: -0.07em; }
-	span.num1 + span.num9 { margin-left: -0.02em; }
-	span.num2 + span.num6 { margin-left: -0.01em; }
-	span.num2 + span.num1 { margin-left: -0.08em; }
-	span.num2 + span.num8 { margin-left: -0.01em; }
-	span.num3 + span.num1 { margin-left: -0.13em; }
+	span.num1 + span.num1 { margin-left: -0.10em }
+	span.num1 + span.num3 { margin-left: -0.02em }
+	span.num1 + span.num4 { margin-left: -0.05em }
+	span.num1 + span.num5 { margin-left: -0.03em }
+	span.num1 + span.num6 { margin-left: -0.07em }
+	span.num1 + span.num9 { margin-left: -0.02em }
+	span.num2 + span.num6 { margin-left: -0.01em }
+	span.num2 + span.num1 { margin-left: -0.08em }
+	span.num2 + span.num8 { margin-left: -0.01em }
+	span.num3 + span.num1 { margin-left: -0.13em }
 
-	span.num0 + span.comma { margin-left: -0.02em; }
-	span.num1 + span.comma { margin-left: -0.01em; }
-	span.num3 + span.comma { margin-left: -0.07em; }
-	span.num4 + span.comma { margin-left: -0.03em; }
-	span.num5 + span.comma { margin-left: -0.05em; }
-	span.num7 + span.comma { margin-left: -0.10em; }
-	span.num9 + span.comma { margin-left: -0.10em; }
+	span.num0 + span.comma { margin-left: -0.02em }
+	span.num1 + span.comma { margin-left: -0.01em }
+	span.num3 + span.comma { margin-left: -0.07em }
+	span.num4 + span.comma { margin-left: -0.03em }
+	span.num5 + span.comma { margin-left: -0.05em }
+	span.num7 + span.comma { margin-left: -0.10em }
+	span.num9 + span.comma { margin-left: -0.10em }
 }
 
 

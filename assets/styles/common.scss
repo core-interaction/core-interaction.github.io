@@ -68,7 +68,7 @@
 		--color--highlight--reverse: hsl(0, 0%, 100%, 20%);
 	}
 
-	@include breakpoint(320) { --typography--size: calc((16/375) * 100vw); }
+	@include breakpoint(320) { --typography--size: calc((16/375) * 100vw) }
 
 	@include breakpoint(768) {
 		--typography--size: 2rem;
@@ -88,8 +88,8 @@
 		--page--width: 102.4rem;
 	}
 
-	@include landscape { --margin--vertical: calc(var(--margin) * 0.75); }
-	@include tall      { --margin--vertical: var(--margin); }
+	@include landscape { --margin--vertical: calc(var(--margin) * 0.75) }
+	@include tall      { --margin--vertical: var(--margin) }
 }
 
 
@@ -133,7 +133,7 @@
 	margin-left: var(--icon--gap);
 	transform:   translateY(var(--icon--shift, 0rem)) scale(var(--icon--scale, 1));
 
-	&.center--x { --icon--shift: 0.066em; } // Center down to x-height;
+	&.center--x { --icon--shift: 0.066em } // Center down to x-height;
 }
 
 
@@ -153,9 +153,9 @@ body {
 		--typography--leading: var(--typography--leading--tight);
 	}
 
-	h1 { --typography--size: var(--typography--size--h1); }
-	h2 { --typography--size: var(--typography--size--h2); }
-	h3 { --typography--size: var(--typography--size--h3); }
+	h1 { --typography--size: var(--typography--size--h1) }
+	h2 { --typography--size: var(--typography--size--h2) }
+	h3 { --typography--size: var(--typography--size--h3) }
 
 	hr {
 		background-color: var(--color);
@@ -203,7 +203,7 @@ body {
 			> a {
 				@extend %link--element;
 
-				> p { color: var(--link--color); }
+				> p { color: var(--link--color) }
 			}
 
 
@@ -288,7 +288,7 @@ body {
 			row-gap:             var(--margin--vertical);
 
 			// The date.
-			> p { --typography--size: var(--typography--size--h2); }
+			> p { --typography--size: var(--typography--size--h2) }
 		}
 
 
@@ -317,7 +317,7 @@ body {
 				> a {
 					@extend %link--element;
 
-					&:last-child { white-space: nowrap; }
+					&:last-child { white-space: nowrap }
 				}
 			}
 		}
@@ -337,7 +337,7 @@ body {
 				margin-top: calc(var(--margin--vertical) * 4);
 				row-gap:    calc(var(--margin--vertical) * 2);
 
-				@include breakpoint(568) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+				@include breakpoint(568) { grid-template-columns: repeat(3, minmax(0, 1fr)) }
 
 				// Each list.
 				aside {
@@ -349,7 +349,7 @@ body {
 						gap:            var(--typography--between);
 						margin-top:     var(--margin--vertical);
 
-						> li > a { @extend %link--element; }
+						> li > a { @extend %link--element }
 					}
 				}
 			}

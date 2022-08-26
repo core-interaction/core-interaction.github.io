@@ -2,21 +2,21 @@
 	--typography--extra-lines: 1; // Sequential spacing between `p`.
 
 	// Basics.
-	h1 { display: none; } // So we don’t forget.
+	h1 { display: none } // So we don’t forget.
 
 	h2 {
-		&:not(:first-child) { margin-top: calc(var(--margin--vertical) * 4); }
-		+ * { margin-top: calc(var(--margin--vertical) * 2); }
+		&:not(:first-child) { margin-top: calc(var(--margin--vertical) * 4) }
+		+ * { margin-top: calc(var(--margin--vertical) * 2) }
 	}
 
 	h3 {
-		&:not(:first-child) { margin-top: calc(var(--margin--vertical) * 2); }
+		&:not(:first-child) { margin-top: calc(var(--margin--vertical) * 2) }
 	}
 
 	hr,
 	blockquote {
-		&:not(:first-child) { margin-top: calc(var(--margin--vertical) * 4); }
-		+ * { margin-top: calc(var(--margin--vertical) * 4); }
+		&:not(:first-child) { margin-top: calc(var(--margin--vertical) * 4) }
+		+ * { margin-top: calc(var(--margin--vertical) * 4) }
 	}
 
 
@@ -106,8 +106,8 @@
 			content: var(--icon);
 		}
 
-		&[href^="/"] { --icon: '→'; } // Internal.
-		&[href^="http"] { --icon: '↗'; } // External.
+		&[href^="/"] { --icon: '→' } // Internal.
+		&[href^="http"] { --icon: '↗' } // External.
 
 		&[href*="docs.google.com"]:after,
 		&[href*="slack.com"]:after,
@@ -121,13 +121,13 @@
 			--icon--gap: 0.5em;
 		}
 
-		&[href*="docs.google.com"]:after       { --icon: '!'; --icon--scale: 1.1; } // Pencil icon.
-		&[href*="slack.com"]:after             { --icon: '-'; --icon--scale: 1.2; } // Mailbox.
-		&[href*="github.com"]:after            { --icon: '<'; } // Floppy.
+		&[href*="docs.google.com"]:after       { --icon: '!'; --icon--scale: 1.1 } // Pencil icon.
+		&[href*="slack.com"]:after             { --icon: '-'; --icon--scale: 1.2 } // Mailbox.
+		&[href*="github.com"]:after            { --icon: '<' } // Floppy.
 		&[href*="drive.google.com"]:after      { --icon: '1'; --icon--scale: 1;} // Folder.
-		&[href*="zoom.us"]:after               { --icon: ')'; --icon--scale: 1.333; } // Telephone.
-		&[href*="courses.newschool.edu"]:after { --icon: '5'; --icon--scale: 1.333; } // File cabinet.
-		&[href*=".pdf"]:after                  { --icon: '2'; } // Document.
+		&[href*="zoom.us"]:after               { --icon: ')'; --icon--scale: 1.333 } // Telephone.
+		&[href*="courses.newschool.edu"]:after { --icon: '5'; --icon--scale: 1.333 } // File cabinet.
+		&[href*=".pdf"]:after                  { --icon: '2' } // Document.
 	}
 
 	p {
@@ -159,9 +159,9 @@
 			margin-top:   var(--typography--margin--top);
 			padding-left: 0.4em;
 
-			@include browser-specific(safari) { padding-left: 0.3em; }
+			@include browser-specific(safari) { padding-left: 0.3em }
 
-			&:before { display: none; } // Collides with the marker, so we use the margin.
+			&:before { display: none } // Collides with the marker, so we use the margin.
 
 			> p {
 				padding-left: 0.8em;
@@ -170,7 +170,7 @@
 				&:last-child:after { display: none }; // Since the `li` is a type element.
 			}
 
-			&:not(:first-child) > p { margin-top: calc(var(--typography--font-size) * var(--typography--leading)); }
+			&:not(:first-child) > p { margin-top: calc(var(--typography--font-size) * var(--typography--leading)) }
 		}
 	}
 
@@ -178,24 +178,23 @@
 		list-style-type: disc;
 		padding-left:    0.8em;
 
-		@include browser-specific(safari) { padding-left: 1em; }
+		@include browser-specific(safari) { padding-left: 1em }
 	}
 
 	ol {
 		list-style-type: decimal;
 		padding-left:    0.95em;
 
-		@include browser-specific(safari) { padding-left: 1.25em; }
+		@include browser-specific(safari) { padding-left: 1.25em }
 	}
 
 
 
 	// Link list from an include.
 	aside {
-		&:not(:first-child) { margin-top:    calc(var(--margin--vertical) * 2); }
-		+ * { margin-top: calc(var(--margin--vertical) * 2); }
+		&:not(:first-child) { margin-top:    calc(var(--margin--vertical) * 2) }
 
-		> h3 { margin-bottom: var(--margin--vertical); }
+		> h3 { margin-bottom: var(--margin--vertical) }
 
 		> menu {
 			@extend %type--layout;
@@ -204,7 +203,9 @@
 			flex-direction: column;
 			gap:            var(--typography--between);
 
-			> li > a { @extend %link--element; }
+			> li > a { @extend %link--element }
 		}
+
+		+ * { margin-top: calc(var(--margin--vertical) * 2) }
 	}
 }
