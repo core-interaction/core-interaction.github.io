@@ -124,18 +124,20 @@
 		&[href*="github.com"]:after,
 		&[href*="drive.google.com"]:after,
 		&[href*="zoom.us"]:after,
-		&[href*="courses.newschool.edu"]:after {
+		&[href*="courses.newschool.edu"]:after,
+		&[href*=".pdf"]:after {
 			@extend .icon--wingdings;
 
 			--icon--gap: 0.5em;
 		}
 
-		&[href*="docs.google.com"]:after { --icon: '2'; } // Doc icon.
+		&[href*="docs.google.com"]:after { --icon: '!'; --icon--scale: 1.1; } // Pencil icon.
 		&[href*="slack.com"]:after { --icon: '-'; --icon--scale: 1.2; } // Mailbox.
 		&[href*="github.com"]:after { --icon: '<'; } // Floppy.
 		&[href*="drive.google.com"]:after { --icon: '1';  --icon--scale: 1;} // Folder.
 		&[href*="zoom.us"]:after { --icon: ')'; --icon--scale: 1.333; } // Telephone.
 		&[href*="courses.newschool.edu"]:after { --icon: '5'; --icon--scale: 1.333; } // File cabinet.
+		&[href*=".pdf"]:after { --icon: '2'; } // Document.
 	}
 
 	p {
