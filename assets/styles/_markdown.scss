@@ -1,20 +1,22 @@
 > article {
 	--typography--extra-lines: 1; // Sequential spacing between `p`.
 
+	// Basics.
 	h1 { display: none; } // So we don’t forget.
 
 	h2 {
-		&:not(:first-child) { margin-top:    calc(var(--margin--vertical) * 4); }
-		&:not(:last-child)  { margin-bottom: calc(var(--margin--vertical) * 2); }
+		&:not(:first-child) { margin-top: calc(var(--margin--vertical) * 4); }
+		+ * { margin-top: calc(var(--margin--vertical) * 2); }
 	}
 
 	h3 {
 		&:not(:first-child) { margin-top: calc(var(--margin--vertical) * 2); }
 	}
 
-	hr {
-		&:not(:first-child) { margin-top:    calc(var(--margin--vertical) * 4); }
-		&:not(:last-child)  { margin-bottom: calc(var(--margin--vertical) * 4); }
+	hr,
+	blockquote {
+		&:not(:first-child) { margin-top: calc(var(--margin--vertical) * 4); }
+		+ * { margin-top: calc(var(--margin--vertical) * 4); }
 	}
 
 
@@ -26,9 +28,6 @@
 		--typography--size: var(--typography--size--h3);
 
 		font-style: italic;
-
-		&:not(:first-child) { margin-top:    calc(var(--margin--vertical) * 4); }
-		&:not(:last-child)  { margin-bottom: calc(var(--margin--vertical) * 4); }
 
 		&.callout {
 			--typography--size: var(--typography--size--base);
@@ -82,10 +81,6 @@
 				}
 			}
 		}
-	}
-
-	* {
-		--typography--extra-lines: 1; // Sequential spacing between `p`.
 	}
 
 
@@ -200,11 +195,9 @@
 	// Link list from an include.
 	aside {
 		&:not(:first-child) { margin-top:    calc(var(--margin--vertical) * 2); }
-		&:not(:last-child)  { margin-bottom: calc(var(--margin--vertical) * 2); }
+		+ * { margin-top: calc(var(--margin--vertical) * 2); }
 
-		> h3:not(._) { // Bump specificity.
-			margin-bottom: var(--margin--vertical);
-		}
+		> h3 { margin-bottom: var(--margin--vertical); }
 
 		> menu {
 			@extend %type--layout;
