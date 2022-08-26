@@ -92,6 +92,37 @@
 		color: var(--link--color);
 	}
 
+	// Prominence for link-only paragraphs/li.
+	.link-only > a {
+		@extend %font--underline--disable;
+
+		&:after {
+			@extend .center--x;
+			@extend .icon--sf;
+
+			content: var(--icon);
+		}
+
+		&[href^="/"] { --icon: '→'; } // Internal.
+		&[href^="http"] { --icon: '↗'; } // External.
+
+		&[href*="docs.google.com"]:after,
+		&[href*="slack.com"]:after,
+		&[href*="github.com"]:after,
+		&[href*="drive.google.com"]:after,
+		&[href*="zoom.us"]:after {
+			@extend .icon--wingdings;
+
+			--icon--gap: 0.5em;
+		}
+
+		&[href*="docs.google.com"]:after { --icon: '2'; } // Doc icon.
+		&[href*="slack.com"]:after { --icon: '%'; } // Bell.
+		&[href*="github.com"]:after { --icon: '<'; } // Floppy.
+		&[href*="drive.google.com"]:after { --icon: '1';  --icon--scale: 1;} // Folder.
+		&[href*="zoom.us"]:after { --icon: ')'; --icon--scale: 1.333; } // Telephone.
+	}
+
 	p {
 		max-width: 75ch;
 
@@ -100,38 +131,54 @@
 
 			font-weight: var(--typography--weight);
 		}
+	}
 
 
 
-		// Prominence for link-only paragraphs.
-		&.link-only > a {
-			@extend %font--underline--disable;
+	ul,
+	ol {
+		@extend %type--layout;
+		@extend %typography--sequential;
 
-			&:after {
-				@extend .center--x;
-				@extend .icon--sf;
+		display:             grid;
+		gap:                 var(--typography--between);
+		list-style-position: outside;
 
-				content: var(--icon);
+		> li {
+			@extend %typography; // For paragraph-less lists.
+
+			display:      list-item;
+			margin-top:   var(--typography--margin--top);
+			padding-left: 0.4em;
+
+			@include browser-specific(safari) { padding-left: 0.3em; }
+
+			&:before { display: none; } // Collides with the marker, so we use the margin.
+
+			> p {
+				padding-left: 0.8em;
+
+				&:first-child:before,
+				&:last-child:after { display: none }; // Since the `li` is a type element.
 			}
 
-			&[href^="/"] { --icon: '→'; } // Internal.
-			&[href^="http"] { --icon: '↗'; } // External.
-
-			&[href*="docs.google.com"]:after,
-			&[href*="slack.com"]:after,
-			&[href*="github.com"]:after,
-			&[href*="drive.google.com"]:after,
-			&[href*="zoom.us"]:after {
-				@extend .icon--wingdings;
-
-				--icon--gap: 0.5em;
+			&:not(:first-child) > p {
+				margin-top:   calc(var(--typography--font-size) * var(--typography--leading));
 			}
-
-			&[href*="docs.google.com"]:after { --icon: '2'; } // Doc icon.
-			&[href*="slack.com"]:after { --icon: '%'; } // Bell.
-			&[href*="github.com"]:after { --icon: '<'; } // Floppy.
-			&[href*="drive.google.com"]:after { --icon: '1';  --icon--scale: 1;} // Folder.
-			&[href*="zoom.us"]:after { --icon: ')'; --icon--scale: 1.333; } // Telephone.
 		}
+	}
+
+	ul {
+		list-style-type: disc;
+		padding-left:    0.8em;
+
+		@include browser-specific(safari) { padding-left: 1em; }
+	}
+
+	ol {
+		list-style-type: decimal;
+		padding-left:    0.95em;
+
+		@include browser-specific(safari) { padding-left: 1.25em; }
 	}
 }
