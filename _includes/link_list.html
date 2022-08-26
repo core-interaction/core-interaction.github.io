@@ -1,0 +1,14 @@
+{% if page.links  %}
+<aside markdown="0"> {% comment %} You can’t indent this or it’ll make a code block. {% endcomment %}
+	<h3>{{ include.heading | kerning }}</h3>
+	<menu>
+		{% for link in page.links %}
+			<li>
+				<p class="link-only">
+					<a href="{{ link.url }}">{{ link.name }}</a>
+				</p>
+			</li>
+		{% endfor %}
+	</menu>
+</aside>
+{% endif %}

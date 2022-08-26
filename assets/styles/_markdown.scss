@@ -194,4 +194,30 @@
 
 		@include browser-specific(safari) { padding-left: 1.25em; }
 	}
+
+
+
+	// Link list from an include.
+	aside {
+		&:not(:first-child) { margin-top:    calc(var(--margin--vertical) * 2); }
+		&:not(:last-child)  { margin-bottom: calc(var(--margin--vertical) * 2); }
+
+		> h3:not(._) { // Bump specificity.
+			margin-bottom: var(--margin--vertical);
+		}
+
+		> menu {
+			@extend %type--layout;
+
+			display:        flex;
+			flex-direction: column;
+			gap:            var(--typography--between);
+
+			> li {
+				> a {
+					@extend %link--element;
+				}
+			}
+		}
+	}
 }
