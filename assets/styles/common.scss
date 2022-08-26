@@ -342,13 +342,6 @@ body {
 				grid-template-rows: min-content 1fr;
 
 				@include breakpoint(568) {
-					grid-template-columns: repeat(2, minmax(0, 1fr));
-
-					#sessions { grid-row: span 2; }
-					#topics, #projects  { grid-column: 2; }
-				}
-
-				@include breakpoint(1024) {
 					grid-template-columns: repeat(3, minmax(0, 1fr));
 
 					#sessions,
