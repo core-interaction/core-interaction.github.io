@@ -114,6 +114,13 @@
 
 			&[href^="/"] { --icon: '→'; } // Internal.
 			&[href^="http"] { --icon: '↗'; } // External.
+
+			&[href^="https://docs.google.com"]:after {
+				@extend .icon--wingdings;
+
+				--icon:      '2'; // Doc icon.
+				--icon--gap: 0.5em;
+			}
 		}
 	}
 }
