@@ -121,13 +121,13 @@
 			--icon--gap: 0.5em;
 		}
 
-		&[href*="docs.google.com"]:after { --icon: '!'; --icon--scale: 1.1; } // Pencil icon.
-		&[href*="slack.com"]:after { --icon: '-'; --icon--scale: 1.2; } // Mailbox.
-		&[href*="github.com"]:after { --icon: '<'; } // Floppy.
-		&[href*="drive.google.com"]:after { --icon: '1';  --icon--scale: 1;} // Folder.
-		&[href*="zoom.us"]:after { --icon: ')'; --icon--scale: 1.333; } // Telephone.
+		&[href*="docs.google.com"]:after       { --icon: '!'; --icon--scale: 1.1; } // Pencil icon.
+		&[href*="slack.com"]:after             { --icon: '-'; --icon--scale: 1.2; } // Mailbox.
+		&[href*="github.com"]:after            { --icon: '<'; } // Floppy.
+		&[href*="drive.google.com"]:after      { --icon: '1'; --icon--scale: 1;} // Folder.
+		&[href*="zoom.us"]:after               { --icon: ')'; --icon--scale: 1.333; } // Telephone.
 		&[href*="courses.newschool.edu"]:after { --icon: '5'; --icon--scale: 1.333; } // File cabinet.
-		&[href*=".pdf"]:after { --icon: '2'; } // Document.
+		&[href*=".pdf"]:after                  { --icon: '2'; } // Document.
 	}
 
 	p {
@@ -170,9 +170,7 @@
 				&:last-child:after { display: none }; // Since the `li` is a type element.
 			}
 
-			&:not(:first-child) > p {
-				margin-top:   calc(var(--typography--font-size) * var(--typography--leading));
-			}
+			&:not(:first-child) > p { margin-top: calc(var(--typography--font-size) * var(--typography--leading)); }
 		}
 	}
 
@@ -206,11 +204,7 @@
 			flex-direction: column;
 			gap:            var(--typography--between);
 
-			> li {
-				> a {
-					@extend %link--element;
-				}
-			}
+			> li > a { @extend %link--element; }
 		}
 	}
 }
