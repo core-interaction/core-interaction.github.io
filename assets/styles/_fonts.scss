@@ -323,6 +323,7 @@
 	span.o + span.w { margin-left: -0.04em }
 	span.p + span.h { margin-left: -0.02em }
 	span.P + span.r { margin-left:  0.02em }
+	span.P + span.U { margin-left: -0.03em }
 	span.r + span.a { margin-left:  0.01em }
 	span.r + span.y { margin-left:  0.06em }
 	span.S + span.e { margin-left: -0.01em }
@@ -336,6 +337,7 @@
 	span.t + span.s { margin-left:  0.02em }
 	span.t + span.y { margin-left: -0.02em }
 	span.T + span.y { margin-left: -0.12em }
+	span.U + span.C { margin-left: -0.05em }
 	span.u + span.s { margin-left:  0.02em }
 	span.v + span.e { margin-left: -0.04em }
 	span.w + span.e { margin-left: -0.04em }
@@ -364,16 +366,18 @@
 	span.num8 { letter-spacing: -0.05em }
 	span.num9 { letter-spacing: -0.05em }
 
+	span.num0 + span.num0 { margin-left:  0.04em }
 	span.num1 + span.num1 { margin-left: -0.10em }
 	span.num1 + span.num3 { margin-left: -0.02em }
 	span.num1 + span.num4 { margin-left: -0.05em }
 	span.num1 + span.num5 { margin-left: -0.03em }
 	span.num1 + span.num6 { margin-left: -0.07em }
 	span.num1 + span.num9 { margin-left: -0.02em }
-	span.num2 + span.num6 { margin-left: -0.01em }
 	span.num2 + span.num1 { margin-left: -0.08em }
+	span.num2 + span.num6 { margin-left: -0.01em }
 	span.num2 + span.num8 { margin-left: -0.01em }
 	span.num3 + span.num1 { margin-left: -0.13em }
+	span.num5 + span.num0 { margin-left:  0.00em }
 
 	span.num0 + span.comma { margin-left: -0.02em }
 	span.num1 + span.comma { margin-left: -0.01em }
