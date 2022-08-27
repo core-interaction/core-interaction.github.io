@@ -24,7 +24,7 @@ module Jekyll
 				if letterClass
 					letters += "<span class='#{ letterClass }'>#{ letter }</span>"
 				else
-					letters += letter
+					letters += "<br>"
 				end
 			end
 			return letters
