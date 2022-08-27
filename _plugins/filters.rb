@@ -14,6 +14,12 @@ module Jekyll
 					letterClass = false
 				elsif letter == " "
 					letterClass = "nbsp"
+				elsif letter == "-"
+					letterClass = "hyphen"
+				elsif letter == "–"
+					letterClass = "ndash"
+				elsif letter == "—"
+					letterClass = "mdash"
 				elsif letter == ","
 					letterClass = "comma"
 				elsif letter.to_i.to_s == letter
