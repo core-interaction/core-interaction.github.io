@@ -175,7 +175,7 @@ body {
 		@extend %--icon--span;
 		@extend %font--wingdings;
 
-		--icon--scale: 1.25;
+		--icon--scale: 1.333;
 	}
 
 
@@ -463,32 +463,34 @@ body {
 		content: var(--icon);
 	}
 
-	&[href^="/"] { --icon: '→' } // Internal.
+	&[href^="/"]    { --icon: '→' } // Internal.
 	&[href^="http"] { --icon: '↗' } // External.
 
-	&[href*="docs.google.com"]:after,
-	&[href*="slack.com"]:after,
-	&[href*="github.com"]:after,
-	&[href*="drive.google.com"]:after,
-	&[href*="zoom.us"]:after,
-	&[href*="courses.newschool.edu"]:after,
 	&[href*=".pdf"]:after,
+	&[href*="courses.newschool.edu"]:after,
+	&[href*="docs.google.com"]:after,
+	&[href*="drive.google.com"]:after,
+	&[href*="eric.young.li"]:after,
+	&[href*="github.com"]:after,
 	&[href*="mailto:"]:after,
 	&[href*="michaelfehrenbach.com"]:after,
-	&[href*="eric.young.li"]:after {
+	&[href*="mpscd.parsons.edu"]:after,
+	&[href*="slack.com"]:after,
+	&[href*="zoom.us"]:after {
 		@extend .icon--wingdings;
 
 		--icon--gap: 0.5em;
 	}
 
-	&[href*="docs.google.com"]:after       { --icon: '!'; --icon--scale: 1.1 } // Pencil icon.
+	&[href*=".pdf"]:after                  { --icon: '2'; --icon--scale: 1.2 } // Doc.
+	&[href*="courses.newschool.edu"]:after { --icon: '5'; --icon--scale: 1.4 } // File cabinet.
+	&[href*="docs.google.com"]:after       { --icon: '!'; --icon--scale: 1.1 } // Pencil.
+	&[href*="drive.google.com"]:after      { --icon: '1'; --icon--scale: 1 }   // Folder.
+	&[href*="eric.young.li"]:after         { --icon: 'C'; }                    // Thumbs-up.
+	&[href*="github.com"]:after            { --icon: '<'; }                    // Floppy.
+	&[href*="mailto:"]:after               { --icon: '*'; --icon--scale: 1.1 } // Envelope.
+	&[href*="michaelfehrenbach.com"]:after { --icon: 'A'; }                    // Peace sign.
+	&[href*="mpscd.parsons.edu"]:after     { --icon: 'O'; --icon--scale: 1.1 } // Flag.
 	&[href*="slack.com"]:after             { --icon: '-'; --icon--scale: 1.2 } // Mailbox.
-	&[href*="github.com"]:after            { --icon: '<' } // Floppy.
-	&[href*="drive.google.com"]:after      { --icon: '1'; --icon--scale: 1 } // Folder.
-	&[href*="zoom.us"]:after               { --icon: ')'; --icon--scale: 1.333 } // Telephone.
-	&[href*="courses.newschool.edu"]:after { --icon: '5'; --icon--scale: 1.333 } // File cabinet.
-	&[href*=".pdf"]:after                  { --icon: '2' } // Document.
-	&[href*="mailto:"]:after               { --icon: '*'; --icon--scale: 1.1 } // Document.
-	&[href*="michaelfehrenbach.com"]:after { --icon: 'A'; --icon--scale: 1.333 }
-	&[href*="eric.young.li"]:after         { --icon: 'C'; --icon--scale: 1.333 }
+	&[href*="zoom.us"]:after               { --icon: ')'; }                    // Telephone.
 }

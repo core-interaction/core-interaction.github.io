@@ -57,8 +57,6 @@
 			&[icon]:before {
 				@extend .icon--wingdings;
 
-				--icon--scale: 1.333; // Bigger for these.
-
 				color:        var(--color);
 				content:      attr(icon);
 				height:       1em;

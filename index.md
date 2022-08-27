@@ -11,6 +11,8 @@ links:
     url:  https://NewSchool.zoom.us/j/96694509534
   - name: Catalog
     url:  https://courses.newschool.edu/courses/PMCD5001
+  - name: Program
+    url:  https://mpscd.parsons.edu
 strings:
   about: |
     Parsons School of Design, MPS CD
