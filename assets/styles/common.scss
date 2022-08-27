@@ -96,12 +96,12 @@
 
 	// The main column constraints.
 %--page-container {
-	margin-left:    auto;
-	margin-right:   auto;
-	max-width:      var(--page--width);
-	padding-left:   var(--margin);
-	padding-right:  var(--margin);
-	width:          100%;
+	margin-left:   auto;
+	margin-right:  auto;
+	max-width:     var(--page--width);
+	padding-left:  var(--margin);
+	padding-right: var(--margin);
+	width:         100%;
 }
 
 
@@ -135,7 +135,6 @@
 
 	&.center--x { --icon--shift: 0.066em } // Center down to x-height;
 }
-
 
 
 
