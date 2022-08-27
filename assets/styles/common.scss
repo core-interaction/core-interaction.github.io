@@ -276,19 +276,31 @@ body {
 		padding-bottom: calc(var(--margin--vertical) * 4);
 
 		> header {
-			align-items:         end;
 			border-bottom-color: var(--color);
 			border-bottom-style: solid;
 			border-bottom-width: var(--divider--width--h1);
 			column-gap:          var(--margin);
-			display:             flex;
-			justify-content:     space-between;
+			display:             grid;
 			margin-bottom:       calc(var(--margin--vertical) * 4);
-			padding-bottom:      calc(var(--margin--vertical) * 1);
+			padding-bottom:      var(--margin--vertical);
 			row-gap:             var(--margin--vertical);
 
+			@include breakpoint(568) {
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+
+				> h1 { grid-column: 1 / span 2 }
+				> h1:only-child { grid-column: 1 / span 3 }
+			}
+
 			// The date.
-			> p { --typography--size: var(--typography--size--h2) }
+			> p {
+				--typography--leading: var(--typography--leading--tight);
+				--typography--size:    var(--typography--size--h2);
+
+				grid-column: 1 / span 2;
+				margin-top:  calc(-1 * var(--typography--size) * (var(--typography--cap-height) - var(--typography--x-height)));
+			}
+
 		}
 
 
