@@ -317,7 +317,7 @@ body {
 				> a {
 					@extend %link--element;
 
-					&:last-child { white-space: nowrap }
+					white-space: nowrap
 				}
 			}
 		}
