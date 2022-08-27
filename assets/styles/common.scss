@@ -310,12 +310,24 @@ body {
 
 				--top--offset: calc(var(--typography--size--h1) * (var(--typography--cap-height) - var(--typography--x-height)));
 
-				margin-top: var(--margin--vertical);
+				display:        flex;
+				flex-direction: column;
+				margin-top:     var(--margin--vertical);
 
 				@include breakpoint(568) {
 					grid-row:    1 / span 2;
 					grid-column: 3 / span 1;
 					margin-top:  var(--top--offset);
+				}
+
+				> div {
+					margin-top: var(--margin--vertical);
+
+					@include breakpoint(568) { margin-top: auto }
+
+					> p > a { @extend %icon--external }
+
+					> p:not(:first-child) { margin-top: var(--typography--between) }
 				}
 			}
 		}
@@ -437,4 +449,43 @@ body {
 			}
 		}
 	}
+}
+
+
+
+// Low to override defaults.
+%icon--external {
+	@extend %link--text;
+
+	&:after {
+		@extend .center--x;
+		@extend .icon--sf;
+
+		content: var(--icon);
+	}
+
+	&[href^="/"] { --icon: '→' } // Internal.
+	&[href^="http"] { --icon: '↗' } // External.
+
+	&[href*="docs.google.com"]:after,
+	&[href*="slack.com"]:after,
+	&[href*="github.com"]:after,
+	&[href*="drive.google.com"]:after,
+	&[href*="zoom.us"]:after,
+	&[href*="courses.newschool.edu"]:after,
+	&[href*=".pdf"]:after,
+	&[href*="mailto:"]:after {
+		@extend .icon--wingdings;
+
+		--icon--gap: 0.5em;
+	}
+
+	&[href*="docs.google.com"]:after       { --icon: '!'; --icon--scale: 1.1 } // Pencil icon.
+	&[href*="slack.com"]:after             { --icon: '-'; --icon--scale: 1.2 } // Mailbox.
+	&[href*="github.com"]:after            { --icon: '<' } // Floppy.
+	&[href*="drive.google.com"]:after      { --icon: '1'; --icon--scale: 1 } // Folder.
+	&[href*="zoom.us"]:after               { --icon: ')'; --icon--scale: 1.333 } // Telephone.
+	&[href*="courses.newschool.edu"]:after { --icon: '5'; --icon--scale: 1.333 } // File cabinet.
+	&[href*=".pdf"]:after                  { --icon: '2' } // Document.
+	&[href*="mailto:"]:after               { --icon: '*'; --icon--scale: 1.1 } // Document.
 }

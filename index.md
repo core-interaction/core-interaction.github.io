@@ -25,6 +25,11 @@ strings:
   term:     Fall 2022
   top:      Top
   topics:   Topics
+instructor:
+  - name:  Michael Fehrenbach
+    url:   'mailto:fehrenbm@newschool.edu'
+  - name:  Eric Li
+    url:   'mailto:lie@newschool.edu'
 ---
 
 

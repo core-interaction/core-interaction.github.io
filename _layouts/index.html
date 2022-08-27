@@ -13,6 +13,11 @@ layout: default
 		<p>{{ page.strings.term | kerning }}</p>
 		<address>
 			<p>{{ page.strings.about | kerning }}</p>
+			<div>
+				{% for instructor in page.instructor %}
+					<p><a href="{{ instructor.url }}">{{ instructor.name }}</a></p>
+				{% endfor %}
+			</div>
 		</address>
 	</header>
 	<article>
