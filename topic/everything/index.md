@@ -5,7 +5,7 @@ title: Everything is a web page
 
 
 {% comment %}
-TODO: Images, “slides”?
+TODO: Images, “slides”, acronyms, more links?
 {% endcomment %}
 
 
@@ -22,7 +22,7 @@ TODO: Images, “slides”?
 
 Before this time, the term *computer* usually referred to a person, not a machine—someone who would *compute* (solve) math problems.
 
-It is worth noting these were often women, and they were often underpaid compared to men in the field—even though many would go on to maintain and operate the early mechanical/electronic computers after WWII.
+It is worth noting these [were often women](https://www.nytimes.com/2019/02/13/magazine/women-coding-computer-programming.html), and they were often underpaid compared to men in the field—even though many would go on to maintain and operate the early mechanical/electronic computers after WWII.
 
 {% comment %} UNIVAC. {% endcomment %}
 
@@ -30,7 +30,7 @@ By the 1960s, computers were room-sized, institutional electronic machines—use
 
 {% comment %} Central/decentralized. {% endcomment %}
 
-A catalyst in the formation of the internet was the Cold War. The threat of nuclear war spurred the US Defense Department to consider decentralized networks—to disseminate orders and information in the event of an attack.
+A catalyst in the formation of the internet was the Cold War. The threat of nuclear conflict spurred the US Defense Department to consider decentralized networks—to disseminate orders and information in the event of an attack.
 
 
 
@@ -47,7 +47,7 @@ By 1969, computer nodes connected the Stanford Research Institute, UCLA, UCSB an
 
 {% comment %} Arpanet growth. {% endcomment %}
 
-Over the following decades, “[ARPAnet](https://en.wikipedia.org/wiki/ARPANET)” would grow to include other cities—and then other competing academic and commercial networks were developed alongside, each with their own communication protocols.
+Over the following decades, “[ARPAnet](https://www.britannica.com/topic/ARPANET)” would grow to include other cities—and then other competing academic and commercial networks were developed alongside, each with their own communication protocols.
 
 {% comment %} TCP diagram of some sort? {% endcomment %}
 
@@ -148,7 +148,7 @@ And in that latter role, we’ll need to learn how to swim. Our path into *desig
 
 All these desktop “apps” are built in [Electron](https://www.electronjs.org)—and so are really just web pages inside a slim, platform-native wrapper. (Essentially, a single-website browser.)
 
-The core application only has to be written once, instead of rewritten for each platform. And why design it all again? Why hire Windows and Mac devs when you can just hire web devs? …then why hire iOS or Android devs, either?
+The core application only has to be written once, instead of rewritten for each platform. And why design it all again? (Designers are expensive.) Why hire Windows and Mac devs when you can just hire web devs? …then why hire iOS or Android devs, either? (Developers are even more expensive.)
 
 {% comment %} ![mobile.png](mobile.png) {% endcomment %}
 
