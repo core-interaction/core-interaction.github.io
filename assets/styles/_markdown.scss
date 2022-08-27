@@ -176,6 +176,42 @@
 
 
 
+	details {
+		> summary {
+			@extend %link--element;
+
+			--color: var(--color--links);
+
+			> p {
+				margin-bottom: var(--typography--margin--bottom);
+
+				&:after {
+					@extend .icon--sf;
+					@extend .center--x;
+
+					--icon--scale: 1.25;
+
+					content:          '+';
+					font-weight:      200;
+					margin-bottom:    initial;
+					text-align:       center;
+					transform-origin: bottom;
+					visibility:       visible; // Override typography pseudo.
+					width:            1em;
+				}
+			}
+		}
+
+		&[open] > summary > p:after {content: '–' }
+
+		// The contents.
+		> div { margin-top: var(--typography--leading-shoulder) }
+
+		+ * { --margin--top: calc(var(--margin--vertical) * 2) }
+	}
+
+
+
 	// Link list from an include.
 	aside {
 		@extend %type--layout;
