@@ -308,11 +308,13 @@ body {
 			> div {
 				--color: var(--link--color);
 
-				align-items:     start;
+				align-items:     end;
 				display:         flex;
-				gap:             var(--margin);
+				gap:             calc(var(--margin) / 2);
 				justify-content: space-between;
 				margin-top:      var(--margin--vertical);
+
+				@include breakpoint(568) { gap: var(--margin) }
 
 				> a {
 					@extend %link--element;
