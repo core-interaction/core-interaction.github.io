@@ -473,7 +473,9 @@ body {
 	&[href*="zoom.us"]:after,
 	&[href*="courses.newschool.edu"]:after,
 	&[href*=".pdf"]:after,
-	&[href*="mailto:"]:after {
+	&[href*="mailto:"]:after,
+	&[href*="michaelfehrenbach.com"]:after,
+	&[href*="eric.young.li"]:after {
 		@extend .icon--wingdings;
 
 		--icon--gap: 0.5em;
@@ -487,4 +489,6 @@ body {
 	&[href*="courses.newschool.edu"]:after { --icon: '5'; --icon--scale: 1.333 } // File cabinet.
 	&[href*=".pdf"]:after                  { --icon: '2' } // Document.
 	&[href*="mailto:"]:after               { --icon: '*'; --icon--scale: 1.1 } // Document.
+	&[href*="michaelfehrenbach.com"]:after { --icon: 'A'; --icon--scale: 1.333 }
+	&[href*="eric.young.li"]:after         { --icon: 'C'; --icon--scale: 1.333 }
 }

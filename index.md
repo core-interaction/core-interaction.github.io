@@ -27,9 +27,9 @@ strings:
   topics:   Topics
 instructor:
   - name:  Michael Fehrenbach
-    url:   'mailto:fehrenbm@newschool.edu'
+    url:   https://michaelfehrenbach.com
   - name:  Eric Li
-    url:   'mailto:lie@newschool.edu'
+    url:   https://eric.young.li
 ---
 
 
