@@ -1,5 +1,5 @@
 ---
-title: Typography and Interaction
+title: Typography and Interaction
 links:
   - name: Slack
     url:  https://mpscd.slack.com/archives/C03UR0J71U5
@@ -12,11 +12,14 @@ links:
   - name: Catalog
     url:  https://courses.newschool.edu/courses/PMCD5001
 strings:
-  home:     '&'
+  about: |
+    Parsons School of Design, MPS CD
+    PUCD 5001, CRN 4253 / 9023
+    66 5th Ave, Auditorium 101
+    Wednesdays, 9–11:40 AM
   classes:  Sessions
-  crn:      CRN 4253 / CRN 9023
   current:  This week
-  id:       PMCD 5001
+  home:     '&'
   last:     Last week
   projects: Projects
   term:     Fall 2022

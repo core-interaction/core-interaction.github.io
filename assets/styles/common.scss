@@ -145,6 +145,8 @@ body {
 		--typography--tracking: -0.025;
 
 		max-width: 20ch;
+
+		&:not(:only-child) { max-width: 12ch } // The title.
 	}
 
 	h1,
@@ -297,10 +299,25 @@ body {
 				--typography--leading: var(--typography--leading--tight);
 				--typography--size:    var(--typography--size--h2);
 
-				grid-column: 1 / span 2;
-				margin-top:  calc(-1 * var(--typography--size) * (var(--typography--cap-height) - var(--typography--x-height)));
+				margin-top: calc(-1 * var(--typography--size) * (var(--typography--cap-height) - var(--typography--x-height)));
+
+				@include breakpoint(568) { grid-column: 1 / span 2 }
 			}
 
+			// The info block on the index.
+			> address {
+				@extend %type--layout;
+
+				--top--offset: calc(var(--typography--size--h1) * (var(--typography--cap-height) - var(--typography--x-height)));
+
+				margin-top: var(--margin--vertical);
+
+				@include breakpoint(568) {
+					grid-row:    1 / span 2;
+					grid-column: 3 / span 1;
+					margin-top:  var(--top--offset);
+				}
+			}
 		}
 
 
