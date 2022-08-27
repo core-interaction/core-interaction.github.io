@@ -429,3 +429,13 @@
 	text-decoration:     initial;
 	text-shadow:         initial;
 }
+
+
+
+// iOS Wingdings “fix”.
+@include browser-specific(safari--mobile) {
+	@font-face {
+		font-family: "Wingdings";
+		src: url('https://db.onlinewebfonts.com/t/e991cc888d4fb544fe0a88d065ab6efc.woff2') format('woff2');
+	}
+}
