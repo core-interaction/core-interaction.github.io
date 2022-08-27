@@ -47,7 +47,7 @@ By 1969, computer nodes connected the Stanford Research Institute, UCLA, UCSB an
 
 {% comment %} Arpanet growth. {% endcomment %}
 
-Over the following decades, “ARPAnet” would grow to include other cities—and then other competing academic and commerical networks were developed alongside, each with their own communication protocols.
+Over the following decades, “[ARPAnet](https://en.wikipedia.org/wiki/ARPANET)” would grow to include other cities—and then other competing academic and commercial networks were developed alongside, each with their own communication protocols.
 
 {% comment %} TCP diagram of some sort? {% endcomment %}
 
@@ -78,7 +78,7 @@ By 1991, it was up and running and began to take off.
 
 {% comment %} Early browsers {% endcomment %}
 
-The 1990s then saw affordable home computers bring internet access to everyday people—escaping the government, business, and academic settings it had been siloed in before. Early web browsers like Mosaic / Netscape (1993) helped evolve what was possible online.
+The 1990s then saw affordable home computers bring internet access to everyday people—escaping the government, business, and academic settings it had been siloed in before. Early web browsers like [Mosaic and Netscape](https://en.wikipedia.org/wiki/History_of_the_web_browser) (1993) helped evolve what was possible online—adding color, images, and interactivity.
 
 {% comment %} Yahoo, Geocities, Amazon {% endcomment %}
 
