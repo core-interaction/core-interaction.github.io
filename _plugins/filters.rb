@@ -10,6 +10,8 @@ module Jekyll
 			for letter in input.chars do
 				if letter == " "
 					letterClass = "space"
+				elsif letter == "\n"
+					letterClass = false
 				elsif letter == " "
 					letterClass = "nbsp"
 				elsif letter == ","
@@ -19,7 +21,11 @@ module Jekyll
 				else
 					letterClass = letter
 				end
-				letters += "<span class='#{ letterClass }'>#{ letter }</span>"
+				if letterClass
+					letters += "<span class='#{ letterClass }'>#{ letter }</span>"
+				else
+					letters += letter
+				end
 			end
 			return letters
 		end
