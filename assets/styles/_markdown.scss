@@ -151,9 +151,13 @@
 
 				&:first-child:before,
 				&:last-child:after { display: none }; // Since the `li` is a type element.
+
+				&:not(:first-child) { margin-top: var(--typography--leading-shoulder) }
+
+				&:not(:only-child):last-child { margin-bottom: var(--typography--leading-shoulder) }
 			}
 
-			&:not(:first-child) > p { margin-top: calc(var(--typography--font-size) * var(--typography--leading)) }
+			&:not(:first-child) > p:first-child { margin-top: calc(var(--typography--font-size) * var(--typography--leading)) }
 		}
 	}
 
