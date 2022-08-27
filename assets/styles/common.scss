@@ -22,7 +22,7 @@
 
 	--typography--tracking: -0.015;
 
-	--typography--size: 1.6rem;
+	--typography--size: 1.8rem;
 
 	--typography--size--h1:   calc(var(--typography--size) * 3);
 	--typography--size--h2:   calc(var(--typography--size) * 1.75);
@@ -68,7 +68,7 @@
 		--color--highlight--reverse: hsl(0, 0%, 100%, 20%);
 	}
 
-	@include breakpoint(320) { --typography--size: calc((16/375) * 100vw) }
+	@include breakpoint(320) { --typography--size: calc((18/375) * 100vw) }
 
 	@include breakpoint(768) {
 		--typography--size: 2rem;
@@ -343,6 +343,8 @@ body {
 				aside {
 					> menu {
 						@extend %type--layout;
+
+						--typography--leading: var(--typography--leading--loose);
 
 						display:        flex;
 						flex-direction: column;

@@ -52,7 +52,7 @@
 			border-width: var(--divider--width);
 			display:      flex;
 			font-style:   normal;
-			padding:      calc(var(--margin) / 2);
+			padding:      calc(var(--typography--cap) * 2);
 
 			&[icon]:before {
 				@extend .icon--wingdings;
@@ -63,7 +63,7 @@
 				content:      attr(icon);
 				height:       1em;
 				margin-left:  initial;
-				margin-right: calc(var(--margin) / 2);
+				margin-right: calc(var(--typography--cap) * 2);
 				margin-top:   var(--typography--margin--top);
 				text-align:   center;
 				width:        1em;
@@ -204,6 +204,10 @@
 
 	// Link list from an include.
 	aside {
+		@extend %type--layout;
+
+		--typography--leading: var(--typography--leading--loose);
+
 		--margin--top: calc(var(--margin--vertical) * 2);
 
 		> h3 { margin-bottom: var(--margin--vertical) }
