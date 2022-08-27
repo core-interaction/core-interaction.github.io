@@ -1,14 +1,16 @@
 ---
 title: Everything is a web page
-order: 0
-published: false
 ---
 
 
 
-**ROLL IN QUOTES, DESIGN EMPHASIS, WEB HISTORY, FIX IMAGES, JWST THING**
+{% comment %}
+TODO: Images, “slides”?
+{% endcomment %}
 
-## What is *the web*? What is a *web page*?
+
+
+## Let’s start with *the internet*
 
 
 
@@ -16,70 +18,171 @@ published: false
 
 {% include details.html summary='1960 or 1989?' content='1960!' %}
 
+{% comment %} Women computers. {% endcomment %}
+
+Before this time, the term *computer* usually referred to a person, not a machine—someone who would *compute* (solve) math problems.
+
+It is worth noting these were often women, and they were often underpaid compared to men in the field—even though many would go on to maintain and operate the early mechanical/electronic computers after WWII.
+
+{% comment %} UNIVAC. {% endcomment %}
+
+By the 1960s, computers were room-sized, institutional electronic machines—used by governments (the military), businesses, and universities. They were used to solve complex math problems and sort data, but were still very slow and didn’t communicate with one another.
+
+{% comment %} Central/decentralized. {% endcomment %}
+
+A catalyst in the formation of the internet was the Cold War. The threat of nuclear war spurred the US Defense Department to consider decentralized networks—to disseminate orders and information in the event of an attack.
 
 
-### When was the *World Wide Web* invented?
+
+> It was necessary to have a strategic system that could withstand a first attack and then be able to return the favor in kind. The problem was that we didn’t have a survivable communications system, and so Soviet missiles aimed at U.S. missiles would take out the entire telephone-communication system [...] that was highly centralized. Well, then, let’s not make it centralized. Let’s spread it out so that we can have other paths to get around the damage.
+>
+> > [Paul Baran](https://www.vanityfair.com/news/2008/07/internet200807)
+{: .pull-quote }
+
+
+
+{% comment %} Arpanet. {% endcomment %}
+
+By 1969, computer nodes connected the Stanford Research Institute, UCLA, UCSB and the University of Utah—developed by the Defense Department’s *Advanced Research Project Agency* (ARPA).
+
+{% comment %} Arpanet growth. {% endcomment %}
+
+Over the following decades, “ARPAnet” would grow to include other cities—and then other competing academic and commerical networks were developed alongside, each with their own communication protocols.
+
+{% comment %} TCP diagram of some sort? {% endcomment %}
+
+In 1974, Robert Kahn and Vinton Cerf (two DARPA scientists) developed the *Transmission Control Protocol and the Internet Protocol* (TCP/IP). By the 80s, it become the standard network communication format—and still underpins the internet we use today.
+
+
+
+## What about *the web*?
+
+### When was the *web* invented?
 
 {% include details.html summary='1960 or 1989?' content='1989.' %}
 
+{% comment %} Tim and comp. {% endcomment %}
+
+Tim Berners-Lee, a British academic and scientist, invented the *World Wide Web* (WWW) with his team while working at [CERN in 1989](https://home.cern/science/computing/birth-web/short-history-web). It was developed on top of TCP/IP as a standard way to connect documents, living on different computers in different places, via *hypertext* links.
+
+{% comment %} Four components? First web page? {% endcomment %}
+
+Their proposal had four components:
+
+* A text file format to represent the documents: the *HyperText Markup Language* (HTML)
+* The rules for exchanging these documents: the *HyperText Transfer Protocol* (HTTP)
+* A program to display (and edit) these documents: the first *web browser* (called WorldWideWeb)
+* A computer program to give access to the document: the *server* (an early version of Apache/httpd)
+
+By 1991, it was up and running and began to take off.
+
+{% comment %} Early browsers {% endcomment %}
+
+The 1990s then saw affordable home computers bring internet access to everyday people—escaping the government, business, and academic settings it had been siloed in before. Early web browsers like Mosaic / Netscape (1993) helped evolve what was possible online.
+
+{% comment %} Yahoo, Geocities, Amazon {% endcomment %}
+
+{% comment %} Google, Wikipedia, Facebook {% endcomment %}
 
 
-Obviously, *this* is a web page. Then think about how many other web pages you have visited today. Dozens, even hundreds?
 
-![MoMA.org](org.png)
+> The dream behind the Web is of a common information space in which we communicate by sharing information. Its universality is essential: the fact that a hypertext link can point to anything, be it personal, local or global, be it draft or highly polished.
+>
+> > [Tim Berners-Lee](https://www.scienceandmediamuseum.org.uk/objects-and-stories/short-history-internet)
+{: .pull-quote }
 
-![Screens](screens.jpg)
 
-![Desk](slim.png)
 
-![Kiosk](kiosk.png)
+## So what are *web pages*?
+
+Obviously, *this* is a web page. Think about how many other web pages you have visited in the past day. Dozens, even hundreds?
+
+Ultimately, a web page is a just text file on a computer. It is written in a special format, the aforementioned HTML, which structures the content of the document and also links it to other resources—other web pages, images, computers, really almost anything. Think of the web as type with instructions.
+
+These all started as simple, hand-typed documents. Then as the power of computers grew, and the languages of the web evolved alongside—web pages expanded almost inconceivably in complexity and capabilities. *Cascading Style Sheets* (CSS) gave them marvelous abilities to be customized and designed. *JavaScript* (JS) gave them remarkable, newfound interactivity and function. Websites (collections of web pages) today are built on top of an incredible *stack* of technology—networks, servers, databases, libraries, browsers, devices.
+
+But it all starts with text, and thus, with type.
+
+
+
+{% comment %} ![MoMA.org](org.png) {% endcomment %}
+
+{% comment %} ![Screens](screens.jpg) {% endcomment %}
+
+{% comment %} ![Desk](slim.png) {% endcomment %}
+
+{% comment %} ![Kiosk](kiosk.png) {% endcomment %}
 
 *Eric and I used to work at MoMA. These are [all](https://moma.org) [web](https://www.moma.org/screens/on_view/west?floor=1&contain=true) [pages](https://www.moma.org/screens/promo/tickets?contain=true).*
 
-If you’re looking at a glowing, 16:9 rectangle somewhere (and it isn’t just playing video), it is very likely a web page—built with the exact same HTML, CSS, and Javascript web technologies that are behind this page and every other.
-
-As the web grew and their capabilities expanded, these technologies have come to dominate for reasons of compatibility, cost, scale, inertia. They are that water we are swimming in.
 
 
+## An ever-present visual medium
 
-## These days, apps are often really web pages too
+If you’re looking at a glowing, 16:9 rectangle somewhere (and it isn’t just playing video), nowadays it is very likely a web page—built with the exact same HTML, CSS, and JS—web technologies—that are behind this page, and every other.
 
-![Figma](figma.webp)
+In its openness, connectedness, and ubiquity, the web has come to dominate over other forms of technology. Its advantages in compatibility, cost, scale, and inertia are continuing to snowball, and the advance of these web technologies shows no sign of slowing down. It is the water that we are swimming in, both as humans and as designers.
 
-![Slack](slack.webp)
-
-![Discord](discord.webp)
-
-![VSCode](vscode.png)
-
-![1Password](1pass.webp)
-
-All these desktop “apps” are built in [Electron](https://www.electronjs.org)—and so are really just web pages inside a slim platform-native wrapper. (Essentially, a single-site browser.)
-
-The core application only has to be written once, instead of rewritten for each platform. And why design it all again?
-
-Why hire Windows and Mac devs when you can just hire web devs? …then why hire iOS or Android devs, either?
-
-![mobile.png](mobile.png)
-
-These mobile “apps” are all built with [React Native](https://reactnative.dev), following a similar paradigm. The app is really just a web view.
+And in that latter role, we’ll need to learn how to swim. Our path into *design* then is to understand how these things are made and how they function. Their technological construction both empowers and constrains our work. You can’t separate the design from this foundation; the medium is inextricable from the end product.
 
 
 
-## It’s increasingly just Javascript, behind the scenes
-
-Javascript began as a client-side, front-end language running in the browser—but now with environments like [Node](https://nodejs.org/en/), JS has moved to server-side functionality previously dominated by scripting languages like [ASP](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjEtfa8nc31AhUomeAKHd_ABUQQFnoECE8QAQ&url=https%3A%2F%2Fdotnet.microsoft.com%2Fen-us%2Flearn%2Faspnet%2Fwhat-is-aspnet&usg=AOvVaw1D_8ap9ArdBqxmTX1ce1xL), [Perl](https://www.perl.org), [PHP](https://www.php.net), [Ruby](https://www.ruby-lang.org/en/).
-
-This means that Javascript doesn’t just run *in* a webpage you’re looking at—it often now actually *builds* the page itself. More and more, JS isn’t a *part* of the stack so much as it really *is* the stack.
-
-This “javascript everywhere” movement means that the tendrils of the web can encompass many non-web-page uses. Maybe it is in an app, maybe a headless data API, maybe a hardware integration, maybe it is even something entirely *offline*—but it is still web technologies, most of the way down.
+> Most people make the mistake of thinking design is what it looks like. People think it’s this veneer—that the designers are handed this box and told, “Make it look good!” That’s not what we think design is. It’s not just what it looks like and feels like. Design is how it works.
+>
+> > [Steve Jobs](https://www.nytimes.com/2003/11/30/magazine/the-guts-of-a-new-machine.html)
+{: .pull-quote }
 
 
 
-## Even things that aren’t web pages are *web-page-like*
+### These days, apps are often web pages too
 
-In the coming weeks we are going to dive more properly into HTML, CSS, and JS—the fabric of web pages. Let’s try and also think of these—more conceptually and semantically—as *content*, *form*, and *function*. (Or in another way, *skeleton*, *skin*, and *muscles.*)
+{% comment %} ![Figma](figma.webp) {% endcomment %}
 
-With this understanding, the same model exists in nearly all software. (For example, [Resources, Views, States](https://developer.apple.com/tutorials/app-dev-training/#swiftui-essentials) in Mac/iOS development, though the lines are being blurred.) The languages will be different, but the ideas are analogous.
+{% comment %} ![Slack](slack.webp) {% endcomment %}
 
-So we can say that software that hasn’t yet been eaten by web technologies is often still web-like. And the web is likely coming for them, eventually.
+{% comment %} ![Discord](discord.webp) {% endcomment %}
+
+{% comment %} ![VSCode](vscode.png) {% endcomment %}
+
+{% comment %} ![1Password](1pass.webp) {% endcomment %}
+
+All these desktop “apps” are built in [Electron](https://www.electronjs.org)—and so are really just web pages inside a slim, platform-native wrapper. (Essentially, a single-website browser.)
+
+The core application only has to be written once, instead of rewritten for each platform. And why design it all again? Why hire Windows and Mac devs when you can just hire web devs? …then why hire iOS or Android devs, either?
+
+{% comment %} ![mobile.png](mobile.png) {% endcomment %}
+
+These mobile “apps” are all built with [React Native](https://reactnative.dev), following a similar paradigm. The app is really just a web view, and every screen within is a web page.
+
+
+
+### It’s increasingly just JS, behind the scenes
+
+JavaScript began as a client-side (on your computer), front-end language running in the browser—but now with environments like [Node](https://nodejs.org/en/), JS has moved to server-side (on the remote computer) functionality previously dominated by scripting languages like [ASP](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjEtfa8nc31AhUomeAKHd_ABUQQFnoECE8QAQ&url=https%3A%2F%2Fdotnet.microsoft.com%2Fen-us%2Flearn%2Faspnet%2Fwhat-is-aspnet&usg=AOvVaw1D_8ap9ArdBqxmTX1ce1xL), [Perl](https://www.perl.org), [PHP](https://www.php.net), [Ruby](https://www.ruby-lang.org/en/).
+
+This means that JavaScript doesn’t just run *in* a webpage you’re looking at—it often now actually *builds* the page itself. More and more, JS isn’t a *part* of the stack so much as it really *is* the stack.
+
+This “javascript everywhere” movement means that the tendrils of the web can encompass many non-web-page uses. Maybe it is in an app, maybe a headless data API, maybe a [hardware integration](https://www.theverge.com/2022/8/18/23206110/james-webb-space-telescope-javascript-jwst-instrument-control), maybe it is even something entirely *offline*—but it is still web technologies, most of the way down.
+
+
+
+### Even things that aren’t web pages are *web-page-like*
+
+In the coming weeks we are going to dive properly into HTML, CSS, and JS—the fabric of web pages. Let’s try and also think of these—more conceptually and semantically—as *content*, *form*, and *function*. (Or in another way, *skeleton*, *skin*, and *muscles.*)
+
+With this understanding, the same model exists in nearly all software. (For example, [*Resources*, *Views*, and *States*](https://developer.apple.com/tutorials/app-dev-training/#swiftui-essentials) in Mac/iOS development, though the lines are being blurred.) So we can say that software that hasn’t yet been eaten by web technologies is often still *web-like*. And the web is likely coming for them, eventually.
+
+
+
+## Our lens
+
+Learning good, effective design in any medium necessitates knowing it thoroughly and completely, and we’re going strive to do that by truly understand the web. It is fundamentally a medium of text, and thus a medium of typography—and this semester we will use this as our lens.
+
+In your careers, the software, languages, and platforms might be different, and to some extent, are ever-changing—but the design ideas and considerations are analogous and universal. To understand design for the web is to understand interactive design. And in our lives today, to understand interactive design is to understand all design.
+
+
+
+> All I know is that if you are a fish, it is hard to describe water, much less to ask if water is necessary, ethical, and structured the way it ought to be.
+>
+>> [Abigail Disney](https://www.theatlantic.com/ideas/archive/2021/06/abigail-disney-rich-protect-dynastic-wealth-propublica-tax/619212/)
+{: .pull-quote }
