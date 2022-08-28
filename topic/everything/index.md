@@ -51,7 +51,7 @@ By 1969, computer nodes connected the Stanford Research Institute, UCLA, UCSB an
 
 Over the following decades, [ARPANET](https://www.britannica.com/topic/ARPANET) would grow to include other cities—and then other competing academic and commercial networks were developed alongside, each with their own communication protocols.
 
-{% include figure.html src='tcpip.png' caption='The core of TCP/IP is routing bundles of data called *packets*.' credit='https://web.eecs.umich.edu/~prabal/teaching/eecs582-w13/readings/CK74.pdf' %}
+{% include figure.html src='tcpip.png' caption='The core of TCP/IP is routing bundles of data called “packets.”' credit='https://web.eecs.umich.edu/~prabal/teaching/eecs582-w13/readings/CK74.pdf' %}
 
 In 1974, Robert Kahn and Vinton Cerf (two DARPA scientists) developed the *Transmission Control Protocol* and the *Internet Protocol* (TCP/IP). By the 80s, it became the standard network communication format—and still underpins the internet we use today.
 
@@ -90,9 +90,17 @@ By 1991, the [first web page](http://info.cern.ch/hypertext/WWW/TheProject.html)
 
 The 1990s then saw affordable home computers bring internet access to everyday people—escaping the government, business, and academic settings it had been siloed in before. Early web browsers like [Mosaic and Netscape](https://en.wikipedia.org/wiki/History_of_the_web_browser) (1993) helped evolve what was possible online—adding color, images, and interactivity.
 
-{% comment %} Yahoo, Geocities, Amazon {% endcomment %}
+And the web exploded from there.
 
-{% comment %} Google, Wikipedia, Facebook {% endcomment %}
+{% include figure.html src='yahoo.png' caption='1994\. Before search engines, there were web directories like Yahoo.' credit='https://www.webdesignmuseum.org/gallery/yahoo-1994' %}
+
+{% include figure.html src='geocities.png' caption='1995\. GeoCities brought web design to the masses, for better or for worse.' credit='https://blog.geocities.institute/archives/791' %}
+
+{% include figure.html src='amazon.gif' caption='1995\. They used to sell books, if you can believe it.' credit='https://www.versionmuseum.com/history-of/amazon-website' %}
+
+{% include figure.html src='google.png' caption='1998\. We eventually got search engines.' credit='https://www.webdesignmuseum.org/gallery/google-1998' %}
+
+{% include figure.html src='facebook.png' caption='2004\. And social networks.' credit='https://www.webdesignmuseum.org/gallery/google-1998' %}
 
 
 
