@@ -312,6 +312,8 @@ body {
 			> address {
 				@extend %type--layout;
 
+				--typography--tracking: -0.016; // Cheat in for the long-ass title.
+
 				--top--offset: calc(var(--typography--size--h1) * (var(--typography--cap-height) - var(--typography--x-height)));
 
 				display:        flex;

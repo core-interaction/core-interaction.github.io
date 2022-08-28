@@ -15,7 +15,7 @@ links:
     url:  https://mpscd.parsons.edu
 strings:
   about: |
-    Parsons School of Design, MPS CD
+    The New School, Parsons, MPS CD
     PUCD 5001, CRN 4253 / 9023
     66 5th Ave, Auditorium 101
     Wednesdays, 9–11:40 AM
@@ -36,11 +36,13 @@ instructor:
 
 
 
-This course teaches students intermediate and advanced methods in typography and interactive design to successfully meet the ever changing challenges of designing and prototyping successful products and services for screens. These comprehensive methods will also support students to complete their projects in other studio classes. Students will learn how to address design problems meaningfully within the context of current design practices, while working towards developing an individualized working methodology. Students will also become familiar with the process of transforming an idea into a functional design by making use of basic web technologies. They will use their newly acquired design vocabulary to critique and critically discuss work produced by themselves and others.
+*Typography and Interaction* is a year-long, <nobr>two-part</nobr> course in the [MPS Communication Design](https://mpscd.parsons.edu) program at [Parsons](https://www.newschool.edu/parsons/)&thinsp;/&thinsp;[The New School](https://www.newschool.edu). The class will provide a rigorous foundation of typographic and interaction principles in the context of digital design. (We hope.)
 {: .left }
 
-{% include link_list.html heading="Elsewhere" %}
+{% include link_list.html heading="Elsewhere" rows=4 %}
 
-> Hi folks. Like any good website, this one is assuredly *in-progress*—expect more soon. We’re looking forward to meeting you all.
-{: .callout icon='I' }
+We’ll be using this course site for our agendas, lectures, and general class housekeeping. It will be updated throughout the semester.
+{: .left }
 
+[Our syllabus](/syllabus)
+{: .link-only .left }
