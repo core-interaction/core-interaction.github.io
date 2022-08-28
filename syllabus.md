@@ -9,7 +9,7 @@ links:
 
 
 
-## Course description
+## {{ 'Course description' | kerning }}
 
 
 
@@ -26,7 +26,7 @@ In this course, students will learn intermediate and advanced methods in typogra
 
 
 
-## Learning outcomes
+## {{ 'Learning outcomes' | kerning }}
 
 
 
@@ -46,11 +46,11 @@ By the end of this semester, students will:
 
 
 
-## Assessable tasks
+## {{ 'Assessable tasks' | kerning }}
 
 
 
-### Unit tasks
+### {{ 'Unit tasks' | kerning }}
 {: .two-below}
 
 * #### Readings and reviews
@@ -67,14 +67,14 @@ By the end of this semester, students will:
 
 
 
-### Projects
+### {{ 'Projects' | kerning }}
 
 
 
 The bulk of the work for this class is divided into three projects. They  are intended as opportunities for students to apply knowledge and skills learned in class, while developing their own practice. There will be check-ins and presentations around each of these before the final due dates, when we will have critiques as a group:
 {: .two-below}
 
-* #### Project 1: Manuscript
+* #### Project 1: *Manuscript*
 
 	Students will choose a seminal design text from readings.design, read and respond to it, and typeset their selection and reply together as a web page. Other texts are also allowed on a case-by-case basis.
 
@@ -84,13 +84,13 @@ The bulk of the work for this class is divided into three projects. They  are in
 
 * #### Project 2: Spread
 
-	Students will work in pairs, with a new text from those selected by the class in Manuscript. Each duo will sketch collaboratively and then implement a new expression together, via pair programming. The final web page will be responsive for mobile, desktop, and print layouts.
+	Students will work in pairs, with a new text from those selected by the class in *Manuscript*. Each duo will sketch collaboratively and then implement a new expression together, via pair programming. The final web page will be responsive for mobile, desktop, and print layouts.
 
 	*Here we’re looking for successful design and development collaboration, box-model layout design, and use of responsive media queries.*
 
 	*Due October 26.*
 
-* #### Project 3: Binding
+* #### Project 3: *Binding*
 
 	Students will assemble a collection of texts from Spread, combined with their original selection, into a “book”. The book will be a multi-page website with a homepage (cover), navigation (table of contents), individual pages for each text, and an introduction (colophon)—with consistent styles applied across all pages.
 
