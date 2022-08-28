@@ -25,7 +25,7 @@ TODO: Images, “slides”, acronyms, more links?
 
 Before this time, the term *computer* usually referred to a person, not a machine—someone who would *compute* (solve) math problems.
 
-It is worth noting these [were often women](https://www.nytimes.com/2019/02/13/magazine/women-coding-computer-programming.html), and they were underpaid compared to men in their field—and many would go on to operate the early mechanical/electronic computers.
+It is worth noting these [were often women](https://www.nytimes.com/2019/02/13/magazine/women-coding-computer-programming.html), and they were underpaid compared to men in their field—and many would go on to operate the early mechanical/electronic computers. We’re going to have to talk about a lot of men, here—but know that women have been present from the start.
 
 {% include figure.html src='univac.jpg' caption='Univac, the first commercial computer in the US.' credit='https://time.com/4271506/census-bureau-computer-history/' %}
 
@@ -33,7 +33,7 @@ By the 1960s, computers were room-sized, institutional electronic machines—use
 
 {% include figure.html src='networks.png' credit='https://www.rand.org/content/dam/rand/pubs/research_memoranda/2006/RM3420.pdf' %}
 
-A catalyst in the formation of the internet was the Cold War. The threat of nuclear conflict spurred the US Defense Department to consider decentralized and distributed networks—to disseminate orders and information in the event of an attack.
+A catalyst in the formation of the internet was the Cold War. The threat of nuclear conflict spurred the US Defense Department to consider decentralized and distributed networks—to disseminate orders and information in the event of an attack (and ultimately retaliate).
 
 
 
@@ -92,7 +92,7 @@ By 1991, the [first web page](http://info.cern.ch/hypertext/WWW/TheProject.html)
 
 {% include figure.html src='mosaic.png' caption='Mosaic was one of the first widely-available browsers. It introduced support for images.' credit='https://en.wikipedia.org/wiki/Mosaic_(web_browser)#/media/File:NCSA_Mosaic_Browser_Screenshot.png' %}
 
-{% include figure.html src='netscape.png' caption='Netscape, the first browser I ever used.' credit='https://commons.wikimedia.org/wiki/File:Netscape_Navigator_3_Screenshot.png' %}
+{% include figure.html src='netscape.png' caption='Netscape, the first browser that I ever used.' credit='https://commons.wikimedia.org/wiki/File:Netscape_Navigator_3_Screenshot.png' %}
 
 
 The 1990s then saw affordable home computers bring internet access to everyday people—escaping the government, business, and academic settings it had been siloed in before. Early web browsers like [Mosaic and Netscape](https://en.wikipedia.org/wiki/History_of_the_web_browser) (1993) helped evolve what was possible online—adding color, images, and interactivity.
@@ -187,9 +187,9 @@ These mobile “apps” are all built with [React Native](https://reactnative.de
 
 ### It’s increasingly just JS, behind the scenes
 
-JavaScript began as a client-side (on your computer), front-end language running in the browser—but now with environments like [Node](https://nodejs.org/en/), JS has moved to server-side (on the remote computer) functionality previously dominated by scripting languages like [ASP](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjEtfa8nc31AhUomeAKHd_ABUQQFnoECE8QAQ&url=https%3A%2F%2Fdotnet.microsoft.com%2Fen-us%2Flearn%2Faspnet%2Fwhat-is-aspnet&usg=AOvVaw1D_8ap9ArdBqxmTX1ce1xL), [Perl](https://www.perl.org), [PHP](https://www.php.net), [Ruby](https://www.ruby-lang.org/en/).
+JavaScript began as a client-side (on your computer), front-end language running in the browser. But now with engines like [V8](https://v8.dev) and environments like [Node](https://nodejs.org/en/), JS has moved to server-side (on the remote computer) functionality previously dominated by scripting languages like [ASP](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjEtfa8nc31AhUomeAKHd_ABUQQFnoECE8QAQ&url=https%3A%2F%2Fdotnet.microsoft.com%2Fen-us%2Flearn%2Faspnet%2Fwhat-is-aspnet&usg=AOvVaw1D_8ap9ArdBqxmTX1ce1xL), [Perl](https://www.perl.org), [PHP](https://www.php.net), [Ruby](https://www.ruby-lang.org/en/).
 
-This means that JavaScript doesn’t just run *in* a webpage you’re looking at—it often now actually *builds* the page itself. More and more, JS isn’t a *part* of the stack so much as it really *is* the stack.
+This means that JavaScript doesn’t just run *in* a webpage you’re looking at—it often now actually *builds* the page itself. More and more, JS isn’t a *part* of the stack so much as it really *is* the stack.
 
 This “javascript everywhere” movement means that the tendrils of the web can encompass many non-web-page uses. Maybe it is in an app, maybe a headless data API, maybe a [hardware integration](https://www.theverge.com/2022/8/18/23206110/james-webb-space-telescope-javascript-jwst-instrument-control), maybe it is even something entirely *offline*—but it is still web technologies, most of the way down.
 
