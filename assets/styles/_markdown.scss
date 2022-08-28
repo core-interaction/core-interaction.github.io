@@ -275,13 +275,14 @@
 
 	aside {
 		@extend .right;
-		@extend %type--layout;
 
 		--margin--top: calc(var(--margin--vertical) * 2);
 
 		> h3 { margin-bottom: var(--margin--vertical) }
 
 		> menu {
+			@extend %type--layout;
+
 			--typography--leading: var(--typography--leading--loose);
 
 			display:        flex;
