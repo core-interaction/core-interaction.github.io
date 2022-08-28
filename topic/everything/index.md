@@ -18,11 +18,13 @@ TODO: Images, “slides”, acronyms, more links?
 
 {% include details.html summary='1960 or 1989?' content='1960!' %}
 
-{% comment %} Women computers. {% endcomment %}
+
+
+{% include figure.html src='harvard.jpg' caption='The “Harvard Computers” in the late 1800s.' credit='https://en.wikipedia.org/wiki/Harvard_Computers#/media/File:Astronomer_Edward_Charles_Pickering%27s_Harvard_computers.jpg' %}
 
 Before this time, the term *computer* usually referred to a person, not a machine—someone who would *compute* (solve) math problems.
 
-It is worth noting these [were often women](https://www.nytimes.com/2019/02/13/magazine/women-coding-computer-programming.html), and they were often underpaid compared to men in the field—even though many would go on to maintain and operate the early mechanical/electronic computers after WWII.
+It is worth noting these [were often women](https://www.nytimes.com/2019/02/13/magazine/women-coding-computer-programming.html), and they were underpaid compared to men in their field—and many would go on to operate the early mechanical/electronic computers.
 
 {% comment %} UNIVAC. {% endcomment %}
 
@@ -51,7 +53,7 @@ Over the following decades, “[ARPAnet](https://www.britannica.com/topic/ARPANE
 
 {% comment %} TCP diagram of some sort? {% endcomment %}
 
-In 1974, Robert Kahn and Vinton Cerf (two DARPA scientists) developed the *Transmission Control Protocol and the Internet Protocol* (TCP/IP). By the 80s, it become the standard network communication format—and still underpins the internet we use today.
+In 1974, Robert Kahn and Vinton Cerf (two DARPA scientists) developed the *Transmission Control Protocol* and the *Internet Protocol* (TCP/IP). By the 80s, it became the standard network communication format—and still underpins the internet we use today.
 
 
 

@@ -1,0 +1,13 @@
+<figure markdown="0">
+	<img src="{{ include.src }}">
+	{% if include.caption %}
+		<figcaption>
+			<p>
+				<em>{{ include.caption | markdownify | remove: '<p>' | remove: '</p>' }}</em>
+				{% if include.credit %}
+					<a href="{{ include.credit}}"><span class="icon--sf center--x">↗</span></a>
+				{% endif %}
+			</p>
+		</figcaption>
+	{% endif %}
+</figure>

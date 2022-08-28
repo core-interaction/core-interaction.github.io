@@ -176,6 +176,7 @@
 
 
 
+	// Open/close details/summary.
 	details {
 		> summary {
 			@extend %link--element;
@@ -212,7 +213,36 @@
 
 
 
-	// Link list from an include.
+	// Images!
+	figure {
+		--margin--top: calc(var(--margin--vertical) * 2);
+
+		display:        flex;
+		flex-direction: column;
+		width:          fit-content;
+
+		> img { max-height: 66vh }
+
+		> figcaption {
+			margin-top: var(--typography--between);
+
+			> p > a {
+				@extend %font--underline--disable;
+
+				span:not(._) { margin-left: initial }
+			}
+		}
+
+		+ * {
+			--margin--top:           calc(var(--margin--vertical) * 2);
+			--margin--top--previous: calc(var(--margin--vertical) * 2);
+
+			+ * { --margin--top--previous: calc(var(--margin--vertical) * 2) }
+		}
+	}
+
+
+
 	aside {
 		@extend %type--layout;
 
