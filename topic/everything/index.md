@@ -15,8 +15,9 @@ TODO: Images, “slides”, acronyms, more links?
 
 
 ### When was the *internet* invented?
+{: .four-above }
 
-{% include details.html summary='1969 or 1989?' content='1969!' %}
+{% include details.html summary='1969 or 1989?' content='1969!' class='four-below' %}
 
 
 
@@ -60,8 +61,9 @@ In 1974, Robert Kahn and Vinton Cerf (two DARPA scientists) developed the *Trans
 ## What about *the web*?
 
 ### When was the *web* invented?
+{: .four-above }
 
-{% include details.html summary='1969 or 1989?' content='1989!' %}
+{% include details.html summary='1969 or 1989?' content='1989!' class='four-below' %}
 
 {% include figure.html src='tim.jpg' caption='Our guy Tim.' credit='https://cds.cern.ch/images/CERN-GE-9407011-31' %}
 
@@ -82,6 +84,7 @@ Their proposal had four components:
 
 
 By 1991, the [first web page](http://info.cern.ch/hypertext/WWW/TheProject.html) was up and running and began to take off.
+{: .four-below }
 
 {% include figure.html src='mosaic.png' caption='Mosaic was one of the first widely-available browsers. It introduced support for images.' credit='https://en.wikipedia.org/wiki/Mosaic_(web_browser)#/media/File:NCSA_Mosaic_Browser_Screenshot.png' %}
 

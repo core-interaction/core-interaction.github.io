@@ -24,16 +24,17 @@
 		--margin--top: calc(var(--margin--vertical) * 2);
 	}
 
-	hr,
-	blockquote {
+
+
+	// Manual spacing decisions.
+	.four-above {
 		--margin--top: calc(var(--margin--vertical) * 4);
 
-		+ * {
-			--margin--top:           calc(var(--margin--vertical) * 4);
-			--margin--top--previous: calc(var(--margin--vertical) * 4);
+		+ * { --margin--top--previous: calc(var(--margin--vertical) * 4) }
+	}
 
-			+ * { --margin--top--previous: calc(var(--margin--vertical) * 4) }
-		}
+	.four-below {
+		+ * { --margin--top: calc(var(--margin--vertical) * 4)}
 	}
 
 
@@ -261,6 +262,20 @@
 		}
 	}
 
+
+
+	// Lower for the cascade.
+	hr,
+	blockquote {
+		--margin--top: calc(var(--margin--vertical) * 4);
+
+		+ * {
+			--margin--top:           calc(var(--margin--vertical) * 4);
+			--margin--top--previous: calc(var(--margin--vertical) * 4);
+
+			+ * { --margin--top--previous: calc(var(--margin--vertical) * 4) }
+		}
+	}
 
 
 	// Column stuff.

@@ -1,4 +1,4 @@
-<figure markdown="0">
+<figure markdown="0" {% if include.class %}class="{{ include.class }}"{% endif %}>
 	<img src="{{ include.src }}">
 	{% if include.caption or include.credit %}
 		<figcaption>
