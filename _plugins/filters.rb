@@ -12,6 +12,8 @@ module Jekyll
 					letter_class = "space"
 				elsif letter == "\n"
 					letter_class = false
+				elsif letter == "*"
+					letter_class = false
 				elsif letter == " "
 					letter_class = "nbsp"
 				elsif letter == "-"
@@ -30,7 +32,11 @@ module Jekyll
 				if letter_class
 					letters += "<span class='#{ letter_class }'>#{ letter }</span>"
 				else
-					letters += "<br>"
+					if letter == "\n"
+						letters += "<br>"
+					else
+						letters += letter
+					end
 				end
 			end
 			return letters
