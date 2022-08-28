@@ -115,7 +115,7 @@ The bulk of the work for this class is divided into three projects. They  are in
 ## {{ 'Course outline' | kerning }}
 
 
-### Unit 1: *Type and the web*
+### {{ 'Unit 1: *Type and the web*' | kerning }}
 
 
 #### Weeks 1–5
@@ -141,7 +141,7 @@ Robert Bringhurst, 1992
 J.R. Carpenter, 2015
 
 
-### Unit 2: *There is no perfect layout*
+### {{ 'Unit 2: *There is no perfect layout*' | kerning }}
 
 
 #### Weeks 6–9
@@ -168,7 +168,7 @@ Toby Shorin, 2017
 
 
 
-### Unit 3: *Typography as interface*
+### {{ 'Unit 3: *Typography as interface*' | kerning }}
 
 
 #### Weeks 10–15
@@ -214,44 +214,44 @@ We will use the following sites to organize and run our class:
 ## {{ 'Our class policies' | kerning }}
 
 
-### Our community
+### {{ 'Our community' | kerning }}
 
 During our first class session, we will collectively write and agree upon a code of conduct for our group.
 
 This agreement is intended to help us create and maintain a safe, empathetic, and productive space for our course. It will live on [our course site](https://typography-interaction.github.io), and can be revised and modified, with all of our input, over the semester.
 
 
-### Inclusion
+### {{ 'Inclusion' | kerning }}
 
 Our intent is to respect and give forum to a range of perspectives and backgrounds, including culture, race, gender, sexual orientation, socioeconomic status, disability, and age. In instances where we are personally not qualified to speak from a specific perspective, students are encouraged to explore this area themselves. And please let us know if there are ways that the course can better serve these goals.
 
 
-### Engagement
+### {{ 'Engagement' | kerning }}
 
 There are program policies (below) around attendance, but we also have an *engagement* policy—which will likewise affect students’ evaluation and final grade, as their engagement will be unavoidably reflected in the quality of their work.
 
 Students are expected to actively and passionately participate in this course. This means more than showing up and turning things in on time, which should be a given. Beyond that baseline, students should be curious, prepared, thoughtful, vocal, and intentional throughout the course. They should make us understand why they are here, and demonstrate to us that they care about themselves, their work, and each other—and ultimately, about this chosen profession.
 
 
-### Office hours
+### {{ 'Office hours' | kerning }}
 
 We will have limited availability outside of our class time, and won’t keep scheduled “office hours.” Students should not rely on us to solve specific design or technical problems. Their first resource should be themselves, then [our course site](https://typography-interaction.github.io) and its materials, and then each other. If there are still questions—such as logistical or content ones—students can message us on [Slack](https://mpscd.slack.com/archives/C03UR0J71U5), and we will respond when we can. But this should never be a bottleneck; all of this works better when not done at the last minute.
 
 
-### Additional technical help
+### {{ 'Additional technical help' | kerning }}
 
 For more specific technical instruction and questions, Parsons has dedicated CD-program tutors available to help students with HTML, CSS, and JavaScript, as well as offering general design critiques and feedback. The drop-in schedules are available in the [CD@Parsons app](https://cdparsons.glideapp.io) under “Make & Remake.”
 
 As CD-program tutors are available only a limited number of hours per week, it is advisable to start on your projects early and seek help early to avoid the usual end of project/semester rush for additional help.
 
 
-### Code plagiarism
+### {{ 'Code plagiarism' | kerning }}
 
 Students may find code similar to our exercises or projects elsewhere online. But the copying or adapting of any code beyond our provided course material (lectures, exercises, demos) without attribution is not allowed under any circumstances. If adapting, with attribution, students must explain the usage and demonstrate an understanding of how it works. We have zero tolerance for any sort of plagiarism— \
 which ranges from “verbatim copying” (cutting-and-pasting code) to “thorough paraphrasing” (changing names or rearranging code). Students should also review the _Academic Honesty and Integrity_ policies, below.
 
 
-### Recording sessions
+### {{ 'Recording sessions' | kerning }}
 
 We will take screen recordings of our sessions for students to reference later. As these will include the students and their work, the recordings will be stored on our [Google Drive](https://drive.google.com/drive/folders/1Nyv0f8u8Nsc8OkEGwmZu-S9pI11D5Iil?usp=sharing) and made available only to New School email users.
 
