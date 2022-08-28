@@ -25,15 +25,21 @@
 
 
 	// Manual spacing decisions.
+	.two-above {
+		--margin--top: calc(var(--margin--vertical) * 2);
+
+		+ * { --margin--top--previous: calc(var(--margin--vertical) * 2) }
+	}
+
+	.two-below + * { --margin--top: calc(var(--margin--vertical) * 2) }
+
 	.four-above {
 		--margin--top: calc(var(--margin--vertical) * 4);
 
 		+ * { --margin--top--previous: calc(var(--margin--vertical) * 4) }
 	}
 
-	.four-below {
-		+ * { --margin--top: calc(var(--margin--vertical) * 4)}
-	}
+	.four-below + * { --margin--top: calc(var(--margin--vertical) * 4) }
 
 
 
