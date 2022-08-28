@@ -51,7 +51,7 @@ By 1969, computer nodes connected the Stanford Research Institute, UCLA, UCSB an
 
 Over the following decades, [ARPANET](https://www.britannica.com/topic/ARPANET) would grow to include other cities—and then other competing academic and commercial networks were developed alongside, each with their own communication protocols.
 
-{% comment %} TCP diagram of some sort? {% endcomment %}
+{% include figure.html src='tcpip.png' credit='https://web.eecs.umich.edu/~prabal/teaching/eecs582-w13/readings/CK74.pdf' %}
 
 In 1974, Robert Kahn and Vinton Cerf (two DARPA scientists) developed the *Transmission Control Protocol* and the *Internet Protocol* (TCP/IP). By the 80s, it became the standard network communication format—and still underpins the internet we use today.
 
@@ -73,7 +73,7 @@ Their proposal had four components:
 
 * A text file format to represent the documents: the *HyperText Markup Language* (HTML)
 * The rules for exchanging these documents: the *HyperText Transfer Protocol* (HTTP)
-* A program to display (and edit) these documents: the first *web browser* (called WorldWideWeb)
+* A program to display (and edit) these documents: the first *web browser* (called [WorldWideWeb](https://worldwideweb.cern.ch/browser/))
 * A computer program to give access to the document: the *server* (an early version of Apache/httpd)
 
 By 1991, it was up and running and began to take off.
