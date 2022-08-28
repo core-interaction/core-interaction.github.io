@@ -115,85 +115,82 @@ The bulk of the work for this class is divided into three projects. They  are in
 ## {{ 'Course outline' | kerning }}
 
 
-### Unit 1: _Type and the web_
+### Unit 1: *Type and the web*
 
 
 #### Weeks 1–5
 
 We will focus on reviewing core principles of typography, and introduce the web and its base technologies. Students will learn about HTML, semantic DOM, basic CSS, as well as type hierarchy and the use of custom typefaces for the web.
 
-The unit ends with Project 1: _Manuscript_, which students will present on September 28.
+The unit ends with Project 1: *Manuscript*, which students will present on September 28.
 
 
 #### Readings
 
 
 
-* _[The Principles of the New Typography](https://readings.design/PDF/ThePrinciplesoftheNewTypography.pdf)_ \
+* [*The Principles of the New Typography*](https://readings.design/PDF/ThePrinciplesoftheNewTypography.pdf) \
 Jan Tschichold, 1928
-* _[The Crystal Goblet, or Printing Should Be Invisible](https://readings.design/PDF/The%20Crystal%20Goblet.pdf)_ \
+* [*The Crystal Goblet, or Printing Should Be Invisible*](https://readings.design/PDF/The%20Crystal%20Goblet.pdf) \
 Beatrice Warde, 1932
-* _[Detail in Typography](https://static.trogu.com/documents/articles/palgrave/references/hochuli-Jost-H-Detail-in-Typography%20scribd%20-%2064-page.pdf)_ \
+* [*Detail in Typography*](https://static.trogu.com/documents/articles/palgrave/references/hochuli-Jost-H-Detail-in-Typography%20scribd%20-%2064-page.pdf) \
 Jost Hochuli, 1987
-* _[The Elements of Typographic Style](https://readings.design/PDF/the_elements_of_typographic_style.pdf)_ \
+* [*The Elements of Typographic Style*](https://readings.design/PDF/the_elements_of_typographic_style.pdf) \
 Robert Bringhurst, 1992
-* _[A Handmade Web](http://luckysoap.com/statements/handmadeweb.html)_ \
+* [*A Handmade Web*](http://luckysoap.com/statements/handmadeweb.html) \
 J.R. Carpenter, 2015
 
 
-### Unit 2: _There is no perfect layout_
+### Unit 2: *There is no perfect layout*
 
 
 #### Weeks 6–9
 
 Students will learn how to design and implement more complex, flexible layouts, while collaborating closely with a classmate. We’ll introduce responsive design, media query CSS, and advanced web type techniques.
 
-This unit concludes with Project 2: _Spread_, which students will present (in their pairs) on October 26.
+This unit concludes with Project 2: *Spread*, which students will present (in their pairs) on October 26.
 
 
 #### Readings
 
 
 
-* _[Investigations on Gestalt Principles](https://g-e-s-t-a-l-t.org/media/pdf/Investigations-on-Gestalt-Principles.pdf)_ \
+* [*Investigations on Gestalt Principles*](https://g-e-s-t-a-l-t.org/media/pdf/Investigations-on-Gestalt-Principles.pdf) \
 Max Wertheimer, 1923
-* _[Continuity and Change](https://readings.design/PDF/MaxBill-ContinuityAndChange.pdf)_ \
+* [*Continuity and Change*](https://readings.design/PDF/MaxBill-ContinuityAndChange.pdf) \
 Max Bill, 1953
-* _[Grid Systems in Graphic Design](https://monoskop.org/images/a/a4/Mueller-Brockmann_Josef_Grid_Systems_in_Graphic_Design_Raster_Systeme_fuer_die_Visuele_Gestaltung_English_German_no_OCR.pdf)_ \
+* [*Grid Systems in Graphic Design*](https://monoskop.org/images/a/a4/Mueller-Brockmann_Josef_Grid_Systems_in_Graphic_Design_Raster_Systeme_fuer_die_Visuele_Gestaltung_English_German_no_OCR.pdf) \
 Josef Müller-Brockmann, 1981
-* _[The Web’s Grain](https://frankchimero.com/blog/2015/the-webs-grain/)_ \
+* [*The Web’s Grain*](https://frankchimero.com/blog/2015/the-webs-grain/) \
 Frank Chimero, 2015
-* _[The Diminishing Marginal Value of Aesthetics](https://subpixel.space/entries/diminishing-marginal-aesthetic-value/)_ \
+* [*The Diminishing Marginal Value of Aesthetics*](https://subpixel.space/entries/diminishing-marginal-aesthetic-value/) \
 Toby Shorin, 2017
 
-		 \
 
 
-
-
-### Unit 3: _Typography as interface_
+### Unit 3: *Typography as interface*
 
 
 #### Weeks 10–15
 
 In our final unit, we will focus on creating advanced, multi-page layouts with grid systems, prototyping their flows, and exploring typography’s usage as interface elements for navigating a website.
 
-This unit, and the semester, will culminate with Project 3: _Binding_, which will be presented in class on November 23.
+This unit, and the semester, will culminate with Project 3: *Binding*, which will be presented in class on November 23.
 
 
 #### Readings
 
 
 
-* _[Design Interface: How Man and Machine Communicate](https://i-n-t-e-r-f-a-c-e.org/media/pdf/Design-Interface.pdf), \
-_Gianni Barbacetto_, _1987
-* _[A Software Design Manifesto](https://hci.stanford.edu/publications/bds/1-kapor.html)_ \
+* [*Design Interface: How Man and Machine Communicate*](https://i-n-t-e-r-f-a-c-e.org/media/pdf/Design-Interface.pdf) \
+Gianni Barbacetto, 1987
+* [*A Software Design Manifesto*](https://hci.stanford.edu/publications/bds/1-kapor.html) \
 Mitchell Kapor, 1990
-* [Typeface As Programme](https://www.typotheque.com/articles/typeface_as_programme) \
+* [Typeface As Programme*](https://www.typotheque.com/articles/typeface_as_programme) \
 Jürg Lehni, 2011
-* _[Interface Writing: Code for Humans](https://www.nicolefenton.com/interface-writing/)_ \
+* [*Interface Writing: Code for Humans*](https://www.nicolefenton.com/interface-writing/) \
 Nicole Fenton, 2014
-* _[My website is a shifting house next to a river of knowledge. What could yours be?](https://thecreativeindependent.com/essays/laurel-schwulst-my-website-is-a-shifting-house-next-to-a-river-of-knowledge-what-could-yours-be/)_ \
+* [*My website is a shifting house next to a river of knowledge. What could yours be?*](https://thecreativeindependent.com/essays/laurel-schwulst-my-website-is-a-shifting-house-next-to-a-river-of-knowledge-what-could-yours-be/) \
 Laurel Schwulst, 2018
 
 
@@ -231,7 +228,7 @@ Our intent is to respect and give forum to a range of perspectives and backgroun
 
 ### Engagement
 
-There are program policies (below) around attendance, but we also have an _engagement_ policy—which will likewise affect students’ evaluation and final grade, as their engagement will be unavoidably reflected in the quality of their work.
+There are program policies (below) around attendance, but we also have an *engagement* policy—which will likewise affect students’ evaluation and final grade, as their engagement will be unavoidably reflected in the quality of their work.
 
 Students are expected to actively and passionately participate in this course. This means more than showing up and turning things in on time, which should be a given. Beyond that baseline, students should be curious, prepared, thoughtful, vocal, and intentional throughout the course. They should make us understand why they are here, and demonstrate to us that they care about themselves, their work, and each other—and ultimately, about this chosen profession.
 
