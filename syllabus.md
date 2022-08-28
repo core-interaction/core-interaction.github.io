@@ -128,19 +128,19 @@ The unit ends with Project 1: *Manuscript*, which students will present on Septe
 #### Readings
 
 * {: .link-only }[*The Principles of the New Typography*](https://readings.design/PDF/ThePrinciplesoftheNewTypography.pdf) \
-Jan Tschichold, 1928
+	Jan Tschichold, 1928
 
 * {: .link-only }[*The Crystal Goblet, or Printing Should Be Invisible*](https://readings.design/PDF/The%20Crystal%20Goblet.pdf) \
-Beatrice Warde, 1932
+	Beatrice Warde, 1932
 
 * {: .link-only }[*Detail in Typography*](https://static.trogu.com/documents/articles/palgrave/references/hochuli-Jost-H-Detail-in-Typography%20scribd%20-%2064-page.pdf) \
-Jost Hochuli, 1987
+	Jost Hochuli, 1987
 
 * {: .link-only }[*The Elements of Typographic Style*](https://readings.design/PDF/the_elements_of_typographic_style.pdf) \
-Robert Bringhurst, 1992
+	Robert Bringhurst, 1992
 
 * {: .link-only }[*A Handmade Web*](http://luckysoap.com/statements/handmadeweb.html) \
-J.R. Carpenter, 2015
+	J.R. Carpenter, 2015
 
 
 
@@ -155,19 +155,19 @@ This unit concludes with Project 2: *Spread*, which students will present (in th
 #### Readings
 
 * {: .link-only }[*Investigations on Gestalt Principles*](https://g-e-s-t-a-l-t.org/media/pdf/Investigations-on-Gestalt-Principles.pdf) \
-Max Wertheimer, 1923
+	Max Wertheimer, 1923
 
 * {: .link-only }[*Continuity and Change*](https://readings.design/PDF/MaxBill-ContinuityAndChange.pdf) \
-Max Bill, 1953
+	Max Bill, 1953
 
 * {: .link-only }[*Grid Systems in Graphic Design*](https://monoskop.org/images/a/a4/Mueller-Brockmann_Josef_Grid_Systems_in_Graphic_Design_Raster_Systeme_fuer_die_Visuele_Gestaltung_English_German_no_OCR.pdf) \
-Josef Müller-Brockmann, 1981
+	Josef Müller-Brockmann, 1981
 
 * {: .link-only }[*The Web’s Grain*](https://frankchimero.com/blog/2015/the-webs-grain/) \
-Frank Chimero, 2015
+	Frank Chimero, 2015
 
 * {: .link-only }[*The Diminishing Marginal Value of Aesthetics*](https://subpixel.space/entries/diminishing-marginal-aesthetic-value/) \
-Toby Shorin, 2017
+	Toby Shorin, 2017
 
 
 
@@ -182,19 +182,19 @@ This unit, and the semester, will culminate with Project 3: *Binding*, which wil
 #### Readings
 
 * {: .link-only }[*Design Interface: How Man and Machine Communicate*](https://i-n-t-e-r-f-a-c-e.org/media/pdf/Design-Interface.pdf) \
-Gianni Barbacetto, 1987
+	Gianni Barbacetto, 1987
 
 * {: .link-only }[*A Software Design Manifesto*](https://hci.stanford.edu/publications/bds/1-kapor.html) \
-Mitchell Kapor, 1990
+	Mitchell Kapor, 1990
 
 * {: .link-only }[*Typeface As Programme*](https://www.typotheque.com/articles/typeface_as_programme) \
-Jürg Lehni, 2011
+	Jürg Lehni, 2011
 
 * {: .link-only }[*Interface Writing: Code for Humans*](https://www.nicolefenton.com/interface-writing/) \
-Nicole Fenton, 2014
+	Nicole Fenton, 2014
 
 * {: .link-only }[*My website is a shifting house next to a river of knowledge. What could yours be?*](https://thecreativeindependent.com/essays/laurel-schwulst-my-website-is-a-shifting-house-next-to-a-river-of-knowledge-what-could-yours-be/) \
-Laurel Schwulst, 2018
+	Laurel Schwulst, 2018
 
 
 
