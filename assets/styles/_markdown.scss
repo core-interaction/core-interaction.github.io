@@ -106,7 +106,8 @@
 
 		--color: var(--link--color);
 
-		color: var(--link--color);
+		color:       var(--link--color);
+		white-space: nowrap;
 	}
 
 	// Prominence for link-only paragraphs/li.
