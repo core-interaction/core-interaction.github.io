@@ -28,14 +28,15 @@ When building locally, the `--unpublished` flag will show everything.
 - [x] Generate random class list
 - [x] Include for `figure`/`figcaption` (option for 100vh)
 - [x] Fix long captions stretching their images
+- [x] Rough out other pages (syllabus and such?)
 - [ ] Set up more-advanced Markdown styles
   - [x] `hr`
   - [x] Blockquotes (attribution?)
   - [x] Something for the Notion’s “callouts”
   - [x] Lists (paragraph and plain)
   - [x] Figure out image floats/grid (use inline classes?)
+  - [x] Simple tables
   - [ ] Inline and full `code` blocks
-- [ ] Rough out other pages (syllabus and such?)
 - [ ] Do acronyms properly (and differentiate style)
 - [ ] Fancy 100vh “slide” include?
 - [ ] Put upper limits on VH figure constraints
