@@ -51,7 +51,7 @@ By 1969, computer nodes connected the Stanford Research Institute, UCLA, UCSB an
 
 Over the following decades, [ARPANET](https://www.britannica.com/topic/ARPANET) would grow to include other cities—and then other competing academic and commercial networks were developed alongside, each with their own communication protocols.
 
-{% include figure.html src='tcpip.png' credit='https://web.eecs.umich.edu/~prabal/teaching/eecs582-w13/readings/CK74.pdf' %}
+{% include figure.html src='tcpip.png' caption='The core of TCP/IP is routing bundles of data called *packets*.' credit='https://web.eecs.umich.edu/~prabal/teaching/eecs582-w13/readings/CK74.pdf' %}
 
 In 1974, Robert Kahn and Vinton Cerf (two DARPA scientists) developed the *Transmission Control Protocol* and the *Internet Protocol* (TCP/IP). By the 80s, it became the standard network communication format—and still underpins the internet we use today.
 
@@ -63,22 +63,30 @@ In 1974, Robert Kahn and Vinton Cerf (two DARPA scientists) developed the *Trans
 
 {% include details.html summary='1969 or 1989?' content='1989!' %}
 
-{% comment %} Tim and comp. {% endcomment %}
+{% include figure.html src='tim.jpg' caption='Our guy Tim.' credit='https://cds.cern.ch/images/CERN-GE-9407011-31' %}
 
 Tim Berners-Lee, a British academic and scientist, invented the *World Wide Web* (WWW) with his team while working at [CERN in 1989](https://home.cern/science/computing/birth-web/short-history-web). It was developed on top of TCP/IP as a standard way to connect documents, living on different computers in different places, via *hypertext* links.
 
-{% comment %} Four components? First web page? {% endcomment %}
+{% include figure.html src='web.png' caption='The cover of the original proposal, hinting at the approach.' credit='https://cds.cern.ch/record/1405411/files/ARCH-WWW-4-010.pdf' %}
 
 Their proposal had four components:
 
 * A text file format to represent the documents: the *HyperText Markup Language* (HTML)
 * The rules for exchanging these documents: the *HyperText Transfer Protocol* (HTTP)
-* A program to display (and edit) these documents: the first *web browser* (called [WorldWideWeb](https://worldwideweb.cern.ch/browser/))
-* A computer program to give access to the document: the *server* (an early version of Apache/httpd)
+* A program to display (and edit) these documents: the first *web browser* (called WorldWideWeb)
+* Software that gives access to the document: the *server* (an early version of Apache/httpd)
 
-By 1991, it was up and running and began to take off.
+{% include figure.html src='worldwideweb.png' caption='How it looked for Tim, back then.' credit='https://worldwideweb.cern.ch/browser/' %}
 
-{% comment %} Early browsers {% endcomment %}
+{% include figure.html src='chrome.png' caption='How it looks for us, now.' credit='http://info.cern.ch/hypertext/WWW/TheProject.html' %}
+
+
+By 1991, the [first web page](http://info.cern.ch/hypertext/WWW/TheProject.html) was up and running and began to take off.
+
+{% include figure.html src='mosaic.png' caption='Mosaic was one of the first widely-available browsers. It introduced support for images.' credit='https://en.wikipedia.org/wiki/Mosaic_(web_browser)#/media/File:NCSA_Mosaic_Browser_Screenshot.png' %}
+
+{% include figure.html src='netscape.png' caption='Netscape, the first browser I ever used.' credit='https://commons.wikimedia.org/wiki/File:Netscape_Navigator_3_Screenshot.png' %}
+
 
 The 1990s then saw affordable home computers bring internet access to everyday people—escaping the government, business, and academic settings it had been siloed in before. Early web browsers like [Mosaic and Netscape](https://en.wikipedia.org/wiki/History_of_the_web_browser) (1993) helped evolve what was possible online—adding color, images, and interactivity.
 
@@ -188,3 +196,7 @@ In your careers, the software, languages, and platforms might be different, and 
 >
 >> [Abigail Disney](https://www.theatlantic.com/ideas/archive/2021/06/abigail-disney-rich-protect-dynastic-wealth-propublica-tax/619212/)
 {: .pull-quote }
+
+
+
+*A hat-tip to friend-of-the-program [Tuan](https://tuanpham.info) on this lecture.*
