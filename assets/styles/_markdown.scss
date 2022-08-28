@@ -293,6 +293,12 @@
 		}
 
 		> figure:not(:first-child) { margin-top: var(--typography--between) }
+
+		+ * {
+			--margin--top: calc(var(--margin--vertical) * 2);
+
+			@include breakpoint(568) { --margin--top: initial }
+		}
 	}
 
 
