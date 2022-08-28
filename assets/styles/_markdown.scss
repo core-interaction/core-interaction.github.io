@@ -122,7 +122,7 @@
 	.link-only > a,
 	.link-only > p > a {
 		@extend %font--underline--disable;
-		@extend %icon--external;
+		@extend %icon--link;
 	}
 
 	p {

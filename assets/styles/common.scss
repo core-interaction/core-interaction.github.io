@@ -298,6 +298,8 @@ body {
 				> h1:only-child { grid-column: 1 / span 3 }
 			}
 
+
+
 			// The date.
 			> p {
 				--typography--leading: var(--typography--leading--tight);
@@ -308,16 +310,18 @@ body {
 				@include breakpoint(568) { grid-column: 1 / span 2 }
 			}
 
-			// The info block on the index.
-			> address {
-				@extend %type--layout;
 
-				--typography--tracking: -0.016; // Cheat in for the long-ass title.
+
+			// Right rail.
+			> address,
+			> ul {
+				@extend %type--layout;
 
 				--top--offset: calc(var(--typography--size--h1) * (var(--typography--cap-height) - var(--typography--x-height)));
 
 				display:        flex;
 				flex-direction: column;
+				gap:            var(--typography--between);
 				margin-top:     var(--margin--vertical);
 
 				@include breakpoint(568) {
@@ -325,15 +329,40 @@ body {
 					grid-column: 3 / span 1;
 					margin-top:  var(--top--offset);
 				}
+			}
+
+			> h1 + ul { grid-row:  1 / span 1 } // Without a date before it.
+
+
+
+			// The info block on the index.
+			> address {
+				--typography--tracking: -0.016; // Cheat in for the long-ass title.
 
 				> div {
 					margin-top: var(--margin--vertical);
 
 					@include breakpoint(568) { margin-top: auto }
 
-					> p > a { @extend %icon--external }
+					> p > a { @extend %icon--link }
 
 					> p:not(:first-child) { margin-top: var(--typography--between) }
+				}
+			}
+
+
+
+			// The ToC.
+			> ul {
+				li {
+					@extend %typography;
+
+					a {
+						@extend %font--underline--disable;
+						@extend %icon--link;
+
+						color: var(--color--links);
+					}
 				}
 			}
 		}
@@ -464,7 +493,7 @@ body {
 
 
 // Low to override defaults.
-%icon--external {
+%icon--link {
 	@extend %link--text;
 
 	&:after {
@@ -474,6 +503,7 @@ body {
 		content: var(--icon);
 	}
 
+	&[href^="#"]    { --icon: '↓' } // Anchor.
 	&[href^="/"]    { --icon: '→' } // Internal.
 	&[href^="http"] { --icon: '↗' } // External.
 

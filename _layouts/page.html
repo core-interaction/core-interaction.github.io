@@ -13,6 +13,7 @@ layout: default
 			{% if date %}
 				<p>{{ date  | replace_first: 'd', "D" | kerning }}</p>
 			{% endif %}
+			{% include toc.html html=content h_max=2 %}
 		</header>
 	{% endif %}
 	<article>
