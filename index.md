@@ -1,6 +1,8 @@
 ---
 title: Typography and Interaction
 links:
+  - name: Syllabus
+    url:  /syllabus
   - name: Slack
     url:  https://mpscd.slack.com/archives/C03UR0J71U5
   - name: GitHub
@@ -39,10 +41,7 @@ instructor:
 *Typography and Interaction* is a year-long, <nobr>two-part</nobr> course in the [MPS Communication Design](https://mpscd.parsons.edu) program at [Parsons](https://www.newschool.edu/parsons/)&thinsp;/&thinsp;[The New School](https://www.newschool.edu). The class will provide a rigorous foundation of typographic and interaction principles in the context of digital design. (We hope.)
 {: .left }
 
-{% include link_list.html heading="Elsewhere" rows=4 %}
+{% include link_list.html rows=3 %}
 
-We’ll be using this course site for our agendas, lectures, and general class housekeeping. It will be updated throughout the semester.
+We’ll be using this course site for our agendas, lectures, general class housekeeping, and anything else that comes up. It will be updated throughout the semester. Thanks for stopping by!
 {: .left }
-
-[Our syllabus](/syllabus)
-{: .link-only .left }
