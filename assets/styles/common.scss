@@ -154,6 +154,8 @@ body {
 	h3,
 	h4 {
 		--typography--leading: var(--typography--leading--tight);
+
+		scroll-margin-top: calc(var(--margin--vertical) * 3);
 	}
 
 	h1 { --typography--size: var(--typography--size--h1) }
