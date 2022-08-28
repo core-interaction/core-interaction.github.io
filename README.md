@@ -26,19 +26,23 @@ When building locally, the `--unpublished` flag will show everything.
 - [x] Add course info/links to index (Slack and such)
 - [x] Add link list to topics (MDN, articles, etc.)
 - [x] Generate random class list
+- [x] Include for `figure`/`figcaption` (option for 100vh)
+- [x] Fix long captions stretching their images
 - [ ] Set up more-advanced Markdown styles
   - [x] `hr`
   - [x] Blockquotes (attribution?)
   - [x] Something for the Notion’s “callouts”
   - [x] Lists (paragraph and plain)
+  - [x] Figure out image floats/grid (use inline classes?)
   - [ ] Inline and full `code` blocks
-  - [ ] Figure out image floats/grid (use inline classes?)
 - [ ] Rough out other pages (syllabus and such?)
-- [ ] Include for `figure`/`figcaption` (option for 100vh)
+- [ ] Do acronyms properly (and differentiate style)
+- [ ] Fancy 100vh “slide” include?
 - [ ] Add resource/links list to index (MDN and so on)
 - [ ] Flip sticky header to blue on scroll
 - [ ] Add some kind of nice [link previews](https://github.com/ysk24ok/jekyll-linkpreview)
 - [ ] Fix arrow icons wrapping to new lines on middle breaks
+- [ ] Fix captions-longer-than-images *properly*
 - [ ] Get code/sandbox examples going (separate repo?)
 - [ ] Generate a [ToC](https://github.com/toshimaru/jekyll-toc) on topics
 - [ ] “Agenda” ToC on weeks?
