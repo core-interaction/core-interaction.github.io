@@ -129,15 +129,20 @@ The unit ends with Project 1: *Manuscript*, which students will present on Septe
 
 
 
-* [*The Principles of the New Typography*](https://readings.design/PDF/ThePrinciplesoftheNewTypography.pdf) \
+
+* {: .link-only }[*The Principles of the New Typography*](https://readings.design/PDF/ThePrinciplesoftheNewTypography.pdf) \
 Jan Tschichold, 1928
-* [*The Crystal Goblet, or Printing Should Be Invisible*](https://readings.design/PDF/The%20Crystal%20Goblet.pdf) \
+
+* {: .link-only }[*The Crystal Goblet, or Printing Should Be Invisible*](https://readings.design/PDF/The%20Crystal%20Goblet.pdf) \
 Beatrice Warde, 1932
-* [*Detail in Typography*](https://static.trogu.com/documents/articles/palgrave/references/hochuli-Jost-H-Detail-in-Typography%20scribd%20-%2064-page.pdf) \
+
+* {: .link-only }[*Detail in Typography*](https://static.trogu.com/documents/articles/palgrave/references/hochuli-Jost-H-Detail-in-Typography%20scribd%20-%2064-page.pdf) \
 Jost Hochuli, 1987
-* [*The Elements of Typographic Style*](https://readings.design/PDF/the_elements_of_typographic_style.pdf) \
+
+* {: .link-only }[*The Elements of Typographic Style*](https://readings.design/PDF/the_elements_of_typographic_style.pdf) \
 Robert Bringhurst, 1992
-* [*A Handmade Web*](http://luckysoap.com/statements/handmadeweb.html) \
+
+* {: .link-only }[*A Handmade Web*](http://luckysoap.com/statements/handmadeweb.html) \
 J.R. Carpenter, 2015
 
 
@@ -155,15 +160,20 @@ This unit concludes with Project 2: *Spread*, which students will present (in th
 
 
 
-* [*Investigations on Gestalt Principles*](https://g-e-s-t-a-l-t.org/media/pdf/Investigations-on-Gestalt-Principles.pdf) \
+
+* {: .link-only }[*Investigations on Gestalt Principles*](https://g-e-s-t-a-l-t.org/media/pdf/Investigations-on-Gestalt-Principles.pdf) \
 Max Wertheimer, 1923
-* [*Continuity and Change*](https://readings.design/PDF/MaxBill-ContinuityAndChange.pdf) \
+
+* {: .link-only }[*Continuity and Change*](https://readings.design/PDF/MaxBill-ContinuityAndChange.pdf) \
 Max Bill, 1953
-* [*Grid Systems in Graphic Design*](https://monoskop.org/images/a/a4/Mueller-Brockmann_Josef_Grid_Systems_in_Graphic_Design_Raster_Systeme_fuer_die_Visuele_Gestaltung_English_German_no_OCR.pdf) \
+
+* {: .link-only }[*Grid Systems in Graphic Design*](https://monoskop.org/images/a/a4/Mueller-Brockmann_Josef_Grid_Systems_in_Graphic_Design_Raster_Systeme_fuer_die_Visuele_Gestaltung_English_German_no_OCR.pdf) \
 Josef Müller-Brockmann, 1981
-* [*The Web’s Grain*](https://frankchimero.com/blog/2015/the-webs-grain/) \
+
+* {: .link-only }[*The Web’s Grain*](https://frankchimero.com/blog/2015/the-webs-grain/) \
 Frank Chimero, 2015
-* [*The Diminishing Marginal Value of Aesthetics*](https://subpixel.space/entries/diminishing-marginal-aesthetic-value/) \
+
+* {: .link-only }[*The Diminishing Marginal Value of Aesthetics*](https://subpixel.space/entries/diminishing-marginal-aesthetic-value/) \
 Toby Shorin, 2017
 
 
@@ -182,15 +192,20 @@ This unit, and the semester, will culminate with Project 3: *Binding*, which wil
 
 
 
-* [*Design Interface: How Man and Machine Communicate*](https://i-n-t-e-r-f-a-c-e.org/media/pdf/Design-Interface.pdf) \
+
+* {: .link-only }[*Design Interface: How Man and Machine Communicate*](https://i-n-t-e-r-f-a-c-e.org/media/pdf/Design-Interface.pdf) \
 Gianni Barbacetto, 1987
-* [*A Software Design Manifesto*](https://hci.stanford.edu/publications/bds/1-kapor.html) \
+
+* {: .link-only }[*A Software Design Manifesto*](https://hci.stanford.edu/publications/bds/1-kapor.html) \
 Mitchell Kapor, 1990
-* [Typeface As Programme*](https://www.typotheque.com/articles/typeface_as_programme) \
+
+* {: .link-only }[*Typeface As Programme*](https://www.typotheque.com/articles/typeface_as_programme) \
 Jürg Lehni, 2011
-* [*Interface Writing: Code for Humans*](https://www.nicolefenton.com/interface-writing/) \
+
+* {: .link-only }[*Interface Writing: Code for Humans*](https://www.nicolefenton.com/interface-writing/) \
 Nicole Fenton, 2014
-* [*My website is a shifting house next to a river of knowledge. What could yours be?*](https://thecreativeindependent.com/essays/laurel-schwulst-my-website-is-a-shifting-house-next-to-a-river-of-knowledge-what-could-yours-be/) \
+
+* {: .link-only }[*My website is a shifting house next to a river of knowledge. What could yours be?*](https://thecreativeindependent.com/essays/laurel-schwulst-my-website-is-a-shifting-house-next-to-a-river-of-knowledge-what-could-yours-be/) \
 Laurel Schwulst, 2018
 
 
