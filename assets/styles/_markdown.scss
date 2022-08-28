@@ -140,16 +140,17 @@
 
 			display:      list-item;
 			margin-top:   var(--typography--margin--top);
-			padding-left: 0.4em;
+			padding-left: 0.5em;
 
-			@include browser-specific(safari) { padding-left: 0.3em }
+			@include browser-specific(safari) { padding-left: 0.4em }
 
 			&:before { display: none } // Collides with the marker, so we use the margin.
 
 			> h3,
 			> h4,
 			> p {
-				padding-left: calc(var(--typography--size--base) * 0.8); // So it works with the headings.
+				max-width:    65ch;
+				padding-left: calc(var(--typography--size--base) * 0.25); // More space on paragraph lists.
 
 				&:first-child:before,
 				&:last-child:after { display: none }; // Since the `li` is a type element.
@@ -160,7 +161,7 @@
 
 			> h3:not(._) + p, > h4:not(._) + p { margin-top: var(--typography--between) }
 
-			&:not(:first-child) > p:first-child { margin-top: calc(var(--typography--font-size) * var(--typography--leading)) }
+			&:not(:first-child) > *:first-child { margin-top: calc(var(--typography--font-size) * var(--typography--leading)) }
 		}
 	}
 
