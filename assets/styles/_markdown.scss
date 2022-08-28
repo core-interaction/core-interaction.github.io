@@ -22,8 +22,6 @@
 
 	h3 { --margin--top: calc(var(--margin--vertical) * 2) }
 
-	h4 + * { --margin--top: var(--typography--between) }
-
 
 
 	// Manual spacing decisions.
@@ -158,8 +156,6 @@
 				&:not(:first-child) { margin-top: var(--typography--leading-shoulder) }
 				&:not(:only-child):last-child { margin-bottom: calc(var(--typography--font-size) * var(--typography--leading)) }
 			}
-
-			> h3:not(._) + p, > h4:not(._) + p { margin-top: var(--typography--between) }
 
 			&:not(:first-child) > *:first-child { margin-top: calc(var(--typography--font-size) * var(--typography--leading)) }
 		}
