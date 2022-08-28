@@ -331,7 +331,9 @@ body {
 				}
 			}
 
-			> h1 + ul { grid-row:  1 / span 1 } // Without a date before it.
+			@include breakpoint(568) {
+				> h1 + ul { grid-row:  1 / span 1 } // Without a date before it.
+			}
 
 
 
