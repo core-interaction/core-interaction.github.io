@@ -229,7 +229,7 @@
 			> p > a {
 				@extend %font--underline--disable;
 
-				span:not(._) { margin-left: initial }
+				&:only-child span:not(._) { margin-left: initial }
 			}
 		}
 
