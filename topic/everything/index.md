@@ -1,11 +1,11 @@
 ---
-title: Everything is a web page
+title: Everything is a web page
 order: 0
 ---
 
 
 
-## {{ 'Let’s start with *the internet*' | kerning }}
+## {{ 'Let’s start with *the internet*' | kerning }}
 
 
 
