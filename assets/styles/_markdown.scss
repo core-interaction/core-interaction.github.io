@@ -113,8 +113,6 @@
 	.link-only > a {
 		@extend %font--underline--disable;
 		@extend %icon--external;
-
-		display: table-row; // Lil’ trick to force any subsequent text underneath.
 	}
 
 	p {
