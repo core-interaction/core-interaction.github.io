@@ -9,26 +9,26 @@ module Jekyll
 			letters = ""
 			for letter in input.chars do
 				if letter == " "
-					letterClass = "space"
+					letter_class = "space"
 				elsif letter == "\n"
-					letterClass = false
+					letter_class = false
 				elsif letter == " "
-					letterClass = "nbsp"
+					letter_class = "nbsp"
 				elsif letter == "-"
-					letterClass = "hyphen"
+					letter_class = "hyphen"
 				elsif letter == "–"
-					letterClass = "ndash"
+					letter_class = "ndash"
 				elsif letter == "—"
-					letterClass = "mdash"
+					letter_class = "mdash"
 				elsif letter == ","
-					letterClass = "comma"
+					letter_class = "comma"
 				elsif letter.to_i.to_s == letter
-					letterClass = "num#{letter}"
+					letter_class = "num#{letter}"
 				else
-					letterClass = letter
+					letter_class = letter
 				end
-				if letterClass
-					letters += "<span class='#{ letterClass }'>#{ letter }</span>"
+				if letter_class
+					letters += "<span class='#{ letter_class }'>#{ letter }</span>"
 				else
 					letters += "<br>"
 				end
