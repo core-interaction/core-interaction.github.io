@@ -13,7 +13,7 @@ links:
 
 
 
-Typography and Interaction is a year-long course, divided into two classes, which will provide a rigorous foundation of typographic and interaction principles in the context of digital design. This first semester will focus on a mastery of type and layout concepts, with the second semester emphasizing interaction and interface design principles. Over both, students will acquire and hone the skills necessary in the field of interactive design.
+*Typography and Interaction* is a year-long course, divided into two classes, which will provide a rigorous foundation of typographic and interaction principles in the context of digital design. This first semester will focus on a mastery of type and layout concepts, with the second semester emphasizing interaction and interface design principles. Over both, students will acquire and hone the skills necessary in the field of interactive design.
 {: .left }
 
 {% include link_list.html rows=3 %}
@@ -51,6 +51,7 @@ By the end of this semester, students will:
 
 
 ### Unit tasks
+{: .two-below}
 
 * #### Readings and reviews
 
@@ -63,3 +64,36 @@ By the end of this semester, students will:
 * #### Critiques
 
 	Each unit will conclude with a review of its project. In addition to the project itself, students will be assessed on their presentation of their work, as well as their ability to provide constructive, critical feedback to their peers.
+
+
+
+### Projects
+
+
+
+The bulk of the work for this class is divided into three projects. They  are intended as opportunities for students to apply knowledge and skills learned in class, while developing their own practice. There will be check-ins and presentations around each of these before the final due dates, when we will have critiques as a group:
+{: .two-below}
+
+* #### Project 1: Manuscript
+
+	Students will choose a seminal design text from readings.design, read and respond to it, and typeset their selection and reply together as a web page. Other texts are also allowed on a case-by-case basis.
+
+	*We’ll be looking for the quality of responses, appropriate type selection and hierarchy, semantic HTML, and basic CSS.*
+
+	*Due September 28.*
+
+* #### Project 2: Spread
+
+	Students will work in pairs, with a new text from those selected by the class in Manuscript. Each duo will sketch collaboratively and then implement a new expression together, via pair programming. The final web page will be responsive for mobile, desktop, and print layouts.
+
+	*Here we’re looking for successful design and development collaboration, box-model layout design, and use of responsive media queries.*
+
+	*Due October 26.*
+
+* #### Project 3: Binding
+
+	Students will assemble a collection of texts from Spread, combined with their original selection, into a “book”. The book will be a multi-page website with a homepage (cover), navigation (table of contents), individual pages for each text, and an introduction (colophon)—with consistent styles applied across all pages.
+
+	*We want to see effective multi-page design and navigation, advanced layouts (flexbox, grid), consistency across the pages and content, and polish/nuance.*
+
+	*Due November 23.*
