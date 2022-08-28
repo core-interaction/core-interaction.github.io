@@ -13,7 +13,7 @@ links:
 
 
 
-*Typography and Interaction* is a year-long course, divided into two classes, which will provide a rigorous foundation of typographic and interaction principles in the context of digital design. This first semester will focus on a mastery of type and layout concepts, with the second semester emphasizing interaction and interface design principles. Over both, students will acquire and hone the skills necessary in the field of interactive design.
+*Typography and Interaction* is a year-long course, divided into two classes, which will provide a rigorous foundation of typographic and interaction principles in the context of digital design. This first semester will focus on a mastery of type and layout concepts, with the second semester emphasizing interaction and interface design principles. Over both, students will acquire and hone the skills they need for success in the field of interactive design.
 {: .left }
 
 {% include link_list.html rows=3 %}
