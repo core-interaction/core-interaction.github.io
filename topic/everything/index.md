@@ -16,7 +16,7 @@ TODO: Images, “slides”, acronyms, more links?
 
 ### When was the *internet* invented?
 
-{% include details.html summary='1960 or 1989?' content='1960!' %}
+{% include details.html summary='1969 or 1989?' content='1969!' %}
 
 
 
@@ -26,13 +26,13 @@ Before this time, the term *computer* usually referred to a person, not a machin
 
 It is worth noting these [were often women](https://www.nytimes.com/2019/02/13/magazine/women-coding-computer-programming.html), and they were underpaid compared to men in their field—and many would go on to operate the early mechanical/electronic computers.
 
-{% comment %} UNIVAC. {% endcomment %}
+{% include figure.html src='univac.jpg' caption='Univac, the first commercial computer in the US.' credit='https://time.com/4271506/census-bureau-computer-history/' %}
 
 By the 1960s, computers were room-sized, institutional electronic machines—used by governments (the military), businesses, and universities. They were used to solve complex math problems and sort data, but were still very slow and didn’t communicate with one another.
 
-{% comment %} Central/decentralized. {% endcomment %}
+{% include figure.html src='networks.png' credit='https://www.rand.org/content/dam/rand/pubs/research_memoranda/2006/RM3420.pdf' %}
 
-A catalyst in the formation of the internet was the Cold War. The threat of nuclear conflict spurred the US Defense Department to consider decentralized networks—to disseminate orders and information in the event of an attack.
+A catalyst in the formation of the internet was the Cold War. The threat of nuclear conflict spurred the US Defense Department to consider decentralized and distributed networks—to disseminate orders and information in the event of an attack.
 
 
 
@@ -43,13 +43,13 @@ A catalyst in the formation of the internet was the Cold War. The threat of nucl
 
 
 
-{% comment %} Arpanet. {% endcomment %}
+{% include figure.html src='arpanet.jpg' caption='The original sketch of ARPANET.' credit='https://www.scientificamerican.com/gallery/early-sketch-of-arpanets-first-four-nodes/' %}
 
 By 1969, computer nodes connected the Stanford Research Institute, UCLA, UCSB and the University of Utah—developed by the Defense Department’s *Advanced Research Project Agency* (ARPA).
 
-{% comment %} Arpanet growth. {% endcomment %}
+{% include figure.html src='arpanet.gif' caption='The growth of ARPANET into the 1970s.' credit='https://medium.com/syntropynet/the-internet-was-not-developed-it-just-happened-part-1-a123fe4628' %}
 
-Over the following decades, “[ARPAnet](https://www.britannica.com/topic/ARPANET)” would grow to include other cities—and then other competing academic and commercial networks were developed alongside, each with their own communication protocols.
+Over the following decades, [ARPANET](https://www.britannica.com/topic/ARPANET) would grow to include other cities—and then other competing academic and commercial networks were developed alongside, each with their own communication protocols.
 
 {% comment %} TCP diagram of some sort? {% endcomment %}
 
@@ -61,7 +61,7 @@ In 1974, Robert Kahn and Vinton Cerf (two DARPA scientists) developed the *Trans
 
 ### When was the *web* invented?
 
-{% include details.html summary='1960 or 1989?' content='1989.' %}
+{% include details.html summary='1969 or 1989?' content='1989!' %}
 
 {% comment %} Tim and comp. {% endcomment %}
 
