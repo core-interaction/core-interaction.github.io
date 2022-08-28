@@ -52,14 +52,14 @@ By the end of this semester, students will:
 
 ### Unit tasks
 
-* Readings and reviews
+* #### Readings and reviews
 
 	Each unit begins with a set of readings to introduce the subject. Students are expected to read the required selections and synthesize their thoughts in a written response, prior to the next class. We will then discuss these responses.
 
-* Exercises and demos
+* #### Exercises and demos
 
 	Each unit will also have technical exercises and demos that are assigned to provide additional understanding of topics. Students are expected to complete these outside of class, before the next session.
 
-* Critiques
+* #### Critiques
 
 	Each unit will conclude with a review of its project. In addition to the project itself, students will be assessed on their presentation of their work, as well as their ability to provide constructive, critical feedback to their peers.

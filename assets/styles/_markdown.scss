@@ -20,9 +20,9 @@
 		}
 	}
 
-	h3 {
-		--margin--top: calc(var(--margin--vertical) * 2);
-	}
+	h3 { --margin--top: calc(var(--margin--vertical) * 2) }
+
+	h4 + * { --margin--top: var(--typography--between) }
 
 
 
@@ -147,8 +147,10 @@
 
 			&:before { display: none } // Collides with the marker, so we use the margin.
 
+			> h3,
+			> h4,
 			> p {
-				padding-left: 0.8em;
+				padding-left: calc(var(--typography--size--base) * 0.8); // So it works with the headings.
 
 				&:first-child:before,
 				&:last-child:after { display: none }; // Since the `li` is a type element.
@@ -156,6 +158,8 @@
 				&:not(:first-child) { margin-top: var(--typography--leading-shoulder) }
 				&:not(:only-child):last-child { margin-bottom: calc(var(--typography--font-size) * var(--typography--leading)) }
 			}
+
+			> h3:not(._) + p, > h4:not(._) + p { margin-top: var(--typography--between) }
 
 			&:not(:first-child) > p:first-child { margin-top: calc(var(--typography--font-size) * var(--typography--leading)) }
 		}

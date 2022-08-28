@@ -27,6 +27,7 @@
 	--typography--size--h1:   calc(var(--typography--size) * 3);
 	--typography--size--h2:   calc(var(--typography--size) * 1.75);
 	--typography--size--h3:   calc(var(--typography--size) * 1.333);
+	--typography--size--h4:   calc(var(--typography--size) * 1.25); // Really only in syllabus.
 	--typography--size--base: var(--typography--size); // For resets.
 
 	--margin:           2.4rem;
@@ -150,13 +151,15 @@ body {
 
 	h1,
 	h2,
-	h3 {
+	h3,
+	h4 {
 		--typography--leading: var(--typography--leading--tight);
 	}
 
 	h1 { --typography--size: var(--typography--size--h1) }
 	h2 { --typography--size: var(--typography--size--h2) }
 	h3 { --typography--size: var(--typography--size--h3) }
+	h4 { --typography--size: var(--typography--size--h4) }
 
 	hr {
 		background-color: var(--color);
