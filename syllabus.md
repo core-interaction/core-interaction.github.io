@@ -97,3 +97,15 @@ The bulk of the work for this class is divided into three projects. They  are in
 	*We want to see effective multi-page design and navigation, advanced layouts (flexbox, grid), consistency across the pages and content, and polish/nuance.*
 
 	*Due November 23.*
+
+
+
+## {{ 'Evaluation and final grade' | kerning }}
+
+| Participation           | 20%
+| Reading reviews         | 10%
+| Exercises               | 10%
+| Project 1: *Manuscript* | 10%
+| Project 2: *Spread*     | 20%
+| Project 3: *Binding*    | 30%
+{: .row-header }
