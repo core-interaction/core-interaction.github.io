@@ -225,6 +225,8 @@
 		> img { max-height: 66vh }
 
 		> figcaption {
+			--typography--leading: var(--typography--leading--tight);
+
 			margin-top: var(--typography--between);
 
 			> p > a {
@@ -245,21 +247,24 @@
 
 
 	aside {
+		@extend .right;
 		@extend %type--layout;
-
-		--typography--leading: var(--typography--leading--loose);
 
 		--margin--top: calc(var(--margin--vertical) * 2);
 
 		> h3 { margin-bottom: var(--margin--vertical) }
 
 		> menu {
+			--typography--leading: var(--typography--leading--loose);
+
 			display:        flex;
 			flex-direction: column;
 			gap:            var(--typography--between);
 
 			> li > a { @extend %link--element }
 		}
+
+		> figure:not(:first-child) { margin-top: var(--typography--between) }
 	}
 
 
@@ -301,7 +306,7 @@
 
 		.left,
 		.right {
-			@for $row from 1 through 8 {
+			@for $row from 1 through 12 {
 				&[rows="#{$row}"] {
 					grid-row: span $row;
 				}

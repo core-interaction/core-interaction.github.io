@@ -58,6 +58,10 @@ In 1974, Robert Kahn and Vinton Cerf (two DARPA scientists) developed the *Trans
 
 
 
+---
+
+
+
 ## What about *the web*?
 
 ### When was the *web* invented?
@@ -114,41 +118,53 @@ And the web exploded from there.
 
 
 
+---
+
+
+
 ## So what are *web pages*?
+{: .left }
+
+{% capture aside %}
+
+{% include figure.html src='org.png' %}
+{% include figure.html src='screens.jpg' %}
+{% include figure.html src='slim.png' %}
+{% include figure.html src='kiosk.png' %}
+{% include figure.html src='betye.jpg' %}
+{% include figure.html src='turner.jpg' caption='Eric and I used to work at MoMA. These are [all](https://moma.org) [web](https://www.moma.org/screens/on_view/west?floor=1&contain=true) [pages](https://www.moma.org/screens/promo/tickets?contain=true).' %}
+
+{% endcapture %}
+
+{% include aside.html content=aside rows=10 %}
 
 Obviously, *this* is a web page. Think about how many other web pages you have visited in the past day. Dozens, even hundreds?
+{: .left }
 
 Ultimately, a web page is a just text file on a computer. It is written in a special format, the aforementioned HTML, which structures the content of the document and also links it to other resources—other web pages, images, computers, really almost anything. Think of the web as type with instructions.
+{: .left }
 
 These all started as simple, hand-typed documents. Then as the power of computers grew, and the languages of the web evolved alongside—web pages expanded almost inconceivably in complexity and capabilities. *Cascading Style Sheets* (CSS) gave them marvelous abilities to be customized and designed. *JavaScript* (JS) gave them remarkable, newfound interactivity and function. Websites (collections of web pages) today are built on top of an incredible *stack* of technology—networks, servers, databases, libraries, browsers, devices.
+{: .left }
 
 But it all starts with text, and thus, with type.
-
-
-
-{% comment %} ![MoMA.org](org.png) {% endcomment %}
-
-{% comment %} ![Screens](screens.jpg) {% endcomment %}
-
-{% comment %} ![Desk](slim.png) {% endcomment %}
-
-{% comment %} ![Kiosk](kiosk.png) {% endcomment %}
-
-*Eric and I used to work at MoMA. These are [all](https://moma.org) [web](https://www.moma.org/screens/on_view/west?floor=1&contain=true) [pages](https://www.moma.org/screens/promo/tickets?contain=true).*
+{: .left }
 
 
 
 ## An ever-present visual medium
+{: .left }
 
 If you’re looking at a glowing, 16:9 rectangle somewhere (and it isn’t just playing video), nowadays it is very likely a web page—built with the exact same HTML, CSS, and JS—web technologies—that are behind this page, and every other.
+{: .left }
 
 In its openness, connectedness, and ubiquity, the web has come to dominate over other forms of technology. Its advantages in compatibility, cost, scale, and inertia are continuing to snowball, and the advance of these web technologies shows no sign of slowing down. It is the water that we are swimming in, both as humans and as designers.
+{: .left }
 
 And in that latter role, we’ll need to learn how to swim. Our path into *design* then is to understand how these things are made and how they function. Their technological construction both empowers and constrains our work. You can’t separate the design from this foundation; the medium is inextricable from the end product.
+{: .left }
 
-
-
-> Most people make the mistake of thinking design is what it looks like. People think it’s this veneer—that the designers are handed this box and told, “Make it look good!” That’s not what we think design is. It’s not just what it looks like and feels like. Design is how it works.
+> Most people make the mistake of thinking design is what it looks like. People think it’s this veneer—that the designers are handed this box and told, “Make it look good!” That’s not what we think design is. It’s not just what it looks like and feels like. Design is how it works.
 >
 > > [Steve Jobs](https://www.nytimes.com/2003/11/30/magazine/the-guts-of-a-new-machine.html)
 {: .pull-quote }
@@ -192,6 +208,10 @@ This “javascript everywhere” movement means that the tendrils of the web can
 In the coming weeks we are going to dive properly into HTML, CSS, and JS—the fabric of web pages. Let’s try and also think of these—more conceptually and semantically—as *content*, *form*, and *function*. (Or in another way, *skeleton*, *skin*, and *muscles.*)
 
 With this understanding, the same model exists in nearly all software. (For example, [*Resources*, *Views*, and *States*](https://developer.apple.com/tutorials/app-dev-training/#swiftui-essentials) in Mac/iOS development, though the lines are being blurred.) So we can say that software that hasn’t yet been eaten by web technologies is often still *web-like*. And the web is likely coming for them, eventually.
+
+
+
+---
 
 
 
