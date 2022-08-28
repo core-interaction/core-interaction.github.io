@@ -173,21 +173,13 @@ And in that latter role, we’ll need to learn how to swim. Our path into *desig
 
 ### These days, apps are often web pages too
 
-{% comment %} ![Figma](figma.webp) {% endcomment %}
-
-{% comment %} ![Slack](slack.webp) {% endcomment %}
-
-{% comment %} ![Discord](discord.webp) {% endcomment %}
-
-{% comment %} ![VSCode](vscode.png) {% endcomment %}
-
-{% comment %} ![1Password](1pass.webp) {% endcomment %}
+{% include figure.html src='electron.png' caption='We’ll be using a couple of these.' %}
 
 All these desktop “apps” are built in [Electron](https://www.electronjs.org)—and so are really just web pages inside a slim, platform-native wrapper. (Essentially, a single-website browser.)
 
 The core application only has to be written once, instead of rewritten for each platform. And why design it all again? (Designers are expensive.) Why hire Windows and Mac devs when you can just hire web devs? …then why hire iOS or Android devs, either? (Developers are even more expensive.)
 
-{% comment %} ![mobile.png](mobile.png) {% endcomment %}
+{% include figure.html src='mobile.png' %}
 
 These mobile “apps” are all built with [React Native](https://reactnative.dev), following a similar paradigm. The app is really just a web view, and every screen within is a web page.
 
