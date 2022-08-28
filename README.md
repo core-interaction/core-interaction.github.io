@@ -38,6 +38,7 @@ When building locally, the `--unpublished` flag will show everything.
 - [ ] Rough out other pages (syllabus and such?)
 - [ ] Do acronyms properly (and differentiate style)
 - [ ] Fancy 100vh “slide” include?
+- [ ] Put upper limits on VH figure constraints
 - [ ] Add resource/links list to index (MDN and so on)
 - [ ] Flip sticky header to blue on scroll
 - [ ] Add some kind of nice [link previews](https://github.com/ysk24ok/jekyll-linkpreview)
