@@ -115,6 +115,7 @@ The bulk of the work for this class is divided into three projects. They  are in
 ## {{ 'Course outline' | kerning }}
 
 
+
 ### {{ 'Unit 1: *Type and the web*' | kerning }}
 
 
@@ -124,11 +125,7 @@ We will focus on reviewing core principles of typography, and introduce the web 
 
 The unit ends with Project 1: *Manuscript*, which students will present on September 28.
 
-
 #### Readings
-
-
-
 
 * {: .link-only }[*The Principles of the New Typography*](https://readings.design/PDF/ThePrinciplesoftheNewTypography.pdf) \
 Jan Tschichold, 1928
@@ -146,8 +143,8 @@ Robert Bringhurst, 1992
 J.R. Carpenter, 2015
 
 
-### {{ 'Unit 2: *There is no perfect layout*' | kerning }}
 
+### {{ 'Unit 2: *There is no perfect layout*' | kerning }}
 
 #### Weeks 6–9
 
@@ -155,11 +152,7 @@ Students will learn how to design and implement more complex, flexible layouts, 
 
 This unit concludes with Project 2: *Spread*, which students will present (in their pairs) on October 26.
 
-
 #### Readings
-
-
-
 
 * {: .link-only }[*Investigations on Gestalt Principles*](https://g-e-s-t-a-l-t.org/media/pdf/Investigations-on-Gestalt-Principles.pdf) \
 Max Wertheimer, 1923
@@ -180,18 +173,13 @@ Toby Shorin, 2017
 
 ### {{ 'Unit 3: *Typography as interface*' | kerning }}
 
-
 #### Weeks 10–15
 
 In our final unit, we will focus on creating advanced, multi-page layouts with grid systems, prototyping their flows, and exploring typography’s usage as interface elements for navigating a website.
 
 This unit, and the semester, will culminate with Project 3: *Binding*, which will be presented in class on November 23.
 
-
 #### Readings
-
-
-
 
 * {: .link-only }[*Design Interface: How Man and Machine Communicate*](https://i-n-t-e-r-f-a-c-e.org/media/pdf/Design-Interface.pdf) \
 Gianni Barbacetto, 1987
@@ -209,6 +197,7 @@ Nicole Fenton, 2014
 Laurel Schwulst, 2018
 
 
+
 ## {{ 'Materials and supplies' | kerning }}
 
 In the open tradition of the early web, the only materials truly required are a computer, a browser, a text editor, and an internet connection. The specifics of these are open to the student’s individual preferences and practices. We will do our best to accommodate everyone and will make recommendations, when needed.
@@ -217,8 +206,6 @@ In class, we will demonstrate using [Figma](http://figma.com) for visual design 
 
 We will use the following sites to organize and run our class:
 
-
-
 * [Course site](https://typography-interaction.github.io) for housekeeping, agendas, and lectures
 * [Slack channel](https://mpscd.slack.com/archives/C03UR0J71U5) for direct and asynchronous communication (_not_ email)
 * [GitHub team](https://github.com/typography-interaction) for code examples, sharing
@@ -226,7 +213,9 @@ We will use the following sites to organize and run our class:
 * [Zoom room](https://NewSchool.zoom.us/j/96694509534) for screen sharing and recording
 
 
+
 ## {{ 'Our class policies' | kerning }}
+
 
 
 ### {{ 'Our community' | kerning }}
@@ -235,11 +224,9 @@ During our first class session, we will collectively write and agree upon a code
 
 This agreement is intended to help us create and maintain a safe, empathetic, and productive space for our course. It will live on [our course site](https://typography-interaction.github.io), and can be revised and modified, with all of our input, over the semester.
 
-
 ### {{ 'Inclusion' | kerning }}
 
 Our intent is to respect and give forum to a range of perspectives and backgrounds, including culture, race, gender, sexual orientation, socioeconomic status, disability, and age. In instances where we are personally not qualified to speak from a specific perspective, students are encouraged to explore this area themselves. And please let us know if there are ways that the course can better serve these goals.
-
 
 ### {{ 'Engagement' | kerning }}
 
@@ -247,11 +234,9 @@ There are program policies (below) around attendance, but we also have an *engag
 
 Students are expected to actively and passionately participate in this course. This means more than showing up and turning things in on time, which should be a given. Beyond that baseline, students should be curious, prepared, thoughtful, vocal, and intentional throughout the course. They should make us understand why they are here, and demonstrate to us that they care about themselves, their work, and each other—and ultimately, about this chosen profession.
 
-
 ### {{ 'Office hours' | kerning }}
 
 We will have limited availability outside of our class time, and won’t keep scheduled “office hours.” Students should not rely on us to solve specific design or technical problems. Their first resource should be themselves, then [our course site](https://typography-interaction.github.io) and its materials, and then each other. If there are still questions—such as logistical or content ones—students can message us on [Slack](https://mpscd.slack.com/archives/C03UR0J71U5), and we will respond when we can. But this should never be a bottleneck; all of this works better when not done at the last minute.
-
 
 ### {{ 'Additional technical help' | kerning }}
 
@@ -259,21 +244,21 @@ For more specific technical instruction and questions, Parsons has dedicated CD-
 
 As CD-program tutors are available only a limited number of hours per week, it is advisable to start on your projects early and seek help early to avoid the usual end of project/semester rush for additional help.
 
-
 ### {{ 'Code plagiarism' | kerning }}
 
 Students may find code similar to our exercises or projects elsewhere online. But the copying or adapting of any code beyond our provided course material (lectures, exercises, demos) without attribution is not allowed under any circumstances. If adapting, with attribution, students must explain the usage and demonstrate an understanding of how it works. We have zero tolerance for any sort of plagiarism— \
 which ranges from “verbatim copying” (cutting-and-pasting code) to “thorough paraphrasing” (changing names or rearranging code). Students should also review the _Academic Honesty and Integrity_ policies, below.
-
 
 ### {{ 'Recording sessions' | kerning }}
 
 We will take screen recordings of our sessions for students to reference later. As these will include the students and their work, the recordings will be stored on our [Google Drive](https://drive.google.com/drive/folders/1Nyv0f8u8Nsc8OkEGwmZu-S9pI11D5Iil?usp=sharing) and made available only to New School email users.
 
 
+
 ## {{ 'Attendance, grading, and other policies' | kerning }}
 
 All CD classes adhere to the same [common program and university policies](https://docs.google.com/document/d/1u358io8doX_SVVMGqIM_oH5V0OIccneYu4Ww-uE55QM).
+
 
 
 ## {{ 'Acknowledgments' | kerning }}
