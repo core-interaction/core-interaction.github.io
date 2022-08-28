@@ -1,4 +1,4 @@
-<figure markdown="0" {% if include.class %}class="{{ include.class }}"{% endif %}>
+<figure markdown="0"{% if include.class %} class="{{ include.class }}"{% endif %}{% if include.height %} style="--max--height: {{ include.height }}vh;"{% endif %}>
 	<img src="{{ include.src }}">
 	{% if include.caption or include.credit %}
 		<figcaption>

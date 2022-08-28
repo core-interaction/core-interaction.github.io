@@ -222,7 +222,11 @@
 		flex-direction: column;
 		width:          fit-content;
 
-		> img { max-height: 66vh }
+		> img {
+			max-height:      var(--max--height, 66vh);
+			object-fit:      contain; // This will do, for now.
+			object-position: left;
+		}
 
 		> figcaption {
 			--typography--leading: var(--typography--leading--tight);
