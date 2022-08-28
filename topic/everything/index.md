@@ -71,10 +71,10 @@ Tim Berners-Lee, a British academic and scientist, invented the *World Wide Web*
 
 Their proposal had four components:
 
-1. A text file format to represent the documents: the *HyperText Markup Language* (HTML)
-1. The rules for exchanging these documents: the *HyperText Transfer Protocol* (HTTP)
-1. A program to display (and edit) these documents: the first *web browser* (called WorldWideWeb)
-1. Software that gives access to the documents: the *server* (an early version of Apache/httpd)
+* A text file format to represent the documents: the *HyperText Markup Language* (HTML)
+* The rules for exchanging these documents: the *HyperText Transfer Protocol* (HTTP)
+* A program to display (and edit) these documents: the first *web browser* (called WorldWideWeb)
+* Software that gives access to the documents: the *server* (an early version of Apache/httpd)
 
 {% include figure.html src='worldwideweb.png' caption='How it looked for Tim, back then.' credit='https://worldwideweb.cern.ch/browser/' %}
 
