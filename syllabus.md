@@ -229,17 +229,32 @@ We will use the following sites to organize and run our class:
 
 ### {{ 'Our community' | kerning }}
 
-During our first class session, we will collectively write and agree upon a code of conduct for our group.
+During our first class session, we will collectively write and agree upon a code of conduct for our group.
 
-This agreement is intended to help us create and maintain a safe, empathetic, and productive space for our course. It will live on [our course site](https://typography-interaction.github.io), and can be revised and modified, with all of our input, over the semester.
+This agreement is intended to help us create and maintain a safe, empathetic, and productive space for our course. It will live on [our course site](https://typography-interaction.github.io), and can be revised and modified, with all of our input, over the semester.
+
+> Let’s fill this out, together. We’ve added a few items that we think are important, to start us off.
+{: .callout .two-below icon='!' }
+
+* The class should feel comfortable asking the instructors anything—nothing is too trivial, or embarrassing, or off-topic. Tangents are good. Students can ask us via [Slack](https://mpscd.slack.com/archives/C03UR0J71U5), if they would like to remain anonymous.
+
+* Classmates should use our [preferred names and pronouns](https://docs.google.com/document/d/1H3sKLCCZWFoUFSd7qMVYmEc7z4ocbUgtEjCwtCUtyPk/).
+
+* When presenting, students will “have the floor” while they take us through their work. This means everyone else will be quiet, we’ll close our laptops, and give our full attention to the person showing their work.
+
+* We will have a short break, roughly halfway through the class.
+{: .faded }
+
+
 
 ### {{ 'Inclusion' | kerning }}
+{: .four-above }
 
-Our intent is to respect and give forum to a range of perspectives and backgrounds, including culture, race, gender, sexual orientation, socioeconomic status, disability, and age. In instances where we are personally not qualified to speak from a specific perspective, students are encouraged to explore this area themselves. And please let us know if there are ways that the course can better serve these goals.
+Our intent is to respect and give forum to a range of perspectives and backgrounds, including culture, race, gender, sexual orientation, socioeconomic status, disability, and age. In instances where we are personally not qualified to speak from a specific perspective, students are encouraged to explore this area themselves. And please let us know if there are ways that the course can better serve these goals.
 
 ### {{ 'Engagement' | kerning }}
 
-There are program policies (below) around attendance, but we also have an *engagement* policy—which will likewise affect students’ evaluation and final grade, as their engagement will be unavoidably reflected in the quality of their work.
+There are program policies (below) around attendance, but we also have an *engagement* <nobr>policy—</nobr>which will likewise affect students’ evaluation and final grade, as their engagement will be unavoidably reflected in the quality of their work.
 
 Students are expected to actively and passionately participate in this course. This means more than showing up and turning things in on time, which should be a given. Beyond that baseline, students should be curious, prepared, thoughtful, vocal, and intentional throughout the course. They should make us understand why they are here, and demonstrate to us that they care about themselves, their work, and each other—and ultimately, about this chosen profession.
 
@@ -255,12 +270,11 @@ As CD-program tutors are available only a limited number of hours per week, it i
 
 ### {{ 'Code plagiarism' | kerning }}
 
-Students may find code similar to our exercises or projects elsewhere online. But the copying or adapting of any code beyond our provided course material (lectures, exercises, demos) without attribution is not allowed under any circumstances. If adapting, with attribution, students must explain the usage and demonstrate an understanding of how it works. We have zero tolerance for any sort of plagiarism— \
-which ranges from “verbatim copying” (cutting-and-pasting code) to “thorough paraphrasing” (changing names or rearranging code). Students should also review the _Academic Honesty and Integrity_ policies, below.
+Students may find code similar to our exercises or projects elsewhere online. But the copying or adapting of any code beyond our provided course material (lectures, exercises, demos) without attribution is not allowed under any circumstances. If adapting, with attribution, students must explain the usage and demonstrate an understanding of how it works. We have zero tolerance for any sort of plagiarism—which ranges from “verbatim copying” (cutting-and-pasting code) to “thorough paraphrasing” (changing names or rearranging code). Students should also review the _Academic Honesty and Integrity_ policies, below.
 
 ### {{ 'Recording sessions' | kerning }}
 
-We will take screen recordings of our sessions for students to reference later. As these will include the students and their work, the recordings will be stored on our [Google Drive](https://drive.google.com/drive/folders/1Nyv0f8u8Nsc8OkEGwmZu-S9pI11D5Iil?usp=sharing) and made available only to New School email users.
+We will take screen recordings of our sessions for students to reference later. As these will include the students and their work, the recordings will be stored on our [Google Drive](https://drive.google.com/drive/folders/1Nyv0f8u8Nsc8OkEGwmZu-S9pI11D5Iil?usp=sharing) and made available only to New School email users.
 
 
 

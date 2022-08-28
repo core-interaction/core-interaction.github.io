@@ -43,6 +43,11 @@
 
 
 
+	// “Disabled” looking stuff.
+	.faded { opacity: 0.4 }
+
+
+
 	// Quotes/callouts.
 	blockquote {
 		--typography--size: var(--typography--size--h3);
