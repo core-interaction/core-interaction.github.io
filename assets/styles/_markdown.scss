@@ -183,6 +183,16 @@
 
 
 
+	// Tables.
+	table {
+		width: fit-content;
+
+		tr:not(:first-child) > td { border-top: var(--typography--leading-shoulder) solid transparent }
+		tr > td:not(:first-child) { border-left: var(--margin) solid transparent }
+	}
+
+
+
 	// Open/close details/summary.
 	details {
 		> summary {

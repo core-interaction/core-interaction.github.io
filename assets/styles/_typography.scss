@@ -67,7 +67,8 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+td {
 	@extend %--face--variables;
 	@extend %--leading--variables;
 
@@ -103,6 +104,8 @@ p {
 		margin-bottom: var(--typography--margin--bottom); // Pulls bounding box up to baseline.
 	}
 }
+
+td { display: table-cell }
 
 
 
