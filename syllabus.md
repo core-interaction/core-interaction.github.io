@@ -80,23 +80,23 @@ The bulk of the work for this class is divided into three projects. They  are in
 
 	*We’ll be looking for the quality of responses, appropriate type selection and hierarchy, semantic HTML, and basic CSS.*
 
-	*Due September 28.*
+	*Due September 28.*
 
-* #### Project 2: Spread
+* #### Project 2: *Spread*
 
 	Students will work in pairs, with a new text from those selected by the class in *Manuscript*. Each duo will sketch collaboratively and then implement a new expression together, via pair programming. The final web page will be responsive for mobile, desktop, and print layouts.
 
 	*Here we’re looking for successful design and development collaboration, box-model layout design, and use of responsive media queries.*
 
-	*Due October 26.*
+	*Due October 26.*
 
 * #### Project 3: *Binding*
 
-	Students will assemble a collection of texts from Spread, combined with their original selection, into a “book”. The book will be a multi-page website with a homepage (cover), navigation (table of contents), individual pages for each text, and an introduction (colophon)—with consistent styles applied across all pages.
+	Students will assemble a collection of texts from *Spread*, combined with their original selection, into a “book”. The book will be a multi-page website with a homepage (cover), navigation (table of contents), individual pages for each text, and an introduction (colophon)—with consistent styles applied across all pages.
 
 	*We want to see effective multi-page design and navigation, advanced layouts (flexbox, grid), consistency across the pages and content, and polish/nuance.*
 
-	*Due November 23.*
+	*Due November 23.*
 
 
 
@@ -123,7 +123,7 @@ The bulk of the work for this class is divided into three projects. They  are in
 
 We will focus on reviewing core principles of typography, and introduce the web and its base technologies. Students will learn about HTML, semantic DOM, basic CSS, as well as type hierarchy and the use of custom typefaces for the web.
 
-The unit ends with Project 1: *Manuscript*, which students will present on September 28.
+*The unit ends with Project 1: <em>Manuscript</em>, which students will present on September 28.*
 
 #### Readings
 
@@ -148,9 +148,9 @@ The unit ends with Project 1: *Manuscript*, which students will present on Septe
 
 #### Weeks 6–9
 
-Students will learn how to design and implement more complex, flexible layouts, while collaborating closely with a classmate. We’ll introduce responsive design, media query CSS, and advanced web type techniques.
+Students will learn how to design and implement more complex, flexible layouts, while collaborating closely with a classmate. We’ll introduce responsive design, media query CSS, and advanced web type techniques.
 
-This unit concludes with Project 2: *Spread*, which students will present (in their pairs) on October 26.
+*This unit concludes with Project 2: <em>Spread</em>, which students will present (in their pairs) on October 26.*
 
 #### Readings
 
@@ -175,9 +175,9 @@ This unit concludes with Project 2: *Spread*, which students will present (in th
 
 #### Weeks 10–15
 
-In our final unit, we will focus on creating advanced, multi-page layouts with grid systems, prototyping their flows, and exploring typography’s usage as interface elements for navigating a website.
+In our final unit, we will focus on creating advanced, multi-page layouts with grid systems, prototyping their flows, and exploring typography’s usage as interface elements for navigating a website.
 
-This unit, and the semester, will culminate with Project 3: *Binding*, which will be presented in class on November 23.
+*This unit, and the semester, will culminate with Project 3: <em>Binding</em>, which will be presented in class on November 23.*
 
 #### Readings
 
@@ -202,15 +202,24 @@ This unit, and the semester, will culminate with Project 3: *Binding*, which wil
 
 In the open tradition of the early web, the only materials truly required are a computer, a browser, a text editor, and an internet connection. The specifics of these are open to the student’s individual preferences and practices. We will do our best to accommodate everyone and will make recommendations, when needed.
 
-In class, we will demonstrate using [Figma](http://figma.com) for visual design and sketching, [Visual Studio Code](https://code.visualstudio.com) for programming, and [GitHub](https://github.com)/[GitHub Desktop](https://desktop.github.com) for version control and project hosting. All of these products are available for free, or offer free education licenses to New School emails.
+In class, we will demonstrate using [Figma](http://figma.com) for visual design and sketching, [Visual Studio Code](https://code.visualstudio.com) for programming, and [GitHub](https://github.com)&thinsp;/&thinsp;[GitHub Desktop](https://desktop.github.com) for version control and project hosting. All of these products are available for free, or offer free education licenses to New School emails.
 
 We will use the following sites to organize and run our class:
 
-* [Course site](https://typography-interaction.github.io) for housekeeping, agendas, and lectures
-* [Slack channel](https://mpscd.slack.com/archives/C03UR0J71U5) for direct and asynchronous communication (_not_ email)
-* [GitHub team](https://github.com/typography-interaction) for code examples, sharing
-* [Google Drive](https://drive.google.com/drive/folders/1Nyv0f8u8Nsc8OkEGwmZu-S9pI11D5Iil?usp=sharing) for document collaboration, recorded lectures
-* [Zoom room](https://NewSchool.zoom.us/j/96694509534) for screen sharing and recording
+* {: .link-only }[Course site](https://typography-interaction.github.io) \
+	For housekeeping, agendas, and lectures
+
+* {: .link-only }[Slack channel](https://mpscd.slack.com/archives/C03UR0J71U5) \
+	For direct and asynchronous communication (_not_ email)
+
+* {: .link-only }[GitHub team](https://github.com/typography-interaction) \
+	For code examples, sharing
+
+* {: .link-only }[Google Drive](https://drive.google.com/drive/folders/1Nyv0f8u8Nsc8OkEGwmZu-S9pI11D5Iil?usp=sharing) \
+	For document collaboration, recorded lectures
+
+* {: .link-only }[Zoom room](https://NewSchool.zoom.us/j/96694509534) \
+	For screen sharing and recording
 
 
 
