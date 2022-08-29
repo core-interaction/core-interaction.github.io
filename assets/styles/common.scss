@@ -19,6 +19,7 @@
 	--typography--leading:        1.25;
 	--typography--leading--tight: 1;
 	--typography--leading--loose: 1.618;
+	--typography--leading--base:  var(--typography--leading); // For resets.
 
 	--typography--tracking: -0.015;
 
@@ -358,6 +359,8 @@ body {
 			> ul {
 				--typography--leading: var(--typography--leading--loose);
 
+				@include breakpoint(568) { --typography--leading: var(--typography--leading--base) }
+
 				li {
 					@extend %typography;
 
@@ -374,14 +377,15 @@ body {
 						max-width:      calc(100% + var(--link--enlargement) * 2);
 						overflow:       hidden;
 						padding-bottom: initial;
-						padding-right:  calc(var(--link--enlargement) + 1em);
+						padding-right:  calc(var(--link--enlargement) + 1.05em);
 						padding-top:    initial;
 						position:       relative;
 						text-overflow:  ellipsis;
 
 						&:after {
-							@extend .center--x;
 							@extend .icon--sf;
+
+							--icon--shift: 0.05em;
 
 							content: '↓';
 							position: absolute;
