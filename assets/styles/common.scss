@@ -14,7 +14,7 @@
 
 
 :root {
-	@extend %font--sf--mono--regular;
+	@extend %font--sf--mono--light;
 
 	--typography--leading:        1.333;
 	--typography--leading--loose: 2;
@@ -147,7 +147,7 @@ body {
 
 	.icon--sf--regular {
 		@extend %--icon--span;
-		@extend %font--sf--medium;
+		@extend %font--sf--regular;
 
 		--icon--scale: 0.8;
 	}
