@@ -4,6 +4,8 @@
 	// Sequential spacing between `p`.
 	--typography--leading-shoulder: calc(var(--typography--font-size) * (var(--typography--leading) + var(--typography--shoulder) * 2));
 
+	min-height: 30vh;
+
 	// Basics.
 	h1 { display: none } // So we don’t forget.
 
