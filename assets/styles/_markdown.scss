@@ -201,17 +201,14 @@
 
 					--icon--scale: 1.25;
 
-					content:          '+';
-					font-weight:      200;
-					margin-bottom:    initial;
-					transform-origin: bottom;
-					visibility:       visible; // Override typography pseudo.
-					width:            1em;
+					content:    '+';
+					visibility: visible; // Override typography pseudo.
+					width:      1ch;
 				}
 			}
 		}
 
-		&[open] > summary > p:after {content: '–' }
+		&[open] > summary > p:after {content: '-' }
 
 		// The contents.
 		> div { margin-top: var(--typography--leading-shoulder) }

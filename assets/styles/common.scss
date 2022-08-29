@@ -116,6 +116,7 @@
 	margin-left: var(--icon--gap);
 	transform:   translateY(var(--icon--shift, 0rem)) scale(var(--icon--scale, 1));
 	width:       1ch;
+	height:      1em;
 
 	&.center--x { --icon--shift: 0.075em } // Center down to x-height;
 }
@@ -191,7 +192,7 @@ body {
 
 			align-items:           end;
 			display:               grid;
-			gap:                   var(--margin);
+			gap:                   4.1ch; // Might be the insets?
 			grid-template-columns: max-content minmax(0, 1fr) max-content;
 
 			> a {
@@ -206,7 +207,7 @@ body {
 			> div {
 				--color: var(--color--links);
 
-				line-height:   initial;
+				line-height: initial;
 
 				> p {
 					color:          transparent; // Just here to set the width.
