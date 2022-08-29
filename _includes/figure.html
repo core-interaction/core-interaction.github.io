@@ -3,12 +3,12 @@
 	{% if include.caption or include.credit %}
 		<figcaption>
 			<p>
-				{% if include.caption %}
-					<em>{{ include.caption | markdownify | remove: '<p>' | remove: '</p>' }}</em>
-				{% endif %}
-				{% if include.credit %}
+				{%- if include.caption -%}
+					<em>{{- include.caption | markdownify | remove: '<p>' | remove: '</p>' | strip -}}</em>
+				{%- endif -%}
+				{%- if include.credit -%}
 					<a href="{{ include.credit}}"><span class="icon--sf center--x">↗</span></a>
-				{% endif %}
+				{%- endif -%}
 			</p>
 		</figcaption>
 	{% endif %}
