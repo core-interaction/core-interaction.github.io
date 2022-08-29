@@ -1,8 +1,8 @@
 ---
 title: 'Core 1: Interaction'
 links:
-  # - name: Syllabus
-  #   url:  /syllabus
+  - name: Syllabus
+    url:  /syllabus
   - name: Slack
     url:  https://core-one-interaction.slack.com/archives/C03UTLMBMDH
   - name: GitHub
