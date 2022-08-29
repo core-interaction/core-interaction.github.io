@@ -1,5 +1,5 @@
 ---
-title: Harmonic Collection
+title: '*Harmonic Collection*'
 date: 2022-09-28
 published: false
 ---
