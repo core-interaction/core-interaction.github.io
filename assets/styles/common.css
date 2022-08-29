@@ -98,6 +98,7 @@ td {
 	--typography--margin--right: calc(var(--typography--inset--right) * 1em);
 }
 
+body,
 body > nav,
 body > main > header > address,
 body > main > header > ul,
@@ -224,6 +225,7 @@ td {
 	display: table-cell;
 }
 
+body,
 body > nav,
 body > main > header > address,
 body > main > header > ul,
@@ -236,43 +238,71 @@ body.index > main > nav aside > menu {
 	font-size: var(--typography--font-size);
 }
 
-body > main > article p strong,
 :root,
-body .icon--sf--regular {
+body .icon--sf,
+body > main > header > ul li a:after,
+body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child:after,
+body > main > article details > summary > p:after,
+body > main > header > address > div > p > a:after,
+body > main > article .link-only > a:after,
+body > main > article .link-only > p > a:after,
+body .icon--sf--regular,
+body > main > header > address > div > p > a[href*=".pdf"]:after,
+body > main > article .link-only > a[href*=".pdf"]:after,
+body > main > article .link-only > p > a[href*=".pdf"]:after {
 	--typography--shoulder: calc(1 - var(--typography--cap-height));
 	--typography--shoulder--top: calc(var(--typography--shoulder) - var(--typography--shoulder--bottom));
 }
 
-body .icon--sf--regular {
+body .icon--sf--regular,
+body > main > header > address > div > p > a[href*=".pdf"]:after,
+body > main > article .link-only > a[href*=".pdf"]:after,
+body > main > article .link-only > p > a[href*=".pdf"]:after {
 	--typography--cap-height: 0.705;
 	--typography--x-height: 0.508;
 	--typography--shoulder--bottom: 0.122;
 	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-:root {
+:root,
+body .icon--sf,
+body > main > header > ul li a:after,
+body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child:after,
+body > main > article details > summary > p:after,
+body > main > header > address > div > p > a:after,
+body > main > article .link-only > a:after,
+body > main > article .link-only > p > a:after {
 	--typography--cap-height: 0.705;
 	--typography--x-height: 0.526;
 	--typography--shoulder--bottom: 0.145;
 	font-family: "SF Mono", ui-monospace, monospace;
 }
 
-body > main > article p strong {
-	--typography--cap-height: 0.662;
-	--typography--x-height: 0.447;
-	--typography--shoulder--bottom: 0.163;
-	font-family: "Times New Roman", "Times", serif;
-	font-feature-settings: "hlig", "dlig", "zero", "kern", "medi";
-	font-variant: historical-ligatures;
+body .icon--sf--regular,
+body > main > header > address > div > p > a[href*=".pdf"]:after,
+body > main > article .link-only > a[href*=".pdf"]:after,
+body > main > article .link-only > p > a[href*=".pdf"]:after {
+	--typography--weight: 400;
+	--typography--inset--left: -0.068;
+	--typography--inset--right: -0.052;
+	--typography--underline: 0.066;
+	--typography--underline--shift: -0.039;
+	--typography--underline--skip: 0.085;
 }
 
-body .icon--sf--regular {
-	--typography--weight: 500;
-	--typography--inset--left: -0.064;
-	--typography--inset--right: -0.049;
-	--typography--underline: 0.075;
-	--typography--underline--shift: -0.021;
-	--typography--underline--skip: 0.087;
+body .icon--sf,
+body > main > header > ul li a:after,
+body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child:after,
+body > main > article details > summary > p:after,
+body > main > header > address > div > p > a:after,
+body > main > article .link-only > a:after,
+body > main > article .link-only > p > a:after {
+	--typography--weight: 300;
+	--typography--inset--left: -0.058;
+	--typography--inset--right: -0.060;
+	--typography--underline: 0.053;
+	--typography--underline--shift: -0.072;
+	--typography--underline--skip: 0.064;
 }
 
 :root {
@@ -282,466 +312,6 @@ body .icon--sf--regular {
 	--typography--underline: 0.063;
 	--typography--underline--shift: -0.052;
 	--typography--underline--skip: 0.085;
-}
-
-body > main > article p strong {
-	--typography--weight: 600;
-	--typography--inset--left: -0.020;
-	--typography--inset--right: -0.016;
-	--typography--underline: 0.018;
-	--typography--underline--shift: -0.178;
-	--typography--underline--skip: 0.118;
-}
-
-body > main > article p strong span.space,
-body > main > article p strong span.nbsp {
-	letter-spacing: -0.05em;
-}
-
-body > main > article p strong span.a + span.c {
-	margin-left: 0.01em;
-}
-
-body > main > article p strong span.a + span.l {
-	margin-left: 0.02em;
-}
-
-body > main > article p strong span.A + span.M {
-	margin-left: -0.02em;
-}
-
-body > main > article p strong span.a + span.n {
-	margin-left: 0.03em;
-}
-
-body > main > article p strong span.A + span.n {
-	margin-left: -0.01em;
-}
-
-body > main > article p strong span.a + span.r {
-	margin-left: 0.04em;
-}
-
-body > main > article p strong span.a + span.s {
-	margin-left: 0.01em;
-}
-
-body > main > article p strong span.A + span.u {
-	margin-left: -0.04em;
-}
-
-body > main > article p strong span.c + span.t {
-	margin-left: 0.01em;
-}
-
-body > main > article p strong span.e + span.c {
-	margin-left: 0.01em;
-}
-
-body > main > article p strong span.e + span.e {
-	margin-left: 0.01em;
-}
-
-body > main > article p strong span.e + span.m {
-	margin-left: 0.02em;
-}
-
-body > main > article p strong span.e + span.r {
-	margin-left: 0.02em;
-}
-
-body > main > article p strong span.E + span.v {
-	margin-left: -0.04em;
-}
-
-body > main > article p strong span.F + span.a {
-	margin-left: -0.08em;
-}
-
-body > main > article p strong span.f + span.f {
-	margin-left: -0.06em;
-}
-
-body > main > article p strong span.f + span.i {
-	margin-left: 0.07em;
-}
-
-body > main > article p strong span.F + span.o {
-	margin-left: -0.08em;
-}
-
-body > main > article p strong span.g + span.e {
-	margin-left: -0.01em;
-}
-
-body > main > article p strong span.g + span.r {
-	margin-left: 0.04em;
-}
-
-body > main > article p strong span.g + span.u {
-	margin-left: 0.04em;
-}
-
-body > main > article p strong span.h + span.i {
-	margin-left: -0.02em;
-}
-
-body > main > article p strong span.H + span.T {
-	margin-left: 0.01em;
-}
-
-body > main > article p strong span.h + span.y {
-	margin-left: -0.02em;
-}
-
-body > main > article p strong span.i + span.g {
-	margin-left: -0.03em;
-}
-
-body > main > article p strong span.I + span.n {
-	margin-left: -0.02em;
-}
-
-body > main > article p strong span.i + span.n {
-	margin-left: -0.02em;
-}
-
-body > main > article p strong span.i + span.o {
-	margin-left: -0.02em;
-}
-
-body > main > article p strong span.i + span.t {
-	margin-left: -0.01em;
-}
-
-body > main > article p strong span.j + span.e {
-	margin-left: -0.04em;
-}
-
-body > main > article p strong span.k + span.d {
-	margin-left: -0.01em;
-}
-
-body > main > article p strong span.l + span.e {
-	margin-left: -0.02em;
-}
-
-body > main > article p strong span.l + span.l {
-	margin-left: -0.045em;
-}
-
-body > main > article p strong span.l + span.o {
-	margin-left: -0.03em;
-}
-
-body > main > article p strong span.m + span.b {
-	margin-left: -0.02em;
-}
-
-body > main > article p strong span.m + span.b {
-	margin-left: -0.02em;
-}
-
-body > main > article p strong span.M + span.L {
-	margin-left: 0.04em;
-}
-
-body > main > article p strong span.n + span.e {
-	margin-left: -0.01em;
-}
-
-body > main > article p strong span.n + span.g {
-	margin-left: -0.01em;
-}
-
-body > main > article p strong span.N + span.o {
-	margin-left: -0.04em;
-}
-
-body > main > article p strong span.n + span.s {
-	margin-left: 0.02em;
-}
-
-body > main > article p strong span.o + span.b {
-	margin-left: -0.01em;
-}
-
-body > main > article p strong span.o + span.g {
-	margin-left: -0.03em;
-}
-
-body > main > article p strong span.o + span.j {
-	margin-left: -0.03em;
-}
-
-body > main > article p strong span.o + span.p {
-	margin-left: 0.01em;
-}
-
-body > main > article p strong span.O + span.u {
-	margin-left: 0.03em;
-}
-
-body > main > article p strong span.o + span.v {
-	margin-left: -0.03em;
-}
-
-body > main > article p strong span.o + span.w {
-	margin-left: -0.04em;
-}
-
-body > main > article p strong span.p + span.h {
-	margin-left: -0.02em;
-}
-
-body > main > article p strong span.P + span.r {
-	margin-left: 0.02em;
-}
-
-body > main > article p strong span.P + span.U {
-	margin-left: -0.03em;
-}
-
-body > main > article p strong span.r + span.a {
-	margin-left: 0.01em;
-}
-
-body > main > article p strong span.R + span.N {
-	margin-left: -0.05em;
-}
-
-body > main > article p strong span.r + span.y {
-	margin-left: 0.06em;
-}
-
-body > main > article p strong span.S + span.e {
-	margin-left: -0.01em;
-}
-
-body > main > article p strong span.t + span.e {
-	margin-left: 0.01em;
-}
-
-body > main > article p strong span.t + span.h {
-	margin-left: 0.03em;
-}
-
-body > main > article p strong span.t + span.i {
-	margin-left: 0.03em;
-}
-
-body > main > article p strong span.T + span.M {
-	margin-left: 0.02em;
-}
-
-body > main > article p strong span.t + span.o {
-	margin-left: 0.01em;
-}
-
-body > main > article p strong span.T + span.o {
-	margin-left: -0.14em;
-}
-
-body > main > article p strong span.t + span.r {
-	margin-left: 0.05em;
-}
-
-body > main > article p strong span.t + span.s {
-	margin-left: 0.02em;
-}
-
-body > main > article p strong span.t + span.y {
-	margin-left: -0.02em;
-}
-
-body > main > article p strong span.T + span.y {
-	margin-left: -0.12em;
-}
-
-body > main > article p strong span.U + span.C {
-	margin-left: -0.05em;
-}
-
-body > main > article p strong span.u + span.r {
-	margin-left: 0.04em;
-}
-
-body > main > article p strong span.u + span.s {
-	margin-left: 0.03em;
-}
-
-body > main > article p strong span.v + span.e {
-	margin-left: -0.04em;
-}
-
-body > main > article p strong span.w + span.e {
-	margin-left: -0.04em;
-}
-
-body > main > article p strong span.W + span.e {
-	margin-left: -0.12em;
-}
-
-body > main > article p strong span.W + span.h {
-	margin-left: -0.07em;
-}
-
-body > main > article p strong span.w + span.n {
-	margin-left: 0.03em;
-}
-
-body > main > article p strong span.y + span.l {
-	margin-left: -0.02em;
-}
-
-body > main > article p strong span.y + span.p {
-	margin-left: 0.04em;
-}
-
-body > main > article p strong span.y + span.t {
-	margin-left: -0.02em;
-}
-
-body > main > article p strong span.W:first-child {
-	margin-left: -0.05em;
-}
-
-body > main > article p strong span.num0 {
-	letter-spacing: -0.05em;
-	margin-left: -0.01em;
-}
-
-body > main > article p strong span.num1 {
-	letter-spacing: -0.08em;
-	margin-left: -0.05em;
-}
-
-body > main > article p strong span.num2 {
-	letter-spacing: -0.03em;
-}
-
-body > main > article p strong span.num3 {
-	letter-spacing: -0.02em;
-}
-
-body > main > article p strong span.num4 {
-	letter-spacing: -0.05em;
-}
-
-body > main > article p strong span.num5 {
-	letter-spacing: -0.05em;
-}
-
-body > main > article p strong span.num6 {
-	letter-spacing: -0.05em;
-}
-
-body > main > article p strong span.num7 {
-	letter-spacing: -0.1em;
-}
-
-body > main > article p strong span.num8 {
-	letter-spacing: -0.05em;
-}
-
-body > main > article p strong span.num9 {
-	letter-spacing: -0.04em;
-}
-
-body > main > article p strong span.num0 + span.num0 {
-	margin-left: 0.04em;
-}
-
-body > main > article p strong span.num0 + span.num2 {
-	margin-left: 0.02em;
-}
-
-body > main > article p strong span.num1 + span.num1 {
-	margin-left: -0.1em;
-}
-
-body > main > article p strong span.num1 + span.num3 {
-	margin-left: -0.02em;
-}
-
-body > main > article p strong span.num1 + span.num4 {
-	margin-left: -0.05em;
-}
-
-body > main > article p strong span.num1 + span.num5 {
-	margin-left: -0.03em;
-}
-
-body > main > article p strong span.num1 + span.num6 {
-	margin-left: -0.07em;
-}
-
-body > main > article p strong span.num1 + span.num9 {
-	margin-left: -0.02em;
-}
-
-body > main > article p strong span.num2 + span.num0 {
-	margin-left: -0.01em;
-}
-
-body > main > article p strong span.num2 + span.num1 {
-	margin-left: -0.08em;
-}
-
-body > main > article p strong span.num2 + span.num6 {
-	margin-left: -0.01em;
-}
-
-body > main > article p strong span.num2 + span.num8 {
-	margin-left: -0.01em;
-}
-
-body > main > article p strong span.num3 + span.num1 {
-	margin-left: -0.13em;
-}
-
-body > main > article p strong span.num4 + span.num0 {
-	margin-left: 0.02em;
-}
-
-body > main > article p strong span.num5 + span.num0 {
-	margin-left: 0em;
-}
-
-body > main > article p strong span.num9 + span.num0 {
-	margin-left: 0.02em;
-}
-
-body > main > article p strong span.num0 + span.comma {
-	margin-left: -0.02em;
-}
-
-body > main > article p strong span.num1 + span.comma {
-	margin-left: -0.01em;
-}
-
-body > main > article p strong span.num3 + span.comma {
-	margin-left: -0.07em;
-}
-
-body > main > article p strong span.num4 + span.comma {
-	margin-left: -0.03em;
-}
-
-body > main > article p strong span.num5 + span.comma {
-	margin-left: -0.05em;
-}
-
-body > main > article p strong span.num7 + span.comma {
-	margin-left: -0.1em;
-}
-
-body > main > article p strong span.num9 + span.comma {
-	margin-left: -0.1em;
-}
-
-body > main > article p strong span.num9 + span.ndash {
-	margin-left: 0.1em;
 }
 
 body > main > article a {
@@ -958,7 +528,6 @@ body > nav > div > div > p > select {
 	--typography--leading--base: var(--typography--leading);
 	--typography--size: 1.6rem;
 	--margin: 2.4rem;
-	--margin--vertical: var(--margin);
 	--page--width: 100vw;
 	--border--radius: 0.4rem;
 	--color: black;
@@ -1009,20 +578,6 @@ body > nav > div > div > p > select {
 	}
 }
 
-@media (orientation: landscape),
-(min-width: 35.5em) and (min-height: 30em),
-(min-width: 58.125em) {
-	:root {
-		--margin--vertical: calc(var(--margin) * 0.75);
-	}
-}
-
-@media (min-height: 64em) {
-	:root {
-		--margin--vertical: var(--margin);
-	}
-}
-
 body > main,
 body > nav > div {
 	margin-left: auto;
@@ -1049,6 +604,9 @@ body.index > * {
 }
 
 body .icon--sf--regular,
+body > main > header > address > div > p > a[href*=".pdf"]:after,
+body > main > article .link-only > a[href*=".pdf"]:after,
+body > main > article .link-only > p > a[href*=".pdf"]:after,
 body .icon--emoji,
 body > main > article blockquote.callout[icon]:before,
 body .icon--sf,
@@ -1063,10 +621,17 @@ body > main > header > ul li a:after {
 	font-weight: var(--typography--weight);
 	margin-left: var(--icon--gap);
 	transform: translateY(var(--icon--shift, 0rem)) scale(var(--icon--scale, 1));
+	width: 1ch;
 }
 
 body .center--x.icon--sf--regular,
+body > main > header > address > div > p > a.center--x[href*=".pdf"]:after,
+body > main > article .link-only > a.center--x[href*=".pdf"]:after,
+body > main > article .link-only > p > a.center--x[href*=".pdf"]:after,
 body > main > header > address > div > p > a.icon--sf--regular:after,
+body > main > header > address > div > p > a[href*=".pdf"]:after,
+body > main > article body > main > header > address > div > p.link-only > a[href*=".pdf"]:after,
+body > main > article body > main > header > address > div.link-only > p > a[href*=".pdf"]:after,
 body .center--x.icon--emoji,
 body > main > header > address > div > p > a.icon--emoji:after,
 body > main > article blockquote.center--x.callout[icon]:before,
@@ -1082,16 +647,21 @@ body > main > article blockquote.pull-quote > blockquote:last-child > p > a.cent
 body > main > article blockquote.pull-quote > blockquote:last-child > p.link-only > a:only-child:after,
 body > main > article blockquote.pull-quote > blockquote.link-only:last-child > p > a:only-child:after,
 body > main > header > ul li a.center--x:after,
-body > main > header > ul li body > main > header > address > div > p > a:after,
 body > main > article body > main > header > ul li .link-only > a:after {
 	--icon--shift: 0.075em;
+}
+
+body {
+	--margin--vertical: calc(var(--typography--between) + var(--typography--font-size) * var(--typography--leading));
+	--margin--vertical--2: calc(var(--typography--between) + 2 * var(--typography--font-size) * var(--typography--leading));
+	--margin--vertical--4: calc(var(--typography--between) + 4 * var(--typography--font-size) * var(--typography--leading));
 }
 
 body h1,
 body h2,
 body h3,
 body h4 {
-	scroll-margin-top: calc(var(--margin--vertical) * 3);
+	scroll-margin-top: var(--margin--vertical--2);
 	max-width: 40ch;
 }
 
@@ -1099,8 +669,40 @@ body.index h1 {
 	max-width: 12ch;
 }
 
-body .icon--sf--regular {
-	--icon--scale: 0.8;
+body .icon--sf,
+body > main > header > address > div > p > a:after,
+body > main > article .link-only > a:after,
+body > main > article .link-only > p > a:after,
+body > main > article details > summary > p:after,
+body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child:after,
+body > main > header > ul li a:after {
+	--icon--scale: 1.1;
+}
+
+body .icon--emoji,
+body > main > article blockquote.callout[icon]:before {
+	--icon--scale: 1.1;
+	text-align: center;
+	width: 2ch;
+}
+
+body .icon--sf--regular,
+body > main > header > address > div > p > a[href*=".pdf"]:after,
+body > main > article .link-only > a[href*=".pdf"]:after,
+body > main > article .link-only > p > a[href*=".pdf"]:after {
+	--icon--scale: 0.9;
+}
+
+body .icon--sf--regular.center--x,
+body > main > header > address > div > p > a.center--x[href*=".pdf"]:after,
+body > main > header > address > div > p > a.icon--sf--regular:after,
+body > main > header > address > div > p > a[href*=".pdf"]:after,
+body > main > article body > main > header > address > div > p.link-only > a[href*=".pdf"]:after,
+body > main > article .link-only > a.icon--sf--regular:after,
+body > main > article .link-only > a[href*=".pdf"]:after,
+body > main > article .link-only > p > a.icon--sf--regular:after,
+body > main > article .link-only > p > a[href*=".pdf"]:after {
+	--icon--shift: 0.05em;
 }
 
 body > nav {
@@ -1167,21 +769,19 @@ body > nav > div > div > p > span:last-child {
 }
 
 body > main {
-	padding-top: calc(var(--margin--vertical) * 4);
-	padding-bottom: calc(var(--margin--vertical) * 4);
+	padding-top: var(--margin--vertical--4);
+	padding-bottom: var(--margin--vertical--4);
 }
 
 body > main > header {
-	column-gap: var(--margin);
-	display: grid;
-	margin-bottom: calc(var(--margin--vertical) * 4);
-	padding-bottom: var(--margin--vertical);
-	row-gap: var(--margin--vertical);
+	margin-bottom: var(--margin--vertical--4);
 }
 
 @media (min-width: 35.5em) {
 	body > main > header {
-		grid-template-rows: min-content 1fr;
+		column-gap: var(--margin);
+		display: grid;
+		grid-auto-rows: min-content 1fr;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 
@@ -1194,6 +794,10 @@ body > main > header {
 	}
 }
 
+body > main > header > p {
+	margin-top: var(--margin--vertical);
+}
+
 @media (min-width: 35.5em) {
 	body > main > header > p {
 		grid-column: 1/span 2;
@@ -1204,8 +808,7 @@ body > main > header > address,
 body > main > header > ul {
 	display: flex;
 	flex-direction: column;
-	gap: var(--typography--between);
-	margin-top: var(--margin--vertical);
+	margin-top: var(--margin--vertical--2);
 }
 
 @media (min-width: 35.5em) {
@@ -1224,14 +827,8 @@ body > main > header > ul {
 	}
 }
 
-body > main > header > address > div {
-	margin-top: var(--margin--vertical);
-}
-
-@media (min-width: 35.5em) {
-	body > main > header > address > div {
-		margin-top: auto;
-	}
+body > main > header > address {
+	gap: var(--margin--vertical);
 }
 
 body > main > header > address > div > p:not(:first-child) {
@@ -1240,6 +837,7 @@ body > main > header > address > div > p:not(:first-child) {
 
 body > main > header > ul {
 	--typography--leading: var(--typography--leading--loose);
+	gap: var(--typography--between);
 }
 
 @media (min-width: 35.5em) {
@@ -1287,44 +885,44 @@ body > main > article > *:not(:first-child) {
 }
 
 body > main > article h2 {
-	--margin--top: calc(var(--margin--vertical) * 4);
+	--margin--top: var(--margin--vertical--4);
 }
 
 body > main > article h2 + * {
-	--margin--top: calc(var(--margin--vertical) * 2);
-	--margin--top--previous: calc(var(--margin--vertical) * 4);
+	--margin--top: var(--margin--vertical--2);
+	--margin--top--previous: var(--margin--vertical--4);
 }
 
 body > main > article h2 + * + * {
-	--margin--top--previous: calc(var(--margin--vertical) * 2);
+	--margin--top--previous: var(--margin--vertical--2);
 }
 
 body > main > article h3 {
-	--margin--top: calc(var(--margin--vertical) * 2);
+	--margin--top: var(--margin--vertical--2);
 }
 
 body > main > article .two-above {
-	--margin--top: calc(var(--margin--vertical) * 2);
+	--margin--top: var(--margin--vertical--2);
 }
 
 body > main > article .two-above + * {
-	--margin--top--previous: calc(var(--margin--vertical) * 2);
+	--margin--top--previous: var(--margin--vertical--2);
 }
 
 body > main > article .two-below + * {
-	--margin--top: calc(var(--margin--vertical) * 2);
+	--margin--top: var(--margin--vertical--2);
 }
 
 body > main > article .four-above {
-	--margin--top: calc(var(--margin--vertical) * 4);
+	--margin--top: var(--margin--vertical--4);
 }
 
 body > main > article .four-above + * {
-	--margin--top--previous: calc(var(--margin--vertical) * 4);
+	--margin--top--previous: var(--margin--vertical--4);
 }
 
 body > main > article .four-below + * {
-	--margin--top: calc(var(--margin--vertical) * 4);
+	--margin--top: var(--margin--vertical--4);
 }
 
 body > main > article .faded {
@@ -1374,11 +972,7 @@ body > main > article a {
 }
 
 body > main > article p {
-	max-width: 75ch;
-}
-
-body > main > article p strong {
-	font-weight: var(--typography--weight);
+	max-width: 70ch;
 }
 
 body > main > article ul,
@@ -1392,15 +986,7 @@ body > main > article ul > li,
 body > main > article ol > li {
 	display: list-item;
 	margin-top: var(--typography--margin--top);
-	padding-left: 0.5em;
-}
-
-@supports (-webkit-hyphens: none) {
-
-	body > main > article ul > li,
-	body > main > article ol > li {
-		padding-left: 0.4em;
-	}
+	max-width: 60ch;
 }
 
 body > main > article ul > li:before,
@@ -1414,8 +1000,7 @@ body > main > article ul > li > p,
 body > main > article ol > li > h3,
 body > main > article ol > li > h4,
 body > main > article ol > li > p {
-	max-width: 65ch;
-	padding-left: calc(var(--typography--size--base) * 0.25);
+	padding-left: 1ch;
 }
 
 body > main > article ul > li > h3:first-child:before,
@@ -1457,25 +1042,24 @@ body > main > article ol > li:not(:first-child) > *:first-child {
 }
 
 body > main > article ul {
-	list-style-type: disc;
-	padding-left: 0.8em;
+	list-style-type: "-";
+	padding-left: 1ch;
 }
 
-@supports (-webkit-hyphens: none) {
-	body > main > article ul {
-		padding-left: 1em;
-	}
+body > main > article ul > li {
+	padding-left: 1ch;
 }
 
 body > main > article ol {
-	list-style-type: decimal;
-	padding-left: 0.95em;
+	counter-reset: list;
 }
 
-@supports (-webkit-hyphens: none) {
-	body > main > article ol {
-		padding-left: 1.25em;
-	}
+body > main > article ol > li:before {
+	content: counter(list) ":";
+	counter-increment: list;
+	display: inline-block;
+	visibility: visible;
+	width: 4ch;
 }
 
 body > main > article table {
@@ -1517,11 +1101,11 @@ body > main > article details > div {
 }
 
 body > main > article details + * {
-	--margin--top: calc(var(--margin--vertical) * 2);
+	--margin--top: var(--margin--vertical--2);
 }
 
 body > main > article figure {
-	--margin--top: calc(var(--margin--vertical) * 2);
+	--margin--top: var(--margin--vertical--2);
 	display: flex;
 	flex-direction: column;
 	width: fit-content;
@@ -1542,16 +1126,16 @@ body > main > article figure > figcaption > p > a:only-child span:not(._) {
 }
 
 body > main > article figure + * {
-	--margin--top: calc(var(--margin--vertical) * 2);
-	--margin--top--previous: calc(var(--margin--vertical) * 2);
+	--margin--top: var(--margin--vertical--2);
+	--margin--top--previous: var(--margin--vertical--2);
 }
 
 body > main > article figure + * + * {
-	--margin--top--previous: calc(var(--margin--vertical) * 2);
+	--margin--top--previous: var(--margin--vertical--2);
 }
 
 body > main > article aside {
-	--margin--top: calc(var(--margin--vertical) * 2);
+	--margin--top: var(--margin--vertical--2);
 }
 
 body > main > article aside > h3 {
@@ -1576,7 +1160,7 @@ body > main > article aside > figure:not(:first-child) {
 }
 
 body > main > article aside + * {
-	--margin--top: calc(var(--margin--vertical) * 2);
+	--margin--top: var(--margin--vertical--2);
 }
 
 @media (min-width: 35.5em) {
@@ -1587,18 +1171,18 @@ body > main > article aside + * {
 
 body > main > article hr,
 body > main > article blockquote {
-	--margin--top: calc(var(--margin--vertical) * 4);
+	--margin--top: var(--margin--vertical--4);
 }
 
 body > main > article hr + *,
 body > main > article blockquote + * {
-	--margin--top: calc(var(--margin--vertical) * 4);
-	--margin--top--previous: calc(var(--margin--vertical) * 4);
+	--margin--top: var(--margin--vertical--4);
+	--margin--top--previous: var(--margin--vertical--4);
 }
 
 body > main > article hr + * + *,
 body > main > article blockquote + * + * {
-	--margin--top--previous: calc(var(--margin--vertical) * 4);
+	--margin--top--previous: var(--margin--vertical--4);
 }
 
 @media (min-width: 35.5em) {
@@ -1707,12 +1291,12 @@ body > main > article blockquote + * + * {
 }
 
 body > main > footer {
-	margin-top: max(var(--margin--vertical) * 4, 50vh - var(--margin--vertical) * 4);
+	margin-top: max(var(--margin--vertical--4), 50vh - var(--margin--vertical--4));
 }
 
 body > main > footer > div {
 	--color: var(--link--color);
-	align-items: end;
+	align-items: start;
 	display: flex;
 	gap: calc(var(--margin) / 2);
 	justify-content: space-between;
@@ -1725,15 +1309,15 @@ body > main > footer > div {
 	}
 }
 
-body > main > footer > div > a {
+body > main > footer > div > a:last-child {
 	white-space: nowrap;
 }
 
 body.index > main > nav {
 	column-gap: var(--margin);
 	display: grid;
-	margin-top: calc(var(--margin--vertical) * 4);
-	row-gap: calc(var(--margin--vertical) * 2);
+	margin-top: var(--margin--vertical--4);
+	row-gap: var(--margin--vertical--2);
 }
 
 @media (min-width: 35.5em) {
@@ -1757,8 +1341,8 @@ body.index > main > nav aside > menu {
 }
 
 body.class > main > article:first-child {
-	margin-top: calc(var(--margin--vertical) * -3);
-	padding-top: calc(var(--margin--vertical) * 2);
+	margin-top: calc(-1 * var(--margin--vertical--2));
+	padding-top: var(--margin--vertical--2);
 }
 
 body.class > main > article > button {
@@ -1811,4 +1395,11 @@ body > main > article .link-only > a[href^=http]:after,
 body > main > article .link-only > p > a[href^=http]:after {
 	--icon: "↗";
 	--icon--shift: 0.3rem;
+}
+
+body > main > header > address > div > p > a[href*=".pdf"]:after,
+body > main > article .link-only > a[href*=".pdf"]:after,
+body > main > article .link-only > p > a[href*=".pdf"]:after {
+	--icon: "⤓";
+	--icon--shift: 0em;
 }
