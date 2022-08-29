@@ -1,6 +1,5 @@
 ---
 title: '*Harmonic Collection*'
-published: false
 ---
 
 
