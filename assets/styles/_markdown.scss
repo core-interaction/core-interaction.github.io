@@ -36,12 +36,12 @@
 	.two-below + * { --margin--top: var(--margin--vertical--2) }
 
 	.four-above {
-		--margin--top: var(--margin--vertical--4);
+		--margin--top: var(--margin--vertical--6); // Actually six, keeping the name to retain Markdown compatibility with TI.
 
-		+ * { --margin--top--previous: var(--margin--vertical--4) }
+		+ * { --margin--top--previous: var(--margin--vertical--6) }
 	}
 
-	.four-below + * { --margin--top: var(--margin--vertical--4) }
+	.four-below + * { --margin--top: var(--margin--vertical--6) }
 
 
 
