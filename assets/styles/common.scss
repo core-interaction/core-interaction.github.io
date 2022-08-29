@@ -356,14 +356,37 @@ body {
 
 			// The ToC.
 			> ul {
+				--typography--leading: var(--typography--leading--loose);
+
 				li {
 					@extend %typography;
 
-					a {
-						@extend %font--underline--disable;
-						@extend %icon--link;
+					color:       var(--color--links);
+					white-space: nowrap;
+					width:       fit-content;
 
-						color: var(--color--links);
+					a {
+						@extend %link--element;
+
+						display:        block;
+						margin-bottom:  initial;
+						margin-top:     initial;
+						max-width:      calc(100% + var(--link--enlargement) * 2);
+						overflow:       hidden;
+						padding-bottom: initial;
+						padding-right:  calc(var(--link--enlargement) + 1em);
+						padding-top:    initial;
+						position:       relative;
+						text-overflow:  ellipsis;
+
+						&:after {
+							@extend .center--x;
+							@extend .icon--sf;
+
+							content: '↓';
+							position: absolute;
+							right:    var(--link--enlargement);
+						}
 					}
 				}
 			}
@@ -397,7 +420,7 @@ body {
 				> a {
 					@extend %link--element;
 
-					white-space: nowrap
+					white-space: nowrap;
 				}
 			}
 		}
