@@ -129,6 +129,8 @@ body {
 
 	--margin--vertical--2: calc(var(--typography--between) + 2 * var(--typography--font-size) * var(--typography--leading));
 	--margin--vertical--4: calc(var(--typography--between) + 4 * var(--typography--font-size) * var(--typography--leading));
+	--margin--vertical--6: calc(var(--typography--between) + 6 * var(--typography--font-size) * var(--typography--leading));
+	--margin--vertical--8: calc(var(--typography--between) + 8 * var(--typography--font-size) * var(--typography--leading));
 
 	// Basics.
 	h1,
@@ -264,13 +266,14 @@ body {
 		padding-bottom: var(--margin--vertical--4);
 
 		> header {
-			margin-bottom:  var(--margin--vertical--4);
+			margin-bottom: var(--margin--vertical--4);
 
 			@include breakpoint(568) {
 				column-gap:            var(--margin);
 				display:               grid;
 				grid-auto-rows:        min-content 1fr;
 				grid-template-columns: repeat(3, minmax(0, 1fr));
+				margin-bottom:         var(--margin--vertical--8);
 
 				> h1 { grid-column: 1 / span 2 }
 				> h1:only-child { grid-column: 1 / span 3 }
