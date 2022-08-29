@@ -17,7 +17,7 @@ links:
 strings:
   about: |
     The New School, Parsons
-    PUCD 2035, CRN 2755
+    PUCD 2035, CRN 2755 / F
     2 W 13th, Room 502
     Tuesdays, 7–9:40 PM
   classes:  Sessions
