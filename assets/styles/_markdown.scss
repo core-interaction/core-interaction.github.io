@@ -130,19 +130,16 @@
 		> li {
 			@extend %typography; // For paragraph-less lists.
 
-			display:      list-item;
-			margin-top:   var(--typography--margin--top);
-			max-width:    60ch;
-			padding-left: 0.5em;
-
-			@include browser-specific(safari) { padding-left: 0.4em }
+			display:    list-item;
+			margin-top: var(--typography--margin--top);
+			max-width:  60ch;
 
 			&:before { display: none } // Collides with the marker, so we use the margin.
 
 			> h3,
 			> h4,
 			> p {
-				padding-left: calc(var(--typography--size--base) * 0.25); // More space on paragraph lists.
+				padding-left: 1ch;
 
 				&:first-child:before,
 				&:last-child:after { display: none }; // Since the `li` is a type element.
@@ -156,17 +153,23 @@
 	}
 
 	ul {
-		list-style-type: disc;
-		padding-left:    0.8em;
+		list-style-type: '-';
+		padding-left:    1ch;
 
-		@include browser-specific(safari) { padding-left: 1em }
+		> li { padding-left: 1ch }
 	}
 
 	ol {
-		list-style-type: decimal;
-		padding-left:    0.95em;
+		// TODO This does not work with paragraph lists.
+		counter-reset: list;
 
-		@include browser-specific(safari) { padding-left: 1.25em }
+		> li:before {
+			content:           counter(list) ':';
+			counter-increment: list;
+			display:           inline-block;
+			visibility:        visible;
+			width:             4ch;
+		}
 	}
 
 
