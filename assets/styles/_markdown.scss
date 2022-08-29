@@ -76,8 +76,8 @@
 			border-left-color: var(--color);
 			border-left-style: solid;
 			border-left-width: var(--divider--width);
-			padding-left:      var(--margin);
-			padding-right:     var(--margin);
+			padding-left:      calc(5ch - var(--divider--width));
+			padding-right:     5ch;
 
 			// Credit.
 			> blockquote:last-child {
@@ -89,6 +89,9 @@
 
 					&:after {
 						@extend .icon--sf;
+						@extend .center--x;
+
+						--icon--shift: 0.15em; // Not sure why this needs more?
 
 						content: '↗';
 					}
