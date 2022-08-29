@@ -14,6 +14,21 @@
 	h2 {
 		--margin--top: var(--margin--vertical--4);
 
+		margin-bottom:  var(--typography--margin--bottom);
+		padding-bottom: calc(var(--typography--leading-shoulder) - var(--typography--between));
+		position:       relative;
+		width:          fit-content;
+
+		&:after {
+			content:     '----------------------------------------------------------------------';
+			max-width:   100%;
+			overflow:    hidden;
+			position:    absolute;
+			top:         1em;
+			visibility:  visible; // Override typography.
+			white-space: nowrap;
+		}
+
 		+ * {
 			--margin--top:           var(--margin--vertical--2);
 			--margin--top--previous: var(--margin--vertical--4);
