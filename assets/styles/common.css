@@ -1064,7 +1064,7 @@ body > main > article blockquote.pull-quote > blockquote.link-only:last-child > 
 body > main > header > ul li a.center--x:after,
 body > main > header > ul li body > main > header > address > div > p > a:after,
 body > main > article body > main > header > ul li .link-only > a:after {
-	--icon--shift: 0.066em;
+	--icon--shift: 0.075em;
 }
 
 body h1,
@@ -1312,14 +1312,14 @@ body > main > article blockquote.callout {
 	border-radius: var(--border--radius);
 	display: flex;
 	font-style: normal;
-	padding: calc(var(--typography--cap) * 2);
+	padding: 2ch;
 }
 
 body > main > article blockquote.callout[icon]:before {
 	color: var(--color);
 	content: attr(icon);
 	margin-left: initial;
-	margin-right: calc(var(--typography--cap) * 2);
+	margin-right: 2ch;
 	margin-top: var(--typography--margin--top);
 }
 
@@ -1766,20 +1766,21 @@ body > main > article .link-only > p > a:after {
 	content: var(--icon);
 }
 
-body > main > header > address > div > p > a[href^="#"],
-body > main > article .link-only > a[href^="#"],
-body > main > article .link-only > p > a[href^="#"] {
+body > main > header > address > div > p > a[href^="#"]:after,
+body > main > article .link-only > a[href^="#"]:after,
+body > main > article .link-only > p > a[href^="#"]:after {
 	--icon: "↓";
 }
 
-body > main > header > address > div > p > a[href^="/"],
-body > main > article .link-only > a[href^="/"],
-body > main > article .link-only > p > a[href^="/"] {
+body > main > header > address > div > p > a[href^="/"]:after,
+body > main > article .link-only > a[href^="/"]:after,
+body > main > article .link-only > p > a[href^="/"]:after {
 	--icon: "→";
 }
 
-body > main > header > address > div > p > a[href^=http],
-body > main > article .link-only > a[href^=http],
-body > main > article .link-only > p > a[href^=http] {
+body > main > header > address > div > p > a[href^=http]:after,
+body > main > article .link-only > a[href^=http]:after,
+body > main > article .link-only > p > a[href^=http]:after {
 	--icon: "↗";
+	--icon--shift: 0.3rem;
 }
