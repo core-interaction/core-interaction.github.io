@@ -149,8 +149,7 @@ body {
 	.icon--emoji {
 		@extend %--icon--span;
 
-		--icon--scale: 1.2;
-		--icon--shift: 0.1em;
+		--icon--scale: 1.1;
 
 		transform-origin: right;
 	}
