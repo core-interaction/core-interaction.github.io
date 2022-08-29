@@ -38,7 +38,7 @@ instructor:
 
 
 
-*Typography and Interaction* is a year-long, <nobr>two-part</nobr> course in the [MPS Communication Design](https://mpscd.parsons.edu) program at [Parsons](https://www.newschool.edu/parsons/)&thinsp;/&thinsp;[The New School](https://www.newschool.edu). The class will provide a rigorous foundation of typographic and interaction principles in the context of digital design. (We hope.)
+*Typography and Interaction* is a year-long, <nobr>two-semester</nobr> course in the [MPS Communication Design](https://mpscd.parsons.edu) program at [Parsons](https://www.newschool.edu/parsons/)&thinsp;/&thinsp;[The New School](https://www.newschool.edu). The class will provide a rigorous foundation of typographic and interaction principles in the context of digital design. (We hope.)
 {: .left }
 
 {% include link_list.html rows=3 %}
