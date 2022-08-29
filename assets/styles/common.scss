@@ -491,6 +491,16 @@ body {
 	&[href^="/"]:after    { --icon: '→' } // Internal.
 	&[href^="http"]:after { --icon: '↗'; --icon--shift: 0.3rem } // External.
 
+	&[href*=".pdf"]:after {
+		@extend .icon--sf--regular;
+
+		--icon: '⤓'; // PDF/downloads.
+
+		--icon--shift: 0em;
+	}
+
+
+
 // 	&[href*=".pdf"]:after,
 // 	&[href*="courses.newschool.edu"]:after,
 // 	&[href*="docs.google.com"]:after,
