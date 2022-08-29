@@ -5,8 +5,16 @@ module Jekyll
 			time(input).strftime('%B %-d')
 		end
 		def kerning(input)
-			# Keeping it here to share Markdown more easily.
-			return input
+			return input if input.to_s.empty?
+			letters = ""
+			for letter in input.chars do
+				if letter == "\n"
+					letters += "<br>"
+				else
+					letters += letter
+				end
+			end
+			return letters
 		end
 	end
 end
