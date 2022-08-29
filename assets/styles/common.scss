@@ -22,8 +22,7 @@
 
 	--typography--size: 1.6rem;
 
-	--margin:           2.4rem;
-	--margin--vertical: var(--margin);
+	--margin: 2.4rem;
 
 	--page--width: 100vw;
 
@@ -73,9 +72,6 @@
 		--margin:      4.8rem;
 		--page--width: 102.4rem;
 	}
-
-	@include landscape { --margin--vertical: calc(var(--margin) * 0.75) }
-	@include tall      { --margin--vertical: var(--margin) }
 }
 
 
@@ -126,12 +122,13 @@
 
 
 body {
+	@extend %type--layout;
 	// Basics.
 	h1,
 	h2,
 	h3,
 	h4 {
-		scroll-margin-top: calc(var(--margin--vertical) * 3);
+		scroll-margin-top: var(--margin--vertical--3);
 		max-width: 40ch;
 	}
 
@@ -246,15 +243,15 @@ body {
 	> main {
 		@extend %--page-container;
 
-		padding-top:    calc(var(--margin--vertical) * 4);
-		padding-bottom: calc(var(--margin--vertical) * 4);
+		padding-top:    var(--margin--vertical--4);
+		padding-bottom: var(--margin--vertical--4);
 
 		> header {
-			column-gap:          var(--margin);
-			display:             grid;
-			margin-bottom:       calc(var(--margin--vertical) * 4);
-			padding-bottom:      var(--margin--vertical);
-			row-gap:             var(--margin--vertical);
+			column-gap:     var(--margin);
+			display:        grid;
+			margin-bottom:  var(--margin--vertical--4);
+			padding-bottom: var(--margin--vertical);
+			row-gap:        var(--margin--vertical);
 
 			@include breakpoint(568) {
 				grid-template-rows:    min-content 1fr;
@@ -361,7 +358,7 @@ body {
 
 		// Home/top links at the end.
 		> footer {
-			margin-top: max(calc(var(--margin--vertical) * 4), calc(50vh - var(--margin--vertical) * 4));
+			margin-top: max(var(--margin--vertical--4), calc(50vh - var(--margin--vertical--4)));
 
 			> div {
 				--color: var(--link--color);
@@ -394,8 +391,8 @@ body {
 			> nav {
 				column-gap: var(--margin);
 				display:    grid;
-				margin-top: calc(var(--margin--vertical) * 4);
-				row-gap:    calc(var(--margin--vertical) * 2);
+				margin-top: var(--margin--vertical--4);
+				row-gap:    var(--margin--vertical--2);
 
 				@include breakpoint(568) { grid-template-columns: repeat(3, minmax(0, 1fr)) }
 
@@ -429,8 +426,8 @@ body {
 		> main {
 			> article {
 				&:first-child { // No title.
-					margin-top:  calc(var(--margin--vertical) * -3);
-					padding-top: calc(var(--margin--vertical) * 2);
+					margin-top:  calc(-1 * var(--margin--vertical--3));
+					padding-top: var(--margin--vertical--2);
 				}
 
 				> button {
