@@ -546,6 +546,7 @@ body > nav > div > div > p > select {
 	--typography--size: 1.6rem;
 	--margin: 2.4rem;
 	--page--width: 100vw;
+	--divider--width: 0.1rem;
 	--border--radius: 0.4rem;
 	--color: black;
 	--color--alpha: var(--color--tint);
@@ -584,6 +585,7 @@ body > nav > div > div > p > select {
 	:root {
 		--typography--size: 1.8rem;
 		--margin: 3.6rem;
+		--divider--width: 0.2rem;
 		--link--enlargement: 0.8rem;
 	}
 }
@@ -642,6 +644,7 @@ body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only
 	margin-left: var(--icon--gap);
 	transform: translateY(var(--icon--shift, 0rem)) scale(var(--icon--scale, 1));
 	width: 1ch;
+	height: 1em;
 }
 
 body .center--x.icon--sf--regular,
@@ -659,13 +662,7 @@ body > main > header > address > div > p > a:after,
 body > main > article .link-only > a:after,
 body > main > article .link-only > p > a:after,
 body > main > article details > summary > p.center--x:after,
-body > main > article blockquote.pull-quote > blockquote:last-child > p > a.center--x:only-child:after,
-body > main > article body > main > header > ul li blockquote.pull-quote > blockquote:last-child > p > a:only-child:after,
-body > main > header > ul li body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child:after,
-body > main > article body.index > main > nav aside > menu > li blockquote.pull-quote > blockquote:last-child > p > a:only-child:after,
-body.index > main > nav aside > menu > li body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child:after,
-body > main > article blockquote.pull-quote > blockquote:last-child > p.link-only > a:only-child:after,
-body > main > article blockquote.pull-quote > blockquote.link-only:last-child > p > a:only-child:after {
+body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child:after {
 	--icon--shift: 0.075em;
 }
 
@@ -726,7 +723,14 @@ body > main > header > ul li a[href*=".pdf"]:after,
 body.index > main > nav aside > menu > li a[href*=".pdf"]:after,
 body > main > header > address > div > p > a[href*=".pdf"]:after,
 body > main > article .link-only > a[href*=".pdf"]:after,
-body > main > article .link-only > p > a[href*=".pdf"]:after {
+body > main > article .link-only > p > a[href*=".pdf"]:after,
+body > main > article blockquote.pull-quote > blockquote:last-child > p > a.icon--sf--regular:only-child:after,
+body > main > article body > main > header > ul li blockquote.pull-quote > blockquote:last-child > p > a[href*=".pdf"]:only-child:after,
+body > main > header > ul li body > main > article blockquote.pull-quote > blockquote:last-child > p > a[href*=".pdf"]:only-child:after,
+body > main > article body.index > main > nav aside > menu > li blockquote.pull-quote > blockquote:last-child > p > a[href*=".pdf"]:only-child:after,
+body.index > main > nav aside > menu > li body > main > article blockquote.pull-quote > blockquote:last-child > p > a[href*=".pdf"]:only-child:after,
+body > main > article blockquote.pull-quote > blockquote:last-child > p.link-only > a[href*=".pdf"]:only-child:after,
+body > main > article blockquote.pull-quote > blockquote.link-only:last-child > p > a[href*=".pdf"]:only-child:after {
 	--icon--shift: 0.05em;
 }
 
@@ -744,7 +748,7 @@ body > nav {
 body > nav > div {
 	align-items: end;
 	display: grid;
-	gap: var(--margin);
+	gap: 4.1ch;
 	grid-template-columns: max-content minmax(0, 1fr) max-content;
 }
 
@@ -915,15 +919,15 @@ body > main > article .two-below + * {
 }
 
 body > main > article .four-above {
-	--margin--top: var(--margin--vertical--4);
+	--margin--top: var(--margin--vertical--6);
 }
 
 body > main > article .four-above + * {
-	--margin--top--previous: var(--margin--vertical--4);
+	--margin--top--previous: var(--margin--vertical--6);
 }
 
 body > main > article .four-below + * {
-	--margin--top: var(--margin--vertical--4);
+	--margin--top: var(--margin--vertical--6);
 }
 
 body > main > article .faded {
@@ -954,8 +958,8 @@ body > main > article blockquote.pull-quote {
 	border-left-color: var(--color);
 	border-left-style: solid;
 	border-left-width: var(--divider--width);
-	padding-left: var(--margin);
-	padding-right: var(--margin);
+	padding-left: calc(5ch - var(--divider--width));
+	padding-right: 5ch;
 }
 
 body > main > article blockquote.pull-quote > blockquote:last-child {
@@ -964,6 +968,7 @@ body > main > article blockquote.pull-quote > blockquote:last-child {
 }
 
 body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child:after {
+	--icon--shift: 0.15em;
 	content: "↗";
 }
 
@@ -1086,15 +1091,12 @@ body > main > article details > summary > p {
 body > main > article details > summary > p:after {
 	--icon--scale: 1.25;
 	content: "+";
-	font-weight: 200;
-	margin-bottom: initial;
-	transform-origin: bottom;
 	visibility: visible;
-	width: 1em;
+	width: 1ch;
 }
 
 body > main > article details[open] > summary > p:after {
-	content: "–";
+	content: "-";
 }
 
 body > main > article details > div {
