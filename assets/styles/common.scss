@@ -14,35 +14,25 @@
 
 
 :root {
-	@extend %font--times--regular;
+	@extend %font--sf--mono--regular;
 
-	--typography--leading:        1.25;
-	--typography--leading--tight: 1;
-	--typography--leading--loose: 1.618;
+	--typography--leading:        1.333;
+	--typography--leading--loose: 2;
 	--typography--leading--base:  var(--typography--leading); // For resets.
 
-	--typography--tracking: -0.015;
-
-	--typography--size: 1.8rem;
-
-	--typography--size--h1:   calc(var(--typography--size) * 3);
-	--typography--size--h2:   calc(var(--typography--size) * 1.75);
-	--typography--size--h3:   calc(var(--typography--size) * 1.333);
-	--typography--size--h4:   calc(var(--typography--size) * 1.2); // Really only in syllabus.
-	--typography--size--base: var(--typography--size); // For resets.
+	--typography--size: 1.6rem;
 
 	--margin:           2.4rem;
 	--margin--vertical: var(--margin);
 
 	--page--width: 100vw;
 
-	--divider--width:     0.1rem;
-	--divider--width--h1: 0.3rem; // Approx e-crossbar on the `h1`.
+	--divider--width: 0.1rem;
 
 	--color:             black;
 	--color--background: white;
 
-	--color--links:          orangered;
+	--color--links:          #e42a1d;
 	--color--links--reverse: white ;
 
 	--color--highlight:          hsl(0, 0%, 0%, 3.333%);
@@ -62,25 +52,15 @@
 
 	@include hover {
 		--color--highlight:          hsl(0, 0%, 0%, 5%); // Denser to offset hover opacity.
-		--color--highlight--reverse: hsl(0, 0%, 100%, 20%);
+		--color--highlight--reverse: hsl(0, 0%, 100%, 10%);
 	}
 
-	@include browser-specific(safari--mobile) {
-		--color--highlight:          hsl(0, 0%, 0%, 10%);
-		--color--highlight--reverse: hsl(0, 0%, 100%, 20%);
-	}
-
-	@include breakpoint(320) { --typography--size: calc((18/375) * 100vw) }
+	@include breakpoint(320) { --typography--size: calc((16/375) * 100vw) }
 
 	@include breakpoint(768) {
-		--typography--size: 2rem;
-
-		--typography--size--h1: calc(var(--typography--size) * 4);
-		--typography--size--h2: calc(var(--typography--size) * 2);
+		--typography--size: 1.8rem;
 
 		--margin: 3.6rem;
-
-		--divider--width--h1: 0.4rem;
 
 		--link--enlargement: 0.8rem;
 	}
@@ -142,31 +122,12 @@
 
 body {
 	// Basics.
-	h1 {
-		--typography--tracking: -0.025;
-
-		max-width: 20ch;
-
-		&:not(:only-child) { max-width: 12ch } // The title.
-	}
-
 	h1,
 	h2,
 	h3,
 	h4 {
-		--typography--leading: var(--typography--leading--tight);
-
 		scroll-margin-top: calc(var(--margin--vertical) * 3);
-	}
-
-	h1 { --typography--size: var(--typography--size--h1) }
-	h2 { --typography--size: var(--typography--size--h2) }
-	h3 { --typography--size: var(--typography--size--h3) }
-	h4 { --typography--size: var(--typography--size--h4) }
-
-	hr {
-		background-color: var(--color);
-		height:           var(--divider--width);
+		max-width: 40ch;
 	}
 
 
@@ -283,9 +244,6 @@ body {
 		padding-bottom: calc(var(--margin--vertical) * 4);
 
 		> header {
-			border-bottom-color: var(--color);
-			border-bottom-style: solid;
-			border-bottom-width: var(--divider--width--h1);
 			column-gap:          var(--margin);
 			display:             grid;
 			margin-bottom:       calc(var(--margin--vertical) * 4);
@@ -304,11 +262,6 @@ body {
 
 			// The date.
 			> p {
-				--typography--leading: var(--typography--leading--tight);
-				--typography--size:    var(--typography--size--h2);
-
-				margin-top: calc(-1 * var(--typography--size) * (var(--typography--cap-height) - var(--typography--x-height)));
-
 				@include breakpoint(568) { grid-column: 1 / span 2 }
 			}
 
@@ -319,8 +272,6 @@ body {
 			> ul {
 				@extend %type--layout;
 
-				--top--offset: calc(var(--typography--size--h1) * (var(--typography--cap-height) - var(--typography--x-height)));
-
 				display:        flex;
 				flex-direction: column;
 				gap:            var(--typography--between);
@@ -329,7 +280,7 @@ body {
 				@include breakpoint(568) {
 					grid-row:    1 / span 2;
 					grid-column: 3 / span 1;
-					margin-top:  var(--top--offset);
+					margin-top:  initial;
 				}
 			}
 
@@ -341,8 +292,6 @@ body {
 
 			// The info block on the index.
 			> address {
-				--typography--tracking: -0.016; // Cheat in for the long-ass title.
-
 				> div {
 					margin-top: var(--margin--vertical);
 
@@ -406,10 +355,7 @@ body {
 
 		// Home/top links at the end.
 		> footer {
-			border-top-color: var(--color);
-			border-top-style: solid;
-			border-top-width: var(--divider--width);
-			margin-top:       max(calc(var(--margin--vertical) * 4), calc(50vh - var(--margin--vertical) * 4));
+			margin-top: max(calc(var(--margin--vertical) * 4), calc(50vh - var(--margin--vertical) * 4));
 
 			> div {
 				--color: var(--link--color);
@@ -440,14 +386,10 @@ body {
 		> main {
 			// Index indexes.
 			> nav {
-				// border-top-color: var(--color);
-				// border-top-style: solid;
-				// border-top-width: var(--divider--width);
-				column-gap:       var(--margin);
-				display:          grid;
-				margin-top:       calc(var(--margin--vertical) * 4);
-				row-gap:          calc(var(--margin--vertical) * 2);
-				// padding-top:      calc(var(--margin--vertical) * 2);
+				column-gap: var(--margin);
+				display:    grid;
+				margin-top: calc(var(--margin--vertical) * 4);
+				row-gap:    calc(var(--margin--vertical) * 2);
 
 				@include breakpoint(568) { grid-template-columns: repeat(3, minmax(0, 1fr)) }
 
@@ -481,11 +423,8 @@ body {
 		> main {
 			> article {
 				&:first-child { // No title.
-					border-top-color: var(--color);
-					border-top-style: solid;
-					border-top-width: var(--divider--width);
-					margin-top:       calc(var(--margin--vertical) * -3);
-					padding-top:      calc(var(--margin--vertical) * 2);
+					margin-top:  calc(var(--margin--vertical) * -3);
+					padding-top: calc(var(--margin--vertical) * 2);
 				}
 
 				> button {
@@ -496,7 +435,6 @@ body {
 
 				> ul {
 					--groups:           2;
-					--typography--size: var(--typography--size--h3);
 
 					column-gap:         var(--margin);
 					display:            grid;
