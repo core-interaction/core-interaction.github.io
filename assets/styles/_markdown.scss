@@ -285,6 +285,8 @@
 
 			--typography--leading: var(--typography--leading--loose);
 
+			@include breakpoint(568) { --typography--leading: var(--typography--leading--base) }
+
 			display:        flex;
 			flex-direction: column;
 			gap:            var(--typography--between);

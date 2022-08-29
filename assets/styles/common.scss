@@ -457,6 +457,8 @@ body {
 
 						--typography--leading: var(--typography--leading--loose);
 
+						@include breakpoint(568) { --typography--leading: var(--typography--leading--base) }
+
 						display:        flex;
 						flex-direction: column;
 						gap:            var(--typography--between);
@@ -550,8 +552,7 @@ body {
 	&[href*="zoom.us"]:after {
 		@extend .icon--wingdings;
 
-		--icon--gap:   0.5em;
-		--icon--shift: 0em;
+		--icon--gap: 0.5em;
 	}
 
 	&[href*=".pdf"]:after                  { --icon: '2'; --icon--scale: 1.2 } // Doc.
