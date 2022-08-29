@@ -21,12 +21,6 @@ First, you will pick a theme of your choice (think of it as the overarching c
 
 ## Minimum requirements
 
-* Another
-* List
-* Here
-
-REFERENCE LINE
-
 * The website and all the entries must be responsive (work on a variety of screen sizes).
 
 * While each entry will be unique, there should be unifying visual components between them.
@@ -38,13 +32,6 @@ REFERENCE LINE
 
 
 ## Timeline
-
-
-1. Entry due September 13
-
-1. Entry due September 20
-
-1. Entry due September 27
 
 We’ll be adding to this collection of the course of the semester:
 
