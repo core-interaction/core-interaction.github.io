@@ -115,13 +115,7 @@
 	}
 
 	p {
-		max-width: 75ch;
-
-		strong {
-			@extend %font--times--bold;
-
-			font-weight: var(--typography--weight);
-		}
+		max-width: 70ch;
 	}
 
 
@@ -138,6 +132,7 @@
 
 			display:      list-item;
 			margin-top:   var(--typography--margin--top);
+			max-width:    60ch;
 			padding-left: 0.5em;
 
 			@include browser-specific(safari) { padding-left: 0.4em }
@@ -147,7 +142,6 @@
 			> h3,
 			> h4,
 			> p {
-				max-width:    65ch;
 				padding-left: calc(var(--typography--size--base) * 0.25); // More space on paragraph lists.
 
 				&:first-child:before,
