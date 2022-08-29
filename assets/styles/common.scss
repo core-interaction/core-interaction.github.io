@@ -208,7 +208,7 @@ body {
 
 				> p {
 					color:          transparent; // Just here to set the width.
-					padding-right:  1em; // For the icon.
+					padding-right:  2ch; // For the icon.
 					pointer-events: none;
 					position:       relative;
 					white-space:    nowrap;
@@ -222,7 +222,7 @@ body {
 						left:           0;
 						max-width:      calc(100% + var(--link--enlargement) * 2); // Icon.
 						overflow:       hidden;
-						padding-right:  1ch;
+						padding-right:  calc(2ch - var(--link--enlargement));
 						pointer-events: auto;
 						position:       absolute;
 						text-overflow:  ellipsis;
