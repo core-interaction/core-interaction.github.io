@@ -293,6 +293,7 @@ body {
 			row-gap:             var(--margin--vertical);
 
 			@include breakpoint(568) {
+				grid-template-rows:    min-content 1fr;
 				grid-template-columns: repeat(3, minmax(0, 1fr));
 
 				> h1 { grid-column: 1 / span 2 }
