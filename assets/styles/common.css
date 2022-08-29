@@ -891,6 +891,20 @@ body > main > article > *:not(:first-child) {
 
 body > main > article h2 {
 	--margin--top: var(--margin--vertical--4);
+	margin-bottom: var(--typography--margin--bottom);
+	padding-bottom: calc(var(--typography--leading-shoulder) - var(--typography--between));
+	position: relative;
+	width: fit-content;
+}
+
+body > main > article h2:after {
+	content: "----------------------------------------------------------------------";
+	max-width: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 1em;
+	visibility: visible;
+	white-space: nowrap;
 }
 
 body > main > article h2 + * {
