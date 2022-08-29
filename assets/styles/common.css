@@ -1,0 +1,2155 @@
+@charset "UTF-8";
+
+*:where(:not(audio, canvas, iframe, img, svg, video):not(svg *, symbol *)) {
+	all: unset;
+	display: revert;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+a,
+button {
+	cursor: revert;
+}
+
+details summary,
+menu,
+ol,
+ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+textarea {
+	white-space: revert;
+}
+
+::placeholder {
+	all: unset;
+}
+
+/* Disclosure triangles. */
+details ::marker,
+details ::-webkit-details-marker {
+	display: none;
+}
+
+:root {
+	font-feature-settings: "liga", "kern";
+	font-size: 62.5%;
+}
+
+:root * {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: none;
+	font-kerning: normal;
+	font-smooth: always;
+	text-rendering: optimizeLegibility;
+}
+
+em,
+em em em {
+	font-style: italic;
+}
+
+em em {
+	font-style: normal;
+}
+
+del {
+	font-style: line-through;
+}
+
+nobr,
+.nowrap {
+	white-space: nowrap;
+}
+
+body > main > header > ul li,
+body > main > article ul > li,
+body > main > article ol > li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+td {
+	--typography--tracking--override: var(--typography--tracking);
+	--typography--letter-spacing: calc(var(--typography--tracking--override, var(--typography--tracking, 0)) * 1em);
+	--typography--margin--left: calc(var(--typography--inset--left) * 1em);
+	--typography--margin--right: calc(var(--typography--inset--right) * 1em);
+}
+
+body > nav,
+body > main > header > address,
+body > main > header > ul,
+body > main > article,
+body > main > article aside > menu,
+body.index > main > nav aside > menu,
+body > main > header > ul li,
+body > main > article ul > li,
+body > main > article ol > li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+td {
+	--typography--font-size: calc(var(--typography--scale, 1) * var(--typography--size--override, var(--typography--size)));
+	--typography--line-height: calc(var(--typography--leading) * var(--typography--size--override, var(--typography--size)));
+	--typography--leading--remainder: calc((var(--typography--leading) - 1) / 2);
+	--typography--shift: calc((var(--typography--shoulder) + var(--typography--shoulder--top)) * (1 - var(--typography--scale, 1)));
+	--typography--leading--bottom: calc(var(--typography--shoulder--bottom) + var(--typography--leading--remainder) + var(--typography--shift, 0));
+	--typography--leading--top: calc(var(--typography--shoulder--top) + var(--typography--leading--remainder) - var(--typography--shift, 0));
+	--typography--margin--bottom: calc(-1 * var(--typography--leading--bottom) * var(--typography--size--override, var(--typography--size)));
+	--typography--margin--top: calc(-1 * var(--typography--leading--top) * var(--typography--size--override, var(--typography--size)));
+}
+
+body > main > header > ul li,
+body > main > article ul > li,
+body > main > article ol > li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+td {
+	color: var(--color);
+	display: block;
+	font-size: var(--typography--font-size);
+	font-weight: var(--typography--weight);
+	letter-spacing: var(--typography--letter-spacing);
+	line-height: var(--typography--line-height);
+	margin-left: var(--typography--margin--left);
+	margin-right: var(--typography--margin--right);
+	max-width: calc(100% - var(--typography--margin--left) - var(--typography--margin--right) + 1px);
+	overflow-wrap: break-word;
+}
+
+@supports (display: flow-root) {
+
+	body > main > header > ul li,
+	body > main > article ul > li,
+	body > main > article ol > li,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	td {
+		display: flow-root;
+	}
+}
+
+body > main > header > ul li:before,
+body > main > article ul > li:before,
+body > main > article ol > li:before,
+body > main > header > ul li:after,
+body > main > article ul > li:after,
+body > main > article ol > li:after,
+h1:before,
+h1:after,
+h2:before,
+h2:after,
+h3:before,
+h3:after,
+h4:before,
+h4:after,
+h5:before,
+h5:after,
+h6:before,
+h6:after,
+p:before,
+p:after,
+td:before,
+td:after {
+	content: "";
+	display: block;
+	visibility: hidden;
+}
+
+body > main > header > ul li:before,
+body > main > article ul > li:before,
+body > main > article ol > li:before,
+h1:before,
+h2:before,
+h3:before,
+h4:before,
+h5:before,
+h6:before,
+p:before,
+td:before {
+	margin-top: calc(var(--typography--margin--top) - var(--typography--margin--top--shift, 0) * var(--typography--size--override, var(--typography--size)));
+}
+
+body > main > header > ul li:after,
+body > main > article ul > li:after,
+body > main > article ol > li:after,
+h1:after,
+h2:after,
+h3:after,
+h4:after,
+h5:after,
+h6:after,
+p:after,
+td:after {
+	margin-bottom: var(--typography--margin--bottom);
+}
+
+td {
+	display: table-cell;
+}
+
+body > nav,
+body > main > header > address,
+body > main > header > ul,
+body > main > article,
+body > main > article aside > menu,
+body.index > main > nav aside > menu {
+	--typography--cap: calc(var(--typography--cap-height) * 1em);
+	--typography--between: calc(var(--typography--font-size) * (var(--typography--leading) + var(--typography--shoulder) - 1));
+	line-height: var(--typography--line-height);
+	font-size: var(--typography--font-size);
+}
+
+body > main > article p strong,
+:root,
+body > nav > div > div > p > span:last-child,
+body .icon--sf,
+body > main > header > ul li a:after,
+body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child:after,
+body > main > article details > summary > p:after,
+body > main > header > address > div > p > a:after,
+body > main > article .link-only > a:after,
+body > main > article .link-only > p > a:after {
+	--typography--shoulder: calc(1 - var(--typography--cap-height));
+	--typography--shoulder--top: calc(var(--typography--shoulder) - var(--typography--shoulder--bottom));
+}
+
+body .icon--sf,
+body > main > header > ul li a:after,
+body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child:after,
+body > main > article details > summary > p:after,
+body > main > header > address > div > p > a:after,
+body > main > article .link-only > a:after,
+body > main > article .link-only > p > a:after {
+	--typography--cap-height: 0.705;
+	--typography--x-height: 0.508;
+	--typography--shoulder--bottom: 0.122;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+:root,
+body > nav > div > div > p > span:last-child {
+	--typography--cap-height: 0.705;
+	--typography--x-height: 0.526;
+	--typography--shoulder--bottom: 0.145;
+	font-family: "SF Mono", ui-monospace, monospace;
+}
+
+body > main > article p strong {
+	--typography--cap-height: 0.662;
+	--typography--x-height: 0.447;
+	--typography--shoulder--bottom: 0.163;
+	font-family: "Times New Roman", "Times", serif;
+	font-feature-settings: "hlig", "dlig", "zero", "kern", "medi";
+	font-variant: historical-ligatures;
+}
+
+body .icon--sf,
+body > main > header > ul li a:after,
+body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child:after,
+body > main > article details > summary > p:after,
+body > main > header > address > div > p > a:after,
+body > main > article .link-only > a:after,
+body > main > article .link-only > p > a:after {
+	--typography--weight: 300;
+	--typography--inset--left: -0.065;
+	--typography--inset--right: -0.053;
+	--typography--underline: 0.051;
+	--typography--underline--shift: -0.069;
+	--typography--underline--skip: 0.064;
+}
+
+body > nav > div > div > p > span:last-child {
+	--typography--weight: 300;
+	--typography--inset--left: -0.058;
+	--typography--inset--right: -0.060;
+	--typography--underline: 0.053;
+	--typography--underline--shift: -0.072;
+	--typography--underline--skip: 0.064;
+}
+
+:root {
+	--typography--weight: 400;
+	--typography--inset--left: -0.055;
+	--typography--inset--right: -0.054;
+	--typography--underline: 0.063;
+	--typography--underline--shift: -0.052;
+	--typography--underline--skip: 0.085;
+}
+
+body > main > article p strong {
+	--typography--weight: 600;
+	--typography--inset--left: -0.020;
+	--typography--inset--right: -0.016;
+	--typography--underline: 0.018;
+	--typography--underline--shift: -0.178;
+	--typography--underline--skip: 0.118;
+}
+
+body .icon--wingdings,
+body > main > article blockquote.callout[icon]:before,
+body > main > header > address > div > p > a[href*=".pdf"]:after,
+body > main > article .link-only > a[href*=".pdf"]:after,
+body > main > article .link-only > p > a[href*=".pdf"]:after,
+body > main > header > address > div > p > a[href*="courses.newschool.edu"]:after,
+body > main > article .link-only > a[href*="courses.newschool.edu"]:after,
+body > main > article .link-only > p > a[href*="courses.newschool.edu"]:after,
+body > main > header > address > div > p > a[href*="docs.google.com"]:after,
+body > main > article .link-only > a[href*="docs.google.com"]:after,
+body > main > article .link-only > p > a[href*="docs.google.com"]:after,
+body > main > header > address > div > p > a[href*="drive.google.com"]:after,
+body > main > article .link-only > a[href*="drive.google.com"]:after,
+body > main > article .link-only > p > a[href*="drive.google.com"]:after,
+body > main > header > address > div > p > a[href*="eric.young.li"]:after,
+body > main > article .link-only > a[href*="eric.young.li"]:after,
+body > main > article .link-only > p > a[href*="eric.young.li"]:after,
+body > main > header > address > div > p > a[href*="github.com"]:after,
+body > main > article .link-only > a[href*="github.com"]:after,
+body > main > article .link-only > p > a[href*="github.com"]:after,
+body > main > header > address > div > p > a[href*="mailto:"]:after,
+body > main > article .link-only > a[href*="mailto:"]:after,
+body > main > article .link-only > p > a[href*="mailto:"]:after,
+body > main > header > address > div > p > a[href*="michaelfehrenbach.com"]:after,
+body > main > article .link-only > a[href*="michaelfehrenbach.com"]:after,
+body > main > article .link-only > p > a[href*="michaelfehrenbach.com"]:after,
+body > main > header > address > div > p > a[href*="mpscd.parsons.edu"]:after,
+body > main > article .link-only > a[href*="mpscd.parsons.edu"]:after,
+body > main > article .link-only > p > a[href*="mpscd.parsons.edu"]:after,
+body > main > header > address > div > p > a[href*="slack.com"]:after,
+body > main > article .link-only > a[href*="slack.com"]:after,
+body > main > article .link-only > p > a[href*="slack.com"]:after,
+body > main > header > address > div > p > a[href*=syllabus]:after,
+body > main > article .link-only > a[href*=syllabus]:after,
+body > main > article .link-only > p > a[href*=syllabus]:after,
+body > main > header > address > div > p > a[href*="zoom.us"]:after,
+body > main > article .link-only > a[href*="zoom.us"]:after,
+body > main > article .link-only > p > a[href*="zoom.us"]:after {
+	font-family: "Wingdings";
+}
+
+body > main > article p strong span.space,
+body > main > article p strong span.nbsp {
+	letter-spacing: -0.05em;
+}
+
+body > main > article p strong span.a + span.c {
+	margin-left: 0.01em;
+}
+
+body > main > article p strong span.a + span.l {
+	margin-left: 0.02em;
+}
+
+body > main > article p strong span.A + span.M {
+	margin-left: -0.02em;
+}
+
+body > main > article p strong span.a + span.n {
+	margin-left: 0.03em;
+}
+
+body > main > article p strong span.A + span.n {
+	margin-left: -0.01em;
+}
+
+body > main > article p strong span.a + span.r {
+	margin-left: 0.04em;
+}
+
+body > main > article p strong span.a + span.s {
+	margin-left: 0.01em;
+}
+
+body > main > article p strong span.A + span.u {
+	margin-left: -0.04em;
+}
+
+body > main > article p strong span.c + span.t {
+	margin-left: 0.01em;
+}
+
+body > main > article p strong span.e + span.c {
+	margin-left: 0.01em;
+}
+
+body > main > article p strong span.e + span.e {
+	margin-left: 0.01em;
+}
+
+body > main > article p strong span.e + span.m {
+	margin-left: 0.02em;
+}
+
+body > main > article p strong span.e + span.r {
+	margin-left: 0.02em;
+}
+
+body > main > article p strong span.E + span.v {
+	margin-left: -0.04em;
+}
+
+body > main > article p strong span.F + span.a {
+	margin-left: -0.08em;
+}
+
+body > main > article p strong span.f + span.f {
+	margin-left: -0.06em;
+}
+
+body > main > article p strong span.f + span.i {
+	margin-left: 0.07em;
+}
+
+body > main > article p strong span.F + span.o {
+	margin-left: -0.08em;
+}
+
+body > main > article p strong span.g + span.e {
+	margin-left: -0.01em;
+}
+
+body > main > article p strong span.g + span.r {
+	margin-left: 0.04em;
+}
+
+body > main > article p strong span.g + span.u {
+	margin-left: 0.04em;
+}
+
+body > main > article p strong span.h + span.i {
+	margin-left: -0.02em;
+}
+
+body > main > article p strong span.H + span.T {
+	margin-left: 0.01em;
+}
+
+body > main > article p strong span.h + span.y {
+	margin-left: -0.02em;
+}
+
+body > main > article p strong span.i + span.g {
+	margin-left: -0.03em;
+}
+
+body > main > article p strong span.I + span.n {
+	margin-left: -0.02em;
+}
+
+body > main > article p strong span.i + span.n {
+	margin-left: -0.02em;
+}
+
+body > main > article p strong span.i + span.o {
+	margin-left: -0.02em;
+}
+
+body > main > article p strong span.i + span.t {
+	margin-left: -0.01em;
+}
+
+body > main > article p strong span.j + span.e {
+	margin-left: -0.04em;
+}
+
+body > main > article p strong span.k + span.d {
+	margin-left: -0.01em;
+}
+
+body > main > article p strong span.l + span.e {
+	margin-left: -0.02em;
+}
+
+body > main > article p strong span.l + span.l {
+	margin-left: -0.045em;
+}
+
+body > main > article p strong span.l + span.o {
+	margin-left: -0.03em;
+}
+
+body > main > article p strong span.m + span.b {
+	margin-left: -0.02em;
+}
+
+body > main > article p strong span.m + span.b {
+	margin-left: -0.02em;
+}
+
+body > main > article p strong span.M + span.L {
+	margin-left: 0.04em;
+}
+
+body > main > article p strong span.n + span.e {
+	margin-left: -0.01em;
+}
+
+body > main > article p strong span.n + span.g {
+	margin-left: -0.01em;
+}
+
+body > main > article p strong span.N + span.o {
+	margin-left: -0.04em;
+}
+
+body > main > article p strong span.n + span.s {
+	margin-left: 0.02em;
+}
+
+body > main > article p strong span.o + span.b {
+	margin-left: -0.01em;
+}
+
+body > main > article p strong span.o + span.g {
+	margin-left: -0.03em;
+}
+
+body > main > article p strong span.o + span.j {
+	margin-left: -0.03em;
+}
+
+body > main > article p strong span.o + span.p {
+	margin-left: 0.01em;
+}
+
+body > main > article p strong span.O + span.u {
+	margin-left: 0.03em;
+}
+
+body > main > article p strong span.o + span.v {
+	margin-left: -0.03em;
+}
+
+body > main > article p strong span.o + span.w {
+	margin-left: -0.04em;
+}
+
+body > main > article p strong span.p + span.h {
+	margin-left: -0.02em;
+}
+
+body > main > article p strong span.P + span.r {
+	margin-left: 0.02em;
+}
+
+body > main > article p strong span.P + span.U {
+	margin-left: -0.03em;
+}
+
+body > main > article p strong span.r + span.a {
+	margin-left: 0.01em;
+}
+
+body > main > article p strong span.R + span.N {
+	margin-left: -0.05em;
+}
+
+body > main > article p strong span.r + span.y {
+	margin-left: 0.06em;
+}
+
+body > main > article p strong span.S + span.e {
+	margin-left: -0.01em;
+}
+
+body > main > article p strong span.t + span.e {
+	margin-left: 0.01em;
+}
+
+body > main > article p strong span.t + span.h {
+	margin-left: 0.03em;
+}
+
+body > main > article p strong span.t + span.i {
+	margin-left: 0.03em;
+}
+
+body > main > article p strong span.T + span.M {
+	margin-left: 0.02em;
+}
+
+body > main > article p strong span.t + span.o {
+	margin-left: 0.01em;
+}
+
+body > main > article p strong span.T + span.o {
+	margin-left: -0.14em;
+}
+
+body > main > article p strong span.t + span.r {
+	margin-left: 0.05em;
+}
+
+body > main > article p strong span.t + span.s {
+	margin-left: 0.02em;
+}
+
+body > main > article p strong span.t + span.y {
+	margin-left: -0.02em;
+}
+
+body > main > article p strong span.T + span.y {
+	margin-left: -0.12em;
+}
+
+body > main > article p strong span.U + span.C {
+	margin-left: -0.05em;
+}
+
+body > main > article p strong span.u + span.r {
+	margin-left: 0.04em;
+}
+
+body > main > article p strong span.u + span.s {
+	margin-left: 0.03em;
+}
+
+body > main > article p strong span.v + span.e {
+	margin-left: -0.04em;
+}
+
+body > main > article p strong span.w + span.e {
+	margin-left: -0.04em;
+}
+
+body > main > article p strong span.W + span.e {
+	margin-left: -0.12em;
+}
+
+body > main > article p strong span.W + span.h {
+	margin-left: -0.07em;
+}
+
+body > main > article p strong span.w + span.n {
+	margin-left: 0.03em;
+}
+
+body > main > article p strong span.y + span.l {
+	margin-left: -0.02em;
+}
+
+body > main > article p strong span.y + span.p {
+	margin-left: 0.04em;
+}
+
+body > main > article p strong span.y + span.t {
+	margin-left: -0.02em;
+}
+
+body > main > article p strong span.W:first-child {
+	margin-left: -0.05em;
+}
+
+body > main > article p strong span.num0 {
+	letter-spacing: -0.05em;
+	margin-left: -0.01em;
+}
+
+body > main > article p strong span.num1 {
+	letter-spacing: -0.08em;
+	margin-left: -0.05em;
+}
+
+body > main > article p strong span.num2 {
+	letter-spacing: -0.03em;
+}
+
+body > main > article p strong span.num3 {
+	letter-spacing: -0.02em;
+}
+
+body > main > article p strong span.num4 {
+	letter-spacing: -0.05em;
+}
+
+body > main > article p strong span.num5 {
+	letter-spacing: -0.05em;
+}
+
+body > main > article p strong span.num6 {
+	letter-spacing: -0.05em;
+}
+
+body > main > article p strong span.num7 {
+	letter-spacing: -0.1em;
+}
+
+body > main > article p strong span.num8 {
+	letter-spacing: -0.05em;
+}
+
+body > main > article p strong span.num9 {
+	letter-spacing: -0.04em;
+}
+
+body > main > article p strong span.num0 + span.num0 {
+	margin-left: 0.04em;
+}
+
+body > main > article p strong span.num0 + span.num2 {
+	margin-left: 0.02em;
+}
+
+body > main > article p strong span.num1 + span.num1 {
+	margin-left: -0.1em;
+}
+
+body > main > article p strong span.num1 + span.num3 {
+	margin-left: -0.02em;
+}
+
+body > main > article p strong span.num1 + span.num4 {
+	margin-left: -0.05em;
+}
+
+body > main > article p strong span.num1 + span.num5 {
+	margin-left: -0.03em;
+}
+
+body > main > article p strong span.num1 + span.num6 {
+	margin-left: -0.07em;
+}
+
+body > main > article p strong span.num1 + span.num9 {
+	margin-left: -0.02em;
+}
+
+body > main > article p strong span.num2 + span.num0 {
+	margin-left: -0.01em;
+}
+
+body > main > article p strong span.num2 + span.num1 {
+	margin-left: -0.08em;
+}
+
+body > main > article p strong span.num2 + span.num6 {
+	margin-left: -0.01em;
+}
+
+body > main > article p strong span.num2 + span.num8 {
+	margin-left: -0.01em;
+}
+
+body > main > article p strong span.num3 + span.num1 {
+	margin-left: -0.13em;
+}
+
+body > main > article p strong span.num4 + span.num0 {
+	margin-left: 0.02em;
+}
+
+body > main > article p strong span.num5 + span.num0 {
+	margin-left: 0em;
+}
+
+body > main > article p strong span.num9 + span.num0 {
+	margin-left: 0.02em;
+}
+
+body > main > article p strong span.num0 + span.comma {
+	margin-left: -0.02em;
+}
+
+body > main > article p strong span.num1 + span.comma {
+	margin-left: -0.01em;
+}
+
+body > main > article p strong span.num3 + span.comma {
+	margin-left: -0.07em;
+}
+
+body > main > article p strong span.num4 + span.comma {
+	margin-left: -0.03em;
+}
+
+body > main > article p strong span.num5 + span.comma {
+	margin-left: -0.05em;
+}
+
+body > main > article p strong span.num7 + span.comma {
+	margin-left: -0.1em;
+}
+
+body > main > article p strong span.num9 + span.comma {
+	margin-left: -0.1em;
+}
+
+body > main > article p strong span.num9 + span.ndash {
+	margin-left: 0.1em;
+}
+
+body > main > article a {
+	--typography--decoration-thickness: calc(var(--typography--underline) * 1em);
+	--typography--text-shadow: calc(var(--typography--underline--skip) * 1em);
+	--typography--underline-offset: calc(var(--typography--underline--shift) * 1em);
+	text-decoration-color: var(--color);
+	text-decoration-line: underline;
+	text-decoration-thickness: var(--typography--decoration-thickness);
+	text-underline-offset: calc(-1 * var(--typography--underline-offset) + var(--typography--decoration-thickness) + var(--typography--underline-offset--extra, 0em));
+}
+
+@supports (-moz-appearance: meterbar) {
+	body > main > article a {
+		-webkit-text-stroke-color: var(--color--background);
+		-webkit-text-stroke-width: calc(var(--typography--text-shadow) * 2);
+		paint-order: stroke fill;
+		text-decoration-skip-ink: none;
+	}
+}
+
+@supports (-webkit-hyphens: none) {
+	body > main > article a {
+		-webkit-text-stroke-color: var(--color--background);
+		-webkit-text-stroke-width: calc(var(--typography--text-shadow) * 2);
+		paint-order: stroke fill;
+		text-decoration-skip-ink: none;
+	}
+}
+
+@media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+	@supports not (-moz-appearance: meterbar) {
+		body > main > article a {
+			text-shadow: var(--color--background) var(--typography--text-shadow) 0, var(--color--background) var(--typography--text-shadow) calc(var(--typography--text-shadow) / 7), var(--color--background) 0 calc(var(--typography--text-shadow) / 7), var(--color--background) calc(-1 * var(--typography--text-shadow)) calc(var(--typography--text-shadow) / 7), var(--color--background) calc(-1 * var(--typography--text-shadow)) 0, var(--color--background) calc(-1 * var(--typography--text-shadow)) calc(-1 * var(--typography--text-shadow) / 7), var(--color--background) 0 calc(-1 * var(--typography--text-shadow) / 7), var(--color--background) var(--typography--text-shadow) calc(-1 * var(--typography--text-shadow) / 7);
+		}
+	}
+}
+
+body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child,
+body > main > article .link-only > a,
+body > main > article .link-only > p > a,
+body > main > article figure > figcaption > p > a {
+	-webkit-text-stroke: initial;
+	paint-order: initial;
+	text-decoration: initial;
+	text-shadow: initial;
+}
+
+@supports (-webkit-hyphens: none) and (-webkit-touch-callout: none) {
+	@font-face {
+		font-family: "Wingdings";
+		src: url("https://db.onlinewebfonts.com/t/e991cc888d4fb544fe0a88d065ab6efc.woff2") format("woff2");
+	}
+}
+
+body > nav > div > div > p > select:focus:focus-visible:not(:disabled),
+body > main > article a:focus:focus-visible:not(:disabled),
+body > main > header > address > div > p > a:focus:focus-visible:not(:disabled),
+body > main > article .link-only > a:focus:focus-visible:not(:disabled),
+body > main > article .link-only > p > a:focus:focus-visible:not(:disabled),
+body > nav > div > a:focus:focus-visible:not(:disabled),
+body > main > header > ul li a:focus:focus-visible:not(:disabled),
+body > main > article details > summary:focus:focus-visible:not(:disabled),
+body > main > article aside > menu > li > a:focus:focus-visible:not(:disabled),
+body > main > footer > div > a:focus:focus-visible:not(:disabled),
+body.index > main > nav aside > menu > li > a:focus:focus-visible:not(:disabled),
+body.class > main > article > button:focus:focus-visible:not(:disabled) {
+	border-radius: calc(var(--link--enlargement) / 4);
+	outline-color: var(--link--color);
+	outline-style: solid;
+	outline-width: var(--link--outline--override, var(--link--outline));
+}
+
+body > nav > div > div > p > select,
+body > main > article a,
+body > main > header > address > div > p > a,
+body > main > article .link-only > a,
+body > main > article .link-only > p > a,
+body > nav > div > a,
+body > main > header > ul li a,
+body > main > article details > summary,
+body > main > article aside > menu > li > a,
+body > main > footer > div > a,
+body.index > main > nav aside > menu > li > a,
+body.class > main > article > button {
+	-webkit-tap-highlight-color: var(--link--highlight);
+	cursor: pointer;
+	transition-duration: var(--link--hover--transition);
+	transition-property: filter;
+	transition-timing-function: linear;
+}
+
+body > nav > div > div > p > select:active,
+body > main > article a:active,
+body > main > header > address > div > p > a:active,
+body > main > article .link-only > p > a:active,
+body > nav > div > a:active,
+body > main > header > ul li a:active,
+body > main > article details > summary:active,
+body > main > footer > div > a:active,
+body.index > main > nav aside > menu > li > a:active,
+body.class > main > article > button:active {
+	background-color: var(--link--highlight);
+	border-radius: calc(var(--link--enlargement) / 2);
+}
+
+body > nav > div > div > p > select:focus,
+body > main > article a:focus,
+body > main > header > address > div > p > a:focus,
+body > main > article .link-only > a:focus,
+body > main > article .link-only > p > a:focus,
+body > nav > div > a:focus,
+body > main > header > ul li a:focus,
+body > main > article details > summary:focus,
+body > main > article aside > menu > li > a:focus,
+body > main > footer > div > a:focus,
+body.index > main > nav aside > menu > li > a:focus,
+body.class > main > article > button:focus {
+	outline: none;
+	z-index: 1;
+}
+
+@media (any-hover: hover) {
+
+	body > nav > div > div > p > select:hover,
+	body > main > article a:hover,
+	body > main > header > address > div > p > a:hover,
+	body > main > article .link-only > p > a:hover,
+	body > nav > div > a:hover,
+	body > main > header > ul li a:hover,
+	body > main > article details > summary:hover,
+	body > main > footer > div > a:hover,
+	body.index > main > nav aside > menu > li > a:hover,
+	body.class > main > article > button:hover {
+		filter: opacity(var(--link--hover--opacity));
+	}
+}
+
+body > nav > div > a,
+body > main > header > ul li a,
+body > main > article details > summary,
+body > main > article aside > menu > li > a,
+body > main > footer > div > a,
+body.index > main > nav aside > menu > li > a,
+body.class > main > article > button {
+	margin: calc(var(--link--enlargement) * -1);
+	padding: var(--link--enlargement);
+}
+
+body > nav > div > div > p > select,
+body > main > article a,
+body > main > header > address > div > p > a,
+body > main > article .link-only > a,
+body > main > article .link-only > p > a {
+	border-bottom-width: calc(var(--link--enlargement) / 2);
+	border-color: transparent;
+	border-left-width: var(--link--enlargement);
+	border-right-width: var(--link--enlargement);
+	border-style: solid;
+	border-top-width: calc(var(--link--enlargement) / 2);
+	margin-left: calc(-1 * var(--link--enlargement));
+	margin-right: calc(-1 * var(--link--enlargement));
+}
+
+body > nav > div > a,
+body > main > header > ul li a,
+body > main > article details > summary,
+body > main > article aside > menu > li > a,
+body > main > footer > div > a,
+body.index > main > nav aside > menu > li > a,
+body.class > main > article > button {
+	display: flex;
+	flex-direction: column;
+	width: fit-content;
+}
+
+body > main > article a,
+body > main > header > address > div > p > a,
+body > main > article .link-only > a,
+body > main > article .link-only > p > a {
+	position: relative;
+}
+
+body > main > article a:active,
+body > main > header > address > div > p > a:active,
+body > main > article .link-only > p > a:active {
+	--color--active: var(--link--highlight);
+	background-color: initial;
+	border-radius: initial;
+}
+
+body > main > article a:before,
+body > main > header > address > div > p > a:before,
+body > main > article .link-only > a:before,
+body > main > article .link-only > p > a:before {
+	background-color: var(--color--active);
+	border-radius: calc(var(--link--enlargement) / 2);
+	bottom: calc(var(--link--enlargement) / -2);
+	content: "";
+	left: calc(-1 * var(--link--enlargement));
+	pointer-events: none;
+	position: absolute;
+	right: calc(-1 * var(--link--enlargement));
+	top: calc(-1 * var(--link--enlargement) / 2);
+}
+
+body > nav > div > div > p > select {
+	margin-top: calc(var(--link--enlargement) / -2);
+}
+
+:root {
+	--typography--leading: 1.333;
+	--typography--leading--loose: 2;
+	--typography--leading--base: var(--typography--leading);
+	--typography--size: 1.6rem;
+	--margin: 2.4rem;
+	--margin--vertical: var(--margin);
+	--page--width: 100vw;
+	--divider--width: 0.1rem;
+	--color: black;
+	--color--background: white;
+	--color--links: #e42a1d;
+	--color--links--reverse: white;
+	--color--highlight: hsl(0, 0%, 0%, 3.333%);
+	--color--highlight--reverse: hsl(0, 0%, 100%, 6.666%);
+	--link--color: var(--color--links);
+	--link--enlargement: 0.4rem;
+	--link--highlight: var(--color--highlight);
+	--link--outline: 0.2rem;
+	--link--hover--opacity: 0.666;
+	--link--hover--transition: 100ms;
+	--alpha--inactive: 0.333;
+	scroll-behavior: smooth;
+}
+
+@media (any-hover: hover) {
+	:root:hover {
+		--color--highlight: hsl(0, 0%, 0%, 5%);
+		--color--highlight--reverse: hsl(0, 0%, 100%, 10%);
+	}
+}
+
+@media (max-width: 23.375em) {
+	:root {
+		--typography--size: calc((16/375) * 100vw);
+	}
+}
+
+@media (min-width: 48em) and (min-height: 30em),
+(min-width: 58.125em) {
+	:root {
+		--typography--size: 1.8rem;
+		--margin: 3.6rem;
+		--link--enlargement: 0.8rem;
+	}
+}
+
+@media (min-width: 64em) {
+	:root {
+		--margin: 4.8rem;
+		--page--width: 102.4rem;
+	}
+}
+
+@media (orientation: landscape),
+(min-width: 35.5em) and (min-height: 30em),
+(min-width: 58.125em) {
+	:root {
+		--margin--vertical: calc(var(--margin) * 0.75);
+	}
+}
+
+@media (min-height: 64em) {
+	:root {
+		--margin--vertical: var(--margin);
+	}
+}
+
+body > main,
+body > nav > div {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: var(--page--width);
+	padding-left: var(--margin);
+	padding-right: var(--margin);
+	width: 100%;
+}
+
+body.class,
+body.index {
+	--color--background--parent: var(--color--background);
+	--link--color: var(--color--links--reverse);
+	--link--highlight: var(--color--highlight--reverse);
+	background-color: var(--color--links);
+}
+
+body.class > *,
+body.index > * {
+	--color: var(--color--background--parent);
+	--color--background: var(--color--links);
+}
+
+body .icon--wingdings,
+body > main > header > address > div > p > a[href*=".pdf"]:after,
+body > main > article .link-only > a[href*=".pdf"]:after,
+body > main > article .link-only > p > a[href*=".pdf"]:after,
+body > main > header > address > div > p > a[href*="courses.newschool.edu"]:after,
+body > main > article .link-only > a[href*="courses.newschool.edu"]:after,
+body > main > article .link-only > p > a[href*="courses.newschool.edu"]:after,
+body > main > header > address > div > p > a[href*="docs.google.com"]:after,
+body > main > article .link-only > a[href*="docs.google.com"]:after,
+body > main > article .link-only > p > a[href*="docs.google.com"]:after,
+body > main > header > address > div > p > a[href*="drive.google.com"]:after,
+body > main > article .link-only > a[href*="drive.google.com"]:after,
+body > main > article .link-only > p > a[href*="drive.google.com"]:after,
+body > main > header > address > div > p > a[href*="eric.young.li"]:after,
+body > main > article .link-only > a[href*="eric.young.li"]:after,
+body > main > article .link-only > p > a[href*="eric.young.li"]:after,
+body > main > header > address > div > p > a[href*="github.com"]:after,
+body > main > article .link-only > a[href*="github.com"]:after,
+body > main > article .link-only > p > a[href*="github.com"]:after,
+body > main > header > address > div > p > a[href*="mailto:"]:after,
+body > main > article .link-only > a[href*="mailto:"]:after,
+body > main > article .link-only > p > a[href*="mailto:"]:after,
+body > main > header > address > div > p > a[href*="michaelfehrenbach.com"]:after,
+body > main > article .link-only > a[href*="michaelfehrenbach.com"]:after,
+body > main > article .link-only > p > a[href*="michaelfehrenbach.com"]:after,
+body > main > header > address > div > p > a[href*="mpscd.parsons.edu"]:after,
+body > main > article .link-only > a[href*="mpscd.parsons.edu"]:after,
+body > main > article .link-only > p > a[href*="mpscd.parsons.edu"]:after,
+body > main > header > address > div > p > a[href*="slack.com"]:after,
+body > main > article .link-only > a[href*="slack.com"]:after,
+body > main > article .link-only > p > a[href*="slack.com"]:after,
+body > main > header > address > div > p > a[href*=syllabus]:after,
+body > main > article .link-only > a[href*=syllabus]:after,
+body > main > article .link-only > p > a[href*=syllabus]:after,
+body > main > header > address > div > p > a[href*="zoom.us"]:after,
+body > main > article .link-only > a[href*="zoom.us"]:after,
+body > main > article .link-only > p > a[href*="zoom.us"]:after,
+body > main > article blockquote.callout[icon]:before,
+body .icon--sf,
+body > main > header > address > div > p > a:after,
+body > main > article .link-only > a:after,
+body > main > article .link-only > p > a:after,
+body > main > article details > summary > p:after,
+body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child:after,
+body > main > header > ul li a:after {
+	--icon--gap: 0.333em;
+	display: inline-block;
+	height: 1em;
+	font-weight: var(--typography--weight);
+	margin-left: var(--icon--gap);
+	transform: translateY(var(--icon--shift, 0rem)) scale(var(--icon--scale, 1));
+}
+
+body .center--x.icon--wingdings,
+body > main > header > address > div > p > a.center--x[href*=".pdf"]:after,
+body > main > article .link-only > a.center--x[href*=".pdf"]:after,
+body > main > article .link-only > p > a.center--x[href*=".pdf"]:after,
+body > main > header > address > div > p > a.center--x[href*="courses.newschool.edu"]:after,
+body > main > article .link-only > a.center--x[href*="courses.newschool.edu"]:after,
+body > main > article .link-only > p > a.center--x[href*="courses.newschool.edu"]:after,
+body > main > header > address > div > p > a.center--x[href*="docs.google.com"]:after,
+body > main > article .link-only > a.center--x[href*="docs.google.com"]:after,
+body > main > article .link-only > p > a.center--x[href*="docs.google.com"]:after,
+body > main > header > address > div > p > a.center--x[href*="drive.google.com"]:after,
+body > main > article .link-only > a.center--x[href*="drive.google.com"]:after,
+body > main > article .link-only > p > a.center--x[href*="drive.google.com"]:after,
+body > main > header > address > div > p > a.center--x[href*="eric.young.li"]:after,
+body > main > article .link-only > a.center--x[href*="eric.young.li"]:after,
+body > main > article .link-only > p > a.center--x[href*="eric.young.li"]:after,
+body > main > header > address > div > p > a.center--x[href*="github.com"]:after,
+body > main > article .link-only > a.center--x[href*="github.com"]:after,
+body > main > article .link-only > p > a.center--x[href*="github.com"]:after,
+body > main > header > address > div > p > a.center--x[href*="mailto:"]:after,
+body > main > article .link-only > a.center--x[href*="mailto:"]:after,
+body > main > article .link-only > p > a.center--x[href*="mailto:"]:after,
+body > main > header > address > div > p > a.center--x[href*="michaelfehrenbach.com"]:after,
+body > main > article .link-only > a.center--x[href*="michaelfehrenbach.com"]:after,
+body > main > article .link-only > p > a.center--x[href*="michaelfehrenbach.com"]:after,
+body > main > header > address > div > p > a.center--x[href*="mpscd.parsons.edu"]:after,
+body > main > article .link-only > a.center--x[href*="mpscd.parsons.edu"]:after,
+body > main > article .link-only > p > a.center--x[href*="mpscd.parsons.edu"]:after,
+body > main > header > address > div > p > a.center--x[href*="slack.com"]:after,
+body > main > article .link-only > a.center--x[href*="slack.com"]:after,
+body > main > article .link-only > p > a.center--x[href*="slack.com"]:after,
+body > main > header > address > div > p > a.center--x[href*=syllabus]:after,
+body > main > article .link-only > a.center--x[href*=syllabus]:after,
+body > main > article .link-only > p > a.center--x[href*=syllabus]:after,
+body > main > header > address > div > p > a.center--x[href*="zoom.us"]:after,
+body > main > article .link-only > a.center--x[href*="zoom.us"]:after,
+body > main > article .link-only > p > a.center--x[href*="zoom.us"]:after,
+body > main > header > address > div > p > a.icon--wingdings:after,
+body > main > header > address > div > p > a[href*=".pdf"]:after,
+body > main > article body > main > header > address > div > p.link-only > a[href*=".pdf"]:after,
+body > main > article body > main > header > address > div.link-only > p > a[href*=".pdf"]:after,
+body > main > header > address > div > p > a[href*="courses.newschool.edu"]:after,
+body > main > article body > main > header > address > div > p.link-only > a[href*="courses.newschool.edu"]:after,
+body > main > article body > main > header > address > div.link-only > p > a[href*="courses.newschool.edu"]:after,
+body > main > header > address > div > p > a[href*="docs.google.com"]:after,
+body > main > article body > main > header > address > div > p.link-only > a[href*="docs.google.com"]:after,
+body > main > article body > main > header > address > div.link-only > p > a[href*="docs.google.com"]:after,
+body > main > header > address > div > p > a[href*="drive.google.com"]:after,
+body > main > article body > main > header > address > div > p.link-only > a[href*="drive.google.com"]:after,
+body > main > article body > main > header > address > div.link-only > p > a[href*="drive.google.com"]:after,
+body > main > header > address > div > p > a[href*="eric.young.li"]:after,
+body > main > article body > main > header > address > div > p.link-only > a[href*="eric.young.li"]:after,
+body > main > article body > main > header > address > div.link-only > p > a[href*="eric.young.li"]:after,
+body > main > header > address > div > p > a[href*="github.com"]:after,
+body > main > article body > main > header > address > div > p.link-only > a[href*="github.com"]:after,
+body > main > article body > main > header > address > div.link-only > p > a[href*="github.com"]:after,
+body > main > header > address > div > p > a[href*="mailto:"]:after,
+body > main > article body > main > header > address > div > p.link-only > a[href*="mailto:"]:after,
+body > main > article body > main > header > address > div.link-only > p > a[href*="mailto:"]:after,
+body > main > header > address > div > p > a[href*="michaelfehrenbach.com"]:after,
+body > main > article body > main > header > address > div > p.link-only > a[href*="michaelfehrenbach.com"]:after,
+body > main > article body > main > header > address > div.link-only > p > a[href*="michaelfehrenbach.com"]:after,
+body > main > header > address > div > p > a[href*="mpscd.parsons.edu"]:after,
+body > main > article body > main > header > address > div > p.link-only > a[href*="mpscd.parsons.edu"]:after,
+body > main > article body > main > header > address > div.link-only > p > a[href*="mpscd.parsons.edu"]:after,
+body > main > header > address > div > p > a[href*="slack.com"]:after,
+body > main > article body > main > header > address > div > p.link-only > a[href*="slack.com"]:after,
+body > main > article body > main > header > address > div.link-only > p > a[href*="slack.com"]:after,
+body > main > header > address > div > p > a[href*=syllabus]:after,
+body > main > article body > main > header > address > div > p.link-only > a[href*=syllabus]:after,
+body > main > article body > main > header > address > div.link-only > p > a[href*=syllabus]:after,
+body > main > header > address > div > p > a[href*="zoom.us"]:after,
+body > main > article body > main > header > address > div > p.link-only > a[href*="zoom.us"]:after,
+body > main > article body > main > header > address > div.link-only > p > a[href*="zoom.us"]:after,
+body > main > article details > summary > p.icon--wingdings:after,
+body > main > article blockquote.center--x.callout[icon]:before,
+body .center--x.icon--sf,
+body > main > header > address > div > p > a.center--x:after,
+body > main > header > address > div > p > a.icon--sf:after,
+body > main > header > address > div > p > a:after,
+body > main > article body > main > header > address > div > p.link-only > a:after,
+body > main > article .link-only > a:after,
+body > main > article .link-only > p > a:after,
+body > main > article details > summary > p.icon--sf:after,
+body > main > article details > summary > p.center--x:after,
+body > main > article details > summary > p:after,
+body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child:after,
+body > main > header > ul li a.center--x:after,
+body > main > header > ul li body > main > header > address > div > p > a:after,
+body > main > article body > main > header > ul li .link-only > a:after {
+	--icon--shift: 0.066em;
+}
+
+body h1,
+body h2,
+body h3,
+body h4 {
+	scroll-margin-top: calc(var(--margin--vertical) * 3);
+	max-width: 40ch;
+}
+
+body .icon--wingdings,
+body > main > header > address > div > p > a[href*=".pdf"]:after,
+body > main > article .link-only > a[href*=".pdf"]:after,
+body > main > article .link-only > p > a[href*=".pdf"]:after,
+body > main > header > address > div > p > a[href*="courses.newschool.edu"]:after,
+body > main > article .link-only > a[href*="courses.newschool.edu"]:after,
+body > main > article .link-only > p > a[href*="courses.newschool.edu"]:after,
+body > main > header > address > div > p > a[href*="docs.google.com"]:after,
+body > main > article .link-only > a[href*="docs.google.com"]:after,
+body > main > article .link-only > p > a[href*="docs.google.com"]:after,
+body > main > header > address > div > p > a[href*="drive.google.com"]:after,
+body > main > article .link-only > a[href*="drive.google.com"]:after,
+body > main > article .link-only > p > a[href*="drive.google.com"]:after,
+body > main > header > address > div > p > a[href*="eric.young.li"]:after,
+body > main > article .link-only > a[href*="eric.young.li"]:after,
+body > main > article .link-only > p > a[href*="eric.young.li"]:after,
+body > main > header > address > div > p > a[href*="github.com"]:after,
+body > main > article .link-only > a[href*="github.com"]:after,
+body > main > article .link-only > p > a[href*="github.com"]:after,
+body > main > header > address > div > p > a[href*="mailto:"]:after,
+body > main > article .link-only > a[href*="mailto:"]:after,
+body > main > article .link-only > p > a[href*="mailto:"]:after,
+body > main > header > address > div > p > a[href*="michaelfehrenbach.com"]:after,
+body > main > article .link-only > a[href*="michaelfehrenbach.com"]:after,
+body > main > article .link-only > p > a[href*="michaelfehrenbach.com"]:after,
+body > main > header > address > div > p > a[href*="mpscd.parsons.edu"]:after,
+body > main > article .link-only > a[href*="mpscd.parsons.edu"]:after,
+body > main > article .link-only > p > a[href*="mpscd.parsons.edu"]:after,
+body > main > header > address > div > p > a[href*="slack.com"]:after,
+body > main > article .link-only > a[href*="slack.com"]:after,
+body > main > article .link-only > p > a[href*="slack.com"]:after,
+body > main > header > address > div > p > a[href*=syllabus]:after,
+body > main > article .link-only > a[href*=syllabus]:after,
+body > main > article .link-only > p > a[href*=syllabus]:after,
+body > main > header > address > div > p > a[href*="zoom.us"]:after,
+body > main > article .link-only > a[href*="zoom.us"]:after,
+body > main > article .link-only > p > a[href*="zoom.us"]:after,
+body > main > article blockquote.callout[icon]:before {
+	--icon--scale: 1.333;
+}
+
+body > nav {
+	background-color: var(--color--background);
+	margin-bottom: calc(var(--typography--cap) * -1);
+	overflow: hidden;
+	padding-bottom: var(--typography--cap);
+	padding-top: var(--margin--vertical);
+	position: sticky;
+	top: calc(var(--typography--cap) - var(--margin--vertical));
+	z-index: 1;
+}
+
+body > nav > div {
+	align-items: end;
+	display: grid;
+	gap: var(--margin);
+	grid-template-columns: max-content minmax(0, 1fr) max-content;
+}
+
+body > nav > div > a > p {
+	color: var(--link--color);
+}
+
+body > nav > div > div {
+	--color: var(--color--links);
+	line-height: initial;
+}
+
+body > nav > div > div > p {
+	color: transparent;
+	padding-right: 1em;
+	pointer-events: none;
+	position: relative;
+	white-space: nowrap;
+	width: fit-content;
+}
+
+body > nav > div > div > p > select {
+	color: var(--color);
+	left: 0;
+	max-width: calc(100% + var(--link--enlargement) * 2);
+	overflow: hidden;
+	padding-right: 1em;
+	pointer-events: auto;
+	position: absolute;
+	text-overflow: ellipsis;
+}
+
+@media (any-hover: hover) {
+	body > nav > div > div > p > select:hover:hover + span {
+		filter: opacity(var(--link--hover--opacity));
+	}
+}
+
+body > nav > div > div > p > span:last-child {
+	color: var(--color);
+	font-weight: 100;
+	position: absolute;
+	right: 0;
+	text-align: right;
+	width: 1em;
+	transition-duration: var(--link--hover--transition);
+	transition-property: filter;
+	transition-timing-function: linear;
+}
+
+body > main {
+	padding-top: calc(var(--margin--vertical) * 4);
+	padding-bottom: calc(var(--margin--vertical) * 4);
+}
+
+body > main > header {
+	column-gap: var(--margin);
+	display: grid;
+	margin-bottom: calc(var(--margin--vertical) * 4);
+	padding-bottom: var(--margin--vertical);
+	row-gap: var(--margin--vertical);
+}
+
+@media (min-width: 35.5em) {
+	body > main > header {
+		grid-template-rows: min-content 1fr;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
+	body > main > header > h1 {
+		grid-column: 1/span 2;
+	}
+
+	body > main > header > h1:only-child {
+		grid-column: 1/span 3;
+	}
+}
+
+@media (min-width: 35.5em) {
+	body > main > header > p {
+		grid-column: 1/span 2;
+	}
+}
+
+body > main > header > address,
+body > main > header > ul {
+	display: flex;
+	flex-direction: column;
+	gap: var(--typography--between);
+	margin-top: var(--margin--vertical);
+}
+
+@media (min-width: 35.5em) {
+
+	body > main > header > address,
+	body > main > header > ul {
+		grid-row: 1/span 2;
+		grid-column: 3/span 1;
+		margin-top: initial;
+	}
+}
+
+@media (min-width: 35.5em) {
+	body > main > header > h1 + ul {
+		grid-row: 1/span 1;
+	}
+}
+
+body > main > header > address > div {
+	margin-top: var(--margin--vertical);
+}
+
+@media (min-width: 35.5em) {
+	body > main > header > address > div {
+		margin-top: auto;
+	}
+}
+
+body > main > header > address > div > p:not(:first-child) {
+	margin-top: var(--typography--between);
+}
+
+body > main > header > ul {
+	--typography--leading: var(--typography--leading--loose);
+}
+
+@media (min-width: 35.5em) {
+	body > main > header > ul {
+		--typography--leading: var(--typography--leading--base);
+	}
+}
+
+body > main > header > ul li {
+	color: var(--color--links);
+	white-space: nowrap;
+	width: fit-content;
+}
+
+body > main > header > ul li a {
+	display: block;
+	margin-bottom: initial;
+	margin-top: initial;
+	max-width: calc(100% + var(--link--enlargement) * 2);
+	overflow: hidden;
+	padding-bottom: initial;
+	padding-right: calc(var(--link--enlargement) + 1.05em);
+	padding-top: initial;
+	position: relative;
+	text-overflow: ellipsis;
+}
+
+body > main > header > ul li a:after {
+	--icon--shift: 0.05em;
+	content: "↓";
+	position: absolute;
+	right: var(--link--enlargement);
+}
+
+body > main > article {
+	--typography--leading-shoulder: calc(var(--typography--font-size) * (var(--typography--leading) + var(--typography--shoulder) * 2));
+}
+
+body > main > article h1 {
+	display: none;
+}
+
+body > main > article > *:not(:first-child) {
+	margin-top: var(--margin--top, var(--typography--leading-shoulder));
+}
+
+body > main > article h2 {
+	--margin--top: calc(var(--margin--vertical) * 4);
+}
+
+body > main > article h2 + * {
+	--margin--top: calc(var(--margin--vertical) * 2);
+	--margin--top--previous: calc(var(--margin--vertical) * 4);
+}
+
+body > main > article h2 + * + * {
+	--margin--top--previous: calc(var(--margin--vertical) * 2);
+}
+
+body > main > article h3 {
+	--margin--top: calc(var(--margin--vertical) * 2);
+}
+
+body > main > article .two-above {
+	--margin--top: calc(var(--margin--vertical) * 2);
+}
+
+body > main > article .two-above + * {
+	--margin--top--previous: calc(var(--margin--vertical) * 2);
+}
+
+body > main > article .two-below + * {
+	--margin--top: calc(var(--margin--vertical) * 2);
+}
+
+body > main > article .four-above {
+	--margin--top: calc(var(--margin--vertical) * 4);
+}
+
+body > main > article .four-above + * {
+	--margin--top--previous: calc(var(--margin--vertical) * 4);
+}
+
+body > main > article .four-below + * {
+	--margin--top: calc(var(--margin--vertical) * 4);
+}
+
+body > main > article .faded {
+	opacity: 0.4;
+}
+
+body > main > article blockquote {
+	--typography--size: var(--typography--size--h3);
+	font-style: italic;
+}
+
+body > main > article blockquote.callout {
+	--typography--size: var(--typography--size--base);
+	border-color: var(--color);
+	border-style: solid;
+	border-width: var(--divider--width);
+	display: flex;
+	font-style: normal;
+	padding: calc(var(--typography--cap) * 2);
+}
+
+body > main > article blockquote.callout[icon]:before {
+	color: var(--color);
+	content: attr(icon);
+	height: 1em;
+	margin-left: initial;
+	margin-right: calc(var(--typography--cap) * 2);
+	margin-top: var(--typography--margin--top);
+	text-align: center;
+	width: 1em;
+}
+
+body > main > article blockquote.pull-quote {
+	border-left-color: var(--color);
+	border-left-style: solid;
+	border-left-width: var(--divider--width);
+	padding-left: var(--margin);
+	padding-right: var(--margin);
+}
+
+body > main > article blockquote.pull-quote > blockquote:last-child {
+	--typography--size: var(--typography--size--base);
+	font-style: normal;
+	margin-top: var(--margin);
+}
+
+body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child:after {
+	content: "↗";
+}
+
+body > main > article a {
+	--color: var(--link--color);
+	color: var(--link--color);
+}
+
+body > main > article p {
+	max-width: 75ch;
+}
+
+body > main > article p strong {
+	font-weight: var(--typography--weight);
+}
+
+body > main > article ul,
+body > main > article ol {
+	display: grid;
+	gap: var(--typography--between);
+	list-style-position: outside;
+}
+
+body > main > article ul > li,
+body > main > article ol > li {
+	display: list-item;
+	margin-top: var(--typography--margin--top);
+	padding-left: 0.5em;
+}
+
+@supports (-webkit-hyphens: none) {
+
+	body > main > article ul > li,
+	body > main > article ol > li {
+		padding-left: 0.4em;
+	}
+}
+
+body > main > article ul > li:before,
+body > main > article ol > li:before {
+	display: none;
+}
+
+body > main > article ul > li > h3,
+body > main > article ul > li > h4,
+body > main > article ul > li > p,
+body > main > article ol > li > h3,
+body > main > article ol > li > h4,
+body > main > article ol > li > p {
+	max-width: 65ch;
+	padding-left: calc(var(--typography--size--base) * 0.25);
+}
+
+body > main > article ul > li > h3:first-child:before,
+body > main > article ul > li > h3:last-child:after,
+body > main > article ul > li > h4:first-child:before,
+body > main > article ul > li > h4:last-child:after,
+body > main > article ul > li > p:first-child:before,
+body > main > article ul > li > p:last-child:after,
+body > main > article ol > li > h3:first-child:before,
+body > main > article ol > li > h3:last-child:after,
+body > main > article ol > li > h4:first-child:before,
+body > main > article ol > li > h4:last-child:after,
+body > main > article ol > li > p:first-child:before,
+body > main > article ol > li > p:last-child:after {
+	display: none;
+}
+
+body > main > article ul > li > h3:not(:first-child),
+body > main > article ul > li > h4:not(:first-child),
+body > main > article ul > li > p:not(:first-child),
+body > main > article ol > li > h3:not(:first-child),
+body > main > article ol > li > h4:not(:first-child),
+body > main > article ol > li > p:not(:first-child) {
+	margin-top: var(--typography--leading-shoulder);
+}
+
+body > main > article ul > li > h3:not(:only-child):last-child,
+body > main > article ul > li > h4:not(:only-child):last-child,
+body > main > article ul > li > p:not(:only-child):last-child,
+body > main > article ol > li > h3:not(:only-child):last-child,
+body > main > article ol > li > h4:not(:only-child):last-child,
+body > main > article ol > li > p:not(:only-child):last-child {
+	margin-bottom: calc(var(--typography--font-size) * var(--typography--leading));
+}
+
+body > main > article ul > li:not(:first-child) > *:first-child,
+body > main > article ol > li:not(:first-child) > *:first-child {
+	margin-top: calc(var(--typography--font-size) * var(--typography--leading));
+}
+
+body > main > article ul {
+	list-style-type: disc;
+	padding-left: 0.8em;
+}
+
+@supports (-webkit-hyphens: none) {
+	body > main > article ul {
+		padding-left: 1em;
+	}
+}
+
+body > main > article ol {
+	list-style-type: decimal;
+	padding-left: 0.95em;
+}
+
+@supports (-webkit-hyphens: none) {
+	body > main > article ol {
+		padding-left: 1.25em;
+	}
+}
+
+body > main > article table {
+	width: fit-content;
+}
+
+body > main > article table tr:not(:first-child) > td {
+	border-top: var(--typography--leading-shoulder) solid transparent;
+}
+
+body > main > article table tr > td:not(:first-child) {
+	border-left: var(--margin) solid transparent;
+}
+
+body > main > article table.row-header td:first-child {
+	--typography--size: var(--typography--size--h4);
+}
+
+body > main > article details > summary {
+	--color: var(--color--links);
+}
+
+body > main > article details > summary > p {
+	margin-bottom: var(--typography--margin--bottom);
+}
+
+body > main > article details > summary > p:after {
+	--icon--scale: 1.25;
+	content: "+";
+	font-weight: 200;
+	margin-bottom: initial;
+	text-align: center;
+	transform-origin: bottom;
+	visibility: visible;
+	width: 1em;
+}
+
+body > main > article details[open] > summary > p:after {
+	content: "–";
+}
+
+body > main > article details > div {
+	margin-top: var(--typography--leading-shoulder);
+}
+
+body > main > article details + * {
+	--margin--top: calc(var(--margin--vertical) * 2);
+}
+
+body > main > article figure {
+	--margin--top: calc(var(--margin--vertical) * 2);
+	display: flex;
+	flex-direction: column;
+	width: fit-content;
+}
+
+body > main > article figure > img {
+	max-height: var(--max--height, 66vh);
+	object-fit: contain;
+	object-position: left;
+}
+
+body > main > article figure > figcaption {
+	--typography--leading: var(--typography--leading--tight);
+	margin-top: var(--typography--between);
+}
+
+body > main > article figure > figcaption > p > a:only-child span:not(._) {
+	margin-left: initial;
+}
+
+body > main > article figure + * {
+	--margin--top: calc(var(--margin--vertical) * 2);
+	--margin--top--previous: calc(var(--margin--vertical) * 2);
+}
+
+body > main > article figure + * + * {
+	--margin--top--previous: calc(var(--margin--vertical) * 2);
+}
+
+body > main > article aside {
+	--margin--top: calc(var(--margin--vertical) * 2);
+}
+
+body > main > article aside > h3 {
+	margin-bottom: var(--margin--vertical);
+}
+
+body > main > article aside > menu {
+	--typography--leading: var(--typography--leading--loose);
+	display: flex;
+	flex-direction: column;
+	gap: var(--typography--between);
+}
+
+@media (min-width: 35.5em) {
+	body > main > article aside > menu {
+		--typography--leading: var(--typography--leading--base);
+	}
+}
+
+body > main > article aside > figure:not(:first-child) {
+	margin-top: var(--typography--between);
+}
+
+body > main > article aside + * {
+	--margin--top: calc(var(--margin--vertical) * 2);
+}
+
+@media (min-width: 35.5em) {
+	body > main > article aside + * {
+		--margin--top: initial;
+	}
+}
+
+body > main > article hr,
+body > main > article blockquote {
+	--margin--top: calc(var(--margin--vertical) * 4);
+}
+
+body > main > article hr + *,
+body > main > article blockquote + * {
+	--margin--top: calc(var(--margin--vertical) * 4);
+	--margin--top--previous: calc(var(--margin--vertical) * 4);
+}
+
+body > main > article hr + * + *,
+body > main > article blockquote + * + * {
+	--margin--top--previous: calc(var(--margin--vertical) * 4);
+}
+
+@media (min-width: 35.5em) {
+	body > main > article {
+		align-items: start;
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		column-gap: var(--margin);
+	}
+
+	body > main > article > * {
+		grid-column: 1/span 3;
+	}
+
+	body > main > article .left {
+		grid-column: 1/span 2;
+		padding-right: var(--margin);
+	}
+
+	body > main > article .left:first-child + .right,
+	body > main > article .left:first-child + aside {
+		--margin--top: 0rem;
+	}
+
+	body > main > article .left:not(:first-child) + .right,
+	body > main > article .left:not(:first-child) + aside {
+		--margin--top: var(--margin--top--previous);
+	}
+
+	body > main > article .right,
+	body > main > article aside {
+		grid-column: 3/span 1;
+	}
+
+	body > main > article .left[rows="1"],
+	body > main > article .right[rows="1"],
+	body > main > article aside[rows="1"] {
+		grid-row: span 1;
+	}
+
+	body > main > article .left[rows="2"],
+	body > main > article .right[rows="2"],
+	body > main > article aside[rows="2"] {
+		grid-row: span 2;
+	}
+
+	body > main > article .left[rows="3"],
+	body > main > article .right[rows="3"],
+	body > main > article aside[rows="3"] {
+		grid-row: span 3;
+	}
+
+	body > main > article .left[rows="4"],
+	body > main > article .right[rows="4"],
+	body > main > article aside[rows="4"] {
+		grid-row: span 4;
+	}
+
+	body > main > article .left[rows="5"],
+	body > main > article .right[rows="5"],
+	body > main > article aside[rows="5"] {
+		grid-row: span 5;
+	}
+
+	body > main > article .left[rows="6"],
+	body > main > article .right[rows="6"],
+	body > main > article aside[rows="6"] {
+		grid-row: span 6;
+	}
+
+	body > main > article .left[rows="7"],
+	body > main > article .right[rows="7"],
+	body > main > article aside[rows="7"] {
+		grid-row: span 7;
+	}
+
+	body > main > article .left[rows="8"],
+	body > main > article .right[rows="8"],
+	body > main > article aside[rows="8"] {
+		grid-row: span 8;
+	}
+
+	body > main > article .left[rows="9"],
+	body > main > article .right[rows="9"],
+	body > main > article aside[rows="9"] {
+		grid-row: span 9;
+	}
+
+	body > main > article .left[rows="10"],
+	body > main > article .right[rows="10"],
+	body > main > article aside[rows="10"] {
+		grid-row: span 10;
+	}
+
+	body > main > article .left[rows="11"],
+	body > main > article .right[rows="11"],
+	body > main > article aside[rows="11"] {
+		grid-row: span 11;
+	}
+
+	body > main > article .left[rows="12"],
+	body > main > article .right[rows="12"],
+	body > main > article aside[rows="12"] {
+		grid-row: span 12;
+	}
+}
+
+body > main > footer {
+	margin-top: max(var(--margin--vertical) * 4, 50vh - var(--margin--vertical) * 4);
+}
+
+body > main > footer > div {
+	--color: var(--link--color);
+	align-items: end;
+	display: flex;
+	gap: calc(var(--margin) / 2);
+	justify-content: space-between;
+	margin-top: var(--margin--vertical);
+}
+
+@media (min-width: 35.5em) {
+	body > main > footer > div {
+		gap: var(--margin);
+	}
+}
+
+body > main > footer > div > a {
+	white-space: nowrap;
+}
+
+body.index > main > nav {
+	column-gap: var(--margin);
+	display: grid;
+	margin-top: calc(var(--margin--vertical) * 4);
+	row-gap: calc(var(--margin--vertical) * 2);
+}
+
+@media (min-width: 35.5em) {
+	body.index > main > nav {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+body.index > main > nav aside > menu {
+	--typography--leading: var(--typography--leading--loose);
+	display: flex;
+	flex-direction: column;
+	gap: var(--typography--between);
+	margin-top: var(--margin--vertical);
+}
+
+@media (min-width: 35.5em) {
+	body.index > main > nav aside > menu {
+		--typography--leading: var(--typography--leading--base);
+	}
+}
+
+body.class > main > article:first-child {
+	margin-top: calc(var(--margin--vertical) * -3);
+	padding-top: calc(var(--margin--vertical) * 2);
+}
+
+body.class > main > article > button {
+	grid-column: 1;
+}
+
+body.class > main > article > ul {
+	--groups: 2;
+	column-gap: var(--margin);
+	display: grid;
+	grid-auto-columns: minmax(0, 1fr);
+	grid-auto-flow: column;
+	grid-template-rows: repeat(calc(var(--count) / var(--groups)), min-content);
+	list-style: initial;
+	padding: initial;
+}
+
+@media (min-width: 35.5em) {
+	body.class > main > article > ul {
+		--margin--top: 0rem;
+		grid-column: 2/span 2;
+	}
+}
+
+body.class > main > article > ul > li {
+	display: block;
+	padding: initial;
+}
+
+body > main > header > address > div > p > a:after,
+body > main > article .link-only > a:after,
+body > main > article .link-only > p > a:after {
+	content: var(--icon);
+}
+
+body > main > header > address > div > p > a[href^="#"],
+body > main > article .link-only > a[href^="#"],
+body > main > article .link-only > p > a[href^="#"] {
+	--icon: "↓";
+}
+
+body > main > header > address > div > p > a[href^="/"],
+body > main > article .link-only > a[href^="/"],
+body > main > article .link-only > p > a[href^="/"] {
+	--icon: "→";
+}
+
+body > main > header > address > div > p > a[href^=http],
+body > main > article .link-only > a[href^=http],
+body > main > article .link-only > p > a[href^=http] {
+	--icon: "↗";
+}
+
+body > main > header > address > div > p > a[href*=".pdf"]:after,
+body > main > article .link-only > a[href*=".pdf"]:after,
+body > main > article .link-only > p > a[href*=".pdf"]:after,
+body > main > header > address > div > p > a[href*="courses.newschool.edu"]:after,
+body > main > article .link-only > a[href*="courses.newschool.edu"]:after,
+body > main > article .link-only > p > a[href*="courses.newschool.edu"]:after,
+body > main > header > address > div > p > a[href*="docs.google.com"]:after,
+body > main > article .link-only > a[href*="docs.google.com"]:after,
+body > main > article .link-only > p > a[href*="docs.google.com"]:after,
+body > main > header > address > div > p > a[href*="drive.google.com"]:after,
+body > main > article .link-only > a[href*="drive.google.com"]:after,
+body > main > article .link-only > p > a[href*="drive.google.com"]:after,
+body > main > header > address > div > p > a[href*="eric.young.li"]:after,
+body > main > article .link-only > a[href*="eric.young.li"]:after,
+body > main > article .link-only > p > a[href*="eric.young.li"]:after,
+body > main > header > address > div > p > a[href*="github.com"]:after,
+body > main > article .link-only > a[href*="github.com"]:after,
+body > main > article .link-only > p > a[href*="github.com"]:after,
+body > main > header > address > div > p > a[href*="mailto:"]:after,
+body > main > article .link-only > a[href*="mailto:"]:after,
+body > main > article .link-only > p > a[href*="mailto:"]:after,
+body > main > header > address > div > p > a[href*="michaelfehrenbach.com"]:after,
+body > main > article .link-only > a[href*="michaelfehrenbach.com"]:after,
+body > main > article .link-only > p > a[href*="michaelfehrenbach.com"]:after,
+body > main > header > address > div > p > a[href*="mpscd.parsons.edu"]:after,
+body > main > article .link-only > a[href*="mpscd.parsons.edu"]:after,
+body > main > article .link-only > p > a[href*="mpscd.parsons.edu"]:after,
+body > main > header > address > div > p > a[href*="slack.com"]:after,
+body > main > article .link-only > a[href*="slack.com"]:after,
+body > main > article .link-only > p > a[href*="slack.com"]:after,
+body > main > header > address > div > p > a[href*=syllabus]:after,
+body > main > article .link-only > a[href*=syllabus]:after,
+body > main > article .link-only > p > a[href*=syllabus]:after,
+body > main > header > address > div > p > a[href*="zoom.us"]:after,
+body > main > article .link-only > a[href*="zoom.us"]:after,
+body > main > article .link-only > p > a[href*="zoom.us"]:after {
+	--icon--gap: 0.5em;
+}
+
+body > main > header > address > div > p > a[href*=".pdf"]:after,
+body > main > article .link-only > a[href*=".pdf"]:after,
+body > main > article .link-only > p > a[href*=".pdf"]:after {
+	--icon: "2";
+	--icon--scale: 1.2;
+}
+
+body > main > header > address > div > p > a[href*="courses.newschool.edu"]:after,
+body > main > article .link-only > a[href*="courses.newschool.edu"]:after,
+body > main > article .link-only > p > a[href*="courses.newschool.edu"]:after {
+	--icon: "5";
+	--icon--scale: 1.4;
+}
+
+body > main > header > address > div > p > a[href*="docs.google.com"]:after,
+body > main > article .link-only > a[href*="docs.google.com"]:after,
+body > main > article .link-only > p > a[href*="docs.google.com"]:after {
+	--icon: "!";
+	--icon--scale: 1.1;
+}
+
+body > main > header > address > div > p > a[href*="drive.google.com"]:after,
+body > main > article .link-only > a[href*="drive.google.com"]:after,
+body > main > article .link-only > p > a[href*="drive.google.com"]:after {
+	--icon: "1";
+	--icon--scale: 1;
+}
+
+body > main > header > address > div > p > a[href*="eric.young.li"]:after,
+body > main > article .link-only > a[href*="eric.young.li"]:after,
+body > main > article .link-only > p > a[href*="eric.young.li"]:after {
+	--icon: "C";
+	--icon--scale: 1.5;
+}
+
+body > main > header > address > div > p > a[href*="github.com"]:after,
+body > main > article .link-only > a[href*="github.com"]:after,
+body > main > article .link-only > p > a[href*="github.com"]:after {
+	--icon: "<";
+}
+
+body > main > header > address > div > p > a[href*="mailto:"]:after,
+body > main > article .link-only > a[href*="mailto:"]:after,
+body > main > article .link-only > p > a[href*="mailto:"]:after {
+	--icon: "*";
+	--icon--scale: 1.1;
+}
+
+body > main > header > address > div > p > a[href*="michaelfehrenbach.com"]:after,
+body > main > article .link-only > a[href*="michaelfehrenbach.com"]:after,
+body > main > article .link-only > p > a[href*="michaelfehrenbach.com"]:after {
+	--icon: "A";
+	--icon--scale: 1.5;
+}
+
+body > main > header > address > div > p > a[href*="mpscd.parsons.edu"]:after,
+body > main > article .link-only > a[href*="mpscd.parsons.edu"]:after,
+body > main > article .link-only > p > a[href*="mpscd.parsons.edu"]:after {
+	--icon: "O";
+	--icon--scale: 1.1;
+}
+
+body > main > header > address > div > p > a[href*="slack.com"]:after,
+body > main > article .link-only > a[href*="slack.com"]:after,
+body > main > article .link-only > p > a[href*="slack.com"]:after {
+	--icon: "-";
+	--icon--scale: 1.2;
+}
+
+body > main > header > address > div > p > a[href*=syllabus]:after,
+body > main > article .link-only > a[href*=syllabus]:after,
+body > main > article .link-only > p > a[href*=syllabus]:after {
+	--icon: "&";
+	--icon--scale: 1.1;
+}
+
+body > main > header > address > div > p > a[href*="zoom.us"]:after,
+body > main > article .link-only > a[href*="zoom.us"]:after,
+body > main > article .link-only > p > a[href*="zoom.us"]:after {
+	--icon: ")";
+}

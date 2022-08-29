@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Class</title>
+		<link href="/assets/styles/common.css" rel="stylesheet">
+
+
+	</head>
+	<body class="class">
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<nav>
+			<div>
+				<a href="/">
+					<p>C1I</p>
+				</a>
+				<div>
+
+
+				</div>
+
+				<a href="">
+					<p>This week<span class="icon--sf">⤴</span></p>
+				</a>
+
+			</div>
+		</nav>
+
+
+		<main>
+
+			<article>
+
+				<button>
+					<p>Shuffle list<span class="icon--sf center--x">⇅</span></p>
+				</button>
+				<ul id="class" style="--count: 16;">
+
+					<li>Adrian</li>
+
+					<li>Alice</li>
+
+					<li>Amanda</li>
+
+					<li>Anushka</li>
+
+					<li>Aparna</li>
+
+					<li>Chris</li>
+
+					<li>Danielle</li>
+
+					<li>Destiny</li>
+
+					<li>Dev</li>
+
+					<li>Donovan</li>
+
+					<li>Erika</li>
+
+					<li>James</li>
+
+					<li>Jayna</li>
+
+					<li>Kuhu</li>
+
+					<li>Samarth</li>
+
+					<li>Thiha</li>
+
+				</ul>
+				<script>
+					const shuffleStudents = () => {
+						const students = document.getElementById('class')
+
+						for (index = 0; index < students.children.length; index++) {
+							students.appendChild(students.children[Math.random() * index | 0])
+						}
+					}
+
+					document.addEventListener('DOMContentLoaded', () => {
+						shuffleStudents()
+
+						const shuffle = document.querySelector('button')
+
+						shuffle.onclick = () => shuffleStudents()
+					})
+				</script>
+
+			</article>
+
+			<footer>
+				<div>
+					<a href="/">
+						<p><span class='C'>C</span><span class='o'>o</span><span class='r'>r</span><span class='e'>e</span><span class='space'> </span><span class='num1'>1</span><span class=':'>:</span><span class='space'> </span><span class='I'>I</span><span class='n'>n</span><span class='t'>t</span><span class='e'>e</span><span class='r'>r</span><span class='a'>a</span><span class='c'>c</span><span class='t'>t</span><span class='i'>i</span><span class='o'>o</span><span class='n'>n</span>, <span class='F'>F</span><span class='a'>a</span><span class='l'>l</span><span class='l'>l</span><span class='nbsp'> </span><span class='num2'>2</span><span class='num0'>0</span><span class='num2'>2</span><span class='num2'>2</span></p>
+					</a>
+					<a href="#">
+						<p><span class='T'>T</span><span class='o'>o</span><span class='p'>p</span><span class="icon--sf center--x">⤒</span></p>
+					</a>
+				</div>
+			</footer>
+
+		</main>
+
+	</body>
+</html>
