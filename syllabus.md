@@ -14,33 +14,33 @@ published: false
 
 
 
-*Core 1: Interaction* is designed to introduce students to programming as a creative medium—as a way of making and exploring. The coursework focuses on developing a vocabulary of interaction design principles which can then be applied across a range of platforms. Students are encouraged to experiment with various media, tools, and techniques, ultimately producing a portfolio of interactive and visual projects designed for the screen. An emphasis is placed on typography as it applies to a screen context, research-based problem solving and a learning-through-making approach to technical skill building. Historical and current interaction design precedents will be discussed.
+*Core 1: Interaction* is designed to introduce students to programming as a creative medium—as a way of making and exploring. The coursework focuses on developing a vocabulary of interaction design principles which can then be applied across a range of platforms. Students are encouraged to experiment with various media, tools, and techniques, ultimately producing a portfolio of interactive and visual projects designed for the screen. An emphasis is placed on typography as it applies to a screen context, research-based problem solving and a learning-through-making approach to technical skill building. Historical and current interaction design precedents will be discussed.
 
 
 
 ## Learning outcomes
 
-By the end of the semester, students will be able to:
+By the end of the semester, students will be able to:
 
-* Use a basic vocabulary of interactive media to both give and respond to critique productively.
+* Use a basic vocabulary of interactive media to both give and respond to critique productively.
 
-* Create compelling interactive experiences through more careful and inspired interpretation/translation of content (develop great design concepts).
+* Create compelling interactive experiences through more careful and inspired interpretation/translation of content (develop great design concepts).
 
-* Demonstrate an understanding of the iterative making process in interaction design, using incremental methods such as prototyping, user research, and evaluation to build toward more advanced work.
+* Demonstrate an understanding of the iterative making process in interaction design, using incremental methods such as prototyping, user research, and evaluation to build toward more advanced work.
 
-* Conceptualize a product, object, or experience for the web and realize it through coding.
+* Conceptualize a product, object, or experience for the web and realize it through coding.
 
-* Evaluate the difference in designing interfaces for different kinds of devices, their limitations and specific user situations including responsive websites and apps for mobile.
+* Evaluate the difference in designing interfaces for different kinds of devices, their limitations and specific user situations including responsive websites and apps for mobile.
 
 * Evaluate how typography and its variables are applied to interactive systems to facilitate orientation, support usability and create consistency.
 
 * Research historic and current design precedents to contextualize your own work.
 
-* Be able to archive and document work that is printed, on screen, or time-based in a reflective manner for learning portfolio.
+* Be able to archive and document work that is printed, on screen, or time-based in a reflective manner for learning portfolio.
 
 * Combine your artistic creativity with technology related to the internet.
 
-* Demonstrate a comprehension of skills, methods, techniques and processes to realize interactive systems, particularly systems for dealing with unpredictable, variable, and ever-changing content.
+* Demonstrate a comprehension of skills, methods, techniques and processes to realize interactive systems, particularly systems for dealing with unpredictable, variable, and ever-changing content.
 
 
 
@@ -52,10 +52,10 @@ By the end of the semester, students will be able to:
 
 #### Weeks 1–4
 
-The first segment of the course will focus on the tools and concepts required for building interactive experiences. We’ll use the languages of the web because they’re accessible and immediately open up new modes of communication for designers, but the concepts will be transferable to any screen-based or interactive media.
+The first segment of the course will focus on the tools and concepts required for building interactive experiences. We’ll use the languages of the web because they’re accessible and immediately open up new modes of communication for designers, but the concepts will be transferable to any screen-based or interactive media.
 
 * File management (naming, organization, file paths)
-* Setting up and starting a new project
+* Setting up and starting a new project
 * Tools (code editor, inspector, Git/GitHub)
 * HTML/CSS basic concepts and syntax
 * Figma (components, prototyping, grids, canvas sizing)
@@ -70,9 +70,9 @@ In our second segment, we’ll investigate how designing for the digital canvas 
 
 * Typography with HTML/CSS
 * CSS selectors (cascades, combining, parent/child, pseudo)
-* HTML structure (box model, dissecting a web page)
+* HTML structure (box model, dissecting a web page)
 * Layout (position, float, flexbox, grid)
-* Designing for the digital canvas (how big is a browser)
+* Designing for the digital canvas (how big is a browser)
 
 
 
@@ -80,21 +80,21 @@ In our second segment, we’ll investigate how designing for the digital canvas 
 
 #### Weeks 9–11
 
-Thinking about a website as a series of linked pages, we’ll take the concepts we used to make individual web pages and apply them to larger systems. We’ll explore how our systems can be designed to flex, rather than break, under a wide range of variables while still maintaining the original intent of the design.
+Thinking about a website as a series of linked pages, we’ll take the concepts we used to make individual web pages and apply them to larger systems. We’ll explore how our systems can be designed to flex, rather than break, under a wide range of variables while still maintaining the original intent of the design.
 
 * Multi-page systems
 * Programming basic user interactions (hover, basic JS click)
 * Time-based design (interactive states, storyboarding, prototyping)
-* User models (entering and receiving data, user flows, UX patterns, ways of navigating)
+* User models (entering and receiving data, user flows, UX patterns, ways of navigating)
 
 
 ### Unit 4: *Networks*
 
 #### Weeks 12–15
 
-Because a website lives in a larger network of apps, websites, devices, and contexts, our final segment will explore how our website lives online. We’ll take the work we’ve done this semester and explore self-publishing and making our work public by putting our work on the internet.
+Because a website lives in a larger network of apps, websites, devices, and contexts, our final segment will explore how our website lives online. We’ll take the work we’ve done this semester and explore self-publishing and making our work public by putting our work on the internet.
 
-* Putting a website online (hosting, GitHub, custom domains)
+* Putting a website online (hosting, GitHub, custom domains)
 * Accessibility
 * Asset creation (video, image optimization, webGL)
 * Metadata (search, social)
@@ -105,22 +105,22 @@ Because a website lives in a larger network of apps, websites, devices, and cont
 ## Class project
 
 ### *Harmonic Collection*
-You’re going to pick a theme to explore visually for the duration of the semester. Each week, you’ll design and code an entry to a collection that explores this theme. At the end of the semester, you’ll deliver a website that houses 11 programmed entries. The website container is part of the design, as well.
+You’re going to pick a theme to explore visually for the duration of the semester. Each week, you’ll design and code an entry to a collection that explores this theme. At the end of the semester, you’ll deliver a website that houses 11 programmed entries. The website container is part of the design, as well.
 
 #### Project description
 
-In mathematics, a *sequence* is defined as a series of numbers arranged in a predictable pattern. It’s a type of number set which follows specific, definite rules. When translated to design, sequencing is a natural part of systems—each individual item has unifying elements that, when looked at as a whole, tells a larger story.
+In mathematics, a *sequence* is defined as a series of numbers arranged in a predictable pattern. It’s a type of number set which follows specific, definite rules. When translated to design, sequencing is a natural part of systems—each individual item has unifying elements that, when looked at as a whole, tells a larger story.
 
-In this class you’ll create a *Harmonic Collection* that explores a theme of your choice. Each week, you’ll design and code an entry into your collection that makes use of the HTML, CSS, and JavaScript skills we’re developing.
+In this class you’ll create a *Harmonic Collection* that explores a theme of your choice. Each week, you’ll design and code an entry into your collection that makes use of the HTML, CSS, and JavaScript skills we’re developing.
 
-First, you will pick a theme of your choice (think of it as the overarching concept you’ll explore through a series of sketches). Your theme should be open-ended enough to encourage a range of content, but specific enough to inspire an idea each week for twelve weeks. (Example themes: Your daily commute, solitude, interesting words you came across in articles this week). In the final weeks of the semester, you’ll refine your 11 entries so that they communicate a clear exploration and deliver a website that houses all of them together. You might need to reorganize or add additional content to your container or entries to fully realize your idea.
+First, you will pick a theme of your choice (think of it as the overarching concept you’ll explore through a series of sketches). Your theme should be open-ended enough to encourage a range of content, but specific enough to inspire an idea each week for twelve weeks. (Example themes: Your daily commute, solitude, interesting words you came across in articles this week). In the final weeks of the semester, you’ll refine your 11 entries so that they communicate a clear exploration and deliver a website that houses all of them together. You might need to reorganize or add additional content to your container or entries to fully realize your idea.
 
 #### Minimum requirements
 
-* The website and all the entries must be responsive (work on a variety of screen sizes).
+* The website and all the entries must be responsive (work on a variety of screen sizes).
 * While each entry will be unique, there should be unifying visual components between them.
 * All hyperlinks must be functional.
-* You will make use of a combination of HTML, CSS, and JavaScript to communicate a story.
+* You will make use of a combination of HTML, CSS, and JavaScript to communicate a story.
 
 
 
@@ -141,34 +141,34 @@ For final grading, these tasks will be weighted as below:
 * {: .link-only}[*Form+Code in Design, Art, and Architecture*](http://formandcode.com) \
   Casey Reas, Chandler McWilliams, and LUST
 
-* {: .link-only}[*Geometry of Design*](https://archive.org/details/geometryofdesign0000elam/mode/2up) \
+* {: .link-only}[*Geometry of Design*](https://archive.org/details/geometryofdesign0000elam/mode/2up) \
   Kimberly Elam
 
 * {: .link-only}[*Graphic Design Manual*](https://www.appliedaesthetics.org/art132b/06/hofmann.pdf) \
   Armin Hofmann
 
-* {: .link-only}[*The Elements of Typographic Style*](https://readings.design/PDF/the_elements_of_typographic_style.pdf) \
+* {: .link-only}[*The Elements of Typographic Style*](https://readings.design/PDF/the_elements_of_typographic_style.pdf) \
   Robert Bringhurst
 
-* {: .link-only}[*The Shape of Design*](https://shapeofdesignbook.com) \
+* {: .link-only}[*The Shape of Design*](https://shapeofdesignbook.com) \
   Frank Chimero
 
-* {: .link-only}[*The User Experience Team of One*](https://archivos.tdmmdos.net.ar/bibliografia/EN-LB-TheUserExperienceTeamOfOne.pdf) \
+* {: .link-only}[*The User Experience Team of One*](https://archivos.tdmmdos.net.ar/bibliografia/EN-LB-TheUserExperienceTeamOfOne.pdf) \
   Leah Buley
 
 * {: .link-only}[*Very Interactive Library*](https://veryinteractive.net/library/index.html) \
   Compiled by Laurel Schwulst
 
-* {: .link-only}[*What is Code?*](https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/) \
+* {: .link-only}[*What Is Code?*](https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/) \
   Paul Ford
 
 
 
 ## Materials and supplies
 
-In the open tradition of the early web, the only materials truly required are a computer, a browser, a text editor, and an internet connection. The specifics of these are open to the student’s individual preferences and practices. I will do my best to accommodate everyone and will make recommendations, when needed.
+In the open tradition of the early web, the only materials truly required are a computer, a browser, a text editor, and an internet connection. The specifics of these are open to the student’s individual preferences and practices. I will do my best to accommodate everyone and will make recommendations, when needed.
 
-In class, I will demonstrate using [Visual Studio Code](https://code.visualstudio.com) for programming, and [GitHub](https://github.com)/[GitHub Desktop](https://desktop.github.com) for version control and project hosting. All of these products are available for free.
+In class, I will demonstrate using [Visual Studio Code](https://code.visualstudio.com) for programming, and [GitHub](https://github.com)/[GitHub Desktop](https://desktop.github.com) for version control and project hosting. All of these products are available for free.
 
 We will use the following sites to organize and run our class:
 
@@ -195,13 +195,13 @@ We will use the following sites to organize and run our class:
 
 ### Our community
 
-During our first class session, we will collectively write and agree upon a code of conduct for our group.
+During our first class session, we will collectively write and agree upon a code of conduct for our group.
 
-This agreement is intended to help us create and maintain a safe, empathetic, and productive space for our course. It will live on [our course site](https://core-interaction.github.io), and can be revised and modified, with all of our input, over the semester.
+This agreement is intended to help us create and maintain a safe, empathetic, and productive space for our course. It will live on [our course site](https://core-interaction.github.io), and can be revised and modified, with all of our input, over the semester.
 
 
-> Let’s fill this out, together. I’ve added a few items that we think are important, to start us off.
-{: .callout .two-below icon='✋' }
+> Let’s fill this out, together. I’ve added a few items that we think are important, to start us off.
+{: .callout .two-below icon='✍️' }
 
 * The class should feel comfortable asking the instructor anything—nothing is too trivial, or embarrassing, or off-topic. Tangents are good. Students can ask via [Slack](https://core-one-interaction.slack.com/archives/C03UTLMBMDH), if they would like to remain anonymous.
 
@@ -209,27 +209,27 @@ This agreement is intended to help us create and maintain a safe, empathetic, an
 
 * When presenting, students will “have the floor” while they take us through their work. This means everyone else will be quiet, we’ll close our laptops, and give our full attention to the person showing their work.
 
-* We will have a short break, roughly halfway through the class.
+* We will have a short break, roughly halfway through the class.
 {: .faded }
 
 
 
 ### Inclusion
 
-My intent is to respect and give forum to a range of perspectives and backgrounds, including culture, race, gender, sexual orientation, socioeconomic status, disability, and age. In instances where I am personally not qualified to speak from a specific perspective, students are encouraged to explore this area themselves. And please me know if there are ways that the course can better serve these goals.
+My intent is to respect and give forum to a range of perspectives and backgrounds, including culture, race, gender, sexual orientation, socioeconomic status, disability, and age. In instances where I am personally not qualified to speak from a specific perspective, students are encouraged to explore this area themselves. And please me know if there are ways that the course can better serve these goals.
 
 
 
 ### Engagement
 
-There are program policies (below) around attendance, but we also have an *engagement* policy—which will likewise affect students’ evaluation and final grade, as their engagement will be unavoidably reflected in the quality of their work.
+There are program policies (below) around attendance, but we also have an *engagement* policy—which will likewise affect students’ evaluation and final grade, as their engagement will be unavoidably reflected in the quality of their work.
 
-Students are expected to actively and passionately participate in this course. This means more than showing up and turning things in on time, which should be a given. Beyond that baseline, students should be curious, prepared, thoughtful, vocal, and intentional throughout the course. They should make us understand why they are here, and demonstrate to us that they care about themselves, their work, and each other—and ultimately, about this chosen profession.
+Students are expected to actively and passionately participate in this course. This means more than showing up and turning things in on time, which should be a given. Beyond that baseline, students should be curious, prepared, thoughtful, vocal, and intentional throughout the course. They should make us understand why they are here, and demonstrate to us that they care about themselves, their work, and each other—and ultimately, about this chosen profession.
 
 
 ### Office hours
 
-I will have limited availability outside of our class time, and won’t keep scheduled “office hours.” Students should not rely on me to solve specific design or technical problems. Their first resource should be themselves, then [our course site](https://core-interaction.github.io) and its materials, and then each other. If there are still questions—such as logistical or content ones—students can message me on [Slack](https://core-one-interaction.slack.com/archives/C03UTLMBMDH), and we will respond when I can. But this should never be a bottleneck; all of this works better when not done at the last minute.
+I will have limited availability outside of our class time, and won’t keep scheduled “office hours.” Students should not rely on me to solve specific design or technical problems. Their first resource should be themselves, then [our course site](https://core-interaction.github.io) and its materials, and then each other. If there are still questions—such as logistical or content ones—students can message me on [Slack](https://core-one-interaction.slack.com/archives/C03UTLMBMDH), and we will respond when I can. But this should never be a bottleneck; all of this works better when not done at the last minute.
 
 
 
@@ -241,7 +241,7 @@ For more specific technical instruction and questions, Parsons has dedicated CD-
 
 ### Recording sessions
 
-I will take screen recordings of our sessions for students to reference later. As these will include the students and their work, the recordings will be stored on our [Google Drive](https://drive.google.com/drive/folders/1pPSCRnGN7Ym7ZFyBl5n_HvKvArrpo_B6?usp=sharing) and made available only to New School email users.
+I will take screen recordings of our sessions for students to reference later. As these will include the students and their work, the recordings will be stored on our [Google Drive](https://drive.google.com/drive/folders/1pPSCRnGN7Ym7ZFyBl5n_HvKvArrpo_B6?usp=sharing) and made available only to New School email users.
 
 
 
