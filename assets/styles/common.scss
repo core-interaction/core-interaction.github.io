@@ -162,9 +162,9 @@ body {
 
 	.icon--sf--regular {
 		@extend %--icon--span;
-		@extend %font--sf--regular;
+		@extend %font--sf--light;
 
-		--icon--scale: 0.9;
+		--icon--scale: 1;
 
 		&.center--x { --icon--shift: 0.05em }
 	}
@@ -500,7 +500,7 @@ body {
 
 		--icon: '⤓'; // PDF/downloads.
 
-		--icon--shift: 0em;
+		--icon--shift: 0.05em;
 	}
 
 
