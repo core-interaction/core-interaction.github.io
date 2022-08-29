@@ -22,9 +22,9 @@ strings:
     Tuesdays, 7–9:40 PM
   classes:  Sessions
   current:  This week
-  home:     '&'
+  home:     C1I
   last:     Last week
-  projects: Projects
+  projects: Project
   term:     Fall 2022
   top:      Top
   topics:   Topics
