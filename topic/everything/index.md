@@ -67,9 +67,9 @@ In 1974, Robert Kahn and Vinton Cerf (two ARPA scientists) developed the *Transm
 
 {% include figure.html src='tim.jpg' caption='Our guy Tim.' credit='https://cds.cern.ch/images/CERN-GE-9407011-31' %}
 
-Tim Berners-Lee, a British academic and scientist, invented the *World Wide Web* (WWW) with his team while working at [CERN in 1989](https://home.cern/science/computing/birth-web/short-history-web). It was developed on top of TCP/IP as a standard way to connect documents, living on different computers in different places, via *hypertext* links.
+Tim Berners-Lee, a British academic and scientist, invented the *World Wide Web* (WWW) with his team while working at [CERN in 1989](https://home.cern/science/computing/birth-web/short-history-web). It was developed on top of TCP/IP as a standard way to connect documents, living on different computers in different places, via *hypertext* links.
 
-{% include figure.html src='web.png' caption='The cover of the original proposal, visualizing the idea of “hypertext.”' credit='https://cds.cern.ch/record/1405411/files/ARCH-WWW-4-010.pdf' %}
+{% include figure.html src='web.png' caption='The cover of the original proposal, visualizing the idea of “hypertext.”' credit='https://cds.cern.ch/record/1405411/files/ARCH-WWW-4-010.pdf' %}
 
 Their proposal had four components:
 
@@ -97,9 +97,9 @@ And the web exploded from there.
 
 {% include figure.html src='yahoo.png' caption='1994\. Before search engines, there were web directories like Yahoo.' credit='https://www.webdesignmuseum.org/gallery/yahoo-1994' %}
 
-{% include figure.html src='geocities.png' caption='1995\. GeoCities brought web design to the masses, for better or for worse.' credit='https://blog.geocities.institute/archives/791' %}
+{% include figure.html src='geocities.png' caption='1995\. GeoCities brought web design to the masses, for better or for worse.' credit='https://blog.geocities.institute/archives/791' %}
 
-{% include figure.html src='amazon.gif' caption='1995\. They used to sell books, if you can believe it.' credit='https://www.versionmuseum.com/history-of/amazon-website' %}
+{% include figure.html src='amazon.gif' caption='1995\. They used to sell books, if you can believe it.' credit='https://www.versionmuseum.com/history-of/amazon-website' %}
 
 {% include figure.html src='google.png' caption='1998\. We eventually got search engines.' credit='https://www.webdesignmuseum.org/gallery/google-1998' %}
 
@@ -128,11 +128,11 @@ And the web exploded from there.
 {% include figure.html src='slim.png' %}
 {% include figure.html src='kiosk.png' %}
 {% include figure.html src='betye.jpg' %}
-{% include figure.html src='turner.jpg' caption='Eric and I used to work at MoMA. These are [all](https://moma.org) [web](https://www.moma.org/screens/on_view/west?floor=1&contain=true) [pages](https://www.moma.org/screens/promo/tickets?contain=true).' %}
+{% include figure.html src='turner.jpg' caption='I used to work at MoMA. These are [all](https://moma.org) [web](https://www.moma.org/screens/on_view/west?floor=1&contain=true) [pages](https://www.moma.org/screens/promo/tickets?contain=true).' %}
 
 {% endcapture %}
 
-{% include aside.html content=aside rows=10 %}
+{% include aside.html content=aside rows=9 %}
 
 Obviously, *this* is a web page. Think about how many other web pages you have visited in the past day. Dozens, even hundreds?
 {: .left }
@@ -141,9 +141,6 @@ Ultimately, a web page is a just text file on a computer. It is written in a�
 {: .left }
 
 These all started as simple, hand-typed documents. Then as the power of computers grew, and the languages of the web evolved alongside—web pages expanded almost inconceivably in complexity and capabilities. *Cascading Style Sheets* (CSS) gave them marvelous abilities to be customized and designed. *JavaScript* (JS) gave them remarkable, newfound interactivity and function. Websites (collections of web pages) today are built on top of an incredible *stack* of technology—networks, servers, databases, libraries, browsers, devices.
-{: .left }
-
-But it all starts with text, and thus, with type.
 {: .left }
 
 
@@ -209,7 +206,7 @@ With this understanding, the same model exists in nearly all software. (For exam
 
 ## {{ 'Our lens' | kerning }}
 
-Learning good, effective design in any medium necessitates knowing it thoroughly and completely, and we’re going strive to do that by truly understand the web. It is fundamentally a medium of text, and thus a medium of typography—and this semester we will use this as our lens.
+Learning good, effective design in any medium necessitates knowing it thoroughly and completely, and we’re going strive to do that by truly understanding the web.
 
 In your careers, the software, languages, and platforms might be different, and to some extent, are ever-changing—but the design ideas and considerations are analogous and universal. To understand design for the web is to understand interactive design. And in our lives today, to understand interactive design is to understand all design.
 
