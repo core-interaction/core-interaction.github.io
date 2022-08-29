@@ -1,26 +1,25 @@
 ---
-title: Typography and Interaction
+title: 'Core 1: Interaction'
 links:
-  - name: Syllabus
-    url:  /syllabus
+  # - name: Syllabus
+  #   url:  /syllabus
   - name: Slack
-    url:  https://mpscd.slack.com/archives/C03UR0J71U5
+    url:  https://core-one-interaction.slack.com/archives/C03UTLMBMDH
   - name: GitHub
-    url:  https://github.com/typography-interaction
+    url:  https://github.com/core-interaction
   - name: Drive
-    url:  https://drive.google.com/drive/folders/1Nyv0f8u8Nsc8OkEGwmZu-S9pI11D5Iil
+    url:  https://drive.google.com/drive/folders/1pPSCRnGN7Ym7ZFyBl5n_HvKvArrpo_B6
   - name: Zoom
-    url:  https://NewSchool.zoom.us/j/96694509534
+    url:  https://NewSchool.zoom.us/j/99185050065
   - name: Catalog
-    url:  https://courses.newschool.edu/courses/PMCD5001
-  - name: Program
-    url:  https://mpscd.parsons.edu
+    url:  https://courses.newschool.edu/courses/PUCD2035
+
 strings:
   about: |
-    The New School, Parsons, MPS CD
-    PUCD 5001, CRN 4253 / 9023
-    66 5th Ave, Auditorium 101
-    Wednesdays, 9–11:40 AM
+    The New School, Parsons
+    PUCD 2035, CRN 2755
+    2 W 13th, Room 502
+    Tuesdays, 7–9:40 PM
   classes:  Sessions
   current:  This week
   home:     '&'
@@ -32,16 +31,14 @@ strings:
 instructor:
   - name:  Michael Fehrenbach
     url:   https://michaelfehrenbach.com
-  - name:  Eric Li
-    url:   https://eric.young.li
 ---
 
 
 
-*Typography and Interaction* is a year-long, <nobr>two-semester</nobr> course in the [MPS Communication Design](https://mpscd.parsons.edu) program at [Parsons](https://www.newschool.edu/parsons/)&thinsp;/&thinsp;[The New School](https://www.newschool.edu). The class will provide a rigorous foundation of typographic and interaction principles in the context of digital design. (We hope.)
+*Core 1: Interaction* is designed to introduce students to programming as a creative medium—as a way of making and exploring. The coursework focuses on developing a vocabulary of interaction design principles which can then be applied across a range of platforms. Students are encouraged to experiment with various media, tools, and techniques, ultimately producing a portfolio of interactive and visual projects designed for the screen. An emphasis is placed on typography as it applies to a screen context, research-based problem solving and a learning-through-making approach to technical skill building. Historical and current interaction design precedents will be discussed.
 {: .left }
 
-{% include link_list.html rows=3 %}
+{% include link_list.html rows=2 %}
 
-We’ll be using this course site for our agendas, lectures, general class housekeeping, and anything else that comes up. It will be updated throughout the semester, so always check here first if you are looking for something.
-{: .left }
+> Hi folks. Like any good website, this one is assuredly *in-progress*—expect more soon. We’re looking forward to meeting you all.
+{: .callout icon='I' }

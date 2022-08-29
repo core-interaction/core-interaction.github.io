@@ -5,6 +5,7 @@ links:
     url:  /assets/PMCD_5001_F22.pdf
   - name: Course catalog
     url:  https://courses.newschool.edu/courses/PMCD5001
+published: false
 ---
 
 
