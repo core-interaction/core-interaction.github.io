@@ -757,7 +757,7 @@ body > nav > div > div {
 
 body > nav > div > div > p {
 	color: transparent;
-	padding-right: 1em;
+	padding-right: 2ch;
 	pointer-events: none;
 	position: relative;
 	white-space: nowrap;
@@ -769,7 +769,7 @@ body > nav > div > div > p > select {
 	left: 0;
 	max-width: calc(100% + var(--link--enlargement) * 2);
 	overflow: hidden;
-	padding-right: 1ch;
+	padding-right: calc(2ch - var(--link--enlargement));
 	pointer-events: auto;
 	position: absolute;
 	text-overflow: ellipsis;
@@ -1324,6 +1324,7 @@ body.index > main > nav {
 }
 
 body.index > main > nav aside > menu {
+	--color--links: var(--color);
 	--typography--leading: var(--typography--leading--loose);
 	display: flex;
 	flex-direction: column;
