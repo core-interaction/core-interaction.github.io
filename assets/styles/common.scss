@@ -27,10 +27,14 @@
 
 	--page--width: 100vw;
 
-	--divider--width: 0.1rem;
+	--border--radius: 0.4rem;
 
 	--color:             black;
+	--color--alpha: var(--color--tint);
 	--color--background: white;
+
+	--color--tint:          hsl(0, 0%, 0%, 5%);
+	--color--tint--reverse: hsl(0, 0%, 100%, 10%);
 
 	--color--links:          #e42a1d;
 	--color--links--reverse: white ;
@@ -90,6 +94,8 @@
 
 // Flip the colors.
 %--reverse {
+	--color--alpha: var(--color--tint--reverse);
+
 	--color--background--parent: var(--color--background);
 
 	--link--color:     var(--color--links--reverse);
@@ -107,10 +113,9 @@
 
 // Icon stuff.
 %--icon--span {
-	--icon--gap: 0.333em;
+	--icon--gap: 1ch;
 
 	display:     inline-block;
-	height:      1em;
 	font-weight: var(--typography--weight);
 	margin-left: var(--icon--gap);
 	transform:   translateY(var(--icon--shift, 0rem)) scale(var(--icon--scale, 1));
@@ -135,14 +140,10 @@ body {
 	// Icons. Keep these up here so Markdown variants cascade.
 	.icon--sf {
 		@extend %--icon--span;
-		@extend %font--sf--light;
 	}
 
-	.icon--wingdings {
+	.icon--emoji {
 		@extend %--icon--span;
-		@extend %font--wingdings;
-
-		--icon--scale: 1.333;
 	}
 
 
@@ -198,7 +199,7 @@ body {
 						left:           0;
 						max-width:      calc(100% + var(--link--enlargement) * 2); // Icon.
 						overflow:       hidden;
-						padding-right:  1em;
+						padding-right:  1ch;
 						pointer-events: auto;
 						position:       absolute;
 						text-overflow:  ellipsis;
@@ -215,14 +216,10 @@ body {
 
 					// The icon.
 					> span:last-child {
-						@extend %font--sf--mono--light;
-
-						color:       var(--color);
-						font-weight: 100; // Force it.
-						position:    absolute;
-						right:       0;
-						text-align:  right;
-						width:       1em;
+						color:    var(--color);
+						position: absolute;
+						right:    0;
+						width:    1ch;
 
 						// Copied from links.
 						transition-duration:        var(--link--hover--transition);
@@ -477,33 +474,33 @@ body {
 	&[href^="/"]    { --icon: '→' } // Internal.
 	&[href^="http"] { --icon: '↗' } // External.
 
-	&[href*=".pdf"]:after,
-	&[href*="courses.newschool.edu"]:after,
-	&[href*="docs.google.com"]:after,
-	&[href*="drive.google.com"]:after,
-	&[href*="eric.young.li"]:after,
-	&[href*="github.com"]:after,
-	&[href*="mailto:"]:after,
-	&[href*="michaelfehrenbach.com"]:after,
-	&[href*="mpscd.parsons.edu"]:after,
-	&[href*="slack.com"]:after,
-	&[href*="syllabus"]:after,
-	&[href*="zoom.us"]:after {
-		@extend .icon--wingdings;
-
-		--icon--gap: 0.5em;
-	}
-
-	&[href*=".pdf"]:after                  { --icon: '2'; --icon--scale: 1.2 } // Doc.
-	&[href*="courses.newschool.edu"]:after { --icon: '5'; --icon--scale: 1.4 } // File cabinet.
-	&[href*="docs.google.com"]:after       { --icon: '!'; --icon--scale: 1.1 } // Pencil.
-	&[href*="drive.google.com"]:after      { --icon: '1'; --icon--scale: 1 }   // Folder.
-	&[href*="eric.young.li"]:after         { --icon: 'C'; --icon--scale: 1.5 } // Thumbs-up.
-	&[href*="github.com"]:after            { --icon: '<'; }                    // Floppy.
-	&[href*="mailto:"]:after               { --icon: '*'; --icon--scale: 1.1 } // Envelope.
-	&[href*="michaelfehrenbach.com"]:after { --icon: 'A'; --icon--scale: 1.5 } // Peace sign.
-	&[href*="mpscd.parsons.edu"]:after     { --icon: 'O'; --icon--scale: 1.1 } // Flag.
-	&[href*="slack.com"]:after             { --icon: '-'; --icon--scale: 1.2 } // Mailbox.
-	&[href*="syllabus"]:after              { --icon: '&'; --icon--scale: 1.1 } //
-	&[href*="zoom.us"]:after               { --icon: ')'; }                    // Telephone.
+// 	&[href*=".pdf"]:after,
+// 	&[href*="courses.newschool.edu"]:after,
+// 	&[href*="docs.google.com"]:after,
+// 	&[href*="drive.google.com"]:after,
+// 	&[href*="eric.young.li"]:after,
+// 	&[href*="github.com"]:after,
+// 	&[href*="mailto:"]:after,
+// 	&[href*="michaelfehrenbach.com"]:after,
+// 	&[href*="mpscd.parsons.edu"]:after,
+// 	&[href*="slack.com"]:after,
+// 	&[href*="syllabus"]:after,
+// 	&[href*="zoom.us"]:after {
+// 		@extend .icon--emoji;
+//
+// 		--icon--gap: 0.5em;
+// 	}
+//
+// 	&[href*=".pdf"]:after                  { --icon: '🙃' }
+// 	&[href*="courses.newschool.edu"]:after { --icon: '🙃' }
+// 	&[href*="docs.google.com"]:after       { --icon: '🙃' }
+// 	&[href*="drive.google.com"]:after      { --icon: '🙃' }
+// 	&[href*="eric.young.li"]:after         { --icon: '🙃' }
+// 	&[href*="github.com"]:after            { --icon: '🙃' }
+// 	&[href*="mailto:"]:after               { --icon: '🙃' }
+// 	&[href*="michaelfehrenbach.com"]:after { --icon: '🙃' }
+// 	&[href*="mpscd.parsons.edu"]:after     { --icon: '🙃' }
+// 	&[href*="slack.com"]:after             { --icon: '🙃' }
+// 	&[href*="syllabus"]:after              { --icon: '🙃' }
+// 	&[href*="zoom.us"]:after               { --icon: '🙃' }
 }

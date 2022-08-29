@@ -50,31 +50,23 @@
 
 	// Quotes/callouts.
 	blockquote {
-		--typography--size: var(--typography--size--h3);
-
 		font-style: italic;
 
 		&.callout {
-			--typography--size: var(--typography--size--base);
-
-			border-color: var(--color);
-			border-style: solid;
-			border-width: var(--divider--width);
-			display:      flex;
-			font-style:   normal;
-			padding:      calc(var(--typography--cap) * 2);
+			background:    var(--color--alpha);
+			border-radius: var(--border--radius);
+			display:       flex;
+			font-style:    normal;
+			padding:       calc(var(--typography--cap) * 2);
 
 			&[icon]:before {
-				@extend .icon--wingdings;
+				@extend .icon--emoji;
 
 				color:        var(--color);
 				content:      attr(icon);
-				height:       1em;
 				margin-left:  initial;
 				margin-right: calc(var(--typography--cap) * 2);
 				margin-top:   var(--typography--margin--top);
-				text-align:   center;
-				width:        1em;
 			}
 		}
 
@@ -87,8 +79,6 @@
 
 			// Credit.
 			> blockquote:last-child {
-				--typography--size: var(--typography--size--base);
-
 				font-style: normal;
 				margin-top: var(--margin);
 
@@ -96,7 +86,6 @@
 					@extend %font--underline--disable;
 
 					&:after {
-						@extend .center--x;
 						@extend .icon--sf;
 
 						content: '↗';
@@ -194,8 +183,6 @@
 
 		tr:not(:first-child) > td { border-top: var(--typography--leading-shoulder) solid transparent }
 		tr > td:not(:first-child) { border-left: var(--margin) solid transparent }
-
-		&.row-header td:first-child { --typography--size: var(--typography--size--h4) }
 	}
 
 
@@ -212,14 +199,12 @@
 
 				&:after {
 					@extend .icon--sf;
-					@extend .center--x;
 
 					--icon--scale: 1.25;
 
 					content:          '+';
 					font-weight:      200;
 					margin-bottom:    initial;
-					text-align:       center;
 					transform-origin: bottom;
 					visibility:       visible; // Override typography pseudo.
 					width:            1em;
@@ -252,8 +237,6 @@
 		}
 
 		> figcaption {
-			--typography--leading: var(--typography--leading--tight);
-
 			margin-top: var(--typography--between);
 
 			> p > a {
