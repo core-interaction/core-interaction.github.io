@@ -40,5 +40,5 @@ instructor:
 
 {% include link_list.html rows=2 %}
 
-> Hi folks. Like any good website, this one is assuredly *in-progress*—expect more soon. We’re looking forward to meeting you all.
+> Hi folks. Like any good website, this one is assuredly *in-progress*. Expect more soon. I’m looking forward to meeting you all!
 {: .callout icon='👋' }
