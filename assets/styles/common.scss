@@ -14,7 +14,7 @@
 
 
 :root {
-	@extend %font--sf--mono--light;
+	@extend %font--sf--mono--regular;
 
 	--typography--leading:        1.333;
 	--typography--leading--loose: 2;
@@ -114,7 +114,9 @@
 	display:     inline-block;
 	font-weight: var(--typography--weight);
 	margin-left: var(--icon--gap);
+	text-align:  center;
 	transform:   translateY(var(--icon--shift, 0rem)) scale(var(--icon--scale, 1));
+	width:       1ch;
 
 	&.center--x { --icon--shift: 0.075em } // Center down to x-height;
 }
@@ -139,17 +141,27 @@ body {
 	// Icons. Keep these up here so Markdown variants cascade.
 	.icon--sf {
 		@extend %--icon--span;
+		@extend %font--sf--mono--light;
+
+		--icon--scale: 1.1;
 	}
 
 	.icon--emoji {
 		@extend %--icon--span;
+
+		--icon--scale: 1.2;
+		--icon--shift: 0.1em;
+
+		transform-origin: right;
 	}
 
 	.icon--sf--regular {
 		@extend %--icon--span;
 		@extend %font--sf--regular;
 
-		--icon--scale: 0.8;
+		--icon--scale: 0.9;
+
+		&.center--x { --icon--shift: 0.05em }
 	}
 
 
