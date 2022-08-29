@@ -363,7 +363,7 @@ body {
 			> div {
 				--color: var(--link--color);
 
-				align-items:     end;
+				align-items:     start;
 				display:         flex;
 				gap:             calc(var(--margin) / 2);
 				justify-content: space-between;
@@ -374,7 +374,7 @@ body {
 				> a {
 					@extend %link--element;
 
-					white-space: nowrap;
+					&:last-child { white-space: nowrap }
 				}
 			}
 		}
