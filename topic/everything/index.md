@@ -19,9 +19,9 @@ order: 0
 
 {% include figure.html src='harvard.jpg' caption='The “Harvard Computers” in the late 1800s.' credit='https://en.wikipedia.org/wiki/Harvard_Computers#/media/File:Astronomer_Edward_Charles_Pickering%27s_Harvard_computers.jpg' %}
 
-Before this time, the term *computer* usually referred to a person, not a machine—someone who would *compute* (solve) math problems.
+Before this time, the term *computer* usually referred to a person, not a machine—someone who would *compute* (solve) math problems.
 
-It is worth noting these [were often women](https://www.nytimes.com/2019/02/13/magazine/women-coding-computer-programming.html), and they were underpaid compared to men in their field—and many would go on to operate the early mechanical/electronic computers. We’re going to have to talk about a lot of men, here—but know that women have been present from the start.
+It is worth noting these [were often women](https://www.nytimes.com/2019/02/13/magazine/women-coding-computer-programming.html), and they were underpaid compared to men in their field—and many would go on to operate the early mechanical/electronic computers. We’re going to have to talk about a lot of men, here—but know that women have been present from the start.
 
 {% include figure.html src='univac.jpg' caption='Univac, the first commercial computer in the US.' credit='https://time.com/4271506/census-bureau-computer-history/' %}
 
@@ -33,7 +33,7 @@ A catalyst in the formation of the internet was the Cold War. The threat of nucl
 
 
 
-> It was necessary to have a strategic system that could withstand a first attack and then be able to return the favor in kind. The problem was that we didn’t have a survivable communications system, and so Soviet missiles aimed at US missiles would take out the entire telephone-communication system [...] that was highly centralized. Well, then, let’s not make it centralized. Let’s spread it out so that we can have other paths to get around the damage.
+> It was necessary to have a strategic system that could withstand a first attack and then be able to return the favor in kind. The problem was that we didn’t have a survivable communications system, and so Soviet missiles aimed at US missiles would take out the entire telephone-communication system [...] that was highly centralized. Well, then, let’s not make it centralized. Let’s spread it out so that we can have other paths to get around the damage.
 >
 > > [Paul Baran](https://www.vanityfair.com/news/2008/07/internet200807)
 {: .pull-quote }
@@ -67,7 +67,7 @@ In 1974, Robert Kahn and Vinton Cerf (two ARPA scientists) developed the *Transm
 
 {% include figure.html src='tim.jpg' caption='Our guy Tim.' credit='https://cds.cern.ch/images/CERN-GE-9407011-31' %}
 
-Tim Berners-Lee, a British academic and scientist, invented the *World Wide Web* (WWW) with his team while working at [CERN in 1989](https://home.cern/science/computing/birth-web/short-history-web). It was developed on top of TCP/IP as a standard way to connect documents, living on different computers in different places, via *hypertext* links.
+Tim Berners-Lee, a British academic and scientist, invented the *World Wide Web* (WWW) with his team while working at [CERN in 1989](https://home.cern/science/computing/birth-web/short-history-web). It was developed on top of TCP/IP as a standard way to connect documents, living on different computers in different places, via *hypertext* links.
 
 {% include figure.html src='web.png' caption='The cover of the original proposal, visualizing the idea of “hypertext.”' credit='https://cds.cern.ch/record/1405411/files/ARCH-WWW-4-010.pdf' %}
 
@@ -107,7 +107,7 @@ And the web exploded from there.
 
 
 
-> The dream behind the Web is of a common information space in which we communicate by sharing information. Its universality is essential: the fact that a hypertext link can point to anything, be it personal, local or global, be it draft or highly polished.
+> The dream behind the Web is of a common information space in which we communicate by sharing information. Its universality is essential: the fact that a hypertext link can point to anything, be it personal, local or global, be it draft or highly polished.
 >
 > > [Tim Berners-Lee](https://www.scienceandmediamuseum.org.uk/objects-and-stories/short-history-internet)
 {: .pull-quote }
@@ -134,10 +134,10 @@ And the web exploded from there.
 
 {% include aside.html content=aside rows=10 %}
 
-Obviously, *this* is a web page. Think about how many other web pages you have visited in the past day. Dozens, even hundreds?
+Obviously, *this* is a web page. Think about how many other web pages you have visited in the past day. Dozens, even hundreds?
 {: .left }
 
-Ultimately, a web page is a just text file on a computer. It is written in a special format, the aforementioned HTML, which structures the content of the document and also links it to other resources—other web pages, images, computers, really almost anything. Think of the web as type with instructions.
+Ultimately, a web page is a just text file on a computer. It is written in a special format, the aforementioned HTML, which structures the content of the document and also links it to other resources—other web pages, images, computers, really almost anything. Think of the web as type with instructions.
 {: .left }
 
 These all started as simple, hand-typed documents. Then as the power of computers grew, and the languages of the web evolved alongside—web pages expanded almost inconceivably in complexity and capabilities. *Cascading Style Sheets* (CSS) gave them marvelous abilities to be customized and designed. *JavaScript* (JS) gave them remarkable, newfound interactivity and function. Websites (collections of web pages) today are built on top of an incredible *stack* of technology—networks, servers, databases, libraries, browsers, devices.
@@ -151,7 +151,7 @@ But it all starts with text, and thus, with type.
 ## {{ 'An ever-present visual medium' | kerning }}
 {: .left }
 
-If you’re looking at a glowing, 16:9 rectangle somewhere (and it isn’t just playing video), nowadays it is very likely a web page—built with the exact same HTML, CSS, and JS—web technologies—that are behind this page, and every other.
+If you’re looking at a glowing, 16:9 rectangle somewhere (and it isn’t just playing video), nowadays it is very likely a web page—built with the exact same HTML, CSS, and JS—web technologies—that are behind this page, and every other.
 {: .left }
 
 In its openness, connectedness, and ubiquity, the web has come to dominate over other forms of technology. Its advantages in compatibility, cost, scale, and inertia are continuing to snowball, and the advance of these web technologies shows no sign of slowing down. It is the water that we are swimming in, both as humans and as designers.
@@ -169,27 +169,27 @@ And in that latter role, we’ll need to learn how to swim. Our path into *desig
 
 ### {{ 'These days, apps are often web pages too' | kerning }}
 
-{% include figure.html src='electron.png' caption='We’ll be using a couple of these.' %}
+{% include figure.html src='electron.png' caption='We’ll be using a couple of these.' %}
 
-All these desktop “apps” are built in [Electron](https://www.electronjs.org)—and so are really just web pages inside a slim, platform-native wrapper. (Essentially, a single-website browser.)
+All these desktop “apps” are built in [Electron](https://www.electronjs.org)—and so are really just web pages inside a slim, platform-native wrapper. (Essentially, a single-website browser.)
 
 The core application only has to be written once, instead of rewritten for each platform. And why design it all again? (Designers are expensive!) Why hire Windows and Mac devs when you can just hire web devs? …then why hire iOS or Android devs, either? (Developers are even more expensive!) So many companies take approach, for cross-platform development.
 
 {% include figure.html src='mobile.png' %}
 
-These mobile “apps” are all built with [React Native](https://reactnative.dev), following a similar paradigm. The app is really just a web view, and every screen within is a web page.
+These mobile “apps” are all built with [React Native](https://reactnative.dev), following a similar paradigm. The app is really just a web view, and every screen within is a web page.
 
 
 
 ### {{ 'It’s increasingly just JS, behind the scenes' | kerning }}
 
-JavaScript began as a client-side (on your computer), front-end language running in the browser. But now with engines like [V8](https://v8.dev) and environments like [Node](https://nodejs.org/en/), JS has moved to server-side (on the remote computer) functionality previously dominated by scripting languages like [ASP](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjEtfa8nc31AhUomeAKHd_ABUQQFnoECE8QAQ&url=https%3A%2F%2Fdotnet.microsoft.com%2Fen-us%2Flearn%2Faspnet%2Fwhat-is-aspnet&usg=AOvVaw1D_8ap9ArdBqxmTX1ce1xL), [Perl](https://www.perl.org), [PHP](https://www.php.net), [Ruby](https://www.ruby-lang.org/en/).
+JavaScript began as a client-side (on your computer), front-end language running in the browser. But now with engines like [V8](https://v8.dev) and environments like [Node](https://nodejs.org/en/), JS has moved to server-side (on the remote computer) functionality previously dominated by scripting languages like [ASP](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjEtfa8nc31AhUomeAKHd_ABUQQFnoECE8QAQ&url=https%3A%2F%2Fdotnet.microsoft.com%2Fen-us%2Flearn%2Faspnet%2Fwhat-is-aspnet&usg=AOvVaw1D_8ap9ArdBqxmTX1ce1xL), [Perl](https://www.perl.org), [PHP](https://www.php.net), [Ruby](https://www.ruby-lang.org/en/).
 
 {% comment %} Visual? {% endcomment %}
 
-This means that JavaScript doesn’t just run *in* a webpage you’re looking at—it often now actually *builds* the page itself. It might even send you the *packets*. More and more, JS isn’t a *part* of the stack so much as it really *is* the stack.
+This means that JavaScript doesn’t just run *in* a webpage you’re looking at—it often now actually *builds* the page itself. It might even send you the *packets*. More and more, JS isn’t a *part* of the stack so much as it really *is* the stack.
 
-This “javascript everywhere” movement means that the tendrils of the web can encompass many non-web-page uses. Maybe it is in an app, maybe a headless data API, maybe a [hardware integration](https://www.theverge.com/2022/8/18/23206110/james-webb-space-telescope-javascript-jwst-instrument-control), maybe it is even something entirely *offline*—but it is still web technologies, most of the way down.
+This “javascript everywhere” movement means that the tendrils of the web can encompass many non-web-page uses. Maybe it is in an app, maybe a headless data API, maybe a [hardware integration](https://www.theverge.com/2022/8/18/23206110/james-webb-space-telescope-javascript-jwst-instrument-control), maybe it is even something entirely *offline*—but it is still web technologies, most of the way down.
 
 
 
@@ -209,13 +209,13 @@ With this understanding, the same model exists in nearly all software. (For exam
 
 ## {{ 'Our lens' | kerning }}
 
-Learning good, effective design in any medium necessitates knowing it thoroughly and completely, and we’re going strive to do that by truly understand the web. It is fundamentally a medium of text, and thus a medium of typography—and this semester we will use this as our lens.
+Learning good, effective design in any medium necessitates knowing it thoroughly and completely, and we’re going strive to do that by truly understand the web. It is fundamentally a medium of text, and thus a medium of typography—and this semester we will use this as our lens.
 
 In your careers, the software, languages, and platforms might be different, and to some extent, are ever-changing—but the design ideas and considerations are analogous and universal. To understand design for the web is to understand interactive design. And in our lives today, to understand interactive design is to understand all design.
 
 
 
-> All I know is that if you are a fish, it is hard to describe water, much less to ask if water is necessary, ethical, and structured the way it ought to be.
+> All I know is that if you are a fish, it is hard to describe water, much less to ask if water is necessary, ethical, and structured the way it ought to be.
 >
 >> [Abigail Disney](https://www.theatlantic.com/ideas/archive/2021/06/abigail-disney-rich-protect-dynastic-wealth-propublica-tax/619212/)
 {: .pull-quote }
