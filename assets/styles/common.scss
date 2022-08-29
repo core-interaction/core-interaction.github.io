@@ -329,11 +329,7 @@ body {
 
 				@include breakpoint(568) { --typography--leading: var(--typography--leading--base) }
 
-				li {
-					@extend %list--excerpt;
-
-					a:after { --icon: '↓' }
-				}
+				li { @extend %list--excerpt }
 			}
 		}
 
@@ -391,14 +387,16 @@ body {
 
 						--typography--leading: var(--typography--leading--loose);
 
-						@include breakpoint(568) { --typography--leading: var(--typography--leading--base) }
-
 						display:        flex;
 						flex-direction: column;
 						gap:            var(--typography--between);
 						margin-top:     var(--margin--vertical);
+						gap: var(--typography--between);
 
-						> li > a { @extend %link--element }
+						@include breakpoint(568) { --typography--leading: var(--typography--leading--base) }
+
+
+						> li { @extend %list--excerpt }
 					}
 				}
 			}
@@ -454,9 +452,7 @@ body {
 
 
 // Low to override defaults.
-%icon--link {
-	@extend %link--text;
-
+%icon--types {
 	&:after {
 		@extend .center--x;
 		@extend .icon--sf;
@@ -477,6 +473,11 @@ body {
 	}
 }
 
+%icon--link {
+	@extend %link--text;
+	@extend %icon--types;
+}
+
 
 
 %list--excerpt {
@@ -487,6 +488,7 @@ body {
 	width:       fit-content;
 
 	a {
+		@extend %icon--types;
 		@extend %link--element;
 
 		display:        block;
@@ -501,10 +503,6 @@ body {
 		text-overflow:  ellipsis;
 
 		&:after {
-			@extend .center--x;
-			@extend .icon--sf;
-
-			content:  var(--icon);
 			position: absolute;
 			right:    var(--link--enlargement);
 		}
