@@ -6,7 +6,7 @@
 				{% include auto_title.html %}
 				<li>
 					<a href="{{ page.url }}">
-						<p>{{ title_date | kerning }}<span class="icon--sf center--x">→</span></p>
+						<p>{{- title_date | kerning | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines -}}<span class="icon--sf center--x">→</span></p>
 					</a>
 				</li>
 			{% endfor %}

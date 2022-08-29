@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		{% include auto_title.html -%}
 		{% assign fallback = page.name | split: '.' | first | capitalize %}
-		<title>{{- title | strip_html | default: fallback -}}</title>
+		<title>{{- title | markdownify | strip_html | default: fallback -}}</title>
 		<link href="/assets/styles/common.css" rel="stylesheet">
 		{% comment %} TODO <link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon"> {% endcomment %}
 		{% comment %} TODO <link href="/assets/icons/touch.png" rel="apple-touch-icon"> {% endcomment %}
