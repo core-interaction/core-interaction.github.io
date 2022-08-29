@@ -57,7 +57,7 @@
 			border-radius: var(--border--radius);
 			display:       flex;
 			font-style:    normal;
-			padding:       calc(var(--typography--cap) * 2);
+			padding:       2ch;
 
 			&[icon]:before {
 				@extend .icon--emoji;
@@ -65,7 +65,7 @@
 				color:        var(--color);
 				content:      attr(icon);
 				margin-left:  initial;
-				margin-right: calc(var(--typography--cap) * 2);
+				margin-right: 2ch;
 				margin-top:   var(--typography--margin--top);
 			}
 		}
