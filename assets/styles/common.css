@@ -237,34 +237,12 @@ body.index > main > nav aside > menu {
 }
 
 body > main > article p strong,
-:root,
-body > nav > div > div > p > span:last-child,
-body .icon--sf,
-body > main > header > ul li a:after,
-body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child:after,
-body > main > article details > summary > p:after,
-body > main > header > address > div > p > a:after,
-body > main > article .link-only > a:after,
-body > main > article .link-only > p > a:after {
+:root {
 	--typography--shoulder: calc(1 - var(--typography--cap-height));
 	--typography--shoulder--top: calc(var(--typography--shoulder) - var(--typography--shoulder--bottom));
 }
 
-body .icon--sf,
-body > main > header > ul li a:after,
-body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child:after,
-body > main > article details > summary > p:after,
-body > main > header > address > div > p > a:after,
-body > main > article .link-only > a:after,
-body > main > article .link-only > p > a:after {
-	--typography--cap-height: 0.705;
-	--typography--x-height: 0.508;
-	--typography--shoulder--bottom: 0.122;
-	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-:root,
-body > nav > div > div > p > span:last-child {
+:root {
 	--typography--cap-height: 0.705;
 	--typography--x-height: 0.526;
 	--typography--shoulder--bottom: 0.145;
@@ -278,30 +256,6 @@ body > main > article p strong {
 	font-family: "Times New Roman", "Times", serif;
 	font-feature-settings: "hlig", "dlig", "zero", "kern", "medi";
 	font-variant: historical-ligatures;
-}
-
-body .icon--sf,
-body > main > header > ul li a:after,
-body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child:after,
-body > main > article details > summary > p:after,
-body > main > header > address > div > p > a:after,
-body > main > article .link-only > a:after,
-body > main > article .link-only > p > a:after {
-	--typography--weight: 300;
-	--typography--inset--left: -0.065;
-	--typography--inset--right: -0.053;
-	--typography--underline: 0.051;
-	--typography--underline--shift: -0.069;
-	--typography--underline--skip: 0.064;
-}
-
-body > nav > div > div > p > span:last-child {
-	--typography--weight: 300;
-	--typography--inset--left: -0.058;
-	--typography--inset--right: -0.060;
-	--typography--underline: 0.053;
-	--typography--underline--shift: -0.072;
-	--typography--underline--skip: 0.064;
 }
 
 :root {
@@ -320,47 +274,6 @@ body > main > article p strong {
 	--typography--underline: 0.018;
 	--typography--underline--shift: -0.178;
 	--typography--underline--skip: 0.118;
-}
-
-body .icon--wingdings,
-body > main > article blockquote.callout[icon]:before,
-body > main > header > address > div > p > a[href*=".pdf"]:after,
-body > main > article .link-only > a[href*=".pdf"]:after,
-body > main > article .link-only > p > a[href*=".pdf"]:after,
-body > main > header > address > div > p > a[href*="courses.newschool.edu"]:after,
-body > main > article .link-only > a[href*="courses.newschool.edu"]:after,
-body > main > article .link-only > p > a[href*="courses.newschool.edu"]:after,
-body > main > header > address > div > p > a[href*="docs.google.com"]:after,
-body > main > article .link-only > a[href*="docs.google.com"]:after,
-body > main > article .link-only > p > a[href*="docs.google.com"]:after,
-body > main > header > address > div > p > a[href*="drive.google.com"]:after,
-body > main > article .link-only > a[href*="drive.google.com"]:after,
-body > main > article .link-only > p > a[href*="drive.google.com"]:after,
-body > main > header > address > div > p > a[href*="eric.young.li"]:after,
-body > main > article .link-only > a[href*="eric.young.li"]:after,
-body > main > article .link-only > p > a[href*="eric.young.li"]:after,
-body > main > header > address > div > p > a[href*="github.com"]:after,
-body > main > article .link-only > a[href*="github.com"]:after,
-body > main > article .link-only > p > a[href*="github.com"]:after,
-body > main > header > address > div > p > a[href*="mailto:"]:after,
-body > main > article .link-only > a[href*="mailto:"]:after,
-body > main > article .link-only > p > a[href*="mailto:"]:after,
-body > main > header > address > div > p > a[href*="michaelfehrenbach.com"]:after,
-body > main > article .link-only > a[href*="michaelfehrenbach.com"]:after,
-body > main > article .link-only > p > a[href*="michaelfehrenbach.com"]:after,
-body > main > header > address > div > p > a[href*="mpscd.parsons.edu"]:after,
-body > main > article .link-only > a[href*="mpscd.parsons.edu"]:after,
-body > main > article .link-only > p > a[href*="mpscd.parsons.edu"]:after,
-body > main > header > address > div > p > a[href*="slack.com"]:after,
-body > main > article .link-only > a[href*="slack.com"]:after,
-body > main > article .link-only > p > a[href*="slack.com"]:after,
-body > main > header > address > div > p > a[href*=syllabus]:after,
-body > main > article .link-only > a[href*=syllabus]:after,
-body > main > article .link-only > p > a[href*=syllabus]:after,
-body > main > header > address > div > p > a[href*="zoom.us"]:after,
-body > main > article .link-only > a[href*="zoom.us"]:after,
-body > main > article .link-only > p > a[href*="zoom.us"]:after {
-	font-family: "Wingdings";
 }
 
 body > main > article p strong span.space,
@@ -1030,9 +943,12 @@ body > nav > div > div > p > select {
 	--margin: 2.4rem;
 	--margin--vertical: var(--margin);
 	--page--width: 100vw;
-	--divider--width: 0.1rem;
+	--border--radius: 0.4rem;
 	--color: black;
+	--color--alpha: var(--color--tint);
 	--color--background: white;
+	--color--tint: hsl(0, 0%, 0%, 5%);
+	--color--tint--reverse: hsl(0, 0%, 100%, 10%);
 	--color--links: #e42a1d;
 	--color--links--reverse: white;
 	--color--highlight: hsl(0, 0%, 0%, 3.333%);
@@ -1102,6 +1018,7 @@ body > nav > div {
 
 body.class,
 body.index {
+	--color--alpha: var(--color--tint--reverse);
 	--color--background--parent: var(--color--background);
 	--link--color: var(--color--links--reverse);
 	--link--highlight: var(--color--highlight--reverse);
@@ -1114,43 +1031,7 @@ body.index > * {
 	--color--background: var(--color--links);
 }
 
-body .icon--wingdings,
-body > main > header > address > div > p > a[href*=".pdf"]:after,
-body > main > article .link-only > a[href*=".pdf"]:after,
-body > main > article .link-only > p > a[href*=".pdf"]:after,
-body > main > header > address > div > p > a[href*="courses.newschool.edu"]:after,
-body > main > article .link-only > a[href*="courses.newschool.edu"]:after,
-body > main > article .link-only > p > a[href*="courses.newschool.edu"]:after,
-body > main > header > address > div > p > a[href*="docs.google.com"]:after,
-body > main > article .link-only > a[href*="docs.google.com"]:after,
-body > main > article .link-only > p > a[href*="docs.google.com"]:after,
-body > main > header > address > div > p > a[href*="drive.google.com"]:after,
-body > main > article .link-only > a[href*="drive.google.com"]:after,
-body > main > article .link-only > p > a[href*="drive.google.com"]:after,
-body > main > header > address > div > p > a[href*="eric.young.li"]:after,
-body > main > article .link-only > a[href*="eric.young.li"]:after,
-body > main > article .link-only > p > a[href*="eric.young.li"]:after,
-body > main > header > address > div > p > a[href*="github.com"]:after,
-body > main > article .link-only > a[href*="github.com"]:after,
-body > main > article .link-only > p > a[href*="github.com"]:after,
-body > main > header > address > div > p > a[href*="mailto:"]:after,
-body > main > article .link-only > a[href*="mailto:"]:after,
-body > main > article .link-only > p > a[href*="mailto:"]:after,
-body > main > header > address > div > p > a[href*="michaelfehrenbach.com"]:after,
-body > main > article .link-only > a[href*="michaelfehrenbach.com"]:after,
-body > main > article .link-only > p > a[href*="michaelfehrenbach.com"]:after,
-body > main > header > address > div > p > a[href*="mpscd.parsons.edu"]:after,
-body > main > article .link-only > a[href*="mpscd.parsons.edu"]:after,
-body > main > article .link-only > p > a[href*="mpscd.parsons.edu"]:after,
-body > main > header > address > div > p > a[href*="slack.com"]:after,
-body > main > article .link-only > a[href*="slack.com"]:after,
-body > main > article .link-only > p > a[href*="slack.com"]:after,
-body > main > header > address > div > p > a[href*=syllabus]:after,
-body > main > article .link-only > a[href*=syllabus]:after,
-body > main > article .link-only > p > a[href*=syllabus]:after,
-body > main > header > address > div > p > a[href*="zoom.us"]:after,
-body > main > article .link-only > a[href*="zoom.us"]:after,
-body > main > article .link-only > p > a[href*="zoom.us"]:after,
+body .icon--emoji,
 body > main > article blockquote.callout[icon]:before,
 body .icon--sf,
 body > main > header > address > div > p > a:after,
@@ -1159,89 +1040,15 @@ body > main > article .link-only > p > a:after,
 body > main > article details > summary > p:after,
 body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child:after,
 body > main > header > ul li a:after {
-	--icon--gap: 0.333em;
+	--icon--gap: 1ch;
 	display: inline-block;
-	height: 1em;
 	font-weight: var(--typography--weight);
 	margin-left: var(--icon--gap);
 	transform: translateY(var(--icon--shift, 0rem)) scale(var(--icon--scale, 1));
 }
 
-body .center--x.icon--wingdings,
-body > main > header > address > div > p > a.center--x[href*=".pdf"]:after,
-body > main > article .link-only > a.center--x[href*=".pdf"]:after,
-body > main > article .link-only > p > a.center--x[href*=".pdf"]:after,
-body > main > header > address > div > p > a.center--x[href*="courses.newschool.edu"]:after,
-body > main > article .link-only > a.center--x[href*="courses.newschool.edu"]:after,
-body > main > article .link-only > p > a.center--x[href*="courses.newschool.edu"]:after,
-body > main > header > address > div > p > a.center--x[href*="docs.google.com"]:after,
-body > main > article .link-only > a.center--x[href*="docs.google.com"]:after,
-body > main > article .link-only > p > a.center--x[href*="docs.google.com"]:after,
-body > main > header > address > div > p > a.center--x[href*="drive.google.com"]:after,
-body > main > article .link-only > a.center--x[href*="drive.google.com"]:after,
-body > main > article .link-only > p > a.center--x[href*="drive.google.com"]:after,
-body > main > header > address > div > p > a.center--x[href*="eric.young.li"]:after,
-body > main > article .link-only > a.center--x[href*="eric.young.li"]:after,
-body > main > article .link-only > p > a.center--x[href*="eric.young.li"]:after,
-body > main > header > address > div > p > a.center--x[href*="github.com"]:after,
-body > main > article .link-only > a.center--x[href*="github.com"]:after,
-body > main > article .link-only > p > a.center--x[href*="github.com"]:after,
-body > main > header > address > div > p > a.center--x[href*="mailto:"]:after,
-body > main > article .link-only > a.center--x[href*="mailto:"]:after,
-body > main > article .link-only > p > a.center--x[href*="mailto:"]:after,
-body > main > header > address > div > p > a.center--x[href*="michaelfehrenbach.com"]:after,
-body > main > article .link-only > a.center--x[href*="michaelfehrenbach.com"]:after,
-body > main > article .link-only > p > a.center--x[href*="michaelfehrenbach.com"]:after,
-body > main > header > address > div > p > a.center--x[href*="mpscd.parsons.edu"]:after,
-body > main > article .link-only > a.center--x[href*="mpscd.parsons.edu"]:after,
-body > main > article .link-only > p > a.center--x[href*="mpscd.parsons.edu"]:after,
-body > main > header > address > div > p > a.center--x[href*="slack.com"]:after,
-body > main > article .link-only > a.center--x[href*="slack.com"]:after,
-body > main > article .link-only > p > a.center--x[href*="slack.com"]:after,
-body > main > header > address > div > p > a.center--x[href*=syllabus]:after,
-body > main > article .link-only > a.center--x[href*=syllabus]:after,
-body > main > article .link-only > p > a.center--x[href*=syllabus]:after,
-body > main > header > address > div > p > a.center--x[href*="zoom.us"]:after,
-body > main > article .link-only > a.center--x[href*="zoom.us"]:after,
-body > main > article .link-only > p > a.center--x[href*="zoom.us"]:after,
-body > main > header > address > div > p > a.icon--wingdings:after,
-body > main > header > address > div > p > a[href*=".pdf"]:after,
-body > main > article body > main > header > address > div > p.link-only > a[href*=".pdf"]:after,
-body > main > article body > main > header > address > div.link-only > p > a[href*=".pdf"]:after,
-body > main > header > address > div > p > a[href*="courses.newschool.edu"]:after,
-body > main > article body > main > header > address > div > p.link-only > a[href*="courses.newschool.edu"]:after,
-body > main > article body > main > header > address > div.link-only > p > a[href*="courses.newschool.edu"]:after,
-body > main > header > address > div > p > a[href*="docs.google.com"]:after,
-body > main > article body > main > header > address > div > p.link-only > a[href*="docs.google.com"]:after,
-body > main > article body > main > header > address > div.link-only > p > a[href*="docs.google.com"]:after,
-body > main > header > address > div > p > a[href*="drive.google.com"]:after,
-body > main > article body > main > header > address > div > p.link-only > a[href*="drive.google.com"]:after,
-body > main > article body > main > header > address > div.link-only > p > a[href*="drive.google.com"]:after,
-body > main > header > address > div > p > a[href*="eric.young.li"]:after,
-body > main > article body > main > header > address > div > p.link-only > a[href*="eric.young.li"]:after,
-body > main > article body > main > header > address > div.link-only > p > a[href*="eric.young.li"]:after,
-body > main > header > address > div > p > a[href*="github.com"]:after,
-body > main > article body > main > header > address > div > p.link-only > a[href*="github.com"]:after,
-body > main > article body > main > header > address > div.link-only > p > a[href*="github.com"]:after,
-body > main > header > address > div > p > a[href*="mailto:"]:after,
-body > main > article body > main > header > address > div > p.link-only > a[href*="mailto:"]:after,
-body > main > article body > main > header > address > div.link-only > p > a[href*="mailto:"]:after,
-body > main > header > address > div > p > a[href*="michaelfehrenbach.com"]:after,
-body > main > article body > main > header > address > div > p.link-only > a[href*="michaelfehrenbach.com"]:after,
-body > main > article body > main > header > address > div.link-only > p > a[href*="michaelfehrenbach.com"]:after,
-body > main > header > address > div > p > a[href*="mpscd.parsons.edu"]:after,
-body > main > article body > main > header > address > div > p.link-only > a[href*="mpscd.parsons.edu"]:after,
-body > main > article body > main > header > address > div.link-only > p > a[href*="mpscd.parsons.edu"]:after,
-body > main > header > address > div > p > a[href*="slack.com"]:after,
-body > main > article body > main > header > address > div > p.link-only > a[href*="slack.com"]:after,
-body > main > article body > main > header > address > div.link-only > p > a[href*="slack.com"]:after,
-body > main > header > address > div > p > a[href*=syllabus]:after,
-body > main > article body > main > header > address > div > p.link-only > a[href*=syllabus]:after,
-body > main > article body > main > header > address > div.link-only > p > a[href*=syllabus]:after,
-body > main > header > address > div > p > a[href*="zoom.us"]:after,
-body > main > article body > main > header > address > div > p.link-only > a[href*="zoom.us"]:after,
-body > main > article body > main > header > address > div.link-only > p > a[href*="zoom.us"]:after,
-body > main > article details > summary > p.icon--wingdings:after,
+body .center--x.icon--emoji,
+body > main > header > address > div > p > a.icon--emoji:after,
 body > main > article blockquote.center--x.callout[icon]:before,
 body .center--x.icon--sf,
 body > main > header > address > div > p > a.center--x:after,
@@ -1250,10 +1057,10 @@ body > main > header > address > div > p > a:after,
 body > main > article body > main > header > address > div > p.link-only > a:after,
 body > main > article .link-only > a:after,
 body > main > article .link-only > p > a:after,
-body > main > article details > summary > p.icon--sf:after,
 body > main > article details > summary > p.center--x:after,
-body > main > article details > summary > p:after,
-body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child:after,
+body > main > article blockquote.pull-quote > blockquote:last-child > p > a.center--x:only-child:after,
+body > main > article blockquote.pull-quote > blockquote:last-child > p.link-only > a:only-child:after,
+body > main > article blockquote.pull-quote > blockquote.link-only:last-child > p > a:only-child:after,
 body > main > header > ul li a.center--x:after,
 body > main > header > ul li body > main > header > address > div > p > a:after,
 body > main > article body > main > header > ul li .link-only > a:after {
@@ -1266,47 +1073,6 @@ body h3,
 body h4 {
 	scroll-margin-top: calc(var(--margin--vertical) * 3);
 	max-width: 40ch;
-}
-
-body .icon--wingdings,
-body > main > header > address > div > p > a[href*=".pdf"]:after,
-body > main > article .link-only > a[href*=".pdf"]:after,
-body > main > article .link-only > p > a[href*=".pdf"]:after,
-body > main > header > address > div > p > a[href*="courses.newschool.edu"]:after,
-body > main > article .link-only > a[href*="courses.newschool.edu"]:after,
-body > main > article .link-only > p > a[href*="courses.newschool.edu"]:after,
-body > main > header > address > div > p > a[href*="docs.google.com"]:after,
-body > main > article .link-only > a[href*="docs.google.com"]:after,
-body > main > article .link-only > p > a[href*="docs.google.com"]:after,
-body > main > header > address > div > p > a[href*="drive.google.com"]:after,
-body > main > article .link-only > a[href*="drive.google.com"]:after,
-body > main > article .link-only > p > a[href*="drive.google.com"]:after,
-body > main > header > address > div > p > a[href*="eric.young.li"]:after,
-body > main > article .link-only > a[href*="eric.young.li"]:after,
-body > main > article .link-only > p > a[href*="eric.young.li"]:after,
-body > main > header > address > div > p > a[href*="github.com"]:after,
-body > main > article .link-only > a[href*="github.com"]:after,
-body > main > article .link-only > p > a[href*="github.com"]:after,
-body > main > header > address > div > p > a[href*="mailto:"]:after,
-body > main > article .link-only > a[href*="mailto:"]:after,
-body > main > article .link-only > p > a[href*="mailto:"]:after,
-body > main > header > address > div > p > a[href*="michaelfehrenbach.com"]:after,
-body > main > article .link-only > a[href*="michaelfehrenbach.com"]:after,
-body > main > article .link-only > p > a[href*="michaelfehrenbach.com"]:after,
-body > main > header > address > div > p > a[href*="mpscd.parsons.edu"]:after,
-body > main > article .link-only > a[href*="mpscd.parsons.edu"]:after,
-body > main > article .link-only > p > a[href*="mpscd.parsons.edu"]:after,
-body > main > header > address > div > p > a[href*="slack.com"]:after,
-body > main > article .link-only > a[href*="slack.com"]:after,
-body > main > article .link-only > p > a[href*="slack.com"]:after,
-body > main > header > address > div > p > a[href*=syllabus]:after,
-body > main > article .link-only > a[href*=syllabus]:after,
-body > main > article .link-only > p > a[href*=syllabus]:after,
-body > main > header > address > div > p > a[href*="zoom.us"]:after,
-body > main > article .link-only > a[href*="zoom.us"]:after,
-body > main > article .link-only > p > a[href*="zoom.us"]:after,
-body > main > article blockquote.callout[icon]:before {
-	--icon--scale: 1.333;
 }
 
 body > nav {
@@ -1350,7 +1116,7 @@ body > nav > div > div > p > select {
 	left: 0;
 	max-width: calc(100% + var(--link--enlargement) * 2);
 	overflow: hidden;
-	padding-right: 1em;
+	padding-right: 1ch;
 	pointer-events: auto;
 	position: absolute;
 	text-overflow: ellipsis;
@@ -1364,11 +1130,9 @@ body > nav > div > div > p > select {
 
 body > nav > div > div > p > span:last-child {
 	color: var(--color);
-	font-weight: 100;
 	position: absolute;
 	right: 0;
-	text-align: right;
-	width: 1em;
+	width: 1ch;
 	transition-duration: var(--link--hover--transition);
 	transition-property: filter;
 	transition-timing-function: linear;
@@ -1540,15 +1304,12 @@ body > main > article .faded {
 }
 
 body > main > article blockquote {
-	--typography--size: var(--typography--size--h3);
 	font-style: italic;
 }
 
 body > main > article blockquote.callout {
-	--typography--size: var(--typography--size--base);
-	border-color: var(--color);
-	border-style: solid;
-	border-width: var(--divider--width);
+	background: var(--color--alpha);
+	border-radius: var(--border--radius);
 	display: flex;
 	font-style: normal;
 	padding: calc(var(--typography--cap) * 2);
@@ -1557,12 +1318,9 @@ body > main > article blockquote.callout {
 body > main > article blockquote.callout[icon]:before {
 	color: var(--color);
 	content: attr(icon);
-	height: 1em;
 	margin-left: initial;
 	margin-right: calc(var(--typography--cap) * 2);
 	margin-top: var(--typography--margin--top);
-	text-align: center;
-	width: 1em;
 }
 
 body > main > article blockquote.pull-quote {
@@ -1574,7 +1332,6 @@ body > main > article blockquote.pull-quote {
 }
 
 body > main > article blockquote.pull-quote > blockquote:last-child {
-	--typography--size: var(--typography--size--base);
 	font-style: normal;
 	margin-top: var(--margin);
 }
@@ -1705,10 +1462,6 @@ body > main > article table tr > td:not(:first-child) {
 	border-left: var(--margin) solid transparent;
 }
 
-body > main > article table.row-header td:first-child {
-	--typography--size: var(--typography--size--h4);
-}
-
 body > main > article details > summary {
 	--color: var(--color--links);
 }
@@ -1722,7 +1475,6 @@ body > main > article details > summary > p:after {
 	content: "+";
 	font-weight: 200;
 	margin-bottom: initial;
-	text-align: center;
 	transform-origin: bottom;
 	visibility: visible;
 	width: 1em;
@@ -1754,7 +1506,6 @@ body > main > article figure > img {
 }
 
 body > main > article figure > figcaption {
-	--typography--leading: var(--typography--leading--tight);
 	margin-top: var(--typography--between);
 }
 
@@ -2031,125 +1782,4 @@ body > main > header > address > div > p > a[href^=http],
 body > main > article .link-only > a[href^=http],
 body > main > article .link-only > p > a[href^=http] {
 	--icon: "↗";
-}
-
-body > main > header > address > div > p > a[href*=".pdf"]:after,
-body > main > article .link-only > a[href*=".pdf"]:after,
-body > main > article .link-only > p > a[href*=".pdf"]:after,
-body > main > header > address > div > p > a[href*="courses.newschool.edu"]:after,
-body > main > article .link-only > a[href*="courses.newschool.edu"]:after,
-body > main > article .link-only > p > a[href*="courses.newschool.edu"]:after,
-body > main > header > address > div > p > a[href*="docs.google.com"]:after,
-body > main > article .link-only > a[href*="docs.google.com"]:after,
-body > main > article .link-only > p > a[href*="docs.google.com"]:after,
-body > main > header > address > div > p > a[href*="drive.google.com"]:after,
-body > main > article .link-only > a[href*="drive.google.com"]:after,
-body > main > article .link-only > p > a[href*="drive.google.com"]:after,
-body > main > header > address > div > p > a[href*="eric.young.li"]:after,
-body > main > article .link-only > a[href*="eric.young.li"]:after,
-body > main > article .link-only > p > a[href*="eric.young.li"]:after,
-body > main > header > address > div > p > a[href*="github.com"]:after,
-body > main > article .link-only > a[href*="github.com"]:after,
-body > main > article .link-only > p > a[href*="github.com"]:after,
-body > main > header > address > div > p > a[href*="mailto:"]:after,
-body > main > article .link-only > a[href*="mailto:"]:after,
-body > main > article .link-only > p > a[href*="mailto:"]:after,
-body > main > header > address > div > p > a[href*="michaelfehrenbach.com"]:after,
-body > main > article .link-only > a[href*="michaelfehrenbach.com"]:after,
-body > main > article .link-only > p > a[href*="michaelfehrenbach.com"]:after,
-body > main > header > address > div > p > a[href*="mpscd.parsons.edu"]:after,
-body > main > article .link-only > a[href*="mpscd.parsons.edu"]:after,
-body > main > article .link-only > p > a[href*="mpscd.parsons.edu"]:after,
-body > main > header > address > div > p > a[href*="slack.com"]:after,
-body > main > article .link-only > a[href*="slack.com"]:after,
-body > main > article .link-only > p > a[href*="slack.com"]:after,
-body > main > header > address > div > p > a[href*=syllabus]:after,
-body > main > article .link-only > a[href*=syllabus]:after,
-body > main > article .link-only > p > a[href*=syllabus]:after,
-body > main > header > address > div > p > a[href*="zoom.us"]:after,
-body > main > article .link-only > a[href*="zoom.us"]:after,
-body > main > article .link-only > p > a[href*="zoom.us"]:after {
-	--icon--gap: 0.5em;
-}
-
-body > main > header > address > div > p > a[href*=".pdf"]:after,
-body > main > article .link-only > a[href*=".pdf"]:after,
-body > main > article .link-only > p > a[href*=".pdf"]:after {
-	--icon: "2";
-	--icon--scale: 1.2;
-}
-
-body > main > header > address > div > p > a[href*="courses.newschool.edu"]:after,
-body > main > article .link-only > a[href*="courses.newschool.edu"]:after,
-body > main > article .link-only > p > a[href*="courses.newschool.edu"]:after {
-	--icon: "5";
-	--icon--scale: 1.4;
-}
-
-body > main > header > address > div > p > a[href*="docs.google.com"]:after,
-body > main > article .link-only > a[href*="docs.google.com"]:after,
-body > main > article .link-only > p > a[href*="docs.google.com"]:after {
-	--icon: "!";
-	--icon--scale: 1.1;
-}
-
-body > main > header > address > div > p > a[href*="drive.google.com"]:after,
-body > main > article .link-only > a[href*="drive.google.com"]:after,
-body > main > article .link-only > p > a[href*="drive.google.com"]:after {
-	--icon: "1";
-	--icon--scale: 1;
-}
-
-body > main > header > address > div > p > a[href*="eric.young.li"]:after,
-body > main > article .link-only > a[href*="eric.young.li"]:after,
-body > main > article .link-only > p > a[href*="eric.young.li"]:after {
-	--icon: "C";
-	--icon--scale: 1.5;
-}
-
-body > main > header > address > div > p > a[href*="github.com"]:after,
-body > main > article .link-only > a[href*="github.com"]:after,
-body > main > article .link-only > p > a[href*="github.com"]:after {
-	--icon: "<";
-}
-
-body > main > header > address > div > p > a[href*="mailto:"]:after,
-body > main > article .link-only > a[href*="mailto:"]:after,
-body > main > article .link-only > p > a[href*="mailto:"]:after {
-	--icon: "*";
-	--icon--scale: 1.1;
-}
-
-body > main > header > address > div > p > a[href*="michaelfehrenbach.com"]:after,
-body > main > article .link-only > a[href*="michaelfehrenbach.com"]:after,
-body > main > article .link-only > p > a[href*="michaelfehrenbach.com"]:after {
-	--icon: "A";
-	--icon--scale: 1.5;
-}
-
-body > main > header > address > div > p > a[href*="mpscd.parsons.edu"]:after,
-body > main > article .link-only > a[href*="mpscd.parsons.edu"]:after,
-body > main > article .link-only > p > a[href*="mpscd.parsons.edu"]:after {
-	--icon: "O";
-	--icon--scale: 1.1;
-}
-
-body > main > header > address > div > p > a[href*="slack.com"]:after,
-body > main > article .link-only > a[href*="slack.com"]:after,
-body > main > article .link-only > p > a[href*="slack.com"]:after {
-	--icon: "-";
-	--icon--scale: 1.2;
-}
-
-body > main > header > address > div > p > a[href*=syllabus]:after,
-body > main > article .link-only > a[href*=syllabus]:after,
-body > main > article .link-only > p > a[href*=syllabus]:after {
-	--icon: "&";
-	--icon--scale: 1.1;
-}
-
-body > main > header > address > div > p > a[href*="zoom.us"]:after,
-body > main > article .link-only > a[href*="zoom.us"]:after,
-body > main > article .link-only > p > a[href*="zoom.us"]:after {
-	--icon: ")";
 }
