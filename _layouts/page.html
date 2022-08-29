@@ -9,7 +9,7 @@ layout: default
 <main>
 	{% if title %}
 		<header>
-			<h1>{{- title_date | kerning | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines -}}</h1>
+			<h1>{{- title | kerning | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines -}}</h1>
 			{% if date %}
 				<p>{{ date  | replace_first: 'd', "D" | kerning }}</p>
 			{% endif %}
