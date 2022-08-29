@@ -37,7 +37,7 @@ In the final weeks of the semester, you’ll refine your 11 entries so that the
 
 ## Timeline
 
-We’ll be adding to this collection of the course of the semester:
+We’ll be adding to this collection over the course of the semester:
 
 1. Entry due September 13
 1. Entry due September 20
