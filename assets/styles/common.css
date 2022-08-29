@@ -237,9 +237,17 @@ body.index > main > nav aside > menu {
 }
 
 body > main > article p strong,
-:root {
+:root,
+body .icon--sf--regular {
 	--typography--shoulder: calc(1 - var(--typography--cap-height));
 	--typography--shoulder--top: calc(var(--typography--shoulder) - var(--typography--shoulder--bottom));
+}
+
+body .icon--sf--regular {
+	--typography--cap-height: 0.705;
+	--typography--x-height: 0.508;
+	--typography--shoulder--bottom: 0.122;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 :root {
@@ -256,6 +264,15 @@ body > main > article p strong {
 	font-family: "Times New Roman", "Times", serif;
 	font-feature-settings: "hlig", "dlig", "zero", "kern", "medi";
 	font-variant: historical-ligatures;
+}
+
+body .icon--sf--regular {
+	--typography--weight: 500;
+	--typography--inset--left: -0.064;
+	--typography--inset--right: -0.049;
+	--typography--underline: 0.075;
+	--typography--underline--shift: -0.021;
+	--typography--underline--skip: 0.087;
 }
 
 :root {
@@ -1031,6 +1048,7 @@ body.index > * {
 	--color--background: var(--color--links);
 }
 
+body .icon--sf--regular,
 body .icon--emoji,
 body > main > article blockquote.callout[icon]:before,
 body .icon--sf,
@@ -1047,6 +1065,8 @@ body > main > header > ul li a:after {
 	transform: translateY(var(--icon--shift, 0rem)) scale(var(--icon--scale, 1));
 }
 
+body .center--x.icon--sf--regular,
+body > main > header > address > div > p > a.icon--sf--regular:after,
 body .center--x.icon--emoji,
 body > main > header > address > div > p > a.icon--emoji:after,
 body > main > article blockquote.center--x.callout[icon]:before,
@@ -1073,6 +1093,14 @@ body h3,
 body h4 {
 	scroll-margin-top: calc(var(--margin--vertical) * 3);
 	max-width: 40ch;
+}
+
+body.index h1 {
+	max-width: 12ch;
+}
+
+body .icon--sf--regular {
+	--icon--scale: 0.8;
 }
 
 body > nav {
