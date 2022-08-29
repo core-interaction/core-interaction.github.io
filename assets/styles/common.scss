@@ -330,36 +330,9 @@ body {
 				@include breakpoint(568) { --typography--leading: var(--typography--leading--base) }
 
 				li {
-					@extend %typography;
+					@extend %list--excerpt;
 
-					color:       var(--color--links);
-					white-space: nowrap;
-					width:       fit-content;
-
-					a {
-						@extend %link--element;
-
-						display:        block;
-						margin-bottom:  initial;
-						margin-top:     initial;
-						max-width:      calc(100% + var(--link--enlargement) * 2);
-						overflow:       hidden;
-						padding-bottom: initial;
-						padding-right:  calc(var(--link--enlargement) + 1.05em);
-						padding-top:    initial;
-						position:       relative;
-						text-overflow:  ellipsis;
-
-						&:after {
-							@extend .icon--sf;
-
-							--icon--shift: 0.05em;
-
-							content: '↓';
-							position: absolute;
-							right:    var(--link--enlargement);
-						}
-					}
+					a:after { --icon: '↓' }
 				}
 			}
 		}
@@ -502,36 +475,38 @@ body {
 
 		--icon--shift: 0.05em;
 	}
+}
 
 
 
-// 	&[href*=".pdf"]:after,
-// 	&[href*="courses.newschool.edu"]:after,
-// 	&[href*="docs.google.com"]:after,
-// 	&[href*="drive.google.com"]:after,
-// 	&[href*="eric.young.li"]:after,
-// 	&[href*="github.com"]:after,
-// 	&[href*="mailto:"]:after,
-// 	&[href*="michaelfehrenbach.com"]:after,
-// 	&[href*="mpscd.parsons.edu"]:after,
-// 	&[href*="slack.com"]:after,
-// 	&[href*="syllabus"]:after,
-// 	&[href*="zoom.us"]:after {
-// 		@extend .icon--emoji;
-//
-// 		--icon--gap: 0.5em;
-// 	}
-//
-// 	&[href*=".pdf"]:after                  { --icon: '🙃' }
-// 	&[href*="courses.newschool.edu"]:after { --icon: '🙃' }
-// 	&[href*="docs.google.com"]:after       { --icon: '🙃' }
-// 	&[href*="drive.google.com"]:after      { --icon: '🙃' }
-// 	&[href*="eric.young.li"]:after         { --icon: '🙃' }
-// 	&[href*="github.com"]:after            { --icon: '🙃' }
-// 	&[href*="mailto:"]:after               { --icon: '🙃' }
-// 	&[href*="michaelfehrenbach.com"]:after { --icon: '🙃' }
-// 	&[href*="mpscd.parsons.edu"]:after     { --icon: '🙃' }
-// 	&[href*="slack.com"]:after             { --icon: '🙃' }
-// 	&[href*="syllabus"]:after              { --icon: '🙃' }
-// 	&[href*="zoom.us"]:after               { --icon: '🙃' }
+%list--excerpt {
+	@extend %typography;
+
+	color:       var(--color--links);
+	white-space: nowrap;
+	width:       fit-content;
+
+	a {
+		@extend %link--element;
+
+		display:        block;
+		margin-bottom:  initial;
+		margin-top:     initial;
+		max-width:      calc(100% + var(--link--enlargement) * 2);
+		overflow:       hidden;
+		padding-bottom: initial;
+		padding-right:  calc(var(--link--enlargement) + 2ch);
+		padding-top:    initial;
+		position:       relative;
+		text-overflow:  ellipsis;
+
+		&:after {
+			@extend .center--x;
+			@extend .icon--sf;
+
+			content:  var(--icon);
+			position: absolute;
+			right:    var(--link--enlargement);
+		}
+	}
 }
