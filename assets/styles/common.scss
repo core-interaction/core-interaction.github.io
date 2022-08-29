@@ -148,6 +148,13 @@ body {
 		@extend %--icon--span;
 	}
 
+	.icon--sf--regular {
+		@extend %--icon--span;
+		@extend %font--sf--medium;
+
+		--icon--scale: 0.8;
+	}
+
 
 
 	// Breadcrumb thing.
