@@ -315,6 +315,23 @@
 
 
 
+	hr {
+		height:  var(--typography--cap);
+		overflow:      hidden;
+
+		@include breakpoint(568) { grid-column: 1 / span 2 }
+
+		&:after {
+			content:       '--------------------------------------------------------------------------------';
+			display:       block;
+			margin-top:    var(--typography--margin--top);
+			overflow-wrap: anywhere;
+			width:         100%;
+		}
+	}
+
+
+
 	// Lower for the cascade.
 	hr,
 	blockquote {
@@ -327,6 +344,7 @@
 			+ * { --margin--top--previous: var(--margin--vertical--4) }
 		}
 	}
+
 
 
 	// Column stuff.
