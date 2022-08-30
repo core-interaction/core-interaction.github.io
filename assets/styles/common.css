@@ -967,9 +967,15 @@ body > main > article blockquote.callout[icon]:before {
 }
 
 body > main > article blockquote.pull-quote {
-	padding-left: 5ch;
-	padding-right: 5ch;
+	padding-left: 3ch;
 	position: relative;
+}
+
+@media (min-width: 35.5em) {
+	body > main > article blockquote.pull-quote {
+		padding-left: 5ch;
+		padding-right: 5ch;
+	}
 }
 
 body > main > article blockquote.pull-quote:before {
