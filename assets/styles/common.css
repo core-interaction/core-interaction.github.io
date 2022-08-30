@@ -1253,7 +1253,7 @@ body > main > article blockquote + * + * {
 
 	body > main > article .left:first-child + .right,
 	body > main > article .left:first-child + aside {
-		--margin--top: 0rem;
+		--margin--top: initial;
 	}
 
 	body > main > article .left:not(:first-child) + .right,
