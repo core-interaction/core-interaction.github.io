@@ -367,9 +367,9 @@ body > main > article a {
 	}
 }
 
-body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child,
 body > main > article .link-only > a,
 body > main > article .link-only > p > a,
+body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child,
 body > main > article figure > figcaption > p > a {
 	-webkit-text-stroke: initial;
 	paint-order: initial;
@@ -879,124 +879,16 @@ body > main > article {
 	min-height: 30vh;
 }
 
-body > main > article h1 {
-	display: none;
-}
-
 body > main > article > *:not(:first-child) {
 	margin-top: var(--margin--top, var(--typography--leading-shoulder));
 }
 
-body > main > article h2 {
-	--margin--top: var(--margin--vertical--4);
-	margin-bottom: var(--typography--margin--bottom);
-	padding-bottom: calc(var(--typography--leading-shoulder) - var(--typography--between));
-	position: relative;
-	width: fit-content;
+body > main > article h1 {
+	display: none;
 }
 
-body > main > article h2:after {
-	content: "----------------------------------------------------------------------";
-	max-width: 100%;
-	overflow: hidden;
-	position: absolute;
-	top: 1em;
-	visibility: visible;
-	white-space: nowrap;
-}
-
-body > main > article h2 + * {
-	--margin--top: var(--margin--vertical--2);
-	--margin--top--previous: var(--margin--vertical--4);
-}
-
-body > main > article h2 + * + * {
-	--margin--top--previous: var(--margin--vertical--2);
-}
-
-body > main > article h3 {
-	--margin--top: var(--margin--vertical--2);
-}
-
-body > main > article .two-above {
-	--margin--top: var(--margin--vertical--2);
-}
-
-body > main > article .two-above + * {
-	--margin--top--previous: var(--margin--vertical--2);
-}
-
-body > main > article .two-below + * {
-	--margin--top: var(--margin--vertical--2);
-}
-
-body > main > article .four-above {
-	--margin--top: var(--margin--vertical--6);
-}
-
-body > main > article .four-above + * {
-	--margin--top--previous: var(--margin--vertical--6);
-}
-
-body > main > article .four-below + * {
-	--margin--top: var(--margin--vertical--6);
-}
-
-body > main > article .faded {
-	opacity: 0.4;
-}
-
-body > main > article blockquote {
-	font-style: italic;
-}
-
-body > main > article blockquote.callout {
-	background: var(--color--alpha);
-	border-radius: var(--border--radius);
-	display: flex;
-	font-style: normal;
-	padding: 2ch;
-}
-
-body > main > article blockquote.callout[icon]:before {
-	color: var(--color);
-	content: attr(icon);
-	margin-left: initial;
-	margin-right: 2ch;
-	margin-top: var(--typography--margin--top);
-}
-
-body > main > article blockquote.pull-quote {
-	padding-left: 3ch;
-	position: relative;
-}
-
-@media (min-width: 35.5em) {
-	body > main > article blockquote.pull-quote {
-		padding-left: 5ch;
-		padding-right: 5ch;
-	}
-}
-
-body > main > article blockquote.pull-quote:before {
-	content: "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | ";
-	font-style: normal;
-	left: 0;
-	max-height: calc(100% + var(--typography--between));
-	overflow: hidden;
-	position: absolute;
-	top: calc(var(--typography--margin--top) - 0.1em);
-	width: 1ch;
-}
-
-body > main > article blockquote.pull-quote > blockquote:last-child {
-	font-style: normal;
-	margin-top: var(--margin--vertical);
-}
-
-body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child:after {
-	--icon--shift: 0.15em;
-	content: "↗";
+body > main > article p {
+	max-width: 70ch;
 }
 
 body > main > article a {
@@ -1004,8 +896,23 @@ body > main > article a {
 	color: var(--link--color);
 }
 
-body > main > article p {
-	max-width: 70ch;
+body > main > article hr {
+	height: var(--typography--cap);
+	overflow: hidden;
+}
+
+@media (min-width: 35.5em) {
+	body > main > article hr {
+		grid-column: 1/span 2;
+	}
+}
+
+body > main > article hr:after {
+	content: "--------------------------------------------------------------------------------";
+	display: block;
+	margin-top: var(--typography--margin--top);
+	overflow-wrap: anywhere;
+	width: 100%;
 }
 
 body > main > article ul,
@@ -1107,6 +1014,59 @@ body > main > article table tr > td:not(:first-child) {
 	border-left: var(--margin) solid transparent;
 }
 
+body > main > article blockquote {
+	font-style: italic;
+}
+
+body > main > article blockquote.callout {
+	background: var(--color--alpha);
+	border-radius: var(--border--radius);
+	display: flex;
+	font-style: normal;
+	padding: 2ch;
+}
+
+body > main > article blockquote.callout[icon]:before {
+	color: var(--color);
+	content: attr(icon);
+	margin-left: initial;
+	margin-right: 2ch;
+	margin-top: var(--typography--margin--top);
+}
+
+body > main > article blockquote.pull-quote {
+	padding-left: 3ch;
+	position: relative;
+}
+
+@media (min-width: 35.5em) {
+	body > main > article blockquote.pull-quote {
+		padding-left: 5ch;
+		padding-right: 5ch;
+	}
+}
+
+body > main > article blockquote.pull-quote:before {
+	content: "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | ";
+	font-style: normal;
+	left: 0;
+	max-height: calc(100% + var(--typography--between));
+	overflow: hidden;
+	position: absolute;
+	top: calc(var(--typography--margin--top) - 0.1em);
+	width: 1ch;
+}
+
+body > main > article blockquote.pull-quote > blockquote:last-child {
+	font-style: normal;
+	margin-top: var(--margin--vertical);
+}
+
+body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child:after {
+	--icon--shift: 0.15em;
+	content: "↗";
+}
+
 body > main > article details > summary {
 	--color: var(--color--links);
 }
@@ -1193,29 +1153,59 @@ body > main > article aside + * {
 	--margin--top: var(--margin--vertical--2);
 }
 
-@media (min-width: 35.5em) {
-	body > main > article aside + * {
-		--margin--top: initial;
-	}
+body > main > article h2 {
+	--margin--top: var(--margin--vertical--4);
+	margin-bottom: var(--typography--margin--bottom);
+	padding-bottom: calc(var(--typography--leading-shoulder) - var(--typography--between));
+	position: relative;
+	width: fit-content;
 }
 
-body > main > article hr {
-	height: var(--typography--cap);
+body > main > article h2:after {
+	content: "----------------------------------------------------------------------";
+	max-width: 100%;
 	overflow: hidden;
+	position: absolute;
+	top: 1em;
+	visibility: visible;
+	white-space: nowrap;
 }
 
-@media (min-width: 35.5em) {
-	body > main > article hr {
-		grid-column: 1/span 2;
-	}
+body > main > article h2 + * {
+	--margin--top: var(--margin--vertical--2);
+	--margin--top--previous: var(--margin--vertical--4);
 }
 
-body > main > article hr:after {
-	content: "--------------------------------------------------------------------------------";
-	display: block;
-	margin-top: var(--typography--margin--top);
-	overflow-wrap: anywhere;
-	width: 100%;
+body > main > article h2 + * + * {
+	--margin--top--previous: var(--margin--vertical--2);
+}
+
+body > main > article h3 {
+	--margin--top: var(--margin--vertical--2);
+}
+
+body > main > article .two-above {
+	--margin--top: var(--margin--vertical--2);
+}
+
+body > main > article .two-above + * {
+	--margin--top--previous: var(--margin--vertical--2);
+}
+
+body > main > article .two-below + * {
+	--margin--top: var(--margin--vertical--2);
+}
+
+body > main > article .four-above {
+	--margin--top: var(--margin--vertical--6);
+}
+
+body > main > article .four-above + * {
+	--margin--top--previous: var(--margin--vertical--6);
+}
+
+body > main > article .four-below + * {
+	--margin--top: var(--margin--vertical--6);
 }
 
 body > main > article hr,
@@ -1232,6 +1222,10 @@ body > main > article blockquote + * {
 body > main > article hr + * + *,
 body > main > article blockquote + * + * {
 	--margin--top--previous: var(--margin--vertical--4);
+}
+
+body > main > article .faded {
+	opacity: 0.4;
 }
 
 @media (min-width: 35.5em) {
@@ -1253,7 +1247,7 @@ body > main > article blockquote + * + * {
 
 	body > main > article .left:first-child + .right,
 	body > main > article .left:first-child + aside {
-		--margin--top: initial;
+		--margin--top: 0rem;
 	}
 
 	body > main > article .left:not(:first-child) + .right,
