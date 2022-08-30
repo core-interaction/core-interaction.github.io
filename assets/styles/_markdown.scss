@@ -88,16 +88,25 @@
 		}
 
 		&.pull-quote {
-			border-left-color: var(--color);
-			border-left-style: solid;
-			border-left-width: var(--divider--width);
-			padding-left:      calc(5ch - var(--divider--width));
-			padding-right:     5ch;
+			padding-left:  5ch;
+			padding-right: 5ch;
+			position:      relative;
+
+			&:before {
+				content:    '| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | ';
+				font-style: normal;
+				left:       0;
+				max-height: calc(100% + var(--typography--between));
+				overflow:   hidden;
+				position:   absolute;
+				top:        calc(var(--typography--margin--top) - 0.1em);
+				width:      1ch;
+			}
 
 			// Credit.
 			> blockquote:last-child {
 				font-style: normal;
-				margin-top: var(--margin);
+				margin-top: var(--margin--vertical);
 
 				> p > a:only-child {
 					@extend %font--underline--disable;
@@ -326,8 +335,8 @@
 		> * { grid-column: 1 / span 3 } // Everything full width, by default.
 
 		.left {
-			grid-column:   1 / span 2;
-			padding-right: var(--margin);
+			grid-column:  1 / span 2;
+			margin-right: 2ch;
 
 			&:first-child + .right { --margin--top: 0rem; }
 			&:not(:first-child)+ .right { --margin--top: var(--margin--top--previous) }
