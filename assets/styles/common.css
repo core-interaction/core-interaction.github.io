@@ -1210,18 +1210,18 @@ body > main > article .four-below + * {
 
 body > main > article hr,
 body > main > article blockquote {
-	--margin--top: var(--margin--vertical--4);
+	--margin--top: var(--margin--vertical--6);
 }
 
 body > main > article hr + *,
 body > main > article blockquote + * {
-	--margin--top: var(--margin--vertical--4);
-	--margin--top--previous: var(--margin--vertical--4);
+	--margin--top: var(--margin--vertical--6);
+	--margin--top--previous: var(--margin--vertical--6);
 }
 
 body > main > article hr + * + *,
 body > main > article blockquote + * + * {
-	--margin--top--previous: var(--margin--vertical--4);
+	--margin--top--previous: var(--margin--vertical--6);
 }
 
 body > main > article .faded {
