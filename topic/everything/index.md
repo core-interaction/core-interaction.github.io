@@ -24,7 +24,7 @@ It is worth noting these [were often women](https://www.nytimes.com/2019/02/13/m
 
 {% include figure.html src='univac.jpg' caption='Univac, the first commercial computer in the US.' credit='https://time.com/4271506/census-bureau-computer-history/' %}
 
-By the 1960s, computers were room-sized, institutional electronic machines—used by governments (the military), businesses, and universities. They were used to solve complex math problems and sort data, but were still very slow and didn’t communicate with one another.
+By the 1960s, computers were room-sized, institutional electronic machines—used by governments (the military), businesses, and universities. They were used to solve complex math problems and sort data, but were still very slow and didn’t communicate with one another.
 
 {% include figure.html src='networks.png' credit='https://www.rand.org/content/dam/rand/pubs/research_memoranda/2006/RM3420.pdf' %}
 
@@ -139,7 +139,7 @@ Obviously, *this* is a web page. Think about how many other web pages you have 
 Ultimately, a web page is a just text file on a computer. It is written in a special format, the aforementioned HTML, which structures the content of the document and also links it to other resources—other web pages, images, computers, really almost anything. Think of the web as type with instructions.
 {: .left }
 
-These all started as simple, hand-typed documents. Then as the power of computers grew, and the languages of the web evolved alongside—web pages expanded almost inconceivably in complexity and capabilities. *Cascading Style Sheets* (CSS) gave them marvelous abilities to be customized and designed. *JavaScript* (JS) gave them remarkable, newfound interactivity and function. Websites (collections of web pages) today are built on top of an incredible *stack* of technology—networks, servers, databases, libraries, browsers, devices.
+These all started as simple, hand-typed documents. Then as the power of computers grew, and the languages of the web evolved alongside—web pages expanded almost inconceivably in complexity and capabilities. *Cascading Style Sheets* (CSS) gave them marvelous abilities to be customized and designed. *JavaScript* (JS) gave them remarkable, newfound interactivity and function. Websites (collections of web pages) today are built on top of an incredible *stack* of technology—networks, servers, databases, libraries, browsers, devices.
 {: .left }
 
 
