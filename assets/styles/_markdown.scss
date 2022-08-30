@@ -360,7 +360,7 @@
 			grid-column:  1 / span 2;
 			margin-right: 2ch;
 
-			&:first-child + .right { --margin--top: initial }
+			&:first-child + .right { --margin--top: 0rem } // Not `initial` to prevent fallback.
 			&:not(:first-child) + .right { --margin--top: var(--margin--top--previous) }
 		}
 
