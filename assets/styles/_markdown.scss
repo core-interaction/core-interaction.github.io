@@ -328,13 +328,13 @@
 	// Lowest, cascade.
 	hr,
 	blockquote {
-		--margin--top: var(--margin--vertical--4);
+		--margin--top: var(--margin--vertical--6);
 
 		+ * {
-			--margin--top:           var(--margin--vertical--4);
-			--margin--top--previous: var(--margin--vertical--4);
+			--margin--top:           var(--margin--vertical--6);
+			--margin--top--previous: var(--margin--vertical--6);
 
-			+ * { --margin--top--previous: var(--margin--vertical--4) }
+			+ * { --margin--top--previous: var(--margin--vertical--6) }
 		}
 	}
 
