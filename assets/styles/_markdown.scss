@@ -30,10 +30,10 @@
 		}
 
 		+ * {
-			--margin--top:           var(--margin--vertical--2);
+			--margin--top:           var(--margin--vertical--2); // Think of this as its margin-bottom.
 			--margin--top--previous: var(--margin--vertical--4);
 
-			+ * { --margin--top--previous: var(--margin--vertical--2) }
+			+ * { --margin--top--previous: var(--margin--vertical--2) } // Think of this as its margin-bottom.
 		}
 	}
 
@@ -360,8 +360,8 @@
 			grid-column:  1 / span 2;
 			margin-right: 2ch;
 
-			&:first-child + .right { --margin--top: 0rem; }
-			&:not(:first-child)+ .right { --margin--top: var(--margin--top--previous) }
+			&:first-child + .right { --margin--top: initial }
+			&:not(:first-child) + .right { --margin--top: var(--margin--top--previous) }
 		}
 
 		.right {
