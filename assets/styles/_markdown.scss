@@ -88,9 +88,13 @@
 		}
 
 		&.pull-quote {
-			padding-left:  5ch;
-			padding-right: 5ch;
+			padding-left:  3ch;
 			position:      relative;
+
+			@include breakpoint(568) {
+				padding-left:  5ch;
+				padding-right: 5ch;
+			}
 
 			&:before {
 				content:    '| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | ';
