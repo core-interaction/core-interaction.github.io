@@ -1,136 +1,19 @@
 > article {
 	@extend %type--layout;
 
-	// Sequential spacing between `p`.
 	--typography--leading-shoulder: calc(var(--typography--font-size) * (var(--typography--leading) + var(--typography--shoulder) * 2));
 
 	min-height: 30vh;
 
-	// Basics.
-	h1 { display: none } // So we don’t forget.
-
+	// Sequential spacing between `p`.
 	> *:not(:first-child) { margin-top: var(--margin--top, var(--typography--leading-shoulder)) }
 
-	h2 {
-		--margin--top: var(--margin--vertical--4);
-
-		margin-bottom:  var(--typography--margin--bottom);
-		padding-bottom: calc(var(--typography--leading-shoulder) - var(--typography--between));
-		position:       relative;
-		width:          fit-content;
-
-		&:after {
-			content:     '----------------------------------------------------------------------';
-			max-width:   100%;
-			overflow:    hidden;
-			position:    absolute;
-			top:         1em;
-			visibility:  visible; // Override typography.
-			white-space: nowrap;
-		}
-
-		+ * {
-			--margin--top:           var(--margin--vertical--2); // Think of this as its margin-bottom.
-			--margin--top--previous: var(--margin--vertical--4);
-
-			+ * { --margin--top--previous: var(--margin--vertical--2) } // Think of this as its margin-bottom.
-		}
-	}
-
-	h3 { --margin--top: var(--margin--vertical--2) }
 
 
+	h1 { display: none } // So we don’t forget.
 
-	// Manual spacing decisions.
-	.two-above {
-		--margin--top: var(--margin--vertical--2);
+	p { max-width: 70ch }
 
-		+ * { --margin--top--previous: var(--margin--vertical--2) }
-	}
-
-	.two-below + * { --margin--top: var(--margin--vertical--2) }
-
-	.four-above {
-		--margin--top: var(--margin--vertical--6); // Actually six, keeping the name to retain Markdown compatibility with TI.
-
-		+ * { --margin--top--previous: var(--margin--vertical--6) }
-	}
-
-	.four-below + * { --margin--top: var(--margin--vertical--6) }
-
-
-
-	// “Disabled” looking stuff.
-	.faded { opacity: 0.4 }
-
-
-
-	// Quotes/callouts.
-	blockquote {
-		font-style: italic;
-
-		&.callout {
-			background:    var(--color--alpha);
-			border-radius: var(--border--radius);
-			display:       flex;
-			font-style:    normal;
-			padding:       2ch;
-
-			&[icon]:before {
-				@extend .icon--emoji;
-
-				color:        var(--color);
-				content:      attr(icon);
-				margin-left:  initial;
-				margin-right: 2ch;
-				margin-top:   var(--typography--margin--top);
-			}
-		}
-
-		&.pull-quote {
-			padding-left:  3ch;
-			position:      relative;
-
-			@include breakpoint(568) {
-				padding-left:  5ch;
-				padding-right: 5ch;
-			}
-
-			&:before {
-				content:    '| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | ';
-				font-style: normal;
-				left:       0;
-				max-height: calc(100% + var(--typography--between));
-				overflow:   hidden;
-				position:   absolute;
-				top:        calc(var(--typography--margin--top) - 0.1em);
-				width:      1ch;
-			}
-
-			// Credit.
-			> blockquote:last-child {
-				font-style: normal;
-				margin-top: var(--margin--vertical);
-
-				> p > a:only-child {
-					@extend %font--underline--disable;
-
-					&:after {
-						@extend .icon--sf;
-						@extend .center--x;
-
-						--icon--shift: 0.15em; // Not sure why this needs more?
-
-						content: '↗';
-					}
-				}
-			}
-		}
-	}
-
-
-
-	// Links.
 	a {
 		@extend %link--text;
 		@extend %font--underline;
@@ -147,8 +30,22 @@
 		@extend %icon--link;
 	}
 
-	p {
-		max-width: 70ch;
+
+
+	// Dividers.
+	hr {
+		height:  var(--typography--cap);
+		overflow:      hidden;
+
+		@include breakpoint(568) { grid-column: 1 / span 2 }
+
+		&:after {
+			content:       '--------------------------------------------------------------------------------';
+			display:       block;
+			margin-top:    var(--typography--margin--top);
+			overflow-wrap: anywhere;
+			width:         100%;
+		}
 	}
 
 
@@ -213,6 +110,71 @@
 
 		tr:not(:first-child) > td { border-top: var(--typography--leading-shoulder) solid transparent }
 		tr > td:not(:first-child) { border-left: var(--margin) solid transparent }
+	}
+
+
+
+	// Quotes/callouts.
+	blockquote {
+		font-style: italic;
+
+		&.callout {
+			background:    var(--color--alpha);
+			border-radius: var(--border--radius);
+			display:       flex;
+			font-style:    normal;
+			padding:       2ch;
+
+			&[icon]:before {
+				@extend .icon--emoji;
+
+				color:        var(--color);
+				content:      attr(icon);
+				margin-left:  initial;
+				margin-right: 2ch;
+				margin-top:   var(--typography--margin--top);
+			}
+		}
+
+		&.pull-quote {
+			padding-left:  3ch;
+			position:      relative;
+
+			@include breakpoint(568) {
+				padding-left:  5ch;
+				padding-right: 5ch;
+			}
+
+			&:before {
+				content:    '| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | ';
+				font-style: normal;
+				left:       0;
+				max-height: calc(100% + var(--typography--between));
+				overflow:   hidden;
+				position:   absolute;
+				top:        calc(var(--typography--margin--top) - 0.1em);
+				width:      1ch;
+			}
+
+			// Credit.
+			> blockquote:last-child {
+				font-style: normal;
+				margin-top: var(--margin--vertical);
+
+				> p > a:only-child {
+					@extend %font--underline--disable;
+
+					&:after {
+						@extend .icon--sf;
+						@extend .center--x;
+
+						--icon--shift: 0.15em; // Not sure why this needs more?
+
+						content: '↗';
+					}
+				}
+			}
+		}
 	}
 
 
@@ -308,31 +270,62 @@
 
 		+ * {
 			--margin--top: var(--margin--vertical--2);
-
-			@include breakpoint(568) { --margin--top: initial }
-		}
-	}
-
-
-
-	hr {
-		height:  var(--typography--cap);
-		overflow:      hidden;
-
-		@include breakpoint(568) { grid-column: 1 / span 2 }
-
-		&:after {
-			content:       '--------------------------------------------------------------------------------';
-			display:       block;
-			margin-top:    var(--typography--margin--top);
-			overflow-wrap: anywhere;
-			width:         100%;
 		}
 	}
 
 
 
 	// Lower for the cascade.
+	h2 {
+		--margin--top: var(--margin--vertical--4);
+
+		margin-bottom:  var(--typography--margin--bottom);
+		padding-bottom: calc(var(--typography--leading-shoulder) - var(--typography--between));
+		position:       relative;
+		width:          fit-content;
+
+		&:after {
+			content:     '----------------------------------------------------------------------';
+			max-width:   100%;
+			overflow:    hidden;
+			position:    absolute;
+			top:         1em;
+			visibility:  visible; // Override typography.
+			white-space: nowrap;
+		}
+
+		+ * {
+			--margin--top:           var(--margin--vertical--2); // Think of this as its margin-bottom.
+			--margin--top--previous: var(--margin--vertical--4);
+
+			+ * { --margin--top--previous: var(--margin--vertical--2) } // Think of this as its margin-bottom.
+		}
+	}
+
+	h3 { --margin--top: var(--margin--vertical--2) }
+
+
+
+	// Manual spacing decisions.
+	.two-above {
+		--margin--top: var(--margin--vertical--2);
+
+		+ * { --margin--top--previous: var(--margin--vertical--2) }
+	}
+
+	.two-below + * { --margin--top: var(--margin--vertical--2) }
+
+	.four-above {
+		--margin--top: var(--margin--vertical--6); // Actually six, keeping the name to retain Markdown compatibility with TI.
+
+		+ * { --margin--top--previous: var(--margin--vertical--6) }
+	}
+
+	.four-below + * { --margin--top: var(--margin--vertical--6) }
+
+
+
+	// Lowest, cascade.
 	hr,
 	blockquote {
 		--margin--top: var(--margin--vertical--4);
@@ -344,6 +337,11 @@
 			+ * { --margin--top--previous: var(--margin--vertical--4) }
 		}
 	}
+
+
+
+	// “Disabled” looking stuff.
+	.faded { opacity: 0.4 }
 
 
 
