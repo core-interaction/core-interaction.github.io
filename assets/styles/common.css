@@ -1199,6 +1199,25 @@ body > main > article aside + * {
 	}
 }
 
+body > main > article hr {
+	height: var(--typography--cap);
+	overflow: hidden;
+}
+
+@media (min-width: 35.5em) {
+	body > main > article hr {
+		grid-column: 1/span 2;
+	}
+}
+
+body > main > article hr:after {
+	content: "--------------------------------------------------------------------------------";
+	display: block;
+	margin-top: var(--typography--margin--top);
+	overflow-wrap: anywhere;
+	width: 100%;
+}
+
 body > main > article hr,
 body > main > article blockquote {
 	--margin--top: var(--margin--vertical--4);
