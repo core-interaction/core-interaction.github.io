@@ -205,13 +205,9 @@ We will use the following sites to organize and run our class:
 
 ### Our community
 
-During our first class session, we will collectively write and agree upon a code of conduct for our group.
+
 
 This agreement is intended to help us create and maintain a safe, empathetic, and productive space for our course. It will live on [our course site](https://core-interaction.github.io), and can be revised and modified, with all of our input, over the semester.
-
-
-> Let’s fill this out, together. I’ve added a few items that we think are important, to start us off.
-{: .callout .two-below icon='✍️' }
 
 * The class should feel comfortable asking the instructor anything—nothing is too trivial, or embarrassing, or off-topic. Tangents are good. Students can ask via [Slack](https://core-one-interaction.slack.com/archives/C03UTLMBMDH), if they would like to remain anonymous.
 
@@ -220,7 +216,9 @@ This agreement is intended to help us create and maintain a safe, empathetic, a
 * When presenting, students will “have the floor” while they take us through their work. This means everyone else will be quiet, we’ll close our laptops, and give our full attention to the person showing their work.
 
 * We will have a short break, roughly halfway through the class.
-{: .faded }
+
+> We can revisit this agreement throughout the semester. Please let me know if you’d like to raise something with the class.
+{: .callout icon='🤚' }
 
 
 
