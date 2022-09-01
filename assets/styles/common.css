@@ -1147,6 +1147,28 @@ body > main > article figure > iframe {
 	width: 100vw;
 }
 
+@supports (-webkit-hyphens: none) {
+	body > main > article figure > iframe[src*="drive.google.com"] {
+		display: none;
+	}
+
+	body > main > article figure > iframe[src*="drive.google.com"] + figcaption {
+		margin-top: initial;
+	}
+
+	body > main > article figure > iframe[src*="drive.google.com"] + figcaption:before {
+		content: "Safari security settings prevent Google Drive embeds—so you’ll need to go to the original.";
+		display: block;
+		font-style: italic;
+		margin-bottom: var(--typography--margin--top);
+		margin-top: var(--typography--margin--top);
+	}
+
+	body > main > article figure > iframe[src*="drive.google.com"] + figcaption > p {
+		display: none;
+	}
+}
+
 body > main > article figure > figcaption {
 	margin-top: var(--typography--between);
 }
