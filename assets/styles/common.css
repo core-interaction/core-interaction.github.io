@@ -253,12 +253,14 @@ body > main > article details > summary > p:after,
 body > main > header > address > div > p > a:after,
 body > main > article .link-only > a:after,
 body > main > article .link-only > p > a:after,
+body > main > article figure > figcaption > p > a:after,
 body > main > header > ul li a:after,
 body.index > main > nav aside > menu > li a:after,
 body .icon--sf--regular,
 body > main > header > address > div > p > a[href*=".pdf"]:after,
 body > main > article .link-only > a[href*=".pdf"]:after,
 body > main > article .link-only > p > a[href*=".pdf"]:after,
+body > main > article figure > figcaption > p > a[href*=".pdf"]:after,
 body > main > header > ul li a[href*=".pdf"]:after,
 body.index > main > nav aside > menu > li a[href*=".pdf"]:after {
 	--typography--shoulder: calc(1 - var(--typography--cap-height));
@@ -269,6 +271,7 @@ body .icon--sf--regular,
 body > main > header > address > div > p > a[href*=".pdf"]:after,
 body > main > article .link-only > a[href*=".pdf"]:after,
 body > main > article .link-only > p > a[href*=".pdf"]:after,
+body > main > article figure > figcaption > p > a[href*=".pdf"]:after,
 body > main > header > ul li a[href*=".pdf"]:after,
 body.index > main > nav aside > menu > li a[href*=".pdf"]:after {
 	--typography--cap-height: 0.705;
@@ -284,6 +287,7 @@ body > main > article details > summary > p:after,
 body > main > header > address > div > p > a:after,
 body > main > article .link-only > a:after,
 body > main > article .link-only > p > a:after,
+body > main > article figure > figcaption > p > a:after,
 body > main > header > ul li a:after,
 body.index > main > nav aside > menu > li a:after {
 	--typography--cap-height: 0.705;
@@ -296,6 +300,7 @@ body .icon--sf--regular,
 body > main > header > address > div > p > a[href*=".pdf"]:after,
 body > main > article .link-only > a[href*=".pdf"]:after,
 body > main > article .link-only > p > a[href*=".pdf"]:after,
+body > main > article figure > figcaption > p > a[href*=".pdf"]:after,
 body > main > header > ul li a[href*=".pdf"]:after,
 body.index > main > nav aside > menu > li a[href*=".pdf"]:after {
 	--typography--weight: 300;
@@ -312,6 +317,7 @@ body > main > article details > summary > p:after,
 body > main > header > address > div > p > a:after,
 body > main > article .link-only > a:after,
 body > main > article .link-only > p > a:after,
+body > main > article figure > figcaption > p > a:after,
 body > main > header > ul li a:after,
 body.index > main > nav aside > menu > li a:after {
 	--typography--weight: 300;
@@ -389,6 +395,7 @@ body > main > article a:focus:focus-visible:not(:disabled),
 body > main > header > address > div > p > a:focus:focus-visible:not(:disabled),
 body > main > article .link-only > a:focus:focus-visible:not(:disabled),
 body > main > article .link-only > p > a:focus:focus-visible:not(:disabled),
+body > main > article figure > figcaption > p > a:focus:focus-visible:not(:disabled),
 body > nav > div > a:focus:focus-visible:not(:disabled),
 body > main > article details > summary:focus:focus-visible:not(:disabled),
 body > main > article aside > menu > li > a:focus:focus-visible:not(:disabled),
@@ -407,6 +414,7 @@ body > main > article a,
 body > main > header > address > div > p > a,
 body > main > article .link-only > a,
 body > main > article .link-only > p > a,
+body > main > article figure > figcaption > p > a,
 body > nav > div > a,
 body > main > article details > summary,
 body > main > article aside > menu > li > a,
@@ -440,6 +448,7 @@ body > main > article a:focus,
 body > main > header > address > div > p > a:focus,
 body > main > article .link-only > a:focus,
 body > main > article .link-only > p > a:focus,
+body > main > article figure > figcaption > p > a:focus,
 body > nav > div > a:focus,
 body > main > article details > summary:focus,
 body > main > article aside > menu > li > a:focus,
@@ -482,7 +491,8 @@ body > nav > div > div > p > select,
 body > main > article a,
 body > main > header > address > div > p > a,
 body > main > article .link-only > a,
-body > main > article .link-only > p > a {
+body > main > article .link-only > p > a,
+body > main > article figure > figcaption > p > a {
 	border-bottom-width: calc(var(--link--enlargement) / 2);
 	border-color: transparent;
 	border-left-width: var(--link--enlargement);
@@ -508,7 +518,8 @@ body.index > main > nav aside > menu > li a {
 body > main > article a,
 body > main > header > address > div > p > a,
 body > main > article .link-only > a,
-body > main > article .link-only > p > a {
+body > main > article .link-only > p > a,
+body > main > article figure > figcaption > p > a {
 	position: relative;
 }
 
@@ -523,7 +534,8 @@ body > main > article .link-only > p > a:active {
 body > main > article a:before,
 body > main > header > address > div > p > a:before,
 body > main > article .link-only > a:before,
-body > main > article .link-only > p > a:before {
+body > main > article .link-only > p > a:before,
+body > main > article figure > figcaption > p > a:before {
 	background-color: var(--color--active);
 	border-radius: calc(var(--link--enlargement) / 2);
 	bottom: calc(var(--link--enlargement) / -2);
@@ -626,6 +638,7 @@ body.index > main > nav aside > menu > li a[href*=".pdf"]:after,
 body > main > header > address > div > p > a[href*=".pdf"]:after,
 body > main > article .link-only > a[href*=".pdf"]:after,
 body > main > article .link-only > p > a[href*=".pdf"]:after,
+body > main > article figure > figcaption > p > a[href*=".pdf"]:after,
 body .icon--emoji,
 body > main > article blockquote.callout[icon]:before,
 body .icon--sf,
@@ -634,6 +647,7 @@ body.index > main > nav aside > menu > li a:after,
 body > main > header > address > div > p > a:after,
 body > main > article .link-only > a:after,
 body > main > article .link-only > p > a:after,
+body > main > article figure > figcaption > p > a:after,
 body > main > article details > summary > p:after,
 body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child:after {
 	--icon--gap: 1ch;
@@ -651,6 +665,7 @@ body.index > main > nav aside > menu > li a.center--x[href*=".pdf"]:after,
 body > main > header > address > div > p > a.center--x[href*=".pdf"]:after,
 body > main > article .link-only > a.center--x[href*=".pdf"]:after,
 body > main > article .link-only > p > a.center--x[href*=".pdf"]:after,
+body > main > article figure > figcaption > p > a.center--x[href*=".pdf"]:after,
 body .center--x.icon--emoji,
 body > main > article blockquote.center--x.callout[icon]:before,
 body .center--x.icon--sf,
@@ -659,6 +674,7 @@ body.index > main > nav aside > menu > li a:after,
 body > main > header > address > div > p > a:after,
 body > main > article .link-only > a:after,
 body > main > article .link-only > p > a:after,
+body > main > article figure > figcaption > p > a:after,
 body > main > article details > summary > p.center--x:after,
 body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child:after {
 	--icon--shift: 0.075em;
@@ -690,6 +706,7 @@ body.index > main > nav aside > menu > li a:after,
 body > main > header > address > div > p > a:after,
 body > main > article .link-only > a:after,
 body > main > article .link-only > p > a:after,
+body > main > article figure > figcaption > p > a:after,
 body > main > article details > summary > p:after,
 body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child:after {
 	--icon--scale: 1.1;
@@ -707,7 +724,8 @@ body > main > header > ul li a[href*=".pdf"]:after,
 body.index > main > nav aside > menu > li a[href*=".pdf"]:after,
 body > main > header > address > div > p > a[href*=".pdf"]:after,
 body > main > article .link-only > a[href*=".pdf"]:after,
-body > main > article .link-only > p > a[href*=".pdf"]:after {
+body > main > article .link-only > p > a[href*=".pdf"]:after,
+body > main > article figure > figcaption > p > a[href*=".pdf"]:after {
 	--icon--scale: 1;
 }
 
@@ -717,11 +735,13 @@ body.index > main > nav aside > menu > li a.icon--sf--regular:after,
 body > main > header > address > div > p > a.icon--sf--regular:after,
 body > main > article .link-only > a.icon--sf--regular:after,
 body > main > article .link-only > p > a.icon--sf--regular:after,
+body > main > article figure > figcaption > p > a.icon--sf--regular:after,
 body > main > header > ul li a[href*=".pdf"]:after,
 body.index > main > nav aside > menu > li a[href*=".pdf"]:after,
 body > main > header > address > div > p > a[href*=".pdf"]:after,
 body > main > article .link-only > a[href*=".pdf"]:after,
 body > main > article .link-only > p > a[href*=".pdf"]:after,
+body > main > article figure > figcaption > p > a[href*=".pdf"]:after,
 body > main > article blockquote.pull-quote > blockquote:last-child > p > a.icon--sf--regular:only-child:after,
 body > main > article body > main > header > ul li blockquote.pull-quote > blockquote:last-child > p > a[href*=".pdf"]:only-child:after,
 body > main > header > ul li body > main > article blockquote.pull-quote > blockquote:last-child > p > a[href*=".pdf"]:only-child:after,
@@ -1121,7 +1141,11 @@ body > main > article figure > figcaption {
 	margin-top: var(--typography--between);
 }
 
-body > main > article figure > figcaption > p > a:only-child span:not(._) {
+body > main > article figure > figcaption > p > a:not(:only-child) {
+	margin-left: calc(1ch - var(--link--enlargement));
+}
+
+body > main > article figure > figcaption > p > a:not(._):after {
 	margin-left: initial;
 }
 
@@ -1426,7 +1450,8 @@ body > main > header > ul li a:after,
 body.index > main > nav aside > menu > li a:after,
 body > main > header > address > div > p > a:after,
 body > main > article .link-only > a:after,
-body > main > article .link-only > p > a:after {
+body > main > article .link-only > p > a:after,
+body > main > article figure > figcaption > p > a:after {
 	content: var(--icon);
 }
 
@@ -1434,7 +1459,8 @@ body > main > header > ul li a[href^="#"]:after,
 body.index > main > nav aside > menu > li a[href^="#"]:after,
 body > main > header > address > div > p > a[href^="#"]:after,
 body > main > article .link-only > a[href^="#"]:after,
-body > main > article .link-only > p > a[href^="#"]:after {
+body > main > article .link-only > p > a[href^="#"]:after,
+body > main > article figure > figcaption > p > a[href^="#"]:after {
 	--icon: "↓";
 }
 
@@ -1442,7 +1468,8 @@ body > main > header > ul li a[href^="/"]:after,
 body.index > main > nav aside > menu > li a[href^="/"]:after,
 body > main > header > address > div > p > a[href^="/"]:after,
 body > main > article .link-only > a[href^="/"]:after,
-body > main > article .link-only > p > a[href^="/"]:after {
+body > main > article .link-only > p > a[href^="/"]:after,
+body > main > article figure > figcaption > p > a[href^="/"]:after {
 	--icon: "→";
 }
 
@@ -1450,7 +1477,8 @@ body > main > header > ul li a[href^=http]:after,
 body.index > main > nav aside > menu > li a[href^=http]:after,
 body > main > header > address > div > p > a[href^=http]:after,
 body > main > article .link-only > a[href^=http]:after,
-body > main > article .link-only > p > a[href^=http]:after {
+body > main > article .link-only > p > a[href^=http]:after,
+body > main > article figure > figcaption > p > a[href^=http]:after {
 	--icon: "↗";
 	--icon--shift: 0.3rem;
 }
@@ -1459,7 +1487,8 @@ body > main > header > ul li a[href*=".pdf"]:after,
 body.index > main > nav aside > menu > li a[href*=".pdf"]:after,
 body > main > header > address > div > p > a[href*=".pdf"]:after,
 body > main > article .link-only > a[href*=".pdf"]:after,
-body > main > article .link-only > p > a[href*=".pdf"]:after {
+body > main > article .link-only > p > a[href*=".pdf"]:after,
+body > main > article figure > figcaption > p > a[href*=".pdf"]:after {
 	--icon: "⤓";
 	--icon--shift: 0.05em;
 }
