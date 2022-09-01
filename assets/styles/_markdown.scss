@@ -242,6 +242,28 @@
 			display:      block;
 			max-width:    100%;
 			width:        100vw;
+
+			@include browser-specific(safari) {
+				&[src*="drive.google.com"] {
+					display: none;
+
+					+ figcaption {
+						margin-top: initial;
+
+						// Show a warning.
+						&:before {
+							content:       'Safari security settings prevent Google Drive embeds—so you’ll need to go to the original.';
+							display:       block;
+							font-style:    italic;
+							margin-bottom: var(--typography--margin--top);
+							margin-top:    var(--typography--margin--top);
+						}
+
+						// Hide the Chrome message.
+						> p { display: none }
+					}
+				}
+			}
 		}
 
 		> figcaption {
