@@ -1483,6 +1483,11 @@ body > main > article figure > figcaption > p > a[href*=".pdf"]:after {
 	--icon--shift: 0.05em;
 }
 
+body > main > header > ul li,
+body.index > main > nav aside > menu > li {
+	color: var(--color--links);
+}
+
 body > main > header > ul li a,
 body.index > main > nav aside > menu > li a {
 	display: block;
