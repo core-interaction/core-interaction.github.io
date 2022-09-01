@@ -1483,13 +1483,6 @@ body > main > article figure > figcaption > p > a[href*=".pdf"]:after {
 	--icon--shift: 0.05em;
 }
 
-body > main > header > ul li,
-body.index > main > nav aside > menu > li {
-	color: var(--color--links);
-	white-space: nowrap;
-	width: fit-content;
-}
-
 body > main > header > ul li a,
 body.index > main > nav aside > menu > li a {
 	display: block;
@@ -1502,6 +1495,7 @@ body.index > main > nav aside > menu > li a {
 	padding-top: initial;
 	position: relative;
 	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 body > main > header > ul li a:after,
