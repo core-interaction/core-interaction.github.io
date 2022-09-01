@@ -70,32 +70,4 @@
 %link--text {
 	@extend %--focus;
 	@extend %link--enlargement--text;
-
-	position:            relative;
-
-	&:active {
-		--color--active: var(--link--highlight);
-
-		background-color: initial; // Override above.
-		border-radius:    initial;
-	}
-
-	&:before {
-		background-color: var(--color--active);
-		border-radius:    calc(var(--link--enlargement) / 2);
-		bottom:           calc(var(--link--enlargement) / -2);
-		content:          '';
-		left:             calc(-1 * var(--link--enlargement));
-		pointer-events:   none;
-		position:         absolute;
-		right:            calc(-1 * var(--link--enlargement));
-		top:              calc(-1 * var(--link--enlargement) / 2);
-	}
-}
-
-%link--select {
-	@extend %--focus;
-	@extend %link--enlargement--text;
-
-	margin-top: calc(var(--link--enlargement) / -2);
 }
