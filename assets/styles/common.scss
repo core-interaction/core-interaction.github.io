@@ -400,7 +400,6 @@ body {
 
 						@include breakpoint(568) { --typography--leading: var(--typography--leading--base) }
 
-
 						> li { @extend %list--excerpt }
 					}
 				}
