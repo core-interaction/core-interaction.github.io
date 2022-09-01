@@ -390,7 +390,6 @@ body > main > article figure > figcaption > p > a {
 	}
 }
 
-body > nav > div > div > p > select:focus:focus-visible:not(:disabled),
 body > main > article a:focus:focus-visible:not(:disabled),
 body > main > header > address > div > p > a:focus:focus-visible:not(:disabled),
 body > main > article .link-only > a:focus:focus-visible:not(:disabled),
@@ -409,7 +408,6 @@ body.index > main > nav aside > menu > li a:focus:focus-visible:not(:disabled) {
 	outline-width: var(--link--outline--override, var(--link--outline));
 }
 
-body > nav > div > div > p > select,
 body > main > article a,
 body > main > header > address > div > p > a,
 body > main > article .link-only > a,
@@ -429,7 +427,6 @@ body.index > main > nav aside > menu > li a {
 	transition-timing-function: linear;
 }
 
-body > nav > div > div > p > select:active,
 body > main > article a:active,
 body > main > header > address > div > p > a:active,
 body > main > article .link-only > p > a:active,
@@ -443,7 +440,6 @@ body.index > main > nav aside > menu > li a:active {
 	border-radius: calc(var(--link--enlargement) / 2);
 }
 
-body > nav > div > div > p > select:focus,
 body > main > article a:focus,
 body > main > header > address > div > p > a:focus,
 body > main > article .link-only > a:focus,
@@ -462,7 +458,6 @@ body.index > main > nav aside > menu > li a:focus {
 
 @media (any-hover: hover) {
 
-	body > nav > div > div > p > select:hover,
 	body > main > article a:hover,
 	body > main > header > address > div > p > a:hover,
 	body > main > article .link-only > p > a:hover,
@@ -487,7 +482,6 @@ body.index > main > nav aside > menu > li a {
 	padding: var(--link--enlargement);
 }
 
-body > nav > div > div > p > select,
 body > main > article a,
 body > main > header > address > div > p > a,
 body > main > article .link-only > a,
@@ -513,42 +507,6 @@ body.index > main > nav aside > menu > li a {
 	display: flex;
 	flex-direction: column;
 	width: fit-content;
-}
-
-body > main > article a,
-body > main > header > address > div > p > a,
-body > main > article .link-only > a,
-body > main > article .link-only > p > a,
-body > main > article figure > figcaption > p > a {
-	position: relative;
-}
-
-body > main > article a:active,
-body > main > header > address > div > p > a:active,
-body > main > article .link-only > p > a:active {
-	--color--active: var(--link--highlight);
-	background-color: initial;
-	border-radius: initial;
-}
-
-body > main > article a:before,
-body > main > header > address > div > p > a:before,
-body > main > article .link-only > a:before,
-body > main > article .link-only > p > a:before,
-body > main > article figure > figcaption > p > a:before {
-	background-color: var(--color--active);
-	border-radius: calc(var(--link--enlargement) / 2);
-	bottom: calc(var(--link--enlargement) / -2);
-	content: "";
-	left: calc(-1 * var(--link--enlargement));
-	pointer-events: none;
-	position: absolute;
-	right: calc(-1 * var(--link--enlargement));
-	top: calc(-1 * var(--link--enlargement) / 2);
-}
-
-body > nav > div > div > p > select {
-	margin-top: calc(var(--link--enlargement) / -2);
 }
 
 :root {
@@ -791,6 +749,7 @@ body > nav > div > div > p {
 body > nav > div > div > p > select {
 	color: var(--color);
 	left: 0;
+	margin-top: calc(var(--link--enlargement) / -2);
 	max-width: calc(100% + var(--link--enlargement) * 2);
 	overflow: hidden;
 	padding-right: calc(2ch - var(--link--enlargement));
