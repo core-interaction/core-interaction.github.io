@@ -25,9 +25,11 @@ strings:
   home:     'C1:I'
   last:     Last week
   projects: Project
+  sign-in:  You’ll need to be signed in to Google to see this.
   term:     Fall 2022
   top:      Top
   topics:   Topics
+  video:    Session recording
 instructor:
   - name:  Michael Fehrenbach
     url:   https://michaelfehrenbach.com

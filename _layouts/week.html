@@ -5,3 +5,9 @@ layout: page
 
 
 {{ content }}
+{% assign index = site.pages | where: 'layout', 'index' | first %}
+{% if page.video %}
+	<h2 id="{{ index.strings.video | slugify }}">{{ index.strings.video }}</h2>
+	{% assign preview = page.video | append: '/preview' %}
+	{% include figure.html src=preview caption=index.strings.sign-in credit=page.video %}
+{% endif %}

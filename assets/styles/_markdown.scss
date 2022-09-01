@@ -220,7 +220,7 @@
 
 
 
-	// Images!
+	// Images and videos!
 	figure {
 		--margin--top: var(--margin--vertical--2);
 
@@ -232,6 +232,16 @@
 			max-height:      var(--max--height, 66vh);
 			object-fit:      contain; // This will do, for now.
 			object-position: left;
+		}
+
+		> iframe {
+			aspect-ratio: var(--aspect--ratio, 16 / 9);
+			background:    var(--color--alpha);
+			border-radius: var(--border--radius);
+			border:       initial;
+			display:      block;
+			max-width:    100%;
+			width:        100vw;
 		}
 
 		> figcaption {
