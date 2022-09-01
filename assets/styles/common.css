@@ -1157,7 +1157,7 @@ body > main > article figure > iframe {
 	}
 
 	body > main > article figure > iframe[src*="drive.google.com"] + figcaption:before {
-		content: "Safari security settings prevent Google Drive embeds—so you’ll need to go to the original.";
+		content: "Safari security settings prevent Google Drive embeds—so you’ll need to go to the original.";
 		display: block;
 		font-style: italic;
 		margin-bottom: var(--typography--margin--top);
