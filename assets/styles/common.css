@@ -1018,20 +1018,31 @@ body > main > article blockquote {
 	font-style: italic;
 }
 
+body > main > article blockquote > *:not(:first-child) {
+	margin-top: var(--typography--leading-shoulder);
+}
+
 body > main > article blockquote.callout {
+	--padding: 2ch;
 	background: var(--color--alpha);
 	border-radius: var(--border--radius);
-	display: flex;
 	font-style: normal;
-	padding: 2ch;
+	padding: var(--padding);
+	position: relative;
+}
+
+body > main > article blockquote.callout[icon] {
+	padding-left: calc(2 * var(--padding) + 2ch);
 }
 
 body > main > article blockquote.callout[icon]:before {
-	color: var(--color);
 	content: attr(icon);
+	left: var(--padding);
 	margin-left: initial;
-	margin-right: 2ch;
 	margin-top: var(--typography--margin--top);
+	position: absolute;
+	text-align: center;
+	width: 2ch;
 }
 
 body > main > article blockquote.pull-quote {
@@ -1059,7 +1070,6 @@ body > main > article blockquote.pull-quote:before {
 
 body > main > article blockquote.pull-quote > blockquote:last-child {
 	font-style: normal;
-	margin-top: var(--margin--vertical);
 }
 
 body > main > article blockquote.pull-quote > blockquote:last-child > p > a:only-child:after {
