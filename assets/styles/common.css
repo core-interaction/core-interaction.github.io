@@ -1137,6 +1137,16 @@ body > main > article figure > img {
 	object-position: left;
 }
 
+body > main > article figure > iframe {
+	aspect-ratio: var(--aspect--ratio, 16/9);
+	background: var(--color--alpha);
+	border-radius: var(--border--radius);
+	border: initial;
+	display: block;
+	max-width: 100%;
+	width: 100vw;
+}
+
 body > main > article figure > figcaption {
 	margin-top: var(--typography--between);
 }
