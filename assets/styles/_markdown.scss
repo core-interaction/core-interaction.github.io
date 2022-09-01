@@ -239,8 +239,11 @@
 
 			> p > a {
 				@extend %font--underline--disable;
+				@extend %icon--link;
 
-				&:only-child span:not(._) { margin-left: initial }
+				&:not(:only-child) { margin-left: calc(1ch - var(--link--enlargement)) }
+
+				&:not(._):after { margin-left: initial }
 			}
 		}
 

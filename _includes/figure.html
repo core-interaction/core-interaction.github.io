@@ -7,7 +7,7 @@
 					<em>{{- include.caption | markdownify | remove: '<p>' | remove: '</p>' | strip -}}</em>
 				{%- endif -%}
 				{%- if include.credit -%}
-					<a href="{{ include.credit}}"><span class="icon--sf center--x">↗</span></a>
+					<a href="{{ include.credit}}"></a>
 				{%- endif -%}
 			</p>
 		</figcaption>
