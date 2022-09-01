@@ -397,7 +397,6 @@ body {
 						flex-direction: column;
 						gap:            var(--typography--between);
 						margin-top:     var(--margin--vertical);
-						gap: var(--typography--between);
 
 						@include breakpoint(568) { --typography--leading: var(--typography--leading--base) }
 
