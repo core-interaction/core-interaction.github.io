@@ -483,6 +483,8 @@ body {
 %list--excerpt {
 	@extend %typography;
 
+	color: var(--color--links);
+
 	a {
 		@extend %icon--types;
 		@extend %link--element;
