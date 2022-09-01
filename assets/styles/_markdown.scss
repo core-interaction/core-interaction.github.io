@@ -118,21 +118,31 @@
 	blockquote {
 		font-style: italic;
 
+		> *:not(:first-child) { margin-top: var(--typography--leading-shoulder) }
+
 		&.callout {
+			--padding: 2ch;
+
 			background:    var(--color--alpha);
 			border-radius: var(--border--radius);
-			display:       flex;
 			font-style:    normal;
-			padding:       2ch;
+			padding:       var(--padding);
+			position:      relative;
 
-			&[icon]:before {
-				@extend .icon--emoji;
+			&[icon] {
+				padding-left: calc(2 * var(--padding) + 2ch);
 
-				color:        var(--color);
-				content:      attr(icon);
-				margin-left:  initial;
-				margin-right: 2ch;
-				margin-top:   var(--typography--margin--top);
+				&:before {
+					@extend .icon--emoji;
+
+					content:     attr(icon);
+					left:        var(--padding);
+					margin-left: initial;
+					margin-top:  var(--typography--margin--top);
+					position:    absolute;
+					text-align:  center;
+					width:       2ch;
+				}
 			}
 		}
 
@@ -159,7 +169,6 @@
 			// Credit.
 			> blockquote:last-child {
 				font-style: normal;
-				margin-top: var(--margin--vertical);
 
 				> p > a:only-child {
 					@extend %font--underline--disable;
