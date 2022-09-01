@@ -483,10 +483,6 @@ body {
 %list--excerpt {
 	@extend %typography;
 
-	color:       var(--color--links);
-	white-space: nowrap;
-	width:       fit-content;
-
 	a {
 		@extend %icon--types;
 		@extend %link--element;
@@ -501,6 +497,7 @@ body {
 		padding-top:    initial;
 		position:       relative;
 		text-overflow:  ellipsis;
+		white-space:    nowrap;
 
 		&:after {
 			position: absolute;
