@@ -207,7 +207,7 @@ We will use the following sites to organize and run our class:
 
 
 
-This agreement is intended to help us create and maintain a safe, empathetic, and productive space for our course. It will live on [our course site](https://core-interaction.github.io), and can be revised and modified, with all of our input, over the semester.
+This agreement is intended to help us create and maintain a safe, empathetic, and productive space for our course. It can be revised and modified, with all of our input, over the semester.
 
 * The class should feel comfortable asking the instructor anything—nothing is too trivial, or embarrassing, or off-topic. Tangents are good. Students can ask via [Slack](https://core-one-interaction.slack.com/archives/C03UTLMBMDH), if they would like to remain anonymous.
 
@@ -217,7 +217,7 @@ This agreement is intended to help us create and maintain a safe, empathetic, a
 
 * We will have a short break, roughly halfway through the class.
 
-> We can revisit this agreement throughout the semester. Please let me know if you’d like to raise something with the class.
+> We can (and should) revisit this agreement throughout the semester. Please let me know if you’d like to raise something with the class.
 {: .callout icon='🤚' }
 
 
@@ -237,7 +237,7 @@ Students are expected to actively and passionately participate in this course. T
 
 ### Office hours
 
-I will have limited availability outside of our class time, and won’t keep scheduled “office hours.” Students should not rely on me to solve specific design or technical problems. Their first resource should be themselves, then [our course site](https://core-interaction.github.io) and its materials, and then each other. If there are still questions—such as logistical or content ones—students can message me on [Slack](https://core-one-interaction.slack.com/archives/C03UTLMBMDH), and we will respond when I can. But this should never be a bottleneck; all of this works better when not done at the last minute.
+I will have limited availability outside of our class time, and won’t keep scheduled “office hours.” Students should not rely on me to solve specific design or technical problems. Their first resource should be themselves, then [this course site](https://core-interaction.github.io) and its materials, and then each other. If there are still questions—such as logistical or content ones—students can message me on [Slack](https://core-one-interaction.slack.com/archives/C03UTLMBMDH), and we will respond when I can. But this should never be a bottleneck; all of this works better when not done at the last minute.
 
 
 
