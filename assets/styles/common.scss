@@ -458,7 +458,7 @@ body {
 
 	border-right-width: calc(var(--icon--width) + var(--icon--gap) + var(--link--enlargement));
 	color:              var(--link--color);
-
+	display:            inline-block;
 
 	&:after {
 		@extend %font--sf--mono--light;
