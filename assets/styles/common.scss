@@ -78,15 +78,15 @@
 
 
 
-	// The main column constraints.
+// The main column constraints.
 %--page-container {
-	margin-left:   auto;
-	margin-right:  auto;
-	max-width:     var(--page--width);
-	padding-left:  var(--margin);
-	padding-right: var(--margin);
-	width:         100%;
-}
+		margin-left:   auto;
+		margin-right:  auto;
+		max-width:     var(--page--width);
+		padding-left:  calc(var(--margin) + env(safe-area-inset-left, 0rem));
+		padding-right: calc(var(--margin) + env(safe-area-inset-right, 0rem));
+		width:         100%;
+	}
 
 
 

@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta	content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
 		{% include auto_title.html -%}
 		{% assign fallback = page.name | split: '.' | first | capitalize %}
 		<title>{{- title | markdownify | strip_html | strip | default: fallback -}}</title>
