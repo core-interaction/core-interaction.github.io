@@ -726,6 +726,7 @@ body.class > main > article > p > button {
 	--color--links--reverse: white;
 	--color--highlight: hsl(0, 0%, 0%, 3.333%);
 	--color--highlight--reverse: hsl(0, 0%, 100%, 6.666%);
+	--color--transition: 200ms;
 	--link--color: var(--color--links);
 	--link--enlargement: 0.4rem;
 	--link--highlight: var(--color--highlight);
@@ -776,7 +777,8 @@ body > nav > div {
 }
 
 body.class,
-body.index {
+body.index,
+body.scrolled > nav {
 	--color--alpha: var(--color--tint--reverse);
 	--color--background--parent: var(--color--background);
 	--link--color: var(--color--links--reverse);
@@ -785,7 +787,8 @@ body.index {
 }
 
 body.class > *,
-body.index > * {
+body.index > *,
+body.scrolled > nav > * {
 	--color: var(--color--background--parent);
 	--color--background: var(--color--links);
 }
@@ -819,6 +822,9 @@ body > nav {
 	position: sticky;
 	top: calc(var(--typography--cap) - var(--margin--vertical));
 	z-index: 1;
+	transition-duration: var(--color--transition);
+	transition-property: background-color;
+	transition-timing-function: linear;
 }
 
 body > nav > div {
@@ -833,7 +839,6 @@ body > nav > div > a > p {
 }
 
 body > nav > div > div {
-	--color: var(--color--links);
 	line-height: initial;
 }
 
@@ -849,7 +854,7 @@ body > nav > div > div > p {
 }
 
 body > nav > div > div > p > select {
-	color: var(--color);
+	color: var(--link--color);
 	left: 0;
 	max-width: calc(100% + var(--link--enlargement) * 2);
 	overflow: hidden;
@@ -860,7 +865,7 @@ body > nav > div > div > p > select {
 }
 
 body > nav > div > div > p:after {
-	color: var(--color);
+	color: var(--link--color);
 	content: "↕";
 	font-weight: 100;
 	position: absolute;
@@ -870,15 +875,21 @@ body > nav > div > div > p:after {
 	transform: translateY(0.066em);
 	visibility: visible;
 	width: var(--icon--width);
-	transition-duration: var(--link--hover--transition);
-	transition-property: filter;
-	transition-timing-function: linear;
 }
 
 @media (any-hover: hover) {
 	body > nav > div > div > p:hover:hover:after {
 		filter: opacity(var(--link--hover--opacity));
 	}
+}
+
+body > nav p,
+body > nav p:after,
+body > nav p > a:not(._),
+body > nav select:not(._) {
+	transition-duration: var(--color--transition), var(--link--hover--transition);
+	transition-property: color, filter;
+	transition-timing-function: linear;
 }
 
 body > main {
@@ -1491,7 +1502,7 @@ body > main > footer > div {
 	}
 }
 
-body > main > footer > div a {
+body > main > footer > div > p > a {
 	white-space: nowrap;
 }
 
