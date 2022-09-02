@@ -168,7 +168,11 @@ body {
 				> a {
 					@extend %link--element;
 
-					> p { color: var(--link--color) }
+					> p {
+						@extend %--header--transition;
+
+						color: var(--link--color);
+					}
 				}
 
 				// The `select` drop-down container.
@@ -185,6 +189,7 @@ body {
 
 					// The actual drop-down.
 					> select {
+						@extend %--header--transition;
 						@extend %link--text;
 
 						color:          var(--link--color);
@@ -199,6 +204,7 @@ body {
 
 					// The icon.
 					&:after  {
+						@extend %--header--transition;
 						@extend %font--sf--mono--light;
 
 						color:       var(--link--color);
@@ -234,10 +240,7 @@ body {
 		transition-property:        background-color;
 		transition-timing-function: linear;
 
-		p,
-		p:after,
-		p > a:not(._),
-		select:not(._) {
+		%--header--transition {
 			transition-duration:        var(--color--transition), var(--link--hover--transition);
 			transition-property:        color, filter;
 			transition-timing-function: linear;
