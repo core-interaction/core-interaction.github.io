@@ -333,7 +333,11 @@ body {
 
 				@include breakpoint(568) { --typography--leading: var(--typography--leading--base) }
 
-				li { @extend %list--excerpt }
+				> li {
+					@extend %typography;
+
+					> a { @extend %icon--link }
+				}
 			}
 		}
 
@@ -389,8 +393,6 @@ body {
 					> menu {
 						@extend %type--layout;
 
-						--color--links: var(--color);
-
 						--typography--leading: var(--typography--leading--loose);
 
 						display:        flex;
@@ -400,7 +402,11 @@ body {
 
 						@include breakpoint(568) { --typography--leading: var(--typography--leading--base) }
 
-						> li { @extend %list--excerpt }
+						> li {
+							@extend %typography;
+
+							> a { @extend %icon--link }
+						}
 					}
 				}
 			}
@@ -475,34 +481,4 @@ body {
 %icon--link {
 	@extend %link--text;
 	@extend %icon--types;
-}
-
-
-
-%list--excerpt {
-	@extend %typography;
-
-	color: var(--color--links);
-
-	a {
-		@extend %icon--types;
-		@extend %link--element;
-
-		display:        block;
-		margin-bottom:  initial;
-		margin-top:     initial;
-		max-width:      calc(100% + var(--link--enlargement) * 2);
-		overflow:       hidden;
-		padding-bottom: initial;
-		padding-right:  calc(var(--link--enlargement) + 2ch);
-		padding-top:    initial;
-		position:       relative;
-		text-overflow:  ellipsis;
-		white-space:    nowrap;
-
-		&:after {
-			position: absolute;
-			right:    var(--link--enlargement);
-		}
-	}
 }
