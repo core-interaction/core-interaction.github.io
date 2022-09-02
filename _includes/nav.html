@@ -39,19 +39,17 @@
 						{% endfor %}
 						</optgroup>
 					</select>
-					<span class="icon--sf center--x">↕</span>
 				</p>
 			{% endif %}
-			{% comment %} What do we do for “unlisted” topics. {% endcomment %}
 		</div>
 		{% if page.url != this_week.url %}
-			<a href="{{ this_week.url }}">
-				<p>{{ index.strings.current }}{%- if page.layout == 'week' -%}<span class="icon--sf center--x">→</span>{%- else -%}<span class="icon--sf">⤴</span>{%- endif -%}</p>
-			</a>
+			<p>
+				<a class="this" href="{{ this_week.url }}">{{ index.strings.current }}</a>
+			</p>
 		{% elsif last_week.url %}
-			<a href="{{ last_week.url }}">
-				<p>{{ index.strings.last }}<span class="icon--sf--regular center--x">↺</span></p>
-			</a>
+			<p>
+				<a class="last" href="{{ last_week.url }}">{{ index.strings.last }}</a>
+			</p>
 		{% endif %}
 	</div>
 </nav>

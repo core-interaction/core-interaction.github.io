@@ -4,9 +4,9 @@
 
 
 {% assign students = site.data.class | sort: 'first' %}
-<button>
-	<p>Shuffle list<span class="icon--sf--regular center--x">⇅</span></p>
-</button>
+<p>
+	<button class="shuffle">Shuffle list</button>
+</p>
 <ul id="class" style="--count: {{ students.size }};">
 	{% for student in students %}
 		<li>{{student.first}}</li>

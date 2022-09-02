@@ -107,22 +107,6 @@
 
 
 
-// Icon stuff.
-%--icon--span {
-	--icon--gap: 1ch;
-
-	display:     inline-block;
-	font-weight: var(--typography--weight);
-	margin-left: var(--icon--gap);
-	transform:   translateY(var(--icon--shift, 0rem)) scale(var(--icon--scale, 1));
-	width:       1ch;
-	height:      1em;
-
-	&.center--x { --icon--shift: 0.075em } // Center down to x-height;
-}
-
-
-
 body {
 	@extend %type--layout;
 
@@ -143,34 +127,6 @@ body {
 	}
 
 	&.index h1 { max-width: 12ch }
-
-
-
-	// Icons. Keep these up here so Markdown variants cascade.
-	.icon--sf {
-		@extend %--icon--span;
-		@extend %font--sf--mono--light;
-
-		--icon--scale: 1.1;
-	}
-
-	.icon--emoji {
-		@extend %--icon--span;
-
-		--icon--scale: 1.1;
-
-		text-align: center;
-		width:      2ch; // For these wide boys.
-	}
-
-	.icon--sf--regular {
-		@extend %--icon--span;
-		@extend %font--sf--light;
-
-		--icon--scale: 1;
-
-		&.center--x { --icon--shift: 0.05em }
-	}
 
 
 
@@ -195,6 +151,8 @@ body {
 			gap:                   4.1ch; // Might be the insets?
 			grid-template-columns: max-content minmax(0, 1fr) max-content;
 
+			> p > a { @extend %icon--link }
+
 			> a {
 				@extend %link--element;
 
@@ -210,47 +168,57 @@ body {
 				line-height: initial;
 
 				> p {
+					--icon--width: 1ch;
+
 					color:          transparent; // Just here to set the width.
-					padding-right:  2ch; // For the icon.
+					padding-right:  var(--icon--width); // For the icon.
 					pointer-events: none;
 					position:       relative;
 					white-space:    nowrap;
 					width:          fit-content;
+					margin-bottom:  var(--typography--margin--bottom);
 
 					// The actual drop-down.
 					> select {
+						@extend %link--text;
 
 						color:          var(--color);
 						left:           0;
-						margin-top:     calc(var(--link--enlargement) / -2);
 						max-width:      calc(100% + var(--link--enlargement) * 2); // Icon.
 						overflow:       hidden;
-						padding-right:  calc(2ch - var(--link--enlargement));
+						padding-right:  var(--icon--width);
 						pointer-events: auto;
 						position:       absolute;
 						text-overflow:  ellipsis;
-
-						@include hover {
-							&:hover + span {
-								// Copied from links.
-								$thanksNex3: 'opacity(var(--link--hover--opacity))';
-
-								filter: unquote($thanksNex3);
-							}
-						}
 					}
 
 					// The icon.
-					> span:last-child {
-						color:    var(--color);
-						position: absolute;
-						right:    0;
-						width:    1ch;
+					&:after  {
+						@extend %font--sf--mono--light;
+
+						color:       var(--color);
+						content:     '↕';
+						font-weight: 100; // Force it.
+						position:    absolute;
+						right:       0;
+						text-align:  right;
+						top:         var(--typography--margin--top);
+						transform:   translateY(0.066em);
+						visibility:  visible;
+						width:       var(--icon--width);
 
 						// Copied from links.
 						transition-duration:        var(--link--hover--transition);
 						transition-property:        filter;
 						transition-timing-function: linear;
+					}
+
+					@include hover {
+						&:hover:after {
+							$thanksNex3: 'opacity(var(--link--hover--opacity))';
+
+							filter: unquote($thanksNex3);
+						}
 					}
 				}
 			}
@@ -363,11 +331,11 @@ body {
 
 				@include breakpoint(568) { gap: var(--margin) }
 
-				> a {
-					@extend %link--element;
+				a { white-space: nowrap }
 
-					&:last-child { white-space: nowrap }
-				}
+				> a { @extend %link--element }
+
+				> p > a { @extend %icon--link }
 			}
 		}
 	}
@@ -421,10 +389,10 @@ body {
 
 		> main {
 			> article {
-				> button {
-					@extend %link--element;
-
+				> p {
 					grid-column: 1;
+
+					> button { @extend %icon--link }
 				}
 
 				> ul {
@@ -456,29 +424,52 @@ body {
 
 
 
-// Low to override defaults.
-%icon--types {
-	&:after {
-		@extend .center--x;
-		@extend .icon--sf;
-
-		content: var(--icon);
-	}
-
-	&[href^="#"]:after    { --icon: '↓' } // Anchor.
-	&[href^="/"]:after    { --icon: '→' } // Internal.
-	&[href^="http"]:after { --icon: '↗'; --icon--shift: 0.3rem } // External.
-
-	&[href*=".pdf"]:after {
-		@extend .icon--sf--regular;
-
-		--icon: '⤓'; // PDF/downloads.
-
-		--icon--shift: 0.05em;
-	}
-}
-
+// Icons.
 %icon--link {
+	@extend %font--underline--disable;
 	@extend %link--text;
-	@extend %icon--types;
+
+	--color: var(--link--color);
+
+	--icon--gap:   1ch;
+	--icon--scale: 1.1;
+	--icon--shift: 0.075em;
+	--icon--width: 1ch;
+
+	border-right-width: calc(var(--icon--width) + var(--icon--gap) + var(--link--enlargement));
+	color:              var(--link--color);
+
+
+	&:after {
+		@extend %font--sf--mono--light;
+
+		content:      var(--icon);
+		display:      inline-block;
+		font-weight:  var(--typography--weight);
+		margin-left:  var(--icon--gap);
+		margin-right: calc(-1 * (var(--icon--width) + var(--icon--gap)));
+		transform:    translateY(var(--icon--shift, 0rem)) scale(var(--icon--scale, 1));
+		width:        var(--icon--width);
+	}
+
+	&[href^="/"]    { --icon: '→' } // Internal.
+	&[href^="http"] { --icon: '↗'; --icon--shift: 0.3rem } // External.
+	&[href^="#"]    { --icon: '↓' } // Anchor.
+
+	&[href*=".pdf"],
+	&[href="#"],
+	&.last,
+	&.shuffle,
+	&.this {
+		--icon--scale: 1;
+		--icon--shift: 0em;
+
+		&:after { @extend %font--sf--light }
+	}
+
+	&[href*=".pdf"] { --icon: '⤓'; --icon--shift: 0.05em}
+	&[href="#"]     { --icon: '⤒'; --icon--width: 1.1ch }
+	&.last          { --icon: '↺' }
+	&.shuffle       { --icon: '⇅'; --icon--width: 2ch }
+	&.this          { --icon: '⤴' }
 }

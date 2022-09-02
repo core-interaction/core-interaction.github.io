@@ -52,8 +52,10 @@
 	border-right-width:  var(--link--enlargement);
 	border-style:        solid;
 	border-top-width:    calc(var(--link--enlargement) / 2);
+	margin-bottom:       calc(-1 * var(--link--enlargement) / 2);
 	margin-left:         calc(-1 * var(--link--enlargement));
 	margin-right:        calc(-1 * var(--link--enlargement));
+	margin-top:          calc(-1 * var(--link--enlargement) / 2);
 }
 
 
@@ -70,4 +72,6 @@
 %link--text {
 	@extend %--focus;
 	@extend %link--enlargement--text;
+
+	display: inline-block;
 }
