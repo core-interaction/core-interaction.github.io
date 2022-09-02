@@ -1,0 +1,12 @@
+{% if include.group.size > 0 %}
+	<optgroup label="{{ include.label }}">
+		{% for page in include.group %}
+			{% include auto_title.html %}
+			{% if page.url == current_url %}
+				<option selected disabled>{{ title_date | markdownify | strip_html | strip }}</option>
+			{% else %}
+				<option value="{{ page.url }}">{{ title_date | markdownify | strip_html | strip }}</option>
+			{% endif %}
+		{% endfor %}
+	</optgroup>
+{% endif %}

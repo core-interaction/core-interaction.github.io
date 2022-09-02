@@ -3,44 +3,44 @@
 {% assign this_week = weeks | last %}
 {% assign last_week = weeks | pop | last %}
 {% assign current_url = page.url %}
-{% if page.layout == 'project' %}
-	{% assign label = index.strings.projects %}
-	{% assign siblings = site.pages | where: 'layout', 'project' | sort: 'date' %}
-{% elsif page.layout == 'topic' and page.order != nil %}
-	{% assign label = index.strings.topics %}
-	{% assign siblings = site.pages | where: 'layout', 'topic' | where_exp:'page', 'page.order != nil' | sort: 'order' %}
-{% elsif page.layout == 'week' %}
-	{% assign label = index.strings.classes %}
-	{% assign siblings = weeks %}
-{% endif %}
+{% include sorted_weeks.html %}
+{% assign topics = site.pages | where: 'layout', 'topic' | where_exp:'page', 'page.order != nil' | sort: 'order' %}
+{% assign projects = site.pages | where: 'layout', 'project' | sort: 'date' %}
+{% assign weeks_paths = weeks | map: 'path' %}
+{% assign topics_paths = topics | map: 'path' %}
 {% include auto_title.html %}
+{% assign projects_paths = projects | map: 'path' %}
+{% if weeks_paths contains page.path or topics_paths contains page.path or projects_paths contains page.path %}
+	{% assign unlisted = false %}
+	{% assign select_title = title_date %}
+{% elsif page.title %}
+	{% assign unlisted = true %}
+	{% assign select_title = page.title %}
+{% else %}
+	{% assign unlisted = true %}
+	{%  assign select_title = page.name | split: '.' | first | capitalize %}
+{% endif %}
 <nav>
 	<div>
 		<a href="{{ index.url }}">
 			<p>{{ index.strings.home }}</p>
 		</a>
 		<div>
-			{% if siblings.size > 1 %}
-				<p>
-					<strong>{{ title_date }}</strong>{% comment %} Just for targeting. {% endcomment %}
-					<select onchange="
-						this.parentElement.querySelector('strong').innerHTML = this.querySelector(`[value='${this.value}']`).text;
-						document.activeElement.blur();
-						window.open(this.value,'_self');
-						">
-						<optgroup label="{{ label }}">
-						{% for page in siblings %}
-							{% include auto_title.html %}
-							{% if page.url == current_url %}
-								<option selected disabled>{{ title_date }}</option>
-							{% else %}
-								<option value="{{ page.url }}">{{ title_date }}</option>
-							{% endif %}
-						{% endfor %}
-						</optgroup>
-					</select>
-				</p>
-			{% endif %}
+			<p>
+				<strong>{{ select_title | markdownify | strip_html | strip }}</strong>{% comment %} Just for targeting. {% endcomment %}
+				<select onchange="
+					this.parentElement.querySelector('strong').innerHTML = this.querySelector(`[value='${this.value}']`).text;
+					document.activeElement.blur();
+					window.open(this.value,'_self');
+					">
+					{% if unlisted %}
+						<option disabled selected>{{ select_title | markdownify | strip_html | strip }}</option>
+					{% endif %}
+					{% include optgroup.html label=index.strings.classes group=weeks %}
+					{% include optgroup.html label=index.strings.topics group=topics %}
+					{% include optgroup.html label=index.strings.projects group=projects %}
+				</select>
+			</p>
 		</div>
 		{% if page.url != this_week.url %}
 			<p>
