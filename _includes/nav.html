@@ -45,13 +45,14 @@
 		<section>
 			{% if page.url != this_week.url %}
 				<p>
-					<a class="this" href="{{ this_week.url }}">{{ index.strings.current }}</a>
+					<a class="this" href="{{ this_week.url }}">{{ index.strings.current | kerning  }}</a>
 				</p>
 			{% elsif last_week.url %}
 				<p>
-					<a class="last" href="{{ last_week.url }}">{{ index.strings.last }}</a>
+					<a class="last" href="{{ last_week.url }}">{{ index.strings.last | kerning  }}</a>
 				</p>
 			{% endif %}
+				<p><a href="#">{{ index.strings.top | kerning }}</a></p>
 		</section>
 	</div>
 </nav>

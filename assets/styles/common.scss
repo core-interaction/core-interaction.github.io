@@ -169,7 +169,7 @@ body {
 					@extend %link--element;
 
 					> p {
-						@extend %--header--transition;
+						@extend %--nav--transition--colors;
 
 						color: var(--link--color);
 					}
@@ -189,7 +189,7 @@ body {
 
 					// The actual drop-down.
 					> select {
-						@extend %--header--transition;
+						@extend %--nav--transition--colors;
 						@extend %link--text;
 
 						color:          var(--link--color);
@@ -204,7 +204,7 @@ body {
 
 					// The icon.
 					&:after  {
-						@extend %--header--transition;
+						@extend %--nav--transition--colors;
 						@extend %font--sf--mono--light;
 
 						color:       var(--link--color);
@@ -230,9 +230,35 @@ body {
 			}
 
 			// Right rail.
-			> section:last-child > p > a {
-				@extend %--header--transition;
-				@extend %icon--link;
+			> section:last-child {
+				display: grid;
+
+				> p {
+					@extend %--nav--transition--opacity;
+
+					grid-row:    1;
+					grid-column: 1;
+
+					> a {
+						@extend %--nav--transition--colors;
+						@extend %icon--link;
+					}
+
+					// This/Last week link.
+					&:first-child {
+						transition-delay: calc(var(--color--transition) / 2), 0ms;
+						opacity:          1;
+						visibility:       visible;
+					}
+
+					// Top link.
+					&:last-child {
+						justify-self:     end;
+						opacity:          0;
+						transition-delay: 0ms, calc(var(--color--transition) / 2);
+						visibility:       hidden;
+					}
+				}
 			}
 		}
 
@@ -243,9 +269,15 @@ body {
 		transition-property:        background-color;
 		transition-timing-function: linear;
 
-		%--header--transition {
+		%--nav--transition--colors {
 			transition-duration:        var(--color--transition), var(--link--hover--transition);
 			transition-property:        color, filter;
+			transition-timing-function: linear;
+		}
+
+		%--nav--transition--opacity {
+			transition-duration:        calc(var(--color--transition) / 2), 0ms;
+			transition-property:        opacity, visibility;
 			transition-timing-function: linear;
 		}
 	}
@@ -354,13 +386,6 @@ body {
 				grid-template-columns: minmax(0, 1fr) max-content;
 				margin-top:            var(--margin--vertical);
 
-				@include breakpoint(568) {
-					gap:                   var(--margin);
-					grid-template-columns: repeat(3, minmax(0, 1fr));
-
-					> section:first-child { grid-column: 1 / span 2 }
-				}
-
 				> section:first-child > a { @extend %link--element }
 
 				> section:last-child > p > a { @extend %icon--link; }
@@ -373,7 +398,25 @@ body {
 
 	// From the JS.
 	&.scrolled {
-		> nav { @extend %--reverse }
+		> nav {
+			@extend %--reverse;
+
+			> div > section:last-child > p {
+				// This/Last week link.
+				> &:first-child {
+					opacity:          0;
+					transition-delay: 0ms, calc(var(--color--transition) / 2);
+					visibility:       hidden;
+				}
+
+				// Top link.
+				> &:last-child {
+					transition-delay: calc(var(--color--transition) / 2), 0ms;
+					opacity:          1;
+					visibility:       visible;
+				}
+			}
+		}
 	}
 
 
