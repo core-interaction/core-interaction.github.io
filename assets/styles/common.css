@@ -838,7 +838,7 @@ body > nav > div > div {
 }
 
 body > nav > div > div > p {
-	--icon--width: 1ch;
+	--icon--width: 2ch;
 	color: transparent;
 	padding-right: var(--icon--width);
 	pointer-events: none;

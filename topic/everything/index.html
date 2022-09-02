@@ -23,13 +23,67 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 		<nav>
 			<div>
 				<a href="/">
 					<p>C1:I</p>
 				</a>
 				<div>
+					<p>
+						<strong>Everything is a web page</strong>
+						<select onchange="
+					this.parentElement.querySelector('strong').innerHTML = this.querySelector(`[value='${this.value}']`).text;
+					document.activeElement.blur();
+					window.open(this.value,'_self');
+					">
 
+
+							<optgroup label="Sessions">
+
+
+
+								<option value="/week/1/">Week 1, August 30</option>
+
+
+							</optgroup>
+
+
+
+							<optgroup label="Topics">
+
+
+
+								<option selected disabled>Everything is a web page</option>
+
+
+							</optgroup>
+
+
+
+							<optgroup label="Project">
+
+
+
+								<option value="/project/harmonic/">Harmonic Collection</option>
+
+
+							</optgroup>
+
+
+						</select>
+					</p>
 				</div>
 
 				<p>
