@@ -148,35 +148,40 @@ body {
 		> div {
 			@extend %--page-container;
 
-			align-items:           end;
 			display:               grid;
-			gap:                   4.1ch; // Might be the insets?
-			grid-template-columns: max-content minmax(0, 1fr) max-content;
+			gap:                   var(--margin);
+			grid-template-columns: minmax(0, 1fr) max-content;
 
-			> p > a { @extend %icon--link }
+			@include breakpoint(568) {
+				grid-template-columns: repeat(3, minmax(0, 1fr));
 
-			> a {
-				@extend %link--element;
-
-				> p { color: var(--link--color) }
+				> section:first-child { grid-column: 1 / span 2 }
 			}
 
+			// Left/main rail.
+			> section:first-child {
+				align-items:           end;
+				display:               grid;
+				gap:                   var(--margin);
+				grid-template-columns: max-content minmax(0, 1fr);
 
+				> a {
+					@extend %link--element;
 
-			// The `select` drop-down container.
-			> div {
-				line-height: initial;
+					> p { color: var(--link--color) }
+				}
 
+				// The `select` drop-down container.
 				> p {
 					--icon--width: 2ch;
 
 					color:          transparent; // Just here to set the width.
+					margin-bottom:  var(--typography--margin--bottom);
 					padding-right:  var(--icon--width); // For the icon.
 					pointer-events: none;
 					position:       relative;
 					white-space:    nowrap;
 					width:          fit-content;
-					margin-bottom:  var(--typography--margin--bottom);
 
 					// The actual drop-down.
 					> select {
@@ -196,7 +201,7 @@ body {
 					&:after  {
 						@extend %font--sf--mono--light;
 
-						color:          var(--link--color);
+						color:       var(--link--color);
 						content:     '↕';
 						font-weight: 100; // Force it.
 						position:    absolute;
@@ -217,6 +222,9 @@ body {
 					}
 				}
 			}
+
+			// Right rail.
+			> section:last-child > p > a { @extend %icon--link }
 		}
 
 
@@ -334,23 +342,25 @@ body {
 			> div {
 				--color: var(--link--color);
 
-				align-items:     start;
-				display:         flex;
-				gap:             calc(var(--margin) / 2);
-				justify-content: space-between;
-				margin-top:      var(--margin--vertical);
+				align-items:           start;
+				display:               grid;
+				gap:                   calc(var(--margin) / 2);
+				grid-template-columns: minmax(0, 1fr) max-content;
+				margin-top:            var(--margin--vertical);
 
-				@include breakpoint(568) { gap: var(--margin) }
+				@include breakpoint(568) {
+					gap:                   var(--margin);
+					grid-template-columns: repeat(3, minmax(0, 1fr));
 
-				> a { @extend %link--element }
-
-				> p > a {
-					@extend %icon--link;
-
-					white-space: nowrap;
+					> section:first-child { grid-column: 1 / span 2 }
 				}
+
+				> section:first-child > a { @extend %link--element }
+
+				> section:last-child > p > a { @extend %icon--link; }
 			}
 		}
+
 	}
 
 

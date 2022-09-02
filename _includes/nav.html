@@ -22,10 +22,10 @@
 {% endif %}
 <nav>
 	<div>
-		<a href="{{ index.url }}">
-			<p>{{ index.strings.home }}</p>
-		</a>
-		<div>
+		<section>
+			<a href="{{ index.url }}">
+				<p>{{ index.strings.home }}</p>
+			</a>
 			<p>
 				<strong>{{ select_title | markdownify | strip_html | strip }}</strong>{% comment %} Just for targeting. {% endcomment %}
 				<select onchange="
@@ -41,15 +41,17 @@
 					{% include optgroup.html label=index.strings.projects group=projects %}
 				</select>
 			</p>
-		</div>
-		{% if page.url != this_week.url %}
-			<p>
-				<a class="this" href="{{ this_week.url }}">{{ index.strings.current }}</a>
-			</p>
-		{% elsif last_week.url %}
-			<p>
-				<a class="last" href="{{ last_week.url }}">{{ index.strings.last }}</a>
-			</p>
-		{% endif %}
+		</section>
+		<section>
+			{% if page.url != this_week.url %}
+				<p>
+					<a class="this" href="{{ this_week.url }}">{{ index.strings.current }}</a>
+				</p>
+			{% elsif last_week.url %}
+				<p>
+					<a class="last" href="{{ last_week.url }}">{{ index.strings.last }}</a>
+				</p>
+			{% endif %}
+		</section>
 	</div>
 </nav>

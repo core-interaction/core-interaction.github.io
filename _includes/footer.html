@@ -1,9 +1,13 @@
 {% assign index = site.pages | where: 'layout', 'index' | first %}
 <footer>
 	<div>
-		<a href="{{ index.url }}">
-			<p>{{ index.title | kerning }}, {{ index.strings.term | kerning }}</p>
-		</a>
-		<p><a href="#">{{ index.strings.top | kerning }}</a></p>
+		<section>
+			<a href="{{ index.url }}">
+				<p>{{ index.title | kerning }}, {{ index.strings.term | kerning }}</p>
+			</a>
+		</section>
+		<section>
+			<p><a href="#">{{ index.strings.top | kerning }}</a></p>
+		</section>
 	</div>
 </footer>
