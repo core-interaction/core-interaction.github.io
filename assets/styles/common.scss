@@ -41,6 +41,8 @@
 	--color--highlight:          hsl(0, 0%, 0%, 3.333%);
 	--color--highlight--reverse: hsl(0, 0%, 100%, 6.666%);
 
+	--color--transition: 200ms;
+
 	--link--color:       var(--color--links);
 	--link--enlargement: 0.4rem;
 	--link--highlight:   var(--color--highlight);
@@ -163,8 +165,6 @@ body {
 
 			// The `select` drop-down container.
 			> div {
-				--color: var(--color--links);
-
 				line-height: initial;
 
 				> p {
@@ -182,7 +182,7 @@ body {
 					> select {
 						@extend %link--text;
 
-						color:          var(--color);
+						color:          var(--link--color);
 						left:           0;
 						max-width:      calc(100% + var(--link--enlargement) * 2); // Icon.
 						overflow:       hidden;
@@ -196,7 +196,7 @@ body {
 					&:after  {
 						@extend %font--sf--mono--light;
 
-						color:       var(--color);
+						color:          var(--link--color);
 						content:     '↕';
 						font-weight: 100; // Force it.
 						position:    absolute;
@@ -206,11 +206,6 @@ body {
 						transform:   translateY(0.066em);
 						visibility:  visible;
 						width:       var(--icon--width);
-
-						// Copied from links.
-						transition-duration:        var(--link--hover--transition);
-						transition-property:        filter;
-						transition-timing-function: linear;
 					}
 
 					@include hover {
@@ -222,6 +217,22 @@ body {
 					}
 				}
 			}
+		}
+
+
+
+		// Transitions.
+		transition-duration:        var(--color--transition);
+		transition-property:        background-color;
+		transition-timing-function: linear;
+
+		p,
+		p:after,
+		p > a:not(._),
+		select:not(._) {
+			transition-duration:        var(--color--transition), var(--link--hover--transition);
+			transition-property:        color, filter;
+			transition-timing-function: linear;
 		}
 	}
 
@@ -340,6 +351,13 @@ body {
 				}
 			}
 		}
+	}
+
+
+
+	// From the JS.
+	&.scrolled {
+		> nav { @extend %--reverse }
 	}
 
 
