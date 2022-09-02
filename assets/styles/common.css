@@ -879,10 +879,9 @@ body > nav > div > section:first-child > p:after {
 	}
 }
 
-body > nav p,
-body > nav p:after,
-body > nav p > a:not(._),
-body > nav select:not(._) {
+body > nav > div > section:first-child > a > p,
+body > nav > div > section:first-child > p > select,
+body > nav > div > section:first-child > p:after {
 	transition-duration: var(--color--transition), var(--link--hover--transition);
 	transition-property: color, filter;
 	transition-timing-function: linear;
