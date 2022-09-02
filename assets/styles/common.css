@@ -879,11 +879,40 @@ body > nav > div > section:first-child > p:after {
 	}
 }
 
+body > nav > div > section:last-child {
+	display: grid;
+}
+
+body > nav > div > section:last-child > p {
+	grid-row: 1;
+	grid-column: 1;
+}
+
+body > nav > div > section:last-child > p:first-child {
+	transition-delay: calc(var(--color--transition) / 2), 0ms;
+	opacity: 1;
+	visibility: visible;
+}
+
+body > nav > div > section:last-child > p:last-child {
+	justify-self: end;
+	opacity: 0;
+	transition-delay: 0ms, calc(var(--color--transition) / 2);
+	visibility: hidden;
+}
+
 body > nav > div > section:first-child > a > p,
 body > nav > div > section:first-child > p > select,
-body > nav > div > section:first-child > p:after {
+body > nav > div > section:first-child > p:after,
+body > nav > div > section:last-child > p > a {
 	transition-duration: var(--color--transition), var(--link--hover--transition);
 	transition-property: color, filter;
+	transition-timing-function: linear;
+}
+
+body > nav > div > section:last-child > p {
+	transition-duration: calc(var(--color--transition) / 2), 0ms;
+	transition-property: opacity, visibility;
 	transition-timing-function: linear;
 }
 
@@ -1491,15 +1520,16 @@ body > main > footer > div {
 	margin-top: var(--margin--vertical);
 }
 
-@media (min-width: 35.5em) {
-	body > main > footer > div {
-		gap: var(--margin);
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-	}
+body.scrolled > nav > div > section:last-child > p:first-child {
+	opacity: 0;
+	transition-delay: 0ms, calc(var(--color--transition) / 2);
+	visibility: hidden;
+}
 
-	body > main > footer > div > section:first-child {
-		grid-column: 1/span 2;
-	}
+body.scrolled > nav > div > section:last-child > p:last-child {
+	transition-delay: calc(var(--color--transition) / 2), 0ms;
+	opacity: 1;
+	visibility: visible;
 }
 
 body.index > main > nav {
