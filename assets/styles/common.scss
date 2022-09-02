@@ -230,7 +230,10 @@ body {
 			}
 
 			// Right rail.
-			> section:last-child > p > a { @extend %icon--link }
+			> section:last-child > p > a {
+				@extend %--header--transition;
+				@extend %icon--link;
+			}
 		}
 
 
