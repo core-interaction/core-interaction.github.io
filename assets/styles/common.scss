@@ -331,11 +331,13 @@ body {
 
 				@include breakpoint(568) { gap: var(--margin) }
 
-				a { white-space: nowrap }
-
 				> a { @extend %link--element }
 
-				> p > a { @extend %icon--link }
+				> p > a {
+					@extend %icon--link;
+
+					white-space: nowrap;
+				}
 			}
 		}
 	}
