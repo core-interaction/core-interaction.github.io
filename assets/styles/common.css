@@ -1135,6 +1135,10 @@ body > main > article table tr > td:not(:first-child) {
 	border-left: var(--margin) solid transparent;
 }
 
+body > main > article table.row-header thead {
+	display: none;
+}
+
 body > main > article blockquote {
 	font-style: italic;
 }
