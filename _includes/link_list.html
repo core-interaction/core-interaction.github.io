@@ -1,7 +1,7 @@
 {% if page.links  %}
 {% comment %} You can’t indent this or it’ll make a code block. {% endcomment %}
 <aside markdown="0" {% if include.rows %}rows={{ include.rows }}{% endif %} {% if include.class %}class="{{ include.class }}"{% endif %}>
-	{% if include.heading %}<h3>{{ include.heading | kerning_spans }}</h3>{% endif %}
+	{% if include.heading %}<h3>{{ include.heading }}</h3>{% endif %}
 	<menu>
 		{% for link in page.links %}
 			<li>
