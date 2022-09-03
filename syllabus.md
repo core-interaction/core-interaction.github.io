@@ -138,11 +138,14 @@ In the final weeks of the semester, you’ll refine your 11 entries so that the
 
 For final grading, these tasks will be weighted as below:
 
-| Attendance and Peer Critique        | 15%
-| Unit 1: *Working methods*           | 20%
-| Unit 2: *Digital canvas*            | 20%
-| Unit 3: *Designing for interaction* | 20%
-| Unit 4: *Networks*                  | 25%
+|                                     |     |
+|-------------------------------------|-----|
+| Attendance and Peer Critique        | 15% |
+| Unit 1: *Working methods*           | 20% |
+| Unit 2: *Digital canvas*            | 20% |
+| Unit 3: *Designing for interaction* | 20% |
+| Unit 4: *Networks*                  | 25% |
+{: .row-header }
 
 
 
