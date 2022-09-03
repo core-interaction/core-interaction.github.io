@@ -9,10 +9,10 @@ layout: default
 {% assign projects = site.pages | where: 'layout', 'project' | sort: 'date' %}
 <main>
 	<header>
-		<h1>{{ page.title | kerning }}</h1>
-		<p>{{ page.strings.term | kerning }}</p>
+		<h1>{{ page.title | kerning_spans }}</h1>
+		<p>{{ page.strings.term | kerning_spans }}</p>
 		<address>
-			<p>{{ page.strings.about | kerning }}</p>
+			<p>{{ page.strings.about | kerning_spans }}</p>
 			<div>
 				{% for instructor in page.instructor %}
 					<p><a href="{{ instructor.url }}">{{ instructor.name }}</a></p>

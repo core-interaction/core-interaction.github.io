@@ -5,11 +5,11 @@ order: 0
 
 
 
-## {{ 'Let’s start with *the internet*' | kerning }}
+## Let’s start with *the internet*
 
 
 
-### {{ 'When was the *internet* invented?' | kerning }}
+### When was the *internet* invented?
 {: .four-above }
 
 {% include details.html summary='1969 or 1989?' content='1969!' class='four-below' %}
@@ -57,9 +57,9 @@ In 1974, Robert Kahn and Vinton Cerf (two ARPA scientists) developed the *Transm
 
 
 
-## {{ 'What about *the web*?' | kerning }}
+## What about *the web*?
 
-### {{ 'When was the *web* invented?' | kerning }}
+### When was the *web* invented?
 {: .four-above }
 
 {% include details.html summary='1969 or 1989?' content='1989!' class='four-below' %}
@@ -117,7 +117,7 @@ And the web exploded from there.
 
 
 
-## {{ 'So what are *web pages*?' | kerning }}
+## So what are *web pages*?
 {: .left }
 
 {% capture aside %}
@@ -144,7 +144,7 @@ These all started as simple, hand-typed documents. Then as the power of computer
 
 
 
-## {{ 'An ever-present visual medium' | kerning }}
+## An ever-present visual medium
 {: .left }
 
 If you’re looking at a glowing, 16:9 rectangle somewhere (and it isn’t just playing video), nowadays it is very likely a web page—built with the exact same HTML, CSS, and JS—web technologies—that are behind this page, and every other.
@@ -163,7 +163,7 @@ And in that latter role, we’ll need to learn how to swim. Our path into *desig
 
 
 
-### {{ 'These days, apps are often web pages too' | kerning }}
+### These days, apps are often web pages too
 
 {% include figure.html src='electron.png' caption='We’ll be using a couple of these.' %}
 
@@ -177,7 +177,7 @@ These mobile “apps” are all built with [React Native](https://reactnative.de
 
 
 
-### {{ 'It’s increasingly just JS, behind the scenes' | kerning }}
+### It’s increasingly just JS, behind the scenes
 
 JavaScript began as a client-side (on your computer), front-end language running in the browser. But now with engines like [V8](https://v8.dev) and environments like [Node](https://nodejs.org/en/), JS has moved to server-side (on the remote computer) functionality previously dominated by scripting languages like [ASP](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjEtfa8nc31AhUomeAKHd_ABUQQFnoECE8QAQ&url=https%3A%2F%2Fdotnet.microsoft.com%2Fen-us%2Flearn%2Faspnet%2Fwhat-is-aspnet&usg=AOvVaw1D_8ap9ArdBqxmTX1ce1xL), [Perl](https://www.perl.org), [PHP](https://www.php.net), [Ruby](https://www.ruby-lang.org/en/).
 
@@ -189,7 +189,7 @@ This “javascript everywhere” movement means that the tendrils of the web can
 
 
 
-### {{ 'Even things that aren’t web pages are *web-page-like*' | kerning }}
+### Even things that aren’t web pages are *web-page-like*
 
 In the coming weeks we are going to dive properly into HTML, CSS, and JS—the fabric of web pages. Let’s try and also think of these—more conceptually and semantically—as *content*, *form*, and *function*. (Or in another way, *skeleton*, *skin*, and *muscles.*)
 
@@ -203,7 +203,7 @@ With this understanding, the same model exists in nearly all software. (For exam
 
 
 
-## {{ 'Our lens' | kerning }}
+## Our lens
 
 Learning good, effective design in any medium necessitates knowing it thoroughly and completely, and we’re going strive to do that by truly understanding the web.
 

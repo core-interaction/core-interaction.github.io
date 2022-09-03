@@ -1,12 +1,12 @@
 {% if include.pages.size > 0 %}
 	<aside id="{{ include.title | downcase }}">
-		<h2>{{ include.title | kerning }}</h2>
+		<h2>{{ include.title | kerning_spans }}</h2>
 		<menu>
 			{% for page in include.pages %}
 				{% include auto_title.html %}
 				<li>
 					<a href="{{ page.url }}">
-						{{- title_date | kerning | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines -}}
+						{{- title_date | kerning_spans | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines -}}
 					</a>
 				</li>
 			{% endfor %}

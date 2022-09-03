@@ -4,7 +4,7 @@ module Jekyll
 			return input if input.to_s.empty?
 			time(input).strftime('%B %-d')
 		end
-		def kerning(input)
+		def kerning_spans(input)
 			return input if input.to_s.empty?
 			letters = ""
 			for letter in input.chars do
