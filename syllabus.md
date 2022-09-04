@@ -1,10 +1,5 @@
 ---
 title: Our syllabus
-links:
-  - name: Submitted version
-    url:  /assets/PUCD_2035_F_FEHRENBACH_F22.pdf
-  - name: Course catalog
-    url:  https://courses.newschool.edu/courses/PUCD2035
 ---
 
 
@@ -16,8 +11,9 @@ links:
 *Core 1: Interaction* is designed to introduce students to programming as a creative medium—as a way of making and exploring. The coursework focuses on developing a vocabulary of interaction design principles which can then be applied across a range of platforms. Students are encouraged to experiment with various media, tools, and techniques, ultimately producing a portfolio of interactive and visual projects designed for the screen. An emphasis is placed on typography as it applies to a screen context, research-based problem solving and a learning-through-making approach to technical skill building. Historical and current interaction design precedents will be discussed.
 {: .left }
 
-{% include link_list.html rows=3 %}
-
+* [Submitted version](/assets/PUCD_2035_F_FEHRENBACH_F22.pdf)
+* [Course catalog](https://courses.newschool.edu/courses/PUCD2035)
+{: .icon-link .no-marker .right }
 
 
 

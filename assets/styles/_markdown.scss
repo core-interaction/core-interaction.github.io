@@ -55,6 +55,8 @@
 	// Lists.
 	ul,
 	ol {
+		@extend %type--layout;
+
 		display:             grid;
 		gap:                 var(--typography--between);
 		list-style-position: outside;
@@ -95,6 +97,17 @@
 		padding-left:    1ch;
 
 		> li { padding-left: 1ch }
+
+		&.no-marker {
+			--typography--leading: var(--typography--leading--loose);
+
+			list-style-type: none;
+			padding-left:    initial;
+
+			@include breakpoint(568) { --typography--leading: var(--typography--leading--base) }
+
+			> li { padding-left: initial }
+		}
 	}
 
 	ol {
@@ -304,22 +317,6 @@
 
 		--margin--top: var(--margin--vertical--2);
 
-		> h3 { margin-bottom: var(--margin--vertical) }
-
-		> menu {
-			@extend %type--layout;
-
-			--typography--leading: var(--typography--leading--loose);
-
-			@include breakpoint(568) { --typography--leading: var(--typography--leading--base) }
-
-			display:        flex;
-			flex-direction: column;
-			gap:            var(--typography--between);
-
-			> li > a { @extend %link--element }
-		}
-
 		> figure:not(:first-child) { margin-top: var(--typography--between) }
 
 		+ * {
@@ -403,6 +400,7 @@
 	@include breakpoint(568) {
 		align-items:           start;
 		display:               grid;
+		grid-auto-rows:        min-content;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 		column-gap:            var(--margin);
 
