@@ -160,6 +160,7 @@
 					margin-top: var(--typography--margin--top);
 					position:   absolute;
 					text-align: center;
+					top:        var(--padding);
 					transform:  scale(1.1); // This might need to be params.
 					width:      2ch;
 				}
