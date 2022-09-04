@@ -1353,8 +1353,14 @@ body > main > article figure > iframe {
 }
 
 body > main > article figure > figcaption {
+	font-style: italic;
 	margin-top: var(--typography--between);
 	max-width: 60ch;
+}
+
+body > main > article figure > figcaption > em,
+body > main > article figure > figcaption > cite {
+	font-style: normal;
 }
 
 body > main > article figure + * {
