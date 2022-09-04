@@ -266,7 +266,6 @@ body > main > article .icon-link > a:after,
 body > main > article .icon-link > p > a:after,
 body > main > article .icon-link > li > a:after,
 body > main > article .icon-link > li > p > a:after,
-body > main > article blockquote.quote > blockquote:last-child > p > a:only-child:after,
 body > main > article details > summary > p:after,
 body > main > footer > div > section:last-child > p > a:after,
 body.index > main > nav aside > menu > li > a:after,
@@ -279,7 +278,6 @@ body > main > article .icon-link > a[href*=".pdf"]:after,
 body > main > article .icon-link > p > a[href*=".pdf"]:after,
 body > main > article .icon-link > li > a[href*=".pdf"]:after,
 body > main > article .icon-link > li > p > a[href*=".pdf"]:after,
-body > main > article blockquote.quote > blockquote:last-child > p > a[href*=".pdf"]:only-child:after,
 body > main > article details > summary > p[href*=".pdf"]:after,
 body > main > footer > div > section:last-child > p > a[href*=".pdf"]:after,
 body.index > main > nav aside > menu > li > a[href*=".pdf"]:after,
@@ -292,7 +290,6 @@ body > main > article .icon-link > a[href="#"]:after,
 body > main > article .icon-link > p > a[href="#"]:after,
 body > main > article .icon-link > li > a[href="#"]:after,
 body > main > article .icon-link > li > p > a[href="#"]:after,
-body > main > article blockquote.quote > blockquote:last-child > p > a[href="#"]:only-child:after,
 body > main > article details > summary > p[href="#"]:after,
 body > main > footer > div > section:last-child > p > a[href="#"]:after,
 body.index > main > nav aside > menu > li > a[href="#"]:after,
@@ -305,7 +302,6 @@ body > main > article .icon-link > a.last:after,
 body > main > article .icon-link > p > a.last:after,
 body > main > article .icon-link > li > a.last:after,
 body > main > article .icon-link > li > p > a.last:after,
-body > main > article blockquote.quote > blockquote:last-child > p > a.last:only-child:after,
 body > main > article details > summary > p.last:after,
 body > main > footer > div > section:last-child > p > a.last:after,
 body.index > main > nav aside > menu > li > a.last:after,
@@ -318,7 +314,6 @@ body > main > article .icon-link > a.shuffle:after,
 body > main > article .icon-link > p > a.shuffle:after,
 body > main > article .icon-link > li > a.shuffle:after,
 body > main > article .icon-link > li > p > a.shuffle:after,
-body > main > article blockquote.quote > blockquote:last-child > p > a.shuffle:only-child:after,
 body > main > article details > summary > p.shuffle:after,
 body > main > footer > div > section:last-child > p > a.shuffle:after,
 body.index > main > nav aside > menu > li > a.shuffle:after,
@@ -331,7 +326,6 @@ body > main > article .icon-link > a.this:after,
 body > main > article .icon-link > p > a.this:after,
 body > main > article .icon-link > li > a.this:after,
 body > main > article .icon-link > li > p > a.this:after,
-body > main > article blockquote.quote > blockquote:last-child > p > a.this:only-child:after,
 body > main > article details > summary > p.this:after,
 body > main > footer > div > section:last-child > p > a.this:after,
 body.index > main > nav aside > menu > li > a.this:after,
@@ -348,7 +342,6 @@ body > main > article .icon-link > a[href*=".pdf"]:after,
 body > main > article .icon-link > p > a[href*=".pdf"]:after,
 body > main > article .icon-link > li > a[href*=".pdf"]:after,
 body > main > article .icon-link > li > p > a[href*=".pdf"]:after,
-body > main > article blockquote.quote > blockquote:last-child > p > a[href*=".pdf"]:only-child:after,
 body > main > article details > summary > p[href*=".pdf"]:after,
 body > main > footer > div > section:last-child > p > a[href*=".pdf"]:after,
 body.index > main > nav aside > menu > li > a[href*=".pdf"]:after,
@@ -361,7 +354,6 @@ body > main > article .icon-link > a[href="#"]:after,
 body > main > article .icon-link > p > a[href="#"]:after,
 body > main > article .icon-link > li > a[href="#"]:after,
 body > main > article .icon-link > li > p > a[href="#"]:after,
-body > main > article blockquote.quote > blockquote:last-child > p > a[href="#"]:only-child:after,
 body > main > article details > summary > p[href="#"]:after,
 body > main > footer > div > section:last-child > p > a[href="#"]:after,
 body.index > main > nav aside > menu > li > a[href="#"]:after,
@@ -374,7 +366,6 @@ body > main > article .icon-link > a.last:after,
 body > main > article .icon-link > p > a.last:after,
 body > main > article .icon-link > li > a.last:after,
 body > main > article .icon-link > li > p > a.last:after,
-body > main > article blockquote.quote > blockquote:last-child > p > a.last:only-child:after,
 body > main > article details > summary > p.last:after,
 body > main > footer > div > section:last-child > p > a.last:after,
 body.index > main > nav aside > menu > li > a.last:after,
@@ -387,7 +378,6 @@ body > main > article .icon-link > a.shuffle:after,
 body > main > article .icon-link > p > a.shuffle:after,
 body > main > article .icon-link > li > a.shuffle:after,
 body > main > article .icon-link > li > p > a.shuffle:after,
-body > main > article blockquote.quote > blockquote:last-child > p > a.shuffle:only-child:after,
 body > main > article details > summary > p.shuffle:after,
 body > main > footer > div > section:last-child > p > a.shuffle:after,
 body.index > main > nav aside > menu > li > a.shuffle:after,
@@ -400,7 +390,6 @@ body > main > article .icon-link > a.this:after,
 body > main > article .icon-link > p > a.this:after,
 body > main > article .icon-link > li > a.this:after,
 body > main > article .icon-link > li > p > a.this:after,
-body > main > article blockquote.quote > blockquote:last-child > p > a.this:only-child:after,
 body > main > article details > summary > p.this:after,
 body > main > footer > div > section:last-child > p > a.this:after,
 body.index > main > nav aside > menu > li > a.this:after,
@@ -421,7 +410,6 @@ body > main > article .icon-link > a:after,
 body > main > article .icon-link > p > a:after,
 body > main > article .icon-link > li > a:after,
 body > main > article .icon-link > li > p > a:after,
-body > main > article blockquote.quote > blockquote:last-child > p > a:only-child:after,
 body > main > article details > summary > p:after,
 body > main > footer > div > section:last-child > p > a:after,
 body.index > main > nav aside > menu > li > a:after,
@@ -440,7 +428,6 @@ body > main > article .icon-link > a[href*=".pdf"]:after,
 body > main > article .icon-link > p > a[href*=".pdf"]:after,
 body > main > article .icon-link > li > a[href*=".pdf"]:after,
 body > main > article .icon-link > li > p > a[href*=".pdf"]:after,
-body > main > article blockquote.quote > blockquote:last-child > p > a[href*=".pdf"]:only-child:after,
 body > main > article details > summary > p[href*=".pdf"]:after,
 body > main > footer > div > section:last-child > p > a[href*=".pdf"]:after,
 body.index > main > nav aside > menu > li > a[href*=".pdf"]:after,
@@ -453,7 +440,6 @@ body > main > article .icon-link > a[href="#"]:after,
 body > main > article .icon-link > p > a[href="#"]:after,
 body > main > article .icon-link > li > a[href="#"]:after,
 body > main > article .icon-link > li > p > a[href="#"]:after,
-body > main > article blockquote.quote > blockquote:last-child > p > a[href="#"]:only-child:after,
 body > main > article details > summary > p[href="#"]:after,
 body > main > footer > div > section:last-child > p > a[href="#"]:after,
 body.index > main > nav aside > menu > li > a[href="#"]:after,
@@ -466,7 +452,6 @@ body > main > article .icon-link > a.last:after,
 body > main > article .icon-link > p > a.last:after,
 body > main > article .icon-link > li > a.last:after,
 body > main > article .icon-link > li > p > a.last:after,
-body > main > article blockquote.quote > blockquote:last-child > p > a.last:only-child:after,
 body > main > article details > summary > p.last:after,
 body > main > footer > div > section:last-child > p > a.last:after,
 body.index > main > nav aside > menu > li > a.last:after,
@@ -479,7 +464,6 @@ body > main > article .icon-link > a.shuffle:after,
 body > main > article .icon-link > p > a.shuffle:after,
 body > main > article .icon-link > li > a.shuffle:after,
 body > main > article .icon-link > li > p > a.shuffle:after,
-body > main > article blockquote.quote > blockquote:last-child > p > a.shuffle:only-child:after,
 body > main > article details > summary > p.shuffle:after,
 body > main > footer > div > section:last-child > p > a.shuffle:after,
 body.index > main > nav aside > menu > li > a.shuffle:after,
@@ -492,7 +476,6 @@ body > main > article .icon-link > a.this:after,
 body > main > article .icon-link > p > a.this:after,
 body > main > article .icon-link > li > a.this:after,
 body > main > article .icon-link > li > p > a.this:after,
-body > main > article blockquote.quote > blockquote:last-child > p > a.this:only-child:after,
 body > main > article details > summary > p.this:after,
 body > main > footer > div > section:last-child > p > a.this:after,
 body.index > main > nav aside > menu > li > a.this:after,
@@ -514,7 +497,6 @@ body > main > article .icon-link > a:after,
 body > main > article .icon-link > p > a:after,
 body > main > article .icon-link > li > a:after,
 body > main > article .icon-link > li > p > a:after,
-body > main > article blockquote.quote > blockquote:last-child > p > a:only-child:after,
 body > main > article details > summary > p:after,
 body > main > footer > div > section:last-child > p > a:after,
 body.index > main > nav aside > menu > li > a:after,
@@ -580,7 +562,6 @@ body > main > article .icon-link > li > p > a,
 body > nav > div > section:last-child > p > a,
 body > main > header > address > div > p > a,
 body > main > header > ul > li > a,
-body > main > article blockquote.quote > blockquote:last-child > p > a:only-child,
 body > main > article details > summary > p,
 body > main > footer > div > section:last-child > p > a,
 body.index > main > nav aside > menu > li > a,
@@ -608,7 +589,6 @@ body > main > article .icon-link > a:focus:focus-visible:not(:disabled),
 body > main > article .icon-link > p > a:focus:focus-visible:not(:disabled),
 body > main > article .icon-link > li > a:focus:focus-visible:not(:disabled),
 body > main > article .icon-link > li > p > a:focus:focus-visible:not(:disabled),
-body > main > article blockquote.quote > blockquote:last-child > p > a:focus:focus-visible:not(:disabled):only-child,
 body > main > article details > summary > p:focus:focus-visible:not(:disabled),
 body > main > footer > div > section:last-child > p > a:focus:focus-visible:not(:disabled),
 body.index > main > nav aside > menu > li > a:focus:focus-visible:not(:disabled),
@@ -632,7 +612,6 @@ body > main > article .icon-link > a,
 body > main > article .icon-link > p > a,
 body > main > article .icon-link > li > a,
 body > main > article .icon-link > li > p > a,
-body > main > article blockquote.quote > blockquote:last-child > p > a:only-child,
 body > main > article details > summary > p,
 body > main > footer > div > section:last-child > p > a,
 body.index > main > nav aside > menu > li > a,
@@ -655,7 +634,6 @@ body > main > header > ul > li > a:active,
 body > main > article .icon-link > p > a:active,
 body > main > article .icon-link > li > a:active,
 body > main > article .icon-link > li > p > a:active,
-body > main > article blockquote.quote > blockquote:last-child > p > a:active:only-child,
 body > main > article details > summary > p:active,
 body > main > footer > div > section:last-child > p > a:active,
 body.index > main > nav aside > menu > li > a:active,
@@ -677,7 +655,6 @@ body > main > article .icon-link > a:focus,
 body > main > article .icon-link > p > a:focus,
 body > main > article .icon-link > li > a:focus,
 body > main > article .icon-link > li > p > a:focus,
-body > main > article blockquote.quote > blockquote:last-child > p > a:focus:only-child,
 body > main > article details > summary > p:focus,
 body > main > footer > div > section:last-child > p > a:focus,
 body.index > main > nav aside > menu > li > a:focus,
@@ -699,7 +676,6 @@ body > main > footer > div > section:first-child > a:focus {
 	body > main > article .icon-link > p > a:hover,
 	body > main > article .icon-link > li > a:hover,
 	body > main > article .icon-link > li > p > a:hover,
-	body > main > article blockquote.quote > blockquote:last-child > p > a:hover:only-child,
 	body > main > article details > summary > p:hover,
 	body > main > footer > div > section:last-child > p > a:hover,
 	body.index > main > nav aside > menu > li > a:hover,
@@ -728,7 +704,6 @@ body > main > article .icon-link > a,
 body > main > article .icon-link > p > a,
 body > main > article .icon-link > li > a,
 body > main > article .icon-link > li > p > a,
-body > main > article blockquote.quote > blockquote:last-child > p > a:only-child,
 body > main > article details > summary > p,
 body > main > footer > div > section:last-child > p > a,
 body.index > main > nav aside > menu > li > a,
@@ -1215,7 +1190,28 @@ body > main > article table.row-header thead {
 }
 
 body > main > article blockquote {
+	--margin--top: var(--margin--vertical--2);
 	font-style: italic;
+	padding-left: 3ch;
+	position: relative;
+}
+
+@media (min-width: 35.5em) {
+	body > main > article blockquote {
+		padding-left: 5ch;
+		padding-right: 5ch;
+	}
+}
+
+body > main > article blockquote:before {
+	content: "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | ";
+	font-style: normal;
+	left: 0;
+	max-height: calc(100% + var(--typography--between));
+	overflow: hidden;
+	position: absolute;
+	top: calc(var(--typography--margin--top) - 0.1em);
+	width: 1ch;
 }
 
 body > main > article blockquote > *:not(:first-child) {
@@ -1246,31 +1242,44 @@ body > main > article blockquote.callout[icon]:before {
 	width: 2ch;
 }
 
+body > main > article blockquote:not(.callout) + p {
+	--margin--top: var(--typography--leading-shoulder);
+	font-style: italic;
+}
+
+body > main > article blockquote:not(.callout) + p > em,
+body > main > article blockquote:not(.callout) + p > cite {
+	font-style: normal;
+}
+
+body > main > article blockquote:not(.callout) + p + * {
+	--margin--top: var(--margin--vertical--2);
+	--margin--top--previous: var(--typography--leading-shoulder);
+}
+
+body > main > article blockquote:not(.callout) + p + * + * {
+	--margin--top--previous: var(--margin--vertical--2);
+}
+
 body > main > article blockquote.quote {
-	padding-left: 3ch;
-	position: relative;
+	--margin--top: var(--margin--vertical--6);
 }
 
-@media (min-width: 35.5em) {
-	body > main > article blockquote.quote {
-		padding-left: 5ch;
-		padding-right: 5ch;
-	}
+body > main > article blockquote.quote + p + * {
+	--margin--top: var(--margin--vertical--6);
 }
 
-body > main > article blockquote.quote:before {
-	content: "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | ";
-	font-style: normal;
-	left: 0;
-	max-height: calc(100% + var(--typography--between));
-	overflow: hidden;
-	position: absolute;
-	top: calc(var(--typography--margin--top) - 0.1em);
-	width: 1ch;
+body > main > article blockquote.quote + p + * + * {
+	--margin--top--previous: var(--margin--vertical--6);
 }
 
-body > main > article blockquote.quote > blockquote:last-child {
-	font-style: normal;
+body > main > article blockquote + * {
+	--margin--top: var(--margin--vertical--2);
+	--margin--top--previous: var(--typography--leading-shoulder);
+}
+
+body > main > article blockquote + * + * {
+	--margin--top--previous: var(--margin--vertical--2);
 }
 
 body > main > article details > summary {
@@ -1416,6 +1425,22 @@ body > main > article h3 {
 	--margin--top: var(--margin--vertical--2);
 }
 
+body > main > article hr,
+body > main > article .callout {
+	--margin--top: var(--margin--vertical--6);
+}
+
+body > main > article hr + *,
+body > main > article .callout + * {
+	--margin--top: var(--margin--vertical--6);
+	--margin--top--previous: var(--margin--vertical--6);
+}
+
+body > main > article hr + * + *,
+body > main > article .callout + * + * {
+	--margin--top--previous: var(--margin--vertical--6);
+}
+
 body > main > article .two-above {
 	--margin--top: var(--margin--vertical--2);
 }
@@ -1438,22 +1463,6 @@ body > main > article .four-above + * {
 
 body > main > article .four-below + * {
 	--margin--top: var(--margin--vertical--6);
-}
-
-body > main > article hr,
-body > main > article blockquote {
-	--margin--top: var(--margin--vertical--6);
-}
-
-body > main > article hr + *,
-body > main > article blockquote + * {
-	--margin--top: var(--margin--vertical--6);
-	--margin--top--previous: var(--margin--vertical--6);
-}
-
-body > main > article hr + * + *,
-body > main > article blockquote + * + * {
-	--margin--top--previous: var(--margin--vertical--6);
 }
 
 body > main > article .faded {
@@ -1653,7 +1662,6 @@ body > main > article .icon-link > a,
 body > main > article .icon-link > p > a,
 body > main > article .icon-link > li > a,
 body > main > article .icon-link > li > p > a,
-body > main > article blockquote.quote > blockquote:last-child > p > a:only-child,
 body > main > article details > summary > p,
 body > main > footer > div > section:last-child > p > a,
 body.index > main > nav aside > menu > li > a,
@@ -1676,7 +1684,6 @@ body > main > article .icon-link > a:after,
 body > main > article .icon-link > p > a:after,
 body > main > article .icon-link > li > a:after,
 body > main > article .icon-link > li > p > a:after,
-body > main > article blockquote.quote > blockquote:last-child > p > a:only-child:after,
 body > main > article details > summary > p:after,
 body > main > footer > div > section:last-child > p > a:after,
 body.index > main > nav aside > menu > li > a:after,
@@ -1698,7 +1705,6 @@ body > main > article .icon-link > a:empty,
 body > main > article .icon-link > p > a:empty,
 body > main > article .icon-link > li > a:empty,
 body > main > article .icon-link > li > p > a:empty,
-body > main > article blockquote.quote > blockquote:last-child > p > a:empty:only-child,
 body > main > article details > summary > p:empty,
 body > main > footer > div > section:last-child > p > a:empty,
 body.index > main > nav aside > menu > li > a:empty,
@@ -1715,7 +1721,6 @@ body > main > article .icon-link > a:empty:after,
 body > main > article .icon-link > p > a:empty:after,
 body > main > article .icon-link > li > a:empty:after,
 body > main > article .icon-link > li > p > a:empty:after,
-body > main > article blockquote.quote > blockquote:last-child > p > a:empty:only-child:after,
 body > main > article details > summary > p:empty:after,
 body > main > footer > div > section:last-child > p > a:empty:after,
 body.index > main > nav aside > menu > li > a:empty:after,
@@ -1732,7 +1737,6 @@ body > main > article .icon-link > a[href^="/"],
 body > main > article .icon-link > p > a[href^="/"],
 body > main > article .icon-link > li > a[href^="/"],
 body > main > article .icon-link > li > p > a[href^="/"],
-body > main > article blockquote.quote > blockquote:last-child > p > a[href^="/"]:only-child,
 body > main > article details > summary > p[href^="/"],
 body > main > footer > div > section:last-child > p > a[href^="/"],
 body.index > main > nav aside > menu > li > a[href^="/"],
@@ -1748,7 +1752,6 @@ body > main > article .icon-link > a[href^=http],
 body > main > article .icon-link > p > a[href^=http],
 body > main > article .icon-link > li > a[href^=http],
 body > main > article .icon-link > li > p > a[href^=http],
-body > main > article blockquote.quote > blockquote:last-child > p > a[href^=http]:only-child,
 body > main > article details > summary > p[href^=http],
 body > main > footer > div > section:last-child > p > a[href^=http],
 body.index > main > nav aside > menu > li > a[href^=http],
@@ -1765,7 +1768,6 @@ body > main > article .icon-link > a[href^="#"],
 body > main > article .icon-link > p > a[href^="#"],
 body > main > article .icon-link > li > a[href^="#"],
 body > main > article .icon-link > li > p > a[href^="#"],
-body > main > article blockquote.quote > blockquote:last-child > p > a[href^="#"]:only-child,
 body > main > article details > summary > p[href^="#"],
 body > main > footer > div > section:last-child > p > a[href^="#"],
 body.index > main > nav aside > menu > li > a[href^="#"],
@@ -1781,7 +1783,6 @@ body > main > article .icon-link > a[href*=".pdf"],
 body > main > article .icon-link > p > a[href*=".pdf"],
 body > main > article .icon-link > li > a[href*=".pdf"],
 body > main > article .icon-link > li > p > a[href*=".pdf"],
-body > main > article blockquote.quote > blockquote:last-child > p > a[href*=".pdf"]:only-child,
 body > main > article details > summary > p[href*=".pdf"],
 body > main > footer > div > section:last-child > p > a[href*=".pdf"],
 body.index > main > nav aside > menu > li > a[href*=".pdf"],
@@ -1794,7 +1795,6 @@ body > main > article .icon-link > a[href="#"],
 body > main > article .icon-link > p > a[href="#"],
 body > main > article .icon-link > li > a[href="#"],
 body > main > article .icon-link > li > p > a[href="#"],
-body > main > article blockquote.quote > blockquote:last-child > p > a[href="#"]:only-child,
 body > main > article details > summary > p[href="#"],
 body > main > footer > div > section:last-child > p > a[href="#"],
 body.index > main > nav aside > menu > li > a[href="#"],
@@ -1807,7 +1807,6 @@ body > main > article .icon-link > a.last,
 body > main > article .icon-link > p > a.last,
 body > main > article .icon-link > li > a.last,
 body > main > article .icon-link > li > p > a.last,
-body > main > article blockquote.quote > blockquote:last-child > p > a.last:only-child,
 body > main > article details > summary > p.last,
 body > main > footer > div > section:last-child > p > a.last,
 body.index > main > nav aside > menu > li > a.last,
@@ -1820,7 +1819,6 @@ body > main > article .icon-link > a.shuffle,
 body > main > article .icon-link > p > a.shuffle,
 body > main > article .icon-link > li > a.shuffle,
 body > main > article .icon-link > li > p > a.shuffle,
-body > main > article blockquote.quote > blockquote:last-child > p > a.shuffle:only-child,
 body > main > article details > summary > p.shuffle,
 body > main > footer > div > section:last-child > p > a.shuffle,
 body.index > main > nav aside > menu > li > a.shuffle,
@@ -1833,7 +1831,6 @@ body > main > article .icon-link > a.this,
 body > main > article .icon-link > p > a.this,
 body > main > article .icon-link > li > a.this,
 body > main > article .icon-link > li > p > a.this,
-body > main > article blockquote.quote > blockquote:last-child > p > a.this:only-child,
 body > main > article details > summary > p.this,
 body > main > footer > div > section:last-child > p > a.this,
 body.index > main > nav aside > menu > li > a.this,
@@ -1850,7 +1847,6 @@ body > main > article .icon-link > a[href*=".pdf"],
 body > main > article .icon-link > p > a[href*=".pdf"],
 body > main > article .icon-link > li > a[href*=".pdf"],
 body > main > article .icon-link > li > p > a[href*=".pdf"],
-body > main > article blockquote.quote > blockquote:last-child > p > a[href*=".pdf"]:only-child,
 body > main > article details > summary > p[href*=".pdf"],
 body > main > footer > div > section:last-child > p > a[href*=".pdf"],
 body.index > main > nav aside > menu > li > a[href*=".pdf"],
@@ -1867,7 +1863,6 @@ body > main > article .icon-link > a[href="#"],
 body > main > article .icon-link > p > a[href="#"],
 body > main > article .icon-link > li > a[href="#"],
 body > main > article .icon-link > li > p > a[href="#"],
-body > main > article blockquote.quote > blockquote:last-child > p > a[href="#"]:only-child,
 body > main > article details > summary > p[href="#"],
 body > main > footer > div > section:last-child > p > a[href="#"],
 body.index > main > nav aside > menu > li > a[href="#"],
@@ -1884,7 +1879,6 @@ body > main > article .icon-link > a.last,
 body > main > article .icon-link > p > a.last,
 body > main > article .icon-link > li > a.last,
 body > main > article .icon-link > li > p > a.last,
-body > main > article blockquote.quote > blockquote:last-child > p > a.last:only-child,
 body > main > article details > summary > p.last,
 body > main > footer > div > section:last-child > p > a.last,
 body.index > main > nav aside > menu > li > a.last,
@@ -1900,7 +1894,6 @@ body > main > article .icon-link > a.shuffle,
 body > main > article .icon-link > p > a.shuffle,
 body > main > article .icon-link > li > a.shuffle,
 body > main > article .icon-link > li > p > a.shuffle,
-body > main > article blockquote.quote > blockquote:last-child > p > a.shuffle:only-child,
 body > main > article details > summary > p.shuffle,
 body > main > footer > div > section:last-child > p > a.shuffle,
 body.index > main > nav aside > menu > li > a.shuffle,
@@ -1917,7 +1910,6 @@ body > main > article .icon-link > a.this,
 body > main > article .icon-link > p > a.this,
 body > main > article .icon-link > li > a.this,
 body > main > article .icon-link > li > p > a.this,
-body > main > article blockquote.quote > blockquote:last-child > p > a.this:only-child,
 body > main > article details > summary > p.this,
 body > main > footer > div > section:last-child > p > a.this,
 body.index > main > nav aside > menu > li > a.this,
