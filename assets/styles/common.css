@@ -104,7 +104,8 @@ body > nav,
 body > main > header > address,
 body > main > header > ul,
 body > main > article,
-body > main > article aside > menu,
+body > main > article ul,
+body > main > article ol,
 body.index > main > nav aside > menu,
 body > main > header > ul > li,
 body > main > article ul > li,
@@ -238,7 +239,8 @@ body > nav,
 body > main > header > address,
 body > main > header > ul,
 body > main > article,
-body > main > article aside > menu,
+body > main > article ul,
+body > main > article ol,
 body.index > main > nav aside > menu {
 	--typography--cap: calc(var(--typography--cap-height) * 1em);
 	--typography--between: calc(var(--typography--font-size) * (var(--typography--leading) + var(--typography--shoulder) - 1));
@@ -605,7 +607,6 @@ body.index > main > nav aside > menu > li > a:focus:focus-visible:not(:disabled)
 body.class > main > article > p > button:focus:focus-visible:not(:disabled),
 body > nav > div > section:first-child > a:focus:focus-visible:not(:disabled),
 body > main > article details > summary:focus:focus-visible:not(:disabled),
-body > main > article aside > menu > li > a:focus:focus-visible:not(:disabled),
 body > main > footer > div > section:first-child > a:focus:focus-visible:not(:disabled) {
 	border-radius: calc(var(--link--enlargement) / 4);
 	outline-color: var(--link--color);
@@ -630,7 +631,6 @@ body.index > main > nav aside > menu > li > a,
 body.class > main > article > p > button,
 body > nav > div > section:first-child > a,
 body > main > article details > summary,
-body > main > article aside > menu > li > a,
 body > main > footer > div > section:first-child > a {
 	-webkit-tap-highlight-color: var(--link--highlight);
 	cursor: pointer;
@@ -676,7 +676,6 @@ body.index > main > nav aside > menu > li > a:focus,
 body.class > main > article > p > button:focus,
 body > nav > div > section:first-child > a:focus,
 body > main > article details > summary:focus,
-body > main > article aside > menu > li > a:focus,
 body > main > footer > div > section:first-child > a:focus {
 	outline: none;
 	z-index: 1;
@@ -706,7 +705,6 @@ body > main > footer > div > section:first-child > a:focus {
 
 body > nav > div > section:first-child > a,
 body > main > article details > summary,
-body > main > article aside > menu > li > a,
 body > main > footer > div > section:first-child > a {
 	margin: calc(var(--link--enlargement) * -1);
 	padding: var(--link--enlargement);
@@ -741,7 +739,6 @@ body.class > main > article > p > button {
 
 body > nav > div > section:first-child > a,
 body > main > article details > summary,
-body > main > article aside > menu > li > a,
 body > main > footer > div > section:first-child > a {
 	display: flex;
 	flex-direction: column;
@@ -1152,8 +1149,12 @@ body > main > article ol > li > p:not(:only-child):last-child {
 	margin-bottom: calc(var(--typography--font-size) * var(--typography--leading));
 }
 
-body > main > article ul > li:not(:first-child) > *:first-child,
-body > main > article ol > li:not(:first-child) > *:first-child {
+body > main > article ul > li:not(:first-child) > h3:first-child,
+body > main > article ul > li:not(:first-child) > h4:first-child,
+body > main > article ul > li:not(:first-child) > p:first-child,
+body > main > article ol > li:not(:first-child) > h3:first-child,
+body > main > article ol > li:not(:first-child) > h4:first-child,
+body > main > article ol > li:not(:first-child) > p:first-child {
 	margin-top: calc(var(--typography--font-size) * var(--typography--leading));
 }
 
@@ -1164,6 +1165,22 @@ body > main > article ul {
 
 body > main > article ul > li {
 	padding-left: 1ch;
+}
+
+body > main > article ul.no-marker {
+	--typography--leading: var(--typography--leading--loose);
+	list-style-type: none;
+	padding-left: initial;
+}
+
+@media (min-width: 35.5em) {
+	body > main > article ul.no-marker {
+		--typography--leading: var(--typography--leading--base);
+	}
+}
+
+body > main > article ul.no-marker > li {
+	padding-left: initial;
 }
 
 body > main > article ol {
@@ -1361,23 +1378,6 @@ body > main > article aside {
 	--margin--top: var(--margin--vertical--2);
 }
 
-body > main > article aside > h3 {
-	margin-bottom: var(--margin--vertical);
-}
-
-body > main > article aside > menu {
-	--typography--leading: var(--typography--leading--loose);
-	display: flex;
-	flex-direction: column;
-	gap: var(--typography--between);
-}
-
-@media (min-width: 35.5em) {
-	body > main > article aside > menu {
-		--typography--leading: var(--typography--leading--base);
-	}
-}
-
 body > main > article aside > figure:not(:first-child) {
 	margin-top: var(--typography--between);
 }
@@ -1465,6 +1465,7 @@ body > main > article .faded {
 	body > main > article {
 		align-items: start;
 		display: grid;
+		grid-auto-rows: min-content;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 		column-gap: var(--margin);
 	}
