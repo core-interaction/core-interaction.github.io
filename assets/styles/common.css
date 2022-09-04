@@ -1060,7 +1060,8 @@ body > main > article h1 {
 	display: none;
 }
 
-body > main > article p {
+body > main > article p,
+body > main > article hr {
 	max-width: 70ch;
 }
 
@@ -1072,12 +1073,6 @@ body > main > article a {
 body > main > article hr {
 	height: var(--typography--cap);
 	overflow: hidden;
-}
-
-@media (min-width: 35.5em) {
-	body > main > article hr {
-		grid-column: 1/span 2;
-	}
 }
 
 body > main > article hr:after {
