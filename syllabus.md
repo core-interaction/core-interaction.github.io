@@ -148,28 +148,28 @@ For final grading, these tasks will be weighted as below:
 ## Recommended readings
 
 * [*Form+Code in Design, Art, and Architecture*](http://formandcode.com) \
-	Casey Reas, Chandler McWilliams, and LUST
+  Casey Reas, Chandler McWilliams, and LUST
 
 * [*Geometry of Design*](https://archive.org/details/geometryofdesign0000elam/mode/2up) \
-	Kimberly Elam
+  Kimberly Elam
 
 * [*Graphic Design Manual*](https://www.appliedaesthetics.org/art132b/06/hofmann.pdf) \
-	Armin Hofmann
+  Armin Hofmann
 
 * [*The Elements of Typographic Style*](https://readings.design/PDF/the_elements_of_typographic_style.pdf) \
-	Robert Bringhurst
+  Robert Bringhurst
 
 * [*The Shape of Design*](https://shapeofdesignbook.com) \
-	Frank Chimero
+  Frank Chimero
 
 * [*The User Experience Team of One*](https://archivos.tdmmdos.net.ar/bibliografia/EN-LB-TheUserExperienceTeamOfOne.pdf) \
-	Leah Buley
+  Leah Buley
 
 * [*Very Interactive Library*](https://veryinteractive.net/library/index.html) \
-	Compiled by Laurel Schwulst
+  Compiled by Laurel Schwulst
 
 * [*What Is Code?*](https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/) \
-	Paul Ford
+  Paul Ford
 {: .icon-link}
 
 
@@ -183,19 +183,19 @@ In class, I will demonstrate using [Visual Studio Code](https://code.visualstud
 We will use the following sites to organize and run our class:
 
 * [Course site](https://core-interaction.github.io) \
-	For housekeeping, agendas, and lectures
+  For housekeeping, agendas, and lectures
 
 * [Slack channel](https://core-one-interaction.slack.com/archives/C03UTLMBMDH) \
-	For direct and asynchronous communication (*not* email)
+  For direct and asynchronous communication (*not* email)
 
 * [GitHub team](https://github.com/core-interaction) \
-	For code examples, sharing
+  For code examples, sharing
 
 * [Google Drive](https://drive.google.com/drive/folders/1pPSCRnGN7Ym7ZFyBl5n_HvKvArrpo_B6?usp=sharing) \
-	For document collaboration, recorded lectures
+  For document collaboration, recorded lectures
 
 * [Zoom room](https://NewSchool.zoom.us/j/99185050065) \
-	For screen sharing and recording
+  For screen sharing and recording
 {: .icon-link}
 
 

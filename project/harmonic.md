@@ -43,17 +43,17 @@ We’ll be adding to this collection over the course of the semester:
 1. Entry due September 27
 1. Entry due October 4
 1. Entry due October 11 \
-	\
-	*Revise and edit entries, due October 18* \
-	 
+  \
+  *Revise and edit entries, due October 18* \
+   
 1. Entry due October 25
 1. Entry due November 1
 1. Entry due November 8
 1. Entry due November 15
 1. Entry due November 22
 1. Entry due November 29 \
-	\
-	*Revise and edit entries, due December 6*
+  \
+  *Revise and edit entries, due December 6*
 {: list-prefix="Test" }
 
 And we will review your final, completed collections during our last class! I’m looking forward to it.
