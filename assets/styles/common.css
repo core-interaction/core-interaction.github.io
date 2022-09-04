@@ -1053,6 +1053,10 @@ body > main > article a {
 	color: var(--link--color);
 }
 
+body > main > article cite {
+	white-space: nowrap;
+}
+
 body > main > article hr {
 	height: var(--typography--cap);
 	overflow: hidden;
