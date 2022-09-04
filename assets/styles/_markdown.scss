@@ -287,8 +287,11 @@
 		> figcaption {
 			@extend %typography;
 
+			font-style: italic;
 			margin-top: var(--typography--between);
 			max-width:  60ch;
+
+			> em, > cite { font-style: normal }
 		}
 
 		+ * {
