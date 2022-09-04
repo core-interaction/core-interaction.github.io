@@ -320,6 +320,7 @@ body {
 			> address,
 			> ul {
 				@extend %type--layout;
+
 				display:        flex;
 				flex-direction: column;
 				margin-top:     var(--margin--vertical--2);
