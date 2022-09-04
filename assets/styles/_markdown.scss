@@ -138,7 +138,27 @@
 
 	// Quotes/callouts.
 	blockquote {
-		font-style: italic;
+		--margin--top: var(--margin--vertical--2);
+
+		font-style:   italic;
+		padding-left: 3ch;
+		position:     relative;
+
+		@include breakpoint(568) {
+			padding-left:  5ch;
+			padding-right: 5ch;
+		}
+
+		&:before {
+			content:    '| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | ';
+			font-style: normal;
+			left:       0;
+			max-height: calc(100% + var(--typography--between));
+			overflow:   hidden;
+			position:   absolute;
+			top:        calc(var(--typography--margin--top) - 0.1em);
+			width:      1ch;
+		}
 
 		> *:not(:first-child) { margin-top: var(--typography--leading-shoulder) }
 
@@ -167,32 +187,37 @@
 			}
 		}
 
+		// Caption/credit.
+		&:not(.callout ) + p {
+			--margin--top: var(--typography--leading-shoulder);
+
+			font-style: italic;
+
+			> em, > cite { font-style: normal }
+
+			+ * {
+				--margin--top:           var(--margin--vertical--2);
+				--margin--top--previous: var(--typography--leading-shoulder);
+
+				+ * { --margin--top--previous: var(--margin--vertical--2) }
+			}
+		}
+
 		&.quote {
-			padding-left: 3ch;
-			position:     relative;
+			--margin--top: var(--margin--vertical--6);
 
-			@include breakpoint(568) {
-				padding-left:  5ch;
-				padding-right: 5ch;
+			+ p + * {
+				--margin--top: var(--margin--vertical--6);
+
+				+ * { --margin--top--previous: var(--margin--vertical--6) }
 			}
+		}
 
-			&:before {
-				content:    '| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | ';
-				font-style: normal;
-				left:       0;
-				max-height: calc(100% + var(--typography--between));
-				overflow:   hidden;
-				position:   absolute;
-				top:        calc(var(--typography--margin--top) - 0.1em);
-				width:      1ch;
-			}
+		+ * {
+			--margin--top:           var(--margin--vertical--2);
+			--margin--top--previous: var(--typography--leading-shoulder);
 
-			// Credit.
-			> blockquote:last-child {
-				font-style: normal;
-
-				> p > a:only-child { @extend %icon--link }
-			}
+			+ * { --margin--top--previous: var(--margin--vertical--2) }
 		}
 	}
 
@@ -350,6 +375,21 @@
 
 
 
+	// Lower, cascade.
+	hr,
+	.callout {
+		--margin--top: var(--margin--vertical--6);
+
+		+ * {
+			--margin--top:           var(--margin--vertical--6);
+			--margin--top--previous: var(--margin--vertical--6);
+
+			+ * { --margin--top--previous: var(--margin--vertical--6) }
+		}
+	}
+
+
+
 	// Manual spacing decisions.
 	.two-above {
 		--margin--top: var(--margin--vertical--2);
@@ -366,21 +406,6 @@
 	}
 
 	.four-below + * { --margin--top: var(--margin--vertical--6) }
-
-
-
-	// Lowest, cascade.
-	hr,
-	blockquote {
-		--margin--top: var(--margin--vertical--6);
-
-		+ * {
-			--margin--top:           var(--margin--vertical--6);
-			--margin--top--previous: var(--margin--vertical--6);
-
-			+ * { --margin--top--previous: var(--margin--vertical--6) }
-		}
-	}
 
 
 

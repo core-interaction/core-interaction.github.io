@@ -219,7 +219,7 @@ This agreement is intended to help us create and maintain a safe, empathetic, a
 * We will have a short break, roughly halfway through the class.
 
 > We can (and should) revisit this agreement throughout the semester. Please let me know if you’d like to raise something with the class.
-{: .callout icon='🤚' }
+{: .callout .two-above .two-below icon='🤚' }
 
 
 

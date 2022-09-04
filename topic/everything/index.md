@@ -33,9 +33,9 @@ A catalyst in the formation of the internet was the Cold War. The threat of nucl
 
 
 > It was necessary to have a strategic system that could withstand a first attack and then be able to return the favor in kind. The problem was that we didn’t have a survivable communications system, and so Soviet missiles aimed at US missiles would take out the entire telephone-communication system [...] that was highly centralized. Well, then, let’s not make it centralized. Let’s spread it out so that we can have other paths to get around the damage.
->
-> > [Paul Baran](https://www.vanityfair.com/news/2008/07/internet200807)
 {: .quote }
+
+<cite>[Paul Baran](https://www.vanityfair.com/news/2008/07/internet200807)</cite>
 
 
 
@@ -107,9 +107,9 @@ And the web exploded from there.
 
 
 > The dream behind the Web is of a common information space in which we communicate by sharing information. Its universality is essential: the fact that a hypertext link can point to anything, be it personal, local or global, be it draft or highly polished.
->
-> > [Tim Berners-Lee](https://www.scienceandmediamuseum.org.uk/objects-and-stories/short-history-internet)
 {: .quote }
+
+<cite>[Tim Berners-Lee](https://www.scienceandmediamuseum.org.uk/objects-and-stories/short-history-internet)</cite>
 
 
 
@@ -157,9 +157,9 @@ And in that latter role, we’ll need to learn how to swim. Our path into *desig
 {: .left }
 
 > Most people make the mistake of thinking design is what it looks like. People think it’s this veneer—that the designers are handed this box and told, “Make it look good!” That’s not what we think design is. It’s not just what it looks like and feels like. Design is how it works.
->
-> > [Steve Jobs](https://www.nytimes.com/2003/11/30/magazine/the-guts-of-a-new-machine.html)
 {: .quote }
+
+<cite>[Steve Jobs](https://www.nytimes.com/2003/11/30/magazine/the-guts-of-a-new-machine.html)</cite>
 
 
 
@@ -212,9 +212,9 @@ In your careers, the software, languages, and platforms might be different, and 
 
 
 > All I know is that if you are a fish, it is hard to describe water, much less to ask if water is necessary, ethical, and structured the way it ought to be.
->
->> [Abigail Disney](https://www.theatlantic.com/ideas/archive/2021/06/abigail-disney-rich-protect-dynastic-wealth-propublica-tax/619212/)
 {: .quote }
+
+<cite>[Abigail Disney](https://www.theatlantic.com/ideas/archive/2021/06/abigail-disney-rich-protect-dynastic-wealth-propublica-tax/619212/)</cite>
 
 
 
