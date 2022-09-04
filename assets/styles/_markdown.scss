@@ -80,7 +80,13 @@
 				&:not(:only-child):last-child { margin-bottom: calc(var(--typography--font-size) * var(--typography--leading)) }
 			}
 
-			&:not(:first-child) > *:first-child { margin-top: calc(var(--typography--font-size) * var(--typography--leading)) }
+			&:not(:first-child) {
+				> h3,
+				> h4,
+				> p {
+					&:first-child { margin-top: calc(var(--typography--font-size) * var(--typography--leading)) }
+				}
+			}
 		}
 	}
 
