@@ -24,6 +24,7 @@
 	}
 
 	// Prominence for link-only paragraphs/li.
+	cite > a,
 	.icon-link > a,
 	.icon-link > p > a,
 	.icon-link > li > a,
@@ -263,41 +264,31 @@
 					display: none;
 
 					+ figcaption {
-						margin-top: initial;
+						font-size:     0rem;
+						margin-bottom: calc(-1 * var(--typography--shoulder) * var(--typography--font-size) + var(--typography--margin--bottom));
+						margin-top:    initial;
+						max-width:     initial;
+						visibility:    hidden;
 
 						// Show a warning.
-						&:before {
-							content:       'Safari security settings prevent Google Drive embeds—so you’ll need to go to the original.';
-							display:       block;
-							font-style:    italic;
-							margin-bottom: var(--typography--margin--bottom);
-							margin-top:    var(--typography--margin--top);
+						&:after {
+							content:    'Safari security settings prevent Google Drive embeds—so you’ll need to go to the original.';
+							display:    inline-block;
+							font-style: italic;
+							visibility: visible;
+							font-size:  var(--typography--font-size);
+							max-width:  60ch;
 						}
-
-						// Hide the Chrome message.
-						> p { display: none }
 					}
 				}
 			}
 		}
 
 		> figcaption {
+			@extend %typography;
+
 			margin-top: var(--typography--between);
-
-			> p > a {
-				@extend %icon--link;
-
-				&:not(:only-child) { margin-left: calc(1ch - var(--link--enlargement)) }
-
-				&:not(._) {
-					border-right-width: var(--link--enlargement);
-
-					&:after {
-						margin-left:  initial;
-						margin-right: initial;
-					}
-				}
-			}
+			max-width:  60ch;
 		}
 
 		+ * {

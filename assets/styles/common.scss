@@ -532,6 +532,16 @@ body {
 		width:        var(--icon--width);
 	}
 
+	&:empty {
+		border-right-width: var(--link--enlargement);
+		width:              fit-content;
+
+		&:after {
+			margin-left:  initial;
+			margin-right: initial;
+		}
+	}
+
 	&[href^="/"]    { --icon: '→' } // Internal.
 	&[href^="http"] { --icon: '↗'; --icon--shift: 0.3rem } // External.
 	&[href^="#"]    { --icon: '↓' } // Anchor.
