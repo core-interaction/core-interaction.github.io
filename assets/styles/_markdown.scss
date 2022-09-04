@@ -12,7 +12,7 @@
 
 	h1 { display: none } // So we don’t forget.
 
-	p { max-width: 70ch }
+	p, hr { max-width: 70ch }
 
 	a {
 		@extend %link--text;
@@ -36,10 +36,8 @@
 
 	// Dividers.
 	hr {
-		height:  var(--typography--cap);
-		overflow:      hidden;
-
-		@include breakpoint(568) { grid-column: 1 / span 2 }
+		height:   var(--typography--cap);
+		overflow: hidden;
 
 		&:after {
 			content:       '--------------------------------------------------------------------------------';
