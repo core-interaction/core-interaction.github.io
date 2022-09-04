@@ -10,5 +10,5 @@ layout: page
 	<h2 id="{{ index.strings.video | slugify }}">{{ index.strings.video }}</h2>
 	{% assign preview = page.video | append: '/preview' %}
 	{% include figure.html src=preview caption=index.strings.sign-in %}
-	<p class="link-only" style="--margin--top: initial;"><a href="{{ page.video }}">{{ index.strings.video }}</a></p>
+	<p class="icon-link" style="--margin--top: initial;"><a href="{{ page.video }}">{{ index.strings.video }}</a></p>
 {% endif %}

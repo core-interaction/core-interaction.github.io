@@ -151,29 +151,30 @@ For final grading, these tasks will be weighted as below:
 
 ## Recommended readings
 
-* {: .link-only}[*Form+Code in Design, Art, and Architecture*](http://formandcode.com) \
-  Casey Reas, Chandler McWilliams, and LUST
+* [*Form+Code in Design, Art, and Architecture*](http://formandcode.com) \
+	Casey Reas, Chandler McWilliams, and LUST
 
-* {: .link-only}[*Geometry of Design*](https://archive.org/details/geometryofdesign0000elam/mode/2up) \
-  Kimberly Elam
+* [*Geometry of Design*](https://archive.org/details/geometryofdesign0000elam/mode/2up) \
+	Kimberly Elam
 
-* {: .link-only}[*Graphic Design Manual*](https://www.appliedaesthetics.org/art132b/06/hofmann.pdf) \
-  Armin Hofmann
+* [*Graphic Design Manual*](https://www.appliedaesthetics.org/art132b/06/hofmann.pdf) \
+	Armin Hofmann
 
-* {: .link-only}[*The Elements of Typographic Style*](https://readings.design/PDF/the_elements_of_typographic_style.pdf) \
-  Robert Bringhurst
+* [*The Elements of Typographic Style*](https://readings.design/PDF/the_elements_of_typographic_style.pdf) \
+	Robert Bringhurst
 
-* {: .link-only}[*The Shape of Design*](https://shapeofdesignbook.com) \
-  Frank Chimero
+* [*The Shape of Design*](https://shapeofdesignbook.com) \
+	Frank Chimero
 
-* {: .link-only}[*The User Experience Team of One*](https://archivos.tdmmdos.net.ar/bibliografia/EN-LB-TheUserExperienceTeamOfOne.pdf) \
-  Leah Buley
+* [*The User Experience Team of One*](https://archivos.tdmmdos.net.ar/bibliografia/EN-LB-TheUserExperienceTeamOfOne.pdf) \
+	Leah Buley
 
-* {: .link-only}[*Very Interactive Library*](https://veryinteractive.net/library/index.html) \
-  Compiled by Laurel Schwulst
+* [*Very Interactive Library*](https://veryinteractive.net/library/index.html) \
+	Compiled by Laurel Schwulst
 
-* {: .link-only}[*What Is Code?*](https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/) \
-  Paul Ford
+* [*What Is Code?*](https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/) \
+	Paul Ford
+{: .icon-link}
 
 
 
@@ -185,20 +186,21 @@ In class, I will demonstrate using [Visual Studio Code](https://code.visualstud
 
 We will use the following sites to organize and run our class:
 
-* {: .link-only}[Course site](https://core-interaction.github.io) \
-  For housekeeping, agendas, and lectures
+* [Course site](https://core-interaction.github.io) \
+	For housekeeping, agendas, and lectures
 
-* {: .link-only}[Slack channel](https://core-one-interaction.slack.com/archives/C03UTLMBMDH) \
-  For direct and asynchronous communication (*not* email)
+* [Slack channel](https://core-one-interaction.slack.com/archives/C03UTLMBMDH) \
+	For direct and asynchronous communication (*not* email)
 
-* {: .link-only}[GitHub team](https://github.com/core-interaction) \
-  For code examples, sharing
+* [GitHub team](https://github.com/core-interaction) \
+	For code examples, sharing
 
-* {: .link-only}[Google Drive](https://drive.google.com/drive/folders/1pPSCRnGN7Ym7ZFyBl5n_HvKvArrpo_B6?usp=sharing) \
-  For document collaboration, recorded lectures
+* [Google Drive](https://drive.google.com/drive/folders/1pPSCRnGN7Ym7ZFyBl5n_HvKvArrpo_B6?usp=sharing) \
+	For document collaboration, recorded lectures
 
-* {: .link-only}[Zoom room](https://NewSchool.zoom.us/j/99185050065) \
-  For screen sharing and recording
+* [Zoom room](https://NewSchool.zoom.us/j/99185050065) \
+	For screen sharing and recording
+{: .icon-link}
 
 
 

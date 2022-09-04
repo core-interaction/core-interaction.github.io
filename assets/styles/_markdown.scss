@@ -24,8 +24,10 @@
 	}
 
 	// Prominence for link-only paragraphs/li.
-	.link-only > a,
-	.link-only > p > a {
+	.icon-link > a,
+	.icon-link > p > a,
+	.icon-link > li > a,
+	.icon-link > li > p > a {
 		@extend %font--underline--disable;
 		@extend %icon--link;
 	}
