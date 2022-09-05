@@ -39,17 +39,15 @@
 
 	// Inline code blocks.
 	*:not(.highlight) > code {
-		// @extend %font--sf--mono--medium;
-
 		background-color: var(--color--alpha);
 		border-radius:    var(--border--radius);
 		color:            var(--color--code);
-		display:          inline-block;
-		font-weight:      var(--typography--weight);
-		margin-left:      -0.4ch;
-		margin-right:     -0.4ch;
-		padding-left:     0.4ch;
-		padding-right:    0.4ch;
+		font-style:       normal;
+		line-height:      1.2;
+		margin-left:      -0.2ch;
+		margin-right:     -0.2ch;
+		padding-left:     0.2ch;
+		padding-right:    0.2ch;
 		white-space:      pre;
 	}
 
