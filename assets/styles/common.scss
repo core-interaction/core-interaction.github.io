@@ -22,6 +22,8 @@
 
 	--typography--size: 1.6rem;
 
+	--typography--code: 0.888;
+
 	--margin: 2.4rem;
 
 	--page--width: 100vw;
@@ -32,13 +34,13 @@
 	--color--alpha: var(--color--tint);
 	--color--background: white;
 
-	--color--tint:          hsl(0, 0%, 0%, 6.666%);
+	--color--tint:          hsl(0, 0%, 0%, 5%);
 	--color--tint--reverse: hsl(0, 0%, 100%, 10%);
 
 	--color--links:          #e42a1d;
 	--color--links--reverse: white;
 
-	--color--code:  hsl(4, 79%, 50%, 75%);
+	--color--code:  #555;
 
 	--color--highlight:          hsl(0, 0%, 0%, 3.333%);
 	--color--highlight--reverse: hsl(0, 0%, 100%, 6.666%);
