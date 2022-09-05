@@ -46,7 +46,7 @@ HTML consists of a [range of elements](https://developer.mozilla.org/en-US/docs/
 *As a visual:*
 {: .two-above }
 
-![structure.png](structure.png)
+{% include figure.html src='structure.png' %}
 
 
 
@@ -123,7 +123,7 @@ We call these [*semantic* elements](https://www.w3schools.com/html/html5_semanti
 
 [Elements](https://developer.mozilla.org/en-US/docs/Glossary/Element) are composed of tags (opening, closing) and their content:
 
-![TI2B-S22_%20HTML%20Basics%20(3).png](TI2B-S22_20HTML20Basics20(3).png)
+{% include figure.html src='tag.png' %}
 
 Some elements do not have any content or children, like `<br>` or `<img>`. These are called [*empty elements*](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element) and do not have a closing tag.
 {: .four-below }
@@ -185,7 +185,7 @@ There are [many, many HTML elements](https://developer.mozilla.org/en-US/docs/We
 
 All HTML elements can have attributes, which provide more information about the element:
 
-![attr.png](attr.png)
+{% include figure.html src='attr.png' %}
 
 
 
@@ -285,7 +285,7 @@ But obviously, the first one is much more readable to us humans. We can use whit
 <p>And subsequent block items will stack underneath</p>
 ```
 
-![Screen Shot 2022-02-04 at 2.11.36 PM.png](Screen_Shot_2022-02-04_at_2.11.36_PM.png)
+{% include figure.html src='block.png' %}
 
 
 
@@ -310,7 +310,7 @@ But obviously, the first one is much more readable to us humans. We can use whit
 </p>
 ```
 
-![Screen Shot 2022-02-04 at 2.20.54 PM.png](Screen_Shot_2022-02-04_at_2.20.54_PM.png)
+{% include figure.html src='inline.png' %}
 
 
 
@@ -335,6 +335,8 @@ I highly recommend getting into a habit of commenting your code, especially when
 
 ### Tables
 
+These aren’t used as often anymore, in favor of `<div>` and other layout elements. You used to [have to use them](https://thehistoryoftheweb.com/tables-layout-absurd/) to get any kind of multi-column, grid layouts. But those need even more CSS!
+
 ```html
 <h1>A basic table</h1>
 <table>
@@ -358,9 +360,7 @@ I highly recommend getting into a habit of commenting your code, especially when
 <style>table, th, td { border:1px solid black; }</style>
 ```
 
-These aren’t used as often anymore, in favor of `<div>` and other layout elements. You used to [have to use them](https://thehistoryoftheweb.com/tables-layout-absurd/) to get any kind of multi-column, grid layouts. But those need even more CSS!
-
-![Screen Shot 2022-02-04 at 2.44.08 PM.png](Screen_Shot_2022-02-04_at_2.44.08_PM.png)
+{% include figure.html src='table.png' %}
 
 
 
@@ -384,7 +384,9 @@ Any time you have more than two of something, you probably have a list. These ar
 </ul>
 ```
 
-![Screen Shot 2022-02-04 at 2.43.45 PM.png](Screen_Shot_2022-02-04_at_2.43.45_PM.png)
+{% include figure.html src='lists.png' %}
+
+
 
 ### Description lists
 
@@ -399,7 +401,8 @@ Any time you have more than two of something, you probably have a list. These ar
 </dl>
 ```
 
-![These aren’t much to look at without CSS, though. Soon!](Screen_Shot_2022-02-04_at_2.48.21_PM.png)
+
+{% include figure.html src='desc.png' %}
 
 These aren’t much to look at without CSS, though. Soon!
 
@@ -417,7 +420,7 @@ There is even some basic interactivity (way, way ahead of JavaScript) with `<det
 </details>
 ```
 
-![Screen Shot 2022-02-04 at 2.52.07 PM.png](Screen_Shot_2022-02-04_at_2.52.07_PM.png)
+{% include figure.html src='detail.png' %}
 
 Again, there are [many, many, many, many HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element). Try and find the one that best fits your usage, wherever possible using one that matches your semantic use.
 
