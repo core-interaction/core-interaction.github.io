@@ -116,11 +116,12 @@
 		> li {
 			@extend %typography; // For paragraph-less lists.
 
-			display:    list-item;
-			margin-top: var(--typography--margin--top);
-			max-width:  60ch;
+			display:       list-item;
+			margin-bottom: var(--typography--margin--bottom);
+			margin-top:    var(--typography--margin--top);
+			max-width:     60ch;
 
-			&:before { display: none } // Collides with the marker, so we use the margin.
+			&:before, &:after { display: none } // Collides with the marker, so we use the margin.
 
 			> h3,
 			> h4,
@@ -147,23 +148,11 @@
 			> p ~ ol,
 			> div {
 				&:not(:first-child) { margin-top: var(--typography--leading-shoulder) }
-				&:not(:only-child):last-child { margin-bottom: calc(var(--typography--font-size) * var(--typography--leading)) }
+				&:last-child { margin-bottom: calc(var(--typography--font-size) * var(--typography--leading)) }
+				&:not(:only-child):last-child { margin-bottom: calc(2 * var(--typography--font-size) * var(--typography--leading)) }
 			}
 
-			&:not(:first-child) {
-				> h3,
-				> h4,
-				> p,
-				> h3 ~ ul,
-				> h4 ~ ul,
-				> p ~ ul,
-				> h3 ~ ol,
-				> h4 ~ ol,
-				> p ~ ol,
-				> div {
-					&:first-child { margin-top: calc(var(--typography--font-size) * var(--typography--leading)) }
-				}
-			}
+			&:last-child > *:last-child:not(._) { margin-bottom: initial }
 		}
 	}
 
@@ -197,15 +186,21 @@
 	}
 
 	ol {
-		// TODO This does not work with paragraph lists.
 		counter-reset: list;
 
-		> li:before {
-			content:           counter(list) ':';
-			counter-increment: list;
-			display:           inline-block;
-			visibility:        visible;
-			width:             4ch;
+		> li {
+			padding-left: 4ch;
+			position:     relative;
+
+			&:before {
+				content:           counter(list) ':';
+				counter-increment: list;
+				display:           block;
+				position:          absolute;
+				visibility:        visible;
+				left:              0;
+				top:               calc(var(--typography--margin--top) * -1);
+			}
 		}
 	}
 
