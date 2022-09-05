@@ -44,12 +44,14 @@ HTML consists of a [range of elements](https://developer.mozilla.org/en-US/docs/
 
 
 *As a visual:*
+{: .two-above }
 
 ![structure.png](structure.png)
 
 
 
 *As code:*
+{: .two-above }
 
 ```html
 <!DOCTYPE html>
@@ -108,7 +110,7 @@ We call these [*semantic* elements](https://www.w3schools.com/html/html5_semanti
 ![TI2B-S22_%20HTML%20Basics%20(3).png](TI2B-S22_20HTML20Basics20(3).png)
 
 Some elements do not have any content or children, like `<br>` or `<img>`. These are called [*empty elements*](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element) and do not have a closing tag.
-
+{: .four-below }
 
 
 ### `<h1>` `<h2>` `<h3>` `<h4>` `<h5>` `<h6>` for headings
@@ -129,10 +131,10 @@ Some elements do not have any content or children, like `<br>` or `<img>`. These
 
 ### `<a>` are links
 
-The `href` (*H*ypertext *REF*erence) specifies a URL that the link points to, and the tag wraps the visible link text. The `href` can point to another, local HTML file (living in the same directory structure) or an external page.
+The `href` (*H*ypertext *REF*erence) specifies a URL that the link points to, and the tag wraps the visible link text. The `href` can point to another, local HTML file (living in the same directory structure) or an external page. They can also point to specific parts of a page.
 
 ```html
-<a href="[https://www](https://www/).example.com">Links need attributes! I’ll explain.</a>
+<a href="https://www.example.com">Links need attributes! I’ll explain.</a>
 ```
 
 
