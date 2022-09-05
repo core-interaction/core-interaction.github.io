@@ -98,7 +98,7 @@ We call these [*semantic* elements](https://www.w3schools.com/html/html5_semanti
 
     - `<p>` \
       Defines a paragraph.
-{: .left }
+{: .left .two-above }
 
 ```html
 <!DOCTYPE html>
@@ -130,82 +130,80 @@ We use semantic elements to help structure and describe our content—but also f
 Some elements do not have any content or children, like `<br>` or `<img>`. These are called [*empty elements*](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element) and do not have a closing tag.
 {: .four-below }
 
+*Some common elements you’ll see:*
+{: .two-below }
 
-### `<h1>` `<h2>` `<h3>` `<h4>` `<h5>` `<h6>` for headings
+- `<h1>` `<h2>` `<h3>` `<h4>` `<h5>` `<h6>` for headings
 
-```html
-<h1>There should only be one first-level heading!</h1>
-```
+  ```html
+  <h1>There should only be one first-level heading!</h1>
+  ```
 
+- `<p>` for paragraphs
 
+  ```html
+  <p>You should always wrap your text in a paragraph!</p>
+  ```
 
-### `<p>` for paragraphs
+- `<a>` are links
 
-```html
-<p>You should always wrap your text in a paragraph!</p>
-```
+  The `href` (*H*ypertext *REF*erence) specifies a URL that the link points to, and the tag wraps the visible link text. The `href` can point to another, local HTML file (living in the same directory structure) or an external page. They can also point to specific parts of a page.
 
-
-
-### `<a>` are links
-
-The `href` (*H*ypertext *REF*erence) specifies a URL that the link points to, and the tag wraps the visible link text. The `href` can point to another, local HTML file (living in the same directory structure) or an external page. They can also point to specific parts of a page.
-
-```html
-<a href="https://www.example.com">Links need attributes! I’ll explain.</a>
-```
+  ```html
+  <a href="https://www.example.com">Links need attributes!</a>
+  ```
 
 
 
-### `<img>` are images
+- `<img>` are images
 
-The `src` likewise can point to a local image file or an external URL! `alt` provides a description for accessibility/screen readers.
+  The `src` likewise can point to a local image file or an external URL! `alt` provides a description for accessibility/screen readers.
 
-```html
-<img src="example.jpg" alt="Images should have descriptions!">
-```
-
-
-
-### `<header>` `<footer>` `<nav>` `<main>` `<article>` `<section>` `<div>` define areas
-
-These are the structural containers of a website. The names don’t imbue meaning or function directly, but help us organize and think about our content structure. (And again, are helpful for accessibilty.)
-
-```html
-<body>
-	<header>
-		<!-- A header. -->
-	</header>
-	<main>
-		<!-- Your main content. -->
-	</main>
-	<footer>
-		<!-- The footer. -->
-	</footer>
-</body>
-```
+  ```html
+  <img src="example.jpg" alt="Images should have descriptions!">
+  ```
 
 
 
-### `<span>` `<strong>` `<em>` wrap around bits of text
+- `<header>` `<footer>` `<nav>` `<main>` `<article>` `<section>` `<div>` define areas
 
-```html
-	<p>You may have noticed I like using <em>emphasis</em>.</p>
-```
+  These are the structural containers of a website. The names don’t imbue meaning or function directly, but help us organize and think about our content structure. (And again, are helpful for accessibility.)
+
+  ```html
+  <body>
+	  <header>
+		  <!-- A header. -->
+	  </header>
+	  <main>
+		  <!-- Your main content. -->
+	  </main>
+	  <footer>
+		  <!-- The footer. -->
+	  </footer>
+  </body>
+  ```
 
 
 
-### `ol` `ul`, and `li` build lists
+- `<span>` `<strong>` `<em>` wrap around bits of text
 
-```html
-<ul>
-	<li><!-- A list item. --></li>
-	<li><!-- Another. --></li>
-	<li><!-- A third. --></li>
-</ul>
-```
+  ```html
+  <p>You may have noticed I like using <em>emphasis</em>.</p>
+  ```
 
-There are [many, many HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element), all with particular uses. We’ll unpack some more, below.
+
+
+- `ol` `ul`, and `li` build lists
+
+  ```html
+  <ul>
+	  <li><!-- A list item. --></li>
+	  <li><!-- Another. --></li>
+	  <li><!-- A third. --></li>
+  </ul>
+  ```
+
+There are [many, many HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element), all with particular uses. (We’ll unpack some more, below.)
 
 
 
@@ -220,25 +218,67 @@ All HTML elements can have [attributes](https://developer.mozilla.org/en-US/docs
 
 
 *Some common attributes:*
-{: .two-above }
+{: .two-below }
 
 - The `lang` attribute of the `<html>` tag declares the language of the Web page.
 
+  ```html
+  <html lang="en">
+  ```
+
 - The `href` attribute of `<a>` specifies the URL of the page the link goes to.
+
+  ```html
+  <a href="https://www.example.com">Goes to example.com</a>
+  ```
 
 - The `target` attribute `_blank` can tell a `<a>` to open in a new window/tab.
 
+  ```html
+  <a href="https://www.example.com" target="_blank">New tab!</a>
+  ```
+
+  *This can be annoying, so use it judiciously!*
+
 - The `style` attribute is used to add styles to an element, such as color, font, size, etc.
 
-- The `src` attribute of `<img>` specifies the path to the image to be displayed.
+  ```html
+  <p style="color: blue;">This is blue text.</p>
+  ```
 
-- The `width` and `height` attributes of `<img>` provide size information for images.
+  *We’ll use CSS for this kind of thing, but know this is how it used to be done and it was brittle and terrible.*
 
-- The `alt` attribute of `<img>` provides an alternate text for an image.
+- The `src` attribute of `<img>` specifies the path to the image to be displayed, as above.
 
-- The `id` specifies a singular, unique element on a page, for CSS targeting and anchor (scroll, “jump”) links.
+  ```html
+  <img src="example.jpg">
+  ```
+
+- The `width` and `height` attributes of `<img>` provide size information for images. Not required, but helps prevent layout “sloshing” as images load.
+
+  ```html
+  <img src="example.jpg" width="200px" height="200px">
+  ```
+
+- The `alt` attribute of `<img>` provides an alternate text for an image, used by screen readers.
+
+  ```html
+  <img src="example.jpg" alt="A description of the image.">
+  ```
+
+- The `id` specifies a singular, unique element on a page—for CSS targeting and anchor (scroll, “jump”) links, prepended with `#`.
+
+  ```html
+  <h2 id="a-heading-element">A heading element</h2>
+
+  <a href="#a-heading">Goes to “a heading element”</a>
+  ```
 
 - The `class` attribute provides a selector took hook on with CSS.
+
+  ```html
+  <p class="warning">We’ll get into this soon.</p>
+  ```
 
 
 
@@ -350,12 +390,15 @@ But obviously, the first one is much more readable to us humans. We can use whit
 
 
 ### Comments
+{: .four-above }
 
 You can *comment* part of the code and the browser won’t show it. Comments are often used to explain your thinking, organize your code, “turn off” a bit of code, or hide whatever you’d like.
 
 ```html
 <p>Sometimes you want to note something while coding.</p>
+
 <!-- This text will not be shown in the browser! -->
+
 <p>You can write these notes in comments.</p>
 ```
 
@@ -364,6 +407,7 @@ I highly recommend getting into a habit of commenting your code, especially when
 
 
 ### Tables
+{: .four-above }
 
 These aren’t used as often anymore, in favor of `<div>` and other layout elements. You used to [have to use them](https://thehistoryoftheweb.com/tables-layout-absurd/) to get any kind of multi-column, grid layouts. But those need even more CSS!
 
@@ -395,6 +439,7 @@ These aren’t used as often anymore, in favor of `<div>` and other layout eleme
 
 
 ### Lists
+{: .four-above }
 
 Any time you have more than two of something, you probably have a list. These are commonly used for semantic navigation elements, as well, think *“here’s a list of links in this site*.
 
@@ -419,6 +464,7 @@ Any time you have more than two of something, you probably have a list. These ar
 
 
 ### Description lists
+{: .four-above }
 
 ```html
 <h1>Description lists are underrated!</h1>
@@ -439,6 +485,7 @@ These aren’t much to look at without CSS, though. Soon!
 
 
 ### Details
+{: .four-above }
 
 There is even some basic interactivity (way, way ahead of JavaScript) with `<details>` and `<summary>` blocks, which open and close.
 
