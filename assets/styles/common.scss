@@ -38,6 +38,8 @@
 	--color--links:          #e42a1d;
 	--color--links--reverse: white;
 
+	--color--code:  hsl(4, 79%, 50%, 75%);
+
 	--color--highlight:          hsl(0, 0%, 0%, 3.333%);
 	--color--highlight--reverse: hsl(0, 0%, 100%, 6.666%);
 
@@ -125,7 +127,7 @@ body {
 	h3,
 	h4 {
 		scroll-margin-top: var(--margin--vertical--4);
-		max-width: 40ch;
+		max-width: 50ch;
 	}
 
 	&.index h1 { max-width: 12ch }

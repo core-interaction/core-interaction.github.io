@@ -37,6 +37,24 @@
 
 
 
+	// Inline code blocks.
+	*:not(.highlight) > code {
+		// @extend %font--sf--mono--medium;
+
+		background-color: var(--color--alpha);
+		border-radius:    var(--border--radius);
+		color:            var(--color--code);
+		display:          inline-block;
+		font-weight:      var(--typography--weight);
+		margin-left:      -0.4ch;
+		margin-right:     -0.4ch;
+		padding-left:     0.4ch;
+		padding-right:    0.4ch;
+		white-space:      pre;
+	}
+
+
+
 	// Dividers.
 	hr {
 		height:   var(--typography--cap);
@@ -167,11 +185,11 @@
 		&.callout {
 			--padding: 2ch;
 
-			background:    var(--color--alpha);
-			border-radius: var(--border--radius);
-			font-style:    normal;
-			padding:       var(--padding);
-			position:      relative;
+			background-color: var(--color--alpha);
+			border-radius:    var(--border--radius);
+			font-style:       normal;
+			padding:          var(--padding);
+			position:         relative;
 
 			&[icon] {
 				padding-left: calc(2 * var(--padding) + 2ch);
@@ -360,7 +378,6 @@
 			max-width:   100%;
 			overflow:    hidden;
 			position:    absolute;
-			top:         1em;
 			visibility:  visible; // Override typography.
 			white-space: nowrap;
 		}
