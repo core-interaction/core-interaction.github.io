@@ -743,6 +743,7 @@ body > main > footer > div > section:first-child > a {
 	--color--tint--reverse: hsl(0, 0%, 100%, 10%);
 	--color--links: #e42a1d;
 	--color--links--reverse: white;
+	--color--code: hsl(4, 79%, 50%, 75%);
 	--color--highlight: hsl(0, 0%, 0%, 3.333%);
 	--color--highlight--reverse: hsl(0, 0%, 100%, 6.666%);
 	--color--transition: 200ms;
@@ -825,7 +826,7 @@ body h2,
 body h3,
 body h4 {
 	scroll-margin-top: var(--margin--vertical--4);
-	max-width: 40ch;
+	max-width: 50ch;
 }
 
 body.index h1 {
@@ -1057,6 +1058,19 @@ body > main > article cite {
 	white-space: nowrap;
 }
 
+body > main > article *:not(.highlight) > code {
+	background-color: var(--color--alpha);
+	border-radius: var(--border--radius);
+	color: var(--color--code);
+	display: inline-block;
+	font-weight: var(--typography--weight);
+	margin-left: -0.4ch;
+	margin-right: -0.4ch;
+	padding-left: 0.4ch;
+	padding-right: 0.4ch;
+	white-space: pre;
+}
+
 body > main > article hr {
 	height: var(--typography--cap);
 	overflow: hidden;
@@ -1224,7 +1238,7 @@ body > main > article blockquote > *:not(:first-child) {
 
 body > main > article blockquote.callout {
 	--padding: 2ch;
-	background: var(--color--alpha);
+	background-color: var(--color--alpha);
 	border-radius: var(--border--radius);
 	font-style: normal;
 	padding: var(--padding);
@@ -1411,7 +1425,6 @@ body > main > article h2:after {
 	max-width: 100%;
 	overflow: hidden;
 	position: absolute;
-	top: 1em;
 	visibility: visible;
 	white-space: nowrap;
 }
