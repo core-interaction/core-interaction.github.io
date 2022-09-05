@@ -188,9 +188,9 @@ All HTML elements can have attributes, which provide more information about the 
 
 - The `alt` attribute of `<img>` provides an alternate text for an image.
 
-- The `id` specifies a singular element on a page, for CSS and anchor links.
+- The `id` specifies a singular, unique element on a page, for CSS targeting and anchor (scroll, “jump”) links.
 
-- The `class` attribute provides a selector took hook on with CSS.
+- The `class` attribute provides a selector took hook on with CSS.
 
 
 
@@ -198,7 +198,7 @@ All HTML elements can have attributes, which provide more information about the 
 
 
 
-HTML doesn’t care about capitalization, extra white space, or line breaks. The browser will just read everything from left to right, as if it is one long, running sentence. `<!DOCTYPE HTML>` and `<!doctype html>` are interpreted the same.
+HTML doesn’t care about capitalization, extra white space, or line breaks. The browser will just read everything from left to right, as if it is one long, running sentence. So the shouty `<!DOCTYPE HTML>` and quieter `<!doctype html>` are interpreted the same.
 
 The browser parses both of these in the exact same way:
 
@@ -220,7 +220,7 @@ dog breeds</p><ul><li>German Shepherd</li>
 <li>Bulldog</li><li>Poodle</li></ul></body>
 ```
 
-But obviously, the first one is much more readable to us humans. We can use whitespace, tabs/indenting, and line breaks to make it easier for us to read the code. There are a lot of common patterns used—like indenting to indicate hierarchy/nesting. But there are also no wrong ways to do it! In HTML, spaces are *code ergonomics* for you.
+But obviously, the first one is much more readable to us humans. We can use whitespace, tabs/indenting, and line breaks to make it easier for us to read the code. There are a lot of common patterns used—like indenting to indicate hierarchy/nesting. But there are also no wrong ways to do it! In HTML, spaces are code *ergonomics* for you—just like a good chair or desk, that allow you to work more comfortably.
 
 
 
