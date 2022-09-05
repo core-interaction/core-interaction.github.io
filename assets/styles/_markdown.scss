@@ -72,6 +72,8 @@
 		}
 	}
 
+	li pre { padding: 1ch } // Tighter in lists.
+
 	div[class*="highlighter"] {
 		--margin--top: var(--margin--vertical--2);
 
@@ -122,10 +124,14 @@
 
 			> h3,
 			> h4,
-			> p {
+			> p,
+			> div {
 				--padding-left: 1ch;
 
 				padding-left: var(--padding-left); // More space for paragraph lists.
+
+				&:first-child:before,
+				&:last-child:after { display: none }; // Since the `li` is a type element.
 
 				~ * { --padding-left: 1ch } // For nested lists, below.
 			}
@@ -138,10 +144,8 @@
 			> p ~ ul,
 			> h3 ~ ol,
 			> h4 ~ ol,
-			> p ~ ol {
-				&:first-child:before,
-				&:last-child:after { display: none }; // Since the `li` is a type element.
-
+			> p ~ ol,
+			> div {
 				&:not(:first-child) { margin-top: var(--typography--leading-shoulder) }
 				&:not(:only-child):last-child { margin-bottom: calc(var(--typography--font-size) * var(--typography--leading)) }
 			}
@@ -155,7 +159,8 @@
 				> p ~ ul,
 				> h3 ~ ol,
 				> h4 ~ ol,
-				> p ~ ol {
+				> p ~ ol,
+				> div {
 					&:first-child { margin-top: calc(var(--typography--font-size) * var(--typography--leading)) }
 				}
 			}
