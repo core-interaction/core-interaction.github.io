@@ -46,7 +46,7 @@ HTML consists of a [range of elements](https://developer.mozilla.org/en-US/docs/
 *As a visual:*
 {: .two-above }
 
-{% include figure.html src='structure.png' %}
+{% include figure.html src='nesting.svg' %}
 
 
 
@@ -77,7 +77,7 @@ We call these [*semantic* elements](https://www.w3schools.com/html/html5_semanti
 {: .four-above }
 
 - `<!DOCTYPE html>` \
-  What kind of file this is, so it knows how to parse.
+  What kind of file this is, so it knows how to parse it.
 
   - `<html>` \
     The root element of an HTML page, containing all the content.
@@ -115,6 +115,8 @@ We call these [*semantic* elements](https://www.w3schools.com/html/html5_semanti
 ```
 {: .right }
 
+We use semantic elements to help structure and describe our content—but also for accessibility (screen readers)—where the tag type helps indicate what things are.
+
 
 
 ## What are elements?
@@ -123,7 +125,7 @@ We call these [*semantic* elements](https://www.w3schools.com/html/html5_semanti
 
 [Elements](https://developer.mozilla.org/en-US/docs/Glossary/Element) are composed of tags (opening, closing) and their content:
 
-{% include figure.html src='tag.png' %}
+{% include figure.html src='tag.svg' %}
 
 Some elements do not have any content or children, like `<br>` or `<img>`. These are called [*empty elements*](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element) and do not have a closing tag.
 {: .four-below }
@@ -167,13 +169,41 @@ The `src` likewise can point to a local image file or an external URL! `alt` pro
 
 ### `<header>` `<footer>` `<nav>` `<main>` `<article>` `<section>` `<div>` define areas
 
-These are the structural containers of a website. The names don’t imbue meaning or function directly, but help us organize and think about our content structure.
+These are the structural containers of a website. The names don’t imbue meaning or function directly, but help us organize and think about our content structure. (And again, are helpful for accessibilty.)
+
+```html
+<body>
+	<header>
+		<!-- A header. -->
+	</header>
+	<main>
+		<!-- Your main content. -->
+	</main>
+	<footer>
+		<!-- The footer. -->
+	</footer>
+</body>
+```
 
 
 
 ### `<span>` `<strong>` `<em>` wrap around bits of text
 
+```html
+	<p>You may have noticed I like using <em>emphasis</em>.</p>
+```
+
+
+
 ### `ol` `ul`, and `li` build lists
+
+```html
+<ul>
+	<li><!-- A list item. --></li>
+	<li><!-- Another. --></li>
+	<li><!-- A third. --></li>
+</ul>
+```
 
 There are [many, many HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element), all with particular uses. We’ll unpack some more, below.
 
@@ -183,9 +213,9 @@ There are [many, many HTML elements](https://developer.mozilla.org/en-US/docs/We
 
 
 
-All HTML elements can have attributes, which provide more information about the element:
+All HTML elements can have [attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes), which provide more information about the element:
 
-{% include figure.html src='attr.png' %}
+{% include figure.html src='attr.svg' %}
 
 
 
@@ -422,31 +452,10 @@ There is even some basic interactivity (way, way ahead of JavaScript) with `<det
 
 {% include figure.html src='detail.png' %}
 
-Again, there are [many, many, many, many HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element). Try and find the one that best fits your usage, wherever possible using one that matches your semantic use.
+Again, there are [many, many, many, many HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element). Try and find the one that best fits your usage, wherever possible using a *semantic* element that fits your content.
 
 
 
-## …and favicons
+## *User-agent* styles
 
-This isn’t… strictly HTML, but we’ll talk about them now—these are the little icons you see in browsers tabs. No page is complete without them!
-
-You can use any image you like as your favicon, and they are generally rendered on tabs at 16×16 points. (So you need a 32×32 pixel image, for most recent Macs with [retina/@2x screens](https://www.danrodney.com/blog/retina-web-graphics-explained-1x-versus-2x-low-res-versus-hi-res/).)
-
-To add a favicon to your page, you can either save a `favicon.ico` to the *root* (base) directory of your site—or specify the icon explicitly in your page, with a `<link>` element to your `<head>`:
-
-```html
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Page title</title>
-		<link href="favicon.png" rel="icon">
-	</head>
-	<body>
-		<h1>This is a heading</h1>
-		<p>This is a paragraph.</p>
-		<p>This is another paragraph.</p>
-	</body>
-</html>
-```
-
-When you add them in this way, you can use common image formats like `.png` or `.svg`.
+We haven’t applied any styles/CSS here yet, so everything we see in these examples is based on [*user-agent* stylesheets](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade#user-agent_stylesheets)—that is, each browser’s own default display (and behavior) for an element type. This is what the web was, before CSS! But as a designer, rarely what you want. We’ll get into writing our own styles in the coming weeks.
