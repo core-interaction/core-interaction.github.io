@@ -1,0 +1,262 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
+
+
+
+
+
+
+
+
+		<title>Week 2</title>
+		<link href="/assets/styles/common.css" rel="stylesheet">
+		<link href="/assets/styles/syntax.css" rel="stylesheet">
+		<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
+		<link href="/assets/icons/touch.png" rel="apple-touch-icon">
+		<script src="/assets/scripts/common.js"></script>
+		<meta name="theme-color" content="#e42a1d">
+	</head>
+	<body class="week">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<nav>
+			<div>
+				<section>
+					<a href="/">
+						<p>C1:I</p>
+					</a>
+					<p>
+						<strong>Week 2, September 7</strong>
+						<select onchange="
+					this.parentElement.querySelector('strong').innerHTML = this.querySelector(`[value='${this.value}']`).text;
+					document.activeElement.blur();
+					window.open(this.value,'_self');
+					">
+
+
+							<optgroup label="Sessions">
+
+
+
+								<option value="/week/1/">Week 1, August 30</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option selected disabled>Week 2, September 7</option>
+
+
+							</optgroup>
+
+
+
+							<optgroup label="Topics">
+
+
+
+								<option value="/topic/everything/">Everything is a web page</option>
+
+
+
+
+								<option value="/topic/html/">An intro to HTML</option>
+
+
+							</optgroup>
+
+
+
+							<optgroup label="Project">
+
+
+
+								<option value="/project/harmonic/">Harmonic Collection</option>
+
+
+							</optgroup>
+
+
+						</select>
+					</p>
+				</section>
+				<section>
+
+					<p>
+						<a class="last" href="/week/1/">Last week</a>
+					</p>
+
+					<p><a href="#">Top</a></p>
+				</section>
+			</div>
+		</nav>
+
+
+
+
+
+
+
+
+
+		<main>
+
+			<header>
+				<h1>Week 2</h1>
+
+				<p>September 7</p>
+
+				<ul>
+					<li><a href="#reading-discussion">Reading discussion</a></li>
+					<li><a href="#and-now-html">And now, HTML</a></li>
+					<li><a href="#lets-write-some-code">Let’s write some code!</a></li>
+					<li><a href="#for-next-week">For next week</a></li>
+				</ul>
+			</header>
+
+			<article>
+				<h2 id="reading-discussion">Reading discussion</h2>
+
+				<p>Let’s talk through our reading:</p>
+
+				<p class="icon-link"><a href="https://docs.google.com/document/d/1SMSnFKFUPO5IZlXlm7SHmbJeJ75xGvDDJeNT7CmBz9I/edit"><em>What Is Code?</em> responses</a></p>
+
+				<h2 id="and-now-html">And now, HTML</h2>
+
+				<p class="icon-link"><a href="/topic/html">An intro to HTML</a></p>
+
+				<blockquote class="callout" icon="⏰">
+					<p>We’ll break somewhere in here, possibly midway through my HTML spiel.</p>
+				</blockquote>
+
+				<h2 id="lets-write-some-code">Let’s write some code!</h2>
+
+				<p>We’re going to dive right in and make our first web pages, no big deal! We’ll do this all together.</p>
+
+				<ul>
+					<li>
+						<p>You’ll need to download <a href="https://code.visualstudio.com">Visual Studio Code</a>, which we’ll use as our text editor for the course.</p>
+
+						<p>You’ll also probably hear me refer to this as an <a href="https://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a>, for <em>Integrated Development Environment</em>. Think of this as a fancy text editor with coding-specific features, like syntax highlighting and tabs. There are many of them! <em>VS Code</em> is probably the most popular, right now.</p>
+					</li>
+					<li>
+						<p>Also download <a href="https://desktop.github.com">GitHub Desktop</a>, which we’ll use to manage our code. Sign in there with your GitHub account (which you should have already created).</p>
+
+						<p><a href="https://git-scm.com">Git</a> is version control software, which tracks changes and helps developers work together. <a href="https://github.com">Git<em>Hub</em></a> is a widely-used, web-based host for Git projects—known as <em>repositories</em>. You can do this all via the command line (and even right from VS Code), but I think we’ll use their <em>Desktop</em> app for now.</p>
+					</li>
+					<li>
+						<p><a href="https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/creating-your-first-repository-using-github-desktop">Create a repository</a> for your <em>Harmonic Collection</em> entries. Think of this as your project folder—you will use one <em>repo</em> for the entire semester. For consistency, let’s name them all <code class="language-plaintext highlighter-rouge">harmonic-collection</code>.</p>
+					</li>
+					<li>
+						<p>In <em>VS Code</em>, make an <code class="language-plaintext highlighter-rouge">entry-1.html</code> file in the directory of the repository. You can start with this HTML:</p>
+
+						<div class="language-html highlighter-rouge">
+							<div class="highlight">
+								<pre class="highlight"><code>  <span class="cp">&lt;!doctype html&gt;</span>
+  <span class="nt">&lt;html&gt;</span>
+      <span class="nt">&lt;head&gt;</span>
+          <span class="nt">&lt;title&gt;</span>Hello, world!<span class="nt">&lt;/title&gt;</span>
+      <span class="nt">&lt;/head&gt;</span>
+      <span class="nt">&lt;body&gt;</span>
+          <span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span>
+          <span class="nt">&lt;p&gt;</span>This is my first web page.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/body&gt;</span>
+  <span class="nt">&lt;/html&gt;</span>
+</code></pre>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p>Then <a href="https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/committing-and-reviewing-changes-to-your-project"><em>commit</em></a> this file and <a href="https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/pushing-changes-to-github"><em>push</em></a> your changes up to GitHub. Think of Git’s <em>commits</em> as tracked, commented, and reversible <em>saves</em>.</p>
+					</li>
+					<li>
+						<p>Go to your repository on <a href="https://github.com">GitHub</a> (the site) and then enable <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">Pages</a>, if it isn’t already. (I think it might default <em>on</em>.)</p>
+					</li>
+					<li>
+						<p>You should be able to see your page, live, <em>on the web</em> at <code class="language-plaintext highlighter-rouge">https://username.github.io/harmonic-collection/entry-1</code>!</p>
+					</li>
+				</ul>
+
+				<hr />
+
+				<h2 id="for-next-week">For next week</h2>
+
+				<ul>
+					<li>
+						<p>Complete the first entry for your <a href="/project/harmonic"><em>Harmonic Collection</em></a> projects.</p>
+
+						<p>This should make (thorough) use of the basic HTML we went through today. I’m looking for you to explore, start unpacking your theme, and get your feet wet—so beyond what we did together in-class.</p>
+					</li>
+					<li>
+						<p>When you are done, add a link to your entry into our tracking document:</p>
+
+						<p class="icon-link"><a href="https://docs.google.com/spreadsheets/d/1vXYVnicRUHnczxPCSaqsmmflynnwP22zhES5jFMPKpw/"><em>Harmonic Collection</em> entries</a></p>
+					</li>
+				</ul>
+
+				<blockquote class="callout two-above" icon="👆">
+					<p>These should always be done <em>before the start</em> of the next class. Any links added after we begin each session will be considered late, and <a href="https://docs.google.com/document/d/1u358io8doX_SVVMGqIM_oH5V0OIccneYu4Ww-uE55QM/edit#heading=h.64moyiwmpq3g">we don’t accept</a> late work.</p>
+				</blockquote>
+
+
+
+
+
+			</article>
+
+			<footer>
+				<div>
+					<section>
+						<a href="/">
+							<p>Core 1: Interaction, Fall 2022</p>
+						</a>
+					</section>
+					<section>
+						<p><a href="#">Top</a></p>
+					</section>
+				</div>
+			</footer>
+
+		</main>
+
+	</body>
+</html>
