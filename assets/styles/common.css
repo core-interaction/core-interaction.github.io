@@ -1137,12 +1137,15 @@ body > main > article ol {
 body > main > article ul > li,
 body > main > article ol > li {
 	display: list-item;
+	margin-bottom: var(--typography--margin--bottom);
 	margin-top: var(--typography--margin--top);
 	max-width: 60ch;
 }
 
 body > main > article ul > li:before,
-body > main > article ol > li:before {
+body > main > article ul > li:after,
+body > main > article ol > li:before,
+body > main > article ol > li:after {
 	display: none;
 }
 
@@ -1211,6 +1214,29 @@ body > main > article ol > li > div:not(:first-child) {
 	margin-top: var(--typography--leading-shoulder);
 }
 
+body > main > article ul > li > h3:last-child,
+body > main > article ul > li > h4:last-child,
+body > main > article ul > li > p:last-child,
+body > main > article ul > li > h3 ~ ul:last-child,
+body > main > article ul > li > h4 ~ ul:last-child,
+body > main > article ul > li > p ~ ul:last-child,
+body > main > article ul > li > h3 ~ ol:last-child,
+body > main > article ul > li > h4 ~ ol:last-child,
+body > main > article ul > li > p ~ ol:last-child,
+body > main > article ul > li > div:last-child,
+body > main > article ol > li > h3:last-child,
+body > main > article ol > li > h4:last-child,
+body > main > article ol > li > p:last-child,
+body > main > article ol > li > h3 ~ ul:last-child,
+body > main > article ol > li > h4 ~ ul:last-child,
+body > main > article ol > li > p ~ ul:last-child,
+body > main > article ol > li > h3 ~ ol:last-child,
+body > main > article ol > li > h4 ~ ol:last-child,
+body > main > article ol > li > p ~ ol:last-child,
+body > main > article ol > li > div:last-child {
+	margin-bottom: calc(var(--typography--font-size) * var(--typography--leading));
+}
+
 body > main > article ul > li > h3:not(:only-child):last-child,
 body > main > article ul > li > h4:not(:only-child):last-child,
 body > main > article ul > li > p:not(:only-child):last-child,
@@ -1231,30 +1257,12 @@ body > main > article ol > li > h3 ~ ol:not(:only-child):last-child,
 body > main > article ol > li > h4 ~ ol:not(:only-child):last-child,
 body > main > article ol > li > p ~ ol:not(:only-child):last-child,
 body > main > article ol > li > div:not(:only-child):last-child {
-	margin-bottom: calc(var(--typography--font-size) * var(--typography--leading));
+	margin-bottom: calc(2 * var(--typography--font-size) * var(--typography--leading));
 }
 
-body > main > article ul > li:not(:first-child) > h3:first-child,
-body > main > article ul > li:not(:first-child) > h4:first-child,
-body > main > article ul > li:not(:first-child) > p:first-child,
-body > main > article ul > li:not(:first-child) > h3 ~ ul:first-child,
-body > main > article ul > li:not(:first-child) > h4 ~ ul:first-child,
-body > main > article ul > li:not(:first-child) > p ~ ul:first-child,
-body > main > article ul > li:not(:first-child) > h3 ~ ol:first-child,
-body > main > article ul > li:not(:first-child) > h4 ~ ol:first-child,
-body > main > article ul > li:not(:first-child) > p ~ ol:first-child,
-body > main > article ul > li:not(:first-child) > div:first-child,
-body > main > article ol > li:not(:first-child) > h3:first-child,
-body > main > article ol > li:not(:first-child) > h4:first-child,
-body > main > article ol > li:not(:first-child) > p:first-child,
-body > main > article ol > li:not(:first-child) > h3 ~ ul:first-child,
-body > main > article ol > li:not(:first-child) > h4 ~ ul:first-child,
-body > main > article ol > li:not(:first-child) > p ~ ul:first-child,
-body > main > article ol > li:not(:first-child) > h3 ~ ol:first-child,
-body > main > article ol > li:not(:first-child) > h4 ~ ol:first-child,
-body > main > article ol > li:not(:first-child) > p ~ ol:first-child,
-body > main > article ol > li:not(:first-child) > div:first-child {
-	margin-top: calc(var(--typography--font-size) * var(--typography--leading));
+body > main > article ul > li:last-child > *:last-child:not(._),
+body > main > article ol > li:last-child > *:last-child:not(._) {
+	margin-bottom: initial;
 }
 
 body > main > article ul {
@@ -1299,12 +1307,19 @@ body > main > article ol {
 	counter-reset: list;
 }
 
+body > main > article ol > li {
+	padding-left: 4ch;
+	position: relative;
+}
+
 body > main > article ol > li:before {
 	content: counter(list) ":";
 	counter-increment: list;
-	display: inline-block;
+	display: block;
+	position: absolute;
 	visibility: visible;
-	width: 4ch;
+	left: 0;
+	top: calc(var(--typography--margin--top) * -1);
 }
 
 body > main > article table {
