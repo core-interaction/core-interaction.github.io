@@ -82,6 +82,7 @@ nobr,
 }
 
 body > main > header > ul > li,
+body > main > article pre code,
 body > main > article ul > li,
 body > main > article ol > li,
 body > main > article figure > figcaption,
@@ -109,6 +110,7 @@ body > main > article ul,
 body > main > article ol,
 body.index > main > nav aside > menu,
 body > main > header > ul > li,
+body > main > article pre code,
 body > main > article ul > li,
 body > main > article ol > li,
 body > main > article figure > figcaption,
@@ -132,6 +134,7 @@ td {
 }
 
 body > main > header > ul > li,
+body > main > article pre code,
 body > main > article ul > li,
 body > main > article ol > li,
 body > main > article figure > figcaption,
@@ -159,6 +162,7 @@ td {
 @supports (display: flow-root) {
 
 	body > main > header > ul > li,
+	body > main > article pre code,
 	body > main > article ul > li,
 	body > main > article ol > li,
 	body > main > article figure > figcaption,
@@ -176,11 +180,13 @@ td {
 }
 
 body > main > header > ul > li:before,
+body > main > article pre code:before,
 body > main > article ul > li:before,
 body > main > article ol > li:before,
 body > main > article figure > figcaption:before,
 body.index > main > nav aside > menu > li:before,
 body > main > header > ul > li:after,
+body > main > article pre code:after,
 body > main > article ul > li:after,
 body > main > article ol > li:after,
 body > main > article figure > figcaption:after,
@@ -207,6 +213,7 @@ td:after {
 }
 
 body > main > header > ul > li:before,
+body > main > article pre code:before,
 body > main > article ul > li:before,
 body > main > article ol > li:before,
 body > main > article figure > figcaption:before,
@@ -223,6 +230,7 @@ td:before {
 }
 
 body > main > header > ul > li:after,
+body > main > article pre code:after,
 body > main > article ul > li:after,
 body > main > article ol > li:after,
 body > main > article figure > figcaption:after,
@@ -733,17 +741,18 @@ body > main > footer > div > section:first-child > a {
 	--typography--leading--loose: 2;
 	--typography--leading--base: var(--typography--leading);
 	--typography--size: 1.6rem;
+	--typography--code: 0.888;
 	--margin: 2.4rem;
 	--page--width: 100vw;
 	--border--radius: 0.4rem;
 	--color: black;
 	--color--alpha: var(--color--tint);
 	--color--background: white;
-	--color--tint: hsl(0, 0%, 0%, 6.666%);
+	--color--tint: hsl(0, 0%, 0%, 5%);
 	--color--tint--reverse: hsl(0, 0%, 100%, 10%);
 	--color--links: #e42a1d;
 	--color--links--reverse: white;
-	--color--code: hsl(4, 79%, 50%, 75%);
+	--color--code: #555;
 	--color--highlight: hsl(0, 0%, 0%, 3.333%);
 	--color--highlight--reverse: hsl(0, 0%, 100%, 6.666%);
 	--color--transition: 200ms;
@@ -1058,17 +1067,47 @@ body > main > article cite {
 	white-space: nowrap;
 }
 
+body > main > article code:not(._) {
+	--color: var(--color--code);
+	color: var(--color);
+	font-size: calc(var(--typography--size) * var(--typography--code));
+	font-style: normal;
+	white-space: pre;
+}
+
 body > main > article *:not(.highlight) > code {
 	background-color: var(--color--alpha);
 	border-radius: var(--border--radius);
-	color: var(--color--code);
-	font-style: normal;
-	line-height: 1.2;
-	margin-left: -0.2ch;
-	margin-right: -0.2ch;
-	padding-left: 0.2ch;
-	padding-right: 0.2ch;
-	white-space: pre;
+	letter-spacing: 0.08em;
+	line-height: var(--typography--leading);
+	margin-left: -0.25em;
+	margin-right: -0.25em;
+	padding: 0.1em 0.25em;
+}
+
+body > main > article pre {
+	background-color: var(--color--alpha);
+	border-radius: var(--border--radius);
+	overflow-x: scroll;
+	padding: 2ch;
+	tab-size: 2;
+}
+
+body > main > article pre code {
+	--typography--leading: 1.2;
+}
+
+body > main > article div[class*=highlighter] {
+	--margin--top: var(--margin--vertical--2);
+}
+
+body > main > article div[class*=highlighter] + * {
+	--margin--top: var(--margin--vertical--2);
+	--margin--top--previous: var(--margin--vertical--2);
+}
+
+body > main > article div[class*=highlighter] + * + * {
+	--margin--top--previous: var(--margin--vertical--2);
 }
 
 body > main > article hr {
