@@ -181,7 +181,11 @@
 
 			@include breakpoint(568) { --typography--leading: var(--typography--leading--base) }
 
-			> li { padding-left: initial }
+			> li {
+				padding-left: initial;
+
+				> * { padding-left: initial }
+			}
 		}
 
 		ul { // Nested.
