@@ -1282,6 +1282,10 @@ body > main > article ul.no-marker > li {
 	padding-left: initial;
 }
 
+body > main > article ul.no-marker > li > * {
+	padding-left: initial;
+}
+
 body > main > article ul ul {
 	list-style-type: "*";
 	margin-left: var(--padding-left);
