@@ -746,10 +746,10 @@ body > main > footer > div > section:first-child > a {
 	--page--width: 100vw;
 	--border--radius: 0.4rem;
 	--color: black;
-	--color--alpha: var(--color--tint);
 	--color--background: white;
-	--color--tint: hsl(0, 0%, 0%, 5%);
-	--color--tint--reverse: hsl(0, 0%, 100%, 10%);
+	--color--background--callout: var(--color--tint);
+	--color--tint: hsl(0, 0%, 95%);
+	--color--tint--reverse: hsl(4, 79%, 55%);
 	--color--links: #e42a1d;
 	--color--links--reverse: white;
 	--color--code: #555;
@@ -808,7 +808,7 @@ body > nav > div {
 body.class,
 body.index,
 body.scrolled > nav {
-	--color--alpha: var(--color--tint--reverse);
+	--color--background--callout: var(--color--tint--reverse);
 	--color--background--parent: var(--color--background);
 	--link--color: var(--color--links--reverse);
 	--link--highlight: var(--color--highlight--reverse);
@@ -1076,7 +1076,7 @@ body > main > article code:not(._) {
 }
 
 body > main > article *:not(.highlight) > code {
-	background-color: var(--color--alpha);
+	background-color: var(--color--background--callout);
 	border-radius: var(--border--radius);
 	letter-spacing: 0.08em;
 	line-height: var(--typography--leading);
@@ -1086,7 +1086,7 @@ body > main > article *:not(.highlight) > code {
 }
 
 body > main > article pre {
-	background-color: var(--color--alpha);
+	background-color: var(--color--background--callout);
 	border-radius: var(--border--radius);
 	overflow-x: scroll;
 	padding: 2ch;
@@ -1329,7 +1329,8 @@ body > main > article blockquote > *:not(:first-child) {
 
 body > main > article blockquote.callout {
 	--padding: 2ch;
-	background-color: var(--color--alpha);
+	--color--background: var(--color--background--callout);
+	background-color: var(--color--background);
 	border-radius: var(--border--radius);
 	font-style: normal;
 	padding: var(--padding);
@@ -1464,7 +1465,7 @@ body > main > article figure > img {
 
 body > main > article figure > iframe {
 	aspect-ratio: var(--aspect--ratio, 16/9);
-	background: var(--color--alpha);
+	background: var(--color--background--callout);
 	border-radius: var(--border--radius);
 	border: initial;
 	display: block;
