@@ -1321,27 +1321,6 @@ body > main > article table.row-header thead {
 
 body > main > article blockquote {
 	--margin--top: var(--margin--vertical--2);
-	font-style: italic;
-	padding-left: 3ch;
-	position: relative;
-}
-
-@media (min-width: 35.5em) {
-	body > main > article blockquote {
-		padding-left: 5ch;
-		padding-right: 5ch;
-	}
-}
-
-body > main > article blockquote:before {
-	content: "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | ";
-	font-style: normal;
-	left: 0;
-	max-height: calc(100% + var(--typography--between));
-	overflow: hidden;
-	position: absolute;
-	top: calc(var(--typography--margin--top) - 0.1em);
-	width: 1ch;
 }
 
 body > main > article blockquote > *:not(:first-child) {
@@ -1370,6 +1349,30 @@ body > main > article blockquote.callout[icon]:before {
 	top: var(--padding);
 	transform: scale(1.1);
 	width: 2ch;
+}
+
+body > main > article blockquote:not(.callout) {
+	font-style: italic;
+	padding-left: 3ch;
+	position: relative;
+}
+
+@media (min-width: 35.5em) {
+	body > main > article blockquote:not(.callout) {
+		padding-left: 5ch;
+		padding-right: 5ch;
+	}
+}
+
+body > main > article blockquote:not(.callout):before {
+	content: "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | ";
+	font-style: normal;
+	left: 0;
+	max-height: calc(100% + var(--typography--between));
+	overflow: hidden;
+	position: absolute;
+	top: calc(var(--typography--margin--top) - 0.1em);
+	width: 1ch;
 }
 
 body > main > article blockquote:not(.callout) + p {
