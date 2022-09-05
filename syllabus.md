@@ -105,6 +105,11 @@ Because a website lives in a larger network of apps, websites, devices, and c
 
 ### *Harmonic Collection*
 You’re going to pick a theme to explore visually for the duration of the semester. Each week, you’ll design and code an entry to a collection that explores this theme. At the end of the semester, you’ll deliver a website that houses 11 programmed entries. The website container is part of the design, as well.
+{: .left}
+
+[*Harmonic Collection*](/project/harmonic)
+{: .icon-link  .right }
+
 
 #### Project description
 

@@ -5,6 +5,10 @@ title: '*Harmonic Collection*'
 
 
 You’re going to pick a theme to explore visually for the duration of the semester. Each week, you’ll design and code an entry to a collection that explores this theme. At the end of the semester, you’ll deliver a website that houses 11 programmed entries. The website container is part of the design, as well.
+{: .left }
+
+[*Harmonic Collection* entries](https://docs.google.com/spreadsheets/d/1vXYVnicRUHnczxPCSaqsmmflynnwP22zhES5jFMPKpw/)
+{: .icon-link .right }
 
 
 
@@ -57,3 +61,11 @@ We’ll be adding to this collection over the course of the semester:
 {: list-prefix="Test" }
 
 And we will review your final, completed collections during our last class! I’m looking forward to it.
+
+> Please add your links to our tracking document, as we go along:
+>
+> [*Harmonic Collection* entries](https://docs.google.com/spreadsheets/d/1vXYVnicRUHnczxPCSaqsmmflynnwP22zhES5jFMPKpw/)
+> {: .icon-link }
+>
+> These should always be done *before the start* of class on their due date. Any links added after we begin that session will be considered late, and [we don’t accept](https://docs.google.com/document/d/1u358io8doX_SVVMGqIM_oH5V0OIccneYu4Ww-uE55QM/edit#heading=h.64moyiwmpq3g) late work.
+{: .callout .two-above icon='🔗' }
