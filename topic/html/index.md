@@ -72,30 +72,30 @@ We call these [*semantic* elements](https://www.w3schools.com/html/html5_semanti
 
 
 *From the example above, here is what we’ve told the browser:*
-{: .two-above }
+{: .four-above }
 
 - `<!DOCTYPE html>` \
   What kind of file this is, so it knows how to parse.
 
-- `<html>` \
-  The root element of an HTML page, containing all the content.
+  - `<html>` \
+    The root element of an HTML page, containing all the content.
 
-- `<head>` \
-  The *meta* information about the HTML page—like its title, default language, [scripts](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script), and [stylesheets](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style). \
-  \
-  *Nothing in this element is visible on the page itself.*
+  - `<head>` \
+    The *meta* information about the HTML page—like its title, default language, [scripts](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script), and [stylesheets](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style). \
+    \
+    *Nothing in this element is visible on the page itself.*
 
-- `<title>` \
-  Specifies a [title](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title) for the page—which is shown in the browser’s tab, and when it is shared.
+    - `<title>` \
+      Specifies a [title](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title) for the page—which is shown in the browser’s tab, and when it is shared.
 
-- `<body>` \
-  Defines the document's body—the container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
+  - `<body>` \
+    Defines the document's body—the container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
 
-- `<h1>` \
-  Defines a primary/first-level heading.
+    - `<h1>` \
+      Defines a primary/first-level heading.
 
-- `<p>` \
-  Defines a paragraph.
+    - `<p>` \
+      Defines a paragraph.
 
 
 

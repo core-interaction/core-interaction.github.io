@@ -90,8 +90,22 @@
 			> h3,
 			> h4,
 			> p {
-				padding-left: 1ch;
+				--padding-left: 1ch;
 
+				padding-left: var(--padding-left); // More space for paragraph lists.
+
+				~ * { --padding-left: 1ch } // For nested lists, below.
+			}
+
+			> h3,
+			> h4,
+			> p,
+			> h3 ~ ul,
+			> h4 ~ ul,
+			> p ~ ul,
+			> h3 ~ ol,
+			> h4 ~ ol,
+			> p ~ ol {
 				&:first-child:before,
 				&:last-child:after { display: none }; // Since the `li` is a type element.
 
@@ -102,7 +116,13 @@
 			&:not(:first-child) {
 				> h3,
 				> h4,
-				> p {
+				> p,
+				> h3 ~ ul,
+				> h4 ~ ul,
+				> p ~ ul,
+				> h3 ~ ol,
+				> h4 ~ ol,
+				> p ~ ol {
 					&:first-child { margin-top: calc(var(--typography--font-size) * var(--typography--leading)) }
 				}
 			}
@@ -124,6 +144,13 @@
 			@include breakpoint(568) { --typography--leading: var(--typography--leading--base) }
 
 			> li { padding-left: initial }
+		}
+
+		ul { // Nested.
+			list-style-type: '*';
+			margin-left:     var(--padding-left);
+
+			ul { list-style-type: '+' }
 		}
 	}
 
