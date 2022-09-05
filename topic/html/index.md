@@ -73,7 +73,7 @@ We call these [*semantic* elements](https://www.w3schools.com/html/html5_semanti
 
 
 
-*From the example above, here is what we’ve told the browser:*
+*In this example, here is what we’ve told the browser:*
 {: .four-above }
 
 - `<!DOCTYPE html>` \
@@ -98,6 +98,22 @@ We call these [*semantic* elements](https://www.w3schools.com/html/html5_semanti
 
     - `<p>` \
       Defines a paragraph.
+{: .left }
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page title</title>
+  </head>
+  <body>
+    <h1>This is a heading</h1>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+  </body>
+</html>
+```
+{: .right }
 
 
 
