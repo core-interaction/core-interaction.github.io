@@ -1109,7 +1109,17 @@ body > main > article ul > li > p,
 body > main > article ol > li > h3,
 body > main > article ol > li > h4,
 body > main > article ol > li > p {
-	padding-left: 1ch;
+	--padding-left: 1ch;
+	padding-left: var(--padding-left);
+}
+
+body > main > article ul > li > h3 ~ *,
+body > main > article ul > li > h4 ~ *,
+body > main > article ul > li > p ~ *,
+body > main > article ol > li > h3 ~ *,
+body > main > article ol > li > h4 ~ *,
+body > main > article ol > li > p ~ * {
+	--padding-left: 1ch;
 }
 
 body > main > article ul > li > h3:first-child:before,
@@ -1118,39 +1128,99 @@ body > main > article ul > li > h4:first-child:before,
 body > main > article ul > li > h4:last-child:after,
 body > main > article ul > li > p:first-child:before,
 body > main > article ul > li > p:last-child:after,
+body > main > article ul > li > h3 ~ ul:first-child:before,
+body > main > article ul > li > h3 ~ ul:last-child:after,
+body > main > article ul > li > h4 ~ ul:first-child:before,
+body > main > article ul > li > h4 ~ ul:last-child:after,
+body > main > article ul > li > p ~ ul:first-child:before,
+body > main > article ul > li > p ~ ul:last-child:after,
+body > main > article ul > li > h3 ~ ol:first-child:before,
+body > main > article ul > li > h3 ~ ol:last-child:after,
+body > main > article ul > li > h4 ~ ol:first-child:before,
+body > main > article ul > li > h4 ~ ol:last-child:after,
+body > main > article ul > li > p ~ ol:first-child:before,
+body > main > article ul > li > p ~ ol:last-child:after,
 body > main > article ol > li > h3:first-child:before,
 body > main > article ol > li > h3:last-child:after,
 body > main > article ol > li > h4:first-child:before,
 body > main > article ol > li > h4:last-child:after,
 body > main > article ol > li > p:first-child:before,
-body > main > article ol > li > p:last-child:after {
+body > main > article ol > li > p:last-child:after,
+body > main > article ol > li > h3 ~ ul:first-child:before,
+body > main > article ol > li > h3 ~ ul:last-child:after,
+body > main > article ol > li > h4 ~ ul:first-child:before,
+body > main > article ol > li > h4 ~ ul:last-child:after,
+body > main > article ol > li > p ~ ul:first-child:before,
+body > main > article ol > li > p ~ ul:last-child:after,
+body > main > article ol > li > h3 ~ ol:first-child:before,
+body > main > article ol > li > h3 ~ ol:last-child:after,
+body > main > article ol > li > h4 ~ ol:first-child:before,
+body > main > article ol > li > h4 ~ ol:last-child:after,
+body > main > article ol > li > p ~ ol:first-child:before,
+body > main > article ol > li > p ~ ol:last-child:after {
 	display: none;
 }
 
 body > main > article ul > li > h3:not(:first-child),
 body > main > article ul > li > h4:not(:first-child),
 body > main > article ul > li > p:not(:first-child),
+body > main > article ul > li > h3 ~ ul:not(:first-child),
+body > main > article ul > li > h4 ~ ul:not(:first-child),
+body > main > article ul > li > p ~ ul:not(:first-child),
+body > main > article ul > li > h3 ~ ol:not(:first-child),
+body > main > article ul > li > h4 ~ ol:not(:first-child),
+body > main > article ul > li > p ~ ol:not(:first-child),
 body > main > article ol > li > h3:not(:first-child),
 body > main > article ol > li > h4:not(:first-child),
-body > main > article ol > li > p:not(:first-child) {
+body > main > article ol > li > p:not(:first-child),
+body > main > article ol > li > h3 ~ ul:not(:first-child),
+body > main > article ol > li > h4 ~ ul:not(:first-child),
+body > main > article ol > li > p ~ ul:not(:first-child),
+body > main > article ol > li > h3 ~ ol:not(:first-child),
+body > main > article ol > li > h4 ~ ol:not(:first-child),
+body > main > article ol > li > p ~ ol:not(:first-child) {
 	margin-top: var(--typography--leading-shoulder);
 }
 
 body > main > article ul > li > h3:not(:only-child):last-child,
 body > main > article ul > li > h4:not(:only-child):last-child,
 body > main > article ul > li > p:not(:only-child):last-child,
+body > main > article ul > li > h3 ~ ul:not(:only-child):last-child,
+body > main > article ul > li > h4 ~ ul:not(:only-child):last-child,
+body > main > article ul > li > p ~ ul:not(:only-child):last-child,
+body > main > article ul > li > h3 ~ ol:not(:only-child):last-child,
+body > main > article ul > li > h4 ~ ol:not(:only-child):last-child,
+body > main > article ul > li > p ~ ol:not(:only-child):last-child,
 body > main > article ol > li > h3:not(:only-child):last-child,
 body > main > article ol > li > h4:not(:only-child):last-child,
-body > main > article ol > li > p:not(:only-child):last-child {
+body > main > article ol > li > p:not(:only-child):last-child,
+body > main > article ol > li > h3 ~ ul:not(:only-child):last-child,
+body > main > article ol > li > h4 ~ ul:not(:only-child):last-child,
+body > main > article ol > li > p ~ ul:not(:only-child):last-child,
+body > main > article ol > li > h3 ~ ol:not(:only-child):last-child,
+body > main > article ol > li > h4 ~ ol:not(:only-child):last-child,
+body > main > article ol > li > p ~ ol:not(:only-child):last-child {
 	margin-bottom: calc(var(--typography--font-size) * var(--typography--leading));
 }
 
 body > main > article ul > li:not(:first-child) > h3:first-child,
 body > main > article ul > li:not(:first-child) > h4:first-child,
 body > main > article ul > li:not(:first-child) > p:first-child,
+body > main > article ul > li:not(:first-child) > h3 ~ ul:first-child,
+body > main > article ul > li:not(:first-child) > h4 ~ ul:first-child,
+body > main > article ul > li:not(:first-child) > p ~ ul:first-child,
+body > main > article ul > li:not(:first-child) > h3 ~ ol:first-child,
+body > main > article ul > li:not(:first-child) > h4 ~ ol:first-child,
+body > main > article ul > li:not(:first-child) > p ~ ol:first-child,
 body > main > article ol > li:not(:first-child) > h3:first-child,
 body > main > article ol > li:not(:first-child) > h4:first-child,
-body > main > article ol > li:not(:first-child) > p:first-child {
+body > main > article ol > li:not(:first-child) > p:first-child,
+body > main > article ol > li:not(:first-child) > h3 ~ ul:first-child,
+body > main > article ol > li:not(:first-child) > h4 ~ ul:first-child,
+body > main > article ol > li:not(:first-child) > p ~ ul:first-child,
+body > main > article ol > li:not(:first-child) > h3 ~ ol:first-child,
+body > main > article ol > li:not(:first-child) > h4 ~ ol:first-child,
+body > main > article ol > li:not(:first-child) > p ~ ol:first-child {
 	margin-top: calc(var(--typography--font-size) * var(--typography--leading));
 }
 
@@ -1177,6 +1247,15 @@ body > main > article ul.no-marker {
 
 body > main > article ul.no-marker > li {
 	padding-left: initial;
+}
+
+body > main > article ul ul {
+	list-style-type: "*";
+	margin-left: var(--padding-left);
+}
+
+body > main > article ul ul ul {
+	list-style-type: "+";
 }
 
 body > main > article ol {
