@@ -70,7 +70,7 @@ HTML consists of a [range of elements](https://developer.mozilla.org/en-US/docs/
 
 The `<html>` element contains all elements of the page, the `<head>` element contains the title, and the body contains `<h1>` and `<p>`.
 
-We call these *semantic* elements—which is saying that they give their contents a *meaning* or a *role*. These *roles* are then interpreted by your browser (remember Chrome, Safari, Firefox, etc.) when it loads the file, to ultimately display the page. We call this *parsing* the document.
+We call these [*semantic* elements](https://www.w3schools.com/html/html5_semantic_elements.asp)—which is saying that they give their contents a *meaning* or a *role*. (Remember [Tim’s diagram](topic/everything/web.png).) These *roles* are then interpreted by your browser (Chrome, Safari, Firefox, etc.) when it loads the file, to ultimately display the page. We call this *parsing* the document.
 
 *From the example above, here is what we’ve told the browser:*
 {: .two-above }
@@ -104,12 +104,13 @@ We call these *semantic* elements—which is saying that they give their content
 
 
 
-
 [Elements](https://developer.mozilla.org/en-US/docs/Glossary/Element) are composed of tags (opening, closing) and their content:
 
 ![TI2B-S22_%20HTML%20Basics%20(3).png](TI2B-S22_20HTML20Basics20(3).png)
 
 *Some elements do not have any content or children, like* `<br>` *or* `<img>`*—these are called* [empty elements](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element) *and do not have a closing tag.*
+
+
 
 ### `<h1>` `<h2>` `<h3>` `<h4>` `<h5>` `<h6>` for headings
 
@@ -117,11 +118,15 @@ We call these *semantic* elements—which is saying that they give their content
 <h1>There should only be one first-level heading!</h1>
 ```
 
+
+
 ### `<p>` for paragraphs
 
 ```html
 <p>You should always wrap your text in a paragraph!</p>
 ```
+
+
 
 ### `<a>` are links
 
@@ -131,6 +136,8 @@ The `href` (*H*ypertext *REF*erence) specifies a URL that the link points to, an
 <a href="[https://www](https://www/).example.com">Links need attributes! I’ll explain.</a>
 ```
 
+
+
 ### `<img>` are images
 
 The `src` likewise can point to a local image file or an external URL! `alt` provides a description for accessibility/screen readers.
@@ -139,9 +146,13 @@ The `src` likewise can point to a local image file or an external URL! `alt` pro
 <img src="example.jpg" alt="Images should have descriptions!">
 ```
 
+
+
 ### `<header>` `<footer>` `<nav>` `<main>` `<article>` `<section>` `<div>` define areas
 
 These are the structural containers of a website. The names don’t imbue meaning or function directly, but help us organize and think about our content structure.
+
+
 
 ### `<span>` `<strong>` `<em>` wrap around bits of text
 
@@ -155,16 +166,17 @@ There are [many, many HTML elements](https://developer.mozilla.org/en-US/docs/We
 
 
 
-
 All HTML elements can have attributes, which provide more information about the element:
 
 ![attr.png](attr.png)
+
+
 
 ### Some common attributes:
 
 - The `lang` attribute of the `<html>` tag declares the language of the Web page.
 
-- The `href` attribute of `<a>` specifies the URL of the page the link goes to.
+- The `href` attribute of `<a>` specifies the URL of the page the link goes to.
 
 - The `target` attribute `_blank` can tell a `<a>` to open in a new window/tab.
 
@@ -262,7 +274,9 @@ But obviously, the first one is much more readable to us humans. We can use whit
 
 
 
-[Inline elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements) do *not* start on a new line, and only take up as much width as necessary. Other text or inline elements will continue to flow around them:
+[Inline elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements) do *not* start on a new line, and only take up as much width as necessary. I like to think of these as the little metal slugs [from printing](https://en.wikipedia.org/wiki/Slug_(typesetting)).
+
+Other text or inline elements will continue to flow around them, and they can wrap to new lines:
 
 `<a>`
 `<span>`
@@ -297,7 +311,7 @@ You can *comment* part of the code and the browser won’t show it. Comments are
 <p>You can write these notes in comments.</p>
 ```
 
-*Commenting your code is a gift to your future self!*
+I highly recommend getting into a habit of commenting your code, especially when starting out. If you figure something tricky out, write down why and how you solved it to help you understand and remember. And you’ll often come back to things. Commenting your code is a gift to your future self!
 
 
 
@@ -323,10 +337,10 @@ You can *comment* part of the code and the browser won’t show it. Comments are
 </table>
 
 <!-- To understand the example better, we have added borders to the table. -->
-<style>table, th, td {border:1px solid black;}</style>
+<style>table, th, td { border:1px solid black; }</style>
 ```
 
-These aren’t used as often anymore, in favor of div and other layout elements—you used to [have to use them](https://thehistoryoftheweb.com/tables-layout-absurd/) to get any kind of multi-column, grid layouts. But those need even more CSS!
+These aren’t used as often anymore, in favor of `<div>` and other layout elements. You used to [have to use them](https://thehistoryoftheweb.com/tables-layout-absurd/) to get any kind of multi-column, grid layouts. But those need even more CSS!
 
 ![Screen Shot 2022-02-04 at 2.44.08 PM.png](Screen_Shot_2022-02-04_at_2.44.08_PM.png)
 
@@ -334,7 +348,7 @@ These aren’t used as often anymore, in favor of div and other layout elements�
 
 ### Lists
 
-Any time you have more than two of something, you probably need a list. These are commonly used for *semantic* navigation elements, as well, think *“here’s a list of links in this site*.
+Any time you have more than two of something, you probably have a list. These are commonly used for semantic navigation elements, as well, think *“here’s a list of links in this site*.
 
 ```html
 <h2>You can have an ordered list</h2>
@@ -371,7 +385,11 @@ Any time you have more than two of something, you probably need a list. These ar
 
 These aren’t much to look at without CSS, though. Soon!
 
+
+
 ### Details
+
+There is even some basic interactivity (way, way ahead of JavaScript) with `<details>` and `<summary>` blocks, which open and close.
 
 ```html
 <details>
@@ -383,7 +401,7 @@ These aren’t much to look at without CSS, though. Soon!
 
 ![Screen Shot 2022-02-04 at 2.52.07 PM.png](Screen_Shot_2022-02-04_at_2.52.07_PM.png)
 
-Again, there are [many, many HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element). Try and find the one that best fits your usage!
+Again, there are [many, many, many, many HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element). Try and find the one that best fits your usage, wherever possible using one that matches your semantic use.
 
 
 
