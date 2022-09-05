@@ -31,11 +31,12 @@
 	--border--radius: 0.4rem;
 
 	--color:             black;
-	--color--alpha: var(--color--tint);
 	--color--background: white;
 
-	--color--tint:          hsl(0, 0%, 0%, 5%);
-	--color--tint--reverse: hsl(0, 0%, 100%, 10%);
+	--color--background--callout: var(--color--tint);
+
+	--color--tint:          hsl(0, 0%, 95%);
+	--color--tint--reverse: hsl(4, 79%, 55%);
 
 	--color--links:          #e42a1d;
 	--color--links--reverse: white;
@@ -96,7 +97,7 @@
 
 // Flip the colors.
 %--reverse {
-	--color--alpha: var(--color--tint--reverse);
+	--color--background--callout: var(--color--tint--reverse);
 
 	--color--background--parent: var(--color--background);
 

@@ -48,7 +48,7 @@
 
 	// Inline.
 	*:not(.highlight) > code {
-		background-color: var(--color--alpha);
+		background-color: var(--color--background--callout);
 		border-radius:    var(--border--radius);
 		letter-spacing:   0.08em; // Counteract the scale.
 		line-height:      var(--typography--leading);
@@ -59,7 +59,7 @@
 
 	// “Fenced” blocks.
 	pre {
-		background-color: var(--color--alpha);
+		background-color: var(--color--background--callout);
 		border-radius:    var(--border--radius);
 		overflow-x:       scroll;
 		padding:          2ch;
@@ -228,7 +228,9 @@
 		&.callout {
 			--padding: 2ch;
 
-			background-color: var(--color--alpha);
+			--color--background: var(--color--background--callout);
+
+			background-color: var(--color--background);
 			border-radius:    var(--border--radius);
 			font-style:       normal;
 			padding:          var(--padding);
@@ -363,7 +365,7 @@
 
 		> iframe {
 			aspect-ratio: var(--aspect--ratio, 16 / 9);
-			background:    var(--color--alpha);
+			background:    var(--color--background--callout);
 			border-radius: var(--border--radius);
 			border:       initial;
 			display:      block;
