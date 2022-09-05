@@ -1,6 +1,5 @@
 ---
 title: An intro to HTML
-published: false
 order: 1
 ---
 
