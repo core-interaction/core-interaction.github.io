@@ -1067,6 +1067,10 @@ body > main > article cite {
 	white-space: nowrap;
 }
 
+body > main > article span.mdash:after {
+	content: "—";
+}
+
 body > main > article code:not(._) {
 	--color: var(--color--code);
 	color: var(--color);
