@@ -26,3 +26,4 @@ sass:
   sass_dir:       assets/styles
   sourcemap:      never
 theme: null
+timezone: America/New_York
