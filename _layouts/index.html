@@ -21,7 +21,7 @@ layout: default
 		</address>
 	</header>
 	<article>
-		{{ content }}
+		{{ content | mdash_spans }}
 	</article>
 	<nav>
 		{% include page_list.html title=page.strings.classes  pages=weeks %}

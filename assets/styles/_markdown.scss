@@ -37,6 +37,12 @@
 
 
 
+	// Double-wide em-dashes from Ruby filter.
+	span.mdash:after { content: '—'	}
+
+
+
+	// Code time.
 	code:not(._) {
 		--color: var(--color--code);
 
@@ -86,7 +92,6 @@
 			+ * { --margin--top--previous: var(--margin--vertical--2) }
 		}
 	}
-
 
 
 

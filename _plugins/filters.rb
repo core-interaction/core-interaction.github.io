@@ -4,6 +4,9 @@ module Jekyll
 			return input if input.to_s.empty?
 			time(input).strftime('%B %-d')
 		end
+		def mdash_spans(input)
+			return input.gsub('—', '<span class="mdash">—</span>')
+		end
 	end
 end
 
