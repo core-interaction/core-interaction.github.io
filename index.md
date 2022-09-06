@@ -17,8 +17,8 @@ links:
 strings:
   about: |
     The New School, Parsons
-    PUCD 2035, CRN 2755 / F
-    2 W 13th, Room 502
+    PUCD 2035, CRN 2755 / F
+    2 W 13th, Room 502
     Tuesdays, 7–9:40 PM
   classes:  Sessions
   current:  This week
@@ -37,7 +37,8 @@ instructor:
 
 
 
-*Core 1: Interaction* is designed to introduce students to programming as a creative medium—as a way of making and exploring. The coursework focuses on developing a vocabulary of interaction design principles which can then be applied across a range of platforms. Students are encouraged to experiment with various media, tools, and techniques, ultimately producing a portfolio of interactive and visual projects designed for the screen. An emphasis is placed on typography as it applies to a screen context, research-based problem solving and a learning-through-making approach to technical skill building. Historical and current interaction design precedents will be discussed.
+
+*Core 1: Interaction* is a course in the Communication Design program at [Parsons](https://www.newschool.edu/parsons/)/[The New School](https://www.newschool.edu). The class is designed to introduce students to programming as a creative medium—as a way of making and exploring.
 {: .left }
 
 * [Syllabus](/syllabus)
@@ -46,7 +47,7 @@ instructor:
 * [Drive](https://drive.google.com/drive/folders/1pPSCRnGN7Ym7ZFyBl5n_HvKvArrpo_B6)
 * [Zoom](https://NewSchool.zoom.us/j/99185050065)
 * [Catalog](https://courses.newschool.edu/courses/PUCD2035)
-{: .icon-link .no-marker .right }
+{: .icon-link .no-marker .right rows="2" }
 
-> Hi folks. Like any good website, this one is assuredly *in-progress*. Expect more soon. I’m looking forward to meeting you all!
-{: .callout icon='👋' }
+We’ll be using this course site for our agendas, lectures, general class housekeeping, and anything else that comes up. It will be updated throughout the semester, so always check here first.
+{: .left }

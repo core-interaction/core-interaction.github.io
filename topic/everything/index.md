@@ -1,5 +1,5 @@
 ---
-title: Everything is a web page
+title: Everything is a web page
 order: 0
 ---
 

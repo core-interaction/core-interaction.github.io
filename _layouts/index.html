@@ -12,7 +12,7 @@ layout: default
 		<h1>{{ page.title }}</h1>
 		<p>{{ page.strings.term }}</p>
 		<address>
-			<p>{{ page.strings.about }}</p>
+			<p>{{ page.strings.about | newline_to_br }}</p>
 			<div>
 				{% for instructor in page.instructor %}
 					<p><a href="{{ instructor.url }}">{{ instructor.name }}</a></p>
