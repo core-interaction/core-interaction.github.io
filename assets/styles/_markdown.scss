@@ -109,9 +109,10 @@
 	ol {
 		@extend %type--layout;
 
-		display:             grid;
-		gap:                 var(--typography--between);
-		list-style-position: outside;
+		display:               grid;
+		gap:                   var(--typography--between);
+		grid-template-columns: minmax(0, 1fr); // Since “auto” is the min otherwise.
+		list-style-position:   outside;
 
 		> li {
 			@extend %typography; // For paragraph-less lists.
