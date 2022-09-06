@@ -1288,6 +1288,7 @@ body > main > article ul.no-marker {
 }
 
 body > main > article ul.no-marker > li {
+	--typography--leading: var(--typography--leading--base);
 	padding-left: initial;
 }
 
@@ -1620,6 +1621,25 @@ body > main > article .four-below + * {
 
 body > main > article .faded {
 	opacity: 0.4;
+}
+
+@media (max-width: 567px) {
+
+	body > main > article .right,
+	body > main > article aside {
+		--margin--top: var(--margin--vertical--4);
+	}
+
+	body > main > article .right + *,
+	body > main > article aside + * {
+		--margin--top: var(--margin--vertical--4);
+		--margin--top--previous: var(--margin--vertical--4);
+	}
+
+	body > main > article .right + * + *,
+	body > main > article aside + * + * {
+		--margin--top--previous: var(--margin--vertical--4);
+	}
 }
 
 @media (min-width: 35.5em) {
