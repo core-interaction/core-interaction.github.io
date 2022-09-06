@@ -1131,6 +1131,7 @@ body > main > article ul,
 body > main > article ol {
 	display: grid;
 	gap: var(--typography--between);
+	grid-template-columns: minmax(0, 1fr);
 	list-style-position: outside;
 }
 
