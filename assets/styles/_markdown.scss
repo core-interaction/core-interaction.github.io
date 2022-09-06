@@ -172,6 +172,8 @@
 			@include breakpoint(568) { --typography--leading: var(--typography--leading--base) }
 
 			> li {
+				--typography--leading: var(--typography--leading--base);
+
 				padding-left: initial;
 
 				> * { padding-left: initial }
@@ -501,6 +503,19 @@
 
 
 	// Column stuff.
+	@media (max-width: 567px) { // Manual, to scope it down.
+		.right {
+			--margin--top: var(--margin--vertical--4);
+
+			+ * {
+				--margin--top:           var(--margin--vertical--4);
+				--margin--top--previous: var(--margin--vertical--4);
+
+				+ * { --margin--top--previous: var(--margin--vertical--4) }
+			}
+		}
+	}
+
 	@include breakpoint(568) {
 		align-items:           start;
 		display:               grid;
