@@ -1083,6 +1083,8 @@ body > main > article *:not(.highlight) > code {
 	margin-left: -0.25em;
 	margin-right: -0.25em;
 	padding: 0.1em 0.25em;
+	user-select: all;
+	white-space: pre-wrap;
 }
 
 body > main > article pre {
