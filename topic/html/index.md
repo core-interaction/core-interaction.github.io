@@ -273,7 +273,7 @@ All HTML elements can have [attributes](https://developer.mozilla.org/en-US/docs
   ```html
   <h2 id="a-heading-element">A heading element</h2>
 
-  <a href="#a-heading">Goes to “a heading element”</a>
+  <a href="#a-heading-element">Goes to “a heading element”</a>
   ```
 
 - The `class` attribute provides a selector took hook on with CSS.
