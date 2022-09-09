@@ -534,32 +534,7 @@ body > main > article a {
 	text-decoration-line: underline;
 	text-decoration-thickness: var(--typography--decoration-thickness);
 	text-underline-offset: calc(-1 * var(--typography--underline-offset) + var(--typography--decoration-thickness) + var(--typography--underline-offset--extra, 0em));
-}
-
-@supports (-moz-appearance: meterbar) {
-	body > main > article a {
-		-webkit-text-stroke-color: var(--color--background);
-		-webkit-text-stroke-width: calc(var(--typography--text-shadow) * 2);
-		paint-order: stroke fill;
-		text-decoration-skip-ink: none;
-	}
-}
-
-@supports (-webkit-hyphens: none) {
-	body > main > article a {
-		-webkit-text-stroke-color: var(--color--background);
-		-webkit-text-stroke-width: calc(var(--typography--text-shadow) * 2);
-		paint-order: stroke fill;
-		text-decoration-skip-ink: none;
-	}
-}
-
-@media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
-	@supports not (-moz-appearance: meterbar) {
-		body > main > article a {
-			text-shadow: var(--color--background) var(--typography--text-shadow) 0, var(--color--background) var(--typography--text-shadow) calc(var(--typography--text-shadow) / 7), var(--color--background) 0 calc(var(--typography--text-shadow) / 7), var(--color--background) calc(-1 * var(--typography--text-shadow)) calc(var(--typography--text-shadow) / 7), var(--color--background) calc(-1 * var(--typography--text-shadow)) 0, var(--color--background) calc(-1 * var(--typography--text-shadow)) calc(-1 * var(--typography--text-shadow) / 7), var(--color--background) 0 calc(-1 * var(--typography--text-shadow) / 7), var(--color--background) var(--typography--text-shadow) calc(-1 * var(--typography--text-shadow) / 7);
-		}
-	}
+	text-shadow: var(--color--background) var(--typography--text-shadow) 0, var(--color--background) var(--typography--text-shadow) calc(var(--typography--text-shadow) / 7), var(--color--background) 0 calc(var(--typography--text-shadow) / 7), var(--color--background) calc(-1 * var(--typography--text-shadow)) calc(var(--typography--text-shadow) / 7), var(--color--background) calc(-1 * var(--typography--text-shadow)) 0, var(--color--background) calc(-1 * var(--typography--text-shadow)) calc(-1 * var(--typography--text-shadow) / 7), var(--color--background) 0 calc(-1 * var(--typography--text-shadow) / 7), var(--color--background) var(--typography--text-shadow) calc(-1 * var(--typography--text-shadow) / 7);
 }
 
 body > main > article cite > a,
