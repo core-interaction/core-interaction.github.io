@@ -549,8 +549,6 @@ body > main > article details > summary > p,
 body > main > footer > div > section:last-child > p > a,
 body.index > main > nav aside > menu > li > a,
 body.class > main > article > p > button {
-	-webkit-text-stroke: initial;
-	paint-order: initial;
 	text-decoration: initial;
 	text-shadow: initial;
 }
