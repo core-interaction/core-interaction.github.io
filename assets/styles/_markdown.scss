@@ -276,12 +276,20 @@
 		}
 
 		&.quote {
-			--margin--top: var(--margin--vertical--6);
+			--margin--top: var(--margin--vertical--4);
+
+			@include breakpoint(568) { --margin--top: var(--margin--vertical--6) }
 
 			+ p + * {
-				--margin--top: var(--margin--vertical--6);
+				--margin--top: var(--margin--vertical--4);
 
-				+ * { --margin--top--previous: var(--margin--vertical--6) }
+				@include breakpoint(568) { --margin--top: var(--margin--vertical--6) }
+
+				+ * {
+					--margin--top--previous: var(--margin--vertical--4);
+
+					@include breakpoint(568) { --margin--top--previous: var(--margin--vertical--6) }
+				}
 			}
 		}
 
@@ -443,6 +451,8 @@
 		position:       relative;
 		width:          fit-content;
 
+		@include breakpoint(568) { --margin--top: var(--margin--vertical--6) }
+
 		&:after {
 			content:     '----------------------------------------------------------------------';
 			max-width:   100%;
@@ -456,6 +466,8 @@
 			--margin--top:           var(--margin--vertical--2); // Think of this as its margin-bottom.
 			--margin--top--previous: var(--margin--vertical--4);
 
+			@include breakpoint(568) { --margin--top--previous: var(--margin--vertical--6) }
+
 			+ * { --margin--top--previous: var(--margin--vertical--2) } // Think of this as its margin-bottom.
 		}
 	}
@@ -467,13 +479,25 @@
 	// Lower, cascade.
 	hr,
 	.callout {
-		--margin--top: var(--margin--vertical--6);
+		--margin--top: var(--margin--vertical--4);
+
+		@include breakpoint(568) { --margin--top: var(--margin--vertical--6) }
 
 		+ * {
-			--margin--top:           var(--margin--vertical--6);
-			--margin--top--previous: var(--margin--vertical--6);
+			--margin--top:           var(--margin--vertical--4);
+			--margin--top--previous: var(--margin--vertical--4);
 
-			+ * { --margin--top--previous: var(--margin--vertical--6) }
+			@include breakpoint(568) {
+				--margin--top:           var(--margin--vertical--6);
+				--margin--top--previous: var(--margin--vertical--6);
+			}
+
+
+			+ * {
+				--margin--top--previous: var(--margin--vertical--4);
+
+				@include breakpoint(568) { --margin--top--previous: var(--margin--vertical--6) }
+			}
 		}
 	}
 
@@ -489,9 +513,15 @@
 	.two-below + * { --margin--top: var(--margin--vertical--2) }
 
 	.four-above {
-		--margin--top: var(--margin--vertical--6); // Actually six, keeping the name to retain Markdown compatibility with TI.
+		--margin--top: var(--margin--vertical--4);
 
-		+ * { --margin--top--previous: var(--margin--vertical--6) }
+		@include breakpoint(568) { --margin--top: var(--margin--vertical--6) } // Go to six, keeping the name to retain Markdown compatibility with TI.
+
+		+ * {
+			--margin--top--previous: var(--margin--vertical--4);
+
+			@include breakpoint(568) { --margin--top--previous: var(--margin--vertical--6) }
+		}
 	}
 
 	.four-below + * { --margin--top: var(--margin--vertical--6) }
