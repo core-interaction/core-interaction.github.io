@@ -41,6 +41,10 @@ textarea {
 	all: unset;
 }
 
+iframe {
+	border: unset;
+}
+
 
 
 /* Disclosure triangles. */

@@ -352,10 +352,9 @@
 			aspect-ratio: var(--aspect--ratio, 16 / 9);
 			background:    var(--color--background--callout);
 			border-radius: var(--border--radius);
-			border:       initial;
-			display:      block;
-			max-width:    100%;
-			width:        100vw;
+			display:       block;
+			max-width:     100%;
+			width:         100vw;
 
 			@include browser-specific(safari) {
 				&[src*="drive.google.com"] {
