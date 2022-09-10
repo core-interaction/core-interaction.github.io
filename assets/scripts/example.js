@@ -1,20 +1,22 @@
 const visibleClass = 'visible'
 
 const selectFile = () => {
-	const files = [...document.querySelector('#files ul').children]
-	const source = [...document.getElementById('source').children]
+	if (document.querySelector('#files')) {
+		const files = [...document.querySelector('#files ul').children]
+		const source = [...document.getElementById('source').children]
 
-	files.forEach((file) => {
-		(file).onclick = () => {
-			let index = files.indexOf(file)
+		files.forEach((file) => {
+			(file).onclick = () => {
+				let index = files.indexOf(file)
 
-			files.forEach((element) => element.classList.remove(visibleClass))
-			source.forEach((element) => element.classList.remove(visibleClass))
+				files.forEach((element) => element.classList.remove(visibleClass))
+				source.forEach((element) => element.classList.remove(visibleClass))
 
-			file.classList.add(visibleClass)
-			source[index].classList.add(visibleClass)
-		}
-	})
+				file.classList.add(visibleClass)
+				source[index].classList.add(visibleClass)
+			}
+		})
+	}
 }
 
 const copyFile = () => {
