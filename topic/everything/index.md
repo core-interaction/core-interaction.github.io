@@ -47,7 +47,7 @@ By 1969, computer nodes connected the Stanford Research Institute, UCLA, UCSB an
 
 Over the following decade, [ARPANET](https://www.britannica.com/topic/ARPANET) would grow to include other cities in the US. It had its first expansion outside the States in 1973, with connections to the UK and Norway. Slowly, similar commercial and academic networks were developing alongside, each with their own communication protocols.
 
-{% include figure.html src='tcpip.png' caption='The core of TCP/IP is routing bundles of data called “packets.”' credit='https://web.eecs.umich.edu/~prabal/teaching/eecs582-w13/readings/CK74.pdf' height=50 %}
+{% include figure.html src='tcpip.png' caption='The core of TCP/IP is routing bundles of data called “packets.”' credit='https://web.eecs.umich.edu/~prabal/teaching/eecs582-w13/readings/CK74.pdf' height='45vh' %}
 
 In 1974, Robert Kahn and Vinton Cerf (two ARPA scientists) developed the *Transmission Control Protocol* and the *Internet Protocol* (TCP/IP). By the 80s, it became the standard network communication format—and still underpins the internet we all use today.
 

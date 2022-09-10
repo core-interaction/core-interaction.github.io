@@ -25,7 +25,6 @@ strings:
   home:     'C1:I'
   last:     Last week
   projects: Project
-  sign-in:  You’ll need to have Chrome signed in to your New School profile to see this in-page.
   term:     Fall 2022
   top:      Top
   topics:   Topics

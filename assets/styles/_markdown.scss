@@ -338,47 +338,55 @@
 	figure {
 		--margin--top: var(--margin--vertical--2);
 
-		display:        flex;
-		flex-direction: column;
-		width:          fit-content;
+		> img,
+		> div {
+			max-height: var(--height--max, 66vh);
+			max-width:  var(--width--max, 100%);
+		}
 
 		> img {
-			max-height:      var(--max--height, 66vh);
 			object-fit:      contain; // This will do, for now.
 			object-position: left;
 		}
 
-		> iframe {
+		> div {
+			border:       var(--color--background--callout) solid 0.1rem;
 			aspect-ratio: var(--aspect--ratio, 16 / 9);
-			background:    var(--color--background--callout);
-			border-radius: var(--border--radius);
-			display:       block;
-			max-width:     100%;
-			width:         100vw;
+			display:      flex;
 
-			@include browser-specific(safari) {
-				&[src*="drive.google.com"] {
-					display: none;
+			iframe {
+				height: 100%;
+				width:  100%;
+			}
 
-					+ figcaption {
-						font-size:     0rem;
-						margin-bottom: calc(-1 * var(--typography--shoulder) * var(--typography--font-size) + var(--typography--margin--bottom));
-						margin-top:    initial;
-						max-width:     initial;
-						visibility:    hidden;
+			&.google { @include browser-specific(safari) { display: none } } // No point.
+		}
 
-						// Show a warning.
-						&:after {
-							content:    'Safari security settings prevent Google Drive embeds—so you’ll need to go to the original.';
-							display:    inline-block;
-							font-style: italic;
-							visibility: visible;
-							font-size:  var(--typography--font-size);
-							max-width:  60ch;
-						}
-					}
+		// For Google videos that require a sign-in.
+		> aside {
+			@extend %typography;
+
+			margin-bottom: var(--typography--margin--bottom);
+			margin-top:    var(--typography--margin--top);
+			max-width:  50ch;
+
+
+			&:before { display: none }
+
+			&:after {
+				content:    'You’ll need to have Chrome signed in to your New School profile to see this in-page.';
+				display:    inline-block;
+				font-style: italic;
+				margin-top: var(--typography--between);
+				visibility: visible;
+
+				@include browser-specific(safari) {
+					content:    'Safari security settings prevent Google Drive embeds——so you’ll need to go to the original.';
+					margin-top: initial;
 				}
 			}
+
+			+ figcaption { margin-top: var(--typography--leading-shoulder) }
 		}
 
 		> figcaption {

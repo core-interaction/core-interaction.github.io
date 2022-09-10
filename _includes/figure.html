@@ -1,8 +1,20 @@
-<figure markdown="0"{% if include.class %} class="{{ include.class }}"{% endif %}{% if include.height %} style="--max--height: {{ include.height }}vh;"{% endif %}>
+<figure markdown="0"
+	{%- if include.class %} class="{{ include.class }}"{% endif -%}
+	{%- if include.width or include.height or include.aspect-ratio %}
+		style="
+			{%- if include.width %}--width--max: {{ include.width }}{% endif -%}
+			{%- if include.height %}--height--max: {{ include.height }}{% endif -%}
+			{%- if include.aspect-ratio %}--aspect--ratio: {{ include.aspect-ratio }}{% endif -%}
+			"
+	{% endif -%}
+	>
 	{% if include.src contains 'jpg' or include.src contains 'png' or include.src contains 'gif' or include.src contains 'svg' %}
 		<img src="{{ include.src }}">
-	{% elsif include.src contains 'http' %}
-		<iframe allowfullscreen src="{{ include.src }}"></iframe>
+	{% else %}
+		<div {% if include.src contains 'drive.google.com' %}class="google"{% endif %}>
+			<iframe allowfullscreen src="{{ include.src }}"></iframe>
+		</div>
+		{% if include.src contains 'drive.google.com' %}<aside></aside>{% endif %}
 	{% endif %}
 	{% if include.caption or include.credit %}
 		<figcaption>
