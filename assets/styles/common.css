@@ -33,11 +33,14 @@ nobr,
 }
 
 body > main > header > ul > li,
-body > main > article pre code,
 body > main > article ul > li,
 body > main > article ol > li,
+body > main > article figure > aside,
 body > main > article figure > figcaption,
 body.index > main > nav aside > menu > li,
+body pre code,
+body.example > section pre #files > ul li,
+body.example > section #files > ul pre li,
 h1,
 h2,
 h3,
@@ -61,11 +64,14 @@ body > main > article ul,
 body > main > article ol,
 body.index > main > nav aside > menu,
 body > main > header > ul > li,
-body > main > article pre code,
 body > main > article ul > li,
 body > main > article ol > li,
+body > main > article figure > aside,
 body > main > article figure > figcaption,
 body.index > main > nav aside > menu > li,
+body pre code,
+body.example > section pre #files > ul li,
+body.example > section #files > ul pre li,
 h1,
 h2,
 h3,
@@ -85,11 +91,14 @@ td {
 }
 
 body > main > header > ul > li,
-body > main > article pre code,
 body > main > article ul > li,
 body > main > article ol > li,
+body > main > article figure > aside,
 body > main > article figure > figcaption,
 body.index > main > nav aside > menu > li,
+body pre code,
+body.example > section pre #files > ul li,
+body.example > section #files > ul pre li,
 h1,
 h2,
 h3,
@@ -113,11 +122,14 @@ td {
 @supports (display: flow-root) {
 
 	body > main > header > ul > li,
-	body > main > article pre code,
 	body > main > article ul > li,
 	body > main > article ol > li,
+	body > main > article figure > aside,
 	body > main > article figure > figcaption,
 	body.index > main > nav aside > menu > li,
+	body pre code,
+	body.example > section pre #files > ul li,
+	body.example > section #files > ul pre li,
 	h1,
 	h2,
 	h3,
@@ -131,17 +143,23 @@ td {
 }
 
 body > main > header > ul > li:before,
-body > main > article pre code:before,
 body > main > article ul > li:before,
 body > main > article ol > li:before,
+body > main > article figure > aside:before,
 body > main > article figure > figcaption:before,
 body.index > main > nav aside > menu > li:before,
+body pre code:before,
+body.example > section pre #files > ul li:before,
+body.example > section #files > ul pre li:before,
 body > main > header > ul > li:after,
-body > main > article pre code:after,
 body > main > article ul > li:after,
 body > main > article ol > li:after,
+body > main > article figure > aside:after,
 body > main > article figure > figcaption:after,
 body.index > main > nav aside > menu > li:after,
+body pre code:after,
+body.example > section pre #files > ul li:after,
+body.example > section #files > ul pre li:after,
 h1:before,
 h1:after,
 h2:before,
@@ -164,11 +182,14 @@ td:after {
 }
 
 body > main > header > ul > li:before,
-body > main > article pre code:before,
 body > main > article ul > li:before,
 body > main > article ol > li:before,
+body > main > article figure > aside:before,
 body > main > article figure > figcaption:before,
 body.index > main > nav aside > menu > li:before,
+body pre code:before,
+body.example > section pre #files > ul li:before,
+body.example > section #files > ul pre li:before,
 h1:before,
 h2:before,
 h3:before,
@@ -181,11 +202,14 @@ td:before {
 }
 
 body > main > header > ul > li:after,
-body > main > article pre code:after,
 body > main > article ul > li:after,
 body > main > article ol > li:after,
+body > main > article figure > aside:after,
 body > main > article figure > figcaption:after,
 body.index > main > nav aside > menu > li:after,
+body pre code:after,
+body.example > section pre #files > ul li:after,
+body.example > section #files > ul pre li:after,
 h1:after,
 h2:after,
 h3:after,
@@ -527,7 +551,8 @@ body.index > main > nav aside > menu > li > a:focus:focus-visible:not(:disabled)
 body.class > main > article > p > button:focus:focus-visible:not(:disabled),
 body > nav > div > section:first-child > a:focus:focus-visible:not(:disabled),
 body > main > article details > summary:focus:focus-visible:not(:disabled),
-body > main > footer > div > section:first-child > a:focus:focus-visible:not(:disabled) {
+body > main > footer > div > section:first-child > a:focus:focus-visible:not(:disabled),
+body.example > section #files > ul li:focus:focus-visible:not(:disabled) {
 	border-radius: calc(var(--link--enlargement) / 4);
 	outline-color: var(--link--color);
 	outline-style: solid;
@@ -550,7 +575,8 @@ body.index > main > nav aside > menu > li > a,
 body.class > main > article > p > button,
 body > nav > div > section:first-child > a,
 body > main > article details > summary,
-body > main > footer > div > section:first-child > a {
+body > main > footer > div > section:first-child > a,
+body.example > section #files > ul li {
 	-webkit-tap-highlight-color: var(--link--highlight);
 	cursor: pointer;
 	transition-duration: var(--link--hover--transition);
@@ -572,7 +598,8 @@ body.index > main > nav aside > menu > li > a:active,
 body.class > main > article > p > button:active,
 body > nav > div > section:first-child > a:active,
 body > main > article details > summary:active,
-body > main > footer > div > section:first-child > a:active {
+body > main > footer > div > section:first-child > a:active,
+body.example > section #files > ul li:active {
 	background-color: var(--link--highlight);
 	border-radius: calc(var(--link--enlargement) / 2);
 }
@@ -593,7 +620,8 @@ body.index > main > nav aside > menu > li > a:focus,
 body.class > main > article > p > button:focus,
 body > nav > div > section:first-child > a:focus,
 body > main > article details > summary:focus,
-body > main > footer > div > section:first-child > a:focus {
+body > main > footer > div > section:first-child > a:focus,
+body.example > section #files > ul li:focus {
 	outline: none;
 	z-index: 1;
 }
@@ -614,14 +642,16 @@ body > main > footer > div > section:first-child > a:focus {
 	body.class > main > article > p > button:hover,
 	body > nav > div > section:first-child > a:hover,
 	body > main > article details > summary:hover,
-	body > main > footer > div > section:first-child > a:hover {
+	body > main > footer > div > section:first-child > a:hover,
+	body.example > section #files > ul li:hover {
 		filter: opacity(var(--link--hover--opacity));
 	}
 }
 
 body > nav > div > section:first-child > a,
 body > main > article details > summary,
-body > main > footer > div > section:first-child > a {
+body > main > footer > div > section:first-child > a,
+body.example > section #files > ul li {
 	margin: calc(var(--link--enlargement) * -1);
 	padding: var(--link--enlargement);
 }
@@ -654,7 +684,8 @@ body.class > main > article > p > button {
 
 body > nav > div > section:first-child > a,
 body > main > article details > summary,
-body > main > footer > div > section:first-child > a {
+body > main > footer > div > section:first-child > a,
+body.example > section #files > ul li {
 	display: flex;
 	flex-direction: column;
 	width: fit-content;
@@ -995,15 +1026,9 @@ body > main > article span.mdash:after {
 	content: "—";
 }
 
-body > main > article code:not(._) {
-	--color: var(--color--code);
-	color: var(--color);
-	font-size: calc(var(--typography--size) * var(--typography--code));
-	font-style: normal;
-	white-space: pre;
-}
-
-body > main > article *:not(.highlight) > code {
+body > main > article *:not(.highlight) > code,
+body > main > article body.example > section #files > ul *:not(.highlight) > li,
+body.example > section #files > ul body > main > article *:not(.highlight) > li {
 	background-color: var(--color--background--callout);
 	border-radius: var(--border--radius);
 	letter-spacing: 0.08em;
@@ -1013,18 +1038,6 @@ body > main > article *:not(.highlight) > code {
 	padding: 0.1em 0.25em;
 	user-select: all;
 	white-space: pre-wrap;
-}
-
-body > main > article pre {
-	background-color: var(--color--background--callout);
-	border-radius: var(--border--radius);
-	overflow-x: scroll;
-	padding: 2ch;
-	tab-size: 2;
-}
-
-body > main > article pre code {
-	--typography--leading: 1.2;
 }
 
 body > main > article li pre {
@@ -1403,48 +1416,63 @@ body > main > article details + * {
 
 body > main > article figure {
 	--margin--top: var(--margin--vertical--2);
-	display: flex;
-	flex-direction: column;
-	width: fit-content;
+}
+
+body > main > article figure > img,
+body > main > article figure > div {
+	max-height: var(--height--max, 66vh);
+	max-width: var(--width--max, 100%);
 }
 
 body > main > article figure > img {
-	max-height: var(--max--height, 66vh);
 	object-fit: contain;
 	object-position: left;
 }
 
-body > main > article figure > iframe {
+body > main > article figure > div {
+	border: var(--color--background--callout) solid 0.1rem;
 	aspect-ratio: var(--aspect--ratio, 16/9);
-	background: var(--color--background--callout);
-	border-radius: var(--border--radius);
-	border: initial;
-	display: block;
-	max-width: 100%;
-	width: 100vw;
+	display: flex;
+}
+
+body > main > article figure > div iframe {
+	height: 100%;
+	width: 100%;
 }
 
 @supports (-webkit-hyphens: none) {
-	body > main > article figure > iframe[src*="drive.google.com"] {
+	body > main > article figure > div.google {
 		display: none;
 	}
+}
 
-	body > main > article figure > iframe[src*="drive.google.com"] + figcaption {
-		font-size: 0rem;
-		margin-bottom: calc(-1 * var(--typography--shoulder) * var(--typography--font-size) + var(--typography--margin--bottom));
+body > main > article figure > aside {
+	margin-bottom: var(--typography--margin--bottom);
+	margin-top: var(--typography--margin--top);
+	max-width: 50ch;
+}
+
+body > main > article figure > aside:before {
+	display: none;
+}
+
+body > main > article figure > aside:after {
+	content: "You’ll need to have Chrome signed in to your New School profile to see this in-page.";
+	display: inline-block;
+	font-style: italic;
+	margin-top: var(--typography--between);
+	visibility: visible;
+}
+
+@supports (-webkit-hyphens: none) {
+	body > main > article figure > aside:after {
+		content: "Safari security settings prevent Google Drive embeds——so you’ll need to go to the original.";
 		margin-top: initial;
-		max-width: initial;
-		visibility: hidden;
 	}
+}
 
-	body > main > article figure > iframe[src*="drive.google.com"] + figcaption:after {
-		content: "Safari security settings prevent Google Drive embeds—so you’ll need to go to the original.";
-		display: inline-block;
-		font-style: italic;
-		visibility: visible;
-		font-size: var(--typography--font-size);
-		max-width: 60ch;
-	}
+body > main > article figure > aside + figcaption {
+	margin-top: var(--typography--leading-shoulder);
 }
 
 body > main > article figure > figcaption {
@@ -1755,6 +1783,161 @@ body.class > main > article > ul {
 body.class > main > article > ul > li {
 	display: block;
 	padding: initial;
+}
+
+body code:not(._),
+body.example > section #files > ul li:not(._) {
+	--color: var(--color--code);
+	--typography--size--override: calc(var(--typography--size) * var(--typography--code));
+	color: var(--color);
+	font-size: var(--typography--size--override);
+	font-style: normal;
+	white-space: pre;
+}
+
+body pre {
+	background-color: var(--color--background--callout);
+	border-radius: var(--border--radius);
+	overflow-x: scroll;
+	padding: 2ch;
+	tab-size: 2;
+}
+
+body pre code,
+body.example > section pre #files > ul li,
+body.example > section #files > ul pre li {
+	--typography--leading: 1.2;
+}
+
+body.example {
+	--padding: 2ch;
+	align-items: stretch;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-items: stretch;
+	width: 100%;
+}
+
+@media (min-width: 35.5em) {
+	body.example {
+		flex-direction: row;
+	}
+}
+
+body.example > section {
+	background-color: var(--color--background--callout);
+	border-top-left-radius: var(--border--radius);
+	border-top-right-radius: var(--border--radius);
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	height: var(--split, 50%);
+	overflow: hidden;
+	position: relative;
+}
+
+@media (min-width: 35.5em) {
+	body.example > section {
+		height: 100%;
+		width: var(--split, 50%);
+	}
+}
+
+body.example > section > aside {
+	--width: 0.4rem;
+	background-clip: content-box;
+	background-color: rgba(0, 0, 0, 0.0666);
+	border-radius: calc(var(--width) * 2);
+	border: var(--width) solid transparent;
+	bottom: 0;
+	box-sizing: content-box;
+	cursor: grab;
+	height: var(--width);
+	position: absolute;
+	right: calc(40% - var(--width));
+	width: 20%;
+	z-index: 1;
+}
+
+@media (min-width: 35.5em) {
+	body.example > section > aside {
+		bottom: calc(40% - var(--width));
+		height: 20%;
+		right: 0;
+		width: var(--width);
+	}
+}
+
+body.example > section aside:active ~ div,
+body.example > section aside:active ~ div *,
+body.example > section:active + iframe {
+	pointer-events: none;
+}
+
+body.example > section #files > ul {
+	background-color: var(--color--background--callout);
+	display: flex;
+	flex-shrink: 0;
+	gap: var(--padding);
+	left: 0;
+	max-width: 100%;
+	overflow-y: scroll;
+	padding: var(--padding);
+	position: sticky;
+	top: 0;
+}
+
+body.example > section #files > ul::-webkit-scrollbar {
+	display: none;
+}
+
+body.example > section #files > ul li {
+	user-select: none;
+}
+
+body.example > section #files > ul li:not(.visible) p {
+	opacity: var(--alpha--inactive);
+}
+
+body.example > section #source {
+	height: 100%;
+	overflow: scroll;
+	width: 100%;
+}
+
+body.example > section #source::-webkit-scrollbar {
+	display: none;
+}
+
+body.example > section #source > div {
+	height: 100%;
+}
+
+body.example > section #source > div:not(.visible) {
+	display: none;
+}
+
+body.example > iframe {
+	background-color: white;
+	border-color: var(--color--background--callout);
+	border-style: solid;
+	border-width: var(--border--radius);
+	height: 100%;
+	width: 100%;
+	min-width: 0rem;
+	user-select: none;
+	border-bottom-left-radius: var(--border--radius);
+	border-bottom-right-radius: var(--border--radius);
+	overflow: hidden;
+	border-top-width: 0;
+}
+
+@media (min-width: 35.5em) {
+	body.example > iframe {
+		border-left-width: 0;
+		border-top-width: var(--border--radius);
+	}
 }
 
 body > nav > div > section:last-child > p > a,

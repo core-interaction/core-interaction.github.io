@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
 
-		<title>Class</title>
+		<title>Examples</title>
 		<link href="/assets/styles/reset.css" rel="stylesheet">
 		<link href="/assets/styles/common.css" rel="stylesheet">
 		<link href="/assets/styles/syntax.css" rel="stylesheet">
@@ -15,7 +15,7 @@
 
 		<meta name="theme-color" content="#e42a1d">
 	</head>
-	<body class="class">
+	<body class="examples">
 
 
 
@@ -48,14 +48,14 @@
 						<p>C1:I</p>
 					</a>
 					<p>
-						<strong>Class</strong>
+						<strong>Examples</strong>
 						<select onchange="
 					this.parentElement.querySelector('strong').innerHTML = this.querySelector(`[value='${this.value}']`).text;
 					document.activeElement.blur();
 					window.open(this.value,'_self');
 					">
 
-							<option disabled selected>Class</option>
+							<option disabled selected>Examples</option>
 
 
 							<optgroup label="Sessions">
@@ -124,65 +124,17 @@
 
 		<main>
 
+			<header>
+				<h1>Examples</h1>
+
+
+			</header>
+
 			<article>
 
-				<p>
-					<button class="shuffle">Shuffle list</button>
-				</p>
-				<ul id="class" style="--count: 17;">
-
-					<li>Adrian</li>
-
-					<li>Alice</li>
-
-					<li>Amanda</li>
-
-					<li>Anushka</li>
-
-					<li>Aparna</li>
-
-					<li>Chris</li>
-
-					<li>Dani</li>
-
-					<li>Destiny</li>
-
-					<li>Dev</li>
-
-					<li>Donovan</li>
-
-					<li>Erika</li>
-
-					<li>James</li>
-
-					<li>Jayna</li>
-
-					<li>Kuhu</li>
-
-					<li>Samarth</li>
-
-					<li>Thiha</li>
-
-					<li>Vanessa</li>
+				<ul class="icon-link">
 
 				</ul>
-				<script>
-					const shuffleStudents = () => {
-						const students = document.getElementById('class')
-
-						for (index = 0; index < students.children.length; index++) {
-							students.appendChild(students.children[Math.random() * index | 0])
-						}
-					}
-
-					document.addEventListener('DOMContentLoaded', () => {
-						shuffleStudents()
-
-						const shuffle = document.querySelector('button')
-
-						shuffle.onclick = () => shuffleStudents()
-					})
-				</script>
 
 			</article>
 
