@@ -11,7 +11,10 @@
 	{% if include.src contains 'jpg' or include.src contains 'png' or include.src contains 'gif' or include.src contains 'svg' %}
 		<img src="{{ include.src }}">
 	{% else %}
-		<div {% if include.src contains 'drive.google.com' %}class="google"{% endif %}>
+		<div
+			{%- if include.src contains 'drive.google.com' %} class="google"{% endif -%}
+			{%- if include.src contains '/example/' %} class="example"{% endif -%}
+			>
 			<iframe allowfullscreen src="{{ include.src }}"></iframe>
 		</div>
 		{% if include.src contains 'drive.google.com' %}<aside></aside>{% endif %}

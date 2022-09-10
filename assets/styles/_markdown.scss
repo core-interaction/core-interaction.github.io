@@ -360,6 +360,17 @@
 			}
 
 			&.google { @include browser-specific(safari) { display: none } } // No point.
+
+			&.example { // Code blocks.
+				aspect-ratio: var(--aspect--ratio);
+				border:       initial;
+				height:       75vh;
+				max-height:   initial;
+
+				@include breakpoint(568) {
+					height: var(--height--max);
+				}
+			}
 		}
 
 		// For Google videos that require a sign-in.
