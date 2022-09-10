@@ -167,6 +167,8 @@
 			list-style-type: '*';
 			margin-left:     var(--padding-left);
 
+			li:last-child { margin-bottom: initial } // Covered by the parent list.
+
 			ul { list-style-type: '+' }
 		}
 	}
