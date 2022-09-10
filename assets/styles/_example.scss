@@ -94,6 +94,8 @@
 			> div {
 				height: 100%;
 
+				> figure { height: 100% } // Do this all with flex?
+
 				&:not(.visible) { display: none }
 			}
 		}
