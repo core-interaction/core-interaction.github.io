@@ -42,17 +42,8 @@
 
 
 
-	// Code time.
-	code:not(._) {
-		--color: var(--color--code);
 
-		color:       var(--color);
-		font-size:   calc(var(--typography--size) * var(--typography--code));
-		font-style:  normal;
-		white-space: pre;
-	}
-
-	// Inline.
+	// Inline code.
 	*:not(.highlight) > code {
 		background-color: var(--color--background--callout);
 		border-radius:    var(--border--radius);
@@ -63,21 +54,6 @@
 		padding:          0.1em 0.25em;
 		user-select:      all;
 		white-space:      pre-wrap;
-	}
-
-	// “Fenced” blocks.
-	pre {
-		background-color: var(--color--background--callout);
-		border-radius:    var(--border--radius);
-		overflow-x:       scroll;
-		padding:          2ch;
-		tab-size:         2;
-
-		code {
-			@extend %typography;
-
-			--typography--leading: 1.2;
-		}
 	}
 
 	li pre { padding: 1ch } // Tighter in lists.

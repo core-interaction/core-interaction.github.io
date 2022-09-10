@@ -504,6 +504,39 @@ body {
 			}
 		}
 	}
+
+
+
+	// Code time.
+	code:not(._) {
+		--color: var(--color--code);
+
+		--typography--size--override: calc(var(--typography--size) * var(--typography--code));
+
+		color:       var(--color);
+		font-size:   var(--typography--size--override);
+		font-style:  normal;
+		white-space: pre;
+	}
+
+
+	// “Fenced” blocks.
+	pre {
+		background-color: var(--color--background--callout);
+		border-radius:    var(--border--radius);
+		overflow-x:       scroll;
+		padding:          2ch;
+		tab-size:         2;
+
+		code {
+			@extend %typography;
+
+			--typography--leading: 1.2;
+		}
+	}
+
+	// Code examples.
+	@import 'example';
 }
 
 
