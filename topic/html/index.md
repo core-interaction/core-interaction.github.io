@@ -352,12 +352,7 @@ But obviously, the first one is much more readable to us humans. We can use whit
 
 
 
-```html
-<h1>These will take up a full line</h1>
-<p>And subsequent block items will stack underneath</p>
-```
-
-{% include figure.html src='block.png' %}
+{% include figure.html src='/example/block/demo' height='18em' %}
 
 
 
@@ -368,21 +363,15 @@ But obviously, the first one is much more readable to us humans. We can use whit
 [Inline elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements) do *not* start on a new line, and only take up as much width as necessary. I like to think of these as the little metal slugs [from printing](https://en.wikipedia.org/wiki/Slug_(typesetting)). Other text and inline elements will continue to flow around them, and they can wrap to new lines:
 
 
-`<a>`
-`<span>`
-`<strong>`
 `<em>`
+`<strong>`
+`<span>`
+`<a>`
 `<img>`
 
 
 
-```html
-<p>
-	These can make text <em>italic</em> or <span style="color:blue;">blue</span>.
-</p>
-```
-
-{% include figure.html src='inline.png' %}
+{% include figure.html src='/example/inline/demo' height='18em' %}
 
 
 
