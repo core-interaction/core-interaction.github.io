@@ -1256,6 +1256,10 @@ body > main > article ul ul {
 	margin-left: var(--padding-left);
 }
 
+body > main > article ul ul li:last-child {
+	margin-bottom: initial;
+}
+
 body > main > article ul ul ul {
 	list-style-type: "+";
 }
@@ -1542,12 +1546,29 @@ body > main > article aside {
 	--margin--top: var(--margin--vertical--2);
 }
 
-body > main > article aside > figure:not(:first-child) {
+body > main > article aside figure:not(:first-child) {
 	margin-top: var(--typography--between);
 }
 
 body > main > article aside + * {
 	--margin--top: var(--margin--vertical--2);
+}
+
+@media (min-width: 35.5em) {
+	body > main > article aside + * {
+		--margin--top: var(--margin--top--previous);
+	}
+}
+
+@media (min-width: 35.5em) {
+	body > main > article aside.sticky {
+		align-self: stretch;
+	}
+
+	body > main > article aside.sticky > div {
+		position: sticky;
+		top: var(--margin--vertical--4);
+	}
 }
 
 body > main > article h2 {
@@ -1795,6 +1816,78 @@ body > main > article .faded {
 	body > main > article .right[rows="12"],
 	body > main > article aside[rows="12"] {
 		grid-row: span 12;
+	}
+
+	body > main > article .left[rows="13"],
+	body > main > article .right[rows="13"],
+	body > main > article aside[rows="13"] {
+		grid-row: span 13;
+	}
+
+	body > main > article .left[rows="14"],
+	body > main > article .right[rows="14"],
+	body > main > article aside[rows="14"] {
+		grid-row: span 14;
+	}
+
+	body > main > article .left[rows="15"],
+	body > main > article .right[rows="15"],
+	body > main > article aside[rows="15"] {
+		grid-row: span 15;
+	}
+
+	body > main > article .left[rows="16"],
+	body > main > article .right[rows="16"],
+	body > main > article aside[rows="16"] {
+		grid-row: span 16;
+	}
+
+	body > main > article .left[rows="17"],
+	body > main > article .right[rows="17"],
+	body > main > article aside[rows="17"] {
+		grid-row: span 17;
+	}
+
+	body > main > article .left[rows="18"],
+	body > main > article .right[rows="18"],
+	body > main > article aside[rows="18"] {
+		grid-row: span 18;
+	}
+
+	body > main > article .left[rows="19"],
+	body > main > article .right[rows="19"],
+	body > main > article aside[rows="19"] {
+		grid-row: span 19;
+	}
+
+	body > main > article .left[rows="20"],
+	body > main > article .right[rows="20"],
+	body > main > article aside[rows="20"] {
+		grid-row: span 20;
+	}
+
+	body > main > article .left[rows="21"],
+	body > main > article .right[rows="21"],
+	body > main > article aside[rows="21"] {
+		grid-row: span 21;
+	}
+
+	body > main > article .left[rows="22"],
+	body > main > article .right[rows="22"],
+	body > main > article aside[rows="22"] {
+		grid-row: span 22;
+	}
+
+	body > main > article .left[rows="23"],
+	body > main > article .right[rows="23"],
+	body > main > article aside[rows="23"] {
+		grid-row: span 23;
+	}
+
+	body > main > article .left[rows="24"],
+	body > main > article .right[rows="24"],
+	body > main > article aside[rows="24"] {
+		grid-row: span 24;
 	}
 }
 
