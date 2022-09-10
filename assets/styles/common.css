@@ -1372,15 +1372,33 @@ body > main > article blockquote:not(.callout) + p + * + * {
 }
 
 body > main > article blockquote.quote {
-	--margin--top: var(--margin--vertical--6);
+	--margin--top: var(--margin--vertical--4);
+}
+
+@media (min-width: 35.5em) {
+	body > main > article blockquote.quote {
+		--margin--top: var(--margin--vertical--6);
+	}
 }
 
 body > main > article blockquote.quote + p + * {
-	--margin--top: var(--margin--vertical--6);
+	--margin--top: var(--margin--vertical--4);
+}
+
+@media (min-width: 35.5em) {
+	body > main > article blockquote.quote + p + * {
+		--margin--top: var(--margin--vertical--6);
+	}
 }
 
 body > main > article blockquote.quote + p + * + * {
-	--margin--top--previous: var(--margin--vertical--6);
+	--margin--top--previous: var(--margin--vertical--4);
+}
+
+@media (min-width: 35.5em) {
+	body > main > article blockquote.quote + p + * + * {
+		--margin--top--previous: var(--margin--vertical--6);
+	}
 }
 
 body > main > article blockquote + * {
@@ -1540,6 +1558,12 @@ body > main > article h2 {
 	width: fit-content;
 }
 
+@media (min-width: 35.5em) {
+	body > main > article h2 {
+		--margin--top: var(--margin--vertical--6);
+	}
+}
+
 body > main > article h2:after {
 	content: "----------------------------------------------------------------------";
 	max-width: 100%;
@@ -1554,6 +1578,12 @@ body > main > article h2 + * {
 	--margin--top--previous: var(--margin--vertical--4);
 }
 
+@media (min-width: 35.5em) {
+	body > main > article h2 + * {
+		--margin--top--previous: var(--margin--vertical--6);
+	}
+}
+
 body > main > article h2 + * + * {
 	--margin--top--previous: var(--margin--vertical--2);
 }
@@ -1564,18 +1594,43 @@ body > main > article h3 {
 
 body > main > article hr,
 body > main > article .callout {
-	--margin--top: var(--margin--vertical--6);
+	--margin--top: var(--margin--vertical--4);
+}
+
+@media (min-width: 35.5em) {
+
+	body > main > article hr,
+	body > main > article .callout {
+		--margin--top: var(--margin--vertical--6);
+	}
 }
 
 body > main > article hr + *,
 body > main > article .callout + * {
-	--margin--top: var(--margin--vertical--6);
-	--margin--top--previous: var(--margin--vertical--6);
+	--margin--top: var(--margin--vertical--4);
+	--margin--top--previous: var(--margin--vertical--4);
+}
+
+@media (min-width: 35.5em) {
+
+	body > main > article hr + *,
+	body > main > article .callout + * {
+		--margin--top: var(--margin--vertical--6);
+		--margin--top--previous: var(--margin--vertical--6);
+	}
 }
 
 body > main > article hr + * + *,
 body > main > article .callout + * + * {
-	--margin--top--previous: var(--margin--vertical--6);
+	--margin--top--previous: var(--margin--vertical--4);
+}
+
+@media (min-width: 35.5em) {
+
+	body > main > article hr + * + *,
+	body > main > article .callout + * + * {
+		--margin--top--previous: var(--margin--vertical--6);
+	}
 }
 
 body > main > article .two-above {
@@ -1591,11 +1646,23 @@ body > main > article .two-below + * {
 }
 
 body > main > article .four-above {
-	--margin--top: var(--margin--vertical--6);
+	--margin--top: var(--margin--vertical--4);
+}
+
+@media (min-width: 35.5em) {
+	body > main > article .four-above {
+		--margin--top: var(--margin--vertical--6);
+	}
 }
 
 body > main > article .four-above + * {
-	--margin--top--previous: var(--margin--vertical--6);
+	--margin--top--previous: var(--margin--vertical--4);
+}
+
+@media (min-width: 35.5em) {
+	body > main > article .four-above + * {
+		--margin--top--previous: var(--margin--vertical--6);
+	}
 }
 
 body > main > article .four-below + * {
@@ -1938,6 +2005,10 @@ body.example > section #source::-webkit-scrollbar {
 }
 
 body.example > section #source > div {
+	height: 100%;
+}
+
+body.example > section #source > div > figure {
 	height: 100%;
 }
 
