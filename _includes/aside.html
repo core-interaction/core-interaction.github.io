@@ -1,3 +1,17 @@
-<aside markdown="0"{% if include.class %} class="{{ include.class }}"{% endif %}{% if include.rows %} rows="{{ include.rows }}"{% endif %}>
-	{{ include.content | markdownify }}
+<aside markdown="0"
+	{% if include.class or include.sticky %}
+		class="
+			{%- if include.class %}{{ include.class }} {% endif -%}
+			{%- if include.sticky %}sticky{% endif -%}
+			"
+	{% endif %}
+	{%- if include.rows %} rows="{{ include.rows }}"{% endif -%}
+	>
+	{% if include.sticky %}
+		<div>
+			{{ include.content | markdownify }}
+		</div>
+	{% else %}
+		{{ include.content | markdownify }}
+	{% endif %}
 </aside>

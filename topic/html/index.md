@@ -103,23 +103,26 @@ We call these [*semantic* elements](https://www.w3schools.com/html/html5_semanti
       Defines a paragraph.
 {: .left .two-above }
 
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Page title</title>
-  </head>
-  <body>
-    <h1>This is a heading</h1>
-    <p>This is a paragraph.</p>
-    <p>This is another paragraph.</p>
-  </body>
-</html>
-```
-{: .right }
+{% capture aside %}
+  ```html
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Page title</title>
+    </head>
+    <body>
+      <h1>This is a heading</h1>
+      <p>This is a paragraph.</p>
+      <p>This is another paragraph.</p>
+    </body>
+  </html>
+  ```
+{% endcapture %}
+
+{% include aside.html content=aside sticky=true rows=2 %}
 
 We use semantic elements to help structure and describe our content—but also for accessibility (screen readers)—where the tag type helps indicate what things are.
-
+{: .left}
 
 
 ## What are elements?
