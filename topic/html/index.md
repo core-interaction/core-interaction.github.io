@@ -68,6 +68,7 @@ HTML consists of a [range of elements](https://developer.mozilla.org/en-US/docs/
 	</body>
 </html>
 ```
+{: .left }
 
 The `<html>` element contains all elements of the page, the `<head>` element contains the title, and the body contains `<h1>` and `<p>`.
 
@@ -304,12 +305,14 @@ The browser parses both of these in the exact same way:
 	</ul>
 </body>
 ```
+{: .left }
 
 ```html
 <body><h1>Dog Breeds</h1><p>There are many kind of
 dog breeds</p><ul><li>German Shepherd</li>
 <li>Bulldog</li><li>Poodle</li></ul></body>
 ```
+{: .left }
 
 But obviously, the first one is much more readable to us humans. We can use whitespace, tabs/indenting, and line breaks to make it easier for us to read the code. There are a lot of common patterns used—like indenting to indicate hierarchy/nesting. But there are also no wrong ways to do it! In HTML, spaces are code *ergonomics* for you—just like a good chair or desk, that allow you to work more comfortably.
 
@@ -350,8 +353,6 @@ But obviously, the first one is much more readable to us humans. We can use whit
 `<tfoot>`
 `<ul>`
 
-
-
 {% include figure.html src='/example/block/demo' height='18em' %}
 
 
@@ -369,8 +370,6 @@ But obviously, the first one is much more readable to us humans. We can use whit
 `<a>`
 `<img>`
 
-
-
 {% include figure.html src='/example/inline/demo' height='18em' %}
 
 
@@ -383,15 +382,9 @@ But obviously, the first one is much more readable to us humans. We can use whit
 ### Comments
 {: .four-above }
 
-You can *comment* part of the code and the browser won’t show it. Comments are often used to explain your thinking, organize your code, “turn off” a bit of code, or hide whatever you’d like.
+You can *comment* part of the code and the browser won’t show it. [Comments](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#html_comments) are often used to explain your thinking, organize your code, “turn off” a bit of code, or hide whatever you’d like.
 
-```html
-<p>Sometimes you want to note something while coding.</p>
-
-<!-- This text will not be shown in the browser! -->
-
-<p>You can write these notes in comments.</p>
-```
+{% include figure.html src='/example/comment/demo' caption='Keep in mind these are still readable in the *source*.' height='14em' %}
 
 I highly recommend getting into a habit of commenting your code, especially when starting out. If you figure something tricky out, write down why and how you solved it to help you understand and remember. And you’ll often come back to things. Commenting your code is a gift to your future self!
 
@@ -400,98 +393,42 @@ I highly recommend getting into a habit of commenting your code, especially when
 ### Tables
 {: .four-above }
 
-These aren’t used as often anymore, in favor of `<div>` and other layout elements. You used to [have to use them](https://thehistoryoftheweb.com/tables-layout-absurd/) to get any kind of multi-column, grid layouts. But those need even more CSS!
+[Tables](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) aren’t used as often anymore, in favor of `<div>` and other layout elements. You used to [have to use them](https://thehistoryoftheweb.com/tables-layout-absurd/) to get any kind of multi-column, grid layouts. But those need even more CSS!
 
-```html
-<h1>A basic table</h1>
-<table>
-	<thead>
-		<tr>
-			<th>Header</th>
-			<th>Another header</th>
-			<th>Still a header</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>A cell</td>
-			<td>Another cell</td>
-			<td>Still a cell</td>
-		</tr>
-	</tbody>
-</table>
-
-<!-- To understand the example better, we have added borders to the table. -->
-<style>table, th, td { border:1px solid black; }</style>
-```
-
-{% include figure.html src='table.png' %}
+{% include figure.html src='/example/table/demo' caption='This syntax is pretty verbose, for what you get.' height='29em' %}
 
 
 
 ### Lists
 {: .four-above }
 
-Any time you have more than two of something, you probably have a list. These are commonly used for semantic navigation elements, as well, think *“here’s a list of links in this site*.
+Any time you have more than two of something, you probably have [a list](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists). These are commonly used for semantic navigation elements, as well, think *“here’s a list of links in this site*.
 
-```html
-<h2>You can have an ordered list</h2>
-<ol>
-	<li>First item</li>
-	<li>Second item</li>
-	<li>Third item</li>
-</ol>
-
-<h2>Or an unordered one</h2>
-<ul>
-	<li>An item</li>
-	<li>Another item</li>
-	<li>Another item</li>
-</ul>
-```
-
-{% include figure.html src='lists.png' %}
+{% include figure.html src='/example/lists/demo' height='25em' %}
 
 
 
 ### Description lists
 {: .four-above }
 
-```html
-<h1>Description lists are underrated!</h1>
-<dl>
-	<dt>This is a term</dt>
-	<dd>And then a definition</dd>
-	<dd>You can have multiple definitions</dd>
-	<dt>Another term</dt>
-	<dd>Another definition</dd>
-</dl>
-```
+There are [specific lists](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl) for defining things.
 
-
-{% include figure.html src='desc.png' %}
-
-These aren’t much to look at without CSS, though. Soon!
+{% include figure.html src='/example/description-list/demo' caption='These aren’t much to look at without CSS, though. Soon!' height='19em' %}
 
 
 
-### Details
+
+### Details/summary
 {: .four-above }
 
-There is even some basic interactivity (way, way ahead of JavaScript) with `<details>` and `<summary>` blocks, which open and close.
+There is even some basic interactivity (way, way ahead of JavaScript) with [“details disclosure”](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) elements that open and close.
 
-```html
-<details>
-	<summary>This opens/closes the details element!</summary>
-	<p>You can have any content down here.<p>
-	<p>Multiple elements, whatever you want.<p>
-</details>
-```
+{% include figure.html src='/example/details-summary/demo' caption='You can do a lot with these.' height='22em' %}
 
-{% include figure.html src='detail.png' %}
+
 
 Again, there are [many, many, many, many HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element). Try and find the one that best fits your usage, wherever possible using a *semantic* element that fits your content.
-
+{: .four-above }
 
 
 ## *User-agent* styles

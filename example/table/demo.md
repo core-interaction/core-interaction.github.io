@@ -1,0 +1,4 @@
+---
+order:
+  - index.html
+---
