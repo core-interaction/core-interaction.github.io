@@ -424,7 +424,7 @@ There are [specific lists](https://developer.mozilla.org/en-US/docs/Web/HTML/Ele
 ### Details/summary
 {: .four-above }
 
-There is even some basic interactivity (way, way ahead of JavaScript) with [“details disclosure”](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) elements that open and close.
+There is even some basic interactivity (way, way ahead of JavaScript) with [*details disclosure*](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) elements that open and close.
 
 {% include figure.html src='/example/details-summary/demo' caption='You can do a lot with these.' height='22em' %}
 
