@@ -11,7 +11,11 @@
 		<link href="/assets/styles/syntax.css" rel="stylesheet">
 		<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
 		<link href="/assets/icons/touch.png" rel="apple-touch-icon">
-		<script src="/assets/scripts/common.js"></script>
+		{% if page.layout == 'example' %}
+			<script src="/assets/scripts/example.js"></script>
+		{% else %}
+			<script src="/assets/scripts/common.js"></script>
+		{% endif %}
 		<meta name="theme-color" content="#e42a1d">
 	</head>
 	<body class="{% if page.layout != 'page' %}{{ page.layout }}{% else%}{{ page.name | split: '.' | first }}{% endif %}">

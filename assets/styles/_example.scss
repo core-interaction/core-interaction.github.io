@@ -1,0 +1,122 @@
+&.example {
+	--padding: 2ch;
+
+	align-items:    stretch;
+	display:        flex;
+	flex-direction: column;
+	height:         100vh;
+	justify-items:  stretch;
+	width:          100%;
+
+	@include breakpoint(568) { flex-direction: row }
+
+	> section {
+		background-color:        var(--color--background--callout);
+		border-top-left-radius:  var(--border--radius);
+		border-top-right-radius: var(--border--radius);
+		display:                 flex;
+		flex-direction:          column;
+		flex-shrink:             0;
+		height:                  var(--split, 50%);
+		overflow:                hidden;
+		position:                relative;
+
+		@include breakpoint(568) {
+			height: 100%;
+			width:  var(--split, 50%);
+		}
+
+		> aside {
+			--width: 0.4rem;
+
+			background-clip:  content-box;
+			background-color: rgba(0, 0, 0, 0.0666);
+			border-radius:    calc(var(--width) * 2);
+			border:           var(--width) solid transparent;
+			bottom:           0;
+			box-sizing:       content-box;
+			cursor:           grab;
+			height:           var(--width);
+			position:         absolute;
+			right:            calc(40% - var(--width));
+			width:            20%;
+			z-index:          1;
+
+			@include breakpoint(568) {
+				bottom: calc(40% - var(--width));
+				height: 20%;
+				right:  0;
+				width:  var(--width);
+			}
+		}
+
+		aside:active ~ div,
+		aside:active ~ div *,
+		&:active + iframe {
+			pointer-events: none;
+		}
+
+		#files {
+			> ul {
+				background-color: var(--color--background--callout);
+				display:          flex;
+				flex-shrink:      0;
+				gap:              var(--padding);
+				left:             0;
+				max-width:        100%;
+				overflow-y:       scroll;
+				padding:          var(--padding);
+				position:         sticky;
+				top:              0;
+
+				&::-webkit-scrollbar { display: none }
+
+				li {
+					@extend code;
+					@extend %link--element;
+
+					user-select: none;
+				}
+
+				li:not(.visible) p { opacity: var(--alpha--inactive) }
+			}
+		}
+
+		#source {
+			height:   100%;
+			overflow: scroll;
+			width:    100%;
+
+			&::-webkit-scrollbar { display: none }
+
+			> div {
+				height: 100%;
+
+				&:not(.visible) { display: none }
+			}
+		}
+	}
+
+	> iframe {
+		background-color:           white;
+		border-color:               var(--color--background--callout);
+		border-style:               solid;
+		border-width:               var(--border--radius);
+		height:                     100%;
+		width:                      100%;
+		min-width:                  0rem;
+		user-select:                none;
+		border-bottom-left-radius:  var(--border--radius);
+		border-bottom-right-radius: var(--border--radius);
+		overflow:                   hidden;
+
+		border-top-width: 0;
+
+		@include breakpoint(568) {
+			border-left-width: 0;
+			border-top-width:  var(--border--radius);
+		}
+	}
+}
+
+

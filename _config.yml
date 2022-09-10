@@ -4,17 +4,21 @@ defaults:
     values:
       layout: index
   - scope:
-      path: project
+      path: project/
     values:
       layout: project
   - scope:
-      path: topic
+      path: topic/
     values:
       layout: topic
   - scope:
-      path: week
+      path: week/
     values:
       layout: week
+  - scope:
+      path: example/
+    values:
+      layout: example
   - scope:
       path: ""
     values:

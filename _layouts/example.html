@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+
+
+<section {% if page.split %}style="--split: {{ page.split }}%;"{% endif %}>
+	<aside></aside>
+	{% if page.order %}
+		{% assign files = page.order %}
+	{% else %}
+		{% assign files = site.static_files | where_exp: "file", "file.path contains page.dir" | where_exp: "file", "file.extname != '.md'" | map: 'name' %}
+	{% endif %}
+	{% if files.size > 1 %}
+		<div id="files">
+			<ul>
+				{% for file in files %}
+					<li tabindex=0 {% if forloop.first %} class="visible" {% endif %}>
+						<p>{{ file }}</p>
+					</li>
+				{% endfor %}
+			</ul>
+			{% comment %} <section>
+				<p><button class="copy" id="copy"></button></p>
+			</section> {% endcomment %}
+		</div>
+	{% endif %}
+	<div id="source">
+		{% for file in files %}
+			<div {% if forloop.first %} class="visible" {% endif %}>
+				{% if file contains ".css" %}
+					{% highlight scss %}
+						{%- include_relative {{ file }} -%}
+					{% endhighlight %}
+				{% elsif file contains ".html" %}
+					{% highlight html %}
+						{%- include_relative {{ file }} -%}
+					{% endhighlight %}
+				{% endif %}
+			</div>
+		{% endfor %}
+	</div>
+</section>
+<iframe src="../index.html"></iframe>
