@@ -703,8 +703,8 @@ body.example > section #files > ul li {
 	--color: black;
 	--color--background: white;
 	--color--background--callout: var(--color--tint);
-	--color--tint: hsl(0, 0%, 95%);
-	--color--tint--reverse: hsl(4, 79%, 55%);
+	--color--tint: #f6f6f6;
+	--color--tint--reverse: #e95349;
 	--color--links: #e42a1d;
 	--color--links--reverse: white;
 	--color--code: #666666;
@@ -750,12 +750,12 @@ body.example > section #files > ul li {
 	}
 }
 
-:root .iframe {
+:root.iframe {
 	--typography--size: 1.6rem;
 }
 
 @media (min-width: 43.5em) {
-	:root .iframe {
+	:root.iframe {
 		--typography--size: 1.8rem;
 	}
 }
