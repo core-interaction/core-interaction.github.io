@@ -33,7 +33,7 @@ const copyFile = () => {
 
 const iframeCheck = () => {
 	if (window.self != window.top) {
-		document.body.classList.add('iframe')
+		document.documentElement.classList.add('iframe')
 	}
 }
 

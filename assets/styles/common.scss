@@ -34,8 +34,8 @@
 
 	--color--background--callout: var(--color--tint);
 
-	--color--tint:          hsl(0, 0%, 95%);
-	--color--tint--reverse: hsl(4, 79%, 55%);
+	--color--tint:          #f6f6f6;
+	--color--tint--reverse: #e95349;
 
 	--color--links:          #e42a1d;
 	--color--links--reverse: white;
@@ -82,7 +82,7 @@
 
 
 	// For code example embeds, inside margins.
-	.iframe {
+	&.iframe {
 		--typography--size: 1.6rem;
 
 		@include breakpoint(696) { --typography--size: 1.8rem }
@@ -555,6 +555,8 @@ body {
 	}
 
 	li pre { padding: 1ch } // Tighter in lists.
+
+
 
 	// Code examples.
 	@import 'example';

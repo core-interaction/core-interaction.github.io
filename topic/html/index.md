@@ -357,7 +357,7 @@ But obviously, the first one is much more readable to us humans. We can use whit
 `<tfoot>`
 `<ul>`
 
-{% include figure.html src='/example/block/demo' height='18em' %}
+{% include figure.html src='/example/block/demo' height='19em' %}
 
 
 
@@ -388,7 +388,7 @@ But obviously, the first one is much more readable to us humans. We can use whit
 
 You can *comment* part of the code and the browser won’t show it. [Comments](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#html_comments) are often used to explain your thinking, organize your code, “turn off” a bit of code, or hide whatever you’d like.
 
-{% include figure.html src='/example/comment/demo' caption='Keep in mind these are still readable in the *source*.' height='14em' %}
+{% include figure.html src='/example/comment/demo' caption='Keep in mind these are still readable in the *source*.' height='15em' %}
 
 I highly recommend getting into a habit of commenting your code, especially when starting out. If you figure something tricky out, write down why and how you solved it to help you understand and remember. And you’ll often come back to things. Commenting your code is a gift to your future self!
 
@@ -399,7 +399,7 @@ I highly recommend getting into a habit of commenting your code, especially when
 
 [Tables](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) aren’t used as often anymore, in favor of `<div>` and other layout elements. You used to [have to use them](https://thehistoryoftheweb.com/tables-layout-absurd/) to get any kind of multi-column, grid layouts. But those need even more CSS!
 
-{% include figure.html src='/example/table/demo' caption='This syntax is pretty verbose, for what you get.' height='29em' %}
+{% include figure.html src='/example/table/demo' caption='This syntax is pretty verbose, for what you get.' height='30em' %}
 
 
 
@@ -408,7 +408,7 @@ I highly recommend getting into a habit of commenting your code, especially when
 
 Any time you have more than two of something, you probably have [a list](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists). These are commonly used for semantic navigation elements, as well, think *“here’s a list of links in this site*.
 
-{% include figure.html src='/example/lists/demo' height='25em' %}
+{% include figure.html src='/example/lists/demo' height='26em' %}
 
 
 
