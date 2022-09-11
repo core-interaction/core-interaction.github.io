@@ -696,7 +696,7 @@ body.example > section #files > ul li {
 	--typography--leading--loose: 2;
 	--typography--leading--base: var(--typography--leading);
 	--typography--size: 1.6rem;
-	--typography--code: 0.888;
+	--typography--size--code: calc(var(--typography--size) * 8 / 9);
 	--margin: 2.4rem;
 	--page--width: 100vw;
 	--border--radius: 0.4rem;
@@ -707,7 +707,7 @@ body.example > section #files > ul li {
 	--color--tint--reverse: hsl(4, 79%, 55%);
 	--color--links: #e42a1d;
 	--color--links--reverse: white;
-	--color--code: #555;
+	--color--code: #666666;
 	--color--highlight: hsl(0, 0%, 0%, 3.333%);
 	--color--highlight--reverse: hsl(0, 0%, 100%, 6.666%);
 	--color--transition: 200ms;
@@ -750,10 +750,8 @@ body.example > section #files > ul li {
 	}
 }
 
-@media (min-width: 20.4375em) {
-	:root .iframe {
-		--typography--size: 1.6rem;
-	}
+:root .iframe {
+	--typography--size: 1.6rem;
 }
 
 @media (min-width: 43.5em) {
@@ -1036,24 +1034,6 @@ body > main > article cite {
 
 body > main > article span.mdash:after {
 	content: "—";
-}
-
-body > main > article *:not(.highlight) > code,
-body > main > article body.example > section #files > ul *:not(.highlight) > li,
-body.example > section #files > ul body > main > article *:not(.highlight) > li {
-	background-color: var(--color--background--callout);
-	border-radius: var(--border--radius);
-	letter-spacing: 0.08em;
-	line-height: var(--typography--leading);
-	margin-left: -0.25em;
-	margin-right: -0.25em;
-	padding: 0.1em 0.25em;
-	user-select: all;
-	white-space: pre-wrap;
-}
-
-body > main > article li pre {
-	padding: 1ch;
 }
 
 body > main > article div[class*=highlighter] {
@@ -1970,14 +1950,26 @@ body.class > main > article > ul > li {
 	padding: initial;
 }
 
-body code:not(._),
-body.example > section #files > ul li:not(._) {
+body code,
+body.example > section #files > ul li {
 	--color: var(--color--code);
-	--typography--size--override: calc(var(--typography--size) * var(--typography--code));
+	--typography--size: var(--typography--size--code);
 	color: var(--color);
-	font-size: var(--typography--size--override);
+	font-size: var(--typography--size);
 	font-style: normal;
 	white-space: pre;
+}
+
+body *:not(pre) > code,
+body.example > section #files > ul *:not(pre) > li {
+	background-color: var(--color--background--callout);
+	border-radius: var(--border--radius);
+	letter-spacing: 0.0775em;
+	line-height: var(--typography--leading);
+	margin-left: -0.2em;
+	margin-right: -0.2em;
+	padding: 0.1em 0.2em;
+	user-select: all;
 }
 
 body pre {
@@ -1991,7 +1983,11 @@ body pre {
 body pre code,
 body.example > section pre #files > ul li,
 body.example > section #files > ul pre li {
-	--typography--leading: 1.2;
+	--typography--leading: 1.25;
+}
+
+body li pre {
+	padding: 1ch;
 }
 
 body.example {
