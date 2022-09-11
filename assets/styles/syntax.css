@@ -16,11 +16,11 @@
 .highlight .cpf,
 .highlight .c1,
 .highlight .cs {
-  color: #bbbbbb;
+  color: #aaaaaa;
 }
 
 .highlight .cp {
-  color: #bbbbbb;
+  color: #aaaaaa;
 }
 
 .highlight .nt {
@@ -29,12 +29,12 @@
 
 .highlight .o,
 .highlight .ow {
-  color: #d0d0d0;
+  color: #aaaaaa;
 }
 
 .highlight .p,
 .highlight .pi {
-  color: #d0d0d0;
+  color: #aaaaaa;
 }
 
 .highlight .gi {
@@ -54,7 +54,7 @@
 .highlight .kp,
 .highlight .kr,
 .highlight .kv {
-  color: #aa759f;
+  color: #b56aa6;
 }
 
 .highlight .kc {
@@ -82,7 +82,7 @@
 }
 
 .highlight .sa {
-  color: #aa759f;
+  color: #b56aa6;
 }
 
 .highlight .sr {
@@ -128,3 +128,37 @@
   color: #74a800;
 }
 
+
+
+.highlight .nf {
+  color: #ffa11f;
+}
+
+.highlight .p + .no,
+.highlight .p + .nb,
+.highlight .p + .no + .p,
+.highlight .p + .nb + .p,
+.highlight .p + .m + .p {
+  color: #74a800;
+}
+
+.highlight .nf ~ .p,
+.highlight .nf ~ .p ~ .p + .p,
+.highlight .nt ~ .p,
+.highlight .nt ~ .p ~ .p + .p,
+.highlight .nc ~ .p,
+.highlight .nc ~ .p ~ .p + .p {
+  color: #ffa11f;
+}
+
+.highlight .nl,
+.highlight .nl + .p {
+  color: #2a94c0;
+}
+
+.highlight .nd,
+.highlight .nd + .o,
+.highlight .nd + .o + .err,
+.highlight .nd + .o + * + .o {
+  color:#b56aa6;
+}
