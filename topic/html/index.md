@@ -5,7 +5,8 @@ order: 1
 
 
 
-## HTML stands for HyperText Markup Language
+## HTML stands for *HyperText Markup Language*
+{: .no_toc }
 
 
 

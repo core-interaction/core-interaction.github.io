@@ -6,7 +6,8 @@ published: false
 
 
 
-[CSS: Cascading Style Sheets | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS)
+## CSS stands for *Cascading Style Sheets*
+{: .no_toc }
 
 MDN, as is custom.
 
