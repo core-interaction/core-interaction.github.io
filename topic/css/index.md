@@ -159,6 +159,7 @@ There are [many, many CSS properties](https://developer.mozilla.org/en-US/docs/W
 
 
 ### Ergonomics
+{: .four-above }
 
 Just [like HTML](/topic/html/#case-whitespace-tabs-line-breaks), CSS does not care about capitalization, extra white space, or line breaks. Folks generally use tabs/indenting to indicate hierarchy, but again it is just whatever makes it easier for you!
 
