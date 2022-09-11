@@ -75,7 +75,7 @@ It makes it hard to read, and hard to change and maintain—you’d have to upda
 So the next way that was added to the standard was using a special HTML element, `<style>`, that wraps blocks of CSS that then apply to an entire document. They go up in the `<head>` of our [HTML documents](/topic/html/#the-basic-document):
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Page title</title>
@@ -105,7 +105,7 @@ The rules are written written with selectors—more on those, below. But importa
 So this is already much better, allowing us to style whole pages easily and consistently. But what about when we have *multiple* pages? If you wanted a whole site to use the same styles, you’d have to duplicate the `<style>` tag over and over, updated it everywhere whenever you changes. Still brittle. So along comes the `<link>` element:
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Page title</title>
@@ -430,7 +430,7 @@ We haven’t even talked about that first *C*! Remember, it stands for [*cascadi
 To add even more confusion, [some CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance) set on a parent also apply to their children—such as `color` or `font-family`. Most spacing/layout properties, like `width` and `margin` do not. This allows you to quickly set some properties globally, without having many brittle/redundant rules, as we did before:
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<style>
