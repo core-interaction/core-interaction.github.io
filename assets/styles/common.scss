@@ -21,7 +21,7 @@
 
 	--typography--size: 1.6rem;
 
-	--typography--code: 0.888;
+	--typography--size--code: calc(var(--typography--size) * 8 / 9);
 
 	--margin: 2.4rem;
 
@@ -40,7 +40,7 @@
 	--color--links:          #e42a1d;
 	--color--links--reverse: white;
 
-	--color--code: #555;
+	--color--code: #666666;
 
 	--color--highlight:          hsl(0, 0%, 0%, 3.333%);
 	--color--highlight--reverse: hsl(0, 0%, 100%, 6.666%);
@@ -80,9 +80,11 @@
 	}
 
 
+
 	// For code example embeds, inside margins.
 	.iframe {
-		@include breakpoint(327) { --typography--size: 1.6rem }
+		--typography--size: 1.6rem;
+
 		@include breakpoint(696) { --typography--size: 1.8rem }
 	}
 }
@@ -514,20 +516,30 @@ body {
 
 
 
-	// Code time.
-	code:not(._) {
-		--color: var(--color--code);
-
-		--typography--size--override: calc(var(--typography--size) * var(--typography--code));
+	// Code!
+	code {
+		--color:            var(--color--code);
+		--typography--size: var(--typography--size--code);
 
 		color:       var(--color);
-		font-size:   var(--typography--size--override);
+		font-size:   var(--typography--size);
 		font-style:  normal;
 		white-space: pre;
 	}
 
+	// Inline code.
+	*:not(pre) > code {
+		background-color: var(--color--background--callout);
+		border-radius:    var(--border--radius);
+		letter-spacing:   0.0775em; // Counteract the scale.
+		line-height:      var(--typography--leading);
+		margin-left:     -0.2em;
+		margin-right:    -0.2em;
+		padding:          0.1em 0.2em;
+		user-select:      all;
+	}
 
-	// “Fenced” blocks.
+	// “Fenced” code blocks.
 	pre {
 		background-color: var(--color--background--callout);
 		border-radius:    var(--border--radius);
@@ -538,9 +550,11 @@ body {
 		code {
 			@extend %typography;
 
-			--typography--leading: 1.2;
+			--typography--leading: 1.25;
 		}
 	}
+
+	li pre { padding: 1ch } // Tighter in lists.
 
 	// Code examples.
 	@import 'example';

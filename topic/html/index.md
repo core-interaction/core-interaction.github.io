@@ -105,19 +105,19 @@ We call these [*semantic* elements](https://www.w3schools.com/html/html5_semanti
 {: .left .two-above }
 
 {% capture aside %}
-  ```html
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <title>Page title</title>
-    </head>
-    <body>
-      <h1>This is a heading</h1>
-      <p>This is a paragraph.</p>
-      <p>This is another paragraph.</p>
-    </body>
-  </html>
-  ```
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page title</title>
+  </head>
+  <body>
+    <h1>This is a heading</h1>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+  </body>
+</html>
+```
 {% endcapture %}
 
 {% include aside.html content=aside sticky=true rows=2 %}

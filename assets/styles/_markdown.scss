@@ -42,21 +42,7 @@
 
 
 
-	// Inline code.
-	*:not(.highlight) > code {
-		background-color: var(--color--background--callout);
-		border-radius:    var(--border--radius);
-		letter-spacing:   0.08em; // Counteract the scale.
-		line-height:      var(--typography--leading);
-		margin-left:     -0.25em;
-		margin-right:    -0.25em;
-		padding:          0.1em 0.25em;
-		user-select:      all;
-		white-space:      pre-wrap;
-	}
-
-	li pre { padding: 1ch } // Tighter in lists.
-
+	// “Fenced” code blocks.
 	div[class*="highlighter"] {
 		--margin--top: var(--margin--vertical--2);
 
