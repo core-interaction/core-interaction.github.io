@@ -31,7 +31,7 @@ CSS came after HTML, first proposed by [Håkon Wium Lie](https://www.w3.org/Sty
 - **CSS 2, 1998**
 - **CSS 3, 1999**
 
-*For the past decade or so, features have been added incrementally by browsers “within” the CSS 3 “standard”.*
+*For the past decade or so, features have been added incrementally by browsers “within” the CSS 3 “standard”.*
 
 
 
@@ -167,7 +167,7 @@ Just [like HTML](/topic/html/#case-whitespace-tabs-line-breaks), CSS does not ca
 
 
 
-## Selectors
+## Basic selectors
 
 
 
@@ -255,6 +255,10 @@ You can also use an `id`, which is a kind of [special attribute](https://develo
 
 
 
+## *Fancy* selectors
+
+
+
 ### Pseudo-classes
 {: .four-above }
 
@@ -329,11 +333,36 @@ div:not(:first-child) {
 
 
 
+### Combinators
+{: .four-above }
+
+<!-- Add some combinator examples here. -->
+
+
+
+### `:has()` is going to change things!
+{: .four-above }
+
+For many, many years folks have wanted a “parent selector” in CSS—meaning a way to apply a style to a parent/container based on one of its children. This was not possible, as elements could only “see” their parents (and previous siblings), but not vice versa.
+
+CSS has [finally added](https://webkit.org/blog/13096/css-has-pseudo-class/) the `:has()` pseudo-class, just in the past few weeks! It will allow us to write much simpler, logical styles:
+
+```css
+div:has(p) {
+  background: red;
+}
+```
+{: style="max-width: 20ch;" }
+
+Safari and Chrome both *just* [added support](https://caniuse.com/css-has), so this should be safe to use in the coming months.
+
+
+
 ## Specificity
 
 
 
-The first three targeting methods (`element`, `.class`, `#id`) are listed in increasing order of *specificity*, meaning that a class trumps an element rule, and an ID trumps a class. IDs are thus *more specific* than classes, which are *more specific* than element selectors. (And you shouldn’t really use them, but inline styles beat them all.) Take this example:
+The first three targeting methods (`element`, `.class`, `#id`) are listed in increasing order of *specificity*, meaning that a class trumps an element rule, and an ID trumps a class. IDs are thus *more specific* than classes, which are *more specific* than element selectors. (And you shouldn’t really use them, but inline styles beat them all.) Take this example:
 
 ```css
 /* In your CSS file. */
@@ -372,7 +401,7 @@ You could write a long book (and many people have) about CSS specificity—the 
 
 
 
-We haven’t even talked about that first C! Remember, it stands for *[cascading](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)*. This means that when there is a tie (like two classes applying the same property), the *lowest* rule wins—literally the one further down within a CSS document, or within a style tag. If you have multiple CSS documents with `<link>` element, the lower linked document will “win.”
+We haven’t even talked about that first *C*! Remember, it stands for [*cascading*](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade). This means that when there is a tie (like two classes applying the same property), the *lowest* rule wins—literally the one further down within a CSS document, or within a style tag. If you have multiple CSS documents with `<link>` element, the lower linked document will “win.”
 
 ```css
 .note {
@@ -392,9 +421,13 @@ We haven’t even talked about that first C! Remember, it stands for *[cascading
 
 {% include figure.html src='Untitled%205.png' %}
 
+
+
 ## And inheritance
 
-To add even more confusion, some CSS properties set on a parent also apply to their children—such as `color` or `font-family`. Most spacing/layout properties, like `width` and `margin` do not. This allows you to quickly set some properties globally, without having many brittle/redundant rules, as we did before:
+
+
+To add even more confusion, [some CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance) set on a parent also apply to their children—such as `color` or `font-family`. Most spacing/layout properties, like `width` and `margin` do not. This allows you to quickly set some properties globally, without having many brittle/redundant rules, as we did before:
 
 ```html
 <!doctype html>
@@ -425,7 +458,11 @@ All the children inherit the `body` styles. Ah, finally, sans-serif.
 
 
 
-## Color!
+## Some basic styles
+
+
+
+### Color!
 
 
 
@@ -433,7 +470,7 @@ All the children inherit the `body` styles. Ah, finally, sans-serif.
 
 
 
-## Typography!
+### Typography!
 
 
 
@@ -448,8 +485,10 @@ As we talked about [last week](/topic/html/#user-agent-styles), browsers have th
 
 Often, when you are working towards your own design, you will find yourself fighting against these built-in styles. Many designers/front-end folk instead start with [*resets*](https://meyerweb.com/eric/tools/css/reset/)—a semi-standard collection of CSS rules that “zero out” the browser’s built-in styles. This means you have to write everything yourself, but you have more control and aren’t building on unknown foundations. And things should be (more) consistent, across browsers and platforms.
 
-Here is a [simple, modern one](https://elad2412.github.io/the-new-css-reset/) for your `<head>`:
+Here is a [simple, modern one](https://elad2412.github.io/the-new-css-reset/) for your `<head>`:
 
 ```html
 <link href="https://core-interaction.github.io/assets/styles/reset.css" rel="stylesheet">
 ```
+
+*This is what we use here for our course site!*
