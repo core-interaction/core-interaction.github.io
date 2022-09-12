@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
+
+		<title>Demo</title>
+		<link href="/assets/styles/reset.css" rel="stylesheet">
+		<link href="/assets/styles/common.css" rel="stylesheet">
+		<link href="/assets/styles/syntax.css" rel="stylesheet">
+		<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
+		<link href="/assets/icons/touch.png" rel="apple-touch-icon">
+
+		<script src="/assets/scripts/example.js"></script>
+
+		<meta name="theme-color" content="#e42a1d">
+	</head>
+	<body class="example">
+		<section style="--split: 66%;">
+			<aside></aside>
+
+
+			<div id="files">
+				<ul>
+
+					<li tabindex=0 class="visible">
+						<p>style.css</p>
+					</li>
+
+					<li tabindex=0>
+						<p>index.html</p>
+					</li>
+
+				</ul>
+
+			</div>
+
+			<div id="source">
+
+				<div class="visible">
+
+
+					<figure class="highlight">
+						<pre><code class="language-scss" data-lang="scss"><span class="cm">/* These are inserted before and after the heading. */</span>
+<span class="nt">h1</span><span class="nd">:before</span><span class="o">,</span> <span class="nt">h1</span><span class="nd">:after</span> <span class="p">{</span>
+	<span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+	<span class="nl">content</span><span class="p">:</span> <span class="s1">' ••• '</span>
+<span class="p">}</span>
+
+<span class="nt">p</span><span class="nd">:first-letter</span> <span class="p">{</span>
+	<span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+	<span class="nl">font-size</span><span class="p">:</span> <span class="nb">larger</span><span class="p">;</span>
+	<span class="nl">font-weight</span><span class="p">:</span> <span class="nb">bold</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">p</span><span class="nd">:first-line</span> <span class="p">{</span>
+	<span class="nl">color</span><span class="p">:</span> <span class="no">maroon</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* After external links. */</span>
+<span class="nt">a</span><span class="o">[</span><span class="nt">href</span><span class="o">^=</span><span class="s2">"https://"</span><span class="o">]</span><span class="nd">:after</span> <span class="p">{</span>
+	<span class="nl">content</span><span class="p">:</span> <span class="s1">' ↗'</span><span class="p">;</span>
+<span class="p">}</span></code></pre>
+					</figure>
+
+
+				</div>
+
+				<div>
+
+
+					<figure class="highlight">
+						<pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+	<span class="nt">&lt;head&gt;</span>
+		<span class="nt">&lt;title&gt;</span>More pseudo-classes<span class="nt">&lt;/title&gt;</span>
+		<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"style.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/head&gt;</span>
+	<span class="nt">&lt;body&gt;</span>
+		<span class="nt">&lt;h1&gt;</span>Pseudo-elements are clever<span class="nt">&lt;/h1&gt;</span>
+		<span class="nt">&lt;p&gt;</span>The first letter of this paragraph will be red, and the first line maroon, no matter where it wraps or how long it ends up being.<span class="nt">&lt;/p&gt;</span>
+		<span class="nt">&lt;blockquote&gt;</span>
+			You can use these to <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://newschool.edu"</span><span class="nt">&gt;</span>embellish links<span class="nt">&lt;/a&gt;</span>
+		<span class="nt">&lt;/blockquote&gt;</span>
+	<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre>
+					</figure>
+
+
+				</div>
+
+			</div>
+		</section>
+		<iframe src="../index.html"></iframe>
+
+	</body>
+</html>

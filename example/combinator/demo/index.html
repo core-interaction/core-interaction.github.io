@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
+
+		<title>Demo</title>
+		<link href="/assets/styles/reset.css" rel="stylesheet">
+		<link href="/assets/styles/common.css" rel="stylesheet">
+		<link href="/assets/styles/syntax.css" rel="stylesheet">
+		<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
+		<link href="/assets/icons/touch.png" rel="apple-touch-icon">
+
+		<script src="/assets/scripts/example.js"></script>
+
+		<meta name="theme-color" content="#e42a1d">
+	</head>
+	<body class="example">
+		<section style="--split: 66%;">
+			<aside></aside>
+
+
+			<div id="files">
+				<ul>
+
+					<li tabindex=0 class="visible">
+						<p>style.css</p>
+					</li>
+
+					<li tabindex=0>
+						<p>index.html</p>
+					</li>
+
+				</ul>
+
+			</div>
+
+			<div id="source">
+
+				<div class="visible">
+
+
+					<figure class="highlight">
+						<pre><code class="language-scss" data-lang="scss"><span class="cm">/* The “descendant” combinator. */</span>
+<span class="cm">/* Only paragraphs inside the header. */</span>
+<span class="nt">header</span> <span class="nt">p</span> <span class="p">{</span>
+	<span class="nl">color</span><span class="p">:</span> <span class="no">orange</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* The “child” combinator. */</span>
+<span class="cm">/* Only immediate children paragraphs of `body`. */</span>
+<span class="nt">body</span> <span class="o">&gt;</span> <span class="nt">p</span> <span class="p">{</span>
+	<span class="nl">color</span><span class="p">:</span> <span class="no">gray</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* “Adjacent sibling” combinator. */</span>
+<span class="cm">/* Only immediately preceded by another paragraph. */</span>
+<span class="nt">p</span> <span class="o">+</span> <span class="nt">p</span> <span class="p">{</span>
+	<span class="nl">color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* “General sibling” combinator. */</span>
+<span class="cm">/* Only paragraphs following `h2`. */</span>
+<span class="nt">h2</span> <span class="o">~</span> <span class="nt">p</span> <span class="p">{</span>
+	<span class="nl">color</span><span class="p">:</span> <span class="no">teal</span><span class="p">;</span>
+<span class="p">}</span></code></pre>
+					</figure>
+
+
+				</div>
+
+				<div>
+
+
+					<figure class="highlight">
+						<pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+	<span class="nt">&lt;head&gt;</span>
+		<span class="nt">&lt;title&gt;</span>Combinators<span class="nt">&lt;/title&gt;</span>
+		<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"style.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/head&gt;</span>
+	<span class="nt">&lt;body&gt;</span>
+		<span class="nt">&lt;header&gt;</span>
+			<span class="nt">&lt;h1&gt;</span>Combinators are handy<span class="nt">&lt;/h1&gt;</span>
+			<span class="nt">&lt;p&gt;</span>This paragraph should be orange, since it is inside the header.<span class="nt">&lt;/p&gt;</span>
+		<span class="nt">&lt;/header&gt;</span>
+		<span class="nt">&lt;p&gt;</span>This paragraph should be gray, as an immediate child of <span class="nt">&lt;strong&gt;</span>body<span class="nt">&lt;/strong&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+		<span class="nt">&lt;p&gt;</span>This one should be blue though, as it follows another paragraph.<span class="nt">&lt;/p&gt;</span>
+		<span class="nt">&lt;p&gt;</span>Same for this one.<span class="nt">&lt;/p&gt;</span>
+		<span class="nt">&lt;h2&gt;</span>This heading doesn’t have a style itself<span class="nt">&lt;/h2&gt;</span>
+		<span class="nt">&lt;p&gt;</span>But will make this following paragraph <span class="nt">&lt;em&gt;</span>teal<span class="nt">&lt;/em&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+		<span class="nt">&lt;p&gt;</span>And this one too, since it is still after the heading.<span class="nt">&lt;/p&gt;</span>
+	<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre>
+					</figure>
+
+
+				</div>
+
+			</div>
+		</section>
+		<iframe src="../index.html"></iframe>
+
+	</body>
+</html>

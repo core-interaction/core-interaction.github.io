@@ -1,0 +1,10 @@
+body {
+	color: darkgray;
+	font-family: sans-serif;
+}
+
+span {
+	color: orange;
+	font-style: italic;
+	font-weight: bold;
+}

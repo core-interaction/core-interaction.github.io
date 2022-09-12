@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
+
+		<title>Demo</title>
+		<link href="/assets/styles/reset.css" rel="stylesheet">
+		<link href="/assets/styles/common.css" rel="stylesheet">
+		<link href="/assets/styles/syntax.css" rel="stylesheet">
+		<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
+		<link href="/assets/icons/touch.png" rel="apple-touch-icon">
+
+		<script src="/assets/scripts/example.js"></script>
+
+		<meta name="theme-color" content="#e42a1d">
+	</head>
+	<body class="example">
+		<section style="--split: 66%;">
+			<aside></aside>
+
+
+			<div id="files">
+				<ul>
+
+					<li tabindex=0 class="visible">
+						<p>style.css</p>
+					</li>
+
+					<li tabindex=0>
+						<p>index.html</p>
+					</li>
+
+				</ul>
+
+			</div>
+
+			<div id="source">
+
+				<div class="visible">
+
+
+					<figure class="highlight">
+						<pre><code class="language-scss" data-lang="scss"><span class="cm">/* Links that start with `https://` are external. */</span>
+<span class="nt">a</span><span class="o">[</span><span class="nt">href</span><span class="o">^=</span><span class="s2">"https://"</span><span class="o">]</span> <span class="p">{</span>
+	<span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* Links with `.pdf` anywhere in them. */</span>
+<span class="nt">a</span><span class="o">[</span><span class="nt">href</span><span class="o">*=</span><span class="s2">".pdf"</span><span class="o">]</span> <span class="p">{</span>
+	<span class="nl">color</span><span class="p">:</span> <span class="no">orange</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* The `open` attribute is added when you toggle. */</span>
+<span class="nt">details</span><span class="o">[</span><span class="nt">open</span><span class="o">]</span> <span class="p">{</span>
+	<span class="nl">color</span><span class="p">:</span> <span class="no">teal</span><span class="p">;</span>
+<span class="p">}</span></code></pre>
+					</figure>
+
+
+				</div>
+
+				<div>
+
+
+					<figure class="highlight">
+						<pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+	<span class="nt">&lt;head&gt;</span>
+		<span class="nt">&lt;title&gt;</span>Attribute<span class="nt">&lt;/title&gt;</span>
+		<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"style.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/head&gt;</span>
+	<span class="nt">&lt;body&gt;</span>
+		<span class="nt">&lt;p&gt;</span>
+			You might use these to differentiate
+			<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>an internal link<span class="nt">&lt;/a&gt;</span>
+			from an
+			<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://newschool.edu"</span><span class="nt">&gt;</span>an external one<span class="nt">&lt;/a&gt;</span>,
+			or ones for
+			<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/assets/PUCD_2035_F_FEHRENBACH_F22.pdf"</span><span class="nt">&gt;</span>PDF files<span class="nt">&lt;/a&gt;</span>.
+		<span class="nt">&lt;/p&gt;</span>
+		<span class="nt">&lt;details&gt;</span>
+			<span class="nt">&lt;summary&gt;</span>Or an open/close state for details/summary<span class="nt">&lt;/summary&gt;</span>
+			<span class="nt">&lt;p&gt;</span>This won’t be visible to start, but should be teal when you can see it.<span class="nt">&lt;/p&gt;</span>
+		<span class="nt">&lt;/details&gt;</span>
+	<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre>
+					</figure>
+
+
+				</div>
+
+			</div>
+		</section>
+		<iframe src="../index.html"></iframe>
+
+	</body>
+</html>
