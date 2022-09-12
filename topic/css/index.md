@@ -27,6 +27,9 @@ CSS is the standard language/format for styling web pages, which specifies what 
 
 * [Google Fonts](https://fonts.google.com) \
   *We’ll use this for free font families.*
+
+* [Wakamai Fondue](https://wakamaifondue.com) \
+  *“What can my font do?”*
 {: .icon-link .no-marker .right rows="5"}
 
 In our ongoing analogy, CSS is the *skin* of the web. [Just like HTML](/topics/html), at its most basic it is still just text, in a file, on a computer. It can live inside HTML documents themselves, but is more commonly seen on its own with the extension `.css`
