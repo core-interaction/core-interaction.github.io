@@ -408,7 +408,7 @@ I highly recommend getting into a habit of commenting your code, especially when
 
 Any time you have more than two of something, you probably have [a list](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists). These are commonly used for semantic navigation elements, as well, think *“here’s a list of links in this site*.
 
-{% include figure.html src='/example/lists/demo' height='26em' %}
+{% include figure.html src='/example/list/demo' height='26em' %}
 
 
 
