@@ -8,7 +8,7 @@ h2#second-heading {
 	color: blue;
 }
 
-/* Applies to both selectors. */
+/* This applies to both selectors! D.R.Y. */
 blockquote,
 footer {
 	background-color: lightgray;

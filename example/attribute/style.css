@@ -5,10 +5,10 @@ a[href^="https://"] {
 
 /* Links with `.pdf` anywhere in them. */
 a[href*=".pdf"] {
-	color: green;
+	color: orange;
 }
 
 /* The `open` attribute is added when you toggle. */
 details[open] {
-	color: blue;
+	color: teal;
 }

@@ -231,74 +231,17 @@ You can use the various [attributes](topic/html/#attributes) as selectors, too. 
 ### Pseudo-classes
 {: .four-above }
 
-These are [special selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes), added to `element`, `class`, or `id` which target unique *states* or *instances* of HTML elements:
+These are [special selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes), added to `element`, `class`, or `id` which target unique *states* or *instances* of HTML elements. You’ll often see these used to target link states:
 
-```css
-/* Make all your links blue */
-a {
-	color: blue;
-}
+{% include figure.html src='/example/pseudo-link/demo' height='26em' %}
 
-/* Will change the color when the mouse is over it. */
-a:hover {
-	color: pink;
-}
 
-/* When the mouse is clicked. */
-a:active {
-	color: red;
-}
 
-/* After you’ve visited the link. */
-a:visited {
-	color: gray;
-}
-```
+Other common examples have to do with [counts and positions](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes):
 
-Other common examples have to do with counts and positions:
+{% include figure.html src='/example/pseudo-child/demo' height='32em' %}
 
-```css
-/* The paragraph is the first descendent of some parent element. */
-p:first-child {
-	color: blue;
-}
 
-/* Paragraphs that are the 4th children. */
-p:nth-child(4) {
-	color: green;
-}
-
-/* Last one. */
-p:last-child {
-	color: red;
-}
-
-/* Only one. */
-p:only-child {
-	color: orange;
-}
-
-/* You can invert these, too. */
-div:not(:first-child) {
-	margin-top: 40px;
-}
-```
-
-```html
-<div>
-	<p>This should be blue.</p>
-	<p>Standard black, here.</p>
-	<p>Also black.</p>
-	<p>This one is green!</p>
-	<p>Back to black.</p>
-	<p>This will be red.</p>
-</div>
-<div>
-	<p>This should be orange.</p>
-</div>
-```
-
-{% include figure.html src='Untitled%203.png' %}
 
 
 

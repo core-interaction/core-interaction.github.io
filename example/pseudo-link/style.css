@@ -1,0 +1,19 @@
+/* Make all the links red. */
+a {
+	color: red;
+}
+
+/* Change the color when the mouse is over it. */
+a:hover {
+	color: orange;
+}
+
+/* And when the mouse is clicked. */
+a:active {
+	color: maroon;
+}
+
+/* After you’ve visited the link. */
+a:visited {
+	color: purple;
+}
