@@ -18,7 +18,16 @@ CSS is the standard language/format for styling web pages, which specifies what 
 
 * [Basics of CSS](https://www.youtube.com/watch?v=BUZIaTHm_oE) \
   *Another ASMR introduction from Laurel.*
-{: .icon-link .no-marker .right rows="3"}
+
+* [Google’s web.dev CSS course](https://web.dev/learn/css/) \
+  *Different order from ours, but pretty good.*
+
+* [HTML Color Codes](https://htmlcolorcodes.com/) \
+  *Too many ads, but some nice tools for color.*
+
+* [Google Fonts](https://fonts.google.com) \
+  *We’ll use this for free font families.*
+{: .icon-link .no-marker .right rows="5"}
 
 In our ongoing analogy, CSS is the *skin* of the web. [Just like HTML](/topics/html), at its most basic it is still just text, in a file, on a computer. It can live inside HTML documents themselves, but is more commonly seen on its own with the extension `.css`
 {: .left }
@@ -29,8 +38,10 @@ CSS came after HTML, first proposed by [Håkon Wium Lie](https://www.w3.org/Sty
 - **CSS 1, 1996**
 - **CSS 2, 1998**
 - **CSS 3, 1999**
+{: .left }
 
-*For the past decade or so, features have been added incrementally by browsers “within” the CSS 3 “standard”.*
+*For the past decade or so, features have been added incrementally by browsers “within” the CSS 3 “standard”. That’s how it goes, these days.*
+{: .left }
 
 
 
