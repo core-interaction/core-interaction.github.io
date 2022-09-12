@@ -16,6 +16,6 @@ p:first-line {
 }
 
 /* After external links. */
-a[href^="https://"]:after {
+a[href^='https://']:after {
 	content: ' ↗';
 }

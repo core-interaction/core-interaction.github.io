@@ -1,10 +1,10 @@
 /* Links that start with `https://` are external. */
-a[href^="https://"] {
+a[href^='https://'] {
 	color: red;
 }
 
 /* Links with `.pdf` anywhere in them. */
-a[href*=".pdf"] {
+a[href*='.pdf'] {
 	color: orange;
 }
 

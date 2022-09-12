@@ -16,7 +16,7 @@
 		<meta name="theme-color" content="#e42a1d">
 	</head>
 	<body class="example">
-		<section style="--split: 66%;">
+		<section>
 			<aside></aside>
 
 
@@ -24,11 +24,11 @@
 				<ul>
 
 					<li tabindex=0 class="visible">
-						<p>index.html</p>
+						<p>style.css</p>
 					</li>
 
 					<li tabindex=0>
-						<p>style.css</p>
+						<p>index.html</p>
 					</li>
 
 				</ul>
@@ -38,30 +38,6 @@
 			<div id="source">
 
 				<div class="visible">
-
-
-					<figure class="highlight">
-						<pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-	<span class="nt">&lt;head&gt;</span>
-		<span class="nt">&lt;title&gt;</span>Specificity<span class="nt">&lt;/title&gt;</span>
-		<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"style.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;/head&gt;</span>
-	<span class="nt">&lt;body&gt;</span>
-		<span class="nt">&lt;p&gt;</span>This paragraph will be red, from the <span class="nt">&lt;em&gt;</span>element<span class="nt">&lt;/em&gt;</span>.<span class="nt">&lt;/p&gt;</span>
-		<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"green"</span><span class="nt">&gt;</span>This paragraph will be green, from the <span class="nt">&lt;em&gt;</span>class<span class="nt">&lt;/em&gt;</span>.<span class="nt">&lt;/p&gt;</span>
-		<span class="nt">&lt;p&gt;</span>This paragraph will be red again, no <span class="nt">&lt;em&gt;</span>class<span class="nt">&lt;/em&gt;</span>.<span class="nt">&lt;/p&gt;</span>
-		<span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"green"</span> <span class="na">id=</span><span class="s">"intro"</span><span class="nt">&gt;</span>This heading will be blue, from the <span class="nt">&lt;em&gt;</span>ID<span class="nt">&lt;/em&gt;</span>, even though it has the <span class="nt">&lt;em&gt;</span>class<span class="nt">&lt;/em&gt;</span> too<span class="nt">&lt;/h2&gt;</span>
-		<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"warning"</span><span class="nt">&gt;</span>This paragraph will be orange, from the <span class="nt">&lt;em&gt;</span>ID<span class="nt">&lt;/em&gt;</span>, beating the <span class="nt">&lt;em&gt;</span>element<span class="nt">&lt;/em&gt;</span>.<span class="nt">&lt;/p&gt;</span>
-		<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"green"</span> <span class="na">style=</span><span class="s">"color: gray;"</span><span class="nt">&gt;</span>This paragraph will be gray, from an <span class="nt">&lt;em&gt;</span>inline style<span class="nt">&lt;/em&gt;</span>, which beats everything.<span class="nt">&lt;/p&gt;</span>
-	<span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span></code></pre>
-					</figure>
-
-
-				</div>
-
-				<div>
 
 
 					<figure class="highlight">
@@ -80,6 +56,30 @@
 <span class="nn">#warning</span> <span class="p">{</span>
 	<span class="nl">color</span><span class="p">:</span> <span class="no">orange</span><span class="p">;</span>
 <span class="p">}</span></code></pre>
+					</figure>
+
+
+				</div>
+
+				<div>
+
+
+					<figure class="highlight">
+						<pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+	<span class="nt">&lt;head&gt;</span>
+		<span class="nt">&lt;title&gt;</span>Specificity<span class="nt">&lt;/title&gt;</span>
+		<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"style.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/head&gt;</span>
+	<span class="nt">&lt;body&gt;</span>
+		<span class="nt">&lt;p&gt;</span>This paragraph will be red, from the <span class="nt">&lt;em&gt;</span>element<span class="nt">&lt;/em&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+		<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"green"</span><span class="nt">&gt;</span>This paragraph will be green, from the <span class="nt">&lt;em&gt;</span>class<span class="nt">&lt;/em&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+		<span class="nt">&lt;p&gt;</span>This paragraph will be red again, no <span class="nt">&lt;em&gt;</span>class<span class="nt">&lt;/em&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+		<span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"green"</span> <span class="na">id=</span><span class="s">"intro"</span><span class="nt">&gt;</span>This heading will be blue, from the <span class="nt">&lt;em&gt;</span>ID<span class="nt">&lt;/em&gt;</span>, even though it has the <span class="nt">&lt;em&gt;</span>class<span class="nt">&lt;/em&gt;</span> too<span class="nt">&lt;/h2&gt;</span>
+		<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"warning"</span><span class="nt">&gt;</span>This paragraph will be orange, from the <span class="nt">&lt;em&gt;</span>ID<span class="nt">&lt;/em&gt;</span>, beating the <span class="nt">&lt;em&gt;</span>element<span class="nt">&lt;/em&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+		<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"green"</span> <span class="na">style=</span><span class="s">"color: gray;"</span><span class="nt">&gt;</span>This paragraph will be gray, from an <span class="nt">&lt;em&gt;</span>inline style<span class="nt">&lt;/em&gt;</span>, which beats everything.<span class="nt">&lt;/p&gt;</span>
+	<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre>
 					</figure>
 
 
