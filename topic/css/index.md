@@ -200,9 +200,9 @@ You can use these over and over, on any kind of element. And individual elements
 
 You can also use an `id`, which is a kind of [special attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id) that can only be used *once* in an HTML document. These are useful thus useful for targeting singular things—like your navigation, the document title, specific headings, etc:
 
-{% include figure.html src='/example/id/demo' height='21em' %}
+{% include figure.html src='/example/id/demo' height='19em' %}
 
-These prefixed by `#` in CSS. They can also be used as [link destinations](http://localhost:4000/topic/html/#attributes), as in `#introduction`.
+These are prefixed by `#` in CSS, as with `#title` and `#introduction`. They can also be used as [link destinations](/topic/html/#attributes).
 
 
 
@@ -210,9 +210,21 @@ These prefixed by `#` in CSS. They can also be used as [link destinations](http:
 
 
 
-### Combined
+### Combinations and groups
 {: .four-above }
 
+You can use combinations of the above *elements*, *classes*, and *IDs* to be even more specific—however, this likely means you just need to rethink your HTML structure. (We’ll unpack *specificity*, below.) More commonly, you might apply declarations to multiple selectors, called *group selectors*, with a comma-delineated [selector list](https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list):
+
+{% include figure.html src='/example/group/demo' height='22em' %}
+
+
+
+### With specific attributes
+{: .four-above }
+
+You can use the various [attributes](topic/html/#attributes) as selectors, too. These are usually very similar to using *classes*, but can help you [differentiate things](https://css-tricks.com/attribute-selectors/) like internal and external links, for example:
+
+{% include figure.html src='/example/attribute/demo' height='21em' %}
 
 
 
