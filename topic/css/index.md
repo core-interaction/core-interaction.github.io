@@ -178,7 +178,7 @@ Selectors are used to *target* certain HTML elements within the page. These can 
 
 If you want to change the styles for all instances of a given HTML element, you drop the `<` `>` from the tag for an element selector. These are called [*type selectors*](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors):
 
-{% include figure.html src='/example/element/demo' height='20em' %}
+{% include figure.html src='/example/element/demo' caption='Note that CSS has different `/* comment syntax */`, too.' height='20em' %}
 
 
 
@@ -187,55 +187,32 @@ If you want to change the styles for all instances of a given HTML element, you
 
 But maybe you don’t want to style all of the paragraphs. You can then use a `class` to [target specific instances](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors). They are  added as an *[attribute](/topic/html/#attributes)* on the element you want to target:
 
-```html
-<!-- In your HTML file. -->
-<h1 class="highlight">This heading will will be in green.</h1>
-<p>This paragraph will remain in black.</p>
-<p class="highlight">This paragraph will also be in green.</p>
-```
+{% include figure.html src='/example/class/demo' height='23em' %}
 
-The *value* here is our class name, which we write in CSS by prefixing with a `.`
+The *value* here is our class name, which we write in CSS by prefixing with a `.` as with `.highlight` and `.faded`.
 
-```css
-/* In your CSS file. */
-.highlight {
-	color: green;
-}
-```
-
-{% include figure.html src='Untitled%201.png' %}
-
-You can use these over and over, on any kind of element. And individual elements can have *multiple* classes, too. Class names can be whatever you want—there are whole methodologies about what to call these things. They are the most common way to target things in CSS.
+You can use these over and over, on any kind of element. And individual elements can have *multiple* classes, too. (We’ll talk about how conflicting rules are handled, below.) Class names can be whatever you want—there are whole methodologies about what to call these things. They are the most common way to target things in CSS.
 
 
 
 ### 3. With an ID
 {: .four-above }
 
-You can also use an `id`, which is a kind of [special attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id) that can only be used *once* in an HTML document. These are useful thus useful for targeting singular things—like your navigation, or the document title, etc. These prefixed by `#` in CSS (and can also be used as link destinations, as in `#navigation` ):
+You can also use an `id`, which is a kind of [special attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id) that can only be used *once* in an HTML document. These are useful thus useful for targeting singular things—like your navigation, the document title, specific headings, etc:
 
-```html
-<!-- In your HTML file. -->
-<h1>This heading will remain in black.</h1>
-<p id="warning">This paragraph will be in red.</p>
-<p id="introduction">This paragraph will be in green.</p>
-```
+{% include figure.html src='/example/id/demo' height='21em' %}
 
-```css
-/* In your CSS file. */
-#warning {
-	color: red;
-}
-#introduction {
-	color: green;
-}
-```
-
-{% include figure.html src='Untitled%202.png' %}
+These prefixed by `#` in CSS. They can also be used as [link destinations](http://localhost:4000/topic/html/#attributes), as in `#introduction`.
 
 
 
 ## *Fancy* selectors
+
+
+
+### Combined
+{: .four-above }
+
 
 
 
