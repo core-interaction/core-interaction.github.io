@@ -42,7 +42,7 @@
 }
 
 .highlight .gd {
-  color: #ac4142;
+  color: #c52e28;
 }
 
 .highlight .gh {
@@ -130,7 +130,7 @@
 
 
 
-/* Additions. */
+/* additions. */
 .highlight .nf {
   color: #ffa11f;
 }
@@ -141,7 +141,8 @@
 .highlight .p + .no + .p,
 .highlight .p + .nb + .p,
 .highlight .p + .n + .p,
-.highlight .p + .m + .p {
+.highlight .p + [class^='m'] + .p,
+.highlight [class^='m'] + [class^='m'] + .p {
   color: #74a800;
 }
 
@@ -167,4 +168,23 @@
 .highlight .nd + .o + .err,
 .highlight .nd + .o + * + .o {
   color:#b56aa6;
+}
+
+.highlight .s1 + .p,
+.highlight .s1 + .o + .nb + .p,
+.highlight .p + .nf,
+.highlight .p + .nf + .p,
+.highlight .o + .m + .p,
+.highlight .sx + .nf,
+.highlight .sx + .nf + .p {
+  color: #74a800;
+}
+
+.highlight .nd + .o + .nt,
+.highlight .nt + .nd + .o + .nd {
+  color: #c52e28;
+}
+
+.highlight .cm + .nt + .nd + .o + span.nt:nth-child(5) { /* Don’t ask. */
+  color: #ffa11f;
 }
