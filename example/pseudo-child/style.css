@@ -5,12 +5,12 @@ p:first-child {
 
 /* Paragraphs that are the 4th children. */
 p:nth-child(4) {
-	color: green;
+	color: purple;
 }
 
 /* Last one. */
 p:last-child {
-	color: orange;
+	color: fuchsia;
 }
 
 /* Only one. */

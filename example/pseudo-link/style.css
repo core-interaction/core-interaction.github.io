@@ -10,7 +10,7 @@ a:visited {
 
 /* Change the color when the mouse is over it. */
 a:hover {
-	color: orange;
+	color: fuchsia;
 }
 
 /* And when the mouse is clicked. */

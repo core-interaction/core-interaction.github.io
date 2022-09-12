@@ -2,8 +2,8 @@ p {
 	color: red;
 }
 
-.green {
-	color: green;
+.maroon {
+	color: maroon;
 }
 
 #intro {
@@ -11,5 +11,5 @@ p {
 }
 
 #warning {
-	color: orange;
+	color: teal;
 }
