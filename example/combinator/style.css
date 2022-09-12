@@ -1,7 +1,7 @@
 /* The “descendant” combinator. */
 /* Only paragraphs inside the header. */
 header p {
-	color: orange;
+	color: blue;
 }
 
 /* The “child” combinator. */
@@ -13,11 +13,11 @@ body > p {
 /* “Adjacent sibling” combinator. */
 /* Only immediately preceded by another paragraph. */
 p + p {
-	color: blue;
+	color: teal;
 }
 
 /* “General sibling” combinator. */
 /* Only paragraphs following `h2`. */
 h2 ~ p {
-	color: teal;
+	color: green;
 }
