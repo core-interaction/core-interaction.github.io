@@ -1,4 +1,4 @@
-/* The paragraph is the first descendent of some parent element. */
+/* The paragraph is the first descendent of some parent. */
 p:first-child {
 	color: blue;
 }
@@ -10,15 +10,15 @@ p:nth-child(4) {
 
 /* Last one. */
 p:last-child {
-	color: red;
+	color: orange;
 }
 
 /* Only one. */
 p:only-child {
-	color: orange;
+	color: red;
 }
 
 /* You can invert these, too. */
 div:not(:first-child) {
-	margin-top: 40px;
+	background-color: lightgray;
 }

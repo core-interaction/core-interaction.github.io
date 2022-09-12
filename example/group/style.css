@@ -3,7 +3,8 @@ p.warning {
 	color: red;
 }
 
-/* The `h2` isn’t really necessary, here. */
+/* The `h2` isn’t really necessary here… */
+/* Since the `id` is already unique! */
 h2#second-heading {
 	color: blue;
 }

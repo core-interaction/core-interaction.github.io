@@ -215,7 +215,7 @@ These are prefixed by `#` in CSS, as with `#title` and `#introduction`. They can
 
 You can use combinations of the above *elements*, *classes*, and *IDs* to be even more specific—however, this likely means you just need to rethink your HTML structure. (We’ll unpack *specificity*, below.) More commonly, you might apply declarations to multiple selectors, called *group selectors*, with a comma-delineated [selector list](https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list):
 
-{% include figure.html src='/example/group/demo' height='22em' %}
+{% include figure.html src='/example/group/demo' height='23em' %}
 
 
 
@@ -245,17 +245,23 @@ Other common examples have to do with [counts and positions](https://developer.m
 
 
 
-### Combinators
+### Finally, combinators
 {: .four-above }
 
-<!-- Add some combinator examples here. -->
+Last, you will often want to target something based on its relationship to other elements—its *siblings* or its *parents*. For this, CSS has [*combinators*](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators), which let you relate all the various selectors we’ve learned about here together.
+
+{% include figure.html src='/example/combinator/demo' height='31em' %}
 
 
 
-### `:has()` is going to change things!
+Importantly, combinators can only “see” elements *before* and *above* themselves—meaning their *previous <em>(older?)</em> siblings* or their *parents*. This directionality somewhat corresponds with the *cascade*, which we’ll talk about shortly.
+
+
+
+### `:has()` will change this!
 {: .four-above }
 
-For many, many years folks have wanted a “parent selector” in CSS—meaning a way to apply a style to a parent/container based on one of its children. This was not possible, as elements could only “see” their parents (and previous siblings), but not vice versa.
+For many, many years folks have wanted a “parent selector” in CSS—meaning a way to apply a style to a parent/container based on one of its children. This was not possible before, as we mentioned above.
 
 CSS has [finally added](https://webkit.org/blog/13096/css-has-pseudo-class/) the `:has()` pseudo-class, just in the past few weeks! It will allow us to write much simpler, logical styles:
 
@@ -276,62 +282,19 @@ Safari and Chrome both *just* [added support](https://caniuse.com/css-has), so t
 
 The first three targeting methods (`element`, `.class`, `#id`) are listed in increasing order of *specificity*, meaning that a class trumps an element rule, and an ID trumps a class. IDs are thus *more specific* than classes, which are *more specific* than element selectors. (And you shouldn’t really use them, but inline styles beat them all.) Take this example:
 
-```css
-/* In your CSS file. */
-p {
-	color: red;
-}
-.highlight {
-	color: green;
-}
-#intro {
-	color: blue;
-}
-#warning {
-	color: orange;
-}
-```
+{% include figure.html src='/example/specificity/demo' height='22em' %}
 
-```html
-<!-- In your HTML file. -->
-<h2>This heading will remain black.</h2>
-<p>This paragraph will be red.</p>
-<p class="highlight">This paragraph will be green.</p>
-<p>This paragraph will be red again.</p>
-<h2 class="highlight" id="intro">This heading will be blue.</h2>
-<p id="warning">This paragraph will be orange.</p>
-<p class="highlight" style="color: gray;">This paragraph will be gray.</p>
-```
-
-{% include figure.html src='Untitled%204.png' %}
-
-You could write a long book (and many people have) about CSS specificity—the myriad of ways that some CSS rules take precedent over others. Suffice it to say *it’s complicated*. The easiest way to avoid specificity problems is generally to stay at the same level throughout your HTML, usually by using classes throughout.
+You could write a *long* book (and many people have) about CSS specificity—the myriad of ways that some CSS rules take precedent over others. Suffice it to say *it’s complicated*. The easiest way to avoid specificity problems is generally to stay at the same level throughout your HTML, usually by just using classes throughout.
 
 
 
-## The cascade
+## Oh right, the cascade
 
 
 
-We haven’t even talked about that first *C*! Remember, it stands for [*cascading*](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade). This means that when there is a tie (like two classes applying the same property), the *lowest* rule wins—literally the one further down within a CSS document, or within a style tag. If you have multiple CSS documents with `<link>` element, the lower linked document will “win.”
+We haven’t even talked about that first *C*! Remember, it stands for [*cascading*](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade). This means that when there is a tie (like two classes applying the same property), the *lowest* rule wins—literally the one further down within a CSS document, or within a style tag. If you have multiple CSS documents with `<link>` element, the lower linked document will take precedence.
 
-```css
-.note {
-	color: gray;
-}
-.warning {
-	color: orange;
-}
-```
-
-```html
-<!-- In your HTML file. -->
-<p class="note">This paragraph will be gray.</p>
-<p class="note">This paragraph will also be gray.</p>
-<p class="warning note">This paragraph will be orange though.</p>
-```
-
-{% include figure.html src='Untitled%205.png' %}
+{% include figure.html src='/example/cascade/demo' height='14em' %}
 
 
 
@@ -339,34 +302,15 @@ We haven’t even talked about that first *C*! Remember, it stands for [*cascadi
 
 
 
-To add even more confusion, [some CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance) set on a parent also apply to their children—such as `color` or `font-family`. Most spacing/layout properties, like `width` and `margin` do not. This allows you to quickly set some properties globally, without having many brittle/redundant rules, as we did before:
+To add even more confusion, [some CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance) set on a parent also apply to their children—such as `color` or `font-family`. Most spacing/layout properties, like `width` and `margin` do not. (More on those, next week.)
 
-```html
-<!DOCTYPE html>
-<html>
-	<head>
-		<style>
-			body {
-				color: darkgray;
-				font-family: sans-serif;
-			}
-			span {
-				color: orange;
-				font-weight: bold;
-			}
-		</style>
-	</head>
-	<body>
-		<p>This is a paragraph.</p>
-		<p>This is another paragraph.</p>
-		<p>This is <span>third</span> paragraph.</p>
-	</body>
-</html>
-```
+This allows you to quickly set some properties globally, without having many brittle/redundant rules, as we did before:
 
-{% include figure.html src='Untitled%206.png' %}
 
-All the children inherit the `body` styles. Ah, finally, sans-serif.
+{% include figure.html src='/example/inheritance/demo' height='16em' %}
+
+
+All the children inherit the `body` styles. Ah, finally, `sans-serif`.
 
 
 
