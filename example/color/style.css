@@ -1,0 +1,36 @@
+li:nth-child(1) {
+	color: dodgerblue;
+	/* There are named colors. */
+}
+
+li:nth-child(2) {
+	color: #1e90ff;
+	/* Or you can specify a hex value. */
+}
+
+li:nth-child(3) {
+	color: rgb(30, 144, 255);
+	/* Or RGB for Red, Green, Blue. */
+}
+
+li:nth-child(4) {
+	color: hsl(210, 100%, 56%);
+	/* Or Hue, Saturation, Lightness */
+}
+
+/* RGB and HSL have a fourth value, for Alpha (transparency). */
+li:nth-child(5) {
+	color: rgba(30, 144, 255, 50%);
+	/* Alpha percentage, 0–100%. */
+}
+
+li:nth-child(6) {
+	color: hsla(210, 100%, 56%, 0.5);
+	/* Or a decimal, 0–1. */
+}
+
+li:nth-child(7) {
+	color: dodgerblue;
+	opacity: 0.5;
+	/* This will affect everything, not just text! */
+}

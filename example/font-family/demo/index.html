@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
+
+		<title>Demo</title>
+		<link href="/assets/styles/reset.css" rel="stylesheet">
+		<link href="/assets/styles/common.css" rel="stylesheet">
+		<link href="/assets/styles/syntax.css" rel="stylesheet">
+		<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
+		<link href="/assets/icons/touch.png" rel="apple-touch-icon">
+
+		<script src="/assets/scripts/example.js"></script>
+
+		<meta name="theme-color" content="#e42a1d">
+	</head>
+	<body class="example">
+		<section style="--split: 75%;">
+			<aside></aside>
+
+
+			<div id="files">
+				<ul>
+
+					<li tabindex=0 class="visible">
+						<p>style.css</p>
+					</li>
+
+					<li tabindex=0>
+						<p>index.html</p>
+					</li>
+
+				</ul>
+
+			</div>
+
+			<div id="source">
+
+				<div class="visible">
+
+
+					<figure class="highlight">
+						<pre><code class="language-scss" data-lang="scss"><span class="cm">/* Importing from Google Fonts. These have to be at the top! */</span>
+<span class="k">@import</span> <span class="sx">url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&amp;display=swap')</span><span class="p">;</span>
+
+<span class="cm">/* These will depend on your user’s platform and browser. */</span>
+<span class="nt">li</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">1</span><span class="o">)</span> <span class="p">{</span> <span class="nl">font-family</span><span class="p">:</span> <span class="nb">serif</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">li</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">2</span><span class="o">)</span> <span class="p">{</span> <span class="nl">font-family</span><span class="p">:</span> <span class="nb">sans-serif</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">li</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">3</span><span class="o">)</span> <span class="p">{</span> <span class="nl">font-family</span><span class="p">:</span> <span class="nb">monospace</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">li</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">4</span><span class="o">)</span> <span class="p">{</span> <span class="nl">font-family</span><span class="p">:</span> <span class="nb">cursive</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">li</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">5</span><span class="o">)</span> <span class="p">{</span> <span class="nl">font-family</span><span class="p">:</span> <span class="nb">fantasy</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="cm">/* You can also choose a specific typeface. */</span>
+<span class="nt">li</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">6</span><span class="o">)</span> <span class="p">{</span> <span class="nl">font-family</span><span class="p">:</span> <span class="s1">'Futura'</span><span class="o">,</span> <span class="s1">'Verdana'</span><span class="o">,</span> <span class="nb">sans-serif</span><span class="p">;</span> <span class="p">}</span>
+<span class="cm">/* But the user has to have them installed on their device. */</span>
+<span class="cm">/* Otherwise it will “fall back” to the next/right value. */</span>
+
+<span class="cm">/* The `@import` above lets you use this on any computer.  */</span>
+<span class="nt">li</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">7</span><span class="o">)</span> <span class="p">{</span> <span class="nl">font-family</span><span class="p">:</span> <span class="s1">'Roboto Condensed'</span><span class="o">,</span> <span class="nb">sans-serif</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="cm">/* You can also host fonts along with your site files. */</span>
+<span class="k">@font-face</span> <span class="p">{</span>
+	<span class="nl">font-family</span><span class="p">:</span> <span class="s1">'Playfair'</span><span class="p">;</span>
+	<span class="nl">src</span><span class="p">:</span> <span class="sx">url('playfair--regular.woff2')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff2'</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cm">/* And then reference them, as above. */</span>
+<span class="nt">li</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">8</span><span class="o">)</span> <span class="p">{</span> <span class="nl">font-family</span><span class="p">:</span> <span class="s1">'Playfair'</span><span class="o">,</span> <span class="nb">serif</span><span class="p">;</span> <span class="p">}</span></code></pre>
+					</figure>
+
+
+				</div>
+
+				<div>
+
+
+					<figure class="highlight">
+						<pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+	<span class="nt">&lt;head&gt;</span>
+		<span class="nt">&lt;title&gt;</span>Color<span class="nt">&lt;/title&gt;</span>
+		<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"style.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/head&gt;</span>
+	<span class="nt">&lt;body&gt;</span>
+		<span class="nt">&lt;ol&gt;</span>
+			<span class="nt">&lt;li&gt;</span>Default serif<span class="nt">&lt;/li&gt;</span>
+			<span class="nt">&lt;li&gt;</span>Default sans-serif<span class="nt">&lt;/li&gt;</span>
+			<span class="nt">&lt;li&gt;</span>Default monospace<span class="nt">&lt;/li&gt;</span>
+			<span class="nt">&lt;li&gt;</span>Default cursive, you don’t see this much<span class="nt">&lt;/li&gt;</span>
+			<span class="nt">&lt;li&gt;</span>Default fantasy, maybe don’t do this<span class="nt">&lt;/li&gt;</span>
+			<span class="nt">&lt;li&gt;</span>Futura, on a Mac; Verdana, on a PC<span class="nt">&lt;/li&gt;</span>
+			<span class="nt">&lt;li&gt;</span>Some condensed Roboto, imported from Google Fonts<span class="nt">&lt;/li&gt;</span>
+			<span class="nt">&lt;li&gt;</span>This will be in Playfair, using @font-face<span class="nt">&lt;/li&gt;</span>
+		<span class="nt">&lt;/ol&gt;</span>
+		<span class="nt">&lt;style&gt;li</span><span class="nd">:not</span><span class="o">(</span><span class="nd">:first-child</span><span class="o">)</span> <span class="p">{</span> <span class="nl">font-size</span><span class="p">:</span> <span class="m">18px</span><span class="p">;</span> <span class="nl">margin-top</span><span class="p">:</span> <span class="m">0.666em</span> <span class="p">}</span><span class="nt">&lt;/style&gt;</span>
+	<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre>
+					</figure>
+
+
+				</div>
+
+			</div>
+		</section>
+		<iframe src="../index.html"></iframe>
+
+	</body>
+</html>
