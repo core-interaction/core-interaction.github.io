@@ -1,5 +1,10 @@
 /* Click `index.html` to see the HTML. */
 
+/* This is a “wildcard,” targeting any element. */
+* {
+	color: gray;
+}
+
 p {
 	color: red;
 }

@@ -243,6 +243,8 @@ Other common examples have to do with [counts and positions](https://developer.m
 
 
 
+Slightly different the various [pseudo-*elements*](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements), which let you style a particular *part* of an element. You’ll most often see these as `:before` and `:after`, which let us insert things around text.
+
 
 
 ### Finally, combinators
