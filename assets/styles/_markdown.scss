@@ -127,7 +127,7 @@
 
 	ul {
 		list-style-type: '-';
-		padding-left:    1ch;
+		padding-left:    calc(var(--padding-left, 0ch) + 1ch);
 
 		> li { padding-left: 1ch }
 

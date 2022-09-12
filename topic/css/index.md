@@ -1,7 +1,6 @@
 ---
 title: An intro to CSS
 order: 2
-published: false
 ---
 
 
