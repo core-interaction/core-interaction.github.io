@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
+
+
+
+
+
+
+
+
+		<title>Week 3</title>
+		<link href="/assets/styles/reset.css" rel="stylesheet">
+		<link href="/assets/styles/common.css" rel="stylesheet">
+		<link href="/assets/styles/syntax.css" rel="stylesheet">
+		<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
+		<link href="/assets/icons/touch.png" rel="apple-touch-icon">
+
+		<script src="/assets/scripts/common.js"></script>
+
+		<meta name="theme-color" content="#e42a1d">
+	</head>
+	<body class="week">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<nav>
+			<div>
+				<section>
+					<a href="/">
+						<p>C1:I</p>
+					</a>
+					<p>
+						<strong>Week 3, September 13</strong>
+						<select onchange="
+					this.parentElement.querySelector('strong').innerHTML = this.querySelector(`[value='${this.value}']`).text;
+					document.activeElement.blur();
+					window.open(this.value,'_self');
+					">
+
+
+							<optgroup label="Sessions">
+
+
+
+								<option value="/week/1/">Week 1, August 30</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/2/">Week 2, September 6</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option selected disabled>Week 3, September 13</option>
+
+
+							</optgroup>
+
+
+
+							<optgroup label="Topics">
+
+
+
+								<option value="/topic/everything/">Everything is a web page</option>
+
+
+
+
+								<option value="/topic/html/">An intro to HTML</option>
+
+
+
+
+								<option value="/topic/css/">An intro to CSS</option>
+
+
+							</optgroup>
+
+
+
+							<optgroup label="Project">
+
+
+
+								<option value="/project/harmonic/">Harmonic Collection</option>
+
+
+							</optgroup>
+
+
+						</select>
+					</p>
+				</section>
+				<section>
+
+					<p>
+						<a class="last" href="/week/2/">Last week</a>
+					</p>
+
+					<p><a href="#">Top</a></p>
+				</section>
+			</div>
+		</nav>
+
+
+
+
+
+
+
+
+
+		<main>
+
+			<header>
+				<h1>Week 3</h1>
+
+				<p>September 13</p>
+
+				<ul>
+					<li><a href="#harmonic-collection-review"><em>Harmonic Collection</em> review</a></li>
+					<li><a href="#and-then-css">And then, CSS!</a></li>
+					<li><a href="#demo-time">Demo time!</a></li>
+					<li><a href="#for-next-week">For next week</a></li>
+				</ul>
+			</header>
+
+			<article>
+				<h2 id="harmonic-collection-review"><em>Harmonic Collection</em> review</h2>
+
+				<p>Let’s take a look at some of your entries for this week:</p>
+
+				<p class="icon-link two-below"><a href="https://docs.google.com/spreadsheets/d/1vXYVnicRUHnczxPCSaqsmmflynnwP22zhES5jFMPKpw/"><em>Harmonic Collection</em> entries</a></p>
+
+				<p>I’d like you to explain your theme and then show us the page for your first entry. Also tell us what your challenges were, and where you’d like to improve/expand with more time and skills. We’re all in this together! And now’s the time to ask questions.</p>
+
+				<p><em>Feel free to volunteer, but otherwise I will be randomly selecting folks. We’ll review entries throughout the semester.</em></p>
+
+				<h2 id="and-then-css">And then, CSS!</h2>
+
+				<p>We’ll start to make these entries look <em>good</em>.</p>
+
+				<p class="icon-link"><a href="/topic/css">An intro to CSS</a></p>
+
+				<blockquote class="callout" icon="🥱">
+					<p>We’ll break in here, likely mid-CSS-intro. It’s another long one.</p>
+				</blockquote>
+
+				<h2 id="demo-time">Demo time!</h2>
+
+				<p>We’re going to work through getting a stylesheet connected and trying out some styles.</p>
+
+				<p class="two-below"><em>Please help me remember to resume the recording, this time!</em></p>
+
+				<ol>
+					<li>
+						<p>Let’s first make an index page so we don’t have to remember our URLs.</p>
+
+						<p>Create an <code class="language-plaintext highlighter-rouge">index.html</code> file in your project repository. Remember, <code class="language-plaintext highlighter-rouge">index</code> is a special name that will load when you leave off the filename from a URL.</p>
+
+						<p>In it, make <a href="/topic/html/#lists">a list</a> element with a link to your first project:</p>
+
+						<div class="language-html highlighter-rouge">
+							<div class="highlight">
+								<pre class="highlight"><code> <span class="cp">&lt;!DOCTYPE html&gt;</span>
+ <span class="nt">&lt;html&gt;</span>
+   <span class="nt">&lt;head&gt;</span>
+     <span class="nt">&lt;title&gt;</span>Harmonic Collection<span class="nt">&lt;/title&gt;</span>
+   <span class="nt">&lt;/head&gt;</span>
+   <span class="nt">&lt;body&gt;</span>
+     <span class="nt">&lt;h1&gt;</span>Harmonic Collection<span class="nt">&lt;/h1&gt;</span>
+     <span class="nt">&lt;p&gt;</span>Your name<span class="nt">&lt;/p&gt;</span>
+     <span class="nt">&lt;ul&gt;</span>
+       <span class="nt">&lt;li&gt;</span>
+         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"entry-1.html"</span><span class="nt">&gt;</span>Entry 1<span class="nt">&lt;/a&gt;</span>
+       <span class="nt">&lt;/li&gt;</span>
+     <span class="nt">&lt;/ul&gt;</span>
+   <span class="nt">&lt;/body&gt;</span>
+ <span class="nt">&lt;/html&gt;</span>
+</code></pre>
+							</div>
+						</div>
+
+						<p>We’re officialy a web <em>site</em> now, with multiple pages!</p>
+					</li>
+					<li>
+						<p>Create another page for your second entry; call this one <code class="language-plaintext highlighter-rouge">entry-2.html</code>, like your first. You can copy your first entry, as a starting point.</p>
+					</li>
+					<li>
+						<p>Add a link to this in your <code class="language-plaintext highlighter-rouge">index.html</code>, above. And then as we go forward, remember to add links to your index page!</p>
+					</li>
+					<li>
+						<p>Back in <code class="language-plaintext highlighter-rouge">entry-2.html</code>, let’s experiment with adding <a href="/topic/css/#some-basic-properties">some styles</a> to our page:</p>
+
+						<ul>
+							<li>Try some inline styles on an element, first</li>
+							<li>Move these up to a <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code> tag in your <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code></li>
+							<li>Create an <code class="language-plaintext highlighter-rouge">entry-2.css</code> doc and move your styles over there</li>
+							<li>Add a <code class="language-plaintext highlighter-rouge">&lt;link&gt;</code> to this from the page’s <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code>:</li>
+						</ul>
+
+						<div class="language-html highlighter-rouge">
+							<div class="highlight">
+								<pre class="highlight"><code> <span class="cp">&lt;!DOCTYPE html&gt;</span>
+ <span class="nt">&lt;html&gt;</span>
+   <span class="nt">&lt;head&gt;</span>
+     <span class="nt">&lt;title&gt;</span>Entry 2<span class="nt">&lt;/title&gt;</span>
+     <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"entry-2.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;/head&gt;</span>
+   <span class="nt">&lt;body&gt;</span>
+     <span class="c">&lt;!-- Your HTML content. --&gt;</span>
+   <span class="nt">&lt;/body&gt;</span>
+ <span class="nt">&lt;/html&gt;</span>
+</code></pre>
+							</div>
+						</div>
+
+						<p class="two-above">This is generally the way we’ll be working with styles, with a <a href="/topic/css/#where-css-lives">separate, linked</a> CSS file.</p>
+					</li>
+					<li>
+						<p>Be sure to <em>commit</em> your work into your repo and <em>push</em> as we go along, as is custom! If it is only on your computer, it’s not online.</p>
+					</li>
+				</ol>
+
+				<hr />
+
+				<h2 id="for-next-week">For next week</h2>
+
+				<ul>
+					<li>
+						<p>Read the whole dang <a href="/topic/css">CSS lecture</a> above, in detail. Again, we’re going to have to fly through this stuff, to some extent<span class="mdash">—</span>but I expect you to use these as references for your work. (And I will know it if I see it.)</p>
+					</li>
+					<li>
+						<p>Complete the second entry for your <a href="/project/harmonic"><em>Harmonic Collection</em></a> projects, and add a link in the tracking doc as before:</p>
+
+						<p class="icon-link"><a href="https://docs.google.com/spreadsheets/d/1vXYVnicRUHnczxPCSaqsmmflynnwP22zhES5jFMPKpw/"><em>Harmonic Collection</em> entries</a></p>
+
+						<p>This should make use of the various CSS from today! Go wild on fonts; I am excited to see what you come up with. We can rein it all in later. Or not.</p>
+					</li>
+				</ul>
+
+
+
+
+
+			</article>
+
+			<footer>
+				<div>
+					<section>
+						<a href="/">
+							<p>Core 1: Interaction, Fall 2022</p>
+						</a>
+					</section>
+					<section>
+						<p><a href="#">Top</a></p>
+					</section>
+				</div>
+			</footer>
+
+		</main>
+
+	</body>
+</html>

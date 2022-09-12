@@ -1203,7 +1203,7 @@ body > main > article ol > li:last-child > *:last-child:not(._) {
 
 body > main > article ul {
 	list-style-type: "-";
-	padding-left: 1ch;
+	padding-left: calc(var(--padding-left, 0ch) + 1ch);
 }
 
 body > main > article ul > li {
