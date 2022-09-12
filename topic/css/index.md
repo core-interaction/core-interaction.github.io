@@ -81,7 +81,7 @@ So the next way that was added to the standard was using a special HTML element
 		<title>Page title</title>
 		<style>
 			p {
-				color: blue;
+				color: red;
 				font-family: sans-serif;
 			}
 		</style>
@@ -124,7 +124,7 @@ And then in a separate `style.css` file (in this case, in the same directory as
 
 ```css
 p {
-	color: green;
+	color: red;
 	font-family: sans-serif;
 }
 ```
@@ -140,21 +140,21 @@ We’ll talk more about *[specificity](https://developer.mozilla.org/en-US/docs/
 
 
 
-Even though it is used to style HTML elements, the syntax of CSS is very different. CSS rules are made up of *selectors*, used to target certain elements, and then the *declarations* that you want to apply to them:
+Even though it is used to style HTML elements, the syntax of CSS is very different. CSS *rules* are made up of *selectors*, used to target certain elements, and then the *declarations* that you want to apply to them:
 
-{% include figure.html src='TI2B-S22_20CSS20120(5).png' %}
-
-
-
-The curly brackets `{` `}` (also known as *mustaches* or *handlebars*, for their shape) enclose all the declarations you want to apply to a given selector. These *declarations* are in turn made up of *properties* and *values:*
-
-{% include figure.html src='TI2B-S22_20CSS20120(6).png' %}
+{% include figure.html src='rule.svg' %}
 
 
 
-Properties are always separated from their corresponding values by a colon `:`, and each declaration line has to end in a semicolon `;`. (It’s just how it is.) Also, there are no spaces between values and their units!
 
-There are [many, many CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference). (Here is a shorter [“common” list](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference).) We’ll go through some in our exercise, but look through these to become more familiar.
+
+The curly brackets `{` `}` (also known as *mustaches* or *handlebars*, for their shape) enclose all the declarations you want to apply to a given selector. These *declarations* are in turn made up of *properties* and *values*.
+
+
+
+Properties are always separated from their corresponding values by a colon `:`, and each declaration line has to end in a semicolon `;`. (It’s just how it is.) Also, there are no spaces between values and their units (like `20px`)!
+
+There are [many, many CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference). (Here is a shorter [“common” list](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference).) We’ll go through some in our exercise, but look through these to become more familiar.
 
 
 
