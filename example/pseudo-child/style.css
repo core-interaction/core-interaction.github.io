@@ -1,4 +1,4 @@
-/* The paragraph is the first descendent of some parent. */
+/* The paragraph is the first descendent of its parent. */
 p:first-child {
 	color: blue;
 }

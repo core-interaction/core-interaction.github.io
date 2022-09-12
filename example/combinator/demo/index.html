@@ -43,27 +43,19 @@
 					<figure class="highlight">
 						<pre><code class="language-scss" data-lang="scss"><span class="cm">/* The “descendant” combinator. */</span>
 <span class="cm">/* Only paragraphs inside the header. */</span>
-<span class="nt">header</span> <span class="nt">p</span> <span class="p">{</span>
-	<span class="nl">color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="nt">header</span> <span class="nt">p</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span> <span class="p">}</span>
 
 <span class="cm">/* The “child” combinator. */</span>
 <span class="cm">/* Only immediate children paragraphs of `body`. */</span>
-<span class="nt">body</span> <span class="o">&gt;</span> <span class="nt">p</span> <span class="p">{</span>
-	<span class="nl">color</span><span class="p">:</span> <span class="no">gray</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="nt">body</span> <span class="o">&gt;</span> <span class="nt">p</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">gray</span><span class="p">;</span> <span class="p">}</span>
 
 <span class="cm">/* “Adjacent sibling” combinator. */</span>
 <span class="cm">/* Only immediately preceded by another paragraph. */</span>
-<span class="nt">p</span> <span class="o">+</span> <span class="nt">p</span> <span class="p">{</span>
-	<span class="nl">color</span><span class="p">:</span> <span class="no">teal</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="nt">p</span> <span class="o">+</span> <span class="nt">p</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">teal</span><span class="p">;</span> <span class="p">}</span>
 
 <span class="cm">/* “General sibling” combinator. */</span>
 <span class="cm">/* Only paragraphs following `h2`. */</span>
-<span class="nt">h2</span> <span class="o">~</span> <span class="nt">p</span> <span class="p">{</span>
-	<span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
-<span class="p">}</span></code></pre>
+<span class="nt">h2</span> <span class="o">~</span> <span class="nt">p</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span> <span class="p">}</span></code></pre>
 					</figure>
 
 
@@ -89,7 +81,7 @@
 		<span class="nt">&lt;p&gt;</span>Same for this one.<span class="nt">&lt;/p&gt;</span>
 		<span class="nt">&lt;h2&gt;</span>This heading doesn’t have a style itself<span class="nt">&lt;/h2&gt;</span>
 		<span class="nt">&lt;p&gt;</span>But will make this following paragraph <span class="nt">&lt;em&gt;</span>green<span class="nt">&lt;/em&gt;</span>.<span class="nt">&lt;/p&gt;</span>
-		<span class="nt">&lt;p&gt;</span>And this one too, since it is still after the heading.<span class="nt">&lt;/p&gt;</span>
+		<span class="nt">&lt;p&gt;</span>And this one too, still after the heading.<span class="nt">&lt;/p&gt;</span>
 	<span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span></code></pre>
 					</figure>

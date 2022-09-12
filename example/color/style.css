@@ -1,33 +1,33 @@
+/* There are a bunch of named colors. */
 li:nth-child(1) {
 	color: dodgerblue;
-	/* There are named colors. */
 }
 
+/* Or you can specify a hex value. Brands love these. */
 li:nth-child(2) {
 	color: #1e90ff;
-	/* Or you can specify a hex value. */
 }
 
+/* Or RGB for Red, Green, Blue, if you think like a screen. */
 li:nth-child(3) {
 	color: rgb(30, 144, 255);
-	/* Or RGB for Red, Green, Blue. */
 }
 
+/* Or Hue, Saturation, Lightness, which is more human. */
 li:nth-child(4) {
 	color: hsl(210, 100%, 56%);
-	/* Or Hue, Saturation, Lightness */
 }
 
 /* RGB and HSL have a fourth value, for Alpha (transparency). */
 li:nth-child(5) {
 	color: rgba(30, 144, 255, 50%);
-	/* Alpha percentage, 0–100%. */
 }
 
 li:nth-child(6) {
 	color: hsla(210, 100%, 56%, 0.5);
-	/* Or a decimal, 0–1. */
 }
+
+/* Alpha as a percentage, 0–100%, or a decimal, 0–1. */
 
 li:nth-child(7) {
 	color: dodgerblue;

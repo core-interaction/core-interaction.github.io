@@ -41,21 +41,15 @@
 
 
 					<figure class="highlight">
-						<pre><code class="language-scss" data-lang="scss"><span class="nt">p</span> <span class="p">{</span>
-	<span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
-<span class="p">}</span>
+						<pre><code class="language-scss" data-lang="scss"><span class="nt">p</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="p">}</span>
 
-<span class="nc">.maroon</span> <span class="p">{</span>
-	<span class="nl">color</span><span class="p">:</span> <span class="no">maroon</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="cm">/* Will “win” over an element selector. */</span>
+<span class="nc">.maroon</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">maroon</span><span class="p">;</span> <span class="p">}</span>
 
-<span class="nn">#intro</span> <span class="p">{</span>
-	<span class="nl">color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="cm">/* But IDs will supersede classes. */</span>
+<span class="nn">#intro</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span> <span class="p">}</span>
 
-<span class="nn">#warning</span> <span class="p">{</span>
-	<span class="nl">color</span><span class="p">:</span> <span class="no">teal</span><span class="p">;</span>
-<span class="p">}</span></code></pre>
+<span class="nn">#warning</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">teal</span><span class="p">;</span> <span class="p">}</span></code></pre>
 					</figure>
 
 
