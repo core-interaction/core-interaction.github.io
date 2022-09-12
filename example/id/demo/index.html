@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
+
+		<title>Demo</title>
+		<link href="/assets/styles/reset.css" rel="stylesheet">
+		<link href="/assets/styles/common.css" rel="stylesheet">
+		<link href="/assets/styles/syntax.css" rel="stylesheet">
+		<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
+		<link href="/assets/icons/touch.png" rel="apple-touch-icon">
+
+		<script src="/assets/scripts/example.js"></script>
+
+		<meta name="theme-color" content="#e42a1d">
+	</head>
+	<body class="example">
+		<section style="--split: 66%;">
+			<aside></aside>
+
+
+			<div id="files">
+				<ul>
+
+					<li tabindex=0 class="visible">
+						<p>index.html</p>
+					</li>
+
+					<li tabindex=0>
+						<p>style.css</p>
+					</li>
+
+				</ul>
+
+			</div>
+
+			<div id="source">
+
+				<div class="visible">
+
+
+					<figure class="highlight">
+						<pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Click `style.css` to see the CSS. --&gt;</span>
+
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+	<span class="nt">&lt;head&gt;</span>
+		<span class="nt">&lt;title&gt;</span>Class<span class="nt">&lt;/title&gt;</span>
+		<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"style.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/head&gt;</span>
+	<span class="nt">&lt;body&gt;</span>
+		<span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">"title"</span><span class="nt">&gt;</span>This heading will be red<span class="nt">&lt;/h1&gt;</span>
+		<span class="nt">&lt;p&gt;</span>This paragraph will be black, with no ID.<span class="nt">&lt;/p&gt;</span>
+		<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"introduction"</span><span class="nt">&gt;</span>This paragraph will be blue.<span class="nt">&lt;/p&gt;</span>
+	<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre>
+					</figure>
+
+
+				</div>
+
+				<div>
+
+
+					<figure class="highlight">
+						<pre><code class="language-scss" data-lang="scss"><span class="nn">#title</span> <span class="p">{</span>
+	<span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nn">#introduction</span> <span class="p">{</span>
+	<span class="nl">color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+<span class="p">}</span></code></pre>
+					</figure>
+
+
+				</div>
+
+			</div>
+		</section>
+		<iframe src="../index.html"></iframe>
+
+	</body>
+</html>

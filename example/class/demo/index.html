@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
+
+		<title>Demo</title>
+		<link href="/assets/styles/reset.css" rel="stylesheet">
+		<link href="/assets/styles/common.css" rel="stylesheet">
+		<link href="/assets/styles/syntax.css" rel="stylesheet">
+		<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
+		<link href="/assets/icons/touch.png" rel="apple-touch-icon">
+
+		<script src="/assets/scripts/example.js"></script>
+
+		<meta name="theme-color" content="#e42a1d">
+	</head>
+	<body class="example">
+		<section style="--split: 66%;">
+			<aside></aside>
+
+
+			<div id="files">
+				<ul>
+
+					<li tabindex=0 class="visible">
+						<p>index.html</p>
+					</li>
+
+					<li tabindex=0>
+						<p>style.css</p>
+					</li>
+
+				</ul>
+
+			</div>
+
+			<div id="source">
+
+				<div class="visible">
+
+
+					<figure class="highlight">
+						<pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Click `style.css` to see the CSS. --&gt;</span>
+
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+	<span class="nt">&lt;head&gt;</span>
+		<span class="nt">&lt;title&gt;</span>Class<span class="nt">&lt;/title&gt;</span>
+		<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"style.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/head&gt;</span>
+	<span class="nt">&lt;body&gt;</span>
+		<span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;</span>This heading will be green<span class="nt">&lt;/h1&gt;</span>
+		<span class="nt">&lt;p&gt;</span>This paragraph will remain black, since it has no class on it.<span class="nt">&lt;/p&gt;</span>
+		<span class="nt">&lt;p&gt;</span>So will this one.<span class="nt">&lt;/p&gt;</span>
+		<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"faded"</span><span class="nt">&gt;</span>This paragraph will be faded.<span class="nt">&lt;/p&gt;</span>
+		<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"highlight faded"</span><span class="nt">&gt;</span>This paragraph will be green and faded, with both classes.<span class="nt">&lt;/p&gt;</span>
+	<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre>
+					</figure>
+
+
+				</div>
+
+				<div>
+
+
+					<figure class="highlight">
+						<pre><code class="language-scss" data-lang="scss"><span class="nc">.highlight</span> <span class="p">{</span>
+	<span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.faded</span> <span class="p">{</span>
+	<span class="nl">opacity</span><span class="p">:</span> <span class="m">33%</span><span class="p">;</span>
+<span class="p">}</span></code></pre>
+					</figure>
+
+
+				</div>
+
+			</div>
+		</section>
+		<iframe src="../index.html"></iframe>
+
+	</body>
+</html>

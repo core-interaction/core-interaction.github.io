@@ -2079,8 +2079,12 @@ body.example > section #files > ul li {
 	user-select: none;
 }
 
+body.example > section #files > ul li p {
+	color: black;
+}
+
 body.example > section #files > ul li:not(.visible) p {
-	opacity: var(--alpha--inactive);
+	color: #aaaaaa;
 }
 
 body.example > section #source {
