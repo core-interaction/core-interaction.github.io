@@ -78,9 +78,11 @@
 					@extend %link--element;
 
 					user-select: none;
+
+					p { color: black }
 				}
 
-				li:not(.visible) p { opacity: var(--alpha--inactive) }
+				li:not(.visible) p { color: #aaaaaa }
 			}
 		}
 
