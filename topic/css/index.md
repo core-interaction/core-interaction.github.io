@@ -337,18 +337,23 @@ These can also all be applied to `background-color` (and `border`, but we’ll t
 
 
 
-### Typography!
+### Fonts!
 {: .four-above }
 
-Then perhaps most importantly, you’ll always be customizing your [typography](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals). Remember, the web is text *all the way down*.
+Then perhaps most importantly, you’ll always be customizing your [typography](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals). Remember, the web is text *all the way down*:
 
 {% include figure.html src='/example/font-family/demo' height='34em' %}
 
 Web font licensing is a *Whole Big Thing*—so let’s start out by making use of [Google Fonts](https://fonts.google.com), which offers many *open-source* typefaces nicely packaged for web use. You can select *families* and *weights* there to easily include in your pages, as in the example above.
 
-{% include figure.html src='/example/font-family/demo' caption='For now, you can just specify units in `px` to match Figma. We’ll talk about other units soon.' height='32em' %}
 
 
+### Other type properties!
+{: .four-above }
+
+Once you’ve got a `font-family` in, there are additional properties to control the typography:
+
+{% include figure.html src='/example/font/demo' caption='For now, you can just specify units in `px` to match Figma. We’ll talk about other *absolute* and *relative* units soon.' height='42em' %}
 
 
 
