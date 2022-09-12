@@ -178,7 +178,7 @@ Selectors are used to *target* certain HTML elements within the page. These can 
 
 If you want to change the styles for all instances of a given HTML element, you drop the `<` `>` from the tag for an element selector. These are called [*type selectors*](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors):
 
-{% include figure.html src='/example/element/demo' caption='Note that CSS has different `/* comment syntax */`, too.' height='20em' %}
+{% include figure.html src='/example/element/demo' caption='Note that CSS has different `/* comment syntax */`, too.' height='25em' %}
 
 
 
@@ -231,9 +231,9 @@ You can use the various [attributes](topic/html/#attributes) as selectors, too. 
 ### Pseudo-classes
 {: .four-above }
 
-These are [special selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes), added to `element`, `class`, or `id` which target unique *states* or *instances* of HTML elements. You’ll often see these used to target link states:
+These are [special selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes), added to `element`, `class`, or `id` which target unique *states* or *instances* of HTML elements. You’ll often see these used to target [link states](https://web.dev/learn/css/pseudo-classes/#historic-states):
 
-{% include figure.html src='/example/pseudo-link/demo' height='26em' %}
+{% include figure.html src='/example/pseudo-link/demo' caption='`:hover` also works on any element, not just links!' height='26em' %}
 
 
 
@@ -243,7 +243,12 @@ Other common examples have to do with [counts and positions](https://developer.m
 
 
 
+### Pseudo-elements
+{: .four-above }
+
 Slightly different the various [pseudo-*elements*](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements), which let you style a particular *part* of an element. You’ll most often see these as `:before` and `:after`, which let us insert things around text.
+
+{% include figure.html src='/example/pseudo-element/demo' height='28em' %}
 
 
 
@@ -282,11 +287,11 @@ Safari and Chrome both *just* [added support](https://caniuse.com/css-has), so t
 
 
 
-The first three targeting methods (`element`, `.class`, `#id`) are listed in increasing order of *specificity*, meaning that a class trumps an element rule, and an ID trumps a class. IDs are thus *more specific* than classes, which are *more specific* than element selectors. (And you shouldn’t really use them, but inline styles beat them all.) Take this example:
+The first three targeting methods (`element`, `.class`, `#id`) are listed in increasing order of [*specificity*](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity), meaning that a class trumps an element rule, and an ID trumps a class. IDs are thus *more specific* than classes, which are *more specific* than element selectors. (And you shouldn’t really use them, but inline styles beat them all.) Take this example:
 
 {% include figure.html src='/example/specificity/demo' height='22em' %}
 
-You could write a *long* book (and many people have) about CSS specificity—the myriad of ways that some CSS rules take precedent over others. Suffice it to say *it’s complicated*. The easiest way to avoid specificity problems is generally to stay at the same level throughout your HTML, usually by just using classes throughout.
+You could write a *long* book (and many people have) about CSS specificity—the myriad of ways that some CSS rules take precedent over others. It is often one the more frustrating parts (especially when working with legacy code that is poorly considered). Suffice it to say *it’s complicated*. The easiest way to avoid specificity problems is generally to stay at the same level throughout your HTML, usually by just using classes throughout.
 
 
 
