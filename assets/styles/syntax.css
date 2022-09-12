@@ -150,7 +150,10 @@
 .highlight .nt ~ .p,
 .highlight .nt ~ .p ~ .p + .p,
 .highlight .nc ~ .p,
-.highlight .nc ~ .p ~ .p + .p {
+.highlight .nc ~ .p ~ .p + .p,
+.highlight .cm + .o,
+.highlight .cm + .o + .p,
+.highlight .cm + .o + .p ~ .p + .p {
 	color: #ffa11f;
 }
 
