@@ -1,8 +1,4 @@
-.note {
-	color: gray;
-}
+.note { color: gray; }
 
 /* Because this is lower, it will “win” the tie. */
-.warning {
-	color: red;
-}
+.warning { color: red; }

@@ -1,21 +1,13 @@
 /* A link that hasn’t been visited. */
-a:link {
-	color: red;
-}
+a:link { color: red; }
 
 /* After you’ve visited the link. */
-a:visited {
-	color: purple;
-}
+a:visited { color: purple; }
 
 /* Change the color when the mouse is over it. */
-a:hover {
-	color: fuchsia;
-}
+a:hover { color: fuchsia; }
 
 /* And when the mouse is clicked. */
-a:active {
-	color: maroon;
-}
+a:active { color: maroon; }
 
 

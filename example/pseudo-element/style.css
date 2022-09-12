@@ -1,5 +1,6 @@
 /* These are inserted before and after the heading. */
-h1:before, h1:after {
+h1:before,
+h1:after {
 	color: red;
 	content: ' ••• '
 }
@@ -10,11 +11,7 @@ p:first-letter {
 	font-weight: bold;
 }
 
-p:first-line {
-	color: maroon;
-}
+p:first-line { color: maroon; }
 
 /* After external links. */
-a[href^='https://']:after {
-	content: ' ↗';
-}
+a[href^='https://']:after { content: ' ↗'; }

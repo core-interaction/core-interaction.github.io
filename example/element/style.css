@@ -1,18 +1,10 @@
 /* Click `index.html` to see the HTML. */
 
-p {
-	color: red;
-}
+p { color: red; }
 
-blockquote {
-	color: blue;
-}
+blockquote { color: blue; }
 
-footer {
-	background-color: lightgray;
-}
+footer { background-color: lightgray; }
 
 /* This is a “wildcard,” targeting any element. */
-* {
-	color: gray;
-}
+* { color: gray; }
