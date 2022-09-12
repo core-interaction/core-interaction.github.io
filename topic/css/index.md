@@ -314,10 +314,7 @@ To add even more confusion, [some CSS properties](https://developer.mozilla.org/
 This allows you to quickly set some properties globally, without having many brittle/redundant rules, as we did before:
 
 
-{% include figure.html src='/example/inheritance/demo' height='16em' %}
-
-
-All the children inherit the `body` styles. Ah, finally, `sans-serif`.
+{% include figure.html src='/example/inheritance/demo' caption='All the children inherit the `body` styles. Ah, finally, `sans-serif`.' height='16em' %}
 
 
 
