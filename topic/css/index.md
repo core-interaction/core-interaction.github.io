@@ -320,7 +320,7 @@ This allows you to quickly set some properties globally, without having many bri
 
 ## Some basic properties
 
-Alright, so all this has been about *targeting* elements—what about actually styling them? Let’s introduce a few *properties* to get us started.
+Alright, so all this has been about *targeting* elements—what about actually styling them? Let’s introduce a few quick *properties* to get us started.
 
 
 
@@ -338,14 +338,22 @@ These can also all be applied to `background-color` (and `border`, but we’ll t
 
 
 ### Typography!
+{: .four-above }
+
+Then perhaps most importantly, you’ll always be customizing your [typography](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals). Remember, the web is text *all the way down*.
+
+{% include figure.html src='/example/font-family/demo' height='34em' %}
+
+Web font licensing is a *Whole Big Thing*—so let’s start out by making use of [Google Fonts](https://fonts.google.com), which offers many *open-source* typefaces nicely packaged for web use. You can select *families* and *weights* there to easily include in your pages, as in the example above.
+
+{% include figure.html src='/example/font-family/demo' caption='For now, you can just specify units in `px` to match Figma. We’ll talk about other units soon.' height='32em' %}
 
 
-
-<!-- Same for typography. -->
 
 
 
 ## Resets
+
 
 
 As we talked about [last week](/topic/html/#user-agent-styles), browsers have their own, built-in way that they display HTML elements. These *user-agent styles* are specific, somewhat, to each platform and each browser. This is the “look” we have been seeing when we write plain HTML without any CSS—usually Times New Roman, with blue links, and small spacing between elements.
