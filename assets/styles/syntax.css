@@ -136,8 +136,10 @@
 
 .highlight .p + .no,
 .highlight .p + .nb,
+.highlight .p + .n,
 .highlight .p + .no + .p,
 .highlight .p + .nb + .p,
+.highlight .p + .n + .p,
 .highlight .p + .m + .p {
   color: #74a800;
 }

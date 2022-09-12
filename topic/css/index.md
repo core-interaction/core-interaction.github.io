@@ -144,13 +144,7 @@ Even though it is used to style HTML elements, the syntax of CSS is very differe
 
 {% include figure.html src='rule.svg' %}
 
-
-
-
-
 The curly brackets `{` `}` (also known as *mustaches* or *handlebars*, for their shape) enclose all the declarations you want to apply to a given selector. These *declarations* are in turn made up of *properties* and *values*.
-
-
 
 Properties are always separated from their corresponding values by a colon `:`, and each declaration line has to end in a semicolon `;`. (It’s just how it is.) Also, there are no spaces between values and their units (like `20px`)!
 
@@ -184,21 +178,7 @@ Selectors are used to *target* certain HTML elements within the page. These can 
 
 If you want to change the styles for all instances of a given HTML element, you drop the `<` `>` from the tag for an element selector. These are called [*type selectors*](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors):
 
-```html
-<!-- In your HTML file. -->
-<h1>This heading will be black.</h1>
-<p>This paragraph will be red.</p>
-<p>This paragraph will also be red.</p>
-```
-
-```css
-/* In your CSS file. */
-p {
-	color: red;
-}
-```
-
-{% include figure.html src='Untitled.png' %}
+{% include figure.html src='/example/element/demo' height='20em' %}
 
 
 
