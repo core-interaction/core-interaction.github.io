@@ -73,7 +73,7 @@ HTML consists of a [range of elements](https://developer.mozilla.org/en-US/docs/
 
 The `<html>` element contains all elements of the page, the `<head>` element contains the title, and the body contains `<h1>` and `<p>`.
 
-We call these [*semantic* elements](https://www.w3schools.com/html/html5_semantic_elements.asp)—which is saying that they give their contents a *meaning* or a *role*. (Remember [Tim’s diagram](topic/everything/web.png).) These *roles* are then interpreted by your browser (Chrome, Safari, Firefox, etc.) when it loads the file, to ultimately display the page. We call this *parsing* the document.
+We call these [*semantic* elements](https://www.w3schools.com/html/html5_semantic_elements.asp)—which is saying that they give their contents a *meaning* or a *role*. (Remember [Tim’s diagram](/topic/everything/web.png).) These *roles* are then interpreted by your browser (Chrome, Safari, Firefox, etc.) when it loads the file, to ultimately display the page. We call this *parsing* the document.
 
 
 
@@ -137,7 +137,7 @@ We use semantic elements to help structure and describe our content—but also f
 Some elements do not have any content or children, like `<br>` or `<img>`. These are called [*empty elements*](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element) and do not have a closing tag.
 {: .four-below }
 
-*Some common elements you’ll see:*
+### Common elements
 {: .two-below }
 
 - `<h1>` `<h2>` `<h3>` `<h4>` `<h5>` `<h6>` for headings
@@ -224,7 +224,7 @@ All HTML elements can have [attributes](https://developer.mozilla.org/en-US/docs
 
 
 
-*Some common attributes:*
+### Common attributes
 {: .two-below }
 
 - The `lang` attribute of the `<html>` tag declares the language of the Web page.
@@ -296,7 +296,7 @@ All HTML elements can have [attributes](https://developer.mozilla.org/en-US/docs
 HTML doesn’t care about capitalization, extra white space, or line breaks. The browser will just read everything from left to right, as if it is one long, running sentence. So the shouty `<!DOCTYPE HTML>` and quieter `<!doctype html>` are interpreted the same.
 
 The browser parses both of these in the exact same way:
-{: .two-above }
+{: .two-above .one-below }
 
 ```html
 <body>
@@ -309,7 +309,7 @@ The browser parses both of these in the exact same way:
 	</ul>
 </body>
 ```
-{: .left }
+{: .left .one-below }
 
 ```html
 <body><h1>Dog Breeds</h1><p>There are many kind of
@@ -336,16 +336,14 @@ But obviously, the first one is much more readable to us humans. We can use whit
 `<dd>`
 `<div>`
 `<dl>`
-`<dt>`
-`<fieldset>`
+`<dt>` `<fieldset>`
 `<figcaption>`
 `<figure>`
 `<footer>`
 `<form>`
-`<h1>`-`<h6>`
+`<h1>`–`<h6>`
 `<header>`
-`<hr>`
-`<li>`
+`<hr>` `<li>`
 `<main>`
 `<nav>`
 `<noscript>`
@@ -354,8 +352,7 @@ But obviously, the first one is much more readable to us humans. We can use whit
 `<pre>`
 `<section>`
 `<table>`
-`<tfoot>`
-`<ul>`
+`<tfoot>` `<ul>`
 
 {% include figure.html src='/example/block/demo' height='33.6rem' %}
 
