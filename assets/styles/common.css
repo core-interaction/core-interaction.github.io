@@ -2117,6 +2117,10 @@ body.example > section #source > div > figure {
 	height: 100%;
 }
 
+body.example > section #source > div > figure > pre {
+	height: 100%;
+}
+
 body.example > section #source > div:not(.visible) {
 	display: none;
 }
