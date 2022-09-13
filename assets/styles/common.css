@@ -1036,16 +1036,16 @@ body > main > article span.mdash:after {
 	content: "—";
 }
 
-body > main > article div[class*=highlighter] {
+body > main > article .highlighter-rouge {
 	--margin--top: var(--margin--vertical--2);
 }
 
-body > main > article div[class*=highlighter] + * {
+body > main > article .highlighter-rouge + * {
 	--margin--top: var(--margin--vertical--2);
 	--margin--top--previous: var(--margin--vertical--2);
 }
 
-body > main > article div[class*=highlighter] + * + * {
+body > main > article .highlighter-rouge + * + * {
 	--margin--top--previous: var(--margin--vertical--2);
 }
 
@@ -1632,6 +1632,18 @@ body > main > article .callout + * + * {
 	body > main > article .callout + * + * {
 		--margin--top--previous: var(--margin--vertical--6);
 	}
+}
+
+body > main > article .one-above {
+	--margin--top: var(--typography--leading-shoulder);
+}
+
+body > main > article .one-above + * {
+	--margin--top--previous: var(--typography--leading-shoulder);
+}
+
+body > main > article .one-below + * {
+	--margin--top: var(--typography--leading-shoulder);
 }
 
 body > main > article .two-above {
