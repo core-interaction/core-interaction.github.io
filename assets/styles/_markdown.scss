@@ -43,7 +43,7 @@
 
 
 	// “Fenced” code blocks.
-	div[class*="highlighter"] {
+	.highlighter-rouge {
 		--margin--top: var(--margin--vertical--2);
 
 		+ * {
@@ -504,6 +504,14 @@
 
 
 	// Manual spacing decisions.
+	.one-above {
+		--margin--top: var(--typography--leading-shoulder);
+
+		+ * { --margin--top--previous: var(--typography--leading-shoulder) }
+	}
+
+	.one-below + * { --margin--top: var(--typography--leading-shoulder) }
+
 	.two-above {
 		--margin--top: var(--margin--vertical--2);
 

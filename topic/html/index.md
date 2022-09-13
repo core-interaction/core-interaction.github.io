@@ -47,14 +47,14 @@ HTML consists of a [range of elements](https://developer.mozilla.org/en-US/docs/
 
 
 *As a visual:*
-{: .two-above }
+{: .two-above .one-below }
 
 {% include figure.html src='nesting.svg' %}
 
 
 
 *As code:*
-{: .two-above }
+{: .two-above .one-below }
 
 ```html
 <!DOCTYPE html>
