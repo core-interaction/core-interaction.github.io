@@ -327,7 +327,7 @@
 
 				<p>Just <a href="/topic/html/#case-whitespace-tabs-line-breaks">like HTML</a>, CSS does not care about capitalization, extra white space, or line breaks. Folks generally use tabs/indenting to indicate hierarchy, but again it is just whatever makes it easier for you!</p>
 
-				<div style="max-width: 24ch;" class="language-css highlighter-rouge">
+				<div class="language-css left highlighter-rouge">
 					<div class="highlight">
 						<pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span>
 	<span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
@@ -358,7 +358,7 @@
 
 				<p>If you want to change the styles for all instances of a given HTML element, you drop the <code class="language-plaintext highlighter-rouge">&lt;</code> <code class="language-plaintext highlighter-rouge">&gt;</code> from the tag for an element selector. These are called <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors"><em>type selectors</em></a>:</p>
 
-				<figure style="--height--max: 18em">
+				<figure style="--height--max: 33rem">
 
 					<div class="example">
 						<iframe allowfullscreen="" src="/example/element/demo"></iframe>
@@ -374,7 +374,7 @@
 
 				<p>But maybe you don’t want to style all of the paragraphs. You can then use a <code class="language-plaintext highlighter-rouge">class</code> to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors">target specific instances</a>. They are added as an <em><a href="/topic/html/#attributes">attribute</a></em> on the element you want to target:</p>
 
-				<figure style="--height--max: 23em">
+				<figure style="--height--max: 43rem">
 
 					<div class="example">
 						<iframe allowfullscreen="" src="/example/class/demo"></iframe>
@@ -392,7 +392,7 @@
 
 				<p>You can also use an <code class="language-plaintext highlighter-rouge">id</code>, which is a kind of <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id">special attribute</a> that can only be used <em>once</em> in an HTML document. These are useful thus useful for targeting singular things<span class="mdash">—</span>like your navigation, the document title, specific headings, etc:</p>
 
-				<figure style="--height--max: 19em">
+				<figure style="--height--max: 35rem">
 
 					<div class="example">
 						<iframe allowfullscreen="" src="/example/id/demo"></iframe>
@@ -410,7 +410,7 @@
 
 				<p>You can use combinations of the above <em>elements</em>, <em>classes</em>, and <em>IDs</em> to be even more specific<span class="mdash">—</span>however, this likely means you just need to rethink your HTML structure. (We’ll unpack <em>specificity</em>, below.) More commonly, you might apply declarations to multiple selectors, called <em>group selectors</em>, with a comma-delineated <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list">selector list</a>:</p>
 
-				<figure style="--height--max: 19em">
+				<figure style="--height--max: 35rem">
 
 					<div class="example">
 						<iframe allowfullscreen="" src="/example/group/demo"></iframe>
@@ -424,7 +424,7 @@
 
 				<p>You can use the various <a href="topic/html/#attributes">attributes</a> as selectors, too. These are usually very similar to using <em>classes</em>, but can help you <a href="https://css-tricks.com/attribute-selectors/">differentiate things</a> like internal and external links, for example:</p>
 
-				<figure style="--height--max: 15em">
+				<figure style="--height--max: 27rem">
 
 					<div class="example">
 						<iframe allowfullscreen="" src="/example/attribute/demo"></iframe>
@@ -438,7 +438,7 @@
 
 				<p>These are <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">special selectors</a>, added to <code class="language-plaintext highlighter-rouge">element</code>, <code class="language-plaintext highlighter-rouge">class</code>, or <code class="language-plaintext highlighter-rouge">id</code> which target unique <em>states</em> or <em>instances</em> of HTML elements. You’ll often see these used to target <a href="https://web.dev/learn/css/pseudo-classes/#historic-states">link states</a>:</p>
 
-				<figure style="--height--max: 18em">
+				<figure style="--height--max: 33rem">
 
 					<div class="example">
 						<iframe allowfullscreen="" src="/example/pseudo-link/demo"></iframe>
@@ -452,7 +452,7 @@
 
 				<p>Other common examples have to do with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes">counts and positions</a>:</p>
 
-				<figure style="--height--max: 22em">
+				<figure style="--height--max: 39rem">
 
 					<div class="example">
 						<iframe allowfullscreen="" src="/example/pseudo-child/demo"></iframe>
@@ -466,7 +466,7 @@
 
 				<p>Slightly different the various <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">pseudo-<em>elements</em></a>, which let you style a particular <em>part</em> of an element. You’ll most often see these as <code class="language-plaintext highlighter-rouge">:before</code> and <code class="language-plaintext highlighter-rouge">:after</code>, which let us insert things around text.</p>
 
-				<figure style="--height--max: 25em">
+				<figure style="--height--max: 46rem">
 
 					<div class="example">
 						<iframe allowfullscreen="" src="/example/pseudo-element/demo"></iframe>
@@ -480,7 +480,7 @@
 
 				<p>Last, you will often want to target something based on its relationship to other elements<span class="mdash">—</span>its <em>siblings</em> or its <em>parents</em>. For this, CSS has <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators"><em>combinators</em></a>, which let you relate all the various selectors we’ve learned about here together.</p>
 
-				<figure style="--height--max: 26em">
+				<figure style="--height--max: 47rem">
 
 					<div class="example">
 						<iframe allowfullscreen="" src="/example/combinator/demo"></iframe>
@@ -498,7 +498,7 @@
 
 				<p>CSS has <a href="https://webkit.org/blog/13096/css-has-pseudo-class/">finally added</a> the <code class="language-plaintext highlighter-rouge">:has()</code> pseudo-class, just in the past few weeks! It will allow us to write much simpler, logical styles:</p>
 
-				<div style="max-width: 38ch;" class="language-css highlighter-rouge">
+				<div class="language-css left highlighter-rouge">
 					<div class="highlight">
 						<pre class="highlight"><code><span class="nt">div</span><span class="nd">:has</span><span class="o">(</span><span class="nt">p</span><span class="o">)</span> <span class="p">{</span> <span class="nl">background-color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="p">}</span>
 </code></pre>
@@ -511,7 +511,7 @@
 
 				<p>The first three targeting methods (<code class="language-plaintext highlighter-rouge">element</code>, <code class="language-plaintext highlighter-rouge">.class</code>, <code class="language-plaintext highlighter-rouge">#id</code>) are listed in increasing order of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity"><em>specificity</em></a>, meaning that a class trumps an element rule, and an ID trumps a class. IDs are thus <em>more specific</em> than classes, which are <em>more specific</em> than element selectors. (And you shouldn’t really use them, but inline styles beat them all.) Take this example:</p>
 
-				<figure style="--height--max: 19em">
+				<figure style="--height--max: 30rem">
 
 					<div class="example">
 						<iframe allowfullscreen="" src="/example/specificity/demo"></iframe>
@@ -527,7 +527,7 @@
 
 				<p>We haven’t even talked about that first <em>C</em>! Remember, it stands for <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade"><em>cascading</em></a>. This means that when there is a tie (like two classes applying the same property), the <em>lowest</em> rule wins<span class="mdash">—</span>literally the one further down within a CSS document, or within a style tag. If you have multiple CSS documents with <code class="language-plaintext highlighter-rouge">&lt;link&gt;</code> element, the lower linked document will take precedence.</p>
 
-				<figure style="--height--max: 10em">
+				<figure style="--height--max: 19rem">
 
 					<div class="example">
 						<iframe allowfullscreen="" src="/example/cascade/demo"></iframe>
@@ -543,7 +543,7 @@
 
 				<p>This allows you to quickly set some properties globally, without having many brittle/redundant rules, as we did before:</p>
 
-				<figure style="--height--max: 17em">
+				<figure style="--height--max: 31rem">
 
 					<div class="example">
 						<iframe allowfullscreen="" src="/example/inheritance/demo"></iframe>
@@ -563,7 +563,7 @@
 
 				<p>Besides the basic examples above, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value"><em>color</em></a> can be specified in a few different ways:</p>
 
-				<figure style="--height--max: 29em">
+				<figure style="--height--max: 53rem">
 
 					<div class="example">
 						<iframe allowfullscreen="" src="/example/color/demo"></iframe>
@@ -583,7 +583,7 @@
 
 				<p>Then perhaps most importantly, you’ll always be customizing your <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals">typography</a>. Remember, the web is text <em>all the way down</em>:</p>
 
-				<figure style="--height--max: 35em">
+				<figure style="--height--max: 63rem">
 
 					<div class="example">
 						<iframe allowfullscreen="" src="/example/font-family/demo"></iframe>
@@ -601,7 +601,7 @@
 
 				<p>Once you’ve got a <code class="language-plaintext highlighter-rouge">font-family</code> in, there are additional properties to control the typography:</p>
 
-				<figure style="--height--max: 43em">
+				<figure style="--height--max: 77rem">
 
 					<div class="example">
 						<iframe allowfullscreen="" src="/example/font/demo"></iframe>
