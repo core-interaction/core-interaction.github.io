@@ -179,7 +179,7 @@ p {
 
 p { color: red; }
 ```
-{: style="max-width: 24ch;" }
+{: .left }
 
 I generally “single-line” rules when there is only one property declared, as I find it easier to read.
 
@@ -204,7 +204,7 @@ Selectors are used to *target* certain HTML elements within the page. These can 
 
 If you want to change the styles for all instances of a given HTML element, you drop the `<` `>` from the tag for an element selector. These are called [*type selectors*](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors):
 
-{% include figure.html src='/example/element/demo' caption='Note that CSS has different `/* comment syntax */`, too.' height='18em' %}
+{% include figure.html src='/example/element/demo' caption='Note that CSS has different `/* comment syntax */`, too.' height='33rem' %}
 
 
 
@@ -213,7 +213,7 @@ If you want to change the styles for all instances of a given HTML element, you
 
 But maybe you don’t want to style all of the paragraphs. You can then use a `class` to [target specific instances](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors). They are  added as an *[attribute](/topic/html/#attributes)* on the element you want to target:
 
-{% include figure.html src='/example/class/demo' height='23em' %}
+{% include figure.html src='/example/class/demo' height='43rem' %}
 
 The *value* here is our class name, which we write in CSS by prefixing with a `.` as with `.highlight` and `.faded`.
 
@@ -226,7 +226,7 @@ You can use these over and over, on any kind of element. And individual elements
 
 You can also use an `id`, which is a kind of [special attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id) that can only be used *once* in an HTML document. These are useful thus useful for targeting singular things—like your navigation, the document title, specific headings, etc:
 
-{% include figure.html src='/example/id/demo' height='19em' %}
+{% include figure.html src='/example/id/demo' height='35rem' %}
 
 These are prefixed by `#` in CSS, as with `#title` and `#introduction`. They can also be used as [link destinations](/topic/html/#attributes).
 
@@ -241,7 +241,7 @@ These are prefixed by `#` in CSS, as with `#title` and `#introduction`. They can
 
 You can use combinations of the above *elements*, *classes*, and *IDs* to be even more specific—however, this likely means you just need to rethink your HTML structure. (We’ll unpack *specificity*, below.) More commonly, you might apply declarations to multiple selectors, called *group selectors*, with a comma-delineated [selector list](https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list):
 
-{% include figure.html src='/example/group/demo' height='19em' %}
+{% include figure.html src='/example/group/demo' height='35rem' %}
 
 
 
@@ -250,7 +250,7 @@ You can use combinations of the above *elements*, *classes*, and *IDs* to be eve
 
 You can use the various [attributes](topic/html/#attributes) as selectors, too. These are usually very similar to using *classes*, but can help you [differentiate things](https://css-tricks.com/attribute-selectors/) like internal and external links, for example:
 
-{% include figure.html src='/example/attribute/demo' height='15em' %}
+{% include figure.html src='/example/attribute/demo' height='27rem' %}
 
 
 
@@ -259,13 +259,13 @@ You can use the various [attributes](topic/html/#attributes) as selectors, too. 
 
 These are [special selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes), added to `element`, `class`, or `id` which target unique *states* or *instances* of HTML elements. You’ll often see these used to target [link states](https://web.dev/learn/css/pseudo-classes/#historic-states):
 
-{% include figure.html src='/example/pseudo-link/demo' caption='`:hover` also works on any element, not just links!' height='18em' %}
+{% include figure.html src='/example/pseudo-link/demo' caption='`:hover` also works on any element, not just links!' height='33rem' %}
 
 
 
 Other common examples have to do with [counts and positions](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes):
 
-{% include figure.html src='/example/pseudo-child/demo' height='22em' %}
+{% include figure.html src='/example/pseudo-child/demo' height='39rem' %}
 
 
 
@@ -274,7 +274,7 @@ Other common examples have to do with [counts and positions](https://developer.m
 
 Slightly different the various [pseudo-*elements*](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements), which let you style a particular *part* of an element. You’ll most often see these as `:before` and `:after`, which let us insert things around text.
 
-{% include figure.html src='/example/pseudo-element/demo' height='25em' %}
+{% include figure.html src='/example/pseudo-element/demo' height='46rem' %}
 
 
 
@@ -283,7 +283,7 @@ Slightly different the various [pseudo-*elements*](https://developer.mozilla.org
 
 Last, you will often want to target something based on its relationship to other elements—its *siblings* or its *parents*. For this, CSS has [*combinators*](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators), which let you relate all the various selectors we’ve learned about here together.
 
-{% include figure.html src='/example/combinator/demo' height='26em' %}
+{% include figure.html src='/example/combinator/demo' height='47rem' %}
 
 
 
@@ -301,7 +301,7 @@ CSS has [finally added](https://webkit.org/blog/13096/css-has-pseudo-class/) the
 ```css
 div:has(p) { background-color: red; }
 ```
-{: style="max-width: 38ch;" }
+{: .left }
 
 Safari and Chrome both *just* [added support](https://caniuse.com/css-has), so this should be safe to use in the coming months.
 
@@ -313,7 +313,7 @@ Safari and Chrome both *just* [added support](https://caniuse.com/css-has), so t
 
 The first three targeting methods (`element`, `.class`, `#id`) are listed in increasing order of [*specificity*](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity), meaning that a class trumps an element rule, and an ID trumps a class. IDs are thus *more specific* than classes, which are *more specific* than element selectors. (And you shouldn’t really use them, but inline styles beat them all.) Take this example:
 
-{% include figure.html src='/example/specificity/demo' height='19em' %}
+{% include figure.html src='/example/specificity/demo' height='30rem' %}
 
 You could write a *long* book (and many people have) about CSS specificity—the myriad of ways that some CSS rules take precedent over others. It is often one the more frustrating parts (especially when working with legacy code that is poorly considered). Suffice it to say *it’s complicated*. The easiest way to avoid specificity problems is generally to stay at the same level throughout your HTML, usually by just using classes throughout.
 
@@ -325,7 +325,7 @@ You could write a *long* book (and many people have) about CSS specificity—th
 
 We haven’t even talked about that first *C*! Remember, it stands for [*cascading*](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade). This means that when there is a tie (like two classes applying the same property), the *lowest* rule wins—literally the one further down within a CSS document, or within a style tag. If you have multiple CSS documents with `<link>` element, the lower linked document will take precedence.
 
-{% include figure.html src='/example/cascade/demo' height='10em' %}
+{% include figure.html src='/example/cascade/demo' height='19rem' %}
 
 
 
@@ -338,7 +338,7 @@ To add even more confusion, [some CSS properties](https://developer.mozilla.org/
 This allows you to quickly set some properties globally, without having many brittle/redundant rules, as we did before:
 
 
-{% include figure.html src='/example/inheritance/demo' caption='All the children inherit the `body` styles. Ah, finally, `sans-serif`.' height='17em' %}
+{% include figure.html src='/example/inheritance/demo' caption='All the children inherit the `body` styles. Ah, finally, `sans-serif`.' height='31rem' %}
 
 
 
@@ -353,7 +353,7 @@ Alright, so all this has been about *targeting* elements—what about actually s
 
 Besides the basic examples above, [*color*](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) can be specified in a few different ways:
 
-{% include figure.html src='/example/color/demo' caption='There are [147 <em>named</em>](https://htmlcolorcodes.com/color-names/) CSS colors! `tomato` is a favorite.' height='29em' %}
+{% include figure.html src='/example/color/demo' caption='There are [147 <em>named</em>](https://htmlcolorcodes.com/color-names/) CSS colors! `tomato` is a favorite.' height='53rem' %}
 
 Named colors are quick to work with when you know a few, but `hsla` offers a more intuitive way to adjust and work with colors.
 
@@ -366,7 +366,7 @@ These can also all be applied to `background-color` (and `border`, but we’ll t
 
 Then perhaps most importantly, you’ll always be customizing your [typography](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals). Remember, the web is text *all the way down*:
 
-{% include figure.html src='/example/font-family/demo' height='35em' caption='With great power comes great responsibility.' %}
+{% include figure.html src='/example/font-family/demo' height='63rem' caption='With great power comes great responsibility.' %}
 
 Web font licensing is a *Whole Big Thing*—so let’s start out by making use of [Google Fonts](https://fonts.google.com), which offers many *open-source* typefaces nicely packaged for web use. You can select *families* and *weights* there to easily include in your pages, as in the example above.
 
@@ -377,7 +377,7 @@ Web font licensing is a *Whole Big Thing*—so let’s start out by making use o
 
 Once you’ve got a `font-family` in, there are additional properties to control the typography:
 
-{% include figure.html src='/example/font/demo' caption='For now, you can just specify units in `px` to match Figma. We’ll talk about other *absolute* and *relative* units soon.' height='43em' %}
+{% include figure.html src='/example/font/demo' caption='For now, you can just specify units in `px` to match Figma. We’ll talk about other *absolute* and *relative* units soon.' height='77rem' %}
 
 
 
