@@ -104,12 +104,17 @@
 			> blockquote {
 				--padding-left: 1ch;
 
+				~ * { --padding-left: 1ch } // For nested lists, below.
+			}
+
+			> h3,
+			> h4,
+			> p,
+			> div {
 				padding-left: var(--padding-left); // More space for paragraph lists.
 
 				&:first-child:before,
 				&:last-child:after { display: none }; // Since the `li` is a type element.
-
-				~ * { --padding-left: 1ch } // For nested lists, below.
 			}
 
 			> blockquote { margin-left: var(--padding-left) } // Since these have internal padding.
