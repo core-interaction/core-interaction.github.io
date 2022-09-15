@@ -23,6 +23,11 @@
 		color: var(--link--color);
 	}
 
+	del {
+		text-decoration:           line-through;
+		text-decoration-thickness: calc(1.5 * var(--typography--underline) * 1em);
+	}
+
 	// Prominence for link-only paragraphs/li.
 	cite > a,
 	.icon-link > a,
@@ -95,7 +100,8 @@
 			> h3,
 			> h4,
 			> p,
-			> div {
+			> div,
+			> blockquote {
 				--padding-left: 1ch;
 
 				padding-left: var(--padding-left); // More space for paragraph lists.
@@ -106,6 +112,8 @@
 				~ * { --padding-left: 1ch } // For nested lists, below.
 			}
 
+			> blockquote { margin-left: var(--padding-left) } // Since these have internal padding.
+
 			> h3,
 			> h4,
 			> p,
@@ -115,7 +123,8 @@
 			> h3 ~ ol,
 			> h4 ~ ol,
 			> p ~ ol,
-			> div {
+			> div,
+			> blockquote {
 				&:not(:first-child) { margin-top: var(--typography--leading-shoulder) }
 				&:last-child { margin-bottom: calc(var(--typography--font-size) * var(--typography--leading)) }
 				&:not(:only-child):last-child { margin-bottom: calc(2 * var(--typography--font-size) * var(--typography--leading)) }
