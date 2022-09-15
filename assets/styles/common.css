@@ -1101,30 +1101,6 @@ body > main > article ol > li > p,
 body > main > article ol > li > div,
 body > main > article ol > li > blockquote {
 	--padding-left: 1ch;
-	padding-left: var(--padding-left);
-}
-
-body > main > article ul > li > h3:first-child:before,
-body > main > article ul > li > h3:last-child:after,
-body > main > article ul > li > h4:first-child:before,
-body > main > article ul > li > h4:last-child:after,
-body > main > article ul > li > p:first-child:before,
-body > main > article ul > li > p:last-child:after,
-body > main > article ul > li > div:first-child:before,
-body > main > article ul > li > div:last-child:after,
-body > main > article ul > li > blockquote:first-child:before,
-body > main > article ul > li > blockquote:last-child:after,
-body > main > article ol > li > h3:first-child:before,
-body > main > article ol > li > h3:last-child:after,
-body > main > article ol > li > h4:first-child:before,
-body > main > article ol > li > h4:last-child:after,
-body > main > article ol > li > p:first-child:before,
-body > main > article ol > li > p:last-child:after,
-body > main > article ol > li > div:first-child:before,
-body > main > article ol > li > div:last-child:after,
-body > main > article ol > li > blockquote:first-child:before,
-body > main > article ol > li > blockquote:last-child:after {
-	display: none;
 }
 
 body > main > article ul > li > h3 ~ *,
@@ -1138,6 +1114,36 @@ body > main > article ol > li > p ~ *,
 body > main > article ol > li > div ~ *,
 body > main > article ol > li > blockquote ~ * {
 	--padding-left: 1ch;
+}
+
+body > main > article ul > li > h3,
+body > main > article ul > li > h4,
+body > main > article ul > li > p,
+body > main > article ul > li > div,
+body > main > article ol > li > h3,
+body > main > article ol > li > h4,
+body > main > article ol > li > p,
+body > main > article ol > li > div {
+	padding-left: var(--padding-left);
+}
+
+body > main > article ul > li > h3:first-child:before,
+body > main > article ul > li > h3:last-child:after,
+body > main > article ul > li > h4:first-child:before,
+body > main > article ul > li > h4:last-child:after,
+body > main > article ul > li > p:first-child:before,
+body > main > article ul > li > p:last-child:after,
+body > main > article ul > li > div:first-child:before,
+body > main > article ul > li > div:last-child:after,
+body > main > article ol > li > h3:first-child:before,
+body > main > article ol > li > h3:last-child:after,
+body > main > article ol > li > h4:first-child:before,
+body > main > article ol > li > h4:last-child:after,
+body > main > article ol > li > p:first-child:before,
+body > main > article ol > li > p:last-child:after,
+body > main > article ol > li > div:first-child:before,
+body > main > article ol > li > div:last-child:after {
+	display: none;
 }
 
 body > main > article ul > li > blockquote,
