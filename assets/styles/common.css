@@ -1018,8 +1018,7 @@ body > main > article h1 {
 	display: none;
 }
 
-body > main > article p,
-body > main > article hr {
+body > main > article p {
 	max-width: 70ch;
 }
 
@@ -1056,11 +1055,12 @@ body > main > article .highlighter-rouge + * + * {
 
 body > main > article hr {
 	height: var(--typography--cap);
+	max-width: 83ch;
 	overflow: hidden;
 }
 
 body > main > article hr:after {
-	content: "--------------------------------------------------------------------------------";
+	content: "------------------------------------------------------------------------------------------";
 	display: block;
 	margin-top: var(--typography--margin--top);
 	overflow-wrap: anywhere;
@@ -1581,12 +1581,50 @@ body > main > article aside + * {
 	}
 }
 
-body > main > article h2 {
+body > main > article h4 {
+	--margin--top: var(--margin--vertical--2);
+}
+
+body > main > article h4 + * {
+	--margin--top--previous: var(--margin--vertical--2);
+}
+
+body > main > article h3 {
 	--margin--top: var(--margin--vertical--4);
+}
+
+body > main > article h3 + * {
+	--margin--top: var(--margin--vertical--2);
+	--margin--top--previous: var(--margin--vertical--4);
+}
+
+body > main > article h3 + * + * {
+	--margin--top--previous: var(--margin--vertical--2);
+}
+
+body > main > article h3,
+body > main > article h2 {
 	margin-bottom: var(--typography--margin--bottom);
 	padding-bottom: calc(var(--typography--leading-shoulder) - var(--typography--between));
 	position: relative;
 	width: fit-content;
+}
+
+body > main > article h3:after,
+body > main > article h2:after {
+	content: "----------------------------------------------------------------------";
+	display: block;
+	height: 1em;
+	max-width: 100%;
+	overflow-wrap: anywhere;
+	overflow: hidden;
+	position: absolute;
+	visibility: visible;
+}
+
+body > main > article h2 {
+	--margin--top: var(--margin--vertical--4);
+	max-width: 52ch;
 }
 
 @media (min-width: 35.5em) {
@@ -1595,17 +1633,8 @@ body > main > article h2 {
 	}
 }
 
-body > main > article h2:after {
-	content: "----------------------------------------------------------------------";
-	max-width: 100%;
-	overflow: hidden;
-	position: absolute;
-	visibility: visible;
-	white-space: nowrap;
-}
-
 body > main > article h2 + * {
-	--margin--top: var(--margin--vertical--2);
+	--margin--top: var(--margin--vertical--4);
 	--margin--top--previous: var(--margin--vertical--4);
 }
 
@@ -1616,11 +1645,15 @@ body > main > article h2 + * {
 }
 
 body > main > article h2 + * + * {
-	--margin--top--previous: var(--margin--vertical--2);
+	--margin--top--previous: var(--margin--vertical--4);
 }
 
-body > main > article h3 {
+.week h2 + * {
 	--margin--top: var(--margin--vertical--2);
+}
+
+.week h2 + * + * {
+	--margin--top--previous: var(--margin--vertical--2);
 }
 
 body > main > article hr,

@@ -150,13 +150,13 @@
 					<li><a href="#specificity">Specificity</a></li>
 					<li><a href="#oh-right-the-cascade">Oh right, the cascade</a></li>
 					<li><a href="#and-inheritance">And inheritance</a></li>
-					<li><a href="#some-basic-properties">Some basic properties</a></li>
+					<li><a href="#color-and-type-properties">Color and type properties</a></li>
 					<li><a href="#resets">Resets</a></li>
 				</ul>
 			</header>
 
 			<article>
-				<h2 class="no_toc" id="css-stands-for-cascading-style-sheets">CSS stands for <em>Cascading Style Sheets</em></h2>
+				<h2 class="no_toc" id="css-stands-for-cascading-stylesheets">CSS stands for <em>Cascading Style Sheets</em></h2>
 
 				<p class="left">CSS is the standard language/format for styling web pages, which specifies what the page’s HTML will look like in the browser.</p>
 
@@ -215,7 +215,7 @@
 					<li>As separate/external files via <code class="language-plaintext highlighter-rouge">&lt;link&gt;</code> elements</li>
 				</ol>
 
-				<h3 class="four-above" id="1-inline-with-style">1. Inline with <code class="language-plaintext highlighter-rouge">style=</code></h3>
+				<h3 id="1-inline-with-style">1. Inline with <code class="language-plaintext highlighter-rouge">style=</code></h3>
 
 				<p>This is the original and most straightforward way to add styles, directly as <a href="/topic/html/#attributes"><em>attributes</em></a> in HTML tags:</p>
 
@@ -239,7 +239,7 @@
 
 				<p>It makes it hard to read, and hard to change and maintain<span class="mdash">—</span>you’d have to update every single instance. (In software, we’d refer to this as <em>brittle</em><span class="mdash">—</span>meaning it is easy to break.)</p>
 
-				<h3 class="four-above" id="2-along-comes-style">2. Along comes <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code></h3>
+				<h3 id="2-along-comes-style">2. Along comes <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code></h3>
 
 				<p>So the next way that was added to the standard was using a special HTML element, <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code>, that wraps blocks of CSS that then apply to an entire document. They go up in the <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> of our <a href="/topic/html/#the-basic-document">HTML documents</a>:</p>
 
@@ -268,7 +268,7 @@
 
 				<p>The rules are written written with selectors<span class="mdash">—</span>more on those, below. But importantly, we can now control the color of all the paragraphs easily, at once.</p>
 
-				<h3 class="four-above" id="3-external-with-link">3. External with <code class="language-plaintext highlighter-rouge">&lt;link&gt;</code></h3>
+				<h3 id="3-external-with-link">3. External with <code class="language-plaintext highlighter-rouge">&lt;link&gt;</code></h3>
 
 				<p>So this is already much better, allowing us to style whole pages easily and consistently. But what about when we have <em>multiple</em> pages? If you wanted a whole site to use the same styles, you’d have to duplicate the <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code> tag over and over, updated it everywhere whenever you changes. Still brittle. So along comes the <code class="language-plaintext highlighter-rouge">&lt;link&gt;</code> element:</p>
 
@@ -323,7 +323,7 @@
 
 				<p>There are <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">many, many CSS properties</a>. (Here is a shorter <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference">“common” list</a>.) We’ll go through some in our exercise, but look through these to become more familiar.</p>
 
-				<h3 class="four-above" id="ergonomics">Ergonomics</h3>
+				<h3 id="ergonomics">Ergonomics</h3>
 
 				<p>Just <a href="/topic/html/#case-whitespace-tabs-line-breaks">like HTML</a>, CSS does not care about capitalization, extra white space, or line breaks. Folks generally use tabs/indenting to indicate hierarchy, but again it is just whatever makes it easier for you!</p>
 
@@ -354,7 +354,7 @@
 					<li>IDs</li>
 				</ol>
 
-				<h3 class="four-above" id="1-by-element-type">1. By element type</h3>
+				<h3 id="1-by-element-type">1. By element type</h3>
 
 				<p>If you want to change the styles for all instances of a given HTML element, you drop the <code class="language-plaintext highlighter-rouge">&lt;</code> <code class="language-plaintext highlighter-rouge">&gt;</code> from the tag for an element selector. These are called <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors"><em>type selectors</em></a>:</p>
 
@@ -370,7 +370,7 @@
 
 				</figure>
 
-				<h3 class="four-above" id="2-with-aclass">2. With a class</h3>
+				<h3 id="2-with-aclass">2. With a class</h3>
 
 				<p>But maybe you don’t want to style all of the paragraphs. You can then use a <code class="language-plaintext highlighter-rouge">class</code> to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors">target specific instances</a>. They are added as an <em><a href="/topic/html/#attributes">attribute</a></em> on the element you want to target:</p>
 
@@ -388,7 +388,7 @@
 
 				<p>You can use these over and over, on any kind of element. And individual elements can have <em>multiple</em> classes, too. (We’ll talk about how conflicting rules are handled, below.) Class names can be whatever you want<span class="mdash">—</span>there are whole methodologies about what to call these things. They are the most common way to target things in CSS.</p>
 
-				<h3 class="four-above" id="3-with-an-id">3. With an ID</h3>
+				<h3 id="3-with-an-id">3. With an ID</h3>
 
 				<p>You can also use an <code class="language-plaintext highlighter-rouge">id</code>, which is a kind of <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id">special attribute</a> that can only be used <em>once</em> in an HTML document. These are useful thus useful for targeting singular things<span class="mdash">—</span>like your navigation, the document title, specific headings, etc:</p>
 
@@ -406,7 +406,7 @@
 
 				<h2 id="fancy-selectors"><em>Fancy</em> selectors</h2>
 
-				<h3 class="four-above" id="combinations-and-groups">Combinations and groups</h3>
+				<h3 id="combinations-and-groups">Combinations and groups</h3>
 
 				<p>You can use combinations of the above <em>elements</em>, <em>classes</em>, and <em>IDs</em> to be even more specific<span class="mdash">—</span>however, this likely means you just need to rethink your HTML structure. (We’ll unpack <em>specificity</em>, below.) More commonly, you might apply declarations to multiple selectors, called <em>group selectors</em>, with a comma-delineated <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list">selector list</a>:</p>
 
@@ -420,7 +420,7 @@
 
 				</figure>
 
-				<h3 class="four-above" id="with-specific-attributes">With specific attributes</h3>
+				<h3 id="with-specific-attributes">With specific attributes</h3>
 
 				<p>You can use the various <a href="topic/html/#attributes">attributes</a> as selectors, too. These are usually very similar to using <em>classes</em>, but can help you <a href="https://css-tricks.com/attribute-selectors/">differentiate things</a> like internal and external links, for example:</p>
 
@@ -434,7 +434,7 @@
 
 				</figure>
 
-				<h3 class="four-above" id="pseudo-classes">Pseudo-classes</h3>
+				<h3 id="pseudo-classes">Pseudo-classes</h3>
 
 				<p>These are <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">special selectors</a>, added to <code class="language-plaintext highlighter-rouge">element</code>, <code class="language-plaintext highlighter-rouge">class</code>, or <code class="language-plaintext highlighter-rouge">id</code> which target unique <em>states</em> or <em>instances</em> of HTML elements. You’ll often see these used to target <a href="https://web.dev/learn/css/pseudo-classes/#historic-states">link states</a>:</p>
 
@@ -462,7 +462,7 @@
 
 				</figure>
 
-				<h3 class="four-above" id="pseudo-elements">Pseudo-elements</h3>
+				<h3 id="pseudo-elements">Pseudo-elements</h3>
 
 				<p>Slightly different the various <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">pseudo-<em>elements</em></a>, which let you style a particular <em>part</em> of an element. You’ll most often see these as <code class="language-plaintext highlighter-rouge">:before</code> and <code class="language-plaintext highlighter-rouge">:after</code>, which let us insert things around text.</p>
 
@@ -476,7 +476,7 @@
 
 				</figure>
 
-				<h3 class="four-above" id="finally-combinators">Finally, combinators</h3>
+				<h3 id="finally-combinators">Finally, combinators</h3>
 
 				<p>Last, you will often want to target something based on its relationship to other elements<span class="mdash">—</span>its <em>siblings</em> or its <em>parents</em>. For this, CSS has <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators"><em>combinators</em></a>, which let you relate all the various selectors we’ve learned about here together.</p>
 
@@ -492,7 +492,7 @@
 
 				<p>Importantly, combinators can only “see” elements <em>before</em> and <em>above</em> themselves<span class="mdash">—</span>meaning their <em>previous <em>(older?)</em> siblings</em> or their <em>parents</em>. This directionality somewhat corresponds with the <em>cascade</em>, which we’ll talk about shortly.</p>
 
-				<h3 class="four-above" id="has-will-change-this"><code class="language-plaintext highlighter-rouge">:has()</code> will change this!</h3>
+				<h3 id="has-will-change-this"><code class="language-plaintext highlighter-rouge">:has()</code> will change this!</h3>
 
 				<p>For many, many years folks have wanted a “parent selector” in CSS<span class="mdash">—</span>meaning a way to apply a style to a parent/container based on one of its children. This was not possible before, as we mentioned above.</p>
 
@@ -555,11 +555,11 @@
 
 				</figure>
 
-				<h2 id="some-basic-properties">Some basic properties</h2>
+				<h2 id="color-and-type-properties">Color and type properties</h2>
 
 				<p>Alright, so all this has been about <em>targeting</em> elements<span class="mdash">—</span>what about actually styling them? Let’s introduce a few quick <em>properties</em> to get us started.</p>
 
-				<h3 class="four-above" id="color">Color!</h3>
+				<h3 id="color">Color!</h3>
 
 				<p>Besides the basic examples above, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value"><em>color</em></a> can be specified in a few different ways:</p>
 
@@ -579,7 +579,7 @@
 
 				<p>These can also all be applied to <code class="language-plaintext highlighter-rouge">background-color</code> (and <code class="language-plaintext highlighter-rouge">border</code>, but we’ll talk about that next week).</p>
 
-				<h3 class="four-above" id="fonts">Fonts!</h3>
+				<h3 id="fonts">Fonts!</h3>
 
 				<p>Then perhaps most importantly, you’ll always be customizing your <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals">typography</a>. Remember, the web is text <em>all the way down</em>:</p>
 
@@ -597,7 +597,7 @@
 
 				<p>Web font licensing is a <em>Whole Big Thing</em><span class="mdash">—</span>so let’s start out by making use of <a href="https://fonts.google.com">Google Fonts</a>, which offers many <em>open-source</em> typefaces nicely packaged for web use. You can select <em>families</em> and <em>weights</em> there to easily include in your pages, as in the example above.</p>
 
-				<h3 class="four-above" id="other-type-properties">Other type properties!</h3>
+				<h3 id="other-type-properties">Other type properties!</h3>
 
 				<p>Once you’ve got a <code class="language-plaintext highlighter-rouge">font-family</code> in, there are additional properties to control the typography:</p>
 
