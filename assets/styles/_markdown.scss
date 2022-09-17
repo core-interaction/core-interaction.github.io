@@ -215,7 +215,7 @@
 		&.callout {
 			--padding: 2ch;
 
-			--color--background: var(--color--background--callout);
+			--color--background: var(--color--code--background);
 
 			background-color: var(--color--background);
 			border-radius:    var(--border--radius);
@@ -360,7 +360,7 @@
 		}
 
 		> div {
-			border:       var(--color--background--callout) solid 0.1rem;
+			border:       var(--color--code--background) solid 0.1rem;
 			aspect-ratio: var(--aspect--ratio, 16 / 9);
 			display:      flex;
 

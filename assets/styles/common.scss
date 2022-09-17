@@ -32,15 +32,14 @@
 	--color:             black;
 	--color--background: white;
 
-	--color--background--callout: var(--color--tint);
-
 	--color--tint:          #f6f6f6;
 	--color--tint--reverse: #e95349;
 
 	--color--links:          #e42a1d;
 	--color--links--reverse: white;
 
-	--color--code: #666666;
+	--color--code:             #666666;
+	--color--code--background: var(--color--tint);
 
 	--color--highlight:          hsl(0, 0%, 0%, 3.333%);
 	--color--highlight--reverse: hsl(0, 0%, 100%, 6.666%);
@@ -84,8 +83,12 @@
 	// For code example embeds, inside margins.
 	&.iframe {
 		--typography--size: 1.6rem;
+		--margin:           2.4rem;
 
-		@include breakpoint(696) { --typography--size: 1.8rem }
+		@include breakpoint(696) {
+			--typography--size: 1.8rem;
+			--margin:           4.8rem;
+		}
 	}
 }
 
@@ -105,7 +108,7 @@
 
 // Flip the colors.
 %--reverse {
-	--color--background--callout: var(--color--tint--reverse);
+	--color--code--background: var(--color--tint--reverse);
 
 	--color--background--parent: var(--color--background);
 
@@ -529,7 +532,7 @@ body {
 
 	// Inline code.
 	*:not(pre) > code {
-		background-color: var(--color--background--callout);
+		background-color: var(--color--code--background);
 		border-radius:    var(--border--radius);
 		letter-spacing:   0.0775em; // Counteract the scale.
 		line-height:      var(--typography--leading);
@@ -541,10 +544,10 @@ body {
 
 	// “Fenced” code blocks.
 	pre {
-		background-color: var(--color--background--callout);
+		background-color: var(--color--code--background);
 		border-radius:    var(--border--radius);
 		overflow-x:       scroll;
-		padding:          2ch;
+		padding:          calc(var(--margin) / 2);
 		tab-size:         2;
 
 		code {
@@ -554,7 +557,7 @@ body {
 		}
 	}
 
-	li pre { padding: 1ch } // Tighter in lists.
+	li pre { padding: calc(var(--margin) / 4) } // Tighter in lists.
 
 
 

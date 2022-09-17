@@ -11,7 +11,7 @@
 	@include breakpoint(568) { flex-direction: row }
 
 	> section {
-		background-color:        var(--color--background--callout);
+		background-color:        var(--color--code--background);
 		border-top-left-radius:  var(--border--radius);
 		border-top-right-radius: var(--border--radius);
 		display:                 flex;
@@ -60,7 +60,7 @@
 
 		#files {
 			> ul {
-				background-color: var(--color--background--callout);
+				background-color: var(--color--code--background);
 				display:          flex;
 				flex-shrink:      0;
 				gap:              var(--padding);
@@ -111,7 +111,7 @@
 
 	> iframe {
 		background-color:           white;
-		border-color:               var(--color--background--callout);
+		border-color:               var(--color--code--background);
 		border-style:               solid;
 		border-width:               var(--border--radius);
 		height:                     100%;
