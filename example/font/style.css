@@ -32,3 +32,5 @@ li:nth-child(10) { text-decoration: underline; } /* Even non-links. */
 li:nth-child(11) { text-decoration: line-through; }
 /* Decoration should be paired with a tag, like <em> or <del>. */
 
+li:nth-child(12) { text-align: center; }
+li:nth-child(13) { text-align: right; }

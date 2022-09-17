@@ -377,7 +377,7 @@ Web font licensing is a *Whole Big Thing*—so let’s start out by making use o
 
 Once you’ve got a `font-family` in, there are additional properties to control the typography:
 
-{% include figure.html src='/example/font/demo' caption='For now, you can just specify units in `px` to match Figma. We’ll talk about other *absolute* and *relative* units soon.' height='77rem' %}
+{% include figure.html src='/example/font/demo' caption='For now, you can just specify units in `px` to match Figma. We’ll talk about other *absolute* and *relative* units soon.' height='82rem' %}
 
 
 
