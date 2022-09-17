@@ -75,6 +75,7 @@ li:nth-child(12) {
 	text-align: center;
 }
 
+/* Default is “left”. */
 li:nth-child(13) {
 	text-align: right;
 }
