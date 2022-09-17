@@ -509,6 +509,14 @@
 
 			+ * { --margin--top--previous: var(--margin--vertical--4) } // Think of this as its margin-bottom.
 		}
+
+		+ h3 {
+			@include breakpoint(568) { --margin--top: var(--margin--vertical--6) } // Think of this as its margin-bottom.
+
+			+ * {
+				@include breakpoint(568) { --margin--top--previous: var(--margin--vertical--6) } // Think of this as its margin-bottom.
+			}
+		}
 	}
 
 	@at-root {
