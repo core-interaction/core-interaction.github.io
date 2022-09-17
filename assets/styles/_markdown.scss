@@ -12,7 +12,7 @@
 
 	h1 { display: none } // So we don’t forget.
 
-	p, hr { max-width: 70ch }
+	p { max-width: 70ch }
 
 	a {
 		@extend %link--text;
@@ -63,11 +63,12 @@
 
 	// Dividers.
 	hr {
-		height:   var(--typography--cap);
-		overflow: hidden;
+		height:    var(--typography--cap);
+		max-width: 83ch;
+		overflow:  hidden;
 
 		&:after {
-			content:       '--------------------------------------------------------------------------------';
+			content:       '------------------------------------------------------------------------------------------';
 			display:       block;
 			margin-top:    var(--typography--margin--top);
 			overflow-wrap: anywhere;
