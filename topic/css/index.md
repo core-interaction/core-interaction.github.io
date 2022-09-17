@@ -36,9 +36,9 @@ In our ongoing analogy, CSS is the *skin* of the web. [Just like HTML](/topics/h
 
 CSS came after HTML, first proposed by [Håkon Wium Lie](https://www.w3.org/Style/CSS20/history.html) in 1994—who was working with our friend Tim Berners-Lee at CERN and wanted more control over the presentation of web pages. (Tim was *against* the idea, thinking it should be up to each user.) It’s had three major revisions that have grown the vocabulary:
 
-- **CSS 1, 1996**
-- **CSS 2, 1998**
-- **CSS 3, 1999**
+- CSS 1, 1996
+- CSS 2, 1998
+- CSS 3, 1999
 
 *For the past decade or so, features have been added incrementally by browsers “within” the CSS 3 “standard”. That’s how it goes, these days.*
 
