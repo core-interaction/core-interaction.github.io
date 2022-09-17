@@ -193,7 +193,7 @@
 					</li>
 				</ul>
 
-				<p>In our ongoing analogy, CSS is the <em>skin</em> of the web. <a href="/topics/html">Just like HTML</a>, at its most basic it is still just text, in a file, on a computer. It can live inside HTML documents themselves, but is more commonly seen on its own with the extension <code class="language-plaintext highlighter-rouge">.css</code></p>
+				<p>In our ongoing analogy, CSS is the <em>skin</em> of the web. <a href="/topics/html">Just like HTML</a>, at its most basic it is still just text, in a file, on a computer. It can live inside HTML documents themselves, but is more commonly seen on its own with the extension <code class="language-plaintext highlighter-rouge">.css</code></p>
 
 				<p>CSS came after HTML, first proposed by <a href="https://www.w3.org/Style/CSS20/history.html">Håkon Wium Lie</a> in 1994<span class="mdash">—</span>who was working with our friend Tim Berners-Lee at CERN and wanted more control over the presentation of web pages. (Tim was <em>against</em> the idea, thinking it should be up to each user.) It’s had three major revisions that have grown the vocabulary:</p>
 
@@ -203,7 +203,7 @@
 					<li>CSS 3, 1999</li>
 				</ul>
 
-				<p><em>For the past decade or so, features have been added incrementally by browsers “within” the CSS 3 “standard”. That’s how it goes, these days.</em></p>
+				<p><em>For the past decade or so, features have been added incrementally by browsers “within” the CSS 3 “standard”. That’s how it goes, these days.</em></p>
 
 				<h2 id="where-css-lives">Where CSS lives</h2>
 
@@ -243,7 +243,7 @@
 
 				<p>So the next way that was added to the standard was using a special HTML element, <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code>, that wraps blocks of CSS that then apply to an entire document. They go up in the <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> of our <a href="/topic/html/#the-basic-document">HTML documents</a>:</p>
 
-				<div class="language-html left highlighter-rouge">
+				<div class="language-html half highlighter-rouge">
 					<div class="highlight">
 						<pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html&gt;</span>
@@ -292,7 +292,7 @@
 
 				<p>And then in a separate <code class="language-plaintext highlighter-rouge">style.css</code> file (in this case, in the same directory as our HTML file), we can have the same rules as before<span class="mdash">—</span>no need for the outside wrapping <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code> tag:</p>
 
-				<div class="language-css left highlighter-rouge">
+				<div class="language-css half highlighter-rouge">
 					<div class="highlight">
 						<pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span>
 	<span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
@@ -325,9 +325,9 @@
 
 				<h3 id="ergonomics">Ergonomics</h3>
 
-				<p>Just <a href="/topic/html/#case-whitespace-tabs-line-breaks">like HTML</a>, CSS does not care about capitalization, extra white space, or line breaks. Folks generally use tabs/indenting to indicate hierarchy, but again it is just whatever makes it easier for you!</p>
+				<p>Just <a href="/topic/html/#case-whitespace-tabs-line-breaks">like HTML</a>, CSS does not care about capitalization, extra white space, or line breaks. Folks generally use tabs/indenting to indicate hierarchy, but again it is just whatever makes it easier for you!</p>
 
-				<div class="language-css left highlighter-rouge">
+				<div class="language-css half highlighter-rouge">
 					<div class="highlight">
 						<pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span>
 	<span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
@@ -342,7 +342,7 @@
 
 				<p>I generally “single-line” rules when there is only one property declared, as I find it easier to read.</p>
 
-				<p><em>Capitalization <em>does</em> matter when using IDs or classes as selectors, which have to match the HTML to target correctly. Like with HTML, it’s easiest just to be consistent and stick to lowercase.</em></p>
+				<p><em>Capitalization <em>does</em> matter when using IDs or classes as selectors, which have to match the HTML to target correctly. Like with HTML, it’s easiest just to be consistent and stick to lowercase.</em></p>
 
 				<h2 id="basic-selectors">Basic selectors</h2>
 
@@ -464,7 +464,7 @@
 
 				<h3 id="pseudo-elements">Pseudo-elements</h3>
 
-				<p>Slightly different the various <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">pseudo-<em>elements</em></a>, which let you style a particular <em>part</em> of an element. You’ll most often see these as <code class="language-plaintext highlighter-rouge">:before</code> and <code class="language-plaintext highlighter-rouge">:after</code>, which let us insert things around text.</p>
+				<p>Slightly different the various <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">pseudo-<em>elements</em></a>, which let you style a particular <em>part</em> of an element. You’ll most often see these as <code class="language-plaintext highlighter-rouge">:before</code> and <code class="language-plaintext highlighter-rouge">:after</code>, which let us insert things around text.</p>
 
 				<figure style="--height--max: 46rem">
 
@@ -498,7 +498,7 @@
 
 				<p>CSS has <a href="https://webkit.org/blog/13096/css-has-pseudo-class/">finally added</a> the <code class="language-plaintext highlighter-rouge">:has()</code> pseudo-class, just in the past few weeks! It will allow us to write much simpler, logical styles:</p>
 
-				<div class="language-css left highlighter-rouge">
+				<div class="language-css half highlighter-rouge">
 					<div class="highlight">
 						<pre class="highlight"><code><span class="nt">div</span><span class="nd">:has</span><span class="o">(</span><span class="nt">p</span><span class="o">)</span> <span class="p">{</span> <span class="nl">background-color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="p">}</span>
 </code></pre>
