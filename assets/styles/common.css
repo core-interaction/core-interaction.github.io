@@ -1648,6 +1648,18 @@ body > main > article h2 + * + * {
 	--margin--top--previous: var(--margin--vertical--4);
 }
 
+@media (min-width: 35.5em) {
+	body > main > article h2 + h3 {
+		--margin--top: var(--margin--vertical--6);
+	}
+}
+
+@media (min-width: 35.5em) {
+	body > main > article h2 + h3 + * {
+		--margin--top--previous: var(--margin--vertical--6);
+	}
+}
+
 .week h2 + * {
 	--margin--top: var(--margin--vertical--2);
 }
