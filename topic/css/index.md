@@ -32,7 +32,7 @@ CSS is the standard language/format for styling web pages, which specifies what 
   *“What can my font do?”*
 {: .icon-link .no-marker .right rows="5" }
 
-In our ongoing analogy, CSS is the *skin* of the web. [Just like HTML](/topics/html), at its most basic it is still just text, in a file, on a computer. It can live inside HTML documents themselves, but is more commonly seen on its own with the extension `.css`
+In our ongoing analogy, CSS is the *skin* of the web. [Just like HTML](/topics/html), at its most basic it is still just text, in a file, on a computer. It can live inside HTML documents themselves, but is more commonly seen on its own with the extension `.css`
 
 CSS came after HTML, first proposed by [Håkon Wium Lie](https://www.w3.org/Style/CSS20/history.html) in 1994—who was working with our friend Tim Berners-Lee at CERN and wanted more control over the presentation of web pages. (Tim was *against* the idea, thinking it should be up to each user.) It’s had three major revisions that have grown the vocabulary:
 
@@ -40,7 +40,7 @@ CSS came after HTML, first proposed by [Håkon Wium Lie](https://www.w3.org/Sty
 - CSS 2, 1998
 - CSS 3, 1999
 
-*For the past decade or so, features have been added incrementally by browsers “within” the CSS 3 “standard”. That’s how it goes, these days.*
+*For the past decade or so, features have been added incrementally by browsers “within” the CSS 3 “standard”. That’s how it goes, these days.*
 
 
 
@@ -100,7 +100,7 @@ So the next way that was added to the standard was using a special HTML element
 	</body>
 </html>
 ```
-{: .left }
+{: .half }
 
 The rules are written written with selectors—more on those, below. But importantly, we can now control the color of all the paragraphs easily, at once.
 
@@ -134,7 +134,7 @@ p {
 	font-family: sans-serif;
 }
 ```
-{: .left }
+{: .half }
 
 This will apply to any page that we add the `<link>` to, and updating the styles will now change the color of the paragraphs in our *entire web site*.
 
@@ -160,7 +160,7 @@ There are [many, many CSS properties](https://developer.mozilla.org/en-US/docs/W
 
 ### Ergonomics
 
-Just [like HTML](/topic/html/#case-whitespace-tabs-line-breaks), CSS does not care about capitalization, extra white space, or line breaks. Folks generally use tabs/indenting to indicate hierarchy, but again it is just whatever makes it easier for you!
+Just [like HTML](/topic/html/#case-whitespace-tabs-line-breaks), CSS does not care about capitalization, extra white space, or line breaks. Folks generally use tabs/indenting to indicate hierarchy, but again it is just whatever makes it easier for you!
 
 ```css
 p {
@@ -171,11 +171,11 @@ p {
 
 p { color: red; }
 ```
-{: .left }
+{: .half }
 
 I generally “single-line” rules when there is only one property declared, as I find it easier to read.
 
-*Capitalization <em>does</em> matter when using IDs or classes as selectors, which have to match the HTML to target correctly. Like with HTML, it’s easiest just to be consistent and stick to lowercase.*
+*Capitalization <em>does</em> matter when using IDs or classes as selectors, which have to match the HTML to target correctly. Like with HTML, it’s easiest just to be consistent and stick to lowercase.*
 
 
 
@@ -257,7 +257,7 @@ Other common examples have to do with [counts and positions](https://developer.m
 
 ### Pseudo-elements
 
-Slightly different the various [pseudo-*elements*](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements), which let you style a particular *part* of an element. You’ll most often see these as `:before` and `:after`, which let us insert things around text.
+Slightly different the various [pseudo-*elements*](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements), which let you style a particular *part* of an element. You’ll most often see these as `:before` and `:after`, which let us insert things around text.
 
 {% include figure.html src='/example/pseudo-element/demo' height='46rem' %}
 
@@ -284,7 +284,7 @@ CSS has [finally added](https://webkit.org/blog/13096/css-has-pseudo-class/) the
 ```css
 div:has(p) { background-color: red; }
 ```
-{: .left }
+{: .half }
 
 Safari and Chrome both *just* [added support](https://caniuse.com/css-has), so this should be safe to use in the coming months.
 

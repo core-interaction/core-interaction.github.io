@@ -626,15 +626,36 @@
 		align-items:           start;
 		display:               grid;
 		grid-auto-rows:        min-content;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-template-columns: repeat(6, minmax(0, 1fr));
 		column-gap:            var(--margin);
 
-		> * { grid-column: 1 / span 3 } // Everything full width, by default.
+		> * { grid-column: 1 / span 6 } // Everything full width, by default.
 
-		%--left,
-		.left {
-			grid-column:  1 / span 2;
-			margin-right: 2ch;
+		.half {
+			align-self:  center;
+			grid-column: span 3;
+
+			&:first-child + .half { --margin--top: 0rem } // Not `initial` to prevent fallback.
+			&:not(:first-child) + .half { --margin--top: var(--margin--top--previous) }
+		}
+
+		h2,
+		h3,
+		h4,
+		p,
+		blockquote,
+		ul,
+		ol {
+			&.half,
+			&.left,
+			&%--left {
+				padding-right: 2ch; // Inset type edge.
+			}
+		}
+
+		.left,
+		%--left {
+			grid-column: 1 / span 4;
 		}
 
 		.left {
@@ -643,7 +664,7 @@
 		}
 
 		.right {
-			grid-column: 3 / span 1;
+			grid-column: 5 / span 2;
 
 			@for $row from 2 through 12 {
 				&[rows="#{$row}"] {
