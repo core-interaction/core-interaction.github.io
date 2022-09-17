@@ -30,21 +30,17 @@ CSS is the standard language/format for styling web pages, which specifies what 
 
 * [Wakamai Fondue](https://wakamaifondue.com) \
   *“What can my font do?”*
-{: .icon-link .no-marker .right rows="5"}
+{: .icon-link .no-marker .right rows="5" }
 
 In our ongoing analogy, CSS is the *skin* of the web. [Just like HTML](/topics/html), at its most basic it is still just text, in a file, on a computer. It can live inside HTML documents themselves, but is more commonly seen on its own with the extension `.css`
-{: .left }
 
 CSS came after HTML, first proposed by [Håkon Wium Lie](https://www.w3.org/Style/CSS20/history.html) in 1994—who was working with our friend Tim Berners-Lee at CERN and wanted more control over the presentation of web pages. (Tim was *against* the idea, thinking it should be up to each user.) It’s had three major revisions that have grown the vocabulary:
-{: .left }
 
 - **CSS 1, 1996**
 - **CSS 2, 1998**
 - **CSS 3, 1999**
-{: .left }
 
 *For the past decade or so, features have been added incrementally by browsers “within” the CSS 3 “standard”. That’s how it goes, these days.*
-{: .left }
 
 
 

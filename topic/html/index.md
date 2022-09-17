@@ -21,24 +21,21 @@ HTML is the standard markup language/format for creating web pages, containing t
 
 * [Organizing Files for the Web](https://docs.google.com/presentation/d/101TEdtacOFZhCwebijcJaX0h1BpDwhAm2SJhE3jW89c/edit#slide=id.g331f24f572_4_0)
   *Sasha Portis on (web) file-naming, for when you get to saving.*
-{: .icon-link .no-marker .right rows="4"}
+{: .icon-link .no-marker .right rows="4" }
 
 In our ongoing analogy, HTML is the *skeleton* of the web. At its most basic it is a text file, in a folder on a computer, with a `.html` extension.
-{: .left }
 
 As we heard last week, this format was codified by our pal [Tim Berners-Lee](https://www.w3.org/People/Berners-Lee/) in 1991, evolving from his earlier [SGML](https://en.wikipedia.org/wiki/Standard_Generalized_Markup_Language), a similar/proto language. There have been five major revisions to the spec since then, which added (and sometimes *deprecated*, or removed) tags and syntax:
-{: .left }
 
 - HTML 1, 1991
 - HTML 2, 1995
 - HTML 3, 1997
 - HTML 4, 1997 (busy year)
 - HTML 5, 2014
-{: .left }
+
 
 
 ## The basic document
-
 
 
 
@@ -120,10 +117,10 @@ We call these [*semantic* elements](https://www.w3schools.com/html/html5_semanti
 ```
 {% endcapture %}
 
-{% include aside.html content=aside sticky=true rows=2 %}
+{% include aside.html content=aside sticky=true rows="2" %}
 
 We use semantic elements to help structure and describe our content—but also for accessibility (screen readers)—where the tag type helps indicate what things are.
-{: .left}
+
 
 
 ## What are elements?

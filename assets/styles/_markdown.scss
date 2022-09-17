@@ -612,6 +612,16 @@
 		}
 	}
 
+	@function siblings($count) {
+		$siblings: '';
+
+		@for $each from 1 through $count {
+			$siblings: $siblings + ' + *';
+		}
+
+		@return $siblings;
+	}
+
 	@include breakpoint(568) {
 		align-items:           start;
 		display:               grid;
@@ -621,23 +631,29 @@
 
 		> * { grid-column: 1 / span 3 } // Everything full width, by default.
 
+		%--left,
 		.left {
 			grid-column:  1 / span 2;
 			margin-right: 2ch;
+		}
 
+		.left {
 			&:first-child + .right { --margin--top: 0rem } // Not `initial` to prevent fallback.
 			&:not(:first-child) + .right { --margin--top: var(--margin--top--previous) }
 		}
 
 		.right {
 			grid-column: 3 / span 1;
-		}
 
-		.left,
-		.right {
-			@for $row from 1 through 24 {
+			@for $row from 2 through 12 {
 				&[rows="#{$row}"] {
-					grid-row: span $row;
+					grid-row: span $row + 1;
+				}
+
+				@for $sibling from 2 through $row {
+					&[rows="#{$row}"] #{siblings($sibling - 1)} {
+						@extend %--left;
+					}
 				}
 			}
 		}

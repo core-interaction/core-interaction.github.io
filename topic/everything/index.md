@@ -118,6 +118,8 @@ And the web exploded from there.
 
 
 ## So what are *web pages*?
+
+Obviously, *this* is a web page. Think about how many other web pages you have visited in the past day. Dozens, even hundreds?
 {: .left }
 
 {% capture aside %}
@@ -131,30 +133,21 @@ And the web exploded from there.
 
 {% endcapture %}
 
-{% include aside.html content=aside rows=9 %}
-
-Obviously, *this* is a web page. Think about how many other web pages you have visited in the past day. Dozens, even hundreds?
-{: .left }
+{% include aside.html content=aside rows="7" %}
 
 Ultimately, a web page is a just text file on a computer. It is written in a special format, the aforementioned HTML, which structures the content of the document and also links it to other resources—other web pages, images, computers, really almost anything. Think of the web as type with instructions.
-{: .left }
 
 These all started as simple, hand-typed documents. Then as the power of computers grew, and the languages of the web evolved alongside—web pages expanded almost inconceivably in complexity and capabilities. *Cascading Style Sheets* (CSS) gave them marvelous abilities to be customized and designed. *JavaScript* (JS) gave them remarkable, newfound interactivity and function. Websites (collections of web pages) today are built on top of an incredible *stack* of technology—networks, servers, databases, libraries, browsers, devices.
-{: .left }
 
 
 
 ## An ever-present visual medium
-{: .left }
 
 If you’re looking at a glowing, 16:9 rectangle somewhere (and it isn’t just playing video), nowadays it is very likely a web page—built with the exact same HTML, CSS, and JS—web technologies—that are behind this page, and every other.
-{: .left }
 
 In its openness, connectedness, and ubiquity, the web has come to dominate over other forms of technology. Its advantages in compatibility, cost, scale, and inertia are continuing to snowball, and the advance of these web technologies shows no sign of slowing down. It is the water that we are swimming in, both as humans and as designers.
-{: .left }
 
 And in that latter role, we’ll need to learn how to swim. Our path into *design* then is to understand how these things are made and how they function. Their technological construction both empowers and constrains our work. You can’t separate the design from this foundation; the medium is inextricable from the end product.
-{: .left }
 
 > Most people make the mistake of thinking design is what it looks like. People think it’s this veneer—that the designers are handed this box and told, “Make it look good!” That’s not what we think design is. It’s not just what it looks like and feels like. Design is how it works.
 {: .quote }
