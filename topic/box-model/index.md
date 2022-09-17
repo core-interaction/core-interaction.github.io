@@ -1,5 +1,5 @@
 ---
-title: The Box Model
+title: The box model
 order: 3
 published: false
 ---
