@@ -458,36 +458,70 @@
 
 
 	// Lower for the cascade.
-	h2 {
+	h4 {
+		--margin--top: var(--margin--vertical--2);
+
+		+ * { --margin--top--previous: var(--margin--vertical--2) }
+	}
+
+	h3 {
 		--margin--top: var(--margin--vertical--4);
-
-		margin-bottom:  var(--typography--margin--bottom);
-		padding-bottom: calc(var(--typography--leading-shoulder) - var(--typography--between));
-		position:       relative;
-		width:          fit-content;
-
-		@include breakpoint(568) { --margin--top: var(--margin--vertical--6) }
-
-		&:after {
-			content:     '----------------------------------------------------------------------';
-			max-width:   100%;
-			overflow:    hidden;
-			position:    absolute;
-			visibility:  visible; // Override typography.
-			white-space: nowrap;
-		}
 
 		+ * {
 			--margin--top:           var(--margin--vertical--2); // Think of this as its margin-bottom.
 			--margin--top--previous: var(--margin--vertical--4);
 
-			@include breakpoint(568) { --margin--top--previous: var(--margin--vertical--6) }
-
 			+ * { --margin--top--previous: var(--margin--vertical--2) } // Think of this as its margin-bottom.
 		}
 	}
 
-	h3 { --margin--top: var(--margin--vertical--2) }
+	h3,
+	h2 {
+		margin-bottom:  var(--typography--margin--bottom);
+		padding-bottom: calc(var(--typography--leading-shoulder) - var(--typography--between));
+		position:       relative;
+		width:          fit-content;
+
+		&:after {
+			content:       '----------------------------------------------------------------------';
+			display:       block;
+			height:        1em;
+			max-width:     100%;
+			overflow-wrap: anywhere;
+			overflow:      hidden;
+			position:      absolute;
+			visibility:    visible; // Override typography.
+		}
+	}
+
+	h2 {
+		--margin--top: var(--margin--vertical--4);
+
+		max-width: 52ch; // Two columns.
+
+		@include breakpoint(568) { --margin--top: var(--margin--vertical--6) }
+
+		+ * {
+			--margin--top:           var(--margin--vertical--4); // Think of this as its margin-bottom.
+			--margin--top--previous: var(--margin--vertical--4);
+
+			@include breakpoint(568) { --margin--top--previous: var(--margin--vertical--6) }
+
+			+ * { --margin--top--previous: var(--margin--vertical--4) } // Think of this as its margin-bottom.
+		}
+	}
+
+	@at-root {
+		.week { // Tighter on agendas, which don’t have h3.
+			h2 {
+				+ * {
+					--margin--top: var(--margin--vertical--2); // Think of this as its margin-bottom.
+
+					+ * { --margin--top--previous: var(--margin--vertical--2) } // Think of this as its margin-bottom.
+				}
+			}
+		}
+	}
 
 
 
