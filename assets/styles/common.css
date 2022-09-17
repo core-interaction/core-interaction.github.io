@@ -1793,6 +1793,138 @@ body > main > article .faded {
 		grid-column: 1/span 3;
 	}
 
+	body > main > article .right[rows="12"] + * + * + * + * + * + * + * + * + * + * + *,
+	body > main > article aside[rows="12"] + * + * + * + * + * + * + * + * + * + * + *,
+	body > main > article .right[rows="12"] + * + * + * + * + * + * + * + * + * + *,
+	body > main > article aside[rows="12"] + * + * + * + * + * + * + * + * + * + *,
+	body > main > article .right[rows="12"] + * + * + * + * + * + * + * + * + *,
+	body > main > article aside[rows="12"] + * + * + * + * + * + * + * + * + *,
+	body > main > article .right[rows="12"] + * + * + * + * + * + * + * + *,
+	body > main > article aside[rows="12"] + * + * + * + * + * + * + * + *,
+	body > main > article .right[rows="12"] + * + * + * + * + * + * + *,
+	body > main > article aside[rows="12"] + * + * + * + * + * + * + *,
+	body > main > article .right[rows="12"] + * + * + * + * + * + *,
+	body > main > article aside[rows="12"] + * + * + * + * + * + *,
+	body > main > article .right[rows="12"] + * + * + * + * + *,
+	body > main > article aside[rows="12"] + * + * + * + * + *,
+	body > main > article .right[rows="12"] + * + * + * + *,
+	body > main > article aside[rows="12"] + * + * + * + *,
+	body > main > article .right[rows="12"] + * + * + *,
+	body > main > article aside[rows="12"] + * + * + *,
+	body > main > article .right[rows="12"] + * + *,
+	body > main > article aside[rows="12"] + * + *,
+	body > main > article .right[rows="12"] + *,
+	body > main > article aside[rows="12"] + *,
+	body > main > article .right[rows="11"] + * + * + * + * + * + * + * + * + * + *,
+	body > main > article aside[rows="11"] + * + * + * + * + * + * + * + * + * + *,
+	body > main > article .right[rows="11"] + * + * + * + * + * + * + * + * + *,
+	body > main > article aside[rows="11"] + * + * + * + * + * + * + * + * + *,
+	body > main > article .right[rows="11"] + * + * + * + * + * + * + * + *,
+	body > main > article aside[rows="11"] + * + * + * + * + * + * + * + *,
+	body > main > article .right[rows="11"] + * + * + * + * + * + * + *,
+	body > main > article aside[rows="11"] + * + * + * + * + * + * + *,
+	body > main > article .right[rows="11"] + * + * + * + * + * + *,
+	body > main > article aside[rows="11"] + * + * + * + * + * + *,
+	body > main > article .right[rows="11"] + * + * + * + * + *,
+	body > main > article aside[rows="11"] + * + * + * + * + *,
+	body > main > article .right[rows="11"] + * + * + * + *,
+	body > main > article aside[rows="11"] + * + * + * + *,
+	body > main > article .right[rows="11"] + * + * + *,
+	body > main > article aside[rows="11"] + * + * + *,
+	body > main > article .right[rows="11"] + * + *,
+	body > main > article aside[rows="11"] + * + *,
+	body > main > article .right[rows="11"] + *,
+	body > main > article aside[rows="11"] + *,
+	body > main > article .right[rows="10"] + * + * + * + * + * + * + * + * + *,
+	body > main > article aside[rows="10"] + * + * + * + * + * + * + * + * + *,
+	body > main > article .right[rows="10"] + * + * + * + * + * + * + * + *,
+	body > main > article aside[rows="10"] + * + * + * + * + * + * + * + *,
+	body > main > article .right[rows="10"] + * + * + * + * + * + * + *,
+	body > main > article aside[rows="10"] + * + * + * + * + * + * + *,
+	body > main > article .right[rows="10"] + * + * + * + * + * + *,
+	body > main > article aside[rows="10"] + * + * + * + * + * + *,
+	body > main > article .right[rows="10"] + * + * + * + * + *,
+	body > main > article aside[rows="10"] + * + * + * + * + *,
+	body > main > article .right[rows="10"] + * + * + * + *,
+	body > main > article aside[rows="10"] + * + * + * + *,
+	body > main > article .right[rows="10"] + * + * + *,
+	body > main > article aside[rows="10"] + * + * + *,
+	body > main > article .right[rows="10"] + * + *,
+	body > main > article aside[rows="10"] + * + *,
+	body > main > article .right[rows="10"] + *,
+	body > main > article aside[rows="10"] + *,
+	body > main > article .right[rows="9"] + * + * + * + * + * + * + * + *,
+	body > main > article aside[rows="9"] + * + * + * + * + * + * + * + *,
+	body > main > article .right[rows="9"] + * + * + * + * + * + * + *,
+	body > main > article aside[rows="9"] + * + * + * + * + * + * + *,
+	body > main > article .right[rows="9"] + * + * + * + * + * + *,
+	body > main > article aside[rows="9"] + * + * + * + * + * + *,
+	body > main > article .right[rows="9"] + * + * + * + * + *,
+	body > main > article aside[rows="9"] + * + * + * + * + *,
+	body > main > article .right[rows="9"] + * + * + * + *,
+	body > main > article aside[rows="9"] + * + * + * + *,
+	body > main > article .right[rows="9"] + * + * + *,
+	body > main > article aside[rows="9"] + * + * + *,
+	body > main > article .right[rows="9"] + * + *,
+	body > main > article aside[rows="9"] + * + *,
+	body > main > article .right[rows="9"] + *,
+	body > main > article aside[rows="9"] + *,
+	body > main > article .right[rows="8"] + * + * + * + * + * + * + *,
+	body > main > article aside[rows="8"] + * + * + * + * + * + * + *,
+	body > main > article .right[rows="8"] + * + * + * + * + * + *,
+	body > main > article aside[rows="8"] + * + * + * + * + * + *,
+	body > main > article .right[rows="8"] + * + * + * + * + *,
+	body > main > article aside[rows="8"] + * + * + * + * + *,
+	body > main > article .right[rows="8"] + * + * + * + *,
+	body > main > article aside[rows="8"] + * + * + * + *,
+	body > main > article .right[rows="8"] + * + * + *,
+	body > main > article aside[rows="8"] + * + * + *,
+	body > main > article .right[rows="8"] + * + *,
+	body > main > article aside[rows="8"] + * + *,
+	body > main > article .right[rows="8"] + *,
+	body > main > article aside[rows="8"] + *,
+	body > main > article .right[rows="7"] + * + * + * + * + * + *,
+	body > main > article aside[rows="7"] + * + * + * + * + * + *,
+	body > main > article .right[rows="7"] + * + * + * + * + *,
+	body > main > article aside[rows="7"] + * + * + * + * + *,
+	body > main > article .right[rows="7"] + * + * + * + *,
+	body > main > article aside[rows="7"] + * + * + * + *,
+	body > main > article .right[rows="7"] + * + * + *,
+	body > main > article aside[rows="7"] + * + * + *,
+	body > main > article .right[rows="7"] + * + *,
+	body > main > article aside[rows="7"] + * + *,
+	body > main > article .right[rows="7"] + *,
+	body > main > article aside[rows="7"] + *,
+	body > main > article .right[rows="6"] + * + * + * + * + *,
+	body > main > article aside[rows="6"] + * + * + * + * + *,
+	body > main > article .right[rows="6"] + * + * + * + *,
+	body > main > article aside[rows="6"] + * + * + * + *,
+	body > main > article .right[rows="6"] + * + * + *,
+	body > main > article aside[rows="6"] + * + * + *,
+	body > main > article .right[rows="6"] + * + *,
+	body > main > article aside[rows="6"] + * + *,
+	body > main > article .right[rows="6"] + *,
+	body > main > article aside[rows="6"] + *,
+	body > main > article .right[rows="5"] + * + * + * + *,
+	body > main > article aside[rows="5"] + * + * + * + *,
+	body > main > article .right[rows="5"] + * + * + *,
+	body > main > article aside[rows="5"] + * + * + *,
+	body > main > article .right[rows="5"] + * + *,
+	body > main > article aside[rows="5"] + * + *,
+	body > main > article .right[rows="5"] + *,
+	body > main > article aside[rows="5"] + *,
+	body > main > article .right[rows="4"] + * + * + *,
+	body > main > article aside[rows="4"] + * + * + *,
+	body > main > article .right[rows="4"] + * + *,
+	body > main > article aside[rows="4"] + * + *,
+	body > main > article .right[rows="4"] + *,
+	body > main > article aside[rows="4"] + *,
+	body > main > article .right[rows="3"] + * + *,
+	body > main > article aside[rows="3"] + * + *,
+	body > main > article .right[rows="3"] + *,
+	body > main > article aside[rows="3"] + *,
+	body > main > article .right[rows="2"] + *,
+	body > main > article aside[rows="2"] + *,
 	body > main > article .left {
 		grid-column: 1/span 2;
 		margin-right: 2ch;
@@ -1813,148 +1945,59 @@ body > main > article .faded {
 		grid-column: 3/span 1;
 	}
 
-	body > main > article .left[rows="1"],
-	body > main > article .right[rows="1"],
-	body > main > article aside[rows="1"] {
-		grid-row: span 1;
-	}
-
-	body > main > article .left[rows="2"],
 	body > main > article .right[rows="2"],
 	body > main > article aside[rows="2"] {
-		grid-row: span 2;
-	}
-
-	body > main > article .left[rows="3"],
-	body > main > article .right[rows="3"],
-	body > main > article aside[rows="3"] {
 		grid-row: span 3;
 	}
 
-	body > main > article .left[rows="4"],
-	body > main > article .right[rows="4"],
-	body > main > article aside[rows="4"] {
+	body > main > article .right[rows="3"],
+	body > main > article aside[rows="3"] {
 		grid-row: span 4;
 	}
 
-	body > main > article .left[rows="5"],
-	body > main > article .right[rows="5"],
-	body > main > article aside[rows="5"] {
+	body > main > article .right[rows="4"],
+	body > main > article aside[rows="4"] {
 		grid-row: span 5;
 	}
 
-	body > main > article .left[rows="6"],
-	body > main > article .right[rows="6"],
-	body > main > article aside[rows="6"] {
+	body > main > article .right[rows="5"],
+	body > main > article aside[rows="5"] {
 		grid-row: span 6;
 	}
 
-	body > main > article .left[rows="7"],
-	body > main > article .right[rows="7"],
-	body > main > article aside[rows="7"] {
+	body > main > article .right[rows="6"],
+	body > main > article aside[rows="6"] {
 		grid-row: span 7;
 	}
 
-	body > main > article .left[rows="8"],
-	body > main > article .right[rows="8"],
-	body > main > article aside[rows="8"] {
+	body > main > article .right[rows="7"],
+	body > main > article aside[rows="7"] {
 		grid-row: span 8;
 	}
 
-	body > main > article .left[rows="9"],
-	body > main > article .right[rows="9"],
-	body > main > article aside[rows="9"] {
+	body > main > article .right[rows="8"],
+	body > main > article aside[rows="8"] {
 		grid-row: span 9;
 	}
 
-	body > main > article .left[rows="10"],
-	body > main > article .right[rows="10"],
-	body > main > article aside[rows="10"] {
+	body > main > article .right[rows="9"],
+	body > main > article aside[rows="9"] {
 		grid-row: span 10;
 	}
 
-	body > main > article .left[rows="11"],
-	body > main > article .right[rows="11"],
-	body > main > article aside[rows="11"] {
+	body > main > article .right[rows="10"],
+	body > main > article aside[rows="10"] {
 		grid-row: span 11;
 	}
 
-	body > main > article .left[rows="12"],
-	body > main > article .right[rows="12"],
-	body > main > article aside[rows="12"] {
+	body > main > article .right[rows="11"],
+	body > main > article aside[rows="11"] {
 		grid-row: span 12;
 	}
 
-	body > main > article .left[rows="13"],
-	body > main > article .right[rows="13"],
-	body > main > article aside[rows="13"] {
+	body > main > article .right[rows="12"],
+	body > main > article aside[rows="12"] {
 		grid-row: span 13;
-	}
-
-	body > main > article .left[rows="14"],
-	body > main > article .right[rows="14"],
-	body > main > article aside[rows="14"] {
-		grid-row: span 14;
-	}
-
-	body > main > article .left[rows="15"],
-	body > main > article .right[rows="15"],
-	body > main > article aside[rows="15"] {
-		grid-row: span 15;
-	}
-
-	body > main > article .left[rows="16"],
-	body > main > article .right[rows="16"],
-	body > main > article aside[rows="16"] {
-		grid-row: span 16;
-	}
-
-	body > main > article .left[rows="17"],
-	body > main > article .right[rows="17"],
-	body > main > article aside[rows="17"] {
-		grid-row: span 17;
-	}
-
-	body > main > article .left[rows="18"],
-	body > main > article .right[rows="18"],
-	body > main > article aside[rows="18"] {
-		grid-row: span 18;
-	}
-
-	body > main > article .left[rows="19"],
-	body > main > article .right[rows="19"],
-	body > main > article aside[rows="19"] {
-		grid-row: span 19;
-	}
-
-	body > main > article .left[rows="20"],
-	body > main > article .right[rows="20"],
-	body > main > article aside[rows="20"] {
-		grid-row: span 20;
-	}
-
-	body > main > article .left[rows="21"],
-	body > main > article .right[rows="21"],
-	body > main > article aside[rows="21"] {
-		grid-row: span 21;
-	}
-
-	body > main > article .left[rows="22"],
-	body > main > article .right[rows="22"],
-	body > main > article aside[rows="22"] {
-		grid-row: span 22;
-	}
-
-	body > main > article .left[rows="23"],
-	body > main > article .right[rows="23"],
-	body > main > article aside[rows="23"] {
-		grid-row: span 23;
-	}
-
-	body > main > article .left[rows="24"],
-	body > main > article .right[rows="24"],
-	body > main > article aside[rows="24"] {
-		grid-row: span 24;
 	}
 }
 
