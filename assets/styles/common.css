@@ -702,12 +702,12 @@ body.example > section #files > ul li {
 	--border--radius: 0.4rem;
 	--color: black;
 	--color--background: white;
-	--color--background--callout: var(--color--tint);
 	--color--tint: #f6f6f6;
 	--color--tint--reverse: #e95349;
 	--color--links: #e42a1d;
 	--color--links--reverse: white;
 	--color--code: #666666;
+	--color--code--background: var(--color--tint);
 	--color--highlight: hsl(0, 0%, 0%, 3.333%);
 	--color--highlight--reverse: hsl(0, 0%, 100%, 6.666%);
 	--color--transition: 200ms;
@@ -752,11 +752,13 @@ body.example > section #files > ul li {
 
 :root.iframe {
 	--typography--size: 1.6rem;
+	--margin: 2.4rem;
 }
 
 @media (min-width: 43.5em) {
 	:root.iframe {
 		--typography--size: 1.8rem;
+		--margin: 4.8rem;
 	}
 }
 
@@ -773,7 +775,7 @@ body > nav > div {
 body.class,
 body.index,
 body.scrolled > nav {
-	--color--background--callout: var(--color--tint--reverse);
+	--color--code--background: var(--color--tint--reverse);
 	--color--background--parent: var(--color--background);
 	--link--color: var(--color--links--reverse);
 	--link--highlight: var(--color--highlight--reverse);
@@ -1319,7 +1321,7 @@ body > main > article blockquote > *:not(:first-child) {
 
 body > main > article blockquote.callout {
 	--padding: 2ch;
-	--color--background: var(--color--background--callout);
+	--color--background: var(--color--code--background);
 	background-color: var(--color--background);
 	border-radius: var(--border--radius);
 	font-style: normal;
@@ -1474,7 +1476,7 @@ body > main > article figure > img {
 }
 
 body > main > article figure > div {
-	border: var(--color--background--callout) solid 0.1rem;
+	border: var(--color--code--background) solid 0.1rem;
 	aspect-ratio: var(--aspect--ratio, 16/9);
 	display: flex;
 }
@@ -2092,7 +2094,7 @@ body.example > section #files > ul li {
 
 body *:not(pre) > code,
 body.example > section #files > ul *:not(pre) > li {
-	background-color: var(--color--background--callout);
+	background-color: var(--color--code--background);
 	border-radius: var(--border--radius);
 	letter-spacing: 0.0775em;
 	line-height: var(--typography--leading);
@@ -2103,10 +2105,10 @@ body.example > section #files > ul *:not(pre) > li {
 }
 
 body pre {
-	background-color: var(--color--background--callout);
+	background-color: var(--color--code--background);
 	border-radius: var(--border--radius);
 	overflow-x: scroll;
-	padding: 2ch;
+	padding: calc(var(--margin) / 2);
 	tab-size: 2;
 }
 
@@ -2117,7 +2119,7 @@ body.example > section #files > ul pre li {
 }
 
 body li pre {
-	padding: 1ch;
+	padding: calc(var(--margin) / 4);
 }
 
 body.example {
@@ -2137,7 +2139,7 @@ body.example {
 }
 
 body.example > section {
-	background-color: var(--color--background--callout);
+	background-color: var(--color--code--background);
 	border-top-left-radius: var(--border--radius);
 	border-top-right-radius: var(--border--radius);
 	display: flex;
@@ -2189,7 +2191,7 @@ body.example > section:active + iframe {
 }
 
 body.example > section #files > ul {
-	background-color: var(--color--background--callout);
+	background-color: var(--color--code--background);
 	display: flex;
 	flex-shrink: 0;
 	gap: var(--padding);
@@ -2245,7 +2247,7 @@ body.example > section #source > div:not(.visible) {
 
 body.example > iframe {
 	background-color: white;
-	border-color: var(--color--background--callout);
+	border-color: var(--color--code--background);
 	border-style: solid;
 	border-width: var(--border--radius);
 	height: 100%;
