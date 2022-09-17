@@ -5,7 +5,7 @@ order: 2
 
 
 
-## CSS stands for *Cascading Style Sheets*
+## CSS stands for *Cascading Style Sheets*
 {: .no_toc }
 
 
@@ -61,7 +61,6 @@ Before we get into CSS itself, let’s talk about how it is incorporated with HT
 
 
 ### 1. Inline with `style=`
-{: .four-above }
 
 This is the original and most straightforward way to add styles, directly as [*attributes*](/topic/html/#attributes) in HTML tags:
 
@@ -83,7 +82,6 @@ It makes it hard to read, and hard to change and maintain—you’d have to upda
 
 
 ### 2. Along comes `<style>`
-{: .four-above }
 
 So the next way that was added to the standard was using a special HTML element, `<style>`, that wraps blocks of CSS that then apply to an entire document. They go up in the `<head>` of our [HTML documents](/topic/html/#the-basic-document):
 
@@ -113,7 +111,6 @@ The rules are written written with selectors—more on those, below. But importa
 
 
 ### 3. External with `<link>`
-{: .four-above }
 
 So this is already much better, allowing us to style whole pages easily and consistently. But what about when we have *multiple* pages? If you wanted a whole site to use the same styles, you’d have to duplicate the `<style>` tag over and over, updated it everywhere whenever you changes. Still brittle. So along comes the `<link>` element:
 
@@ -166,7 +163,6 @@ There are [many, many CSS properties](https://developer.mozilla.org/en-US/docs/W
 
 
 ### Ergonomics
-{: .four-above }
 
 Just [like HTML](/topic/html/#case-whitespace-tabs-line-breaks), CSS does not care about capitalization, extra white space, or line breaks. Folks generally use tabs/indenting to indicate hierarchy, but again it is just whatever makes it easier for you!
 
@@ -200,7 +196,6 @@ Selectors are used to *target* certain HTML elements within the page. These can 
 
 
 ### 1. By element type
-{: .four-above }
 
 If you want to change the styles for all instances of a given HTML element, you drop the `<` `>` from the tag for an element selector. These are called [*type selectors*](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors):
 
@@ -209,7 +204,6 @@ If you want to change the styles for all instances of a given HTML element, you
 
 
 ### 2. With a class
-{: .four-above }
 
 But maybe you don’t want to style all of the paragraphs. You can then use a `class` to [target specific instances](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors). They are  added as an *[attribute](/topic/html/#attributes)* on the element you want to target:
 
@@ -222,7 +216,6 @@ You can use these over and over, on any kind of element. And individual elements
 
 
 ### 3. With an ID
-{: .four-above }
 
 You can also use an `id`, which is a kind of [special attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id) that can only be used *once* in an HTML document. These are useful thus useful for targeting singular things—like your navigation, the document title, specific headings, etc:
 
@@ -237,7 +230,6 @@ These are prefixed by `#` in CSS, as with `#title` and `#introduction`. They can
 
 
 ### Combinations and groups
-{: .four-above }
 
 You can use combinations of the above *elements*, *classes*, and *IDs* to be even more specific—however, this likely means you just need to rethink your HTML structure. (We’ll unpack *specificity*, below.) More commonly, you might apply declarations to multiple selectors, called *group selectors*, with a comma-delineated [selector list](https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list):
 
@@ -246,7 +238,6 @@ You can use combinations of the above *elements*, *classes*, and *IDs* to be eve
 
 
 ### With specific attributes
-{: .four-above }
 
 You can use the various [attributes](topic/html/#attributes) as selectors, too. These are usually very similar to using *classes*, but can help you [differentiate things](https://css-tricks.com/attribute-selectors/) like internal and external links, for example:
 
@@ -255,7 +246,6 @@ You can use the various [attributes](topic/html/#attributes) as selectors, too. 
 
 
 ### Pseudo-classes
-{: .four-above }
 
 These are [special selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes), added to `element`, `class`, or `id` which target unique *states* or *instances* of HTML elements. You’ll often see these used to target [link states](https://web.dev/learn/css/pseudo-classes/#historic-states):
 
@@ -270,7 +260,6 @@ Other common examples have to do with [counts and positions](https://developer.m
 
 
 ### Pseudo-elements
-{: .four-above }
 
 Slightly different the various [pseudo-*elements*](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements), which let you style a particular *part* of an element. You’ll most often see these as `:before` and `:after`, which let us insert things around text.
 
@@ -279,7 +268,6 @@ Slightly different the various [pseudo-*elements*](https://developer.mozilla.org
 
 
 ### Finally, combinators
-{: .four-above }
 
 Last, you will often want to target something based on its relationship to other elements—its *siblings* or its *parents*. For this, CSS has [*combinators*](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators), which let you relate all the various selectors we’ve learned about here together.
 
@@ -292,7 +280,6 @@ Importantly, combinators can only “see” elements *before* and *above* themse
 
 
 ### `:has()` will change this!
-{: .four-above }
 
 For many, many years folks have wanted a “parent selector” in CSS—meaning a way to apply a style to a parent/container based on one of its children. This was not possible before, as we mentioned above.
 
@@ -342,14 +329,13 @@ This allows you to quickly set some properties globally, without having many bri
 
 
 
-## Some basic properties
+## Color and type properties
 
 Alright, so all this has been about *targeting* elements—what about actually styling them? Let’s introduce a few quick *properties* to get us started.
 
 
 
 ### Color!
-{: .four-above }
 
 Besides the basic examples above, [*color*](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) can be specified in a few different ways:
 
@@ -362,7 +348,6 @@ These can also all be applied to `background-color` (and `border`, but we’ll t
 
 
 ### Fonts!
-{: .four-above }
 
 Then perhaps most importantly, you’ll always be customizing your [typography](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals). Remember, the web is text *all the way down*:
 
@@ -373,7 +358,6 @@ Web font licensing is a *Whole Big Thing*—so let’s start out by making use o
 
 
 ### Other type properties!
-{: .four-above }
 
 Once you’ve got a `font-family` in, there are additional properties to control the typography:
 

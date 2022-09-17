@@ -5,7 +5,7 @@ order: 1
 
 
 
-## HTML stands for *HyperText Markup Language*
+## HTML stands for *HyperText Markup Language*
 {: .no_toc }
 
 
@@ -381,7 +381,6 @@ But obviously, the first one is much more readable to us humans. We can use whit
 
 
 ### Comments
-{: .four-above }
 
 You can *comment* part of the code and the browser won’t show it. [Comments](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#html_comments) are often used to explain your thinking, organize your code, “turn off” a bit of code, or hide whatever you’d like.
 
@@ -392,7 +391,6 @@ I highly recommend getting into a habit of commenting your code, especially when
 
 
 ### Tables
-{: .four-above }
 
 [Tables](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) aren’t used as often anymore, in favor of `<div>` and other layout elements. You used to [have to use them](https://thehistoryoftheweb.com/tables-layout-absurd/) to get any kind of multi-column, grid layouts. But those need even more CSS!
 
@@ -401,7 +399,6 @@ I highly recommend getting into a habit of commenting your code, especially when
 
 
 ### Lists
-{: .four-above }
 
 Any time you have more than two of something, you probably have [a list](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists). These are commonly used for semantic navigation elements, as well, think *“here’s a list of links in this site.”*
 
@@ -410,7 +407,6 @@ Any time you have more than two of something, you probably have [a list](https:
 
 
 ### Description lists
-{: .four-above }
 
 There are [specific lists](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl) for defining things.
 
@@ -420,7 +416,6 @@ There are [specific lists](https://developer.mozilla.org/en-US/docs/Web/HTML/Ele
 
 
 ### Details/summary
-{: .four-above }
 
 There is even some basic interactivity (way, way ahead of JavaScript) with [*details disclosure*](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) elements that open and close.
 
