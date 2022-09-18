@@ -40,6 +40,7 @@ div:nth-child(10) {
 
 
 
+/* Same as before. */
 body {
 	font-family: sans-serif;
 	padding: 20px;
@@ -49,6 +50,7 @@ div {
 	padding: 10px;
 }
 
+/* Every one but the first one. */
 div:not(:first-child) {
 	margin-top: 10px;
 }

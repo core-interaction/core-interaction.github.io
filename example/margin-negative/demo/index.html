@@ -45,15 +45,13 @@
 
 
 					<figure class="highlight">
-						<pre><code class="language-scss" data-lang="scss"><span class="cm">/* Setup styles in the other file. */</span>
+						<pre><code class="language-scss" data-lang="scss"><span class="cm">/* Setup styles are in the other file. */</span>
 
-<span class="nt">div</span><span class="nd">:not</span><span class="o">(</span><span class="nd">:first-child</span><span class="o">)</span> <span class="p">{</span>
-	<span class="nl">margin-top</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="cm">/* This applies to both. */</span>
+<span class="nt">div</span><span class="nd">:not</span><span class="o">(</span><span class="nd">:first-child</span><span class="o">)</span> <span class="p">{</span> <span class="nl">margin-top</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span> <span class="p">}</span>
 
-<span class="nt">div</span><span class="nd">:first-child</span> <span class="p">{</span>
-	<span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">-10px</span><span class="p">;</span>
-<span class="p">}</span></code></pre>
+<span class="cm">/* But this negates some of it. */</span>
+<span class="nt">div</span><span class="nd">:first-child</span> <span class="p">{</span> <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">-30px</span><span class="p">;</span> <span class="p">}</span></code></pre>
 					</figure>
 
 
