@@ -33,7 +33,7 @@ Let’s take a look, going inside-to-outside.
 
 The *content area* is the guts of the element, usually text or an image. Its dimensions are defined by that content, but also can be specified directly via `width` or `height`. (More on those soon.)
 
-{% include figure.html src='/example/box-content/demo' %}
+{% include figure.html src='/example/box-content/demo' height='28rem' %}
 
 > I’ve pulled the [CSS reset](/topic/css#resets) into the `<head>` all of these examples, so we are only seeing styles that are expressly written out here.
 {: .callout .two-above icon="🤚" }
