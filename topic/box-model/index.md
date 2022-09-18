@@ -306,27 +306,23 @@ Generally, I try and avoid floats—they aren’t common in modern design patte
 
 
 
-In our [HTML introduction](/topic/html) we briefly talked about *block* and *inline* elements, as set by the user-agent styles. These are the first two examples of [the *display* property](https://developer.mozilla.org/en-US/docs/Web/CSS/display).
+In our [HTML introduction](/topic/html#block-elements) we briefly talked about *block* and *inline* elements, as set by the user-agent styles. These are the first two examples of [the *display* property](https://developer.mozilla.org/en-US/docs/Web/CSS/display).
 
 
 
-### `block`
+### Block
 
 So as we discussed, most HTML elements are *block-level* by default. But you can also set `display: block;` manually on an *inline* element, too. This would mean that it starts on a new line, takes up the full width available, and you can specify a `height`, `width`, and use `margin` above and below.
 
-{% include figure.html src='/example/display-block/demo' %}
-
-Whenever you are linking a whole area (like an image and text together), safe bet you want `block`.
+{% include figure.html src='/example/display-block/demo' caption='Whenever you are linking a whole area (like an image and text together), safe bet that you want `block`.' height='36rem' %}
 
 
 
-### `inline`
+### Inline
 
 And going the other way, you can make *block* elements switch to *inline* with `display: inline;`. They will no longer start on their own lines, will only take up as much space as their content/children, and don’t accept `height` and `width` properties.
 
-{% include figure.html src='/example/display-inline/demo' %}
-
-The `white-space` property `pre`-vents the spaces in the paragraphs from collapsing.
+{% include figure.html src='/example/display-inline/demo' caption='The `white-space` property `pre`-vents the spaces in the paragraphs from collapsing.' height='32rem' %}
 
 
 
@@ -334,19 +330,17 @@ The `white-space` property `pre`-vents the spaces in the paragraphs from collaps
 
 You can also combine the qualities of *block* and *inline* with `display: inline-block;`. These elements take `height` and `width` (and vertical `margin`) like *block-level* elements, but do not start on their own line.
 
-{% include figure.html src='/example/display-inline-block/demo' %}
+{% include figure.html src='/example/display-inline-block/demo' height='40rem' %}
 
 
 
-### And `none`
+### And sometimes `none`
 
-Setting `display: none;` hides an element visually from the document—as well as taking it out of the *flow*. (Keep in mind the HTML is still there, if someone opens up their [Inspector](#LINK THIS?).
+Setting `display: none;` hides an element visually from the document—as well as taking it out of the *flow*. (Keep in mind the HTML is still there, if someone opens up their [Inspector](/topics/dev-tools).
 
 This is a common way to hide/show (by setting another *display* property) elements on the page, but it will *reflow* the document when applied—as if the element is actually added/removed from the DOM.
 
-{% include figure.html src='/example/display-none/demo' %}
-
-Like it wasn’t even there.
+{% include figure.html src='/example/display-none/demo' caption='Poof. Like it wasn’t even there.' height='17rem' %}
 
 
 
@@ -354,17 +348,15 @@ Like it wasn’t even there.
 
 You can also hide something [visually](https://developer.mozilla.org/en-US/docs/Web/CSS/visibility) without taking it out of the document *flow,* which is useful when you don’t want the page to jump/*reflow* when something appears/disappears. Setting `visibility: hidden;` keeps the space an element had before, but makes it invisible and unable to be interacted with. The value `visible` is the default.
 
-{% include figure.html src='/example/visibility/demo' %}
+{% include figure.html src='/example/visibility/demo' height='22rem' %}
 
 
 
 ### … vs. Opacity?
 
-Another way to hide an element visually is to adjust [its opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity), which uses values on a scale from 0–1. This differs from `visibility` because elements with no (or partial) opacity can still be interacted with.
+Another way to hide an element visually is to adjust [its opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity), which uses values on a scale from 0–1. This differs from `visibility` because elements with no (or partial) opacity can still be interacted with.
 
-{% include figure.html src='/example/opacity/demo' %}
-
-You can still select the text (or click links) of not-fully-opaque elements.
+{% include figure.html src='/example/opacity/demo' caption='You can still select the text (or click links) of not-fully-opaque elements.' height='22rem' %}
 
 Keep in mind that `display: none;`, `visibility: hidden;`, and `opacity: 0;` only hide things in the rendered browser view. The HTML is still visible in the Inspector and source code!
 
@@ -372,4 +364,4 @@ Keep in mind that `display: none;`, `visibility: hidden;`, and `opacity: 0;` onl
 
 ### … `flex` and `grid`?
 
-We’ll have to cover these separately! But they’ll make your (layout) life easier.
+We’ll cover these separately! But they’ll make your (layout) life easier.

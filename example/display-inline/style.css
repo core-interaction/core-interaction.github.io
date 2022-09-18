@@ -1,11 +1,11 @@
 /* Setup styles are in the other file. */
 
 p:not(:first-child) {
-	margin-top: 10px;
 	background-color: gold;
+	margin-top: 10px;
 }
 
 div:nth-child(2) p:not(:first-child) {
-	white-space: pre;
 	display: inline;
+	white-space: pre;
 }

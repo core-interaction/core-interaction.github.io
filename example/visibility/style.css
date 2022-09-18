@@ -1,5 +1,3 @@
 /* Setup styles are in the other file. */
 
-div:nth-child(2) {
-	visibility: hidden;
-}
+div:nth-child(2) { visibility: hidden; }
