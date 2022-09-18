@@ -74,7 +74,14 @@ We call these [*semantic* elements](https://www.w3schools.com/html/html5_semanti
 
 
 
-*In this example, here is what we’ve told the browser:*
+> *The Semantic Web* is not a separate Web but an extension of the current one, in which information is given well-defined meaning, better enabling computers and people to work in cooperation.
+{: .quote }
+
+<cite>[Tim Berners-Lee](https://www.lassila.org/publications/2001/SciAm.pdf)</cite>
+
+
+
+*In our example, here is what we’ve told the computer:*
 {: .four-above }
 
 - `<!DOCTYPE html>` \
@@ -316,6 +323,13 @@ dog breeds</p><ul><li>German Shepherd</li>
 {: .left }
 
 But obviously, the first one is much more readable to us humans. We can use whitespace, tabs/indenting, and line breaks to make it easier for us to read the code. There are a lot of common patterns used—like indenting to indicate hierarchy/nesting. But there are also no wrong ways to do it! In HTML, spaces are code *ergonomics* for you—just like a good chair or desk, that allow you to work more comfortably.
+
+
+
+> Code is read more often than it is written. Code should always be written in a way that promotes readability.
+{: .quote }
+
+<cite>[Guido van Rossum](https://peps.python.org/pep-0008/)</cite>
 
 
 
