@@ -46,7 +46,7 @@ The *content area* is the guts of the element, usually text or an image. Its dim
 
 
 
-Next comes [*padding*](https://developer.mozilla.org/en-US/docs/Web/CSS/padding), which extends the element’s area around the content. I often think of this as an *inset* (if we’ve made our `box-sizing` the logical `border-box`, above).
+Next comes [*padding*](https://developer.mozilla.org/en-US/docs/Web/CSS/padding), which extends the element’s area around the content. It’s easiest to think of this as an *inset* (if we’ve made our `box-sizing` the logical `border-box`, above).
 
 {% include figure.html src='/example/padding/demo' height='28rem' %}
 
@@ -144,7 +144,7 @@ Maybe the easiest ones to understand, fixed to physical (well, sort of) sizes. \
 
 Otherwise you can use *relative* units, which depend on and respond to their context. \
 \
-*I think these are distinctly and intrinsically <em>web</em> measurements.*
+*These are distinctly and intrinsically <em>web</em> measurements.*
 {: .half }
 
 ```css
@@ -338,7 +338,7 @@ You can also combine the qualities of *block* and *inline* with `display: inline
 
 ### And sometimes `none`
 
-Setting `display: none;` hides an element visually from the document—as well as taking it out of the *flow*. (Keep in mind the HTML is still there, if someone opens up their [Inspector](/topics/dev-tools).
+Setting `display: none;` hides an element visually from the document—as well as taking it out of the *flow*. (Keep in mind the HTML is still there, if someone opens up the source code.)
 
 This is a common way to hide/show (by setting another *display* property) elements on the page, but it will *reflow* the document when applied—as if the element is actually added/removed from the DOM.
 
@@ -360,7 +360,7 @@ Another way to hide an element visually is to adjust [its opacity](https://devel
 
 {% include figure.html src='/example/opacity/demo' caption='You can still select the text (or click links) of not-fully-opaque elements.' height='22rem' %}
 
-Keep in mind that `display: none;`, `visibility: hidden;`, and `opacity: 0;` only hide things in the rendered browser view. The HTML is still visible in the Inspector and source code!
+Keep in mind that `display: none;`, `visibility: hidden;`, and `opacity: 0;` only hide things in the rendered browser view. The HTML is still visible in the source code!
 
 
 
