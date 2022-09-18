@@ -28,6 +28,10 @@
 					</li>
 
 					<li tabindex=0>
+						<p>setup.css</p>
+					</li>
+
+					<li tabindex=0>
 						<p>index.html</p>
 					</li>
 
@@ -43,12 +47,31 @@
 					<figure class="highlight">
 						<pre><code class="language-scss" data-lang="scss"><span class="cm">/* Setup styles are in the other file. */</span>
 
-<span class="nt">div</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">2</span><span class="o">)</span> <span class="p">{</span>
-	<span class="nl">opacity</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="nt">div</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">2</span><span class="o">)</span> <span class="p">{</span> <span class="nl">opacity</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="nt">div</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">3</span><span class="o">)</span> <span class="p">{</span> <span class="nl">opacity</span><span class="p">:</span> <span class="m">0</span><span class="mi">.5</span><span class="p">;</span> <span class="p">}</span></code></pre>
+					</figure>
+
+
+				</div>
+
+				<div>
+
+
+					<figure class="highlight">
+						<pre><code class="language-scss" data-lang="scss"><span class="nt">body</span> <span class="p">{</span>
+	<span class="nl">font-family</span><span class="p">:</span> <span class="nb">sans-serif</span><span class="p">;</span>
+	<span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nt">div</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">3</span><span class="o">)</span> <span class="p">{</span>
-	<span class="nl">opacity</span><span class="p">:</span> <span class="m">0</span><span class="mi">.5</span><span class="p">;</span>
+<span class="nt">div</span> <span class="p">{</span>
+	<span class="nl">background-color</span><span class="p">:</span> <span class="no">deepskyblue</span><span class="p">;</span>
+	<span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+	<span class="nl">border-top</span><span class="p">:</span> <span class="nb">solid</span> <span class="no">black</span> <span class="m">4px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="nd">:not</span><span class="o">(</span><span class="nd">:first-child</span><span class="o">)</span> <span class="p">{</span>
+	<span class="nl">margin-top</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
 <span class="p">}</span></code></pre>
 					</figure>
 
