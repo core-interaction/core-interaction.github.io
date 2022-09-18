@@ -44,6 +44,13 @@ CSS came after HTML, first proposed by [Håkon Wium Lie](https://www.w3.org/Sty
 
 
 
+> The change in relationship between generator and consumer of information is going to take some getting used to. [...] That said, I'll comment that style sheets constitute a wormhole into unspeakable universes. People start thinking they'll just set up a little file in SGML or something else, and soon it grows [uncontrollable].
+{: .quote }
+
+<cite>[James D. Mason](http://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-94q4.messages/0279.html)</cite>
+
+
+
 ## Where CSS lives
 
 
