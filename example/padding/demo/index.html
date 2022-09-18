@@ -41,10 +41,14 @@
 
 
 					<figure class="highlight">
-						<pre><code class="language-scss" data-lang="scss"><span class="cm">/* Setup styles in the other file. */</span>
+						<pre><code class="language-scss" data-lang="scss"><span class="nt">body</span> <span class="p">{</span>
+	<span class="nl">font-family</span><span class="p">:</span> <span class="nb">sans-serif</span><span class="p">;</span>
+	<span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="nt">div</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">2</span><span class="o">)</span> <span class="p">{</span>
-	<span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="nt">div</span> <span class="p">{</span>
+	<span class="nl">background-color</span><span class="p">:</span> <span class="no">deepskyblue</span><span class="p">;</span>
+	<span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
 <span class="p">}</span></code></pre>
 					</figure>
 
@@ -58,9 +62,8 @@
 						<pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html&gt;</span>
 	<span class="nt">&lt;head&gt;</span>
-		<span class="nt">&lt;title&gt;</span>Display none<span class="nt">&lt;/title&gt;</span>
+		<span class="nt">&lt;title&gt;</span>Padding<span class="nt">&lt;/title&gt;</span>
 		<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/styles/reset.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
-		<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"setup.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
 		<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"style.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
 	<span class="nt">&lt;/head&gt;</span>
 	<span class="nt">&lt;body&gt;</span>
