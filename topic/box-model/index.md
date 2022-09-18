@@ -9,9 +9,12 @@ published: false
 The first thing we need to understand is how CSS sizes elements. This is called the [*the box model*](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model), as everything on the web begins as a rectangle:
 {: .left }
 
-[Introduction to CSS layout | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction) \
-*As usual.*
-{: .right .icon-link rows="2" }
+* [Introduction to CSS layout | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction) \
+	*As usual.*
+
+* [web.dev Layout](https://web.dev/learn/css/layout/) \
+	*This gets into `grid` and `flex`; we’ll talk about those soon.*
+{: .right .no-marker .icon-link rows="2" }
 
 {% include figure.html src='box-model.svg' caption='With `box-sizing: content-box;` per the spec.' %}
 
