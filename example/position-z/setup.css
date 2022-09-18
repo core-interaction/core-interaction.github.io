@@ -1,0 +1,14 @@
+body {
+	font-family: sans-serif;
+	padding: 20px;
+}
+
+div {
+	background-color: deepskyblue;
+	padding: 10px;
+	border-top: solid black 4px;
+}
+
+div:not(:first-child) {
+	margin-top: 20px;
+}

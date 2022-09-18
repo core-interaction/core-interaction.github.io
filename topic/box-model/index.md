@@ -33,10 +33,10 @@ Let’s take a look, going inside-to-outside.
 
 The *content area* is the guts of the element, usually text or an image. Its dimensions are defined by that content, but also can be specified directly via `width` or `height`. (More on those soon.)
 
-<!-- [I’ve pulled the [CSS reset](/topic/css#resets) in to all of these sandboxes, so we should only be seeing what’s written here. 🤞](https://typography-and-interaction-too.github.io/sandbox/box-content/demo) -->
+{% include figure.html src='/example/box-content/demo' %}
 
-> I’ve pulled the [CSS reset](/topic/css#resets) in to all of these examples, so we are only seeing styles that are expressly written out here.
-{: .callout icon="🤞" }
+> I’ve pulled the [CSS reset](/topic/css#resets) into the `<head>` all of these examples, so we are only seeing styles that are expressly written out here.
+{: .callout .two-above icon="🤚" }
 
 
 
@@ -48,7 +48,7 @@ Next comes [*padding*](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
 
 *Most [CSS resets](/topic/css#resets) will do this for you! Like I said, very common.*
 
-<!-- [https://typography-and-interaction-too.github.io/sandbox/box-padding/demo](https://typography-and-interaction-too.github.io/sandbox/box-padding/demo) -->
+{% include figure.html src='/example/box-padding/demo' %}
 
 
 
@@ -80,11 +80,11 @@ You can always write the individual directions out, though (like `padding-top`).
 
 Then we have *[border](https://developer.mozilla.org/en-US/docs/Web/CSS/border)*. Border is… the border around an element. It has its own `border-width`, `border-color`, and also `border-style`:
 
-<!-- [Look at all those borders. Border, border, border… what does that word even mean. Border.](https://typography-and-interaction-too.github.io/sandbox/box-border-style/demo) -->
+{% include figure.html src='/example/box-border-style/demo' %}
 
 Look at all those borders. Border, border, border… what does that word even mean. Border.
 
-<!-- [This uses the shorthand `border-top` property. The order of the values here doesn’t matter! Isn‘t CSS logical.](https://typography-and-interaction-too.github.io/sandbox/box-border/demo) -->
+{% include figure.html src='/example/box-border/demo' %}
 
 This uses the shorthand `border-top` property. The order of the values here doesn’t matter! Isn‘t CSS logical.
 
@@ -96,17 +96,17 @@ This uses the shorthand `border-top` property. The order of the values here does
 
 Last is *[margin](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)*—the space *around* an element, empty/whitespace areas that is used to separate an element from its *siblings*. Like *padding* and *border*, you can specify it all around or on individual sides.
 
-<!-- [https://typography-and-interaction-too.github.io/sandbox/box-margin/demo](https://typography-and-interaction-too.github.io/sandbox/box-margin/demo) -->
+{% include figure.html src='/example/box-margin/demo' %}
 
 Margin has a couple tricks up its sleeve. First, it can have *negative* values—which will eat up/remove space between elements. (*Padding* and *border* only take up space.) Just add a zero before the value and watch it bring things together.
 
-<!-- [The first element pulls the second element closer with a *negative* margin.](https://typography-and-interaction-too.github.io/sandbox/box-margin-negative/demo) -->
+{% include figure.html src='/example/box-margin-negative/demo' %}
 
 The first element pulls the second element closer with a *negative* margin.
 
 Also [margins *collapse*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing), meaning that they are sometimes combined into a single value (the largest) between two elements. This happens most often on adjacent siblings, and is both useful and an absolute pain.
 
-<!-- [You might expect the margin between the first two `div` to be `60px`, but it is only `40px`. They *collapsed.*](https://typography-and-interaction-too.github.io/sandbox/box-margin-collapse/demo) -->
+{% include figure.html src='/example/box-margin-collapse/demo' %}
 
 You might expect the margin between the first two `div` to be `60px`, but it is only `40px`. They *collapsed.*
 
@@ -214,7 +214,7 @@ By default, every element is *static—*just meaning its normal, stacked positio
 
 *You’ll rarely, if ever, actually set this yourself. It’s the default you change.*
 
-<!-- [Nothing changes here—`static` is the default.](https://typography-and-interaction-too.github.io/sandbox/position-static/demo) -->
+{% include figure.html src='/example/position-static/demo' %}
 
 Nothing changes here—`static` is the default.
 
@@ -226,7 +226,7 @@ The first thing we might want to do is adjust an element *from* that normal *sta
 
 Once you have set `position: relative;` you can use the  `top`, `right`, `bottom`, and `left` values (with any of the units, above) to move the element away from its default, normal position in the flow.
 
-<!-- [The element still exists/takes up space in the *flow*.](https://typography-and-interaction-too.github.io/sandbox/position-relative/demo) -->
+{% include figure.html src='/example/position-relative/demo' %}
 
 The element still exists/takes up space in the *flow*.
 
@@ -240,7 +240,7 @@ Importantly, `position: absolute;` also *removes* the element from the normal do
 
 *This is often used for exacting, specific design elements.*
 
-<!-- [The element is out of the *flow*, and placed according to the `relative` parent.](https://typography-and-interaction-too.github.io/sandbox/position-absolute/demo) -->
+{% include figure.html src='/example/position-absolute/demo' %}
 
 The element is out of the *flow*, and placed according to the `relative` parent.
 
@@ -254,7 +254,7 @@ So `position: fixed;` brings the element completely out of the page’s normal f
 
 *This is often used for things like navigation elements.*
 
-<!-- [https://typography-and-interaction-too.github.io/sandbox/position-fixed/demo](https://typography-and-interaction-too.github.io/sandbox/position-fixed/demo) -->
+{% include figure.html src='/example/position-fixed/demo' %}
 
 
 
@@ -264,7 +264,7 @@ The most recent addition to the *position* party, `position: sticky;` elements a
 
 *This is often used for headers on tables and lists.*
 
-<!-- [https://typography-and-interaction-too.github.io/sandbox/position-sticky/demo](https://typography-and-interaction-too.github.io/sandbox/position-sticky/demo) -->
+{% include figure.html src='/example/position-sticky/demo' %}
 
 
 
@@ -274,7 +274,7 @@ Okay, *[z-index](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index)* is n
 
 By default, items that are lower in the DOM (coming after each other) are in front of higher, earlier elements.
 
-<!-- [The two `position` properties create new stacking contexts, `z-index: 1;` moves even elements in front.](https://typography-and-interaction-too.github.io/sandbox/position-z/demo) -->
+{% include figure.html src='/example/position-z/demo' %}
 
 The two `position` properties create new stacking contexts, `z-index: 1;` moves even elements in front.
 
@@ -292,7 +292,7 @@ Sometimes you’ll want to have an image or block flow within a block of text. 
 
 The declarations `float: left;` and `float: right;` take an element out of the normal flow and place it on the left or right side of its parent container. Any text *siblings* will then flow around the element—like a *text wrap—*filling up any available space to its side. They will go as far up as the top of the *floated element*.
 
-<!-- [https://typography-and-interaction-too.github.io/sandbox/float/demo](https://typography-and-interaction-too.github.io/sandbox/float/demo) -->
+{% include figure.html src='/example/float/demo' %}
 
 
 
@@ -300,13 +300,13 @@ The declarations `float: left;` and `float: right;` take an element out of the n
 
 Since this takes the floated element out of the *flow*, if we want the following element (often another text block, like a `<p>`) to not move up it needs to be *cleared* with `clear: left;` , `clear: right;`, or `clear: both;`. Applied on the following element, it will make it stay entirely below (clear of) the *floated* element.
 
-<!-- [Uh oh, classic *float* problem on the second one.](https://typography-and-interaction-too.github.io/sandbox/float-clear/demo) -->
+{% include figure.html src='/example/float-clear/demo' %}
 
 Uh oh, classic *float* problem on the second one.
 
 If you have a parent wrapper and no following element, there won’t be anything there to *clear* the float—meaning the parent will collapse down to the size of the text content. You can solve this broken look with a *[clearfix hack](https://developer.mozilla.org/en-US/docs/Web/CSS/clear#sect1)*, which uses a pseudo-element as an ersatz `last-child` to clear the container.
 
-<!-- [Much better. `:after` is a pseudo-element—which acts here as a last child that clears the `div`.](https://typography-and-interaction-too.github.io/sandbox/float-clearfix/demo) -->
+{% include figure.html src='/example/float-clearfix/demo' %}
 
 Much better. `:after` is a pseudo-element—which acts here as a last child that clears the `div`.
 
@@ -326,7 +326,7 @@ In our [HTML introduction](/topic/html) we briefly talked about *block* and *inl
 
 So as we discussed, most HTML elements are *block-level* by default. But you can also set `display: block;` manually on an *inline* element, too. This would mean that it starts on a new line, takes up the full width available, and you can specify a `height`, `width`, and use `margin` above and below.
 
-<!-- [Whenever you are linking a whole area (like an image and text together), safe bet you want `block`.](https://typography-and-interaction-too.github.io/sandbox/display-block/demo) -->
+{% include figure.html src='/example/display-block/demo' %}
 
 Whenever you are linking a whole area (like an image and text together), safe bet you want `block`.
 
@@ -336,7 +336,7 @@ Whenever you are linking a whole area (like an image and text together), safe b
 
 And going the other way, you can make *block* elements switch to *inline* with `display: inline;`. They will no longer start on their own lines, will only take up as much space as their content/children, and don’t accept `height` and `width` properties.
 
-<!-- [The `white-space` property `pre`-vents the spaces in the paragraphs from collapsing.](https://typography-and-interaction-too.github.io/sandbox/display-inline/demo) -->
+{% include figure.html src='/example/display-inline/demo' %}
 
 The `white-space` property `pre`-vents the spaces in the paragraphs from collapsing.
 
@@ -346,7 +346,7 @@ The `white-space` property `pre`-vents the spaces in the paragraphs from collaps
 
 You can also combine the qualities of *block* and *inline* with `display: inline-block;`. These elements take `height` and `width` (and vertical `margin`) like *block-level* elements, but do not start on their own line.
 
-<!-- [https://typography-and-interaction-too.github.io/sandbox/display-inline-block/demo](https://typography-and-interaction-too.github.io/sandbox/display-inline-block/demo) -->
+{% include figure.html src='/example/display-inline-block/demo' %}
 
 
 
@@ -356,7 +356,7 @@ Setting `display: none;` hides an element visually from the document—as well a
 
 This is a common way to hide/show (by setting another *display* property) elements on the page, but it will *reflow* the document when applied—as if the element is actually added/removed from the DOM.
 
-<!-- [Like it wasn’t even there.](https://typography-and-interaction-too.github.io/sandbox/display-none/demo) -->
+{% include figure.html src='/example/display-none/demo' %}
 
 Like it wasn’t even there.
 
@@ -366,7 +366,7 @@ Like it wasn’t even there.
 
 You can also hide something [visually](https://developer.mozilla.org/en-US/docs/Web/CSS/visibility) without taking it out of the document *flow,* which is useful when you don’t want the page to jump/*reflow* when something appears/disappears. Setting `visibility: hidden;` keeps the space an element had before, but makes it invisible and unable to be interacted with. The value `visible` is the default.
 
-<!-- [https://typography-and-interaction-too.github.io/sandbox/visibility-hidden/demo](https://typography-and-interaction-too.github.io/sandbox/visibility-hidden/demo) -->
+{% include figure.html src='/example/visibility-hidden/demo' %}
 
 
 
@@ -374,7 +374,7 @@ You can also hide something [visually](https://developer.mozilla.org/en-US/docs/
 
 Another way to hide an element visually is to adjust [its opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity), which uses values on a scale from 0–1. This differs from `visibility` because elements with no (or partial) opacity can still be interacted with.
 
-<!-- [You can still select the text (or click links) of not-fully-opaque elements.](https://typography-and-interaction-too.github.io/sandbox/opacity-zero/demo) -->
+{% include figure.html src='/example/opacity-zero/demo' %}
 
 You can still select the text (or click links) of not-fully-opaque elements.
 
