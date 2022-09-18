@@ -2,20 +2,20 @@
 
 aside {
 	background-color: gold;
-	padding: 10px;
-	width: 100px;
 	float: left;
 	margin-right: 10px;
+	padding: 10px;
+	width: 100px;
 }
 
 div:nth-child(2) aside {
 	float: right;
-	margin-right: initial;
 	margin-left: 10px;
+	margin-right: initial;
 }
 
-div:after {
-	content: "";
-	display: block;
+div:after { /* This is the “clearfix”. */
 	clear: both;
+	content: '';
+	display: block;
 }

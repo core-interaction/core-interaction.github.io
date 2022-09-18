@@ -2,8 +2,8 @@
 
 div:nth-child(3) {
 	background-color: gold;
-	width: 66%;
-	top: 30px;
 	left: 30px;
 	position: fixed;
+	top: 30px;
+	width: 66%;
 }

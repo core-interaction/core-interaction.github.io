@@ -2,6 +2,6 @@
 
 div:nth-child(3) {
 	background-color: gold;
-	width: 66%;
 	position: static;
+	width: 66%;
 }
