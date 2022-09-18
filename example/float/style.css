@@ -1,0 +1,15 @@
+/* Setup styles in the other file. */
+
+aside {
+	background-color: gold;
+	padding: 10px;
+	width: 100px;
+	float: left;
+	margin-right: 10px;
+}
+
+div:nth-child(2) aside {
+	float: right;
+	margin-right: initial;
+	margin-left: 10px;
+}
