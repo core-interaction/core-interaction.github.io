@@ -383,3 +383,11 @@ Here is a [simple, modern one](https://elad2412.github.io/the-new-css-reset/) fo
 ```
 
 *This is what we use here for our course site!*
+
+
+
+> The author of HTML documents has no influence over the presentation. Indeed, if conflicts arise the user should have the last word, but one should also allow the author to attach style hints. The last point has especially been a source of much frustration among professions that are used to be in control of paper-based publishing. This proposal tries to soften the tension between the author and the reader.
+{: .quote }
+
+<cite>[Håkon Wium Lie](https://www.w3.org/People/howcome/p/cascade.html)</cite>
+
