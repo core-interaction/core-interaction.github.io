@@ -1346,7 +1346,7 @@ body > main > article blockquote.callout[icon]:before {
 	position: absolute;
 	text-align: center;
 	top: var(--padding);
-	transform: scale(1.1);
+	transform: scale(var(--icon--scale, 1.1));
 	width: 2ch;
 }
 
