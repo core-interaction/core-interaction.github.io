@@ -6,18 +6,24 @@ published: false
 
 
 
-The first thing we need to understand is how CSS sizes elements. This is called the *[the box model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model),* as everything on the web begins as a rectangle:
+The first thing we need to understand is how CSS sizes elements. This is called the [*the box model*](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model), as everything on the web begins as a rectangle:
 {: .left }
 
-[CSS layout | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction) \
+[Introduction to CSS layout | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction) \
 *As usual.*
 {: .right .icon-link rows="2" }
 
+{% include figure.html src='box-model.svg' caption='With `box-sizing: content-box;` per the spec.' %}
+
+By default, browsers are set to `box-sizing: content-box;` which means that the padding (and border) exists *outside* the content width or height—so padding is then an *outset.*
+
+But this is often unintuitive and doesn’t fit with most web design patterns, so it is very common (nearly universal) to instead set this to `box-sizing: border-box;` which makes padding and border exist *inside* the content dimensions. Then padding is easier to think of as an *inset*. ([W3C](https://www.w3.org/TR/css-box-3/) probably got this default wrong. Good ol’ CSS!)
+
+{% include figure.html src='box-model-border.svg' caption='With `box-sizing: border-box;` the defacto standard.' %}
 
 
-{% include figure.html src='box_model.png' caption='We’ll go inside-to-outside.' %}
 
-
+Let’s take a look, going inside-to-outside.
 
 
 
@@ -39,8 +45,6 @@ The *content area* is the guts of the element, usually text or an image. Its dim
 
 
 Next comes [*padding*](https://developer.mozilla.org/en-US/docs/Web/CSS/padding), which extends the element’s area around the content. I often think of this as an *outset* or an *inset,* depending on the next point.
-
-By default, browsers are set to `box-sizing: content-box;` which means that the padding (and border) exists *outside* the content width or height—so padding is then an *outset.* But this is often unintuitive and doesn’t fit with most web design patterns, so it is common (very, very, *very* common) to instead set this to `box-sizing: border-box;` —which makes padding (and border) exist *inside* the content dimensions. Then padding is easier to think of as an *inset.* (It’s commonly held that the [W3C](https://www.w3.org/TR/css-box-3/) probably got this default wrong.)
 
 *Most [CSS resets](/topic/css#resets) will do this for you! Like I said, very common.*
 
