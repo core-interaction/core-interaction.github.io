@@ -223,6 +223,8 @@
 			padding:          var(--padding);
 			position:         relative;
 
+			code { mix-blend-mode: multiply }
+
 			&[icon] {
 				padding-left: calc(2 * var(--padding) + 2ch);
 
