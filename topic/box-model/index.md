@@ -19,11 +19,11 @@ By default, browsers are set to `box-sizing: content-box;` which means that the 
 
 But this is often unintuitive and doesn’t fit with most web design patterns, so it is very common (nearly universal) to instead set this to `box-sizing: border-box;` which makes padding and border exist *inside* the content dimensions. Then padding is easier to think of as an *inset*. ([W3C](https://www.w3.org/TR/css-box-3/) probably got this default wrong. Good ol’ CSS!)
 
-{% include figure.html src='box-model-border.svg' caption='With `box-sizing: border-box;` the defacto standard.' %}
+{% include figure.html src='box-model-border.svg' caption='With `box-sizing: border-box;` the defacto standard. Most [CSS resets](/topic/css#resets) will do this for you! Like I said, very common.' %}
 
 
 
-Let’s take a look, going inside-to-outside.
+Let’s take a look at this box, going inside-to-outside.
 
 
 
@@ -33,9 +33,9 @@ Let’s take a look, going inside-to-outside.
 
 The *content area* is the guts of the element, usually text or an image. Its dimensions are defined by that content, but also can be specified directly via `width` or `height`. (More on those soon.)
 
-{% include figure.html src='/example/content/demo' height='28rem' %}
+{% include figure.html src='/example/content/demo' height='23rem' %}
 
-> I’ve pulled the [CSS reset](/topic/css#resets) into the `<head>` all of these examples, so we are only seeing styles that are expressly written out here.
+> I’ve pulled our [CSS reset](/topic/css#resets) into the `<head>` all of these examples, so we are only seeing the styles that are expressly written out here.
 {: .callout .two-above icon="🤚" }
 
 
@@ -44,17 +44,15 @@ The *content area* is the guts of the element, usually text or an image. Its dim
 
 
 
-Next comes [*padding*](https://developer.mozilla.org/en-US/docs/Web/CSS/padding), which extends the element’s area around the content. I often think of this as an *outset* or an *inset,* depending on the next point.
+Next comes [*padding*](https://developer.mozilla.org/en-US/docs/Web/CSS/padding), which extends the element’s area around the content. I often think of this as an *inset* (if we’ve made our `box-sizing` the logical `border-box`, above).
 
-*Most [CSS resets](/topic/css#resets) will do this for you! Like I said, very common.*
-
-{% include figure.html src='/example/padding/demo' %}
+{% include figure.html src='/example/padding/demo' height='28rem' %}
 
 
 
 ### A sidebar about *shorthand*
 
-*Padding*—and many other properties, like *border* and *margin*—can be specified with a [shorthand property](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties) to make it easier to use the same spacing all around, or shared top/bottom and left/right. (We’ll talk about units, below.)
+*Padding*—and many other properties, like *border* and *margin*—can be specified with a [shorthand property](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties) to make it easier to use the same spacing all around, or shared top/bottom and left/right. (We’ll talk about units below, promise.)
 
 - 1 value: *all directions/sides*
 - 2 values: *top/bottom, left/right*
@@ -63,10 +61,10 @@ Next comes [*padding*](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
 {: .half .two-above }
 
 ```css
-p {padding: 20px;}
-p {padding: 20px 40px;}
-p {padding: 20px 40px 80px;}
-p {padding: 20px 20px 40px 80px;}
+p { padding: 20px; }
+p { padding: 20px 40px; }
+p { padding: 20px 40px 80px; }
+p { padding: 20px 20px 40px 80px; }
 ```
 {: .half }
 
@@ -78,15 +76,11 @@ You can always write the individual directions out, though (like `padding-top`).
 
 
 
-Then we have *[border](https://developer.mozilla.org/en-US/docs/Web/CSS/border)*. Border is… the border around an element. It has its own `border-width`, `border-color`, and also `border-style`:
+Then we have [*border*](https://developer.mozilla.org/en-US/docs/Web/CSS/border). Border is… the border around an element. It has its own `border-width`, `border-color`, and also `border-style`:
 
-{% include figure.html src='/example/border-style/demo' %}
+{% include figure.html src='/example/border/demo' caption='The shorthand `border-top` property value order here doesn’t matter! Isn’t CSS logical.' height='42rem' %}
 
-Look at all those borders. Border, border, border… what does that word even mean. Border.
-
-{% include figure.html src='/example/border/demo' %}
-
-This uses the shorthand `border-top` property. The order of the values here doesn’t matter! Isn‘t CSS logical.
+{% include figure.html src='/example/border-style/demo' height='58rem' caption='Look at all those borders.' %}
 
 
 
@@ -94,94 +88,95 @@ This uses the shorthand `border-top` property. The order of the values here does
 
 
 
-Last is *[margin](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)*—the space *around* an element, empty/whitespace areas that is used to separate an element from its *siblings*. Like *padding* and *border*, you can specify it all around or on individual sides.
+The last part of our box is [*margin*](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)—the space *around* an element, empty/whitespace area that is used to separate an element from its *siblings*. Like *padding* and *border*, you can specify it all around or on individual sides.
 
-{% include figure.html src='/example/margin/demo' %}
+{% include figure.html src='/example/margin/demo' height='37rem' %}
 
-Margin has a couple tricks up its sleeve. First, it can have *negative* values—which will eat up/remove space between elements. (*Padding* and *border* only take up space.) Just add a zero before the value and watch it bring things together.
+Margin has a couple tricks up its sleeve. First, it can have *negative* values—which will eat up/remove space between elements. (*Padding* and *border* only take up space.) Just add a minus before the value and watch it bring things together.
 
-{% include figure.html src='/example/margin-negative/demo' %}
-
-The first element pulls the second element closer with a *negative* margin.
+{% include figure.html src='/example/margin-negative/demo' caption='The first element pulls the second element closer with a *negative* margin.
+' height='25rem' %}
 
 Also [margins *collapse*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing), meaning that they are sometimes combined into a single value (the largest) between two elements. This happens most often on adjacent siblings, and is both useful and an absolute pain.
 
-{% include figure.html src='/example/margin-collapse/demo' %}
-
-You might expect the margin between the first two `div` to be `60px`, but it is only `40px`. They *collapsed.*
+{% include figure.html src='/example/margin-collapse/demo' caption='You might expect the margin between the first two `div` to be `80px`, but it is only `40px`. They *collapsed.*' height='26rem' %}
 
 
 
-## Units, oh my
+## And units, oh my
 
 
 
-Okay, so we have all these box properties—but how do we specify the dimensions? CSS has many [length units](https://developer.mozilla.org/en-US/docs/Web/CSS/length), used for `width`, `height`, and also  `padding`, `border`, `margin`, and even `font-size`. (Picas, anyone?) We’ll look at some common ones.
+Okay, so we have all these box properties—but how do we specify the dimensions? CSS has many [*length units*](https://developer.mozilla.org/en-US/docs/Web/CSS/length), used for `width`, `height`, and also  `padding`, `border`, `margin`, and even `font-size`. (Picas, anyone?) We’ll look at some common ones.
 
 
 
-### Absolute
+### Absolute length units
 
-Maybe the easiest to understand, fixed to a physical (well, sort of) size.
-
-*With the many vagaries of screen size and density, the physical lengths will only be correct when you print. And maybe not even then. And who prints anymore?*
+Maybe the easiest ones to understand, fixed to physical (well, sort of) sizes. \
+\
+*With the many vagaries of screen size and density, the physical/ruler lengths will only be correct when you print. And maybe not even then.*
+{: .half }
 
 ```css
 .pixels {
-	width: 720px;
 	height: 360px;
+	width: 720px;
 }
 
 .inches {
-	width: 10in;
 	height: 5in;
+	width: 10in;
 }
 
 .mm {
-	width: 400mm;
 	height: 84mm;
+	width: 400mm;
 }
 ```
+{: .half }
 
 
 
-### Relative
+### Relative length units
 
-Otherwise you can use *relative* units, which depend on and respond to their context.
-
-*I think these are distinctly and intrinsically web measurements.*
+Otherwise you can use *relative* units, which depend on and respond to their context. \
+\
+*I think these are distinctly and intrinsically <em>web</em> measurements.*
+{: .half }
 
 ```css
-/* Relative to nearest **sized** ancestor. */
+/* Relative to nearest sized ancestor. */
 .percentage {
-	width: 85%;
 	height: 90%;
+	width: 85%;
 }
 
-/* Relative to the **v**iewport **w**idth or **h**eight. */
+/* Relative to viewport height/width. */
 .viewport {
+	height: 75vh;
 	width: 80vw;
-  height: 75vh;
 }
 
-/* Relative to **font-size** of the **e**le**m**ent. */
+/* Relative to element font-size. */
 .em {
-	width: 4em;
 	height: 14em;
+	width: 4.8em;
 }
 
-/* Relative to the **r**oot **e**le**m**ent font size. */
+/* Relative to :root font-size. */
 .rem {
-	width: 2rem;
 	height: 12rem;
+	width: 2.4rem;
 }
 ```
+{: .half }
 
 
-
-### Calc
+### Combine them with a `calc`
 
 Sometimes you might want to use these together! Or otherwise do some math. For this we have the [calc function](https://developer.mozilla.org/en-US/docs/Web/CSS/calc()).
+{: .half }
 
 ```css
 .absolute-and-relative {
@@ -192,17 +187,18 @@ Sometimes you might want to use these together! Or otherwise do some math. For t
 	width: calc(100% / 12);
 }
 ```
+{: .half }
 
-<aside>
-😥 CSS is big and massive and overwhelming and sometimes nonsensical—but remember that you can do a surprising amount with just these basic properties!
+> CSS is big and massive and overwhelming and sometimes indefensibly nonsensical—but remember that you can do a surprising amount with just these basic properties!
+>
+> And no matter how complex it gets, it always comes back to these basics.
+{: .callout icon="😥" }
 
-And no matter how complex it gets, it always comes back to these basics.
 
-</aside>
 
 ## Position
 
----
+
 
 With an idea of how elements take up space, now we’ll look at how they exist and move together in the [*document flow](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow).* The CSS property `position` [sets this relationship](https://developer.mozilla.org/en-US/docs/Web/CSS/position).
 

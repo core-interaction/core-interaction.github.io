@@ -1,9 +1,7 @@
-/* Setup styles in the other file. */
+/* Setup styles are in the other file. */
 
-div:not(:first-child) {
-	margin-top: 20px;
-}
+/* This applies to both. */
+div:not(:first-child) { margin-top: 40px; }
 
-div:first-child {
-	margin-bottom: -10px;
-}
+/* But this negates some of it. */
+div:first-child { margin-bottom: -30px; }

@@ -9,6 +9,5 @@ div {
 	border-top: solid black 4px;
 }
 
-div:not(:first-child) {
-	margin-top: 20px;
-}
+/* Every one but the first one. */
+div:not(:first-child) { margin-top: 40px; }
