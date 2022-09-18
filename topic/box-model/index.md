@@ -33,7 +33,7 @@ Let’s take a look, going inside-to-outside.
 
 The *content area* is the guts of the element, usually text or an image. Its dimensions are defined by that content, but also can be specified directly via `width` or `height`. (More on those soon.)
 
-{% include figure.html src='/example/box-content/demo' height='28rem' %}
+{% include figure.html src='/example/content/demo' height='28rem' %}
 
 > I’ve pulled the [CSS reset](/topic/css#resets) into the `<head>` all of these examples, so we are only seeing styles that are expressly written out here.
 {: .callout .two-above icon="🤚" }
@@ -48,7 +48,7 @@ Next comes [*padding*](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
 
 *Most [CSS resets](/topic/css#resets) will do this for you! Like I said, very common.*
 
-{% include figure.html src='/example/box-padding/demo' %}
+{% include figure.html src='/example/padding/demo' %}
 
 
 
@@ -80,11 +80,11 @@ You can always write the individual directions out, though (like `padding-top`).
 
 Then we have *[border](https://developer.mozilla.org/en-US/docs/Web/CSS/border)*. Border is… the border around an element. It has its own `border-width`, `border-color`, and also `border-style`:
 
-{% include figure.html src='/example/box-border-style/demo' %}
+{% include figure.html src='/example/border-style/demo' %}
 
 Look at all those borders. Border, border, border… what does that word even mean. Border.
 
-{% include figure.html src='/example/box-border/demo' %}
+{% include figure.html src='/example/border/demo' %}
 
 This uses the shorthand `border-top` property. The order of the values here doesn’t matter! Isn‘t CSS logical.
 
@@ -96,17 +96,17 @@ This uses the shorthand `border-top` property. The order of the values here does
 
 Last is *[margin](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)*—the space *around* an element, empty/whitespace areas that is used to separate an element from its *siblings*. Like *padding* and *border*, you can specify it all around or on individual sides.
 
-{% include figure.html src='/example/box-margin/demo' %}
+{% include figure.html src='/example/margin/demo' %}
 
 Margin has a couple tricks up its sleeve. First, it can have *negative* values—which will eat up/remove space between elements. (*Padding* and *border* only take up space.) Just add a zero before the value and watch it bring things together.
 
-{% include figure.html src='/example/box-margin-negative/demo' %}
+{% include figure.html src='/example/margin-negative/demo' %}
 
 The first element pulls the second element closer with a *negative* margin.
 
 Also [margins *collapse*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing), meaning that they are sometimes combined into a single value (the largest) between two elements. This happens most often on adjacent siblings, and is both useful and an absolute pain.
 
-{% include figure.html src='/example/box-margin-collapse/demo' %}
+{% include figure.html src='/example/margin-collapse/demo' %}
 
 You might expect the margin between the first two `div` to be `60px`, but it is only `40px`. They *collapsed.*
 
@@ -274,7 +274,7 @@ Okay, *[z-index](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index)* is n
 
 By default, items that are lower in the DOM (coming after each other) are in front of higher, earlier elements.
 
-{% include figure.html src='/example/position-z/demo' %}
+{% include figure.html src='/example/z-index/demo' %}
 
 The two `position` properties create new stacking contexts, `z-index: 1;` moves even elements in front.
 
@@ -366,7 +366,7 @@ Like it wasn’t even there.
 
 You can also hide something [visually](https://developer.mozilla.org/en-US/docs/Web/CSS/visibility) without taking it out of the document *flow,* which is useful when you don’t want the page to jump/*reflow* when something appears/disappears. Setting `visibility: hidden;` keeps the space an element had before, but makes it invisible and unable to be interacted with. The value `visible` is the default.
 
-{% include figure.html src='/example/visibility-hidden/demo' %}
+{% include figure.html src='/example/visibility/demo' %}
 
 
 
@@ -374,7 +374,7 @@ You can also hide something [visually](https://developer.mozilla.org/en-US/docs/
 
 Another way to hide an element visually is to adjust [its opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity), which uses values on a scale from 0–1. This differs from `visibility` because elements with no (or partial) opacity can still be interacted with.
 
-{% include figure.html src='/example/opacity-zero/demo' %}
+{% include figure.html src='/example/opacity/demo' %}
 
 You can still select the text (or click links) of not-fully-opaque elements.
 
