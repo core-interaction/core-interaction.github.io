@@ -235,7 +235,7 @@
 					position:   absolute;
 					text-align: center;
 					top:        var(--padding);
-					transform:  scale(1.1); // This might need to be params.
+					transform:  scale(var(--icon--scale, 1.1));
 					width:      2ch;
 				}
 			}
