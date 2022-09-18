@@ -1329,6 +1329,12 @@ body > main > article blockquote.callout {
 	position: relative;
 }
 
+body > main > article blockquote.callout code,
+body > main > article blockquote.callout body.example > section #files > ul li,
+body.example > section #files > ul body > main > article blockquote.callout li {
+	mix-blend-mode: multiply;
+}
+
 body > main > article blockquote.callout[icon] {
 	padding-left: calc(2 * var(--padding) + 2ch);
 }
