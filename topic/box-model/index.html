@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
+
+		<title>The box model</title>
+		<link href="/assets/styles/reset.css" rel="stylesheet">
+		<link href="/assets/styles/common.css" rel="stylesheet">
+		<link href="/assets/styles/syntax.css" rel="stylesheet">
+		<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
+		<link href="/assets/icons/touch.png" rel="apple-touch-icon">
+
+		<script src="/assets/scripts/common.js"></script>
+
+		<meta name="theme-color" content="#e42a1d">
+	</head>
+	<body class="topic">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<nav>
+			<div>
+				<section>
+					<a href="/">
+						<p>C1:I</p>
+					</a>
+					<p>
+						<strong>The box model</strong>
+						<select onchange="
+					this.parentElement.querySelector('strong').innerHTML = this.querySelector(`[value='${this.value}']`).text;
+					document.activeElement.blur();
+					window.open(this.value,'_self');
+					">
+
+
+							<optgroup label="Sessions">
+
+
+
+								<option value="/week/1/">Week 1, August 30</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/2/">Week 2, September 6</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/3/">Week 3, September 13</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/4/">Week 4, September 20</option>
+
+
+							</optgroup>
+
+
+
+							<optgroup label="Topics">
+
+
+
+								<option value="/topic/everything/">Everything is a web page</option>
+
+
+
+
+								<option value="/topic/html/">An intro to HTML</option>
+
+
+
+
+								<option value="/topic/css/">An intro to CSS</option>
+
+
+
+
+								<option selected disabled>The box model</option>
+
+
+							</optgroup>
+
+
+
+							<optgroup label="Project">
+
+
+
+								<option value="/project/harmonic/">Harmonic Collection</option>
+
+
+							</optgroup>
+
+
+						</select>
+					</p>
+				</section>
+				<section>
+
+					<p>
+						<a class="this" href="/week/4/">This week</a>
+					</p>
+
+					<p><a href="#">Top</a></p>
+				</section>
+			</div>
+		</nav>
+
+
+		<main>
+
+			<header>
+				<h1>The box model</h1>
+
+				<ul>
+					<li><a href="#content">Content</a></li>
+					<li><a href="#padding">Padding</a></li>
+					<li><a href="#border">Border</a></li>
+					<li><a href="#margin">Margin</a></li>
+					<li><a href="#and-units-oh-my">And units, oh my</a></li>
+					<li><a href="#position">Position</a></li>
+					<li><a href="#floats">Floats</a></li>
+					<li><a href="#display">Display</a></li>
+				</ul>
+			</header>
+
+			<article>
+				<p class="left">The first thing we need to understand is how CSS sizes elements. This is called the <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model"><em>the box model</em></a>, as everything on the web begins as a rectangle:</p>
+
+				<ul class="right no-marker icon-link" rows="2">
+					<li>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction">Introduction to CSS layout | MDN</a> <br />
+							<em>As usual.</em>
+						</p>
+					</li>
+					<li>
+						<p><a href="https://web.dev/learn/css/layout/">web.dev Layout</a> <br />
+							<em>This gets into <code class="language-plaintext highlighter-rouge">grid</code> and <code class="language-plaintext highlighter-rouge">flex</code>; we’ll talk about those soon.</em>
+						</p>
+					</li>
+				</ul>
+
+				<figure>
+
+					<img src="box-model.svg" />
+
+
+					<figcaption>With <code class="language-plaintext highlighter-rouge">box-sizing: content-box;</code> per the spec.</figcaption>
+
+				</figure>
+
+				<p>By default, browsers are set to <code class="language-plaintext highlighter-rouge">box-sizing: content-box;</code> which means that the padding (and border) exists <em>outside</em> the content width or height<span class="mdash">—</span>so padding is then an <em>outset.</em></p>
+
+				<p>But this is often unintuitive and doesn’t fit with most web design patterns, so it is very common (nearly universal) to instead set this to <code class="language-plaintext highlighter-rouge">box-sizing: border-box;</code> which makes padding and border exist <em>inside</em> the content dimensions. Then padding is easier to think of as an <em>inset</em>. (<a href="https://www.w3.org/TR/css-box-3/">W3C</a> probably got this default wrong. Good ol’ CSS!)</p>
+
+				<figure>
+
+					<img src="box-model-border.svg" />
+
+
+					<figcaption>With <code class="language-plaintext highlighter-rouge">box-sizing: border-box;</code> the defacto standard. Most <a href="/topic/css#resets">CSS resets</a> will do this for you! Like I said, very common.</figcaption>
+
+				</figure>
+
+				<p>Let’s take a look at this box, going inside-to-outside.</p>
+
+				<h2 id="content">Content</h2>
+
+				<p>The <em>content area</em> is the guts of the element, usually text or an image. Its dimensions are defined by that content, but also can be specified directly via <code class="language-plaintext highlighter-rouge">width</code> or <code class="language-plaintext highlighter-rouge">height</code>. (More on those soon.)</p>
+
+				<figure style="--height--max: 23rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/content/demo"></iframe>
+					</div>
+
+
+
+				</figure>
+
+				<blockquote class="callout two-above" icon="🤚">
+					<p>I’ve pulled our <a href="/topic/css#resets">CSS reset</a> into the <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> all of these examples, so we are only seeing the styles that are expressly written out here.</p>
+				</blockquote>
+
+				<h2 id="padding">Padding</h2>
+
+				<p>Next comes <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding"><em>padding</em></a>, which extends the element’s area around the content. I often think of this as an <em>inset</em> (if we’ve made our <code class="language-plaintext highlighter-rouge">box-sizing</code> the logical <code class="language-plaintext highlighter-rouge">border-box</code>, above).</p>
+
+				<figure style="--height--max: 28rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/padding/demo"></iframe>
+					</div>
+
+
+
+				</figure>
+
+				<h3 id="a-sidebar-about-shorthand">A sidebar about <em>shorthand</em></h3>
+
+				<p><em>Padding</em><span class="mdash">—</span>and many other properties, like <em>border</em> and <em>margin</em><span class="mdash">—</span>can be specified with a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> to make it easier to use the same spacing all around, or shared top/bottom and left/right. (We’ll talk about units below, promise.)</p>
+
+				<ul class="half two-above">
+					<li>1 value: <em>all directions/sides</em></li>
+					<li>2 values: <em>top/bottom, left/right</em></li>
+					<li>3 values: <em>top, left/right, bottom</em></li>
+					<li>4 values: <em>top, right, bottom, left</em></li>
+				</ul>
+
+				<div class="language-css half highlighter-rouge">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span> <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">p</span> <span class="p">{</span> <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span> <span class="m">40px</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">p</span> <span class="p">{</span> <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span> <span class="m">40px</span> <span class="m">80px</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">p</span> <span class="p">{</span> <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span> <span class="m">20px</span> <span class="m">40px</span> <span class="m">80px</span><span class="p">;</span> <span class="p">}</span>
+</code></pre>
+					</div>
+				</div>
+
+				<p>You can always write the individual directions out, though (like <code class="language-plaintext highlighter-rouge">padding-top</code>). Three- and four-value rules are harder to read, so I tend to avoid them.</p>
+
+				<h2 id="border">Border</h2>
+
+				<p>Then we have <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border"><em>border</em></a>. Border is… the border around an element. It has its own <code class="language-plaintext highlighter-rouge">border-width</code>, <code class="language-plaintext highlighter-rouge">border-color</code>, and also <code class="language-plaintext highlighter-rouge">border-style</code>:</p>
+
+				<figure style="--height--max: 42rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/border/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>The shorthand <code class="language-plaintext highlighter-rouge">border-top</code> property value order here doesn’t matter! Isn’t CSS logical.</figcaption>
+
+				</figure>
+
+				<figure style="--height--max: 58rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/border-style/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Look at all those borders.</figcaption>
+
+				</figure>
+
+				<h2 id="margin">Margin</h2>
+
+				<p>The last part of our box is <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin"><em>margin</em></a><span class="mdash">—</span>the space <em>around</em> an element, empty/whitespace area that is used to separate an element from its <em>siblings</em>. Like <em>padding</em> and <em>border</em>, you can specify it all around or on individual sides.</p>
+
+				<figure style="--height--max: 37rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/margin/demo"></iframe>
+					</div>
+
+
+
+				</figure>
+
+				<p>Margin has a couple tricks up its sleeve. First, it can have <em>negative</em> values<span class="mdash">—</span>which will eat up/remove space between elements. (<em>Padding</em> and <em>border</em> only take up space.) Just add a minus before the value and watch it bring things together.</p>
+
+				<figure style="--height--max: 25rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/margin-negative/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>The first element pulls the second element closer with a <em>negative</em> margin.</figcaption>
+
+				</figure>
+
+				<p>Also <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">margins <em>collapse</em></a>, meaning that they are sometimes combined into a single value (the largest) between two elements. This happens most often on adjacent siblings, and is both useful and an absolute pain.</p>
+
+				<figure style="--height--max: 26rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/margin-collapse/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>You might expect the margin between the first two <code class="language-plaintext highlighter-rouge">div</code> to be <code class="language-plaintext highlighter-rouge">80px</code>, but it is only <code class="language-plaintext highlighter-rouge">40px</code>. They have <em>collapsed.</em></figcaption>
+
+				</figure>
+
+				<h2 id="and-units-oh-my">And units, oh my</h2>
+
+				<p>Okay, so we have all these box properties<span class="mdash">—</span>but how do we specify the dimensions? CSS has many <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length"><em>length units</em></a>, used for <code class="language-plaintext highlighter-rouge">width</code>, <code class="language-plaintext highlighter-rouge">height</code>, and also <code class="language-plaintext highlighter-rouge">padding</code>, <code class="language-plaintext highlighter-rouge">border</code>, <code class="language-plaintext highlighter-rouge">margin</code>, and even <code class="language-plaintext highlighter-rouge">font-size</code>. (Picas, anyone?) We’ll look at some common ones.</p>
+
+				<h3 id="absolute-length-units">Absolute length units</h3>
+
+				<p class="half">Maybe the easiest ones to understand, fixed to physical (well, sort of) sizes. <br />
+					<br />
+					<em>With the many vagaries of screen size and density, the physical/ruler lengths will only be correct when you print. And maybe not even then.</em>
+				</p>
+
+				<div class="language-css half highlighter-rouge">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="nc">.pixels</span> <span class="p">{</span>
+	<span class="nl">height</span><span class="p">:</span> <span class="m">360px</span><span class="p">;</span>
+	<span class="nl">width</span><span class="p">:</span> <span class="m">720px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.inches</span> <span class="p">{</span>
+	<span class="nl">height</span><span class="p">:</span> <span class="m">5in</span><span class="p">;</span>
+	<span class="nl">width</span><span class="p">:</span> <span class="m">10in</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.mm</span> <span class="p">{</span>
+	<span class="nl">height</span><span class="p">:</span> <span class="m">84mm</span><span class="p">;</span>
+	<span class="nl">width</span><span class="p">:</span> <span class="m">400mm</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+					</div>
+				</div>
+
+				<h3 id="relative-length-units">Relative length units</h3>
+
+				<p class="half">Otherwise you can use <em>relative</em> units, which depend on and respond to their context. <br />
+					<br />
+					<em>I think these are distinctly and intrinsically <em>web</em> measurements.</em>
+				</p>
+
+				<div class="language-css half highlighter-rouge">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="c">/* Relative to nearest sized ancestor. */</span>
+<span class="nc">.percentage</span> <span class="p">{</span>
+	<span class="nl">height</span><span class="p">:</span> <span class="m">90%</span><span class="p">;</span>
+	<span class="nl">width</span><span class="p">:</span> <span class="m">85%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* Relative to viewport height/width. */</span>
+<span class="nc">.viewport</span> <span class="p">{</span>
+	<span class="nl">height</span><span class="p">:</span> <span class="m">75vh</span><span class="p">;</span>
+	<span class="nl">width</span><span class="p">:</span> <span class="m">80vw</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* Relative to element font-size. */</span>
+<span class="nc">.em</span> <span class="p">{</span>
+	<span class="nl">height</span><span class="p">:</span> <span class="m">14em</span><span class="p">;</span>
+	<span class="nl">width</span><span class="p">:</span> <span class="m">4.8em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* Relative to :root font-size. */</span>
+<span class="nc">.rem</span> <span class="p">{</span>
+	<span class="nl">height</span><span class="p">:</span> <span class="m">12rem</span><span class="p">;</span>
+	<span class="nl">width</span><span class="p">:</span> <span class="m">2.4rem</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+					</div>
+				</div>
+
+				<h3 id="combine-them-with-a-calc">Combine them with a <code class="language-plaintext highlighter-rouge">calc</code></h3>
+
+				<p class="half">Sometimes you might want to use these together! Or otherwise do some math. For this we have the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc()">calc function</a>.</p>
+
+				<div class="language-css half highlighter-rouge">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="nc">.absolute-and-relative</span> <span class="p">{</span>
+	<span class="nl">width</span><span class="p">:</span> <span class="n">calc</span><span class="p">(</span><span class="m">50%</span> <span class="n">-</span> <span class="m">20px</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.computer-do-the-math</span> <span class="p">{</span>
+	<span class="nl">width</span><span class="p">:</span> <span class="n">calc</span><span class="p">(</span><span class="m">100%</span> <span class="p">/</span> <span class="m">12</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+					</div>
+				</div>
+
+				<blockquote class="callout" icon="😥">
+					<p>CSS is big and massive and overwhelming and sometimes indefensibly nonsensical<span class="mdash">—</span>but remember that you can do a surprising amount with just these basic properties! And no matter how complex it gets, it always comes back to these basics.</p>
+				</blockquote>
+
+				<h2 id="position">Position</h2>
+
+				<p>With an idea of how elements take up space, now we’ll look at how they exist and move together in the <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow"><em>document flow</em></a>. The CSS property <code class="language-plaintext highlighter-rouge">position</code> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">sets this relationship</a>.</p>
+
+				<h3 id="static">Static</h3>
+
+				<p>By default, every element is <em>static<span class="mdash">—</span></em>just meaning its normal, stacked position in the document.</p>
+
+				<p><em>You’ll rarely, if ever, actually set this yourself. It’s the default you change.</em></p>
+
+				<figure style="--height--max: 24rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/position-static/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Nothing changes here<span class="mdash">—</span><code class="language-plaintext highlighter-rouge">static</code> is the default.</figcaption>
+
+				</figure>
+
+				<h3 id="relative">Relative</h3>
+
+				<p>The first thing we might want to do is adjust an element <em>from</em> that normal <em>static</em> position, which we can do with <em>relative</em> positioning.</p>
+
+				<p>Once you have set <code class="language-plaintext highlighter-rouge">position: relative;</code> you can use the <code class="language-plaintext highlighter-rouge">top</code>, <code class="language-plaintext highlighter-rouge">right</code>, <code class="language-plaintext highlighter-rouge">bottom</code>, and <code class="language-plaintext highlighter-rouge">left</code> values (with any of the units, above) to move the element away from its default, normal position in the flow.</p>
+
+				<figure style="--height--max: 30rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/position-relative/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>The element still exists/takes up space in the <em>flow</em>.</figcaption>
+
+				</figure>
+
+				<h3 id="absolute">Absolute</h3>
+
+				<p><em>Absolute</em> positioning is somewhat similar to <em>relative<span class="mdash">—</span></em>but instead of placing an element in relation to its own default position, it uses the position of its nearest <em>relatively-positioned</em> ancestor. So it will “go up the chain” of parents and wrapper elements until it finds one set to <code class="language-plaintext highlighter-rouge">position: relative;</code>, then uses the same offset properties to move the element around.</p>
+
+				<p>Importantly, <code class="language-plaintext highlighter-rouge">position: absolute;</code> also <em>removes</em> the element from the normal document flow<span class="mdash">—</span>meaning it takes up no space in the page layout.</p>
+
+				<p><em>This is often used for exacting, specific design elements.</em></p>
+
+				<figure style="--height--max: 35rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/position-absolute/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>The element is out of the <em>flow</em>, and placed according to the <code class="language-plaintext highlighter-rouge">relative</code> parent.</figcaption>
+
+				</figure>
+
+				<h3 id="fixed">Fixed</h3>
+
+				<p><em>Fixed</em> positioning also removes the element from the document flow, but it places elements with relation to the <em>browser viewport</em><span class="mdash">—</span>the boundaries of the window or device.</p>
+
+				<p>So <code class="language-plaintext highlighter-rouge">position: fixed;</code> brings the element completely out of the page’s normal flow, like it is sitting on its own separate layer.</p>
+
+				<p><em>This is often used for things like navigation elements.</em></p>
+
+				<figure style="--height--max: 29rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/position-fixed/demo"></iframe>
+					</div>
+
+
+
+				</figure>
+
+				<h3 id="sticky">Sticky</h3>
+
+				<p>The most recent addition to the <em>position</em> party, <code class="language-plaintext highlighter-rouge">position: sticky;</code> elements are placed according to the normal flow of the document, like <em>static,</em> until their nearest <em>scrolling ancestor</em> (usually the viewport) moves past them. The element is then <em>stuck</em> in relation to this element.</p>
+
+				<p><em>This is often used for headers on tables and lists.</em></p>
+
+				<figure style="--height--max: 29rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/position-sticky/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>This always feels very <em>web</em>-y.</figcaption>
+
+				</figure>
+
+				<h3 id="depth">“Depth”</h3>
+
+				<p>Okay, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/z-index"><em>z-index</em></a> is not strictly <em>positioning</em><span class="mdash">—</span>it is a separate property. You can see that all these <em>position</em> properties have given us ways to make things overlap. <code class="language-plaintext highlighter-rouge">z-index</code> is how we can decide the <em>front-to-back</em> ordering (think <a href="https://en.wikipedia.org/wiki/Cartesian_coordinate_system#Three_dimensions"><em>z-axis</em></a>).</p>
+
+				<p>By default, items that are lower in the DOM (coming after each other) are in front of higher, earlier elements.</p>
+
+				<figure style="--height--max: 38rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/z-index/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>The two <code class="language-plaintext highlighter-rouge">position</code> properties both create new stacking contexts, <code class="language-plaintext highlighter-rouge">z-index: 1;</code> moves even elements in front.</figcaption>
+
+				</figure>
+
+				<p>A whole lot of things make a new <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context"><em>stacking context</em></a> (including most <code class="language-plaintext highlighter-rouge">position</code> changes) which is kind of like a <em>group</em> that has its own internal depth/overlap order. No amount of internal <em>z-index</em> adjustments can break something out of that group<span class="mdash">—</span>which is one of the reasons why <em>z</em> can be really difficult to understand and tricky to use. But you can adjust the <em>z-index</em> of the group, as we do here.</p>
+
+				<h2 id="floats">Floats</h2>
+
+				<p>Sometimes you’ll want to have an image or block flow within a block of text. There are a lot of ways to do this now, but the oldest (yet sometimes still trickiest) is a <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats"><em>float</em></a>.</p>
+
+				<h3 id="left-and-right">Left and right</h3>
+
+				<p>The declarations <code class="language-plaintext highlighter-rouge">float: left;</code> and <code class="language-plaintext highlighter-rouge">float: right;</code> take an element out of the normal flow and place it on the left or right side of its parent container. Any text <em>siblings</em> will then flow around the element<span class="mdash">—</span>like a <em>text wrap<span class="mdash">—</span></em>filling up any available space to its side. They will go as far up as the top of the <em>floated element</em>.</p>
+
+				<figure style="--height--max: 40rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/float/demo"></iframe>
+					</div>
+
+
+
+				</figure>
+
+				<h3 id="dont-forget-to-clear">Don’t forget to <code class="language-plaintext highlighter-rouge">clear</code></h3>
+
+				<p>Since this takes the floated element out of the <em>flow</em>, if we want the following element (often another text block, like a <code class="language-plaintext highlighter-rouge">&lt;p&gt;</code>) to not move up it needs to be <em>cleared</em> with <code class="language-plaintext highlighter-rouge">clear: left;</code> , <code class="language-plaintext highlighter-rouge">clear: right;</code>, or <code class="language-plaintext highlighter-rouge">clear: both;</code>. Applied on the following element, it will make it stay entirely below (clear of) the <em>floated</em> element.</p>
+
+				<figure style="--height--max: 48rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/float-clear/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Uh oh, classic <em>float</em> problem on the second one.</figcaption>
+
+				</figure>
+
+				<p>If you have a parent wrapper and no following element, there won’t be anything there to <em>clear</em> the float<span class="mdash">—</span>meaning the parent will collapse down to the size of the text content. You can solve this broken look with a <em><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clear#sect1">clearfix hack</a></em>, which uses a pseudo-element as an ersatz <code class="language-plaintext highlighter-rouge">last-child</code> to clear the container.</p>
+
+				<figure style="--height--max: 52rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/float-clearfix/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Much better. <code class="language-plaintext highlighter-rouge">:after</code> is a pseudo-element<span class="mdash">—</span>which acts here as a last child that clears the <code class="language-plaintext highlighter-rouge">div</code>.</figcaption>
+
+				</figure>
+
+				<p>Generally, I try and avoid floats<span class="mdash">—</span>they aren’t common in modern design patterns and have been giving people headaches for… <em>decades</em> now. They require you to know how long your content is and also how big your viewport/page will be<span class="mdash">—</span>both things that you don’t always have control over in responsive/mobile 2022.</p>
+
+				<p><em>Sometimes they are still the only thing that can do what you need!</em></p>
+
+				<h2 id="display">Display</h2>
+
+				<p>In our <a href="/topic/html#block-elements">HTML introduction</a> we briefly talked about <em>block</em> and <em>inline</em> elements, as set by the user-agent styles. These are the first two examples of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">the <em>display</em> property</a>.</p>
+
+				<h3 id="block">Block</h3>
+
+				<p>So as we discussed, most HTML elements are <em>block-level</em> by default. But you can also set <code class="language-plaintext highlighter-rouge">display: block;</code> manually on an <em>inline</em> element, too. This would mean that it starts on a new line, takes up the full width available, and you can specify a <code class="language-plaintext highlighter-rouge">height</code>, <code class="language-plaintext highlighter-rouge">width</code>, and use <code class="language-plaintext highlighter-rouge">margin</code> above and below.</p>
+
+				<figure style="--height--max: 36rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/display-block/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Whenever you are linking a whole area (like an image and text together), safe bet that you want <code class="language-plaintext highlighter-rouge">block</code>.</figcaption>
+
+				</figure>
+
+				<h3 id="inline">Inline</h3>
+
+				<p>And going the other way, you can make <em>block</em> elements switch to <em>inline</em> with <code class="language-plaintext highlighter-rouge">display: inline;</code>. They will no longer start on their own lines, will only take up as much space as their content/children, and don’t accept <code class="language-plaintext highlighter-rouge">height</code> and <code class="language-plaintext highlighter-rouge">width</code> properties.</p>
+
+				<figure style="--height--max: 32rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/display-inline/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>The <code class="language-plaintext highlighter-rouge">white-space</code> property <code class="language-plaintext highlighter-rouge">pre</code>-vents the spaces in the paragraphs from collapsing.</figcaption>
+
+				</figure>
+
+				<h3 id="but-also-inline-block">…but also <code class="language-plaintext highlighter-rouge">inline-block</code></h3>
+
+				<p>You can also combine the qualities of <em>block</em> and <em>inline</em> with <code class="language-plaintext highlighter-rouge">display: inline-block;</code>. These elements take <code class="language-plaintext highlighter-rouge">height</code> and <code class="language-plaintext highlighter-rouge">width</code> (and vertical <code class="language-plaintext highlighter-rouge">margin</code>) like <em>block-level</em> elements, but do not start on their own line.</p>
+
+				<figure style="--height--max: 40rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/display-inline-block/demo"></iframe>
+					</div>
+
+
+
+				</figure>
+
+				<h3 id="and-sometimes-none">And sometimes <code class="language-plaintext highlighter-rouge">none</code></h3>
+
+				<p>Setting <code class="language-plaintext highlighter-rouge">display: none;</code> hides an element visually from the document<span class="mdash">—</span>as well as taking it out of the <em>flow</em>. (Keep in mind the HTML is still there, if someone opens up their <a href="/topics/dev-tools">Inspector</a>.</p>
+
+				<p>This is a common way to hide/show (by setting another <em>display</em> property) elements on the page, but it will <em>reflow</em> the document when applied<span class="mdash">—</span>as if the element is actually added/removed from the DOM.</p>
+
+				<figure style="--height--max: 17rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/display-none/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Poof. Like it wasn’t even there.</figcaption>
+
+				</figure>
+
+				<h3 id="vs-visibility">…vs. Visibility?</h3>
+
+				<p>You can also hide something <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/visibility">visually</a> without taking it out of the document <em>flow,</em> which is useful when you don’t want the page to jump/<em>reflow</em> when something appears/disappears. Setting <code class="language-plaintext highlighter-rouge">visibility: hidden;</code> keeps the space an element had before, but makes it invisible and unable to be interacted with. The value <code class="language-plaintext highlighter-rouge">visible</code> is the default.</p>
+
+				<figure style="--height--max: 22rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/visibility/demo"></iframe>
+					</div>
+
+
+
+				</figure>
+
+				<h3 id="-vs-opacity">… vs. Opacity?</h3>
+
+				<p>Another way to hide an element visually is to adjust <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/opacity">its opacity</a>, which uses values on a scale from 0–1. This differs from <code class="language-plaintext highlighter-rouge">visibility</code> because elements with no (or partial) opacity can still be interacted with.</p>
+
+				<figure style="--height--max: 22rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/opacity/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>You can still select the text (or click links) of not-fully-opaque elements.</figcaption>
+
+				</figure>
+
+				<p>Keep in mind that <code class="language-plaintext highlighter-rouge">display: none;</code>, <code class="language-plaintext highlighter-rouge">visibility: hidden;</code>, and <code class="language-plaintext highlighter-rouge">opacity: 0;</code> only hide things in the rendered browser view. The HTML is still visible in the Inspector and source code!</p>
+
+				<h3 id="-flex-and-grid">… <code class="language-plaintext highlighter-rouge">flex</code> and <code class="language-plaintext highlighter-rouge">grid</code>?</h3>
+
+				<p>We’ll cover these separately! But they’ll make your (layout) life easier.</p>
+
+
+			</article>
+
+			<footer>
+				<div>
+					<section>
+						<a href="/">
+							<p>Core 1: Interaction, Fall 2022</p>
+						</a>
+					</section>
+					<section>
+						<p><a href="#">Top</a></p>
+					</section>
+				</div>
+			</footer>
+
+		</main>
+
+	</body>
+</html>

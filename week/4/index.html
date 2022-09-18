@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
+
+
+
+
+
+
+
+
+		<title>Week 4</title>
+		<link href="/assets/styles/reset.css" rel="stylesheet">
+		<link href="/assets/styles/common.css" rel="stylesheet">
+		<link href="/assets/styles/syntax.css" rel="stylesheet">
+		<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
+		<link href="/assets/icons/touch.png" rel="apple-touch-icon">
+
+		<script src="/assets/scripts/common.js"></script>
+
+		<meta name="theme-color" content="#e42a1d">
+	</head>
+	<body class="week">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<nav>
+			<div>
+				<section>
+					<a href="/">
+						<p>C1:I</p>
+					</a>
+					<p>
+						<strong>Week 4, September 20</strong>
+						<select onchange="
+					this.parentElement.querySelector('strong').innerHTML = this.querySelector(`[value='${this.value}']`).text;
+					document.activeElement.blur();
+					window.open(this.value,'_self');
+					">
+
+
+							<optgroup label="Sessions">
+
+
+
+								<option value="/week/1/">Week 1, August 30</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/2/">Week 2, September 6</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/3/">Week 3, September 13</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option selected disabled>Week 4, September 20</option>
+
+
+							</optgroup>
+
+
+
+							<optgroup label="Topics">
+
+
+
+								<option value="/topic/everything/">Everything is a web page</option>
+
+
+
+
+								<option value="/topic/html/">An intro to HTML</option>
+
+
+
+
+								<option value="/topic/css/">An intro to CSS</option>
+
+
+
+
+								<option value="/topic/box-model/">The box model</option>
+
+
+							</optgroup>
+
+
+
+							<optgroup label="Project">
+
+
+
+								<option value="/project/harmonic/">Harmonic Collection</option>
+
+
+							</optgroup>
+
+
+						</select>
+					</p>
+				</section>
+				<section>
+
+					<p>
+						<a class="last" href="/week/3/">Last week</a>
+					</p>
+
+					<p><a href="#">Top</a></p>
+				</section>
+			</div>
+		</nav>
+
+
+
+
+
+
+
+
+
+		<main>
+
+			<header>
+				<h1>Week 4</h1>
+
+				<p>September 20</p>
+
+				<ul>
+					<li><a href="#harmonic-collection-review"><em>Harmonic Collection</em> review</a></li>
+					<li><a href="#more-css">More CSS!</a></li>
+					<li><a href="#lets-try-it-out">Let’s try it out</a></li>
+					<li><a href="#for-next-week">For next week</a></li>
+				</ul>
+			</header>
+
+			<article>
+				<h2 id="harmonic-collection-review"><em>Harmonic Collection</em> review</h2>
+
+				<p>As we did last week, let’s take a look at some of your entries:</p>
+
+				<p class="icon-link two-below"><a href="https://docs.google.com/spreadsheets/d/1vXYVnicRUHnczxPCSaqsmmflynnwP22zhES5jFMPKpw/"><em>Harmonic Collection</em> entries</a></p>
+
+				<p><em>I’d love some volunteers who didn’t share last time.</em></p>
+
+				<h2 id="more-css">More CSS!</h2>
+
+				<p>We’ll learn some initial CSS layout:</p>
+
+				<p class="icon-link"><a href="/topic/box-model">The box model</a></p>
+
+				<blockquote class="callout" icon="🫠">
+					<p>We’ll break somewhere in the middle of the lecture, again.</p>
+				</blockquote>
+
+				<h2 id="lets-try-it-out">Let’s try it out</h2>
+
+				<p class="two-below">We’ll do some CSS layout work, together.</p>
+
+				<ol>
+					<li>
+						<p>Let’s briefly go over some <a href="https://veryinteractive.net/pages/vocabulary.html">hosting terminology</a>, as a little appetizer.</p>
+					</li>
+					<li>
+						<p>Then we’re going to get ourselves organized. In our project repos, let’s create folders for each entry<span class="mdash">—</span><code class="language-plaintext highlighter-rouge">entry-1</code>, <code class="language-plaintext highlighter-rouge">entry-2</code>, etc.</p>
+					</li>
+					<li>
+						<p>Inside each of these, you will rename <code class="language-plaintext highlighter-rouge">entry-#.html</code> to <code class="language-plaintext highlighter-rouge">index.html</code>.</p>
+
+						<p>Remember that <code class="language-plaintext highlighter-rouge">index.html</code> is a <a href="/week/3/#demo-time">special name</a> that will load (without showing the filename) at a folder’s path. So the paths we had before:</p>
+
+						<div class="language-xpath highlighter-rouge">
+							<div class="highlight">
+								<pre class="highlight"><code><span class="w"> </span><span class="nt">https</span><span class="o">://</span><span class="nt">username.github.io</span><span class="o">/</span><span class="nt">harmonic-collection</span><span class="o">/</span><span class="nt">entry-1</span><span class="w">
+</span></code></pre>
+							</div>
+						</div>
+
+						<p>…will now point to each entry folder’s <code class="language-plaintext highlighter-rouge">index.html</code>, <em>instead</em> of <code class="language-plaintext highlighter-rouge">entry-1.html</code> in the base/<em>root</em> project folder. The URL stays the same!</p>
+					</li>
+					<li>
+						<p>Be sure to update your main project <code class="language-plaintext highlighter-rouge">index.html</code>, if the links there include <code class="language-plaintext highlighter-rouge">.html</code>!</p>
+					</li>
+					<li>
+						<p>When that is done, let’s add an <code class="language-plaintext highlighter-rouge">entry-3</code> folder with an <code class="language-plaintext highlighter-rouge">index.html</code> (and then a <code class="language-plaintext highlighter-rouge">style.css</code>):</p>
+
+						<div class="language-html highlighter-rouge">
+							<div class="highlight">
+								<pre class="highlight"><code> <span class="cp">&lt;!DOCTYPE html&gt;</span>
+ <span class="nt">&lt;html&gt;</span>
+   <span class="nt">&lt;head&gt;</span>
+     <span class="nt">&lt;title&gt;</span>Entry 3<span class="nt">&lt;/title&gt;</span>
+     <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"style.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;/head&gt;</span>
+   <span class="nt">&lt;body&gt;</span>
+     <span class="c">&lt;!-- Some dummy content just to speed us up! --&gt;</span>
+     <span class="nt">&lt;header&gt;</span>
+       <span class="nt">&lt;nav&gt;</span>
+         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>All entries<span class="nt">&lt;/a&gt;</span>
+       <span class="nt">&lt;/nav&gt;</span>
+       <span class="nt">&lt;h1&gt;</span>Entry 3<span class="nt">&lt;/h1&gt;</span>
+     <span class="nt">&lt;/header&gt;</span>
+     <span class="nt">&lt;main&gt;</span>
+       <span class="nt">&lt;p&gt;</span>Homogenized media revelatory street art existence experimental phenomenon. Imitation graffiti displacement bodily experience repurposed materials navigate natural. Collective historicizing dogma violence .net art industrial translates displacement. Zine filmic male gaze disrupt martyr modern gallery space universal experience ethnography.<span class="nt">&lt;/p&gt;</span>
+       <span class="nt">&lt;p&gt;</span>Sustainable authoritarian institutional historical mass-produced intuitive utopia collage dogmatic. Ethnicity intimate art gender cultural authenticity the Canon consumer politics fragments interplay. Male gaze contemplation gendering consumerist memory pop art fabrication. Internal construct observers loss R. Mutt digital manifesto material. Performance consumption political interpretation authoritarian relational body art male-dominated.<span class="nt">&lt;/p&gt;</span>
+       <span class="nt">&lt;p&gt;</span>Meditate sustainable social justice female form appropriate Marina Abramovic subculture tokenism. Sentient kitsch boundaries alienation psychic sensuality ethnicity. Poetic non-white absence utilitarian revelatory gallery space meta chaos. Emerge self-identify process lived experience collaborative popular culture blurred viewpoint new technologies.<span class="nt">&lt;/p&gt;</span>
+       <span class="nt">&lt;p&gt;</span>Heritage nothingness experiential body art politics blurred utopia. Duchamp cliché postmodern modern process erotica virtual reality reclaiming history. Experiential destabilize ritual utilitarian Fluxus ghosts horror. Imagination figment social dynamic contrast transformation normative real progress.<span class="nt">&lt;/p&gt;</span>
+       <span class="nt">&lt;p&gt;</span>Memory ethnicity community engagement revelatory impulsive handmade cliché inclusive artifacts. Consumerist outsider subversive mythology genius form poetic. Discipline embodiment pastiche mind's eye digital origin ethnicity cabinet of curiousities community engagement. Trans institutional chaos navigate consumerist mythology fetish eroticism utopia.<span class="nt">&lt;/p&gt;</span>
+       <span class="c">&lt;!-- Maybe add an anchor link example. --&gt;</span>
+     <span class="nt">&lt;/main&gt;</span>
+   <span class="nt">&lt;/body&gt;</span>
+ <span class="nt">&lt;/html&gt;</span>
+</code></pre>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p>And I’ll demo a few common layout properties from <a href="/topic/box-model">today’s lecture</a>.</p>
+
+						<ul>
+							<li><code class="language-plaintext highlighter-rouge">position: fixed;</code> for a navigation element</li>
+							<li>Adding <code class="language-plaintext highlighter-rouge">background-color</code> with <code class="language-plaintext highlighter-rouge">padding</code>.</li>
+							<li>Centering a content block with <code class="language-plaintext highlighter-rouge">margin: 0 auto;</code></li>
+							<li>Whatever anyone else wants, if we have time!</li>
+						</ul>
+
+						<p><em>Make sure you’ve installed that <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server">Live Preview</a> plugin for quick/auto reloading! Mind your ergonomics.</em></p>
+					</li>
+				</ol>
+
+				<hr />
+
+				<h2 id="for-next-week">For next week</h2>
+
+				<ul>
+					<li>
+						<p>Read the full <a href="/topic/box-model">box-model lecture</a>, above! There are lots of specific examples there for you to use in your work. I expect to start seeing them!</p>
+					</li>
+					<li>
+						<p>Complete the third entry for your <a href="/project/harmonic"><em>Harmonic Collection</em></a> projects and add it to our doc, as we do:</p>
+
+						<p class="icon-link"><a href="https://docs.google.com/spreadsheets/d/1vXYVnicRUHnczxPCSaqsmmflynnwP22zhES5jFMPKpw/"><em>Harmonic Collection</em> entries</a></p>
+					</li>
+					<li>
+						<p>And we’re also going to do our next reading:</p>
+
+						<p class="icon-link"><a href="https://frankchimero.com/blog/2015/the-webs-grain/"><em>The Web’s Grain</em></a> <br />
+							Frank Chimero</p>
+
+						<p>This is much shorter than <em>What Is Code?</em>, but still a decent length. Leave yourself time. As before, add your responses to this doc<span class="mdash">—</span>which we will discuss next class:</p>
+
+						<p class="icon-link"><a href="https://docs.google.com/document/d/1Pn5Hcw9hXk6U6rb6ccFG1ROD6i-EfcSXlm8PX6Kcm9M/edit"><em>The Web’s Grain</em> responses</a></p>
+					</li>
+				</ul>
+
+
+
+
+
+			</article>
+
+			<footer>
+				<div>
+					<section>
+						<a href="/">
+							<p>Core 1: Interaction, Fall 2022</p>
+						</a>
+					</section>
+					<section>
+						<p><a href="#">Top</a></p>
+					</section>
+				</div>
+			</footer>
+
+		</main>
+
+	</body>
+</html>
