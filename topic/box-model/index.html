@@ -231,7 +231,7 @@
 
 				<h2 id="padding">Padding</h2>
 
-				<p>Next comes <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding"><em>padding</em></a>, which extends the element’s area around the content. I often think of this as an <em>inset</em> (if we’ve made our <code class="language-plaintext highlighter-rouge">box-sizing</code> the logical <code class="language-plaintext highlighter-rouge">border-box</code>, above).</p>
+				<p>Next comes <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding"><em>padding</em></a>, which extends the element’s area around the content. It’s easiest to think of this as an <em>inset</em> (if we’ve made our <code class="language-plaintext highlighter-rouge">box-sizing</code> the logical <code class="language-plaintext highlighter-rouge">border-box</code>, above).</p>
 
 				<figure style="--height--max: 28rem">
 
@@ -371,7 +371,7 @@
 
 				<p class="half">Otherwise you can use <em>relative</em> units, which depend on and respond to their context. <br />
 					<br />
-					<em>I think these are distinctly and intrinsically <em>web</em> measurements.</em>
+					<em>These are distinctly and intrinsically <em>web</em> measurements.</em>
 				</p>
 
 				<div class="language-css half highlighter-rouge">
@@ -644,7 +644,7 @@
 
 				<h3 id="and-sometimes-none">And sometimes <code class="language-plaintext highlighter-rouge">none</code></h3>
 
-				<p>Setting <code class="language-plaintext highlighter-rouge">display: none;</code> hides an element visually from the document<span class="mdash">—</span>as well as taking it out of the <em>flow</em>. (Keep in mind the HTML is still there, if someone opens up their <a href="/topics/dev-tools">Inspector</a>.</p>
+				<p>Setting <code class="language-plaintext highlighter-rouge">display: none;</code> hides an element visually from the document<span class="mdash">—</span>as well as taking it out of the <em>flow</em>. (Keep in mind the HTML is still there, if someone opens up the source code.)</p>
 
 				<p>This is a common way to hide/show (by setting another <em>display</em> property) elements on the page, but it will <em>reflow</em> the document when applied<span class="mdash">—</span>as if the element is actually added/removed from the DOM.</p>
 
@@ -690,7 +690,7 @@
 
 				</figure>
 
-				<p>Keep in mind that <code class="language-plaintext highlighter-rouge">display: none;</code>, <code class="language-plaintext highlighter-rouge">visibility: hidden;</code>, and <code class="language-plaintext highlighter-rouge">opacity: 0;</code> only hide things in the rendered browser view. The HTML is still visible in the Inspector and source code!</p>
+				<p>Keep in mind that <code class="language-plaintext highlighter-rouge">display: none;</code>, <code class="language-plaintext highlighter-rouge">visibility: hidden;</code>, and <code class="language-plaintext highlighter-rouge">opacity: 0;</code> only hide things in the rendered browser view. The HTML is still visible in the source code!</p>
 
 				<h3 id="-flex-and-grid">… <code class="language-plaintext highlighter-rouge">flex</code> and <code class="language-plaintext highlighter-rouge">grid</code>?</h3>
 
