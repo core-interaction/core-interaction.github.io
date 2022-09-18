@@ -1,7 +1,6 @@
 ---
 title: The box model
 order: 3
-published: false
 ---
 
 
