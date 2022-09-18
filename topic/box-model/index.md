@@ -105,7 +105,7 @@ Also [margins *collapse*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_B
 
 
 
-## And units, oh my
+## And their units
 
 
 
@@ -354,7 +354,7 @@ You can also hide something [visually](https://developer.mozilla.org/en-US/docs/
 
 
 
-### … vs. Opacity?
+### …vs. Opacity?
 
 Another way to hide an element visually is to adjust [its opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity), which uses values on a scale from 0–1. This differs from `visibility` because elements with no (or partial) opacity can still be interacted with.
 
