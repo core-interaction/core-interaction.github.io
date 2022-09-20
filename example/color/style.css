@@ -34,3 +34,9 @@ li:nth-child(7) {
 	opacity: 0.5;
 	/* This will affect everything, not just text! */
 }
+
+li:nth-child(8) {
+	color: white;
+	background-color: dodgerblue;
+	/* Same for backgrounds! */
+}
