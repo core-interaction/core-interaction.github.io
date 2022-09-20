@@ -342,7 +342,7 @@ Alright, so all this has been about *targeting* elements—what about actually s
 
 Besides the basic examples above, [*color*](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) can be specified in a few different ways:
 
-{% include figure.html src='/example/color/demo' caption='There are [147 <em>named</em>](https://htmlcolorcodes.com/color-names/) CSS colors! `tomato` is a favorite.' height='53rem' %}
+{% include figure.html src='/example/color/demo' caption='There are [147 <em>named</em>](https://htmlcolorcodes.com/color-names/) CSS colors! `tomato` is a favorite.' height='62rem' %}
 
 Named colors are quick to work with when you know a few, but `hsla` offers a more intuitive way to adjust and work with colors.
 
