@@ -164,8 +164,13 @@ Otherwise you can use *relative* units, which depend on and respond to their con
 
 /* Relative to element font-size. */
 .em {
-	height: 14em;
+	height: 14em; /* 1em is one line. */
 	width: 4.8em;
+}
+
+/* Also relative to font size */
+.ch {
+	width: 1ch; /* 1ch is one letter. */
 }
 
 /* Relative to :root font-size. */
