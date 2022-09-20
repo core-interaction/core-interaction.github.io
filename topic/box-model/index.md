@@ -84,6 +84,8 @@ Then we have [*border*](https://developer.mozilla.org/en-US/docs/Web/CSS/border)
 
 {% include figure.html src='/example/border-style/demo' height='58rem' caption='Look at all those borders.' %}
 
+{% include figure.html src='/example/border-radius/demo' height='67rem' %}
+
 
 
 ## Margin

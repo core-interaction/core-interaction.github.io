@@ -1,0 +1,28 @@
+div:nth-child(1) {
+	border-radius: 50%; /* Relative to size.*/
+	border-style: solid;
+}
+
+div:nth-child(2) {
+	background-color: deepskyblue;
+	border-radius: 10px; /* Absolute amount. */
+}
+
+div:nth-child(3) {
+	background-color: gold;
+	border-bottom-right-radius: 25px;
+	border-top-left-radius: 25px;
+}
+
+
+
+/* Same as before. */
+body {
+	font-family: sans-serif;
+	padding: 20px;
+}
+
+div { padding: 20px; }
+
+/* Every one but the first one. */
+div:not(:first-child) { margin-top: 20px; }
