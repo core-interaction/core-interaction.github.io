@@ -5,42 +5,40 @@ $--default-font-fize: 16;
 // For targeting lingering, different behaviors.
 @mixin browser-specific($browsers...) {
 	@if index($browsers, 'firefox') {
-		@supports (-moz-appearance: meterbar) {
+		@supports (-moz-appearance: none) {
 			@content;
 		}
 	}
+
 	@if index($browsers, 'safari') {
 		@supports (-webkit-hyphens: none) { // This might change, when Chrome plays ball.
 			@content;
 		}
 	}
+
 	@if index($browsers, 'safari--mobile') {
 		@supports (-webkit-hyphens: none) and (-webkit-touch-callout: none) { // Target iOS subset.
 			@content;
 		}
 	}
+
 	@if index($browsers, 'safari--iphone') {
-		@supports (-webkit-hyphens: none) and (-webkit-touch-callout: none) and (-webkit-overflow-scrolling: touch) { // Just iPhones.
-			@media // iPad “slide over” matches the overflow condition, so size-based queries.
-				(-webkit-min-device-pixel-ratio: 2) and (max-height: #{calc(526 / $--default-font-fize)}em), // Lil’ iPhone SE.
-				(-webkit-min-device-pixel-ratio: 2) and (min-width: #{calc(375 / $--default-font-fize)}em) and (max-height: #{calc(616 / $--default-font-fize)}em), // Bigger iPhone SE / 8.
-				(-webkit-min-device-pixel-ratio: 2) and (min-width: #{calc(414 / $--default-font-fize)}em), // iPhones 11 / XR.
-				(-webkit-min-device-pixel-ratio: 2) and (orientation: landscape), // All these in landscape.
-				(-webkit-min-device-pixel-ratio: 3) { // iPhones after 2020 or so, no iPads are @3x yet.
+		@supports (-webkit-hyphens: none) and (-webkit-touch-callout: none) {
+			@media (-webkit-min-device-pixel-ratio: 3) { // iPhones after 2020 or so, as no iPads are @3x yet.
 				@content;
 			}
 		}
 	}
+
 	@if index($browsers, 'chrome') {
-		@media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
-			@supports not (-moz-appearance: meterbar) { // Scope out Firefox.
-				@content;
-			}
+		@supports (not (-webkit-hyphens: none)) and (not (-moz-appearance: none)) {
+			@content;
 		}
 	}
+
 	@if index($browsers, 'chrome--mobile') {
-		@media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) and (max-width: #{calc(767 / $--default-font-fize)}em) {
-			@supports not (-moz-appearance: meterbar) {
+		@supports (not (-webkit-hyphens: none)) and (not (-moz-appearance: none)) {
+			@media (max-width: #{$desktop--width - 1}px) {
 				@content;
 			}
 		}
