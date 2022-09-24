@@ -6,31 +6,22 @@ order: 4
 
 
 
-# CSS! (Media queries)
+## Responsive design?
 
----
 
-**Contents**
 
-**Links**
+Let’s first take a minute to talk about *responsive design*. This term was coined in 2010 or so [by Ethan Marcotte](https://alistapart.com/article/responsive-web-design/)—wrapping a name around a [*progressive enhancement*](https://alistapart.com/article/understandingprogressiveenhancement/) and [*mobile first*](https://www.lukew.com/ff/entry.asp?933) web design approach/philosophy that had been growing in the mid-2000s (sometimes called *liquid, flexible, fluid,* or *elastic* design). Instead of serving a desktop site and a separate, minimal mobile version (if at all)—you could instead adapt one site.
+{: .left }
 
-[Responsive design - Learn web development | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
+* [Responsive design | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) \
+  *A pretty nice overview.*
 
-A pretty nice overview.
+* [Beginner's guide to media queries | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Media_queries) \
+  *Slightly overlapping, but also good.*
 
-[Beginner's guide to media queries - Learn web development | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
-
-Slightly overlapping, but also good.
-
-[Using media queries - CSS: Cascading Style Sheets | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features)
-
-Okay, that’s probably enough.
-
-# Responsive design?
-
----
-
-Let’s first take a minute to talk about *responsive design*. This term was coined in 2010 or so [by Ethan Marcotte](https://alistapart.com/article/responsive-web-design/)—wrapping a name around a *[progressive enhancement](https://alistapart.com/article/understandingprogressiveenhancement/)* and *[mobile first](https://www.lukew.com/ff/entry.asp?933)* web design approach/philosophy that had been growing in the mid-2000s (sometimes called *liquid, flexible, fluid,* or *elastic* design). Instead of serving a desktop site and a separate, minimal mobile version (if at all)—you could instead adapt one site.
+* [Using media queries | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) \
+  *Okay, that’s probably enough.*
+{: .right .no-marker .icon-link rows="2" }
 
 There was a confluence of events that allowed this: modern, self-updating browsers, and then the explosion of *the mobile web—*precipitated, in no small part, by the *iPhone* in 2007. It ran a desktop-class browser (in terms of functionality), which hadn’t been available in a small screen before. And with its crazy success —and subsequent proliferation of its paradigm in *Android*—the web, and then word, scrambled to *respond*.
 
@@ -38,7 +29,11 @@ There was a confluence of events that allowed this: modern, self-updating browse
 
 Decent illustration [from Wikipedia](https://en.wikipedia.org/wiki/Responsive_web_design).
 
-## `meta name="viewport"`
+
+
+## The *viewport*
+
+
 
 You might have noticed this line in the `head` of our HTML templates:
 
@@ -60,9 +55,11 @@ From the [iPhone introduction](https://youtu.be/VQKMoT-6XSg?t=2474), worth a wat
 
 Simpler times.
 
-# Media queries
 
----
+
+## Media queries
+
+
 
 Responsive design could only really flourish when CSS added the `@media` *[at-rule](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries)* around the same time. These are colloquially called *media queries*, and they allow us to check if screen is a certain width or resolution (or other features, which we’ll get to)—and then apply selective CSS only in that scenario.
 
@@ -78,7 +75,11 @@ Practically, these are blocks of CSS—a little bit like *[selectors](https://ww
 
 *These blocks are like any other CSS—if there are multiple conditions that are met, the rules [cascade](https://www.notion.so/CSS-Fundamentals-6ea128fa0cfd4b46972d85348850af70) down and the lowest one takes precedent.*
 
+
+
 ## Width-based *breakpoints*
+
+
 
 There are lots of media queries we can use, but we’ll start with *width*—which is by far the most commonly used and really the core of *responsive design*. Usually when folks are talking about a page or site being *responsive*, they mean with regards to `width`.
 
@@ -100,7 +101,11 @@ This width rule/test/criteria uses the same syntax as [length properties](https:
 
 Again, drag the divider to see rules apply. Exact matches (like the  `width: 400px;` here) are rarely useful!
 
-## Height, too
+
+
+## Height-based, too
+
+
 
 You can also use `height` in the same way—though again, with the normal, vertical scrolling paradigm, height-based adjustments aren’t as necessary or nearly as common.
 
@@ -112,7 +117,11 @@ I made these embeds themselves *responsive—s*o they stack code/demo when they 
 
 *In a broader code/programming context, it can be helpful to think of media queries as* [conditional **if statements](https://en.wikipedia.org/wiki/Conditional_(computer_programming))*. If this thing is true, then do this. (You may have heard “[If This Then That](https://ifttt.com).”) We’ll talk about this more [with JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else), where conditionals ubiquitous and powerful.*
 
+
+
 ## Orientation
+
+
 
 You can also be less specific about your width/height and instead use `orientation`—like when you rotate your phone. This uses the wonderfully tenacious names/values of `portrait` or `landscape`.
 
@@ -122,7 +131,11 @@ You can also be less specific about your width/height and instead use `orientati
 
 Drag that divider!
 
-## `and` / *or*
+
+
+## And/or combinations
+
+
 
 And speaking of *conditional statements—*you can also merge multiple media queries into one test/check, using `and`. This is often used for a range (to apply something *between* two breakpoints) or to combine `width` and `height` checks, together.
 
@@ -140,9 +153,9 @@ Note that you could do this with `and` (in the example above) by just swapping t
 
 *Why say `not` `portrait` when you can just say… `landscape`?*
 
-# *Mobile-first* design
+## *Mobile-first* design
 
----
+
 
 So this can all get very complicated, very quickly—especially with complex designs, overlapping rules, and the wide ranges of devices to consider. One of the easiest methodologies to keep things understandable is practicing *mobile first* design/development. **This has become kind of *buzzwordy* in the past decade or so, but it is a good philosophy to adhere to nonetheless.
 
@@ -156,13 +169,17 @@ The `width` here are kind of tricky—but this will be much easier with `grid`, 
 
 *This follows the general CSS paradigm of the cascade—and is much, much, much easier than adjusting desktop front-end after the fact. Always think mobile first!*
 
-# Other `@media` features
 
----
+
+## Other `@media` features
+
+
 
 The most common media queries will be *width*/*height*/*orientation*—for adjusting your layouts. But `@media` has some [more tricks up its](https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_features) sleeve with testing for other browser features. We’ll look at some of the handy/common ones.
 
-## `screen` / `print`
+
+
+### `screen` / `print`
 
 In all of our above examples, there is an implied *[media type](https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_types)* of `screen`—since that is usually what we are concerned with on the web. But there is also one for `print`! You can use these to segment styles to one medium or the other.
 
@@ -170,7 +187,9 @@ In all of our above examples, there is an implied *[media type](https://develope
 
 You can see the `print` style in action by clicking *Original* in the upper corner, then ⌘-P to print. It is still *A Thing*, though really often forgotten about in modern web design/projects.
 
-## `hover`
+
+
+### `hover`
 
 Another common one is `hover`, to detect whether a browser has an input device that supports *hovering*—which really just means a mouse, on laptop/desktop computers. Mobile *touch-based* systems don’t have this behavior (and sometimes react oddly to `:hover` CSS), so you might need to adjust your interfaces to work in the absence of this state.
 
@@ -182,7 +201,9 @@ If you view this on your phone, the `aside` should be visible without interactio
 
 *Hover states are a good thing for progressive enhancement, as we did here—to add them in after you have a working mobile design! Since maybe a third to a half of your audience (depending on your project) won’t see them.*
 
-## **`prefers-color-scheme`**
+
+
+### `prefers-color-scheme`
 
 You see this one more and more these days—switching up a site’s styles based on whether the user is in *light* or *dark mode.*
 
@@ -192,7 +213,9 @@ You’ll see this differently depending on whether your system is in light or da
 
 *Sometimes this feels appropriate (especially in products/applications,  like maybe a messaging service). But sometimes the color scheme of a site is its brand, and probably shouldn’t change based on this query. It’s up to you! In our ongoing discussion of who has the control.*
 
-## `prefers-reduced-motion`, ****`prefers-contrast`****
+
+
+### `prefers-reduced-motion`, `prefers-contrast`
 
 These last two are primarily concerned with [accessiblity](https://developer.mozilla.org/en-US/docs/Web/Accessibility), for folks who run their device/browser with animations turned off, or in a high-contrast mode to help with their vision.
 
@@ -228,9 +251,11 @@ p {
 
 ![IMG_288F80E29CEF-1.jpeg](CSS!%20(Media%20queries)%20d34a5ded94354f84a3ffa00b8af3454b/IMG_288F80E29CEF-1.jpeg)
 
-# Testing responsive design
 
----
+
+## Testing responsive design
+
+
 
 The easiest way to test all these things out is using [the device mode](https://www.notion.so/DevTools-The-Inspector-d0533c0133b24b168160eee046ce94b9) in Chrome’s *Inspector*. There will still be differences (like not necessarily honoring device-specific settings like `hover`), but for layout/breakpoint development it is often much faster than checking on actual devices!
 
