@@ -1753,51 +1753,51 @@ body > main > article .callout + * + * {
 	}
 }
 
-body > main > article .one-above {
+body > main > article .one-above:not(._) {
 	--margin--top: var(--typography--leading-shoulder);
 }
 
-body > main > article .one-above + * {
+body > main > article .one-above:not(._) + * {
 	--margin--top--previous: var(--typography--leading-shoulder);
 }
 
-body > main > article .one-below + * {
+body > main > article .one-below:not(._) + * {
 	--margin--top: var(--typography--leading-shoulder);
 }
 
-body > main > article .two-above {
+body > main > article .two-above:not(._) {
 	--margin--top: var(--margin--vertical--2);
 }
 
-body > main > article .two-above + * {
+body > main > article .two-above:not(._) + * {
 	--margin--top--previous: var(--margin--vertical--2);
 }
 
-body > main > article .two-below + * {
+body > main > article .two-below:not(._) + * {
 	--margin--top: var(--margin--vertical--2);
 }
 
-body > main > article .four-above {
+body > main > article .four-above:not(._) {
 	--margin--top: var(--margin--vertical--4);
 }
 
 @media (min-width: 35.5em) {
-	body > main > article .four-above {
+	body > main > article .four-above:not(._) {
 		--margin--top: var(--margin--vertical--6);
 	}
 }
 
-body > main > article .four-above + * {
+body > main > article .four-above:not(._) + * {
 	--margin--top--previous: var(--margin--vertical--4);
 }
 
 @media (min-width: 35.5em) {
-	body > main > article .four-above + * {
+	body > main > article .four-above:not(._) + * {
 		--margin--top--previous: var(--margin--vertical--6);
 	}
 }
 
-body > main > article .four-below + * {
+body > main > article .four-below:not(._) + * {
 	--margin--top: var(--margin--vertical--6);
 }
 
