@@ -563,23 +563,23 @@
 
 
 	// Manual spacing decisions.
-	.one-above {
+	.one-above:not(._) {
 		--margin--top: var(--typography--leading-shoulder);
 
 		+ * { --margin--top--previous: var(--typography--leading-shoulder) }
 	}
 
-	.one-below + * { --margin--top: var(--typography--leading-shoulder) }
+	.one-below:not(._) + * { --margin--top: var(--typography--leading-shoulder) }
 
-	.two-above {
+	.two-above:not(._) {
 		--margin--top: var(--margin--vertical--2);
 
 		+ * { --margin--top--previous: var(--margin--vertical--2) }
 	}
 
-	.two-below + * { --margin--top: var(--margin--vertical--2) }
+	.two-below:not(._) + * { --margin--top: var(--margin--vertical--2) }
 
-	.four-above {
+	.four-above:not(._) {
 		--margin--top: var(--margin--vertical--4);
 
 		@include breakpoint(568) { --margin--top: var(--margin--vertical--6) } // Go to six, keeping the name to retain Markdown compatibility with TI.
@@ -591,7 +591,7 @@
 		}
 	}
 
-	.four-below + * { --margin--top: var(--margin--vertical--6) }
+	.four-below:not(._) + * { --margin--top: var(--margin--vertical--6) }
 
 
 
