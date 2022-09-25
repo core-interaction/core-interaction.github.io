@@ -223,9 +223,9 @@ You’ll often want to set limits/constraints on these values—particularly wi
 	max-height: 200px;
 }
 
-/* A handy one! Watch your line lengths. */
+/* Handy to watch your line lengths! */
 p {
-	max-width: 65ch; /* 65-ish characters. */
+	max-width: 65ch; /* 65ish letters. */
 }
 ```
 {: .half }
