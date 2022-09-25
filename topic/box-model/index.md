@@ -116,6 +116,7 @@ Okay, so we have all these box properties—but how do we specify the dimensions
 
 
 ### Absolute length units
+{: .four-above }
 
 Maybe the easiest ones to understand, fixed to physical (well, sort of) sizes. \
 \
@@ -143,6 +144,7 @@ Maybe the easiest ones to understand, fixed to physical (well, sort of) sizes. \
 
 
 ### Relative length units
+{: .four-above }
 
 Otherwise you can use *relative* units, which depend on and respond to their context. \
 \
@@ -182,7 +184,9 @@ Otherwise you can use *relative* units, which depend on and respond to their con
 {: .half }
 
 
+
 ### Combine them with a `calc`
+{: .four-above }
 
 Sometimes you might want to use these together! Or otherwise do some math. For this we have the [calc function](https://developer.mozilla.org/en-US/docs/Web/CSS/calc()).
 {: .half }
@@ -197,6 +201,36 @@ Sometimes you might want to use these together! Or otherwise do some math. For t
 }
 ```
 {: .half }
+
+
+
+### Limit/constrain them
+{: .four-above }
+
+You’ll often want to set limits/constraints on these values—particularly with flexible, *relative* units (and *responsive design*, which we’ll talk about soon.) You can set [minimums](https://developer.mozilla.org/en-US/docs/Web/CSS/min-width) and [maximums](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width) using the prefix `min-` and `max-`.
+{: .half }
+
+```css
+.constrained-width {
+	min-width: 200px;
+	width: 50%;
+	max-width: 400px;
+}
+
+.constrained-height {
+	min-height: 100px;
+	height: 100%;
+	max-height: 200px;
+}
+
+/* A handy one! Watch your line lengths. */
+p {
+	max-width: 65ch; /* 65-ish characters. */
+}
+```
+{: .half }
+
+
 
 > CSS is big and massive and overwhelming and sometimes indefensibly nonsensical—but remember that you can do a surprising amount with just these basic properties! And no matter how complex it gets, it always comes back to these basics.
 {: .callout icon="😥" }
