@@ -1604,6 +1604,15 @@ body > main > article aside figure:not(:first-child) {
 	margin-top: var(--typography--between);
 }
 
+body > main > article aside figure:not(:first-child).one-above,
+body > main > article aside figure:not(:first-child).one-below,
+body > main > article aside figure:not(:first-child).two-above,
+body > main > article aside figure:not(:first-child).two-below,
+body > main > article aside figure:not(:first-child).four-above,
+body > main > article aside figure:not(:first-child).four-below {
+	margin-top: var(--margin--top);
+}
+
 body > main > article aside + * {
 	--margin--top: var(--margin--vertical--2);
 }
