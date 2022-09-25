@@ -6,8 +6,21 @@ order: 4
 
 
 
-## What is responsive design?
-{: .no_toc }
+> Empty your mind. Be formless, shapeless, like water. You put water into a cup, it becomes the cup. You put water into a bottle, it becomes the bottle.
+You put it into a teapot, it becomes the teapot. Now water can flow or it can crash. Be water, my friend.
+{: .quote }
+
+<cite>[Bruce Lee](https://www.youtube.com/watch?v=fEDfznOP820)</cite>
+
+> Content is like water. Content’s going to take many forms, flow into many different containers, many of which we haven’t even imagined yet. Build from content out, not container in.
+{: .quote .two-above }
+
+<cite>[Josh Clark](https://bigmedium.com/jhc/prez/mobile-myths.pdf)</cite>
+
+
+
+## What is *responsive design*?
+
 
 
 Let’s first take a minute to talk about *responsive design*. This term was coined in 2010 or so [by Ethan Marcotte](https://alistapart.com/article/responsive-web-design/)—wrapping a name around a [*progressive enhancement*](https://alistapart.com/article/understandingprogressiveenhancement/) and [*mobile first*](https://www.lukew.com/ff/entry.asp?933) web design approach/<wbr>philosophy that had been growing in the mid-2000s (sometimes called *liquid, flexible, fluid,* or *elastic* design). Instead of serving a desktop site and a separate, minimal mobile version (if you even did at all)—you could instead adapt one site.
@@ -25,50 +38,47 @@ Let’s first take a minute to talk about *responsive design*. This term was co
 
 There was a confluence of events that allowed this: modern, self-updating browsers, and then the explosion of *the mobile web—*precipitated, in no small part, by the *iPhone* in 2007. It ran a desktop-class browser (in terms of functionality), which hadn’t been available in a small screen before. And with its crazy success—and subsequent proliferation of its paradigm in *Android*—the web, and then world, scrambled to *respond*.
 
-{% include figure.html src='responsive.svg' caption='A typical/example *responsive* layout.' class="four-above" %}
-
-
-
-> Empty your mind. Be formless, shapeless, like water. You put water into a cup, it becomes the cup. You put water into a bottle, it becomes the bottle.
-You put it into a teapot, it becomes the teapot. Now water can flow or it can crash. Be water, my friend.
-{: .quote }
-
-<cite>[Bruce Lee](https://www.youtube.com/watch?v=fEDfznOP820)</cite>
-
-
-
-> Content is like water. Content’s going to take many forms, flow into many different containers, many of which we haven’t even imagined yet. Build from content out, not container in.
-{: .quote }
-
-<cite>[Josh Clark](https://bigmedium.com/jhc/prez/mobile-myths.pdf)</cite>
+{% include figure.html src='responsive.svg' caption='A typical/example *responsive* layout, adjusting the layout to reflow based on the device width.' class='four-above' height='90vh' %}
 
 
 
 ## The *viewport*
 
-
-
-You’ll see this in the `<head>` of most websites:
+You’ll see this in the `<head>` of most websites, these days:
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
+{: style="max-width: 77.8rem" }
 
-When the iPhone came on the scene, sites didn’t have narrow/smaller (responsive) layouts so the phone would instead *scale* or *zoom out* a desktop site design to fit. Websites then were often designed to a standard `960px` width, which the phone shrank down to its `320px` screen—and then the user could zoom in or out. It worked, but it was less than ideal.
+When the iPhone came on the scene, most websites didn’t have narrow/smaller (responsive) layouts so the phone would instead *scale* or *zoom out* a desktop site design to fit.
+{: .left .four-above }
+
+
+
+{% capture aside %}
+
+{% include figure.html src='wap.jpg' caption='Prior to the iPhone, some sites had barebones <em>[WAP](https://en.wikipedia.org/wiki/Wireless_Application_Protocol)</em> mobile versions.' credit='https://wapreview.com/164/' %}
+
+{% include figure.html src='nytimes.png' caption='The full desktop site, scaled down, in 2007. Simpler times.' credit='https://web.archive.org/web/20070111094339/http://www.apple.com/iphone/internet/' class='one-above' %}
+
+{% include figure.html src='intro.png' caption='The iPhone introduction, worth a watch. Jobs definitely “dented the universe.”' credit='https://youtu.be/VQKMoT-6XSg?t=2474' class='one-above' %}
+
+{% include figure.html src='redesign.png' caption='The *Times* wasn’t fully responsive until 2018, if you can believe it.' credit='https://open.nytimes.com/a-faster-and-more-flexible-home-page-that-delivers-the-news-readers-want-1522ff64aa86' class='one-above' %}
+
+{% endcapture %}
+
+{% include aside.html content=aside rows="11" %}
+
+
+
+Websites at the time were often designed to a [standard width](https://960.gs) (usually `960px`), which the phone shrank down to its `320px` screen—and then the user could zoom in or out. It worked—and all the content was there, unlike most mobile sites—but it was less than ideal.
 
 This `meta` element tells the browser not to do this. It says, *“I have a responsive design! Render me at my actual size.”*
 
-The `width=device-width` tells the browser to use whatever the screen’s actual pixel dimension is, and `initial-scale=1` sets the starting zoom of the page to 100%. This is how the browser knows how to make the page respond, and how our CSS rules know what width to use.
+The `width=device-width` tells the browser to use whatever the screen’s actual pixel dimension is, and `initial-scale=1` sets the starting zoom for the page to 100%. This is how the browser knows how to make the page respond, and how our CSS rules know what width to use.
 
-
-
-![From the [iPhone introduction](https://youtu.be/VQKMoT-6XSg?t=2474), worth a watch. He definitely “dented the universe.”](CSS!%20(Media%20queries)%20d34a5ded94354f84a3ffa00b8af3454b/iphone.png)
-
-From the [iPhone introduction](https://youtu.be/VQKMoT-6XSg?t=2474), worth a watch. He definitely “dented the universe.”
-
-![Simpler times.](CSS!%20(Media%20queries)%20d34a5ded94354f84a3ffa00b8af3454b/6a010535fde333970c01310fa67168970c-320wi.jpg)
-
-Simpler times.
+We call the portion of the page visible at one time [the viewport](https://developer.mozilla.org/en-US/docs/Web/CSS/Viewport_concepts).
 
 
 
@@ -76,19 +86,22 @@ Simpler times.
 
 
 
-Responsive design could only really flourish when CSS added the `@media` *[at-rule](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries)* around the same time. These are colloquially called *media queries*, and they allow us to check if screen is a certain width or resolution (or other features, which we’ll get to)—and then apply selective CSS only in that scenario.
+Responsive design could only really flourish when CSS added the `@media` [*at-rule*](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries) around the same time.
 
-Practically, these are blocks of CSS—a little bit like *[selectors](https://www.notion.so/CSS-Fundamentals-6ea128fa0cfd4b46972d85348850af70)* that contain other selectors—but which only apply conditionally when the test/criteria is met.
+These are colloquially called *media queries*, and they allow us to check if screen is a certain width or resolution (or other features, which we’ll get to)—and then apply selective CSS only in that scenario. These let site layouts *respond* intentionally to different devices, for the first time.
+
+Practically, these are blocks of CSS—a little bit like [*selectors*](/topic/css/#basic-selectors) that contain other selectors—but which only apply conditionally when the test/criteria is met.
+{: .two-above }
 
 ```css
-/* Our CSS has all been out here. */
+/* Our CSS has all been out here! */
 
-**@media some-criteria-or-rule {**
+@media some-criteria-or-rule {
   /* CSS that only applies if the test passes. */
-**}**
+}
 ```
 
-*These blocks are like any other CSS—if there are multiple conditions that are met, the rules [cascade](https://www.notion.so/CSS-Fundamentals-6ea128fa0cfd4b46972d85348850af70) down and the lowest one takes precedent.*
+These blocks are like any other CSS—if there are multiple conditions that are met, or there is a tie between properties—the rules [cascade](/topic/css/#oh-right-the-cascade) down and the lowest/last one takes precedent.
 
 
 
