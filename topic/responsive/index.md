@@ -111,23 +111,33 @@ These blocks are like any other CSS—if there are multiple conditions that are 
 
 There are lots of media queries we can use, but we’ll start with *width*—which is by far the most commonly used and really the core of *responsive design*. Usually when folks are talking about a page or site being *responsive*, they mean with regards to `width`.
 
-Width will vary the most between devices—from the (now) `375px`–`428px` of your phones, through the ~`1440px`–`1680px` of your laptops, up to the ~`2560px`–`3440px` you might see on desktop displays. Since this `width` is usually our primary design constraint (`height` being handled with scrolling), we need *width-based* media queries to adjust our layouts across this wide range, lest our designs implode.
 
-**This is done in steps, at different widths, that we call *breakpoints**—*the window/device/viewport sizes where the content *starts to break*, if it is not adjusted. This might be because lines of text get too short or too long, becoming hard to read. It might be to prevent a grid of images from becoming too small on a phone—while you can have many columns on desktop, often you can only have one or two on mobile. You can add as many *breakpoints* as you need to make your page/design work across devices.
 
-*There are very, very few layouts that won’t need some amount of horizontal responsiveness/breakpoints!*
+> If you think responsive's simple, I feel bad for you son. We got 99 viewports, but the iPhone's just one.
+{: .quote }
 
-**In this example, we would refer to `400px` as our *breakpoint:***
+<cite>[Josh Brewer](https://twitter.com/jbrewer/status/178528003402379265)</cite>
 
-{% include figure.html src='/example/media-width/demo' %}
 
-I’ve improved these little example embeds—now you can **drag the middle divider** to resize the demo/example on the right. Drag this one to the left to see it respond to the media query!
 
-This width rule/test/criteria uses the same syntax as [length properties](https://www.notion.so/CSS-Layout-d3ceeaa1758a4426941cb04a2ec78714), meaning you can use `min-width`, `width`, and `max-width`.
+Width will vary the most between devices—from the `375px`–`428px` of your phones, through the ~ `1440px`–`1680px` of your laptops, up to the ~ `2560px`–`3440px` you might see on desktop displays. Since this `width` is usually our primary design constraint (`height` being handled with scrolling), we need *width-based* media queries to adjust our layouts across this wide range, lest our designs implode.
+{: .four-above }
 
-{% include figure.html src='/example/media-width-min-max/demo' %}
+This is done in steps, at different widths, that we call *breakpoints*&#8288;—the window/device/viewport sizes where the content *starts to break*, if it is not adjusted. This might be because lines of text get too short or too long, becoming hard to read. It might be to prevent a grid of images from becoming too small on a phone—while you can have many columns on desktop, often you can only have one or two on mobile. You can add as many *breakpoints* as you need to make your page/design work across devices.
 
-Again, drag the divider to see rules apply. Exact matches (like the  `width: 400px;` here) are rarely useful!
+*There are very, very few layouts that won’t need some amount of horizontal responsiveness/breakpoints!*
+
+In this example, we would refer to `400px` as our *breakpoint*:
+{: .four-above }
+
+{% include figure.html src='/example/media-width/demo' caption='Drag the code/example divider to the left to see it respond to the media query! Double-click to reset it.' height='20rem' %}
+
+
+
+This width rule/test/criteria uses the same syntax as [length properties](/topic/box-model/#and-their-units), meaning you can use `min-width`, `width`, and `max-width`.
+{: .four-above }
+
+{% include figure.html src='/example/media-width-min-max/demo' caption='Again, drag the divider to see rules apply. Exact matches (like the  `width: 400px;` here) are rarely useful!' height='36rem' %}
 
 
 

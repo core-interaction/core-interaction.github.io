@@ -1,9 +1,5 @@
-div {
-	background-color: aquamarine;
-}
+div { background-color: aquamarine; }
 
 @media (min-width: 400px) {
-	div {
-		background-color: coral;
-	}
+	div { background-color: coral; }
 }
