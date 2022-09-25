@@ -3060,7 +3060,7 @@ body.index > main > nav aside > menu {
 }
 
 body.class > main > article > p {
-	grid-column: 1;
+	grid-column: 1/span 2;
 }
 
 body.class > main > article > ul {
