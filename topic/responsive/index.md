@@ -64,7 +64,7 @@ When the iPhone came on the scene, most websites didn’t have narrow/smaller (r
 
 {% include figure.html src='intro.png' caption='The iPhone introduction, worth a watch. Jobs definitely “dented the universe.”' credit='https://youtu.be/VQKMoT-6XSg?t=2474' class='one-above' %}
 
-{% include figure.html src='redesign.png' caption='The *Times* wasn’t fully responsive until 2018, if you can believe it.' credit='https://open.nytimes.com/a-faster-and-more-flexible-home-page-that-delivers-the-news-readers-want-1522ff64aa86' class='one-above' %}
+{% include figure.html src='redesign.png' caption='The *Times* wasn’t fully responsive until 2018, if you can believe it. (They had a separate mobile site and apps.)' credit='https://open.nytimes.com/a-faster-and-more-flexible-home-page-that-delivers-the-news-readers-want-1522ff64aa86' class='one-above' %}
 
 {% endcapture %}
 
