@@ -350,7 +350,7 @@
 
 				<p>Okay, so we have all these box properties<span class="mdash">—</span>but how do we specify the dimensions? CSS has many <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length"><em>length units</em></a>, used for <code class="language-plaintext highlighter-rouge">width</code>, <code class="language-plaintext highlighter-rouge">height</code>, and also <code class="language-plaintext highlighter-rouge">padding</code>, <code class="language-plaintext highlighter-rouge">border</code>, <code class="language-plaintext highlighter-rouge">margin</code>, and even <code class="language-plaintext highlighter-rouge">font-size</code>. (Picas, anyone?) We’ll look at some common ones.</p>
 
-				<h3 id="absolute-length-units">Absolute length units</h3>
+				<h3 class="four-above" id="absolute-length-units">Absolute length units</h3>
 
 				<p class="half">Maybe the easiest ones to understand, fixed to physical (well, sort of) sizes. <br />
 					<br />
@@ -377,7 +377,7 @@
 					</div>
 				</div>
 
-				<h3 id="relative-length-units">Relative length units</h3>
+				<h3 class="four-above" id="relative-length-units">Relative length units</h3>
 
 				<p class="half">Otherwise you can use <em>relative</em> units, which depend on and respond to their context. <br />
 					<br />
@@ -418,7 +418,7 @@
 					</div>
 				</div>
 
-				<h3 id="combine-them-with-a-calc">Combine them with a <code class="language-plaintext highlighter-rouge">calc</code></h3>
+				<h3 class="four-above" id="combine-them-with-a-calc">Combine them with a <code class="language-plaintext highlighter-rouge">calc</code></h3>
 
 				<p class="half">Sometimes you might want to use these together! Or otherwise do some math. For this we have the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc()">calc function</a>.</p>
 
@@ -430,6 +430,32 @@
 
 <span class="nc">.computer-do-the-math</span> <span class="p">{</span>
 	<span class="nl">width</span><span class="p">:</span> <span class="n">calc</span><span class="p">(</span><span class="m">100%</span> <span class="p">/</span> <span class="m">12</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+					</div>
+				</div>
+
+				<h3 class="four-above" id="limitconstrain-them">Limit/constrain them</h3>
+
+				<p class="half">You’ll often want to set limits/constraints on these values<span class="mdash">—</span>particularly with flexible, <em>relative</em> units (and <em>responsive design</em>, which we’ll talk about soon.) You can set <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/min-width">minimums</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/max-width">maximums</a> using the prefix <code class="language-plaintext highlighter-rouge">min-</code> and <code class="language-plaintext highlighter-rouge">max-</code>.</p>
+
+				<div class="language-css half highlighter-rouge">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="nc">.constrained-width</span> <span class="p">{</span>
+	<span class="nl">min-width</span><span class="p">:</span> <span class="m">200px</span><span class="p">;</span>
+	<span class="nl">width</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
+	<span class="nl">max-width</span><span class="p">:</span> <span class="m">400px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.constrained-height</span> <span class="p">{</span>
+	<span class="nl">min-height</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+	<span class="nl">height</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+	<span class="nl">max-height</span><span class="p">:</span> <span class="m">200px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* A handy one! Watch your line lengths. */</span>
+<span class="nt">p</span> <span class="p">{</span>
+	<span class="nl">max-width</span><span class="p">:</span> <span class="m">65ch</span><span class="p">;</span> <span class="c">/* 65-ish characters. */</span>
 <span class="p">}</span>
 </code></pre>
 					</div>
