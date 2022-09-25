@@ -119,13 +119,13 @@ Width will vary the most between devices—from the (now) `375px`–`428px` of y
 
 **In this example, we would refer to `400px` as our *breakpoint:***
 
-[I’ve improved these little example embeds—now you can **drag the middle divider** to resize the demo/example on the right. Drag this one to the left to see it respond to the media query!](https://typography-and-interaction-too.github.io/sandbox/media-width/demo)
+{% include figure.html src='/example/media-width/demo' %}
 
 I’ve improved these little example embeds—now you can **drag the middle divider** to resize the demo/example on the right. Drag this one to the left to see it respond to the media query!
 
 This width rule/test/criteria uses the same syntax as [length properties](https://www.notion.so/CSS-Layout-d3ceeaa1758a4426941cb04a2ec78714), meaning you can use `min-width`, `width`, and `max-width`.
 
-[Again, drag the divider to see rules apply. Exact matches (like the  `width: 400px;` here) are rarely useful!](https://typography-and-interaction-too.github.io/sandbox/media-width-min-max/demo)
+{% include figure.html src='/example/media-width-min-max/demo' %}
 
 Again, drag the divider to see rules apply. Exact matches (like the  `width: 400px;` here) are rarely useful!
 
@@ -139,7 +139,7 @@ You can also use `height` in the same way—though again, with the normal, verti
 
 **This example is the same *breakpoint* of `400px`, but now using `height`:**
 
-[I made these embeds themselves *responsive—s*o they stack code/demo when they are narrow like this!](https://typography-and-interaction-too.github.io/sandbox/media-height-min-max/demo)
+{% include figure.html src='/example/media-height-min-max/demo' %}
 
 I made these embeds themselves *responsive—s*o they stack code/demo when they are narrow like this!
 
@@ -155,7 +155,7 @@ You can also be less specific about your width/height and instead use `orientati
 
 *Everything was a painting before it was a photograph or a [web page](https://www.notion.so/Everything-is-a-web-page-e26167deee13412cb597754aa93450ad).*
 
-[Drag that divider!](https://typography-and-interaction-too.github.io/sandbox/media-orientation/demo)
+{% include figure.html src='/example/media-orientation/demo' %}
 
 Drag that divider!
 
@@ -167,13 +167,13 @@ Drag that divider!
 
 And speaking of *conditional statements—*you can also merge multiple media queries into one test/check, using `and`. This is often used for a range (to apply something *between* two breakpoints) or to combine `width` and `height` checks, together.
 
-[The demo here is taller than `300px`, for the second one.](https://typography-and-interaction-too.github.io/sandbox/media-and/demo)
+{% include figure.html src='/example/media-and/demo' %}
 
 The demo here is taller than `300px`, for the second one.
 
 You can also use comma-separated queries (like [*selector lists*](https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list)) to apply *or* logic—setting the same styles for different scenarios.
 
-[Note that you could do this with `and` (in the example above) by just swapping the colors. Code logic!](https://typography-and-interaction-too.github.io/sandbox/media-or/demo)
+{% include figure.html src='/example/media-or/demo' %}
 
 Note that you could do this with `and` (in the example above) by just swapping the colors. Code logic!
 
@@ -191,7 +191,7 @@ So this can all get very complicated, very quickly—especially with complex des
 
 **In HTML/CSS development, this means writing your styles for mobile… first, *then* adding `min-width` breakpoints (below them) to progressively enhance your design as it scales up.**
 
-[The `width` here are kind of tricky—but this will be much easier with `grid`, I promise!](https://typography-and-interaction-too.github.io/sandbox/media-mobile-first/demo)
+{% include figure.html src='/example/media-mobile-first/demo' %}
 
 The `width` here are kind of tricky—but this will be much easier with `grid`, I promise!
 
@@ -211,7 +211,7 @@ The most common media queries will be *width*/*height*/*orientation*—for adjus
 
 In all of our above examples, there is an implied *[media type](https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_types)* of `screen`—since that is usually what we are concerned with on the web. But there is also one for `print`! You can use these to segment styles to one medium or the other.
 
-[You can see the `print` style in action by clicking *Original* in the upper corner, then ⌘-P to print. It is still *A Thing*, though really often forgotten about in modern web design/projects.](https://typography-and-interaction-too.github.io/sandbox/media-print/demo)
+{% include figure.html src='/example/media-print/demo' %}
 
 You can see the `print` style in action by clicking *Original* in the upper corner, then ⌘-P to print. It is still *A Thing*, though really often forgotten about in modern web design/projects.
 
@@ -223,7 +223,7 @@ Another common one is `hover`, to detect whether a browser has an input device
 
 
 
-[If you view this on your phone, the `aside` should be visible without interaction. On your computer, you’ll have to mouse over the `div`. Note how this is written with a *[mobile first](https://www.notion.so/CSS-Media-queries-d34a5ded94354f84a3ffa00b8af3454b)* style, only adding the hover later/lower for folks who have it!](https://typography-and-interaction-too.github.io/sandbox/media-hover/demo)
+{% include figure.html src='/example/media-hover/demo' %}
 
 If you view this on your phone, the `aside` should be visible without interaction. On your computer, you’ll have to mouse over the `div`. Note how this is written with a *[mobile first](https://www.notion.so/CSS-Media-queries-d34a5ded94354f84a3ffa00b8af3454b)* style, only adding the hover later/lower for folks who have it!
 
@@ -235,7 +235,7 @@ If you view this on your phone, the `aside` should be visible without interactio
 
 You see this one more and more these days—switching up a site’s styles based on whether the user is in *light* or *dark mode.*
 
-[You’ll see this differently depending on whether your system is in light or dark mode. (Dark mode forever!)](https://typography-and-interaction-too.github.io/sandbox/media-color-scheme/demo)
+{% include figure.html src='/example/media-color-scheme/demo' %}
 
 You’ll see this differently depending on whether your system is in light or dark mode. (Dark mode forever!)
 
