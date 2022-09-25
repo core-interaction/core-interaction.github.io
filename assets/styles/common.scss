@@ -486,13 +486,13 @@ body {
 		> main {
 			> article {
 				> p {
-					grid-column: 1;
+					grid-column: 1 / span 2;
 
 					> button { @extend %icon--link }
 				}
 
 				> ul {
-					--groups:           2;
+					--groups: 2;
 
 					column-gap:         var(--margin);
 					display:            grid;
