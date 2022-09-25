@@ -2797,7 +2797,7 @@ body > main > article .faded {
 	body > main > article aside[rows="3"] + ol,
 	body > main > article .right[rows="2"] + ol,
 	body > main > article aside[rows="2"] + ol {
-		padding-right: 2ch;
+		margin-right: 2ch;
 	}
 
 	body > main > article .left,
