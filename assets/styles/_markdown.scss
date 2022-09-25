@@ -437,7 +437,16 @@
 
 		--margin--top: var(--margin--vertical--2);
 
-		figure:not(:first-child) { margin-top: var(--typography--between) }
+		figure:not(:first-child) {
+			margin-top: var(--typography--between);
+
+			&.one-above,
+			&.one-below,
+			&.two-above,
+			&.two-below,
+			&.four-above,
+			&.four-below { margin-top: var(--margin--top) }
+		}
 
 		+ * {
 			--margin--top: var(--margin--vertical--2);
