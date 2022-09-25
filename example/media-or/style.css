@@ -1,0 +1,9 @@
+div {
+	background-color: aquamarine;
+}
+
+@media (max-width: 300px), (min-width: 500px) {
+	div {
+		background-color: gold;
+	}
+}

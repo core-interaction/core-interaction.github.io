@@ -1,0 +1,17 @@
+div {
+	background-color: aquamarine;
+}
+
+aside {
+	background: gold;
+}
+
+@media (hover: hover) {
+	aside {
+		visibility: hidden;
+	}
+
+	div:hover + aside {
+		visibility: visible;
+	}
+}

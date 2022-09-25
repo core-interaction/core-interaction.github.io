@@ -1,0 +1,12 @@
+body {
+	font-family: sans-serif;
+	padding: 20px;
+}
+
+div {
+	padding: 10px;
+}
+
+p:not(:first-child) {
+	margin-top: 10px;
+}

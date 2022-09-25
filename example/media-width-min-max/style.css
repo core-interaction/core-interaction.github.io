@@ -1,0 +1,21 @@
+div {
+	background-color: aquamarine;
+}
+
+@media (min-width: 400px) {
+	div:first-child {
+		background-color: coral;
+	}
+}
+
+@media (width: 400px) {
+	div:nth-child(2) {
+		background-color: orange;
+	}
+}
+
+@media (max-width: 400px) {
+	div:last-child {
+		background-color: gold;
+	}
+}

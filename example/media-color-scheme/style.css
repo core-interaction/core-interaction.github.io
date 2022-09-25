@@ -1,0 +1,15 @@
+div {
+	background-color: aquamarine;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background: black;
+	}
+
+	div {
+		background-color: teal;
+		color: white;
+	}
+}
+

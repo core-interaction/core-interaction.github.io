@@ -1,0 +1,18 @@
+div {
+	background-color: aquamarine;
+}
+
+@media screen and (min-width: 400px) {
+	div {
+		background-color: coral;
+	}
+}
+
+@media print {
+	div {
+		background-color: white;
+		border: 2px solid black;
+		font-size: 18pt;
+		padding: 0.5in;
+	}
+}
