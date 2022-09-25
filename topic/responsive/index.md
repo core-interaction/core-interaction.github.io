@@ -163,7 +163,7 @@ I made these embeds themselves *responsive—s*o they stack code/demo when they 
 
 You can also be less specific about your width/height and instead use `orientation`—like when you rotate your phone. This uses the wonderfully tenacious names/values of `portrait` or `landscape`.
 
-*Everything was a painting before it was a photograph or a [web page](https://www.notion.so/Everything-is-a-web-page-e26167deee13412cb597754aa93450ad).*
+*Everything was a painting before it was a photograph or a [web page](/topic/everything).*
 
 {% include figure.html src='/example/media-orientation/demo' %}
 
@@ -235,7 +235,7 @@ Another common one is `hover`, to detect whether a browser has an input device
 
 {% include figure.html src='/example/media-hover/demo' %}
 
-If you view this on your phone, the `aside` should be visible without interaction. On your computer, you’ll have to mouse over the `div`. Note how this is written with a *[mobile first](https://www.notion.so/CSS-Media-queries-d34a5ded94354f84a3ffa00b8af3454b)* style, only adding the hover later/lower for folks who have it!
+If you view this on your phone, the `aside` should be visible without interaction. On your computer, you’ll have to mouse over the `div`. Note how this is written with a *[mobile first](#mobile-first-design)* style, only adding the hover later/lower for folks who have it!
 
 *Hover states are a good thing for progressive enhancement, as we did here—to add them in after you have a working mobile design! Since maybe a third to a half of your audience (depending on your project) won’t see them.*
 
