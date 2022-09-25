@@ -1,0 +1,15 @@
+div {
+	background-color: aquamarine;
+}
+
+@media (min-width: 300px) and (max-width: 500px) {
+	div:first-child {
+		background-color: orange;
+	}
+}
+
+@media (min-width: 300px) and (min-height: 300px) {
+	div:last-child {
+		background-color: gold;
+	}
+}

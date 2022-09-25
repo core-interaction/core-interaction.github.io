@@ -1,0 +1,23 @@
+section {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+div {
+	background-color: aquamarine;
+}
+
+@media (min-width: 400px) {
+	div {
+		background-color: gold;
+		width: calc((100% - 10px) / 2);
+	}
+}
+
+@media (min-width: 500px) {
+	div {
+		background-color: orange;
+		width: calc((100% - 30px) / 4);
+	}
+}

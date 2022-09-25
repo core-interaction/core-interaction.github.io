@@ -1,0 +1,15 @@
+body {
+	font-family: sans-serif;
+	padding: 20px;
+}
+
+aside,
+div {
+	padding: 10px;
+}
+
+aside,
+div:not(:first-child),
+p:not(:first-child) {
+	margin-top: 10px;
+}
