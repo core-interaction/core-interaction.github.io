@@ -1569,10 +1569,6 @@ body > main > article details + * {
 	--margin--top: var(--margin--vertical--2);
 }
 
-body > main > article figure {
-	--margin--top: var(--margin--vertical--2);
-}
-
 body > main > article figure > img,
 body > main > article figure > div {
 	max-height: var(--height--max, 66vh);
@@ -1654,17 +1650,17 @@ body > main > article figure > figcaption > cite {
 	font-style: normal;
 }
 
-body > main > article figure + * {
+body > main > article figure:not(.right) {
+	--margin--top: var(--margin--vertical--2);
+}
+
+body > main > article figure:not(.right) + * {
 	--margin--top: var(--margin--vertical--2);
 	--margin--top--previous: var(--margin--vertical--2);
 }
 
-body > main > article figure + * + * {
+body > main > article figure:not(.right) + * + * {
 	--margin--top--previous: var(--margin--vertical--2);
-}
-
-body > main > article aside {
-	--margin--top: var(--margin--vertical--2);
 }
 
 body > main > article aside figure:not(:first-child) {
@@ -1680,16 +1676,6 @@ body > main > article aside figure:not(:first-child).four-below {
 	margin-top: var(--margin--top);
 }
 
-body > main > article aside + * {
-	--margin--top: var(--margin--vertical--2);
-}
-
-@media (min-width: 35.5em) {
-	body > main > article aside + * {
-		--margin--top: var(--margin--top--previous);
-	}
-}
-
 @media (min-width: 35.5em) {
 	body > main > article aside.sticky {
 		align-self: stretch;
@@ -1701,37 +1687,37 @@ body > main > article aside + * {
 	}
 }
 
-body > main > article h4 {
+body > main > article h4:not(._) {
 	--margin--top: var(--margin--vertical--2);
 }
 
-body > main > article h4 + * {
+body > main > article h4:not(._) + * {
 	--margin--top--previous: var(--margin--vertical--2);
 }
 
-body > main > article h3 {
+body > main > article h3:not(._) {
 	--margin--top: var(--margin--vertical--4);
 }
 
-body > main > article h3 + * {
+body > main > article h3:not(._) + * {
 	--margin--top: var(--margin--vertical--2);
 	--margin--top--previous: var(--margin--vertical--4);
 }
 
-body > main > article h3 + * + * {
+body > main > article h3:not(._) + * + * {
 	--margin--top--previous: var(--margin--vertical--2);
 }
 
-body > main > article h3,
-body > main > article h2 {
+body > main > article h3:not(._),
+body > main > article h2:not(._) {
 	margin-bottom: var(--typography--margin--bottom);
 	padding-bottom: calc(var(--typography--leading-shoulder) - var(--typography--between));
 	position: relative;
 	width: fit-content;
 }
 
-body > main > article h3:after,
-body > main > article h2:after {
+body > main > article h3:not(._):after,
+body > main > article h2:not(._):after {
 	content: "----------------------------------------------------------------------";
 	display: block;
 	height: 1em;
@@ -1742,89 +1728,89 @@ body > main > article h2:after {
 	visibility: visible;
 }
 
-body > main > article h2 {
+body > main > article h2:not(._) {
 	--margin--top: var(--margin--vertical--4);
 	max-width: 52ch;
 }
 
 @media (min-width: 35.5em) {
-	body > main > article h2 {
+	body > main > article h2:not(._) {
 		--margin--top: var(--margin--vertical--6);
 	}
 }
 
-body > main > article h2 + * {
+body > main > article h2:not(._) + * {
 	--margin--top: var(--margin--vertical--4);
 	--margin--top--previous: var(--margin--vertical--4);
 }
 
 @media (min-width: 35.5em) {
-	body > main > article h2 + * {
+	body > main > article h2:not(._) + * {
 		--margin--top--previous: var(--margin--vertical--6);
 	}
 }
 
-body > main > article h2 + * + * {
+body > main > article h2:not(._) + * + * {
 	--margin--top--previous: var(--margin--vertical--4);
 }
 
 @media (min-width: 35.5em) {
-	body > main > article h2 + h3 {
+	body > main > article h2:not(._) + h3:not(._) {
 		--margin--top: var(--margin--vertical--6);
 	}
 }
 
 @media (min-width: 35.5em) {
-	body > main > article h2 + h3 + * {
+	body > main > article h2:not(._) + h3:not(._) + * {
 		--margin--top--previous: var(--margin--vertical--6);
 	}
 }
 
-.week h2 + * {
+.week h2:not(._) + * {
 	--margin--top: var(--margin--vertical--2);
 }
 
-.week h2 + * + * {
+.week h2:not(._) + * + * {
 	--margin--top--previous: var(--margin--vertical--2);
 }
 
-body > main > article hr,
-body > main > article .callout {
+body > main > article hr:not(._),
+body > main > article .callout:not(._) {
 	--margin--top: var(--margin--vertical--4);
 }
 
 @media (min-width: 35.5em) {
 
-	body > main > article hr,
-	body > main > article .callout {
+	body > main > article hr:not(._),
+	body > main > article .callout:not(._) {
 		--margin--top: var(--margin--vertical--6);
 	}
 }
 
-body > main > article hr + *,
-body > main > article .callout + * {
+body > main > article hr:not(._) + *,
+body > main > article .callout:not(._) + * {
 	--margin--top: var(--margin--vertical--4);
 	--margin--top--previous: var(--margin--vertical--4);
 }
 
 @media (min-width: 35.5em) {
 
-	body > main > article hr + *,
-	body > main > article .callout + * {
+	body > main > article hr:not(._) + *,
+	body > main > article .callout:not(._) + * {
 		--margin--top: var(--margin--vertical--6);
 		--margin--top--previous: var(--margin--vertical--6);
 	}
 }
 
-body > main > article hr + * + *,
-body > main > article .callout + * + * {
+body > main > article hr:not(._) + * + *,
+body > main > article .callout:not(._) + * + * {
 	--margin--top--previous: var(--margin--vertical--4);
 }
 
 @media (min-width: 35.5em) {
 
-	body > main > article hr + * + *,
-	body > main > article .callout + * + * {
+	body > main > article hr:not(._) + * + *,
+	body > main > article .callout:not(._) + * + * {
 		--margin--top--previous: var(--margin--vertical--6);
 	}
 }
