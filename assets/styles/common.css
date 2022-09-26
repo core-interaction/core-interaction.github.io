@@ -253,6 +253,20 @@ body > main > article details > summary > p:after,
 body > main > footer > div > section:last-child > p > a:after,
 body.index > main > nav aside > menu > li > a:after,
 body.class > main > article > p > button:after,
+body.example > section nav a.external:after,
+body > nav > div > section:last-child > p > a.external:not(._):after,
+body > main > header > address > div > p > a.external:not(._):after,
+body > main > header > ul > li > a.external:not(._):after,
+body > main > article cite > a.external:not(._):after,
+body > main > article .icon-link > a.external:not(._):after,
+body > main > article .icon-link > p > a.external:not(._):after,
+body > main > article .icon-link > li > a.external:not(._):after,
+body > main > article .icon-link > li > p > a.external:not(._):after,
+body > main > article details > summary > p.external:not(._):after,
+body > main > footer > div > section:last-child > p > a.external:not(._):after,
+body.index > main > nav aside > menu > li > a.external:not(._):after,
+body.class > main > article > p > button.external:not(._):after,
+body.example > section nav a.external:not(._):after,
 body > nav > div > section:last-child > p > a[href*=".pdf"]:after,
 body > main > header > address > div > p > a[href*=".pdf"]:after,
 body > main > header > ul > li > a[href*=".pdf"]:after,
@@ -265,6 +279,7 @@ body > main > article details > summary > p[href*=".pdf"]:after,
 body > main > footer > div > section:last-child > p > a[href*=".pdf"]:after,
 body.index > main > nav aside > menu > li > a[href*=".pdf"]:after,
 body.class > main > article > p > button[href*=".pdf"]:after,
+body.example > section nav a[href*=".pdf"].external:after,
 body > nav > div > section:last-child > p > a[href="#"]:after,
 body > main > header > address > div > p > a[href="#"]:after,
 body > main > header > ul > li > a[href="#"]:after,
@@ -277,6 +292,7 @@ body > main > article details > summary > p[href="#"]:after,
 body > main > footer > div > section:last-child > p > a[href="#"]:after,
 body.index > main > nav aside > menu > li > a[href="#"]:after,
 body.class > main > article > p > button[href="#"]:after,
+body.example > section nav a[href="#"].external:after,
 body > nav > div > section:last-child > p > a.copy:after,
 body > main > header > address > div > p > a.copy:after,
 body > main > header > ul > li > a.copy:after,
@@ -289,6 +305,7 @@ body > main > article details > summary > p.copy:after,
 body > main > footer > div > section:last-child > p > a.copy:after,
 body.index > main > nav aside > menu > li > a.copy:after,
 body.class > main > article > p > button.copy:after,
+body.example > section nav a.copy.external:after,
 body > nav > div > section:last-child > p > a.last:after,
 body > main > header > address > div > p > a.last:after,
 body > main > header > ul > li > a.last:after,
@@ -301,6 +318,7 @@ body > main > article details > summary > p.last:after,
 body > main > footer > div > section:last-child > p > a.last:after,
 body.index > main > nav aside > menu > li > a.last:after,
 body.class > main > article > p > button.last:after,
+body.example > section nav a.last.external:after,
 body > nav > div > section:last-child > p > a.shuffle:after,
 body > main > header > address > div > p > a.shuffle:after,
 body > main > header > ul > li > a.shuffle:after,
@@ -313,6 +331,7 @@ body > main > article details > summary > p.shuffle:after,
 body > main > footer > div > section:last-child > p > a.shuffle:after,
 body.index > main > nav aside > menu > li > a.shuffle:after,
 body.class > main > article > p > button.shuffle:after,
+body.example > section nav a.shuffle.external:after,
 body > nav > div > section:last-child > p > a.this:after,
 body > main > header > address > div > p > a.this:after,
 body > main > header > ul > li > a.this:after,
@@ -324,7 +343,8 @@ body > main > article .icon-link > li > p > a.this:after,
 body > main > article details > summary > p.this:after,
 body > main > footer > div > section:last-child > p > a.this:after,
 body.index > main > nav aside > menu > li > a.this:after,
-body.class > main > article > p > button.this:after {
+body.class > main > article > p > button.this:after,
+body.example > section nav a.this.external:after {
 	--typography--shoulder: calc(1 - var(--typography--cap-height));
 	--typography--shoulder--top: calc(var(--typography--shoulder) - var(--typography--shoulder--bottom));
 }
@@ -341,6 +361,7 @@ body > main > article details > summary > p[href*=".pdf"]:after,
 body > main > footer > div > section:last-child > p > a[href*=".pdf"]:after,
 body.index > main > nav aside > menu > li > a[href*=".pdf"]:after,
 body.class > main > article > p > button[href*=".pdf"]:after,
+body.example > section nav a[href*=".pdf"].external:after,
 body > nav > div > section:last-child > p > a[href="#"]:after,
 body > main > header > address > div > p > a[href="#"]:after,
 body > main > header > ul > li > a[href="#"]:after,
@@ -353,6 +374,7 @@ body > main > article details > summary > p[href="#"]:after,
 body > main > footer > div > section:last-child > p > a[href="#"]:after,
 body.index > main > nav aside > menu > li > a[href="#"]:after,
 body.class > main > article > p > button[href="#"]:after,
+body.example > section nav a[href="#"].external:after,
 body > nav > div > section:last-child > p > a.copy:after,
 body > main > header > address > div > p > a.copy:after,
 body > main > header > ul > li > a.copy:after,
@@ -365,6 +387,7 @@ body > main > article details > summary > p.copy:after,
 body > main > footer > div > section:last-child > p > a.copy:after,
 body.index > main > nav aside > menu > li > a.copy:after,
 body.class > main > article > p > button.copy:after,
+body.example > section nav a.copy.external:after,
 body > nav > div > section:last-child > p > a.last:after,
 body > main > header > address > div > p > a.last:after,
 body > main > header > ul > li > a.last:after,
@@ -377,6 +400,7 @@ body > main > article details > summary > p.last:after,
 body > main > footer > div > section:last-child > p > a.last:after,
 body.index > main > nav aside > menu > li > a.last:after,
 body.class > main > article > p > button.last:after,
+body.example > section nav a.last.external:after,
 body > nav > div > section:last-child > p > a.shuffle:after,
 body > main > header > address > div > p > a.shuffle:after,
 body > main > header > ul > li > a.shuffle:after,
@@ -389,6 +413,7 @@ body > main > article details > summary > p.shuffle:after,
 body > main > footer > div > section:last-child > p > a.shuffle:after,
 body.index > main > nav aside > menu > li > a.shuffle:after,
 body.class > main > article > p > button.shuffle:after,
+body.example > section nav a.shuffle.external:after,
 body > nav > div > section:last-child > p > a.this:after,
 body > main > header > address > div > p > a.this:after,
 body > main > header > ul > li > a.this:after,
@@ -400,7 +425,8 @@ body > main > article .icon-link > li > p > a.this:after,
 body > main > article details > summary > p.this:after,
 body > main > footer > div > section:last-child > p > a.this:after,
 body.index > main > nav aside > menu > li > a.this:after,
-body.class > main > article > p > button.this:after {
+body.class > main > article > p > button.this:after,
+body.example > section nav a.this.external:after {
 	--typography--cap-height: 0.705;
 	--typography--x-height: 0.508;
 	--typography--shoulder--bottom: 0.122;
@@ -420,7 +446,21 @@ body > main > article .icon-link > li > p > a:after,
 body > main > article details > summary > p:after,
 body > main > footer > div > section:last-child > p > a:after,
 body.index > main > nav aside > menu > li > a:after,
-body.class > main > article > p > button:after {
+body.class > main > article > p > button:after,
+body.example > section nav a.external:after,
+body > nav > div > section:last-child > p > a.external:not(._):after,
+body > main > header > address > div > p > a.external:not(._):after,
+body > main > header > ul > li > a.external:not(._):after,
+body > main > article cite > a.external:not(._):after,
+body > main > article .icon-link > a.external:not(._):after,
+body > main > article .icon-link > p > a.external:not(._):after,
+body > main > article .icon-link > li > a.external:not(._):after,
+body > main > article .icon-link > li > p > a.external:not(._):after,
+body > main > article details > summary > p.external:not(._):after,
+body > main > footer > div > section:last-child > p > a.external:not(._):after,
+body.index > main > nav aside > menu > li > a.external:not(._):after,
+body.class > main > article > p > button.external:not(._):after,
+body.example > section nav a.external:not(._):after {
 	--typography--cap-height: 0.705;
 	--typography--x-height: 0.526;
 	--typography--shoulder--bottom: 0.145;
@@ -439,6 +479,7 @@ body > main > article details > summary > p[href*=".pdf"]:after,
 body > main > footer > div > section:last-child > p > a[href*=".pdf"]:after,
 body.index > main > nav aside > menu > li > a[href*=".pdf"]:after,
 body.class > main > article > p > button[href*=".pdf"]:after,
+body.example > section nav a[href*=".pdf"].external:after,
 body > nav > div > section:last-child > p > a[href="#"]:after,
 body > main > header > address > div > p > a[href="#"]:after,
 body > main > header > ul > li > a[href="#"]:after,
@@ -451,6 +492,7 @@ body > main > article details > summary > p[href="#"]:after,
 body > main > footer > div > section:last-child > p > a[href="#"]:after,
 body.index > main > nav aside > menu > li > a[href="#"]:after,
 body.class > main > article > p > button[href="#"]:after,
+body.example > section nav a[href="#"].external:after,
 body > nav > div > section:last-child > p > a.copy:after,
 body > main > header > address > div > p > a.copy:after,
 body > main > header > ul > li > a.copy:after,
@@ -463,6 +505,7 @@ body > main > article details > summary > p.copy:after,
 body > main > footer > div > section:last-child > p > a.copy:after,
 body.index > main > nav aside > menu > li > a.copy:after,
 body.class > main > article > p > button.copy:after,
+body.example > section nav a.copy.external:after,
 body > nav > div > section:last-child > p > a.last:after,
 body > main > header > address > div > p > a.last:after,
 body > main > header > ul > li > a.last:after,
@@ -475,6 +518,7 @@ body > main > article details > summary > p.last:after,
 body > main > footer > div > section:last-child > p > a.last:after,
 body.index > main > nav aside > menu > li > a.last:after,
 body.class > main > article > p > button.last:after,
+body.example > section nav a.last.external:after,
 body > nav > div > section:last-child > p > a.shuffle:after,
 body > main > header > address > div > p > a.shuffle:after,
 body > main > header > ul > li > a.shuffle:after,
@@ -487,6 +531,7 @@ body > main > article details > summary > p.shuffle:after,
 body > main > footer > div > section:last-child > p > a.shuffle:after,
 body.index > main > nav aside > menu > li > a.shuffle:after,
 body.class > main > article > p > button.shuffle:after,
+body.example > section nav a.shuffle.external:after,
 body > nav > div > section:last-child > p > a.this:after,
 body > main > header > address > div > p > a.this:after,
 body > main > header > ul > li > a.this:after,
@@ -498,7 +543,8 @@ body > main > article .icon-link > li > p > a.this:after,
 body > main > article details > summary > p.this:after,
 body > main > footer > div > section:last-child > p > a.this:after,
 body.index > main > nav aside > menu > li > a.this:after,
-body.class > main > article > p > button.this:after {
+body.class > main > article > p > button.this:after,
+body.example > section nav a.this.external:after {
 	--typography--weight: 300;
 	--typography--inset--left: -0.065;
 	--typography--inset--right: -0.053;
@@ -519,7 +565,21 @@ body > main > article .icon-link > li > p > a:after,
 body > main > article details > summary > p:after,
 body > main > footer > div > section:last-child > p > a:after,
 body.index > main > nav aside > menu > li > a:after,
-body.class > main > article > p > button:after {
+body.class > main > article > p > button:after,
+body.example > section nav a.external:after,
+body > nav > div > section:last-child > p > a.external:not(._):after,
+body > main > header > address > div > p > a.external:not(._):after,
+body > main > header > ul > li > a.external:not(._):after,
+body > main > article cite > a.external:not(._):after,
+body > main > article .icon-link > a.external:not(._):after,
+body > main > article .icon-link > p > a.external:not(._):after,
+body > main > article .icon-link > li > a.external:not(._):after,
+body > main > article .icon-link > li > p > a.external:not(._):after,
+body > main > article details > summary > p.external:not(._):after,
+body > main > footer > div > section:last-child > p > a.external:not(._):after,
+body.index > main > nav aside > menu > li > a.external:not(._):after,
+body.class > main > article > p > button.external:not(._):after,
+body.example > section nav a.external:not(._):after {
 	--typography--weight: 300;
 	--typography--inset--left: -0.058;
 	--typography--inset--right: -0.060;
@@ -559,7 +619,8 @@ body > main > header > ul > li > a,
 body > main > article details > summary > p,
 body > main > footer > div > section:last-child > p > a,
 body.index > main > nav aside > menu > li > a,
-body.class > main > article > p > button {
+body.class > main > article > p > button,
+body.example > section nav a.external {
 	text-decoration: initial;
 	text-shadow: initial;
 }
@@ -585,6 +646,7 @@ body > main > article details > summary > p:focus:focus-visible:not(:disabled),
 body > main > footer > div > section:last-child > p > a:focus:focus-visible:not(:disabled),
 body.index > main > nav aside > menu > li > a:focus:focus-visible:not(:disabled),
 body.class > main > article > p > button:focus:focus-visible:not(:disabled),
+body.example > section nav a.external:focus:focus-visible:not(:disabled),
 body > nav > div > section:first-child > a:focus:focus-visible:not(:disabled),
 body > main > article details > summary:focus:focus-visible:not(:disabled),
 body > main > footer > div > section:first-child > a:focus:focus-visible:not(:disabled),
@@ -609,6 +671,7 @@ body > main > article details > summary > p,
 body > main > footer > div > section:last-child > p > a,
 body.index > main > nav aside > menu > li > a,
 body.class > main > article > p > button,
+body.example > section nav a.external,
 body > nav > div > section:first-child > a,
 body > main > article details > summary,
 body > main > footer > div > section:first-child > a,
@@ -632,6 +695,7 @@ body > main > article details > summary > p:active,
 body > main > footer > div > section:last-child > p > a:active,
 body.index > main > nav aside > menu > li > a:active,
 body.class > main > article > p > button:active,
+body.example > section nav a.external:active,
 body > nav > div > section:first-child > a:active,
 body > main > article details > summary:active,
 body > main > footer > div > section:first-child > a:active,
@@ -654,6 +718,7 @@ body > main > article details > summary > p:focus,
 body > main > footer > div > section:last-child > p > a:focus,
 body.index > main > nav aside > menu > li > a:focus,
 body.class > main > article > p > button:focus,
+body.example > section nav a.external:focus,
 body > nav > div > section:first-child > a:focus,
 body > main > article details > summary:focus,
 body > main > footer > div > section:first-child > a:focus,
@@ -676,6 +741,7 @@ body.example > section #files > ul li:focus {
 	body > main > footer > div > section:last-child > p > a:hover,
 	body.index > main > nav aside > menu > li > a:hover,
 	body.class > main > article > p > button:hover,
+	body.example > section nav a.external:hover,
 	body > nav > div > section:first-child > a:hover,
 	body > main > article details > summary:hover,
 	body > main > footer > div > section:first-child > a:hover,
@@ -705,7 +771,8 @@ body > main > article .icon-link > li > p > a,
 body > main > article details > summary > p,
 body > main > footer > div > section:last-child > p > a,
 body.index > main > nav aside > menu > li > a,
-body.class > main > article > p > button {
+body.class > main > article > p > button,
+body.example > section nav a.external {
 	border-bottom-width: calc(var(--link--enlargement) / 2);
 	border-color: transparent;
 	border-left-width: var(--link--enlargement);
@@ -3249,6 +3316,37 @@ body.example > section #source > div:not(.visible) {
 	display: none;
 }
 
+body.example > section nav {
+	margin-right: calc(var(--link--enlargement) * 1.5);
+	margin-top: var(--link--enlargement);
+	position: absolute;
+	right: var(--border--radius);
+	top: var(--border--radius);
+}
+
+body.example > section nav a.external:not(._) {
+	color: rgba(0, 0, 0, 0.0666);
+}
+
+body.example > section nav a.external:not(._):after {
+	--typography--weight: 800;
+}
+
+:root:not(.iframe) body.example > section nav {
+	display: none;
+}
+
+body.example > section > nav {
+	position: fixed;
+	top: calc(var(--border--radius) + 50%);
+}
+
+@media (min-width: 35.5em) {
+	body.example > section > nav {
+		top: var(--border--radius);
+	}
+}
+
 body.example > iframe {
 	background-color: white;
 	border-color: var(--color--code--background);
@@ -3284,7 +3382,8 @@ body > main > article .icon-link > li > p > a,
 body > main > article details > summary > p,
 body > main > footer > div > section:last-child > p > a,
 body.index > main > nav aside > menu > li > a,
-body.class > main > article > p > button {
+body.class > main > article > p > button,
+body.example > section nav a.external {
 	--color: var(--link--color);
 	--icon--gap: 1ch;
 	--icon--scale: 1.1;
@@ -3306,7 +3405,8 @@ body > main > article .icon-link > li > p > a:after,
 body > main > article details > summary > p:after,
 body > main > footer > div > section:last-child > p > a:after,
 body.index > main > nav aside > menu > li > a:after,
-body.class > main > article > p > button:after {
+body.class > main > article > p > button:after,
+body.example > section nav a.external:after {
 	content: var(--icon);
 	display: inline-block;
 	font-weight: var(--typography--weight);
@@ -3327,7 +3427,8 @@ body > main > article .icon-link > li > p > a:empty,
 body > main > article details > summary > p:empty,
 body > main > footer > div > section:last-child > p > a:empty,
 body.index > main > nav aside > menu > li > a:empty,
-body.class > main > article > p > button:empty {
+body.class > main > article > p > button:empty,
+body.example > section nav a.external:empty {
 	border-right-width: var(--link--enlargement);
 	width: fit-content;
 }
@@ -3343,7 +3444,8 @@ body > main > article .icon-link > li > p > a:empty:after,
 body > main > article details > summary > p:empty:after,
 body > main > footer > div > section:last-child > p > a:empty:after,
 body.index > main > nav aside > menu > li > a:empty:after,
-body.class > main > article > p > button:empty:after {
+body.class > main > article > p > button:empty:after,
+body.example > section nav a.external:empty:after {
 	margin-left: initial;
 	margin-right: initial;
 }
@@ -3359,7 +3461,8 @@ body > main > article .icon-link > li > p > a[href^="/"],
 body > main > article details > summary > p[href^="/"],
 body > main > footer > div > section:last-child > p > a[href^="/"],
 body.index > main > nav aside > menu > li > a[href^="/"],
-body.class > main > article > p > button[href^="/"] {
+body.class > main > article > p > button[href^="/"],
+body.example > section nav a[href^="/"].external {
 	--icon: "→";
 }
 
@@ -3374,7 +3477,8 @@ body > main > article .icon-link > li > p > a[href^=http],
 body > main > article details > summary > p[href^=http],
 body > main > footer > div > section:last-child > p > a[href^=http],
 body.index > main > nav aside > menu > li > a[href^=http],
-body.class > main > article > p > button[href^=http] {
+body.class > main > article > p > button[href^=http],
+body.example > section nav a[href^=http].external {
 	--icon: "↗";
 	--icon--shift: 0.3rem;
 }
@@ -3390,7 +3494,8 @@ body > main > article .icon-link > li > p > a[href^="#"],
 body > main > article details > summary > p[href^="#"],
 body > main > footer > div > section:last-child > p > a[href^="#"],
 body.index > main > nav aside > menu > li > a[href^="#"],
-body.class > main > article > p > button[href^="#"] {
+body.class > main > article > p > button[href^="#"],
+body.example > section nav a[href^="#"].external {
 	--icon: "↓";
 }
 
@@ -3406,6 +3511,7 @@ body > main > article details > summary > p[href*=".pdf"],
 body > main > footer > div > section:last-child > p > a[href*=".pdf"],
 body.index > main > nav aside > menu > li > a[href*=".pdf"],
 body.class > main > article > p > button[href*=".pdf"],
+body.example > section nav a[href*=".pdf"].external,
 body > nav > div > section:last-child > p > a[href="#"],
 body > main > header > address > div > p > a[href="#"],
 body > main > header > ul > li > a[href="#"],
@@ -3418,6 +3524,7 @@ body > main > article details > summary > p[href="#"],
 body > main > footer > div > section:last-child > p > a[href="#"],
 body.index > main > nav aside > menu > li > a[href="#"],
 body.class > main > article > p > button[href="#"],
+body.example > section nav a[href="#"].external,
 body > nav > div > section:last-child > p > a.copy,
 body > main > header > address > div > p > a.copy,
 body > main > header > ul > li > a.copy,
@@ -3430,6 +3537,7 @@ body > main > article details > summary > p.copy,
 body > main > footer > div > section:last-child > p > a.copy,
 body.index > main > nav aside > menu > li > a.copy,
 body.class > main > article > p > button.copy,
+body.example > section nav a.copy.external,
 body > nav > div > section:last-child > p > a.last,
 body > main > header > address > div > p > a.last,
 body > main > header > ul > li > a.last,
@@ -3442,6 +3550,7 @@ body > main > article details > summary > p.last,
 body > main > footer > div > section:last-child > p > a.last,
 body.index > main > nav aside > menu > li > a.last,
 body.class > main > article > p > button.last,
+body.example > section nav a.last.external,
 body > nav > div > section:last-child > p > a.shuffle,
 body > main > header > address > div > p > a.shuffle,
 body > main > header > ul > li > a.shuffle,
@@ -3454,6 +3563,7 @@ body > main > article details > summary > p.shuffle,
 body > main > footer > div > section:last-child > p > a.shuffle,
 body.index > main > nav aside > menu > li > a.shuffle,
 body.class > main > article > p > button.shuffle,
+body.example > section nav a.shuffle.external,
 body > nav > div > section:last-child > p > a.this,
 body > main > header > address > div > p > a.this,
 body > main > header > ul > li > a.this,
@@ -3465,7 +3575,8 @@ body > main > article .icon-link > li > p > a.this,
 body > main > article details > summary > p.this,
 body > main > footer > div > section:last-child > p > a.this,
 body.index > main > nav aside > menu > li > a.this,
-body.class > main > article > p > button.this {
+body.class > main > article > p > button.this,
+body.example > section nav a.this.external {
 	--icon--scale: 1;
 	--icon--shift: 0em;
 }
@@ -3481,7 +3592,8 @@ body > main > article .icon-link > li > p > a[href*=".pdf"],
 body > main > article details > summary > p[href*=".pdf"],
 body > main > footer > div > section:last-child > p > a[href*=".pdf"],
 body.index > main > nav aside > menu > li > a[href*=".pdf"],
-body.class > main > article > p > button[href*=".pdf"] {
+body.class > main > article > p > button[href*=".pdf"],
+body.example > section nav a[href*=".pdf"].external {
 	--icon: "⤓";
 	--icon--shift: 0.05em;
 }
@@ -3497,7 +3609,8 @@ body > main > article .icon-link > li > p > a[href="#"],
 body > main > article details > summary > p[href="#"],
 body > main > footer > div > section:last-child > p > a[href="#"],
 body.index > main > nav aside > menu > li > a[href="#"],
-body.class > main > article > p > button[href="#"] {
+body.class > main > article > p > button[href="#"],
+body.example > section nav a[href="#"].external {
 	--icon: "⤒";
 	--icon--width: 1.1ch;
 }
@@ -3513,7 +3626,8 @@ body > main > article .icon-link > li > p > a.copy,
 body > main > article details > summary > p.copy,
 body > main > footer > div > section:last-child > p > a.copy,
 body.index > main > nav aside > menu > li > a.copy,
-body.class > main > article > p > button.copy {
+body.class > main > article > p > button.copy,
+body.example > section nav a.copy.external {
 	--icon: "⊕";
 	--icon--width: 2ch;
 	--icon--scale: 1.25;
@@ -3531,7 +3645,8 @@ body > main > article .icon-link > li > p > a.last,
 body > main > article details > summary > p.last,
 body > main > footer > div > section:last-child > p > a.last,
 body.index > main > nav aside > menu > li > a.last,
-body.class > main > article > p > button.last {
+body.class > main > article > p > button.last,
+body.example > section nav a.last.external {
 	--icon: "↺";
 }
 
@@ -3546,7 +3661,8 @@ body > main > article .icon-link > li > p > a.shuffle,
 body > main > article details > summary > p.shuffle,
 body > main > footer > div > section:last-child > p > a.shuffle,
 body.index > main > nav aside > menu > li > a.shuffle,
-body.class > main > article > p > button.shuffle {
+body.class > main > article > p > button.shuffle,
+body.example > section nav a.shuffle.external {
 	--icon: "⇅";
 	--icon--width: 2ch;
 }
@@ -3562,6 +3678,26 @@ body > main > article .icon-link > li > p > a.this,
 body > main > article details > summary > p.this,
 body > main > footer > div > section:last-child > p > a.this,
 body.index > main > nav aside > menu > li > a.this,
-body.class > main > article > p > button.this {
+body.class > main > article > p > button.this,
+body.example > section nav a.this.external {
 	--icon: "⤴";
+}
+
+body > nav > div > section:last-child > p > a.external:not(._),
+body > main > header > address > div > p > a.external:not(._),
+body > main > header > ul > li > a.external:not(._),
+body > main > article cite > a.external:not(._),
+body > main > article .icon-link > a.external:not(._),
+body > main > article .icon-link > p > a.external:not(._),
+body > main > article .icon-link > li > a.external:not(._),
+body > main > article .icon-link > li > p > a.external:not(._),
+body > main > article details > summary > p.external:not(._),
+body > main > footer > div > section:last-child > p > a.external:not(._),
+body.index > main > nav aside > menu > li > a.external:not(._),
+body.class > main > article > p > button.external:not(._),
+body.example > section nav a.external:not(._) {
+	--icon: "↗";
+	--icon--scale: 1.1;
+	--icon--shift: 0.3rem;
+	--icon--width: 1ch;
 }
