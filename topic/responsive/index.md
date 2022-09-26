@@ -163,7 +163,7 @@ In a broader code/programming context, it can be helpful to think of media que
 
 You can also be less specific about your width/height and instead use `orientation`—like when you rotate your phone. The queries use the wonderfully tenacious names/values of `portrait` or `landscape`.
 
-*Everything was a painting before it was a photograph or a [web page](/topic/everything).*
+*(Everything was a painting before it was a photograph or a [web page](/topic/everything).)*
 
 {% include figure.html src='/example/media-orientation/demo' caption='Drag the divider to make the example narrower.' height='31rem' %}
 
@@ -175,19 +175,21 @@ You can also be less specific about your width/height and instead use `orientati
 
 And speaking of *conditional statements—*you can also merge multiple media queries into one test/check, using `and`. This is often used for a range (to apply something *between* two breakpoints) or to combine `width` and `height` checks, together.
 
-{% include figure.html src='/example/media-and/demo' %}
+{% include figure.html src='/example/media-and/demo' caption='The demo here is taller than `300px`, for the second one.' height='32rem' %}
 
-The demo here is taller than `300px`, for the second one.
 
-You can also use comma-separated queries (like [*selector lists*](https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list)) to apply *or* logic—setting the same styles for different scenarios.
+You can also use comma-separated queries (like [*selector lists*](/topic/css/#fancy-selectors)) to apply *or* logic—setting the same styles for different scenarios.
+{: .four-above }
 
-{% include figure.html src='/example/media-or/demo' %}
+{% include figure.html src='/example/media-or/demo' caption='Note that you could do this with `and`, as in the example above, by just swapping the colors. Code logic!' height='25rem' %}
 
-Note that you could do this with `and` (in the example above) by just swapping the colors. Code logic!
 
-*There is also a `[not` operator](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Media_queries#not_logic_in_media_queries)—which will reverse the meaning of the media query. But this syntax tends to be really, really confusing—especially with things like `min` / `max` rules making for double-negatives. So it is best to avoid!*
+
+There is also a `not` [logic operator](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Media_queries#not_logic_in_media_queries)—which will reverse the meaning of the media query. But this syntax tends to be really, really confusing&#8288;—especially with things like `min` / `max` rules making for double-negatives. So it is easier to avoid!
 
 *Why say `not` `portrait` when you can just say… `landscape`?*
+
+
 
 ## *Mobile-first* design
 
