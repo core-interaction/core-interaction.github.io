@@ -6,21 +6,25 @@ order: 5
 
 
 
+> When working locally, you’ll also want to install the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) plugin, for quick/auto reloading in the browser! If you prefer this within the VS Code/IDE window, you can use [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server), instead.
+{: .callout icon='🔌' }
 
-<aside>
-💡 Let’s also set up live reload/preview package in Atom. You can install [`**atom-html-preview**`](https://atom.io/packages/atom-html-preview) for a in-IDE preview tab, or [`**atom-live-server**`](https://atom.io/packages/atom-live-server) for in-browser experience.
 
-</aside>
 
-I am definitely a “Safari guy” for my daily driver browser. But for dev work, Chrome’s the best in town. (They are all somewhat bad, in different ways.)
+I am definitely a “Safari guy” for my daily driver browser. But for dev work, [Chrome](https://www.google.com/chrome) is the best in town. (They are all differently bad, in different ways.)
+{: .left }
 
-It has the most robust, best-in-class set of [DevTools](https://developer.chrome.com/docs/devtools/)—though [Safari](https://developer.apple.com/safari/tools/) and [Firefox](https://developer.mozilla.org/en-US/docs/Tools) have their own versions, too. You’ll often hear people call it the “Web Inspector” or just “The Inspector”. It’s going to be your best (web) friend, showing you everything that the browser *parses* to display the page.
+{% include figure.html src='right-click.png' class="right" %}
 
-**In Chrome, you can bring them up by right-clicking on any element/part of a page and clicking *Inspect.***
+Chrome has the most robust, best-in-class set of [DevTools](https://developer.chrome.com/docs/devtools/)—though [Safari](https://developer.apple.com/safari/tools/) and [Firefox](https://developer.mozilla.org/en-US/docs/Tools) have their own versions, too. You’ll often hear people call it the “Web Inspector” or just “The Inspector”. It’s going to be your best (Web) friend, showing you everything that the browser has *parsed* to display the page.
 
-*You can also hit* `**⌘ ⌥ I**` *on the Mac.*
+*In Chrome, you can bring them up by right-clicking on any element/part of a page and clicking <em>Inspect</em>.*
 
-![Screen Shot 2022-02-17 at 7.41.55 PM.png](Screen_Shot_2022-02-17_at_7.41.55_PM.png)
+*You can also hit `⌘-⌥-I`, on the Mac.*
+
+
+
+## The DevTools
 
 You’ll see the tools on the right side of the page. Depending on how big your screen is, they might be laid out a bit differently—but the basics are the same:
 
