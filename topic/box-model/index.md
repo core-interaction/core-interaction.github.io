@@ -13,6 +13,9 @@ The first thing we need to understand is how CSS sizes elements. This is called 
 
 * [web.dev Layout](https://web.dev/learn/css/layout/) \
 	*This gets into `grid` and `flex`; we’ll talk about those soon.*
+
+* [Learn CSS Layout](https://learnlayout.com) \
+	*A simple run-through.*
 {: .right .no-marker .icon-link rows="2" }
 
 {% include figure.html src='box-model.svg' caption='With `box-sizing: content-box;` per the spec.' %}
