@@ -102,6 +102,7 @@ You can also use the *zoom* dropdown to approximate views *larger* than your cur
 The *Options* menu also has some handy tricks, like showing *rulers* or capturing *full-length screenshots*!
 
 *Importantly there is also the <em>Console</em> tab, but we’ll talk about that when we get into JavaScript, later.*
+{: .four-above }
 
 {% endcapture %}
 
