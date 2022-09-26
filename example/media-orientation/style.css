@@ -2,13 +2,13 @@ div {
 	background-color: aquamarine;
 }
 
-@media (orientation: landscape) {
+@media (orientation: portrait) {
 	div:first-child {
 		background-color: orange;
 	}
 }
 
-@media (orientation: portrait) {
+@media (orientation: landscape) {
 	div:last-child {
 		background-color: gold;
 	}
