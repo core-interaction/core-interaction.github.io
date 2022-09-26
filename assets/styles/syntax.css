@@ -131,10 +131,6 @@
 
 
 /* additions. */
-.highlight .nf {
-  color: #ffa11f;
-}
-
 .highlight .p + .no,
 .highlight .p + .nb,
 .highlight .p + .n,
@@ -142,10 +138,23 @@
 .highlight .p + .nb + .p,
 .highlight .p + .n + .p,
 .highlight .p + [class^='m'] + .p,
-.highlight [class^='m'] + [class^='m'] + .p {
+.highlight [class^='m'] + [class^='m'] + .p,
+.highlight .p + .s1 + .p,
+.highlight .s1 + .p,
+.highlight .s1 + .o + .nb + .p,
+.highlight .p + .nf,
+.highlight .p + .nf + .p,
+.highlight .o + .m + .p,
+.highlight .sx + .nf,
+.highlight .sx + .nf + .p,
+.highlight .p + .nb + .no,
+.highlight .p + .nb + .no + .m + .p,
+.highlight .n + .p + .m + .n,
+.highlight .m + .n + .m + .p {
   color: #74a800;
 }
 
+.highlight .nf,
 .highlight .nf ~ .p,
 .highlight .nf ~ .p ~ .p + .p,
 .highlight .nt ~ .p,
@@ -166,22 +175,9 @@
 .highlight .nd,
 .highlight .nd + .o,
 .highlight .nd + .o + .err,
-.highlight .nd + .o + * + .o {
+.highlight .nd + .o + * + .o,
+.highlight .k + .p {
   color:#b56aa6;
-}
-
-.highlight .s1 + .p,
-.highlight .s1 + .o + .nb + .p,
-.highlight .p + .nf,
-.highlight .p + .nf + .p,
-.highlight .o + .m + .p,
-.highlight .sx + .nf,
-.highlight .sx + .nf + .p,
-.highlight .p + .nb + .no,
-.highlight .p + .nb + .no + .m + .p,
-.highlight .n + .p + .m + .n,
-.highlight .m + .n + .m + .p {
-  color: #74a800;
 }
 
 .highlight .nd + .o + .nt,
