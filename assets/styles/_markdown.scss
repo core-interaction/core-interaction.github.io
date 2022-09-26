@@ -663,7 +663,13 @@
 			grid-column: 1 / span 4;
 		}
 
-		.left {
+		.left-narrow,
+		%--left--narrow {
+			grid-column: 1 / span 2;
+		}
+
+		.left,
+		.left-narrow, {
 			&:first-child + .right { --margin--top: 0rem } // Not `initial` to prevent fallback.
 			&:not(:first-child) + .right { --margin--top: var(--margin--top--previous) }
 		}
@@ -679,6 +685,24 @@
 				@for $sibling from 2 through $row {
 					&[rows="#{$row}"] #{siblings($sibling - 1)} {
 						@extend %--left;
+					}
+				}
+			}
+		}
+
+		.left-narrow + .right {
+			grid-column: 3 / span 4;
+
+			@for $row from 2 through 12 {
+				&[rows="#{$row}"] {
+					grid-row: span $row + 1;
+				}
+
+				@for $sibling from 2 through $row {
+					&[rows="#{$row}"] #{siblings($sibling - 1)} {
+						@extend %--left--narrow;
+
+						margin-right: initial;
 					}
 				}
 			}
