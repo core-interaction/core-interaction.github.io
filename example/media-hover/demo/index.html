@@ -16,7 +16,7 @@
 		<meta name="theme-color" content="#e42a1d">
 	</head>
 	<body class="example">
-		<section>
+		<section style="--split: 60%;">
 			<aside></aside>
 
 
@@ -44,22 +44,14 @@
 
 
 					<figure class="highlight">
-						<pre><code class="language-scss" data-lang="scss"><span class="nt">div</span> <span class="p">{</span>
-	<span class="nl">background-color</span><span class="p">:</span> <span class="no">aquamarine</span><span class="p">;</span>
-<span class="p">}</span>
+						<pre><code class="language-scss" data-lang="scss"><span class="nt">div</span> <span class="p">{</span> <span class="nl">background-color</span><span class="p">:</span> <span class="no">aquamarine</span><span class="p">;</span> <span class="p">}</span>
 
-<span class="nt">aside</span> <span class="p">{</span>
-	<span class="nl">background</span><span class="p">:</span> <span class="no">gold</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="nt">aside</span> <span class="p">{</span> <span class="nl">background</span><span class="p">:</span> <span class="no">gold</span><span class="p">;</span> <span class="p">}</span>
 
 <span class="k">@media</span> <span class="p">(</span><span class="n">hover</span><span class="o">:</span> <span class="n">hover</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nt">aside</span> <span class="p">{</span>
-		<span class="nl">visibility</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
-	<span class="p">}</span>
+	<span class="nt">aside</span> <span class="p">{</span> <span class="nl">visibility</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span> <span class="p">}</span>
 
-	<span class="nt">div</span><span class="nd">:hover</span> <span class="o">+</span> <span class="nt">aside</span> <span class="p">{</span>
-		<span class="nl">visibility</span><span class="p">:</span> <span class="nb">visible</span><span class="p">;</span>
-	<span class="p">}</span>
+	<span class="nt">div</span><span class="nd">:hover</span> <span class="o">+</span> <span class="nt">aside</span> <span class="p">{</span> <span class="nl">visibility</span><span class="p">:</span> <span class="nb">visible</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">}</span></code></pre>
 					</figure>
 

@@ -151,7 +151,11 @@
 .highlight .p + .nb + .no + .m + .p,
 .highlight .n + .p + .m + .n,
 .highlight .m + .n + .m + .p,
-.highlight .k + .p + .n + .o + .nb {
+.highlight .k + .p + .n + .o + .nb,
+.highlight .nl + .p + .m + .nb,
+.highlight .nl + .p + .m + .nb + .no,
+.highlight .nl + .p + .m + .nb + .no + .p,
+.highlight .k + .p + .n + .o + .n {
 	color: #74a800;
 }
 
@@ -164,7 +168,9 @@
 .highlight .nc ~ .p ~ .p + .p,
 .highlight .cm + .o,
 .highlight .cm + .o + .p,
-.highlight .cm + .o + .p ~ .p + .p {
+.highlight .cm + .o + .p ~ .p + .p,
+.highlight .nt + .nd + .o,
+.highlight .nt + .nd + .o + .nt {
 	color: #ffa11f;
 }
 
@@ -175,33 +181,34 @@
 .highlight .k + .p + .n + .o + .m + .p + .nf + .p + .n,
 .highlight .k + .p + .n + .o + .m + .p + .nf + .p + .n + .o,
 .highlight .k + .p + .n + .o + .m + .p + .o + .p + .n,
-.highlight .k + .p + .n + .o + .m + .p + .o + .p + .n + .o {
+.highlight .k + .p + .n + .o + .m + .p + .o + .p + .n + .o,
+.highlight .k + .n + .nf + .p + .n,
+.highlight .k + .n + .nf + .p + .n + .o {
 	color: #2a94c0;
 }
 
 .highlight .nd,
 .highlight .nd + .o,
 .highlight .nd + .o + .err,
-.highlight .nd + .o + * + .o,
-.highlight .k + .p,
-.highlight .k + .p + .n + .o + .m + .p,
-.highlight .k + .p + .n + .o + .m + .p + .nf,
-.highlight .k + .p + .n + .o + .m + .p + .nf + .p,
-.highlight .k + .p + .n + .o + .m + .p + .p,
-.highlight .k + .p + .n + .o + .m + .p + .p ~ .p + .p + .p,
-.highlight .k + .p + .n + .o + .m + .p + .nf + .p + .n + .o + .m + .p,
-.highlight .k + .p + .n + .o + .m + .p + .nf + .p + .n + .o + .m + .p + .p,
-.highlight .k + .p + .n + .o + .m + .p + .nf + .p + .n + .o + .m + .p + .p ~ .p + .p + .p,
-.highlight .k + .p + .n + .o + .m + .p + .o + .p,
-.highlight .k + .p + .n + .o + .m + .p + .o + .p + .n + .o + .m + .p,
-.highlight .k + .p + .n + .o + .m + .p + .o + .p + .n + .o + .m + .p + .p,
-.highlight .k + .p + .n + .o + .m + .p + .o + .p + .n + .o + .m + .p ~ .p + .p + .p,
-.highlight .k + .p + .n + .o + .nb + .p {
+.highlight .nd + .o + * + .o {
 	color: #b56aa6;
 }
 
 .highlight .nd + .o + .nt,
-.highlight .nt + .nd + .o + .nd {
+.highlight .nt + .nd + .o + .nd,
+.highlight .k,
+.highlight .k + .p,
+.highlight .k + .p + .n + .o + .m + .p,
+.highlight .k + .p + .n + .o + .m + .p + .nf,
+.highlight .k + .p + .n + .o + .m + .p + .nf + .p,
+.highlight .k + .p + .n + .o + .m + .p + .nf + .p + .n + .o + .m + .p,
+.highlight .k + .p + .n + .o + .m + .p + .o + .p,
+.highlight .k + .p + .n + .o + .m + .p + .o + .p + .n + .o + .m + .p,
+.highlight .k + .p + .n + .o + .nb + .p,
+.highlight .k + .n + .nf,
+.highlight .k + .n + .nf + .p,
+.highlight .k + .n + .nf + .p + .n + .o + .m + .p,
+.highlight .k + .p + .n + .o + .n + .p {
 	color: #c52e28;
 }
 

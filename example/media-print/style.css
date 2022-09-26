@@ -12,6 +12,7 @@ div {
 	div {
 		background-color: white;
 		border: 2px solid black;
+		font-family: serif;
 		font-size: 18pt;
 		padding: 0.5in;
 	}
