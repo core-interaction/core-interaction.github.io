@@ -32,7 +32,7 @@ Chrome has the most robust, best-in-class set of *DevTools*—though [Safari](ht
 You’ll see the tools on the right side of the page. Depending on how big your screen is, they might be laid out a bit differently—but the basics are the same:
 {: .four-above }
 
-{% include figure.html src='dev-tools.png' %}
+{% include figure.html src='dev-tools.png' height='90vh' %}
 
 You can also undock the tools out into a separate window—often easier on a laptop/<wbr>small screen.
 {: .left .one-above style="align-self: center;" }
@@ -83,7 +83,7 @@ You can make changes in the *Elements* or *Styles* areas, and the changes will b
 
 First open the inspector, [as above](#elements-panel). Enter *device mode* with the little phone/tablet icon, in the upper left of the DevTools:
 
-{% include figure.html src='device.png' %}
+{% include figure.html src='device.png' height='90vh' %}
 
 {% include figure.html src='device-bar.svg' %}
 
