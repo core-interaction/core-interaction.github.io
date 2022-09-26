@@ -627,4 +627,14 @@ body {
 	&.last          { --icon: '↺' }
 	&.shuffle       { --icon: '⇅'; --icon--width: 2ch }
 	&.this          { --icon: '⤴' }
+
+
+	&.external:not(._) { // Force it for external Google docs.
+		--icon:        '↗';
+		--icon--scale: 1.1;
+		--icon--shift: 0.3rem;
+		--icon--width: 1ch;
+
+		&:after { @extend %font--sf--mono--light; }
+	}
 }
