@@ -41,31 +41,40 @@ You’ll see the tools on the right side of the page. Depending on how big your 
 
 ## Elements panel
 
-The top part is the DOM—you can expand/collapse all the nested HTML *elements* on the opened page.
+The top part of the tools is [the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)&#8288;—you can expand/collapse all the nested HTML *elements* on the opened page.
+{: .left-narrow }
 
-The first button in the upper-left lets you mouse over on the page, and will then show you that element hierarchically in the DOM.
+{% include figure.html src='elements.svg' class='right' rows='4' %}
 
-The second (more on this later, toggles the *Device toolbar*, “responsive mode.”
+The first button in the upper-left lets you mouse over on the page, and will then show you that element nested/<wbr>hierarchically within the DOM.
 
-![Screen Shot 2022-02-17 at 7.54.05 PM.png](Screen_Shot_2022-02-17_at_7.54.05_PM.png)
+The second (more on this below) toggles the *Device toolbar*, “responsive mode.”
 
-*Handy tip here:* **`⌘ F`** *in here will let you search for elements or text by name.*
+Handy tip: `⌘-F` in here will let you search for elements or text by name/<wbr>class/<wbr>contents.
 
-The middle part is for the styles. It shows whatever *CSS properties* apply to the element you have selected above, in *the DOM*.
 
-These are ordered with the most-specific at the top, with cascading/conflicting rules crossed out lower.
 
-On the right, you can see the sum *Computed* values of all the rules that apply.
+## Styles pane
 
-![styles.png](styles.png)
+The middle area is for the styles. It shows whatever *CSS properties* apply to the element you have selected above, in *the DOM*/elements panel.
+{: .left-narrow }
 
-Below this is the *Console*, which is for debugging Javascript. We’ll talk more about this later.
+{% include figure.html src='styles.svg' class='right' rows='3' %}
 
-### **You can make changes in the *DOM* or *Styles* areas, and the changes will be immediately visible on the page.
+These are ordered with the [most-specific](/topic/css/#specificity) at the top, with any cascading/<wbr>conflicting rules crossed out, as you go down.
 
-But they are temporary—these changes will be lost when you leave or reload the page! They are just for you.**
+On the right, you can see the sum *Computed* (or *rendered*) values of all the rules that apply—regardless of where they come from. These represent *exactly* what the browser is showing to you.
 
-# Device mode!
+
+
+You can make changes in the *Elements* or *Styles* areas, and the changes will be immediately visible on the page as if you had edited the source files. It’s useful to try things out quickly.
+{: .four-above }
+
+*But keep in mind they are temporary—these changes will be lost when you leave or reload the page! They are just for you.*
+
+
+
+## Device mode
 
 ![Screen Shot 2022-03-11 at 2.53.40 PM.png](Screen_Shot_2022-03-11_at_2.53.40_PM.png)
 
