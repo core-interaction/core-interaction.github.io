@@ -147,13 +147,12 @@ This width rule/test/criteria uses the same syntax as [length properties](/topic
 
 You can also use `height` in the same way—though again, with the normal, vertical scrolling paradigm, height-based adjustments aren’t as necessary or nearly as common.
 
-**This example is the same *breakpoint* of `400px`, but now using `height`:**
+This example is the same *breakpoint* of `400px`, but now using `height`:
+{: .half .two-above  }
 
-{% include figure.html src='/example/media-height-min-max/demo' %}
+{% include figure.html src='/example/media-height-min-max/demo' class='half' height='62rem' caption='These code examples are responsive, themselves—stacking when they are narrow.' %}
 
-I made these embeds themselves *responsive—s*o they stack code/demo when they are narrow like this!
-
-*In a broader code/programming context, it can be helpful to think of media queries as* [conditional **if statements](https://en.wikipedia.org/wiki/Conditional_(computer_programming))*. If this thing is true, then do this. (You may have heard “[If This Then That](https://ifttt.com).”) We’ll talk about this more [with JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else), where conditionals ubiquitous and powerful.*
+In a broader code/programming context, it can be helpful to think of media queries as [conditional *if* statements](https://en.wikipedia.org/wiki/Conditional_(computer_programming)). “If this thing is true, then do this.” (You may have heard of [*If This Then That*](https://ifttt.com).) We’ll talk about this later [with JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else), where conditionals ubiquitous and powerful.
 
 
 
@@ -298,5 +297,3 @@ p {
 The easiest way to test all these things out is using [the device mode](https://www.notion.so/DevTools-The-Inspector-d0533c0133b24b168160eee046ce94b9) in Chrome’s *Inspector*. There will still be differences (like not necessarily honoring device-specific settings like `hover`), but for layout/breakpoint development it is often much faster than checking on actual devices!
 
 [*DevTools / The Inspector*](https://www.notion.so/DevTools-The-Inspector-d0533c0133b24b168160eee046ce94b9)
-
-*I’ve added some more notes to the end, here.*

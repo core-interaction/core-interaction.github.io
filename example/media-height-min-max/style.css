@@ -1,21 +1,13 @@
-div {
-	background-color: aquamarine;
-}
+div { background-color: aquamarine; }
 
 @media (min-height: 400px) {
-	div:first-child {
-		background-color: coral;
-	}
+	div:first-child { background-color: coral; }
 }
 
 @media (height: 400px) {
-	div:nth-child(2) {
-		background-color: orange;
-	}
+	div:nth-child(2) { background-color: orange; }
 }
 
 @media (max-height: 400px) {
-	div:last-child {
-		background-color: gold;
-	}
+	div:last-child { background-color: gold; }
 }
