@@ -1663,16 +1663,29 @@ body > main > article figure:not(.right) + * + * {
 	--margin--top--previous: var(--margin--vertical--2);
 }
 
-body > main > article aside figure:not(:first-child) {
+body > main > article aside > *:not(:first-child),
+body > main > article aside > div > *:not(:first-child) {
+	--margin--top: var(--typography--leading-shoulder);
+	margin-top: var(--margin--top, var(--typography--leading-shoulder));
+}
+
+body > main > article aside > figure:not(:first-child),
+body > main > article aside > div > figure:not(:first-child) {
 	margin-top: var(--typography--between);
 }
 
-body > main > article aside figure:not(:first-child).one-above,
-body > main > article aside figure:not(:first-child).one-below,
-body > main > article aside figure:not(:first-child).two-above,
-body > main > article aside figure:not(:first-child).two-below,
-body > main > article aside figure:not(:first-child).four-above,
-body > main > article aside figure:not(:first-child).four-below {
+body > main > article aside > figure:not(:first-child).one-above,
+body > main > article aside > figure:not(:first-child).one-below,
+body > main > article aside > figure:not(:first-child).two-above,
+body > main > article aside > figure:not(:first-child).two-below,
+body > main > article aside > figure:not(:first-child).four-above,
+body > main > article aside > figure:not(:first-child).four-below,
+body > main > article aside > div > figure:not(:first-child).one-above,
+body > main > article aside > div > figure:not(:first-child).one-below,
+body > main > article aside > div > figure:not(:first-child).two-above,
+body > main > article aside > div > figure:not(:first-child).two-below,
+body > main > article aside > div > figure:not(:first-child).four-above,
+body > main > article aside > div > figure:not(:first-child).four-below {
 	margin-top: var(--margin--top);
 }
 
