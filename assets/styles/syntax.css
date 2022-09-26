@@ -150,7 +150,8 @@
 .highlight .p + .nb + .no,
 .highlight .p + .nb + .no + .m + .p,
 .highlight .n + .p + .m + .n,
-.highlight .m + .n + .m + .p {
+.highlight .m + .n + .m + .p,
+.highlight .k + .p + .n + .o + .nb {
   color: #74a800;
 }
 
@@ -168,7 +169,9 @@
 }
 
 .highlight .nl,
-.highlight .nl + .p {
+.highlight .nl + .p,
+.highlight .k + .p + .n,
+.highlight .k + .p + .n + .o {
   color: #2a94c0;
 }
 
@@ -176,7 +179,11 @@
 .highlight .nd + .o,
 .highlight .nd + .o + .err,
 .highlight .nd + .o + * + .o,
-.highlight .k + .p {
+.highlight .k + .p,
+.highlight .k + .p + .n + .o + .m + .p,
+.highlight .k + .p + .n + .o + .m + .p + .p,
+.highlight .k + .p + .n + .o + .m + .p + .p ~ .p + .p + .p,
+.highlight .k + .p + .n + .o + .nb + .p {
   color:#b56aa6;
 }
 
