@@ -36,7 +36,7 @@ You’ll see the tools on the right side of the page. Depending on how big your 
 {% include figure.html src='dev-tools.png' %}
 
 You can also undock the tools out into a separate window—often easier on a laptop/<wbr>small screen.
-{: .left style="align-self: center;" }
+{: .left .one-above style="align-self: center;" }
 
 {% include figure.html src='customize.svg' class='right' %}
 
