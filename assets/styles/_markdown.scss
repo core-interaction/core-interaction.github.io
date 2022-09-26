@@ -348,8 +348,6 @@
 
 	// Images and videos!
 	figure {
-		--margin--top: var(--margin--vertical--2);
-
 		> img,
 		> div {
 			max-height: var(--height--max, 66vh);
@@ -421,11 +419,15 @@
 			> em, > cite { font-style: normal }
 		}
 
-		+ * {
-			--margin--top:           var(--margin--vertical--2);
-			--margin--top--previous: var(--margin--vertical--2);
+		&:not(.right) {
+			--margin--top: var(--margin--vertical--2);
 
-			+ * { --margin--top--previous: var(--margin--vertical--2) }
+			+ * {
+				--margin--top:           var(--margin--vertical--2);
+				--margin--top--previous: var(--margin--vertical--2);
+
+				+ * { --margin--top--previous: var(--margin--vertical--2) }
+			}
 		}
 	}
 
@@ -434,8 +436,6 @@
 	// Right rails.
 	aside {
 		@extend .right;
-
-		--margin--top: var(--margin--vertical--2);
 
 		figure:not(:first-child) {
 			margin-top: var(--typography--between);
@@ -446,12 +446,6 @@
 			&.two-below,
 			&.four-above,
 			&.four-below { margin-top: var(--margin--top) }
-		}
-
-		+ * {
-			--margin--top: var(--margin--vertical--2);
-
-			@include breakpoint(568) { --margin--top: var(--margin--top--previous) }
 		}
 
 		&.sticky {
@@ -469,13 +463,13 @@
 
 
 	// Lower for the cascade.
-	h4 {
+	h4:not(._) {
 		--margin--top: var(--margin--vertical--2);
 
 		+ * { --margin--top--previous: var(--margin--vertical--2) }
 	}
 
-	h3 {
+	h3:not(._) {
 		--margin--top: var(--margin--vertical--4);
 
 		+ * {
@@ -486,8 +480,8 @@
 		}
 	}
 
-	h3,
-	h2 {
+	h3:not(._),
+	h2:not(._) {
 		margin-bottom:  var(--typography--margin--bottom);
 		padding-bottom: calc(var(--typography--leading-shoulder) - var(--typography--between));
 		position:       relative;
@@ -505,7 +499,7 @@
 		}
 	}
 
-	h2 {
+	h2:not(._) {
 		--margin--top: var(--margin--vertical--4);
 
 		max-width: 52ch; // Two columns.
@@ -521,7 +515,7 @@
 			+ * { --margin--top--previous: var(--margin--vertical--4) } // Think of this as its margin-bottom.
 		}
 
-		+ h3 {
+		+ h3:not(._) {
 			@include breakpoint(568) { --margin--top: var(--margin--vertical--6) } // Think of this as its margin-bottom.
 
 			+ * {
@@ -532,7 +526,7 @@
 
 	@at-root {
 		.week { // Tighter on agendas, which don’t have h3.
-			h2 {
+			h2:not(._) {
 				+ * {
 					--margin--top: var(--margin--vertical--2); // Think of this as its margin-bottom.
 
@@ -545,8 +539,8 @@
 
 
 	// Lower, cascade.
-	hr,
-	.callout {
+	hr:not(._),
+	.callout:not(._) {
 		--margin--top: var(--margin--vertical--4);
 
 		@include breakpoint(568) { --margin--top: var(--margin--vertical--6) }
