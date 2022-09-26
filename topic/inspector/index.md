@@ -1,6 +1,5 @@
 ---
 title: DevTools (The Inspector)
-published: false
 order: 5
 ---
 

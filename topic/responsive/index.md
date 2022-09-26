@@ -1,6 +1,5 @@
 ---
 title: Media queries
-published: false
 order: 4
 ---
 
