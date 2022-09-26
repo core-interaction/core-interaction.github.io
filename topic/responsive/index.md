@@ -246,13 +246,12 @@ Hover states are a good thing for progressive enhancement, as we did here—to 
 
 ### `prefers-color-scheme`
 
-You see this one more and more these days—switching up a site’s styles based on whether the user is in *light* or *dark mode.*
+You see this one more and more these days—switching up a site’s styles based on whether the user is in *light* or *dark mode*, popularized by the ol’ iPhone again.
 
-{% include figure.html src='/example/media-color-scheme/demo' %}
+{% include figure.html src='/example/media-color-scheme/demo' caption='You’ll see this differently depending on whether your system is in light or dark mode. (Vive le dark mode!)' height='30rem' %}
 
-You’ll see this differently depending on whether your system is in light or dark mode. (Dark mode forever!)
 
-*Sometimes this feels appropriate (especially in products/applications,  like maybe a messaging service). But sometimes the color scheme of a site is its brand, and probably shouldn’t change based on this query. It’s up to you! In our ongoing discussion of who has the control.*
+Sometimes this feels appropriate (especially in products/<wbr>applications,  like maybe a messaging service). But sometimes the color scheme of a site is its *brand*, and probably shouldn’t change based on this query. It’s up to you! In our ongoing discussion of who has the control.
 
 
 
@@ -266,15 +265,12 @@ button {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  button {
-    animation: none;
-  }
+  button { animation: none; }
 }
 ```
+{: .left style="align-self: center;"}
 
-![The corresponding setting in iOS.](CSS!%20(Media%20queries)%20d34a5ded94354f84a3ffa00b8af3454b/IMG_A6A6E23CE474-1.jpeg)
-
-The corresponding setting in iOS.
+{% include figure.html src='motion.jpg' class="right" %}
 
 ```css
 p {
@@ -289,15 +285,16 @@ p {
 	}
 }
 ```
+{: .left style="align-self: center;"}
 
-![IMG_288F80E29CEF-1.jpeg](CSS!%20(Media%20queries)%20d34a5ded94354f84a3ffa00b8af3454b/IMG_288F80E29CEF-1.jpeg)
+{% include figure.html src='contrast.jpg' caption='The corresponding settings in iOS.' class="right" %}
 
 
 
-## Testing responsive design
+<!-- ## Testing responsive design
 
 
 
 The easiest way to test all these things out is using [the device mode](https://www.notion.so/DevTools-The-Inspector-d0533c0133b24b168160eee046ce94b9) in Chrome’s *Inspector*. There will still be differences (like not necessarily honoring device-specific settings like `hover`), but for layout/breakpoint development it is often much faster than checking on actual devices!
 
-[*DevTools / The Inspector*](https://www.notion.so/DevTools-The-Inspector-d0533c0133b24b168160eee046ce94b9)
+[*DevTools / The Inspector*](https://www.notion.so/DevTools-The-Inspector-d0533c0133b24b168160eee046ce94b9) -->
