@@ -437,7 +437,16 @@
 	aside {
 		@extend .right;
 
-		figure:not(:first-child) {
+		// Sequential spacing between `p`.
+		> *:not(:first-child),
+		> div > *:not(:first-child) {
+			--margin--top: var(--typography--leading-shoulder);
+
+			margin-top: var(--margin--top, var(--typography--leading-shoulder))
+		}
+
+		> figure:not(:first-child),
+		> div > figure:not(:first-child) {
 			margin-top: var(--typography--between);
 
 			&.one-above,
