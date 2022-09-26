@@ -2989,13 +2989,153 @@ body > main > article .faded {
 		grid-column: 1/span 4;
 	}
 
+	body > main > article .left-narrow,
+	body > main > article .left-narrow + .right[rows="12"] + * + * + * + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="12"] + * + * + * + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="12"] + * + * + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="12"] + * + * + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="12"] + * + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="12"] + * + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="12"] + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="12"] + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="12"] + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="12"] + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="12"] + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="12"] + * + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="12"] + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="12"] + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="12"] + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="12"] + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="12"] + * + * + *,
+	body > main > article .left-narrow + aside[rows="12"] + * + * + *,
+	body > main > article .left-narrow + .right[rows="12"] + * + *,
+	body > main > article .left-narrow + aside[rows="12"] + * + *,
+	body > main > article .left-narrow + .right[rows="12"] + *,
+	body > main > article .left-narrow + aside[rows="12"] + *,
+	body > main > article .left-narrow + .right[rows="11"] + * + * + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="11"] + * + * + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="11"] + * + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="11"] + * + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="11"] + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="11"] + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="11"] + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="11"] + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="11"] + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="11"] + * + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="11"] + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="11"] + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="11"] + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="11"] + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="11"] + * + * + *,
+	body > main > article .left-narrow + aside[rows="11"] + * + * + *,
+	body > main > article .left-narrow + .right[rows="11"] + * + *,
+	body > main > article .left-narrow + aside[rows="11"] + * + *,
+	body > main > article .left-narrow + .right[rows="11"] + *,
+	body > main > article .left-narrow + aside[rows="11"] + *,
+	body > main > article .left-narrow + .right[rows="10"] + * + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="10"] + * + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="10"] + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="10"] + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="10"] + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="10"] + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="10"] + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="10"] + * + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="10"] + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="10"] + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="10"] + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="10"] + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="10"] + * + * + *,
+	body > main > article .left-narrow + aside[rows="10"] + * + * + *,
+	body > main > article .left-narrow + .right[rows="10"] + * + *,
+	body > main > article .left-narrow + aside[rows="10"] + * + *,
+	body > main > article .left-narrow + .right[rows="10"] + *,
+	body > main > article .left-narrow + aside[rows="10"] + *,
+	body > main > article .left-narrow + .right[rows="9"] + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="9"] + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="9"] + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="9"] + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="9"] + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="9"] + * + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="9"] + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="9"] + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="9"] + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="9"] + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="9"] + * + * + *,
+	body > main > article .left-narrow + aside[rows="9"] + * + * + *,
+	body > main > article .left-narrow + .right[rows="9"] + * + *,
+	body > main > article .left-narrow + aside[rows="9"] + * + *,
+	body > main > article .left-narrow + .right[rows="9"] + *,
+	body > main > article .left-narrow + aside[rows="9"] + *,
+	body > main > article .left-narrow + .right[rows="8"] + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="8"] + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="8"] + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="8"] + * + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="8"] + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="8"] + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="8"] + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="8"] + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="8"] + * + * + *,
+	body > main > article .left-narrow + aside[rows="8"] + * + * + *,
+	body > main > article .left-narrow + .right[rows="8"] + * + *,
+	body > main > article .left-narrow + aside[rows="8"] + * + *,
+	body > main > article .left-narrow + .right[rows="8"] + *,
+	body > main > article .left-narrow + aside[rows="8"] + *,
+	body > main > article .left-narrow + .right[rows="7"] + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="7"] + * + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="7"] + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="7"] + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="7"] + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="7"] + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="7"] + * + * + *,
+	body > main > article .left-narrow + aside[rows="7"] + * + * + *,
+	body > main > article .left-narrow + .right[rows="7"] + * + *,
+	body > main > article .left-narrow + aside[rows="7"] + * + *,
+	body > main > article .left-narrow + .right[rows="7"] + *,
+	body > main > article .left-narrow + aside[rows="7"] + *,
+	body > main > article .left-narrow + .right[rows="6"] + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="6"] + * + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="6"] + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="6"] + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="6"] + * + * + *,
+	body > main > article .left-narrow + aside[rows="6"] + * + * + *,
+	body > main > article .left-narrow + .right[rows="6"] + * + *,
+	body > main > article .left-narrow + aside[rows="6"] + * + *,
+	body > main > article .left-narrow + .right[rows="6"] + *,
+	body > main > article .left-narrow + aside[rows="6"] + *,
+	body > main > article .left-narrow + .right[rows="5"] + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="5"] + * + * + * + *,
+	body > main > article .left-narrow + .right[rows="5"] + * + * + *,
+	body > main > article .left-narrow + aside[rows="5"] + * + * + *,
+	body > main > article .left-narrow + .right[rows="5"] + * + *,
+	body > main > article .left-narrow + aside[rows="5"] + * + *,
+	body > main > article .left-narrow + .right[rows="5"] + *,
+	body > main > article .left-narrow + aside[rows="5"] + *,
+	body > main > article .left-narrow + .right[rows="4"] + * + * + *,
+	body > main > article .left-narrow + aside[rows="4"] + * + * + *,
+	body > main > article .left-narrow + .right[rows="4"] + * + *,
+	body > main > article .left-narrow + aside[rows="4"] + * + *,
+	body > main > article .left-narrow + .right[rows="4"] + *,
+	body > main > article .left-narrow + aside[rows="4"] + *,
+	body > main > article .left-narrow + .right[rows="3"] + * + *,
+	body > main > article .left-narrow + aside[rows="3"] + * + *,
+	body > main > article .left-narrow + .right[rows="3"] + *,
+	body > main > article .left-narrow + aside[rows="3"] + *,
+	body > main > article .left-narrow + .right[rows="2"] + *,
+	body > main > article .left-narrow + aside[rows="2"] + * {
+		grid-column: 1/span 2;
+	}
+
 	body > main > article .left:first-child + .right,
-	body > main > article .left:first-child + aside {
+	body > main > article .left:first-child + aside,
+	body > main > article .left-narrow:first-child + .right,
+	body > main > article .left-narrow:first-child + aside {
 		--margin--top: 0rem;
 	}
 
 	body > main > article .left:not(:first-child) + .right,
-	body > main > article .left:not(:first-child) + aside {
+	body > main > article .left:not(:first-child) + aside,
+	body > main > article .left-narrow:not(:first-child) + .right,
+	body > main > article .left-narrow:not(:first-child) + aside {
 		--margin--top: var(--margin--top--previous);
 	}
 
@@ -3057,6 +3197,396 @@ body > main > article .faded {
 	body > main > article .right[rows="12"],
 	body > main > article aside[rows="12"] {
 		grid-row: span 13;
+	}
+
+	body > main > article .left-narrow + .right,
+	body > main > article .left-narrow + aside {
+		grid-column: 3/span 4;
+	}
+
+	body > main > article .left-narrow + .right[rows="2"],
+	body > main > article .left-narrow + aside[rows="2"] {
+		grid-row: span 3;
+	}
+
+	body > main > article .left-narrow + .right[rows="2"] + *,
+	body > main > article .left-narrow + aside[rows="2"] + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="3"],
+	body > main > article .left-narrow + aside[rows="3"] {
+		grid-row: span 4;
+	}
+
+	body > main > article .left-narrow + .right[rows="3"] + *,
+	body > main > article .left-narrow + aside[rows="3"] + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="3"] + * + *,
+	body > main > article .left-narrow + aside[rows="3"] + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="4"],
+	body > main > article .left-narrow + aside[rows="4"] {
+		grid-row: span 5;
+	}
+
+	body > main > article .left-narrow + .right[rows="4"] + *,
+	body > main > article .left-narrow + aside[rows="4"] + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="4"] + * + *,
+	body > main > article .left-narrow + aside[rows="4"] + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="4"] + * + * + *,
+	body > main > article .left-narrow + aside[rows="4"] + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="5"],
+	body > main > article .left-narrow + aside[rows="5"] {
+		grid-row: span 6;
+	}
+
+	body > main > article .left-narrow + .right[rows="5"] + *,
+	body > main > article .left-narrow + aside[rows="5"] + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="5"] + * + *,
+	body > main > article .left-narrow + aside[rows="5"] + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="5"] + * + * + *,
+	body > main > article .left-narrow + aside[rows="5"] + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="5"] + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="5"] + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="6"],
+	body > main > article .left-narrow + aside[rows="6"] {
+		grid-row: span 7;
+	}
+
+	body > main > article .left-narrow + .right[rows="6"] + *,
+	body > main > article .left-narrow + aside[rows="6"] + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="6"] + * + *,
+	body > main > article .left-narrow + aside[rows="6"] + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="6"] + * + * + *,
+	body > main > article .left-narrow + aside[rows="6"] + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="6"] + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="6"] + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="6"] + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="6"] + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="7"],
+	body > main > article .left-narrow + aside[rows="7"] {
+		grid-row: span 8;
+	}
+
+	body > main > article .left-narrow + .right[rows="7"] + *,
+	body > main > article .left-narrow + aside[rows="7"] + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="7"] + * + *,
+	body > main > article .left-narrow + aside[rows="7"] + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="7"] + * + * + *,
+	body > main > article .left-narrow + aside[rows="7"] + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="7"] + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="7"] + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="7"] + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="7"] + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="7"] + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="7"] + * + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="8"],
+	body > main > article .left-narrow + aside[rows="8"] {
+		grid-row: span 9;
+	}
+
+	body > main > article .left-narrow + .right[rows="8"] + *,
+	body > main > article .left-narrow + aside[rows="8"] + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="8"] + * + *,
+	body > main > article .left-narrow + aside[rows="8"] + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="8"] + * + * + *,
+	body > main > article .left-narrow + aside[rows="8"] + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="8"] + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="8"] + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="8"] + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="8"] + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="8"] + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="8"] + * + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="8"] + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="8"] + * + * + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="9"],
+	body > main > article .left-narrow + aside[rows="9"] {
+		grid-row: span 10;
+	}
+
+	body > main > article .left-narrow + .right[rows="9"] + *,
+	body > main > article .left-narrow + aside[rows="9"] + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="9"] + * + *,
+	body > main > article .left-narrow + aside[rows="9"] + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="9"] + * + * + *,
+	body > main > article .left-narrow + aside[rows="9"] + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="9"] + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="9"] + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="9"] + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="9"] + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="9"] + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="9"] + * + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="9"] + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="9"] + * + * + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="9"] + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="9"] + * + * + * + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="10"],
+	body > main > article .left-narrow + aside[rows="10"] {
+		grid-row: span 11;
+	}
+
+	body > main > article .left-narrow + .right[rows="10"] + *,
+	body > main > article .left-narrow + aside[rows="10"] + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="10"] + * + *,
+	body > main > article .left-narrow + aside[rows="10"] + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="10"] + * + * + *,
+	body > main > article .left-narrow + aside[rows="10"] + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="10"] + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="10"] + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="10"] + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="10"] + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="10"] + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="10"] + * + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="10"] + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="10"] + * + * + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="10"] + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="10"] + * + * + * + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="10"] + * + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="10"] + * + * + * + * + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="11"],
+	body > main > article .left-narrow + aside[rows="11"] {
+		grid-row: span 12;
+	}
+
+	body > main > article .left-narrow + .right[rows="11"] + *,
+	body > main > article .left-narrow + aside[rows="11"] + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="11"] + * + *,
+	body > main > article .left-narrow + aside[rows="11"] + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="11"] + * + * + *,
+	body > main > article .left-narrow + aside[rows="11"] + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="11"] + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="11"] + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="11"] + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="11"] + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="11"] + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="11"] + * + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="11"] + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="11"] + * + * + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="11"] + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="11"] + * + * + * + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="11"] + * + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="11"] + * + * + * + * + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="11"] + * + * + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="11"] + * + * + * + * + * + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="12"],
+	body > main > article .left-narrow + aside[rows="12"] {
+		grid-row: span 13;
+	}
+
+	body > main > article .left-narrow + .right[rows="12"] + *,
+	body > main > article .left-narrow + aside[rows="12"] + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="12"] + * + *,
+	body > main > article .left-narrow + aside[rows="12"] + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="12"] + * + * + *,
+	body > main > article .left-narrow + aside[rows="12"] + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="12"] + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="12"] + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="12"] + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="12"] + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="12"] + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="12"] + * + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="12"] + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="12"] + * + * + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="12"] + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="12"] + * + * + * + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="12"] + * + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="12"] + * + * + * + * + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="12"] + * + * + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="12"] + * + * + * + * + * + * + * + * + * + * {
+		margin-right: initial;
+	}
+
+	body > main > article .left-narrow + .right[rows="12"] + * + * + * + * + * + * + * + * + * + * + *,
+	body > main > article .left-narrow + aside[rows="12"] + * + * + * + * + * + * + * + * + * + * + * {
+		margin-right: initial;
 	}
 }
 
