@@ -1,17 +1,9 @@
-div {
-	background-color: aquamarine;
-}
+div { background-color: aquamarine; }
 
-aside {
-	background: gold;
-}
+aside { background: gold; }
 
 @media (hover: hover) {
-	aside {
-		visibility: hidden;
-	}
+	aside { visibility: hidden; }
 
-	div:hover + aside {
-		visibility: visible;
-	}
+	div:hover + aside { visibility: visible; }
 }

@@ -218,35 +218,29 @@ This follows the general CSS paradigm of the cascade—and is much, much, much e
 
 
 
-## Other `@media` features
+## Other media features
 
 
 
-The most common media queries will be *width*/*height*/*orientation*—for adjusting your layouts. But `@media` has some [more tricks up its](https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_features) sleeve with testing for other browser features. We’ll look at some of the handy/common ones.
+The most common media queries, by far, will be *width*/<wbr>*height*/<wbr>*orientation*&#8288;—for adjusting your layouts. But `@media` has some [more tricks](https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_features) up its sleeve with testing for other browser features. We’ll look at some of the handy/common ones.
 
 
 
-### `screen` / `print`
+### `screen` vs. `print`
 
 In all of our above examples, there is an implied *[media type](https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_types)* of `screen`—since that is usually what we are concerned with on the web. But there is also one for `print`! You can use these to segment styles to one medium or the other.
 
-{% include figure.html src='/example/media-print/demo' %}
-
-You can see the `print` style in action by clicking *Original* in the upper corner, then ⌘-P to print. It is still *A Thing*, though really often forgotten about in modern web design/projects.
+{% include figure.html src='/example/media-print/demo' caption='You can see the `print` style in action by the arrow in the upper corner, then ⌘-P to print. It is still *A Thing*, though often forgotten about in modern web design/projects.' height='44rem' %}
 
 
 
 ### `hover`
 
-Another common one is `hover`, to detect whether a browser has an input device that supports *hovering*—which really just means a mouse, on laptop/desktop computers. Mobile *touch-based* systems don’t have this behavior (and sometimes react oddly to `:hover` CSS), so you might need to adjust your interfaces to work in the absence of this state.
+Another common one is `hover`, to detect whether a browser has an input device that supports *hovering*—which really just means a mouse, on laptop/desktop computers. Mobile *touch-based* systems don’t have this behavior (and sometimes react oddly to `:hover` CSS), so you should adjust your interfaces to work in the absence of this state.
 
+{% include figure.html src='/example/media-hover/demo' caption='If you view this on your phone, the `aside` should be visible without interaction. On your computer, you’ll have to mouse over the `div`. Note how this is written with a [*mobile first*](#mobile-first-design) style, only adding the hover state later/lower for folks who have it!' height='29rem' %}
 
-
-{% include figure.html src='/example/media-hover/demo' %}
-
-If you view this on your phone, the `aside` should be visible without interaction. On your computer, you’ll have to mouse over the `div`. Note how this is written with a *[mobile first](#mobile-first-design)* style, only adding the hover later/lower for folks who have it!
-
-*Hover states are a good thing for progressive enhancement, as we did here—to add them in after you have a working mobile design! Since maybe a third to a half of your audience (depending on your project) won’t see them.*
+Hover states are a good thing for progressive enhancement, as we did here—to add them in after you have a working mobile design! Since maybe a third to a half of your audience (depending on your project) won’t see them.
 
 
 
