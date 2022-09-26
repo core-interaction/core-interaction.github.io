@@ -150,9 +150,10 @@ You can also use `height` in the same way—though again, with the normal, verti
 This example is the same *breakpoint* of `400px`, but now using `height`:
 {: .half .two-above  }
 
-{% include figure.html src='/example/media-height-min-max/demo' class='half' height='62rem' caption='These code examples are responsive, themselves—stacking when they are narrow.' %}
+{% include figure.html src='/example/media-height-min-max/demo' class='half' height='62rem' caption='These code examples are responsive, themselves—stacking like this when they are narrow.' %}
 
-In a broader code/programming context, it can be helpful to think of media queries as [conditional *if* statements](https://en.wikipedia.org/wiki/Conditional_(computer_programming)). “If this thing is true, then do this.” (You may have heard of [*If This Then That*](https://ifttt.com).) We’ll talk about this later [with JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else), where conditionals ubiquitous and powerful.
+In a broader code/programming context, it can be helpful to think of media queries as [conditional *if* statements](https://en.wikipedia.org/wiki/Conditional_(computer_programming)). “If this thing is true, then do this.” (You may have heard of [*If This Then That*](https://ifttt.com).) We’ll talk about this later [with JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else), where conditionals are ubiquitous and powerful.
+{: .four-above }
 
 
 
@@ -160,13 +161,11 @@ In a broader code/programming context, it can be helpful to think of media que
 
 
 
-You can also be less specific about your width/height and instead use `orientation`—like when you rotate your phone. This uses the wonderfully tenacious names/values of `portrait` or `landscape`.
+You can also be less specific about your width/height and instead use `orientation`—like when you rotate your phone. The queries use the wonderfully tenacious names/values of `portrait` or `landscape`.
 
 *Everything was a painting before it was a photograph or a [web page](/topic/everything).*
 
-{% include figure.html src='/example/media-orientation/demo' %}
-
-Drag that divider!
+{% include figure.html src='/example/media-orientation/demo' caption='Drag the divider to make the example narrower.' height='31rem' %}
 
 
 

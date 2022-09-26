@@ -1,15 +1,9 @@
-div {
-	background-color: aquamarine;
+div { background-color: aquamarine; }
+
+@media (orientation: portrait) {
+	div:first-child { background-color: orange; }
 }
 
 @media (orientation: landscape) {
-	div:first-child {
-		background-color: orange;
-	}
-}
-
-@media (orientation: portrait) {
-	div:last-child {
-		background-color: gold;
-	}
+	div:last-child { background-color: gold; }
 }
