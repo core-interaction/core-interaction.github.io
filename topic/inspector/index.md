@@ -33,9 +33,12 @@ Chrome has the most robust, best-in-class set of *DevTools*—though [Safari](ht
 You’ll see the tools on the right side of the page. Depending on how big your screen is, they might be laid out a bit differently—but the basics are the same:
 {: .four-above }
 
-{% include figure.html src='dev-tools.png' class='left'%}
+{% include figure.html src='dev-tools.png' %}
 
-{% include figure.html src='customize.svg' class='right' caption='You can also undock the tools out into a separate window—often easier on a laptop/<wbr>small screen.' %}
+You can also undock the tools out into a separate window—often easier on a laptop/<wbr>small screen.
+{: .left style="align-self: center;" }
+
+{% include figure.html src='customize.svg' class='right' %}
 
 
 
@@ -59,51 +62,54 @@ Handy tip: `⌘-F` in here will let you search for elements or text by name/<wbr
 The middle area is for the styles. It shows whatever *CSS properties* apply to the element you have selected above, in *the DOM*/elements panel.
 {: .left-narrow }
 
-{% include figure.html src='styles.svg' class='right' rows='3' %}
+{% include figure.html src='styles.svg' class='right' rows='4' %}
 
 These are ordered with the [most-specific](/topic/css/#specificity) at the top, with any cascading/<wbr>conflicting rules crossed out, as you go down.
 
-On the right, you can see the sum *Computed* (or *rendered*) values of all the rules that apply—regardless of where they come from. These represent *exactly* what the browser is showing to you.
+On the right, you can see the sum *Computed* (or *rendered*) values of all the rules that apply—regardless of where they come from. These represent *exactly* what the browser is showing to you for the selected element.
+
+In both areas, you can type specific CSS properties/values into the `Filter` box to quickly narrow things down.
 
 
 
-You can make changes in the *Elements* or *Styles* areas, and the changes will be immediately visible on the page as if you had edited the source files. It’s useful to try things out quickly.
+You can make changes in the *Elements* or *Styles* areas, and the changes will be immediately visible on the page as if you had edited the source files. It’s useful to try things out quickly (or diagnose problems/<wbr>conflicts).
 {: .four-above }
 
-*But keep in mind they are temporary—these changes will be lost when you leave or reload the page! They are just for you.*
+> Keep in mind these changes are temporary—any edits in the *DevTools* will be lost when you leave or reload the page! They are just for you.
+{: .callout .two-above icon="🚨" }
 
 
 
 ## Device mode
 
-![Screen Shot 2022-03-11 at 2.53.40 PM.png](Screen_Shot_2022-03-11_at_2.53.40_PM.png)
+First open the inspector, [as above](#elements-panel). Enter *device mode* with the little phone/tablet icon, in the upper left of the DevTools:
 
-First open the inspector, as [noted above](https://www.notion.so/DevTools-The-Inspector-d0533c0133b24b168160eee046ce94b9).
+{% include figure.html src='device.png' %}
 
-![Screen Shot 2022-03-11 at 2.53.50 PM.png](Screen_Shot_2022-03-11_at_2.53.50_PM.png)
-
-Enter the *device mode* with the little phone/tablet icon.
-
-![Screen Shot 2022-03-11 at 3.00.44 PM.png](Screen_Shot_2022-03-11_at_3.00.44_PM.png)
-
-![These device dimensions don’t have accurate heights.](Screen_Shot_2022-03-11_at_2.55.00_PM.png)
-
-These device dimensions don’t have accurate heights.
-
-You can select specific device dimensions—but these aren’t always useful! They don’t account for the web browser’s own interface, so they are usually much too tall.
-
-Instead, use the *Responsive* mode that lets you type in specific pixel dimensions. Or you can use the divided bar underneath to quickly jump through common widths. (Be sure to *refresh* with `⌘-R` if the page doesn’t rescale.) And remember that we aren’t targeting devices—we are looking for when our content *breaks*.
-
-You can also use the *zoom* dropdown to approximate views *larger* than your current screen! This is great for developing on a laptop.
-
-### **But always be sure check on the real thing! This is just a quicker preview, but isn’t always perfectly accurate.**
+{% include figure.html src='device-bar.svg' %}
 
 
+{% include figure.html src='responsive.png' class='left-narrow' caption='These devices *don’t* have accurate heights—they don’t account for the web browser’s own interface, so they are all too tall!' %}
 
-<!-- ## Testing responsive design
+{% capture aside %}
+
+Be sure to *refresh* with `⌘-R` if the page doesn’t rescale correctly when you enter this mode! They somestimes don’t, depending on how they are built.
+
+Generally, use the *Responsive* dimensions mode that lets you type in specific pixel dimensions for width/height. Or you can use the divided bar underneath to quickly jump through common/ballpark widths.  And remember that you aren’t targeting devices&#8288;—you are looking for when your content *breaks*.
+
+You can also use the *zoom* dropdown to approximate views *larger* than your current screen! This is great for developing on a laptop. It won’t be precise, but it’s better than nothing.
+
+The *Options* menu also has some handy tricks, like showing *rulers* or capturing *full-length screenshots*!
+
+*Importantly there is also the <em>Console</em> tab, but we’ll talk about that when we get into JavaScript, later.*
+
+{% endcapture %}
+
+{% include aside.html content=aside %}
 
 
 
-The easiest way to test all these things out is using [the device mode](https://www.notion.so/DevTools-The-Inspector-d0533c0133b24b168160eee046ce94b9) in Chrome’s *Inspector*. There will still be differences (like not necessarily honoring device-specific settings like `hover`), but for layout/breakpoint development it is often much faster than checking on actual devices!
-
-[*DevTools / The Inspector*](https://www.notion.so/DevTools-The-Inspector-d0533c0133b24b168160eee046ce94b9) -->
+> Always check your work on the real thing, as much as possible!
+>
+>This is just a quicker preview, but isn’t always perfectly accurate&#8288;—and also won’t reflect any device-specific behaviors around scrolling or rotating. (I’m looking at you, [iOS Safari](https://bugs.webkit.org/show_bug.cgi?id=141832).)
+{: .callout icon="🤌" }

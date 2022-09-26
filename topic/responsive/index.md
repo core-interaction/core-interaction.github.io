@@ -51,7 +51,7 @@ You’ll see this in the `<head>` of most websites, these days:
 ```
 {: style="max-width: 77.8rem" }
 
-When the iPhone came on the scene, most websites didn’t have narrow/smaller (responsive) layouts so the phone would instead *scale* or *zoom out* a desktop site design to fit.
+When the iPhone came on the scene, most websites didn’t have narrow/smaller (responsive) layouts so the phone would instead [*scale* or *zoom out*](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html) a desktop site design to fit.
 {: .left .four-above }
 
 
