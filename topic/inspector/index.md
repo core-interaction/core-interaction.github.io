@@ -1,5 +1,5 @@
 ---
-title: DevTools (The Inspector)
+title: DevTools (The Inspector)
 published: false
 order: 5
 ---
@@ -11,26 +11,37 @@ order: 5
 
 
 
-I am definitely a “Safari guy” for my daily driver browser. But for dev work, [Chrome](https://www.google.com/chrome) is the best in town. (They are all differently bad, in different ways.)
+I am definitely a “Safari guy” for my daily driver browser. But for dev work, [Chrome](https://www.google.com/chrome) is the best in town. (They are all kind of differently bad, in different ways.)
 {: .left }
 
-{% include figure.html src='right-click.png' class="right" %}
+[Chrome DevTools](https://developer.chrome.com/docs/devtools/) \
+*We’ll be using Chrome’s developer tools.*
+{: .icon-link .right }
 
-Chrome has the most robust, best-in-class set of [DevTools](https://developer.chrome.com/docs/devtools/)—though [Safari](https://developer.apple.com/safari/tools/) and [Firefox](https://developer.mozilla.org/en-US/docs/Tools) have their own versions, too. You’ll often hear people call it the “Web Inspector” or just “The Inspector”. It’s going to be your best (Web) friend, showing you everything that the browser has *parsed* to display the page.
+Chrome has the most robust, best-in-class set of *DevTools*—though [Safari](https://developer.apple.com/safari/tools/) and [Firefox](https://developer.mozilla.org/en-US/docs/Tools) have their own versions, too. You’ll often hear people (me) call it the “Web Inspector” or just “The Inspector”. It’s going to be your best (Web) friend, showing you everything that the browser has *parsed* to display the page.
+{: .left }
+
+{% include figure.html src='right-click.png' class='right' rows='3' %}
 
 *In Chrome, you can bring them up by right-clicking on any element/part of a page and clicking <em>Inspect</em>.*
+{: .two-above }
 
 *You can also hit `⌘-⌥-I`, on the Mac.*
 
 
 
-## The DevTools
-
 You’ll see the tools on the right side of the page. Depending on how big your screen is, they might be laid out a bit differently—but the basics are the same:
+{: .four-above }
 
-![Screen Shot 2022-02-17 at 8.10.45 PM.png](Screen_Shot_2022-02-17_at_8.10.45_PM.png)
+{% include figure.html src='dev-tools.png' class='left'%}
 
-The top part is [*the DOM*](https://www.notion.so/A-lot-of-acroynms-0e6e758bedc2436db8b16ddfbfaef13e)—you can expand/collapse all the nested HTML *Elements* on the opened page.
+{% include figure.html src='customize.svg' class='right' caption='You can also undock the tools out into a separate window—often easier on a laptop/<wbr>small screen.' %}
+
+
+
+## Elements panel
+
+The top part is the DOM—you can expand/collapse all the nested HTML *elements* on the opened page.
 
 The first button in the upper-left lets you mouse over on the page, and will then show you that element hierarchically in the DOM.
 

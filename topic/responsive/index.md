@@ -91,7 +91,6 @@ Responsive design could only really flourish when CSS added the `@media` [*at-ru
 These are colloquially called *media queries*, and they allow us to check if screen is a certain width or resolution (or other features, which we’ll get to)—and then apply selective CSS only in that scenario. These let site layouts *respond* intentionally to different devices, for the first time.
 
 Practically, these are blocks of CSS—a little bit like [*selectors*](/topic/css/#basic-selectors) that contain other selectors—but which only apply conditionally when the test/criteria is met.
-{: .two-above }
 
 ```css
 /* Our CSS has all been out here! */
