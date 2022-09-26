@@ -113,6 +113,10 @@ There are lots of media queries we can use, but we’ll start with *width*—whi
 
 
 
+{% include figure.html src='devices.jpg' caption='This is from about ten years ago. It’s only gotten worse.' credit='https://www.flickr.com/photos/brad_frost/7387824246' %}
+
+
+
 > If you think responsive's simple, I feel bad for you son. We got 99 viewports, but the iPhone's just one.
 {: .quote }
 
@@ -123,7 +127,7 @@ There are lots of media queries we can use, but we’ll start with *width*—whi
 Width will vary the most between devices—from the `375px`–`428px` of your phones, through the ~ `1440px`–`1680px` of your laptops, up to the ~ `2560px`–`3440px` you might see on desktop displays. Since this `width` is usually our primary design constraint (`height` being handled with scrolling), we need *width-based* media queries to adjust our layouts across this wide range, lest our designs implode.
 {: .four-above }
 
-This is done in steps, at different widths, that we call *breakpoints*&#8288;—the window/device/viewport sizes where the content *starts to break*, if it is not adjusted. This might be because lines of text get too short or too long, becoming hard to read. It might be to prevent a grid of images from becoming too small on a phone—while you can have many columns on desktop, often you can only have one or two on mobile. You can add as many *breakpoints* as you need to make your page/design work across devices.
+This is done in steps, at different widths, that we call *breakpoints*&#8288;—the window/device/viewport sizes where the content *starts to break*, if it is not adjusted. This might be because lines of text get too short or too long, becoming hard to read. It might be to prevent a grid of images from becoming too small on a phone—while you can have many columns on desktop, often you can only have one or two on mobile. You can add as many *breakpoints* as you need to make your page/design work across devices. Don’t write *for* specific devices; write *for* your design and your content!
 
 *There are very, very few layouts that won’t need some amount of horizontal responsiveness/breakpoints!*
 
@@ -195,17 +199,22 @@ There is also a `not` [logic operator](https://developer.mozilla.org/en-US/docs
 
 
 
-So this can all get very complicated, very quickly—especially with complex designs, overlapping rules, and the wide ranges of devices to consider. One of the easiest methodologies to keep things understandable is practicing *mobile first* design/development. **This has become kind of *buzzwordy* in the past decade or so, but it is a good philosophy to adhere to nonetheless.
+So this can all get very complicated, very quickly—especially with complex designs, overlapping rules, and the wide ranges of devices to consider. One of the easiest methodologies to keep things understandable is practicing [*mobile first*](https://www.lukew.com/resources/mobile_first.asp) design/development. This has become kind of *buzzwordy* in the past decade or so, but it is a good philosophy to adhere to nonetheless.
 
-**In design, *mobile first* means considering small screens and *then* adding complexity, limits, or considerations for larger/desktop screens.**
+Your design constraints will be tighter, by tackling your smallest layout first—but it is almost always easier to scale things up than down. A mobile design can always work as a passable desktop one; the reverse is rarely true.
 
-**In HTML/CSS development, this means writing your styles for mobile… first, *then* adding `min-width` breakpoints (below them) to progressively enhance your design as it scales up.**
+(Another way to think of it: *if it doesn’t work on mobile, it doesn’t work.*)
 
-{% include figure.html src='/example/media-mobile-first/demo' %}
+- In your design, *mobile first* means considering small screens and *then* adding complexity, limits, or considerations for larger/desktop screens.
 
-The `width` here are kind of tricky—but this will be much easier with `grid`, I promise!
+- In your HTML/CSS development, this means writing your styles for mobile… first, *then* adding `min-width` breakpoints (below them) to progressively enhance your design as it scales up.
 
-*This follows the general CSS paradigm of the cascade—and is much, much, much easier than adjusting desktop front-end after the fact. Always think mobile first!*
+{% include figure.html src='/example/media-mobile-first/demo' caption='The `width` here are kind of tricky—but this will be much easier with `grid`, I promise!' height='52rem' %}
+
+
+
+
+This follows the general CSS paradigm of the cascade—and is much, much, much easier than adjusting desktop front-end after the fact. Always think *mobile first*!
 
 
 

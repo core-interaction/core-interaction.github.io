@@ -1,12 +1,10 @@
 section {
-	display: flex;
+	display: flex; /* We’ll talk about flex soon! */
 	flex-wrap: wrap;
 	gap: 10px;
 }
 
-div {
-	background-color: aquamarine;
-}
+div { background-color: aquamarine; }
 
 @media (min-width: 400px) {
 	div {
