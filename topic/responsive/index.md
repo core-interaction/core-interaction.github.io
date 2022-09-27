@@ -33,6 +33,9 @@ Let’s first take a minute to talk about *responsive design*. This term was co
 
 * [Using media queries | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) \
   *Okay, that’s probably enough MDN.*
+
+* [Using CSS custom properties | MDN ](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) \
+  *Sorry, last one!*
 {: .right .no-marker .icon-link rows="2" }
 
 There was a confluence of events that allowed this: modern, self-updating browsers, and then the explosion of *the mobile web—*precipitated, in no small part, by the *iPhone* in 2007. It ran a desktop-class browser (in terms of functionality), which hadn’t been available in a small screen before. And with its crazy success—and subsequent proliferation of its paradigm in *Android*—the web, and then world, scrambled to *respond*.
@@ -213,6 +216,41 @@ Your design constraints will be tighter, by tackling your smallest layout first�
 
 
 This follows the general CSS paradigm of the cascade—and is much, much, much easier than adjusting desktop front-end after the fact. Always think *mobile first*!
+
+
+
+## Briefly, CSS variables
+
+
+
+[Custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) (I’ll almost always say *CSS variables*) aren’t strictly a part of *responsive design* or *media queries*—but they come up very often in modern, mobile-first practice and we’ll introduce them briefly, here.
+
+These bring the programming concept of [variables](https://en.wikipedia.org/wiki/Variable_(computer_science)) into CSS. These are shorthand entities for values we want to reuse throughout a document&#8288;—or, in a responsive context, want to modify at certain breakpoints. (You could think of a color *swatch*, if you are in an Adobe mindset.) Changing the value of a *variable* changes it everywhere it is referenced, no copy/pasting or find/replacing. Again, these are for you—it is all the same to the computer. More ergonomics!
+
+In your CSS, you *declare* (set) these with a `--` prefix in front of a subjective name you make up. And you *reference* (use) them by wrapping that variable name in `var()`:
+
+```css
+	:root {
+		--brand-color: #e42a1d;
+	}
+```
+{: .half }
+
+```css
+	.brand-color {
+		color: var(--brand-color);
+	}
+```
+{: .half }
+
+You can use these as values for *any* [CSS property](/topic/css/#css-rules)—colors, spacing, etc.—anything you use multiple times and want to be consistent, or want to easily change.
+{: .four-above }
+
+{% include figure.html src='/example/css-variable/demo' caption='Changing the spacing here would be easy, even though we use it a bunch.' height='70rem' %}
+
+You’ll often declare a set of variables for mobile—type sizes, spacing, and so on—and then adjust them, once, for desktop. No need to write all the properties out again, with all their own redundant media-queries! Variables are *great*.
+
+They’ll help you avoid unwanted cascade (applying the same property), especially across breakpoints. But also help to facilitate *design system* thinking—focusing your design on the relative relationships of things.
 
 
 
