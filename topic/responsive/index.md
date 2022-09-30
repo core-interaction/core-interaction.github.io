@@ -38,9 +38,9 @@ Let’s first take a minute to talk about *responsive design*. This term was co
   *Sorry, last one!*
 {: .right .no-marker .icon-link rows="2" }
 
-There was a confluence of events that allowed this: modern, self-updating browsers, and then the explosion of *the mobile web—*precipitated, in no small part, by the *iPhone* in 2007. It ran a desktop-class browser (in terms of functionality), which hadn’t been available in a small screen before. And with its crazy success—and subsequent proliferation of its paradigm in *Android*—the web, and then world, scrambled to *respond*.
+There was a confluence of events that allowed this: modern, <nobr>self-updating</nobr> browsers, and then the explosion of *the mobile web—*precipitated, in no small part, by the *iPhone* in 2007. It ran a desktop-class browser (in terms of functionality), which hadn’t been available in a small screen before. And with its crazy success—and subsequent proliferation of its paradigm in *Android*—the web, and then world, scrambled to *respond*.
 
-{% include figure.html src='responsive.svg' caption='A typical/example *responsive* layout, adjusting the layout to reflow based on the device width.' class='four-above' height='90vh' %}
+{% include figure.html src='responsive.svg' caption='A typical/example *responsive* layout, adjusting the layout to reflow based on the device width.' class='four-above' height='90vh' %}
 
 
 
@@ -60,11 +60,11 @@ When the iPhone came on the scene, most websites didn’t have narrow/smaller (r
 
 {% capture aside %}
 
-{% include figure.html src='wap.jpg' caption='Prior to the iPhone, some sites had barebones <em>[WAP](https://en.wikipedia.org/wiki/Wireless_Application_Protocol)</em> mobile versions.' credit='https://wapreview.com/164/' %}
+{% include figure.html src='wap.jpg' caption='Prior to the iPhone, some sites had barebones <em>[WAP](https://en.wikipedia.org/wiki/Wireless_Application_Protocol)</em> mobile versions.' credit='https://wapreview.com/164/' %}
 
 {% include figure.html src='nytimes.png' caption='The full desktop site, scaled down, in 2007. Simpler times.' credit='https://web.archive.org/web/20070111094339/http://www.apple.com/iphone/internet/' class='one-above' %}
 
-{% include figure.html src='intro.png' caption='The iPhone introduction, worth a watch. Jobs definitely “dented the universe.”' credit='https://youtu.be/VQKMoT-6XSg?t=2474' class='one-above' %}
+{% include figure.html src='intro.png' caption='The iPhone introduction, worth a watch. Jobs definitely “dented the universe.”' credit='https://youtu.be/VQKMoT-6XSg?t=2474' class='one-above' %}
 
 {% include figure.html src='redesign.png' caption='The *Times* wasn’t fully responsive until 2018, if you can believe it. (They had a separate mobile site and apps.)' credit='https://open.nytimes.com/a-faster-and-more-flexible-home-page-that-delivers-the-news-readers-want-1522ff64aa86' class='one-above' %}
 
@@ -77,6 +77,7 @@ When the iPhone came on the scene, most websites didn’t have narrow/smaller (r
 Websites at the time were often designed to a [standard width](https://960.gs) (usually `960px`), which the phone shrank down to its `320px` screen—and then the user could zoom in or out. It worked—and all the content was there, unlike most mobile sites—but it was less than ideal.
 
 This `meta` element tells the browser not to do this. It says, *“I have a responsive design! Render me at my actual size.”*
+{: .four-above }
 
 The `width=device-width` tells the browser to use whatever the screen’s actual pixel dimension is, and `initial-scale=1` sets the starting zoom for the page to 100%. This is how the browser knows how to make the page respond, and how our CSS rules know what width to use.
 
@@ -118,7 +119,7 @@ There are lots of media queries we can use, but we’ll start with *width*—whi
 
 
 
-> If you think responsive's simple, I feel bad for you son. We got 99 viewports, but the iPhone's just one.
+> If you think responsive's simple, I feel bad for you son. We got 99 viewports, but the iPhone's just one.
 {: .quote }
 
 <cite>[Josh Brewer](https://twitter.com/jbrewer/status/178528003402379265)</cite>
@@ -128,14 +129,14 @@ There are lots of media queries we can use, but we’ll start with *width*—whi
 Width will vary the most between devices—from the `375px`–`428px` of your phones, through the ~ `1440px`–`1680px` of your laptops, up to the ~ `2560px`–`3440px` you might see on desktop displays. Since this `width` is usually our primary design constraint (`height` being handled with scrolling), we need *width-based* media queries to adjust our layouts across this wide range, lest our designs implode.
 {: .four-above }
 
-This is done in steps, at different widths, that we call *breakpoints*&#8288;—the window/device/viewport sizes where the content *starts to break*, if it is not adjusted. This might be because lines of text get too short or too long, becoming hard to read. It might be to prevent a grid of images from becoming too small on a phone—while you can have many columns on desktop, often you can only have one or two on mobile. You can add as many *breakpoints* as you need to make your page/design work across devices. Don’t write *for* specific devices; write *for* your design and your content!
+This is done in steps, at different widths, that we call *breakpoints*&#8288;—the window/device/viewport sizes where the content *starts to break*, if it is not adjusted. This might be because lines of text get too short or too long, becoming hard to read. It might be to prevent a grid of images from becoming too small on a phone—while you can have many columns on desktop, often you can only have one or two on mobile. You can add as many *breakpoints* as you need to make your page/design work across devices. Don’t write *for* specific devices; write *for* your design and your content!
 
 *There are very, very few layouts that won’t need some amount of horizontal responsiveness/breakpoints!*
 
 In this example, we would refer to `400px` as our *breakpoint*:
 {: .four-above }
 
-{% include figure.html src='/example/media-width/demo' caption='Drag the code/example divider to the left to see it respond to the media query! Double-click to reset it.' height='20rem' %}
+{% include figure.html src='/example/media-width/demo' caption='Drag the code/example divider to the left to see it respond to the media query! <nobr>Double-click</nobr> to reset it.' height='20rem' %}
 
 
 
@@ -231,6 +232,7 @@ In your CSS, you *declare* (set) these with a `--` prefix in front of a subject
 
 ```css
 	:root {
+		/* Declare variable. */
 		--brand-color: #e42a1d;
 	}
 ```
@@ -238,6 +240,7 @@ In your CSS, you *declare* (set) these with a `--` prefix in front of a subject
 
 ```css
 	.brand-color {
+		/* Reference it. */
 		color: var(--brand-color);
 	}
 ```
@@ -327,7 +330,7 @@ p {
 
 
 
-> The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.
+> The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.
 {: .quote }
 
 <cite>[Tim Berners-Lee](https://www.w3.org/Press/IPO-announce)</cite>
