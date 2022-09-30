@@ -236,14 +236,14 @@
 					</li>
 				</ul>
 
-				<p>There was a confluence of events that allowed this: modern, self-updating browsers, and then the explosion of <em>the mobile web<span class="mdash">—</span></em>precipitated, in no small part, by the <em>iPhone</em> in 2007. It ran a desktop-class browser (in terms of functionality), which hadn’t been available in a small screen before. And with its crazy success<span class="mdash">—</span>and subsequent proliferation of its paradigm in <em>Android</em><span class="mdash">—</span>the web, and then world, scrambled to <em>respond</em>.</p>
+				<p>There was a confluence of events that allowed this: modern, <nobr>self-updating</nobr> browsers, and then the explosion of <em>the mobile web<span class="mdash">—</span></em>precipitated, in no small part, by the <em>iPhone</em> in 2007. It ran a desktop-class browser (in terms of functionality), which hadn’t been available in a small screen before. And with its crazy success<span class="mdash">—</span>and subsequent proliferation of its paradigm in <em>Android</em><span class="mdash">—</span>the web, and then world, scrambled to <em>respond</em>.</p>
 
 				<figure class="four-above" style="--height--max: 90vh">
 
 					<img src="responsive.svg" />
 
 
-					<figcaption>A typical/example <em>responsive</em> layout, adjusting the layout to reflow based on the device width.</figcaption>
+					<figcaption>A typical/example <em>responsive</em> layout, adjusting the layout to reflow based on the device width.</figcaption>
 
 				</figure>
 
@@ -268,7 +268,7 @@
 						<img src="wap.jpg" />
 
 
-						<figcaption>Prior to the iPhone, some sites had barebones <em><a href="https://en.wikipedia.org/wiki/Wireless_Application_Protocol">WAP</a></em> mobile versions.<cite>
+						<figcaption>Prior to the iPhone, some sites had barebones <em><a href="https://en.wikipedia.org/wiki/Wireless_Application_Protocol">WAP</a></em> mobile versions.<cite>
 								<a href="https://wapreview.com/164/"></a>
 							</cite></figcaption>
 
@@ -290,7 +290,7 @@
 						<img src="intro.png" />
 
 
-						<figcaption>The iPhone introduction, worth a watch. Jobs definitely “dented the universe.”<cite>
+						<figcaption>The iPhone introduction, worth a watch. Jobs definitely “dented the universe.”<cite>
 								<a href="https://youtu.be/VQKMoT-6XSg?t=2474"></a>
 							</cite></figcaption>
 
@@ -313,7 +313,7 @@
 
 				<p>Websites at the time were often designed to a <a href="https://960.gs">standard width</a> (usually <code class="language-plaintext highlighter-rouge">960px</code>), which the phone shrank down to its <code class="language-plaintext highlighter-rouge">320px</code> screen<span class="mdash">—</span>and then the user could zoom in or out. It worked<span class="mdash">—</span>and all the content was there, unlike most mobile sites<span class="mdash">—</span>but it was less than ideal.</p>
 
-				<p>This <code class="language-plaintext highlighter-rouge">meta</code> element tells the browser not to do this. It says, <em>“I have a responsive design! Render me at my actual size.”</em></p>
+				<p class="four-above">This <code class="language-plaintext highlighter-rouge">meta</code> element tells the browser not to do this. It says, <em>“I have a responsive design! Render me at my actual size.”</em></p>
 
 				<p>The <code class="language-plaintext highlighter-rouge">width=device-width</code> tells the browser to use whatever the screen’s actual pixel dimension is, and <code class="language-plaintext highlighter-rouge">initial-scale=1</code> sets the starting zoom for the page to 100%. This is how the browser knows how to make the page respond, and how our CSS rules know what width to use.</p>
 
@@ -356,14 +356,14 @@
 				</figure>
 
 				<blockquote class="quote">
-					<p>If you think responsive’s simple, I feel bad for you son. We got 99 viewports, but the iPhone’s just one.</p>
+					<p>If you think responsive’s simple, I feel bad for you son. We got 99 viewports, but the iPhone’s just one.</p>
 				</blockquote>
 
 				<p><cite><a href="https://twitter.com/jbrewer/status/178528003402379265">Josh Brewer</a></cite></p>
 
 				<p class="four-above">Width will vary the most between devices<span class="mdash">—</span>from the <code class="language-plaintext highlighter-rouge">375px</code>–<code class="language-plaintext highlighter-rouge">428px</code> of your phones, through the ~ <code class="language-plaintext highlighter-rouge">1440px</code>–<code class="language-plaintext highlighter-rouge">1680px</code> of your laptops, up to the ~ <code class="language-plaintext highlighter-rouge">2560px</code>–<code class="language-plaintext highlighter-rouge">3440px</code> you might see on desktop displays. Since this <code class="language-plaintext highlighter-rouge">width</code> is usually our primary design constraint (<code class="language-plaintext highlighter-rouge">height</code> being handled with scrolling), we need <em>width-based</em> media queries to adjust our layouts across this wide range, lest our designs implode.</p>
 
-				<p>This is done in steps, at different widths, that we call <em>breakpoints</em>⁠<span class="mdash">—</span>the window/device/viewport sizes where the content <em>starts to break</em>, if it is not adjusted. This might be because lines of text get too short or too long, becoming hard to read. It might be to prevent a grid of images from becoming too small on a phone<span class="mdash">—</span>while you can have many columns on desktop, often you can only have one or two on mobile. You can add as many <em>breakpoints</em> as you need to make your page/design work across devices. Don’t write <em>for</em> specific devices; write <em>for</em> your design and your content!</p>
+				<p>This is done in steps, at different widths, that we call <em>breakpoints</em>⁠<span class="mdash">—</span>the window/device/viewport sizes where the content <em>starts to break</em>, if it is not adjusted. This might be because lines of text get too short or too long, becoming hard to read. It might be to prevent a grid of images from becoming too small on a phone<span class="mdash">—</span>while you can have many columns on desktop, often you can only have one or two on mobile. You can add as many <em>breakpoints</em> as you need to make your page/design work across devices. Don’t write <em>for</em> specific devices; write <em>for</em> your design and your content!</p>
 
 				<p><em>There are very, very few layouts that won’t need some amount of horizontal responsiveness/breakpoints!</em></p>
 
@@ -377,7 +377,7 @@
 
 
 
-					<figcaption>Drag the code/example divider to the left to see it respond to the media query! Double-click to reset it.</figcaption>
+					<figcaption>Drag the code/example divider to the left to see it respond to the media query! <nobr>Double-click</nobr> to reset it.</figcaption>
 
 				</figure>
 
@@ -509,6 +509,7 @@
 				<div class="language-css half highlighter-rouge">
 					<div class="highlight">
 						<pre class="highlight"><code>	<span class="nd">:root</span> <span class="p">{</span>
+		<span class="c">/* Declare variable. */</span>
 		<span class="py">--brand-color</span><span class="p">:</span> <span class="m">#e42a1d</span><span class="p">;</span>
 	<span class="p">}</span>
 </code></pre>
@@ -518,6 +519,7 @@
 				<div class="language-css half highlighter-rouge">
 					<div class="highlight">
 						<pre class="highlight"><code>	<span class="nc">.brand-color</span> <span class="p">{</span>
+		<span class="c">/* Reference it. */</span>
 		<span class="nl">color</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="n">--brand-color</span><span class="p">);</span>
 	<span class="p">}</span>
 </code></pre>
@@ -649,7 +651,7 @@
 				</figure>
 
 				<blockquote class="quote">
-					<p>The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.</p>
+					<p>The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.</p>
 				</blockquote>
 
 				<p><cite><a href="https://www.w3.org/Press/IPO-announce">Tim Berners-Lee</a></cite></p>
