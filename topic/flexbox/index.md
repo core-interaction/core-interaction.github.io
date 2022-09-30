@@ -67,13 +67,17 @@ There is also `display: inline-flex;` which behaves the same, but the parent beh
 
 After specifying an element as *flex*, we can set its main axis with `[flex-direction](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction)`. By default (you don’t have to write it) this behaves as `flex-direction: row;`, so you’ll generally only be adding it when you want something going vertical—with `flex-direction: column;`.
 
-[The first section is `display: block;` by default. Also note that I gave them all a height, to show start/end!](https://typography-and-interaction-too.github.io/sandbox/flex-direction/demo)
+{% include figure.html src='/example/flex-direction/demo' %}
+
+
 
 The first section is `display: block;` by default. Also note that I gave them all a height, to show start/end!
 
 You can also combine these with a *reverse* option, which visually reorders the items along the *main axis*, flipping the *start* and *end*.
 
-[https://typography-and-interaction-too.github.io/sandbox/flex-direction-reverse/demo](https://typography-and-interaction-too.github.io/sandbox/flex-direction-reverse/demo)
+{% include figure.html src='/example/flex-direction-reverse/demo' %}
+
+
 
 *Keep in mind that this reordering is only visual—it does not change the order in the DOM. This means that keyboard navigation and screen readers still sequence through the items as they are in the HTML. So for good accessibility, keep in mind that semantic order!*
 
@@ -81,13 +85,17 @@ You can also combine these with a *reverse* option, which visually reorders the 
 
 Since flexbox is *one-dimensional*, by default it is going to try and cram everything into one line—even when there is not enough room! But you [can tell it to *wrap*](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap) onto additional lines by adding a `flex-wrap: wrap;` property (which behaves as `flex-wrap: nowrap;` by default).
 
-[https://typography-and-interaction-too.github.io/sandbox/flex-wrap/demo](https://typography-and-interaction-too.github.io/sandbox/flex-wrap/demo)
+{% include figure.html src='/example/flex-wrap/demo' %}
+
+
 
 *You can use this to make grids, and it is often sufficient. But but the [more recent CSS grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) properties will give you more control! We’ll talk about it soon.*
 
 There is also a *reverse* option here, which will wrap items from *end* to *start*. (I don’t think I have ever used these, honestly.)
 
-[I guess you could do some weird layouts with these.](https://typography-and-interaction-too.github.io/sandbox/flex-wrap-reverse/demo)
+{% include figure.html src='/example/flex-wrap-reverse/demo' %}
+
+
 
 I guess you could do some weird layouts with these.
 
@@ -95,7 +103,9 @@ I guess you could do some weird layouts with these.
 
 Okay, so most of what we’ve seen here is somewhat possible using *floats* and *positioning—*though not at all easily and only when you know the size/count of your content. But `[justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)` **is where flexbox starts to allow novel layouts, by dividing up the extra/available free space  elements.
 
-[I’m not going to show the vertical `flex-direction: column;` here, but it works the same—*but only if it has a height to justify within*! Otherwise the container will cinch up to the content height, as usual.](https://typography-and-interaction-too.github.io/sandbox/flex-justify-content/demo)
+{% include figure.html src='/example/flex-justify-content/demo' %}
+
+
 
 I’m not going to show the vertical `flex-direction: column;` here, but it works the same—*but only if it has a height to justify within*! Otherwise the container will cinch up to the content height, as usual.
 
@@ -103,7 +113,9 @@ I’m not going to show the vertical `flex-direction: column;` here, but it work
 
 And then perpendicular to *justify* along the *main axis,* flexbox has **`[align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)` to position elements along the *cross axis*. It has similar values.
 
-[Again, these also work for `flex-direction: column;`! Where they will move things left/right.](https://typography-and-interaction-too.github.io/sandbox/flex-align-items/demo)
+{% include figure.html src='/example/flex-align-items/demo' %}
+
+
 
 Again, these also work for `flex-direction: column;`! Where they will move things left/right.
 
@@ -111,7 +123,9 @@ Again, these also work for `flex-direction: column;`! Where they will move thing
 
 When we have a flex element with `flex-wrap` set, we can also [position the *lines* within](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content) the parent/container—akin to `justify-content` with individual items.
 
-[https://typography-and-interaction-too.github.io/sandbox/flex-align-content/demo](https://typography-and-interaction-too.github.io/sandbox/flex-align-content/demo)
+{% include figure.html src='/example/flex-align-content/demo' %}
+
+
 
 ## `gap`, `row-gap`, and `column-gap`
 
@@ -119,7 +133,9 @@ While you could use *margin* to separate your flex children, it would apply to t
 
 This is particularly helpful with dynamic, wrapping content and responsive designs—where you won’t always know which element ends or starts a line (to take their margin off).
 
-[Note the last one, `gap` are really *minimums* and only apply when there isn’t otherwise space.](https://typography-and-interaction-too.github.io/sandbox/flex-gap/demo)
+{% include figure.html src='/example/flex-gap/demo' %}
+
+
 
 Note the last one, `gap` are really *minimums* and only apply when there isn’t otherwise space.
 
@@ -140,7 +156,9 @@ I know I said that flexbox is applied on the parent/container—and that is true
 
 Kind of like the *reverse* properties—you can individually [apply an `order`](https://developer.mozilla.org/en-US/docs/Web/CSS/order) to a *flex item*. Items with the same/tied order (like everything with the default of `order: 0;`) will be displayed in their source order.
 
-[With the last one, since the default is `order: 0;`, negative numbers move stuff up to the front!](https://typography-and-interaction-too.github.io/sandbox/flex-order/demo)
+{% include figure.html src='/example/flex-order/demo' %}
+
+
 
 With the last one, since the default is `order: 0;`, negative numbers move stuff up to the front!
 
@@ -152,7 +170,9 @@ These tell the child items to… [grow](https://developer.mozilla.org/en-US/docs
 
 It takes a *unitless* proportional value (think fractions or a factor/multiplier). If you give one flexed child `flex-grow: 1;` it will take up all the extra space; another element with `flex-grow: 2;` would then take twice as much of that space as the first one (the available space with 3 total units).
 
-[https://typography-and-interaction-too.github.io/sandbox/flex-grow-shrink/demo](https://typography-and-interaction-too.github.io/sandbox/flex-grow-shrink/demo)
+{% include figure.html src='/example/flex-grow-shrink/demo' %}
+
+
 
 And `flex-shrink` works the same way—defining what proportion an element should shrink when forced to by the flex layout. The most use you’ll see of this is `flex-shrink: 0;`, which tells all the *other* items to shrink instead!
 
@@ -162,12 +182,16 @@ And `flex-shrink` works the same way—defining what proportion an element shoul
 
 You specify this *basis* with normal [length units](https://www.notion.so/CSS-Layout-d3ceeaa1758a4426941cb04a2ec78714) like `%` and `px`.
 
-[https://typography-and-interaction-too.github.io/sandbox/flex-basis/demo](https://typography-and-interaction-too.github.io/sandbox/flex-basis/demo)
+{% include figure.html src='/example/flex-basis/demo' %}
+
+
 
 ## `align-self`
 
 Finally, we have an individual override for an `[align-items](https://www.notion.so/CSS-Flexbox-ff476ed775c24daa8d1a4673bcc366f6)` property set on the parent—which adjusts (with the same keywords/values) the alignment of the specific child item it is applied to.
 
-[https://typography-and-interaction-too.github.io/sandbox/flex-align-self/demo](https://typography-and-interaction-too.github.io/sandbox/flex-align-self/demo)
+{% include figure.html src='/example/flex-align-self/demo' %}
+
+
 
 *Phew, that was a lot. `grid` will have to wait for another day, again.*
