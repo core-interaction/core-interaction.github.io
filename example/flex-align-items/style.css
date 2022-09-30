@@ -1,0 +1,30 @@
+/* Setup styles in the other file. */
+
+section {
+	display: flex;
+}
+
+section:nth-child(1) {
+	/* This is the default. */
+	align-items: stretch;
+}
+
+section:nth-child(2) {
+	align-items: flex-start;
+}
+
+section:nth-child(3) {
+	align-items: center;
+}
+
+section:nth-child(4) {
+	align-items: flex-end;
+}
+
+section:nth-child(5) {
+	align-items: baseline;
+}
+
+section:nth-child(5) div:first-child {
+	font-size: 200%;
+}

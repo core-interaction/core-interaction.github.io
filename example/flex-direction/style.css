@@ -1,0 +1,25 @@
+body {
+	font-family: sans-serif;
+	padding: 20px;
+}
+
+div {
+	background-color: tomato;
+	border-bottom: 2px solid firebrick;
+	border-right: 2px solid firebrick;
+	padding: 5px;
+}
+
+section {
+	background-color: gold;
+	height: 140px;
+}
+
+section:not(:first-child) {
+	margin-top: 20px;
+	display: flex;
+}
+
+section:nth-child(3) {
+	flex-direction: column;
+}

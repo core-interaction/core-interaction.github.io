@@ -1,0 +1,28 @@
+/* Setup styles in the other file. */
+
+section {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+section:nth-child(1) {
+	gap: 10px;
+}
+
+section:nth-child(2) {
+	row-gap: 10px;
+}
+
+section:nth-child(3) {
+	column-gap: 20px;
+}
+
+section:nth-child(4) {
+	gap: 10px 20px; /* Shorthand. */
+}
+
+section:nth-child(5) {
+	justify-content: space-between;
+	align-content: space-between;
+	gap: 10px; /* No effect here. */
+}

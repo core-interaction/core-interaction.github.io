@@ -1,0 +1,21 @@
+/* Setup styles in the other file. */
+
+section {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+div:first-child {
+	background-color: crimson;
+	order: 1;
+}
+
+div:nth-child(2) {
+	background-color: hotpink;
+	order: 2;
+}
+
+div:last-child {
+	background-color: lightsalmon;
+	order: -1;
+}

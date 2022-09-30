@@ -1,0 +1,16 @@
+section {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+}
+
+section:first-child {
+	gap: 10px;
+}
+
+section:nth-child(2) {
+	column-gap: 10px;
+}
+
+section:last-child {
+	row-gap: 10px;
+}
