@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
+
+		<title>Demo</title>
+		<link href="/assets/styles/reset.css" rel="stylesheet">
+		<link href="/assets/styles/common.css" rel="stylesheet">
+		<link href="/assets/styles/syntax.css" rel="stylesheet">
+		<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
+		<link href="/assets/icons/touch.png" rel="apple-touch-icon">
+
+		<script src="/assets/scripts/example.js"></script>
+
+		<meta name="theme-color" content="#e42a1d">
+	</head>
+	<body class="example">
+		<section>
+			<aside></aside>
+
+
+			<div id="files">
+				<ul>
+
+					<li tabindex=0 class="visible">
+						<p>style.css</p>
+					</li>
+
+					<li tabindex=0>
+						<p>setup.css</p>
+					</li>
+
+					<li tabindex=0>
+						<p>index.html</p>
+					</li>
+
+				</ul>
+			</div>
+
+			<div id="source">
+
+				<div class="visible">
+
+
+					<figure class="highlight">
+						<pre><code class="language-scss" data-lang="scss"><span class="cm">/* Setup styles in the other file. */</span>
+
+<span class="nt">section</span> <span class="p">{</span>
+	<span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+	<span class="nl">flex-wrap</span><span class="p">:</span> <span class="n">wrap</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">section</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">1</span><span class="o">)</span> <span class="p">{</span>
+	<span class="na">gap</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">section</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">2</span><span class="o">)</span> <span class="p">{</span>
+	<span class="na">row-gap</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">section</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">3</span><span class="o">)</span> <span class="p">{</span>
+	<span class="nl">column-gap</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">section</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">4</span><span class="o">)</span> <span class="p">{</span>
+	<span class="na">gap</span><span class="p">:</span> <span class="m">10px</span> <span class="m">20px</span><span class="p">;</span> <span class="cm">/* Shorthand. */</span>
+<span class="p">}</span>
+
+<span class="nt">section</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">5</span><span class="o">)</span> <span class="p">{</span>
+	<span class="nl">justify-content</span><span class="p">:</span> <span class="n">space-between</span><span class="p">;</span>
+	<span class="nl">align-content</span><span class="p">:</span> <span class="n">space-between</span><span class="p">;</span>
+	<span class="na">gap</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span> <span class="cm">/* No effect here. */</span>
+<span class="p">}</span></code></pre>
+					</figure>
+
+
+				</div>
+
+				<div>
+
+
+					<figure class="highlight">
+						<pre><code class="language-scss" data-lang="scss"><span class="nt">body</span> <span class="p">{</span>
+	<span class="nl">font-family</span><span class="p">:</span> <span class="nb">sans-serif</span><span class="p">;</span>
+	<span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span> <span class="p">{</span>
+	<span class="nl">background-color</span><span class="p">:</span> <span class="no">tomato</span><span class="p">;</span>
+	<span class="nl">border-bottom</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="no">firebrick</span><span class="p">;</span>
+	<span class="nl">border-right</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="no">firebrick</span><span class="p">;</span>
+	<span class="nl">padding</span><span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">section</span> <span class="p">{</span>
+	<span class="nl">background-color</span><span class="p">:</span> <span class="no">gold</span><span class="p">;</span>
+	<span class="nl">height</span><span class="p">:</span> <span class="m">120px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">section</span><span class="nd">:not</span><span class="o">(</span><span class="nd">:first-child</span><span class="o">)</span> <span class="p">{</span>
+	<span class="nl">margin-top</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span></code></pre>
+					</figure>
+
+
+				</div>
+
+				<div>
+
+
+					<figure class="highlight">
+						<pre><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+	<span class="nt">&lt;head&gt;</span>
+		<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/styles/reset.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"setup.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"style.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/head&gt;</span>
+	<span class="nt">&lt;body&gt;</span>
+		<span class="nt">&lt;section&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 1<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 2 <span class="nt">&lt;br&gt;</span>with line <span class="nt">&lt;br&gt;</span>breaks<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 3 <span class="nt">&lt;br&gt;</span>also<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 4<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 5 with more text<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/section&gt;</span>
+		<span class="nt">&lt;section&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 1<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 2 <span class="nt">&lt;br&gt;</span>with line <span class="nt">&lt;br&gt;</span>breaks<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 3 <span class="nt">&lt;br&gt;</span>also<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 4<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 5 with more text<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/section&gt;</span>
+		<span class="nt">&lt;section&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 1<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 2 <span class="nt">&lt;br&gt;</span>with line <span class="nt">&lt;br&gt;</span>breaks<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 3 <span class="nt">&lt;br&gt;</span>also<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 4<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 5 with more text<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/section&gt;</span>
+		<span class="nt">&lt;section&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 1<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 2 <span class="nt">&lt;br&gt;</span>with line <span class="nt">&lt;br&gt;</span>breaks<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 3 <span class="nt">&lt;br&gt;</span>also<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 4<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 5 with more text<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/section&gt;</span>
+		<span class="nt">&lt;section&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 1<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 2 <span class="nt">&lt;br&gt;</span>with line <span class="nt">&lt;br&gt;</span>breaks<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 3 <span class="nt">&lt;br&gt;</span>also<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 4<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 5 with more text<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/section&gt;</span>
+	<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre>
+					</figure>
+
+
+				</div>
+
+				<nav>
+					<p><a class="external" href="#" target="_blank"></a></p>
+				</nav>
+			</div>
+			<nav>
+				<p><a class="external" href="../index.html" target="_blank"></a></p>
+			</nav>
+		</section>
+		<iframe src="../index.html"></iframe>
+
+	</body>
+</html>

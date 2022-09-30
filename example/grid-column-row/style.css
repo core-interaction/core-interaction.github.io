@@ -1,0 +1,20 @@
+section {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+}
+
+div:first-child {
+	background-color: crimson;
+	grid-column: 1 / span 2;
+}
+
+div:nth-child(2) {
+	background-color: hotpink;
+}
+
+div:nth-child(3) {
+	background-color: lightsalmon;
+	grid-column: 2;
+	grid-row: 2 / 4;
+	/* Instead of span. */
+}

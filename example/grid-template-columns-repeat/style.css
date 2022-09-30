@@ -1,0 +1,10 @@
+section {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+@media (min-width: 400px) {
+	section {
+		grid-template-columns: repeat(6, 1fr);
+	}
+}

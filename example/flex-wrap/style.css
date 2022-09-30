@@ -1,0 +1,20 @@
+/* Setup styles in the other file. */
+
+section {
+	display: flex;
+}
+
+section:nth-child(2),
+section:nth-child(4) {
+	flex-wrap: wrap;
+}
+
+section:nth-child(3),
+section:nth-child(4) {
+	flex-direction: column;
+}
+
+section:nth-child(4) {
+	margin-top: 80px;
+	/* Get out from the one above. */
+}

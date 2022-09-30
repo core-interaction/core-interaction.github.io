@@ -1,0 +1,21 @@
+section {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+}
+
+section:first-child {
+	justify-items: stretch;
+	/* Default. */
+}
+
+section:nth-child(2) {
+	justify-items: start;
+}
+
+section:nth-child(3) {
+	justify-items: center;
+}
+
+section:last-child {
+	justify-items: end;
+}

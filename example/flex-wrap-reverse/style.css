@@ -1,0 +1,18 @@
+/* Setup styles in the other file. */
+
+section {
+	display: flex;
+	flex-wrap: wrap-reverse;
+}
+
+section:nth-child(2) {
+	flex-direction: row-reverse;
+}
+
+section:nth-child(3) {
+	flex-direction: column;
+}
+
+section:nth-child(4) {
+	flex-direction: column-reverse;
+}
