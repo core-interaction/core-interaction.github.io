@@ -297,7 +297,7 @@ All HTML elements can have [attributes](https://developer.mozilla.org/en-US/docs
 
 
 
-HTML doesn’t care about capitalization, extra white space, or line breaks. The browser will just read everything from left to right, as if it is one long, running sentence. So the shouty `<!DOCTYPE HTML>` and quieter `<!doctype html>` are interpreted the same.
+HTML doesn’t care about capitalization, extra white space, or line breaks. The browser will just read everything from left to right, as if it is one long, running sentence. So the shouty `<HTML>` and quieter `<html>` are interpreted the same.
 
 The browser parses both of these in the exact same way:
 {: .two-above .one-below }
