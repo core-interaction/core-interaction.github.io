@@ -4,7 +4,7 @@ section {
 }
 
 section:nth-child(1) {
-	justify-content: flex-start;
+	justify-content: start;
 	/* Default. */
 }
 
@@ -13,7 +13,7 @@ section:nth-child(2) {
 }
 
 section:nth-child(3) {
-	justify-content: flex-end;
+	justify-content: end;
 }
 
 section:nth-child(4) {
