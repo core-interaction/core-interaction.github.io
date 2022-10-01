@@ -1,10 +1,11 @@
 section {
 	display: flex;
+	height: 80px;
 }
 
 section:nth-child(1) {
-	/* This is the default. */
 	justify-content: flex-start;
+	/* Default. */
 }
 
 section:nth-child(2) {
