@@ -1,6 +1,7 @@
 section {
 	display: flex;
 	flex-wrap: wrap;
+	height: 140px;
 }
 
 section:nth-child(1) {

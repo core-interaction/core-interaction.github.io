@@ -129,21 +129,18 @@ When we have a flex element with `flex-wrap` set, we can also [position the *li
 
 ### `gap`, `row-gap`, and `column-gap`
 
-While you could use *margin* to separate your flex children, it would apply to the items on the outer edges, too. (Hence all my `:not(:first-child)` selectors. Flex recently gained support for `[gap` properties](https://developer.mozilla.org/en-US/docs/Web/CSS/gap), which fix this problem—by applying spacing only *between* children.
+While you could use *margin* to separate your flex children, it would apply to the items on the outer edges, too. (Hence all my `:not(:first-child)` selectors, in examples.) Flex recently gained support for intuitive [gap properties](https://developer.mozilla.org/en-US/docs/Web/CSS/gap), which fix this problem—by applying spacing only *between* children.
 
-This is particularly helpful with dynamic, wrapping content and responsive designs—where you won’t always know which element ends or starts a line (to take their margin off).
+This is particularly helpful with dynamic, wrapping content and responsive designs—where you won’t always know which element ends or starts a line (to take their margin off):
 
-{% include figure.html src='/example/flex-gap/demo' %}
+{% include figure.html src='/example/flex-gap/demo' caption='Note the last one, `gap` are really *minimums* and only apply when there isn’t otherwise space.' height='83rem' %}
+
+Note that the `justify`, `align`, and `gap` properties are also shared (in name and behavior) with `display: grid;`, when we get there!
 
 
 
-Note the last one, `gap` are really *minimums* and only apply when there isn’t otherwise space.
-
-The `justify`, `align`, and `gap` properties are also shared (in name and behavior) with `display: grid;`, when we get there!
-
-<aside>
-😵‍💫 This is a lot of stuff! Flex can be tough to wrap one’s head around, but it is *so much better* than float and width and margin shenanigans. Much of what you look at on the web is laid out in flex (and its sort-of successor which I keep hinting at, *grid*).
-</aside>
+> This is a lot of stuff! Flex can be tough to wrap one’s head around, but it is *so much better* than float and width and margin shenanigans. Much of what you look at on the web is laid out in flex (and its sort-of successor which I keep hinting at, *grid*).
+{: .callout icon='😵‍💫' }
 
 
 
