@@ -200,7 +200,7 @@ And `align-items` directly corresponds to the [flex values](/topic/flexbox/#alig
 
 Note that there isn’t any change on the last *implicit* row with the default `auto`/content height.
 
-*There are [also baseline align values](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items), but I don’t think I’ve ever seen them used!*
+*There are [also baseline align values](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items), but I don’t think I’ve ever seen them used!*
 
 
 

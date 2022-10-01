@@ -97,7 +97,7 @@ Since flexbox is *one-dimensional*, by default it is going to try and cram every
 
 *You can use this to make grids, and it is often sufficient. But but the [more recent CSS grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) properties will give you more control! We’ll talk about it soon.*
 
-There is also a *reverse* option here, which will wrap items from *end* to *start*. (I don’t think I have ever used these, honestly.)
+There is also a *reverse* option here, which will wrap items from *end* to *start*. (I don’t think I have ever used these, honestly.)
 
 {% include figure.html src='/example/flex-wrap-reverse/demo' %}
 
@@ -154,7 +154,7 @@ Note the last one, `gap` are really *minimums* and only apply when there isn’t
 The `justify`, `align`, and `gap` properties are also shared (in name and behavior) with `display: grid;`, when we get there!
 
 <aside>
-😵‍💫 This is a lot of stuff! Flex can be tough to wrap one’s head around, but it is *so much better* than float and width and margin shenanigans. Much of what you look at on the web is laid out in flex (and its sort-of successor which I keep hinting at, *grid*).
+😵‍💫 This is a lot of stuff! Flex can be tough to wrap one’s head around, but it is *so much better* than float and width and margin shenanigans. Much of what you look at on the web is laid out in flex (and its sort-of successor which I keep hinting at, *grid*).
 </aside>
 
 
@@ -163,7 +163,7 @@ The `justify`, `align`, and `gap` properties are also shared (in name and behavi
 
 
 
-I know I said that flexbox is applied on the parent/container—and that is true. But once you’ve applied `display: flex;` on an element, there are also some individual override properties that can be given to its children, *flex items*.
+I know I said that flexbox is applied on the parent/container—and that is true. But once you’ve applied `display: flex;` on an element, there are also some individual override properties that can be given to its children, *flex items*.
 
 
 
@@ -177,7 +177,7 @@ Kind of like the *reverse* properties—you can individually [apply an `order`](
 
 With the last one, since the default is `order: 0;`, negative numbers move stuff up to the front!
 
-*Other order selectors (like `:first-child`) won’t be fooled by this reordering—as you can see, I used them here. They still use the DOM order. And again, this change is only visual—so don’t use it when screen reader/content sequence accessibility is a concern!*
+*Other order selectors (like `:first-child`) won’t be fooled by this reordering—as you can see, I used them here. They still use the DOM order. And again, this change is only visual—so don’t use it when screen reader/content sequence accessibility is a concern!*
 
 
 
