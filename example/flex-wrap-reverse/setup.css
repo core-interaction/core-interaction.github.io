@@ -12,7 +12,7 @@ div {
 
 section {
 	background-color: gold;
-	height: 120px;
+	min-height: 120px;
 }
 
 section:not(:first-child) {

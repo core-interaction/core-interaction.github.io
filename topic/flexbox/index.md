@@ -71,11 +71,11 @@ Unlike most (…all?) of the CSS we’ve been introduced to, *flex* is applied o
 
 After specifying an element as *flex*, we can set its main axis with [flex-direction](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction). By default (you don’t have to write it) this behaves as `flex-direction: row;`, so you’ll generally only be adding it when you want something going vertical—with `flex-direction: column;`.
 
-{% include figure.html src='/example/flex-direction/demo' caption='The first section is `display: block;` by default. Also note that I gave them all a height, to show start/end!' height='60rem' %}
+{% include figure.html src='/example/flex-direction/demo' caption='The first section is `display: block;` by default. Also note that I gave them all a `min-height`, to show start/end!' height='60rem' %}
 
 You can also combine these with a *reverse* option, which visually reorders the items along the *main axis*, flipping the *start* and *end*.
 
-{% include figure.html src='/example/flex-direction-reverse/demo' height='38rem' %}
+{% include figure.html src='/example/flex-direction-reverse/demo' height='36rem' %}
 
 Keep in mind that this reordering is only visual—it does not change the order in the DOM. This means that keyboard navigation and screen readers still sequence through the items as they are in the HTML. So for good accessibility, keep in mind that semantic order!
 
@@ -83,21 +83,15 @@ Keep in mind that this reordering is only visual—it does not change the order 
 
 ### `flex-wrap`
 
-Since flexbox is *one-dimensional*, by default it is going to try and cram everything into one line—even when there is not enough room! But you [can tell it to *wrap*](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap) onto additional lines by adding a `flex-wrap: wrap;` property (which behaves as `flex-wrap: nowrap;` by default).
+Since flexbox is *one-dimensional*, by default it is going to try and cram everything into one line—even when there is not enough room! But you can tell it [to *wrap*](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap) onto additional lines by adding a `flex-wrap: wrap;` property (which behaves as `flex-wrap: nowrap;` by default).
 
-{% include figure.html src='/example/flex-wrap/demo' %}
+{% include figure.html src='/example/flex-wrap/demo' height='65rem' %}
 
-
-
-You can use this to make grids, and it is often sufficient. But but the [more recent CSS grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) properties will give you more control! We’ll talk about it soon.
+You can use this to make grids, and it is often sufficient. But but the [more recent CSS grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) properties will give you more control! We’ll talk about `grid` soon.
 
 There is also a *reverse* option here, which will wrap items from *end* to *start*. (I don’t think I have ever used these, honestly.)
 
-{% include figure.html src='/example/flex-wrap-reverse/demo' %}
-
-
-
-I guess you could do some weird layouts with these.
+{% include figure.html src='/example/flex-wrap-reverse/demo' caption='I guess you could do some weird layouts with these.' height='65rem' %}
 
 
 
