@@ -6,7 +6,7 @@ published: false
 
 
 
-*[Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox),* short for *flexible boxes*—which folks (and I) will often just shorten all the way to *flex—*is a relatively recent addition to CSS. (Is 2017 still recent? It feels like a lifetime ago.) *Flex* was created to facilitate and allow CSS layouts that the *box model*, *floats* and *position* either made difficult or even impossible. It is a *[display](https://developer.mozilla.org/en-US/docs/Web/CSS/display)* property.
+[*Flexbox*](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox), short for *flexible boxes*—which folks will often just shorten all the way to *flex*&#8288;—is a relatively recent addition to CSS. (Is 2017 still recent? It feels like a lifetime ago.) *Flex* was created to facilitate and allow CSS layouts that the [*the box model*](/topic/box-model/) (with its *floats* and *position*) either made difficult, brittle, or even impossible. It is a *[display](https://developer.mozilla.org/en-US/docs/Web/CSS/display)* property.
 {: .left }
 
 - [A complete guide to flexbox | CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) \
@@ -21,28 +21,29 @@ published: false
 
 
 
-And let me tell you—being a web designer was a whole lot harder before *flex* came on the scene. (Notice that we haven’t yet talked about vertical centering, for instance. You don’t want to know.) Flex encapsulates a lot of decent Design ideas in its system.
+And let me tell you—being a web designer was a whole lot harder before *flex* came on the scene. (Hence the “Finally.”) Notice that we haven’t yet talked about vertical centering, for instance—you don’t want to know. And you don’t have to worry about it! Flex encapsulates a lot of decent Design paradigms in its system.
 
 
 
 ## *Main* and *cross* axes
 
-Flexbox is a *one-dimensional* layout system—meaning it is focused on arranging items either horizontally in rows, or vertically in columns.
+Flexbox is a *one-dimensional* layout system—meaning it is (usually) focused on arranging items either horizontally in rows, or vertically in columns:
 
 ![I [borrowed](https://medium.com/fasal-engineering/css-flexbox-explained-998ea188a351) this, it’s alright.](Untitled.png)
 
 I [borrowed](https://medium.com/fasal-engineering/css-flexbox-explained-998ea188a351) this, it’s alright.
 
-**These are called the *axes*, and the one running in the direction of your flex items is your *main axis*. Perpendicular to this is your *cross axis*.**
+These are called the *axes*, and the one running in the direction of your flex items is your *main axis*. Perpendicular to this is your *cross axis*.
 
 
 
 ## Start/end
 
-In both directions*,* flex also lets us position elements towards the *start* or the *end* of the *axis:*
+In both directions, flex also lets us position elements towards the *start* or the *end* of the *axis:*
 
-- **For rows:** the start/end in the *main axis* are left/right and in the *cross axis* are top/bottom.
-- **For columns:** it is perpendicular—the *main* start/end means top/bottom, and the *cross* is then left/right.
+- *For rows:* the start/end in the *main axis* are left/right, and in the *cross axis* are top/bottom.
+
+- *For columns:* it is perpendicular—the *main* start/end means top/bottom, and the *cross* is then left/right.
 
 ![This is from the masterpiece [CSS Tricks article](https://css-tricks.com/snippets/css/a-guide-to-flexbox/). ](00-basic-terminology.svg)
 
@@ -52,7 +53,7 @@ This is from the masterpiece [CSS Tricks article](https://css-tricks.com/snippet
 
 ### Shorthand?
 
-Like a lot of CSS, *flex* has [shorthand](https://developer.mozilla.org/en-US/docs/Web/CSS/flex) [properties](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-flow). But I would avoid them—the system is hard enough to parse, and we aren’t being charged by the CSS line. This will be true when we get to `grid` as well—often being a little bit more verbose in your code will make things easier to understand, especially starting out.
+Like a lot of CSS, *flex* has [shorthand](https://developer.mozilla.org/en-US/docs/Web/CSS/flex) [properties](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-flow). But I would avoid them—the system is hard enough to understand, and we aren’t being charged by the CSS line. This will be true when we get to `grid` as well—often being a little bit more verbose in your code will make things easier to understand, especially starting out.
 
 
 
@@ -60,9 +61,9 @@ Like a lot of CSS, *flex* has [shorthand](https://developer.mozilla.org/en-US/d
 
 
 
-Unlike most (all?) of the CSS we’ve been introduced to, *flex* is applied on a parent element—but really adjusts the layout of the *children*. An element with  `display: flex;` is really telling you what its kids are going to be doing.
+Unlike most (…all?) of the CSS we’ve been introduced to, *flex* is applied on a *parent* element—but actually adjusts the layout of the *children*. An element with `display: flex;` is really telling you what its kids are going to be doing.
 
-There is also `display: inline-flex;` which behaves the same, but the parent behaves as an inline element while the children are flexing.
+*There is also `display: inline-flex;` which behaves the same, but the parent behaves as an inline element while its children are flexing.*
 
 
 
