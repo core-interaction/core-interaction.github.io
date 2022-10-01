@@ -3846,8 +3846,8 @@ body.example > section #source > div:not(.visible) {
 }
 
 body.example > section nav {
-	margin-right: calc(var(--link--enlargement) * 1.5);
-	margin-top: var(--link--enlargement);
+	margin-right: calc(var(--border--radius) * 1.5);
+	margin-top: var(--border--radius);
 	position: absolute;
 	right: var(--border--radius);
 	top: var(--border--radius);
