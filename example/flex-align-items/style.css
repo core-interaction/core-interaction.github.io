@@ -1,14 +1,14 @@
 section {
 	display: flex;
+	height: 100px;
 }
 
 section:nth-child(1) {
-	/* This is the default. */
-	align-items: stretch;
+	align-items: stretch; /* Default. */
 }
 
 section:nth-child(2) {
-	align-items: flex-start;
+	align-items: start;
 }
 
 section:nth-child(3) {
@@ -16,7 +16,7 @@ section:nth-child(3) {
 }
 
 section:nth-child(4) {
-	align-items: flex-end;
+	align-items: end;
 }
 
 section:nth-child(5) {

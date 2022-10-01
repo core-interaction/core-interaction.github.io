@@ -6,7 +6,7 @@ published: false
 
 
 
-[*Flexbox*](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox), short for *flexible boxes*—which folks will often just shorten all the way to *flex*&#8288;—is a relatively recent addition to CSS. (Is 2017 still recent? It feels like a lifetime ago.) *Flex* was created to facilitate and allow CSS layouts that the [*the box model*](/topic/box-model/) (with its *floats* and *position*) either made difficult, brittle, or even impossible. It is a *[display](https://developer.mozilla.org/en-US/docs/Web/CSS/display)* property.
+[*Flexbox*](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox), short for *flexible boxes*—which folks will often just shorten all the way to *flex*&#8288;—is a relatively recent addition to CSS. (Is 2017 still recent? It feels like a lifetime ago.) *Flex* was created to facilitate and allow CSS layouts that the [*the box model*](/topic/box-model/) (with its *floats* and *position*) either made difficult, brittle, or even impossible. It is a *[display](https://developer.mozilla.org/en-US/docs/Web/CSS/display)* property.
 {: .left }
 
 - [A complete guide to flexbox | CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) \
@@ -69,7 +69,7 @@ Unlike most (…all?) of the CSS we’ve been introduced to, *flex* is applied o
 
 ### `flex-direction`
 
-After specifying an element as *flex*, we can set its main axis with [flex-direction](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction). By default (you don’t have to write it) this behaves as `flex-direction: row;`, so you’ll generally only be adding it when you want something going vertical—with `flex-direction: column;`.
+After specifying an element as *flex*, we can set its main axis with [flex-direction](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction). By default (you don’t have to write it) this behaves as `flex-direction: row;`, so you’ll generally only be adding it when you want something going vertical—with `flex-direction: column;`:
 
 {% include figure.html src='/example/flex-direction/demo' caption='The first section is `display: block;` by default. Also note that I gave them all a `min-height`, to show start/end!' height='60rem' %}
 
@@ -83,39 +83,35 @@ Keep in mind that this reordering is only visual—it does not change the order 
 
 ### `flex-wrap`
 
-Since flexbox is *one-dimensional*, by default it is going to try and cram everything into one line—even when there is not enough room! But you can tell it [to *wrap*](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap) onto additional lines by adding a `flex-wrap: wrap;` property (which behaves as `flex-wrap: nowrap;` by default).
+Since flexbox is *one-dimensional*, by default it is going to try and cram everything into one line—even when there is not enough room! But you can tell it [to *wrap*](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap) onto additional lines by adding a `flex-wrap: wrap;` property (which behaves as `flex-wrap: nowrap;` by default):
 
 {% include figure.html src='/example/flex-wrap/demo' height='65rem' %}
 
 You can use this to make grids, and it is often sufficient. But but the [more recent CSS grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) properties will give you more control! We’ll talk about `grid` soon.
 
-There is also a *reverse* option here, which will wrap items from *end* to *start*. (I don’t think I have ever used these, honestly.)
+There is also a *reverse* option here, which will wrap items from *end* to *start*:
 
-{% include figure.html src='/example/flex-wrap-reverse/demo' caption='I guess you could do some weird layouts with these.' height='65rem' %}
+{% include figure.html src='/example/flex-wrap-reverse/demo' caption='You could do some weird layouts with these, but keep in mind the order is only visual. I don’t think I have ever used these!' height='65rem' %}
 
 
 
 ### `justify-content`
 
-Okay, so most of what we’ve seen here is somewhat possible using *floats* and *positioning—*though not at all easily and only when you know the size/count of your content. But [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) is where flexbox starts to allow novel layouts, by dividing up the extra/available free space elements.
+Okay, so most of what we’ve seen here is somewhat possible using *floats* and *positioning—*though not at all easily and only when you know the size/count of your content. But [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) is where flexbox starts to allow novel layouts, by dividing up the extra/available free space elements—akin to *distribute* options in Figma/<wbr>Adobe applications:
 
-{% include figure.html src='/example/flex-justify-content/demo' caption='Akin to *distribute* options in Figma/Adobe applications.' height='67rem' %}
+{% include figure.html src='/example/flex-justify-content/demo' caption='The `start` / `end` values [have some nuance](https://csslayout.news/whats-the-difference-between-the-alignment-values-of-start-flex-start-and-self-start/) with different writing directions, but this rarely comes up.' height='67rem' %}
 
 I’m not going to show the vertical `flex-direction: column;` here, but it works the same—*but the justification only if it has a height to justify within*! Otherwise the container will cinch up to the content height, as usual.
 
 
 
 
-
 ### `align-items`
 
-And then perpendicular to *justify* along the *main axis,* flexbox has **`[align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)` to position elements along the *cross axis*. It has similar values.
+And then perpendicular to *justify* along the *main axis*, flexbox has [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items) to position elements along the *cross axis*. It has similar values.
 
-{% include figure.html src='/example/flex-align-items/demo' %}
+{% include figure.html src='/example/flex-align-items/demo' caption='Again, these also work for `flex-direction: column;`! Where they will move things left/right.' height='66rem' %}
 
-
-
-Again, these also work for `flex-direction: column;`! Where they will move things left/right.
 
 
 
