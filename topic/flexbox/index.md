@@ -97,13 +97,13 @@ There is also a *reverse* option here, which will wrap items from *end* to *sta
 
 ### `justify-content`
 
-Okay, so most of what we’ve seen here is somewhat possible using *floats* and *positioning—*though not at all easily and only when you know the size/count of your content. But `[justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)` **is where flexbox starts to allow novel layouts, by dividing up the extra/available free space  elements.
+Okay, so most of what we’ve seen here is somewhat possible using *floats* and *positioning—*though not at all easily and only when you know the size/count of your content. But [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) is where flexbox starts to allow novel layouts, by dividing up the extra/available free space elements.
 
-{% include figure.html src='/example/flex-justify-content/demo' %}
+{% include figure.html src='/example/flex-justify-content/demo' caption='Akin to *distribute* options in Figma/Adobe applications.' height='67rem' %}
+
+I’m not going to show the vertical `flex-direction: column;` here, but it works the same—*but the justification only if it has a height to justify within*! Otherwise the container will cinch up to the content height, as usual.
 
 
-
-I’m not going to show the vertical `flex-direction: column;` here, but it works the same—*but only if it has a height to justify within*! Otherwise the container will cinch up to the content height, as usual.
 
 
 
