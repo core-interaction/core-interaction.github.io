@@ -2,6 +2,12 @@ section {
 	display: flex;
 }
 
+section:nth-child(1),
+section:nth-child(3) {
+	flex-wrap: nowrap;
+	/* Default. */
+}
+
 section:nth-child(2),
 section:nth-child(4) {
 	flex-wrap: wrap;
