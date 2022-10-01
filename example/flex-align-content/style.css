@@ -1,15 +1,17 @@
 section {
 	display: flex;
 	flex-wrap: wrap;
+	height: 120px;
 }
 
+div { width: 120px; } /* So they wrap. */
+
 section:nth-child(1) {
-	align-content: stretch;
-	/* 	This is the default. */
+	align-content: stretch; /* Default. */
 }
 
 section:nth-child(2) {
-	align-content: flex-start;
+	align-content: start;
 }
 
 section:nth-child(3) {
@@ -17,7 +19,7 @@ section:nth-child(3) {
 }
 
 section:nth-child(4) {
-	align-content: flex-end;
+	align-content: end;
 }
 
 section:nth-child(5) {
