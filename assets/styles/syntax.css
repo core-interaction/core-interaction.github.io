@@ -174,7 +174,6 @@
 .highlight .cm + .o,
 .highlight .cm + .o + .p,
 .highlight .cm + .o + .p ~ .p + .p,
-.highlight .nt + .nd + .o,
 .highlight .nt + .nd + .o + .nt {
   color: #ffa11f;
 }
@@ -196,13 +195,13 @@
 }
 
 .highlight .nd,
-.highlight .nd + .o,
+.highlight .nt + .nd + .o,
 .highlight .nd + .o + .err,
 .highlight .nd + .o + * + .o {
   color:#b56aa6;
 }
 
-.highlight .nd + .o + .nt,
+.highlight .nt + .nd + .o + .nt,
 .highlight .nt + .nd + .o + .nd,
 .highlight .k,
 .highlight .k + .p,
@@ -220,6 +219,6 @@
   color: #c52e28;
 }
 
-.highlight .cm + .nt + .nd + .o + span.nt:nth-child(5) { /* Don’t ask. */
+.highlight .cm:first-child + .nt + .nd + .o + .nt { /* Don’t ask. */
   color: #ffa11f;
 }
