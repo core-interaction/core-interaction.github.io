@@ -1,10 +1,10 @@
 section {
 	display: flex;
-	flex-direction: column;
+	flex-direction: column; /* Vertical. */
 }
 
 section:nth-child(1) {
-	align-items: stretch;
+	align-items: stretch; /* Default. */
 }
 
 section:nth-child(2) {
