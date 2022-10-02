@@ -6,7 +6,7 @@ published: false
 
 
 
-[*Flexbox*](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox), short for *flexible boxes*—which folks will often just shorten all the way to *flex*&#8288;—is a later (mid-2010s, depending on how you count) addition to CSS. *Flex* was created to facilitate and allow CSS layouts that the [*the box model*](/topic/box-model/) (with its *floats* and *position*) either made difficult, brittle, or even impossible. It is a *[display](https://developer.mozilla.org/en-US/docs/Web/CSS/display)* property.
+[*Flexbox*](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox), short for *flexible boxes*—which folks will often just shorten all the way to *flex*&#8288;—is a later (mid-2010s, depending on how you count) addition to CSS. *Flex* was created to facilitate and allow CSS layouts that [*the box model*](/topic/box-model/) (with its *floats* and *position*) either made difficult, brittle, or even impossible. It is a *[display](https://developer.mozilla.org/en-US/docs/Web/CSS/display)* property.
 {: .left }
 
 - [A complete guide to flexbox | CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) \
@@ -21,7 +21,7 @@ published: false
 
 
 
-And let me tell you—being a web designer was a whole lot harder before *flex* came on the scene. (Hence the “Finally.”) Notice that we haven’t yet talked about vertical centering, for instance—you don’t want to know. And you don’t have to worry about it! Flex encapsulates a lot of decent Design paradigms in its system.
+And let me tell you—being a web designer was a whole lot harder before *flex* came on the scene. (Hence the “Finally.”) Notice that we haven’t yet talked about vertical centering, for instance—you don’t want to know. And you don’t have to worry about it! Flex encapsulates a lot of decent design paradigms in its system.
 
 
 
@@ -149,9 +149,9 @@ Flexbox is *usually* applied on the parent/container. But once you’ve set `dis
 
 ### `order`
 
-Kind of like the *reverse* properties—you can individually [apply an order](https://developer.mozilla.org/en-US/docs/Web/CSS/order) to a *flex item* (child). Items with the same/tied order (like everything with the default of `order: 0;`) will be displayed in their DOM/source order.
+Kind of like the *reverse* properties—you can individually [apply an order](https://developer.mozilla.org/en-US/docs/Web/CSS/order) to a *flex item* (child). Items with the same/tied order (like everything with the default of `order: 0;`) will be displayed in their DOM/source order:
 
-{% include figure.html src='/example/flex-order/demo' caption='With the last one, since the default is `order: 0;`, negative numbers move stuff up to the front!' height='48rem' %}
+{% include figure.html src='/example/flex-order/demo' caption='With the last one, since the default is `order: 0;`, negative numbers move stuff up to the front!' height='52rem' %}
 
 Other order selectors (like `:first-child`) won’t be fooled by this reordering—as you can see, I used them here. They still use the DOM order. And again, this change is only visual—so don’t use it when screen reader/content sequence accessibility is a concern!
 
@@ -161,7 +161,7 @@ Other order selectors (like `:first-child`) won’t be fooled by this reordering
 
 These tell the child items to… [grow](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow) or [shrink](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink), if necessary—defining the amount of available/remaining space in the container an element should take up. (I like to think of these as bento boxes.)
 
-It takes a *unitless* proportional value (think fractions or a factor/multiplier). If you give one flexed child `flex-grow: 1;` it will take up all the extra space; another element with `flex-grow: 2;` would then take twice as much of that space as the first one (the available space with 3 total units).
+It takes a *unitless* proportional value (think fractions or a factor/multiplier). If you give one flexed child `flex-grow: 1;` it will take up all the extra space; another element with `flex-grow: 2;` would then take twice as much of that space as the first one (the available space with 3 total units):
 
 {% include figure.html src='/example/flex-grow-shrink/demo' height='74rem' %}
 
@@ -173,15 +173,15 @@ And `flex-shrink` works the same way—defining what proportion an element shoul
 
 [*Flex-basis*](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis) is a little like *width* and *height*—depending on your *main axis*. This property defines what the child item’s content box size should be before any remaining space is distributed. This defaults to `auto`, which falls back to any specified `width` or `height`—and if those aren’t present, will just use the size of the content.
 
-You specify this *basis* with normal [length units](/topic/box-model/#and-their-units) like `%` and `px`.
+You specify this *basis* with normal [length units](/topic/box-model/#and-their-units) like `%` and `px` :
 
-{% include figure.html src='/example/flex-basis/demo' height='30rem' %}
+{% include figure.html src='/example/flex-basis/demo' caption='You are [usually fine](https://stackoverflow.com/a/34355447) just specifying `width` / `height`.' height='30rem' %}
 
 
 
 ### `align-self`
 
-Finally, we have an individual override for an [align-items`](#align-items) property set on the parent—which adjusts (with the same keywords/values) the alignment of the *specific* child item it is applied to.
+Finally, we have an individual override for an [align-items](#align-items) property set on the parent—which adjusts (with the same keywords/values) the alignment of the *specific* child item it is applied to"
 
 {% include figure.html src='/example/flex-align-self/demo' height='60rem' %}
 

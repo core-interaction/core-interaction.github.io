@@ -3,7 +3,9 @@ section {
 	height: 120px;
 }
 
-div:first-child {
+div { order: 0; } /* Default. */
+
+div:nth-child(1) {
 	background-color: crimson;
 	order: 1;
 }
@@ -13,7 +15,7 @@ div:nth-child(2) {
 	order: 2;
 }
 
-div:last-child {
+div:nth-child(5) {
 	background-color: lightsalmon;
 	order: -1;
 }
