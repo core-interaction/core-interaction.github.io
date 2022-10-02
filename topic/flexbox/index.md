@@ -123,6 +123,8 @@ When we have a flex element with `flex-wrap` set, we can also [position the *li
 
 {% include figure.html src='/example/flex-align-content/demo' caption='These wouldn’t do anything without the `height` and the `flex-wrap`.' height='101rem' %}
 
+And `align-content` can also be used with a vertical / `flex-direction: column;` axis, not shown here. This doesn’t often come up, as you have to specify/know a height to force a column wrap.
+
 
 
 ### `gap`, `row-gap`, and `column-gap`
