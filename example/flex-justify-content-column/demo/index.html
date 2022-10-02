@@ -15,7 +15,7 @@
 		<meta name="theme-color" content="#e42a1d">
 	</head>
 	<body class="example">
-		<section style="--split: 53%;">
+		<section>
 			<aside></aside>
 
 
@@ -43,37 +43,40 @@
 
 
 					<figure class="highlight">
-						<pre><code class="language-scss" data-lang="scss"><span class="nt">section</span> <span class="p">{</span>
+						<pre><code class="language-scss" data-lang="scss"><span class="cm">/* So the `section` are in a row! */</span>
+<span class="nt">body</span> <span class="p">{</span>
 	<span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
-	<span class="nl">height</span><span class="p">:</span> <span class="m">120px</span><span class="p">;</span>
+	<span class="na">gap</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span> <span class="cm">/* We’ll get to this below. */</span>
 <span class="p">}</span>
 
-<span class="nt">section</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">2</span><span class="o">)</span> <span class="nt">div</span> <span class="p">{</span>
-	<span class="nl">flex-grow</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span> <span class="cm">/* All grow equally. */</span>
+<span class="nt">section</span> <span class="p">{</span>
+	<span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+	<span class="nl">flex-direction</span><span class="p">:</span> <span class="n">column</span><span class="p">;</span> <span class="cm">/* Vertical! */</span>
+	<span class="nl">height</span><span class="p">:</span> <span class="m">400px</span><span class="p">;</span> <span class="cm">/* Force a height. */</span>
 <span class="p">}</span>
 
-<span class="nt">section</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">3</span><span class="o">)</span> <span class="nt">div</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">1</span><span class="o">)</span> <span class="p">{</span>
-	<span class="nl">background-color</span><span class="p">:</span> <span class="no">hotpink</span><span class="p">;</span>
-	<span class="nl">flex-grow</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span> <span class="cm">/* Just grow this one. */</span>
+<span class="nt">section</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">1</span><span class="o">)</span> <span class="p">{</span>
+	<span class="nl">justify-content</span><span class="p">:</span> <span class="n">start</span><span class="p">;</span> <span class="cm">/* Default. */</span>
 <span class="p">}</span>
 
-<span class="nt">section</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">4</span><span class="o">)</span> <span class="nt">div</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">1</span><span class="o">)</span> <span class="p">{</span>
-	<span class="nl">background-color</span><span class="p">:</span> <span class="no">hotpink</span><span class="p">;</span>
-	<span class="nl">flex-grow</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
+<span class="nt">section</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">2</span><span class="o">)</span> <span class="p">{</span>
+	<span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nt">section</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">4</span><span class="o">)</span> <span class="nt">div</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">2</span><span class="o">)</span> <span class="p">{</span>
-	<span class="nl">background-color</span><span class="p">:</span> <span class="no">crimson</span><span class="p">;</span>
-	<span class="nl">flex-grow</span><span class="p">:</span> <span class="m">2</span><span class="p">;</span> <span class="cm">/* Grow twice as much. */</span>
+<span class="nt">section</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">3</span><span class="o">)</span> <span class="p">{</span>
+	<span class="nl">justify-content</span><span class="p">:</span> <span class="n">end</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nt">section</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">5</span><span class="o">)</span> <span class="nt">div</span> <span class="p">{</span>
-	<span class="nl">width</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span> <span class="cm">/* With 3 `div` would be 150%. */</span>
+<span class="nt">section</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">4</span><span class="o">)</span> <span class="p">{</span>
+	<span class="nl">justify-content</span><span class="p">:</span> <span class="n">space-between</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nt">section</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">5</span><span class="o">)</span> <span class="nt">div</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">1</span><span class="o">)</span> <span class="p">{</span>
-	<span class="nl">background-color</span><span class="p">:</span> <span class="no">lightsalmon</span><span class="p">;</span>
-	<span class="nl">flex-shrink</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span> <span class="cm">/* Don’t shrink this one! */</span>
+<span class="nt">section</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">5</span><span class="o">)</span> <span class="p">{</span>
+	<span class="nl">justify-content</span><span class="p">:</span> <span class="n">space-around</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">section</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">6</span><span class="o">)</span> <span class="p">{</span>
+	<span class="nl">justify-content</span><span class="p">:</span> <span class="n">space-evenly</span><span class="p">;</span>
 <span class="p">}</span></code></pre>
 					</figure>
 
@@ -98,10 +101,6 @@
 
 <span class="nt">section</span> <span class="p">{</span>
 	<span class="nl">background-color</span><span class="p">:</span> <span class="no">gold</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nt">section</span><span class="nd">:not</span><span class="o">(</span><span class="nd">:first-child</span><span class="o">)</span> <span class="p">{</span>
-	<span class="nl">margin-top</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
 <span class="p">}</span></code></pre>
 					</figure>
 
@@ -121,6 +120,17 @@
 		<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"style.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
 	<span class="nt">&lt;/head&gt;</span>
 	<span class="nt">&lt;body&gt;</span>
+		<span class="nt">&lt;section&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 1<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 2<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 3<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/section&gt;</span>
 		<span class="nt">&lt;section&gt;</span>
 			<span class="nt">&lt;div&gt;</span>
 				<span class="nt">&lt;p&gt;</span>Item 1<span class="nt">&lt;/p&gt;</span>

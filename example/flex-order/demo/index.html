@@ -48,7 +48,9 @@
 	<span class="nl">height</span><span class="p">:</span> <span class="m">120px</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nt">div</span><span class="nd">:first-child</span> <span class="p">{</span>
+<span class="nt">div</span> <span class="p">{</span> <span class="nl">order</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span> <span class="p">}</span> <span class="cm">/* Default. */</span>
+
+<span class="nt">div</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">1</span><span class="o">)</span> <span class="p">{</span>
 	<span class="nl">background-color</span><span class="p">:</span> <span class="no">crimson</span><span class="p">;</span>
 	<span class="nl">order</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
 <span class="p">}</span>
@@ -58,7 +60,7 @@
 	<span class="nl">order</span><span class="p">:</span> <span class="m">2</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nt">div</span><span class="nd">:last-child</span> <span class="p">{</span>
+<span class="nt">div</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">5</span><span class="o">)</span> <span class="p">{</span>
 	<span class="nl">background-color</span><span class="p">:</span> <span class="no">lightsalmon</span><span class="p">;</span>
 	<span class="nl">order</span><span class="p">:</span> <span class="m">-1</span><span class="p">;</span>
 <span class="p">}</span></code></pre>
