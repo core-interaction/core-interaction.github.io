@@ -15,9 +15,10 @@ section {
 	min-height: 120px;
 }
 
-section:not(:first-child) {
-	margin-top: 20px;
+section:nth-child(2),
+section:nth-child(3) {
 	display: flex;
+	margin-top: 20px;
 }
 
 section:nth-child(3) {

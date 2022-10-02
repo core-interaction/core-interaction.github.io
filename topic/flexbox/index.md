@@ -27,28 +27,26 @@ And let me tell you—being a web designer was a whole lot harder before *flex
 
 ## *Main* and *cross* axes
 
-Flexbox is a *one-dimensional* layout system—meaning it is (usually) focused on arranging items either horizontally in rows, or vertically in columns:
+Flexbox is a *one-dimensional* layout system—meaning it is (usually) focused on arranging items either horizontally in rows, or vertically in columns.
 
-![I [borrowed](https://medium.com/fasal-engineering/css-flexbox-explained-998ea188a351) this, it’s alright.](Untitled.png)
-
-I [borrowed](https://medium.com/fasal-engineering/css-flexbox-explained-998ea188a351) this, it’s alright.
-
-These are called the *axes*, and the one running in the direction of your flex items is your *main axis*. Perpendicular to this is your *cross axis*.
+These are called the *axes*, and the one running in the direction of your flex items is your *main axis*. Perpendicular to this is your *cross axis*:
 
 
+{% include figure.html src='axes.svg' %}
 
-## Start/end
 
-In both directions, flex also lets us position elements towards the *start* or the *end* of the *axis:*
 
-- *For rows:* the start/end in the *main axis* are left/right, and in the *cross axis* are top/bottom.
+## *Start*/*end*, *justify*/*align*,
 
-- *For columns:* it is perpendicular—the *main* start/end means top/bottom, and the *cross* is then left/right.
+Flex also lets us position elements along the axes, in both directions&#8288;—in relation to the *start* or the *end* of the direction. For the main axis, you *justify*; for the cross axis, you *align*:
 
-![This is from the masterpiece [CSS Tricks article](https://css-tricks.com/snippets/css/a-guide-to-flexbox/). ](00-basic-terminology.svg)
+{% include figure.html src='start-end.svg' %}
 
-This is from the masterpiece [CSS Tricks article](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
+*For rows:* the default, we *justify* left/right, *align* top/bottom.
+{: .half }
 
+*For columns:* perpendicular, we *justify* top/bottom, *align* left/right.
+{: .half }
 
 
 ### Shorthand?
@@ -71,13 +69,13 @@ Unlike most (…all?) of the CSS we’ve been introduced to, *flex* is applied o
 
 After specifying an element as *flex*, we can set its main axis with [flex-direction](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction). By default (you don’t have to write it) this behaves as `flex-direction: row;`, so you’ll generally only be adding it when you want something going vertical—with `flex-direction: column;` :
 
-{% include figure.html src='/example/flex-direction/demo' caption='The first section is `display: block;` by default. Also note that I gave them all a `min-height`, to show start/end!' height='60rem' %}
+{% include figure.html src='/example/flex-direction/demo' caption='The first section is `display: block;` by default. Also note that I gave them all a `min-height`, to show start/end!' height='62rem' %}
 
 You can also combine these with a *reverse* option, which visually reorders the items along the *main axis*, flipping the *start* and *end*:
 
 {% include figure.html src='/example/flex-direction-reverse/demo' height='36rem' %}
 
-> Keep in mind that flex reordering is only visual—it does not change the order in the DOM. This means that keyboard navigation and screen readers still sequence through the items as they are in the HTML. So for good accessibility, keep in mind that semantic order!
+> Keep in mind that all flex reordering is only visual—it does not change the order in the DOM. This means that keyboard navigation and screen readers still sequence through the items as they are in the HTML. So for good accessibility, keep in mind that semantic order!
 {: .callout icon='🧐' }
 
 
@@ -99,9 +97,13 @@ There is also a *reverse* option here, which will wrap items from *end* to *st
 
 ### `justify-content`
 
-Okay, so most of what we’ve seen here is somewhat possible using *floats* and *positioning—*though not at all easily and only when you know the size/count of your content. But [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) is where flexbox starts to allow novel layouts, by dividing up the extra/available free space elements—akin to *distribute* options in Figma/<wbr>Adobe applications:
+Okay, so most of what we’ve seen here is somewhat possible using *floats* and *positioning—*though not at all easily and only when you know the size/count of your content.
+
+But [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) is where flexbox starts to allow novel layouts, by dividing up the extra/available free space elements—akin to *distribute* options in Figma/<wbr>Adobe applications. `justify-content` does this on our *main axis*:
 
 {% include figure.html src='/example/flex-justify-content/demo' caption='The `start` / `end` values [have some nuance](https://csslayout.news/whats-the-difference-between-the-alignment-values-of-start-flex-start-and-self-start/) with different writing directions, but this rarely comes up.' height='67rem' %}
+
+When our *main axis* is vertical (`flex-direction: column;`):
 
 {% include figure.html src='/example/flex-justify-content-column/demo' caption='These only works with the `height` to justify *within*&#8288;—<wbr>otherwise the container would cinch up to the content height, as usual.' height='78rem' %}
 
@@ -119,7 +121,7 @@ And then perpendicular to *justify* along the *main axis*, flexbox has [align-it
 
 ### `align-content`
 
-When we have a flex element with `flex-wrap` set, we can also [position the *lines* within](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content) the parent/container—akin to `justify-content` with individual items.
+When we have a flex element with `flex-wrap` set, we can also [position the *lines* within](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content) the parent/container—akin to `justify-content` with each line:
 
 {% include figure.html src='/example/flex-align-content/demo' caption='These wouldn’t do anything without the `height` and the `flex-wrap`.' height='101rem' %}
 
