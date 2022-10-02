@@ -1,5 +1,6 @@
 section {
 	display: flex;
+	height: 120px;
 }
 
 div {
@@ -8,12 +9,12 @@ div {
 
 div:nth-child(1) {
 	align-self: stretch;
-	/* This is the default. */
+	/* Default. */
 }
 
 div:nth-child(2) {
 	background-color: lightsalmon;
-	align-self: flex-start;
+	align-self: start;
 }
 
 div:nth-child(3) {
@@ -23,5 +24,5 @@ div:nth-child(3) {
 
 div:nth-child(4) {
 	background-color: hotpink;
-	align-self: flex-end;
+	align-self: end;
 }

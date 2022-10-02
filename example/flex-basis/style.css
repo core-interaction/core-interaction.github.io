@@ -1,5 +1,6 @@
 section {
 	display: flex;
+	height: 120px;
 	justify-content: space-between;
 }
 

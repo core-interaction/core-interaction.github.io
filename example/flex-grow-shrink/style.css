@@ -1,5 +1,6 @@
 section {
 	display: flex;
+	height: 120px;
 }
 
 section:nth-child(2) div {
