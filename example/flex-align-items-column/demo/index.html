@@ -45,7 +45,7 @@
 					<figure class="highlight">
 						<pre><code class="language-scss" data-lang="scss"><span class="nt">section</span> <span class="p">{</span>
 	<span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
-	<span class="nl">height</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+	<span class="nl">flex-direction</span><span class="p">:</span> <span class="n">column</span><span class="p">;</span> <span class="cm">/* Vertical. */</span>
 <span class="p">}</span>
 
 <span class="nt">section</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">1</span><span class="o">)</span> <span class="p">{</span>
@@ -62,14 +62,6 @@
 
 <span class="nt">section</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">4</span><span class="o">)</span> <span class="p">{</span>
 	<span class="nl">align-items</span><span class="p">:</span> <span class="n">end</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nt">section</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">5</span><span class="o">)</span> <span class="p">{</span>
-	<span class="nl">align-items</span><span class="p">:</span> <span class="nb">baseline</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nt">section</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">5</span><span class="o">)</span> <span class="nt">div</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">1</span><span class="o">)</span> <span class="p">{</span>
-	<span class="nl">font-size</span><span class="p">:</span> <span class="m">200%</span><span class="p">;</span>
 <span class="p">}</span></code></pre>
 					</figure>
 
@@ -117,17 +109,6 @@
 		<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"style.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
 	<span class="nt">&lt;/head&gt;</span>
 	<span class="nt">&lt;body&gt;</span>
-		<span class="nt">&lt;section&gt;</span>
-			<span class="nt">&lt;div&gt;</span>
-				<span class="nt">&lt;p&gt;</span>Item 1<span class="nt">&lt;/p&gt;</span>
-			<span class="nt">&lt;/div&gt;</span>
-			<span class="nt">&lt;div&gt;</span>
-				<span class="nt">&lt;p&gt;</span>Item 2 <span class="nt">&lt;br&gt;</span>with line <span class="nt">&lt;br&gt;</span>breaks<span class="nt">&lt;/p&gt;</span>
-			<span class="nt">&lt;/div&gt;</span>
-			<span class="nt">&lt;div&gt;</span>
-				<span class="nt">&lt;p&gt;</span>Item 3 <span class="nt">&lt;br&gt;</span>also<span class="nt">&lt;/p&gt;</span>
-			<span class="nt">&lt;/div&gt;</span>
-		<span class="nt">&lt;/section&gt;</span>
 		<span class="nt">&lt;section&gt;</span>
 			<span class="nt">&lt;div&gt;</span>
 				<span class="nt">&lt;p&gt;</span>Item 1<span class="nt">&lt;/p&gt;</span>
