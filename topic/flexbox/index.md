@@ -103,9 +103,7 @@ Okay, so most of what we’ve seen here is somewhat possible using *floats* and 
 
 {% include figure.html src='/example/flex-justify-content/demo' caption='The `start` / `end` values [have some nuance](https://csslayout.news/whats-the-difference-between-the-alignment-values-of-start-flex-start-and-self-start/) with different writing directions, but this rarely comes up.' height='67rem' %}
 
-I’m not going to show the vertical `flex-direction: column;` here, but it works the same—*but the justification only if it has a height to justify within*! Otherwise the container will cinch up to the content height, as usual.
-
-<!-- TODO: Could show a visual for this. -->
+{% include figure.html src='/example/flex-justify-content-column/demo' caption='This only works with the `height` to justify *within*&#8288;—<wbr>otherwise the container would cinch up to the content height, as usual.' height='80rem' %}
 
 
 

@@ -1,0 +1,35 @@
+/* So the `section` are in a row! */
+body {
+	display: flex;
+	gap: 20px; /* We’ll get to this below. */
+}
+
+section {
+	display: flex;
+	flex-direction: column; /* Vertical! */
+	height: 400px; /* Force a height. */
+}
+
+section:nth-child(1) {
+	justify-content: start; /* Default. */
+}
+
+section:nth-child(2) {
+	justify-content: center;
+}
+
+section:nth-child(3) {
+	justify-content: end;
+}
+
+section:nth-child(4) {
+	justify-content: space-between;
+}
+
+section:nth-child(5) {
+	justify-content: space-around;
+}
+
+section:nth-child(6) {
+	justify-content: space-evenly;
+}
