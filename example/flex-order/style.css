@@ -1,6 +1,6 @@
 section {
 	display: flex;
-	flex-wrap: wrap;
+	height: 120px;
 }
 
 div:first-child {

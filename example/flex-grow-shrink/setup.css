@@ -12,7 +12,6 @@ div {
 
 section {
 	background-color: gold;
-	height: 100px;
 }
 
 section:not(:first-child) {
