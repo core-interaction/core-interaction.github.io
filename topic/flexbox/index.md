@@ -103,7 +103,7 @@ But [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-c
 
 {% include figure.html src='/example/flex-justify-content/demo' caption='The `start` / `end` values [have some nuance](https://csslayout.news/whats-the-difference-between-the-alignment-values-of-start-flex-start-and-self-start/) with different writing directions, but this rarely comes up.' height='67rem' %}
 
-When our *main axis* is vertical (`flex-direction: column;`):
+When our *main axis* is vertical, with `flex-direction: column;` :
 
 {% include figure.html src='/example/flex-justify-content-column/demo' caption='These only works with the `height` to justify *within*&#8288;—<wbr>otherwise the container would cinch up to the content height, as usual.' height='78rem' %}
 
