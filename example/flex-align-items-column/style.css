@@ -1,10 +1,10 @@
 section {
 	display: flex;
-	height: 100px;
+	flex-direction: column;
 }
 
 section:nth-child(1) {
-	align-items: stretch; /* Default. */
+	align-items: stretch;
 }
 
 section:nth-child(2) {
@@ -17,12 +17,4 @@ section:nth-child(3) {
 
 section:nth-child(4) {
 	align-items: end;
-}
-
-section:nth-child(5) {
-	align-items: baseline;
-}
-
-section:nth-child(5) div:nth-child(1) {
-	font-size: 200%;
 }

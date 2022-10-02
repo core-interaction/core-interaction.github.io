@@ -1,7 +1,6 @@
-/* So the `section` are in a row! */
 body {
-	display: flex;
-	gap: 20px; /* We’ll get to this below. */
+	display: flex; /* `section` in a row! */
+	column-gap: 20px; /* Will talk about ↓. */
 }
 
 section {

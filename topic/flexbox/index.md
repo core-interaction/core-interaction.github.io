@@ -33,7 +33,7 @@ Flexbox is a *one-dimensional* layout system—meaning it is (usually) focused 
 
 I [borrowed](https://medium.com/fasal-engineering/css-flexbox-explained-998ea188a351) this, it’s alright.
 
-These are called the *axes*, and the one running in the direction of your flex items is your *main axis*. Perpendicular to this is your *cross axis*.
+These are called the *axes*, and the one running in the direction of your flex items is your *main axis*. Perpendicular to this is your *cross axis*.
 
 
 
@@ -103,7 +103,7 @@ Okay, so most of what we’ve seen here is somewhat possible using *floats* and 
 
 {% include figure.html src='/example/flex-justify-content/demo' caption='The `start` / `end` values [have some nuance](https://csslayout.news/whats-the-difference-between-the-alignment-values-of-start-flex-start-and-self-start/) with different writing directions, but this rarely comes up.' height='67rem' %}
 
-{% include figure.html src='/example/flex-justify-content-column/demo' caption='This only works with the `height` to justify *within*&#8288;—<wbr>otherwise the container would cinch up to the content height, as usual.' height='80rem' %}
+{% include figure.html src='/example/flex-justify-content-column/demo' caption='These only works with the `height` to justify *within*&#8288;—<wbr>otherwise the container would cinch up to the content height, as usual.' height='78rem' %}
 
 
 
@@ -111,9 +111,9 @@ Okay, so most of what we’ve seen here is somewhat possible using *floats* and 
 
 And then perpendicular to *justify* along the *main axis*, flexbox has [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items) to position elements along the *cross axis*. It has similar values:
 
-{% include figure.html src='/example/flex-align-items/demo' caption='Again, these also work for `flex-direction: column;`! Where they will move things left/right.' height='66rem' %}
+{% include figure.html src='/example/flex-align-items/demo' height='66rem' %}
 
-<!-- TODO: Could show a visual for this. -->
+{% include figure.html src='/example/flex-align-items-column/demo' caption='`align-items: baseline;` wouldn’t do anything, here.' height='69rem' %}
 
 
 
@@ -127,9 +127,9 @@ When we have a flex element with `flex-wrap` set, we can also [position the *li
 
 ### `gap`, `row-gap`, and `column-gap`
 
-While you could use *margin* to separate your flex children, it would apply to the items on the outer edges, too. (Hence all my `:not(:first-child)` selectors, in examples.) Flex recently gained support for intuitive [gap properties](https://developer.mozilla.org/en-US/docs/Web/CSS/gap), which fix this problem—by applying spacing only *between* children.
+While you could use *margin* to separate your flex children, it would apply to the items on the outer edges, too. (Hence all my `:not(:first-child)` selectors, in examples.) Flex recently gained support for intuitive [gap properties](https://developer.mozilla.org/en-US/docs/Web/CSS/gap), which fix this problem—by applying spacing only *between* children.
 
-This is particularly helpful with dynamic, wrapping content and responsive designs—where you won’t always know which element ends or starts a line (to take their margin off):
+This is particularly helpful with dynamic, wrapping content and responsive designs—where you won’t always know which element ends or starts a line (to take their margin off):
 
 {% include figure.html src='/example/flex-gap/demo' caption='Note the last one, `gap` are really *minimums* and only apply when there isn’t otherwise space.' height='83rem' %}
 
