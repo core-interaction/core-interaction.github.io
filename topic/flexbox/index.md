@@ -113,7 +113,7 @@ And then perpendicular to *justify* along the *main axis*, flexbox has [align-it
 
 {% include figure.html src='/example/flex-align-items/demo' height='66rem' %}
 
-{% include figure.html src='/example/flex-align-items-column/demo' caption='`align-items: baseline;` wouldn’t do anything, here.' height='69rem' %}
+{% include figure.html src='/example/flex-align-items-column/demo' caption='The `align-items: baseline;` wouldn’t do anything, here.' height='69rem' %}
 
 
 
