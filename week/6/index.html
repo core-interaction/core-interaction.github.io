@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
+
+
+
+
+
+
+
+
+		<title>Week 6</title>
+		<link href="/assets/styles/reset.css" rel="stylesheet">
+		<link href="/assets/styles/common.css" rel="stylesheet">
+		<link href="/assets/styles/syntax.css" rel="stylesheet">
+		<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
+		<link href="/assets/icons/touch.png" rel="apple-touch-icon">
+
+		<script src="/assets/scripts/common.js"></script>
+
+		<meta name="theme-color" content="#e42a1d">
+	</head>
+	<body class="week">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<nav>
+			<div>
+				<section>
+					<a href="/">
+						<p>C1:I</p>
+					</a>
+					<p>
+						<strong>Week 6, October 4</strong>
+						<select onchange="
+					this.parentElement.querySelector('strong').innerHTML = this.querySelector(`[value='${this.value}']`).text;
+					document.activeElement.blur();
+					window.open(this.value,'_self');
+					">
+
+
+							<optgroup label="Sessions">
+
+
+
+								<option value="/week/1/">Week 1, August 30</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/2/">Week 2, September 6</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/3/">Week 3, September 13</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/4/">Week 4, September 20</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/5/">Week 5, September 27</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option selected disabled>Week 6, October 4</option>
+
+
+							</optgroup>
+
+
+
+							<optgroup label="Topics">
+
+
+
+								<option value="/topic/everything/">Everything is a web page</option>
+
+
+
+
+								<option value="/topic/html/">An intro to HTML</option>
+
+
+
+
+								<option value="/topic/css/">An intro to CSS</option>
+
+
+
+
+								<option value="/topic/box-model/">The box model</option>
+
+
+
+
+								<option value="/topic/responsive/">Media queries</option>
+
+
+
+
+								<option value="/topic/inspector/">DevTools (The Inspector)</option>
+
+
+
+
+								<option value="/topic/flexbox/">Finally, flexbox</option>
+
+
+							</optgroup>
+
+
+
+							<optgroup label="Project">
+
+
+
+								<option value="/project/harmonic/">Harmonic Collection</option>
+
+
+							</optgroup>
+
+
+						</select>
+					</p>
+				</section>
+				<section>
+
+					<p>
+						<a class="last" href="/week/5/">Last week</a>
+					</p>
+
+					<p><a href="#">Top</a></p>
+				</section>
+			</div>
+		</nav>
+
+
+
+
+
+
+
+
+
+		<main>
+
+			<header>
+				<h1>Week 6</h1>
+
+				<p>October 4</p>
+
+				<ul>
+					<li><a href="#harmonic-collection-review"><em>Harmonic Collection</em> review</a></li>
+					<li><a href="#flexbox">Flexbox!</a></li>
+					<li><a href="#lets-try-it-out">Let’s try it out</a></li>
+					<li><a href="#for-next-week">For next week</a></li>
+				</ul>
+			</header>
+
+			<article>
+				<h2 id="harmonic-collection-review"><em>Harmonic Collection</em> review</h2>
+
+				<p>Let’s pick back up with your entries:</p>
+
+				<p class="icon-link two-below"><a href="https://docs.google.com/spreadsheets/d/1vXYVnicRUHnczxPCSaqsmmflynnwP22zhES5jFMPKpw/"><em>Harmonic Collection</em> entries</a></p>
+
+				<p><em>New volunteers, please!</em></p>
+
+				<h2 id="flexbox">Flexbox!</h2>
+
+				<p>We’ll get into some more modern (less frustrating) CSS layout:</p>
+
+				<p class="icon-link"><a href="/topic/flexbox">Finally, flexbox</a></p>
+
+				<blockquote class="callout" icon="😵">
+					<p>A standard mid-lecture break somewhere in here, as we do.</p>
+				</blockquote>
+
+				<h2 id="lets-try-it-out">Let’s try it out</h2>
+
+				<p>We’re going to recreate a classic <a href="https://en.wikipedia.org/wiki/Holy_grail_(web_design)"><em>Holy Grail</em></a> layout together with flex<span class="mdash">—</span>but also make it responsive.</p>
+
+				<p>Let’s start with this DOM, to get us going:</p>
+
+				<div style="max-height: 25rem; overflow: scroll; user-select: all;" class="language-html highlighter-rouge">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Entry 5<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://core-interaction.github.io/assets/styles/reset.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"style.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;header</span> <span class="na">id=</span><span class="s">"top"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h1&gt;</span>Entry 5<span class="nt">&lt;/h1&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"../"</span><span class="nt">&gt;</span>All entries<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/header&gt;</span>
+    <span class="nt">&lt;nav&gt;</span>
+      <span class="nt">&lt;ul&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#first"</span><span class="nt">&gt;</span>Producing meaning<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#second"</span><span class="nt">&gt;</span>Cultural authenticity <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#third"</span><span class="nt">&gt;</span>Performance spectre<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/nav&gt;</span>
+    <span class="nt">&lt;article&gt;</span>
+      <span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"first"</span><span class="nt">&gt;</span>Producing meaning<span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Sustainable authoritarian institutional historical mass-produced intuitive utopia collage dogmatic. Ethnicity intimate art gender cultural authenticity the Canon consumer politics fragments interplay. Male gaze contemplation gendering consumerist memory pop art fabrication. Internal construct observers loss R. Mutt digital manifesto material. Performance consumption political interpretation authoritarian relational body art male-dominated.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Homogenized media revelatory street art existence experimental phenomenon. Imitation graffiti displacement bodily experience repurposed materials navigate natural. Collective historicizing dogma violence .net art industrial translates displacement. Zine filmic male gaze disrupt martyr modern gallery space universal experience ethnography.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"second"</span><span class="nt">&gt;</span>Cultural authenticity<span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Meditate sustainable social justice female form appropriate Marina Abramovic subculture tokenism. Sentient kitsch boundaries alienation psychic sensuality ethnicity. Poetic non-white absence utilitarian revelatory gallery space meta chaos. Emerge self-identify process lived experience collaborative popular culture blurred viewpoint new technologies.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Heritage nothingness experiential body art politics blurred utopia. Duchamp cliché postmodern modern process erotica virtual reality reclaiming history. Experiential destabilize ritual utilitarian Fluxus ghosts horror. Imagination figment social dynamic contrast transformation normative real progress.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"third"</span><span class="nt">&gt;</span>Performance spectre<span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Memory ethnicity community engagement revelatory impulsive handmade cliché inclusive artifacts. Consumerist outsider subversive mythology genius form poetic. Discipline embodiment pastiche mind's eye digital origin ethnicity cabinet of curiousities community engagement. Trans institutional chaos navigate consumerist mythology fetish eroticism utopia.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Re-purposed materials normative mind's eye everyday explore love reclaimed materials observe awareness. Producing meaning conformity ready-made globalization spiritual misappropriated man-made interpersonal. Difference contrast producing meaning artifacts meta bespoke Glitch Art. Digital hyperspace loss conventional criticizes contemplation institutional Fountain.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/article&gt;</span>
+    <span class="nt">&lt;aside&gt;</span>
+      <span class="nt">&lt;h2&gt;</span>Institutional narrative<span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Internet explore gendering destabilize alternative individual sexist. Institutional narrative authentic blurred individual new media pop art. Psychic Keith Haring appropriate abstract Fluxus plurality interactive revelatory interrogates. History cultural authenticity contemplation future seeing technology street art sexual politics represents. Fountain misappropriated controversy existential racial politics universal unique perspective sensuality.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/aside&gt;</span>
+    <span class="nt">&lt;footer&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#top"</span><span class="nt">&gt;</span>Top<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/footer&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+					</div>
+				</div>
+
+				<p>We’re going to do this “live” (so I won’t write out all the steps), but here is our agenda:</p>
+
+				<ol>
+					<li>
+						<p>Set up basic styles (mobile first)</p>
+
+						<ul>
+							<li>Variables for type size/spacing on <code class="language-plaintext highlighter-rouge">:root</code></li>
+							<li>Use for padding/spacing on the children</li>
+							<li>Differentiate link color/decoration</li>
+							<li>Scale our headings from base type size</li>
+						</ul>
+					</li>
+					<li>
+						<p>Flexbox pass (desktop)</p>
+
+						<ul>
+							<li>Start with <code class="language-plaintext highlighter-rouge">flex-wrap</code> and widths</li>
+							<li>Add <code class="language-plaintext highlighter-rouge">main</code> as container in the middle</li>
+							<li>Switch axis for <code class="language-plaintext highlighter-rouge">body</code> / <code class="language-plaintext highlighter-rouge">main</code> (column/row)</li>
+							<li>Use <code class="language-plaintext highlighter-rouge">flex-grow</code> on <code class="language-plaintext highlighter-rouge">article</code> block</li>
+							<li>Force footer to bottom (short page)</li>
+						</ul>
+					</li>
+					<li>
+						<p>Limit layout width (very large screens)</p>
+
+						<ul>
+							<li>Add containers for centered <code class="language-plaintext highlighter-rouge">max-width</code></li>
+							<li><code class="language-plaintext highlighter-rouge">main</code> / non-semantic <code class="language-plaintext highlighter-rouge">div</code> for header/footer</li>
+							<li>Use shared class across the three instances</li>
+						</ul>
+					</li>
+				</ol>
+
+				<hr />
+
+				<h2 id="for-next-week">For next week</h2>
+
+				<ul>
+					<li>
+						<p>Read through the whole <a href="/topic/flexbox">flexbox</a> lecture above. Flex is your friend! Go through all the examples.</p>
+					</li>
+					<li>
+						<p>Complete a fifth entry for your <a href="/project/harmonic"><em>Harmonic Collection</em></a> projects and add it to the doc:</p>
+
+						<p class="icon-link"><a href="https://docs.google.com/spreadsheets/d/1vXYVnicRUHnczxPCSaqsmmflynnwP22zhES5jFMPKpw/"><em>Harmonic Collection</em> entries</a></p>
+					</li>
+				</ul>
+
+
+
+
+			</article>
+
+			<footer>
+				<div>
+					<section>
+						<a href="/">
+							<p>Core 1: Interaction, Fall 2022</p>
+						</a>
+					</section>
+					<section>
+						<p><a href="#">Top</a></p>
+					</section>
+				</div>
+			</footer>
+
+		</main>
+
+	</body>
+</html>
