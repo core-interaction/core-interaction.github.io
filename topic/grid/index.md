@@ -6,13 +6,13 @@ published: false
 
 
 
-[CSS grid layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids#line-based_placement) (from here on, just *grid*) is another recent addition to CSS, continuing on from [*flexbox*](/topic/flexbox/). While flex is a *one-dimensional* layout system—focused on horizontal *or* vertical arrangements—grid is *two-dimensional* system, integrating the two directions together.
+[CSS grid layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids#line-based_placement) (from here on, just *grid*) is another, even more recent addition to CSS, continuing on from [*flexbox*](/topic/flexbox/). While flex is a *one-dimensional* layout system—focused on horizontal *or* vertical arrangements—grid is *two-dimensional* system, integrating the two directions together.
 {: .left }
 
 - [A complete guide to grid | CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/) \
 	*The <em>grid</em> version of the <em>flexbox</em> classic.*
 
-- [CSS Grid Layout: A New Layout Module for the Web](https://webkit.org/blog/7434/css-grid-layout-a-new-layout-module-for-the-web/) \
+- [CSS Grid Layout: A New Layout Module for the Web](https://webkit.org/blog/7434/css-grid-layout-a-new-layout-module-for-the-web/) \
 	*WebKit (Safari’s) overview/introduction, from 2017.*
 
 - [Basic concepts of grid layout | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout) \
@@ -20,7 +20,10 @@ published: false
 
 - [Grids | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids) \
 	*They’ve got multiple/overlapping introductions again, here.*
-{: .no-marker .icon-link .right rows="3" }
+
+- [Grid Garden](https://cssgridgarden.com) \
+	*Like the Froggy game,  but for grid.*
+{: .no-marker .icon-link .right rows="6" }
 
 Grid supplants many of the previous box model layout systems (like floats, margin-centering, etc.) and, like flex, works much closer to how we think about layouts *as designers*. It can get complicated, but makes most layouts (especially responsive ones) much, much easier to implement.
 
