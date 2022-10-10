@@ -5,11 +5,11 @@ order: 6
 
 
 
-[*Flexbox*](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox), short for *flexible boxes*—which folks will often just shorten all the way to *flex*&#8288;—is a later (mid-2010s, depending on how you count) addition to CSS. *Flex* was created to facilitate and allow CSS layouts that [*the box model*](/topic/box-model/) (with its *floats* and *position*) either made difficult, brittle, or even impossible. It is a *[display](https://developer.mozilla.org/en-US/docs/Web/CSS/display)* property.
+[*Flexbox*](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox), short for *flexible boxes*—which folks will often just shorten all the way to *flex*&#8288;—is a later (mid-2010s, depending on how you count) addition to CSS. *Flex* was created to facilitate and allow CSS layouts that [*the box model*](/topic/box-model/) (with its *floats* and *position*) either made difficult, brittle, or even impossible. It is a *[display](https://developer.mozilla.org/en-US/docs/Web/CSS/display)* property.
 {: .left }
 
 - [A complete guide to flexbox | CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) \
-  *This page is a classic! I’ve referenced it for years. This article probably bought [Chris Coyier](https://chriscoyier.net) a house.*
+  *This page is a classic! It probably bought [Chris Coyier](https://chriscoyier.net) a house.*
 
 - [Basic concepts of flexbox | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) \
   *Can’t go wrong.*
@@ -39,10 +39,10 @@ Flex also lets us position elements along the axes, in both directions&#8288;—
 
 {% include figure.html src='start-end.svg' %}
 
-*For rows:* the default, we *justify* left/right, *align* top/bottom.
+*For rows:* the default, we *justify* left/right, *align* top/bottom.
 {: .half }
 
-*For columns:* perpendicular, we *justify* top/bottom, *align* left/right.
+*For columns:* perpendicular, we *justify* top/bottom, *align* left/right.
 {: .half }
 
 
@@ -79,7 +79,7 @@ You can also combine these with a *reverse* option, which visually reorders the
 
 ### `flex-wrap`
 
-Since flexbox is *one-dimensional*, by default it is going to try and cram everything into one line—even when there is not enough room! But you can tell it [to *wrap*](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap) onto additional lines by adding a `flex-wrap: wrap;` property (which behaves as `flex-wrap: nowrap;` by default):
+Since flexbox is *one-dimensional*, by default it is going to try and cram everything into one <nobr>line—</nobr>even when there is not enough room! But you can tell it [to *wrap*](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap) onto additional lines by adding a `flex-wrap: wrap;` property (which behaves as `flex-wrap: nowrap;` by default):
 
 {% include figure.html src='/example/flex-wrap/demo' caption='Without the height restriction, the last one would just grow taller, by default.' height='65rem' %}
 
@@ -88,7 +88,7 @@ You can use this to make grids, and it is often sufficient. But but the [more re
 There is also a *reverse* option here, which will wrap items from *end* to *start*:
 {: .two-above }
 
-{% include figure.html src='/example/flex-wrap-reverse/demo' caption='You could do some weird layouts with these, but keep in mind the order is still only visual. I don’t think I have ever used these!' height='65rem' %}
+{% include figure.html src='/example/flex-wrap-reverse/demo' caption='You could do some weird layouts with these, but keep in mind the order is still only visual.' height='65rem' %}
 
 
 
@@ -98,7 +98,7 @@ Okay, so most of what we’ve seen here is somewhat possible using *floats* and 
 
 But [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) is where flexbox starts to allow novel layouts, by dividing up the extra/available free space elements—akin to *distribute* options in Figma/<wbr>Adobe applications. `justify-content` does this on our *main axis*:
 
-{% include figure.html src='/example/flex-justify-content/demo' caption='The `start` / `end` values [have some nuance](https://csslayout.news/whats-the-difference-between-the-alignment-values-of-start-flex-start-and-self-start/) with different writing directions, but this rarely comes up.' height='67rem' %}
+{% include figure.html src='/example/flex-justify-content/demo' caption='The `start` / `end` values [have some nuance](https://csslayout.news/whats-the-difference-between-the-alignment-values-of-start-flex-start-and-self-start/) with different writing directions, but this rarely comes up.' height='67rem' %}
 
 When our *main axis* is vertical, with `flex-direction: column;` :
 
@@ -142,7 +142,7 @@ Note that the `justify`, `align`, and `gap` properties are also shared (in name 
 
 
 
-Flexbox is *usually* applied on the parent/container. But once you’ve set `display: flex;` on an element, there are also some individual override properties that can be given to its children, *flex items*.
+Flexbox is *usually* applied on the parent/container. But once you’ve set `display: flex;` on an element, there are also some individual override properties that can be given to its children, *flex items*.
 
 
 
@@ -150,7 +150,7 @@ Flexbox is *usually* applied on the parent/container. But once you’ve set `dis
 
 Kind of like the *reverse* properties—you can individually [apply an order](https://developer.mozilla.org/en-US/docs/Web/CSS/order) to a *flex item* (child). Items with the same/tied order (like everything with the default of `order: 0;`) will be displayed in their DOM/source order:
 
-{% include figure.html src='/example/flex-order/demo' caption='With the last one, since the default is `order: 0;`, negative numbers move stuff up to the front!' height='52rem' %}
+{% include figure.html src='/example/flex-order/demo' caption='With the last one, since the default is `order: 0;`, negative numbers move stuff up to the front!' height='52rem' %}
 
 Other order selectors (like `:first-child`) won’t be fooled by this reordering—as you can see, I used them here. They still use the DOM order. And again, this change is only visual—so don’t use it when screen reader/content sequence accessibility is a concern!
 
@@ -158,7 +158,7 @@ Other order selectors (like `:first-child`) won’t be fooled by this reordering
 
 ### `flex-grow` and `flex-shrink`
 
-These tell the child items to… [grow](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow) or [shrink](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink), if necessary—defining the amount of available/remaining space in the container an element should take up. (I like to think of these as bento boxes.)
+These tell the child items to… [grow](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow) or [shrink](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink), if necessary—defining the amount of available/remaining space in the container an element should take up. (I like to think of these as bento boxes.)
 
 It takes a *unitless* proportional value (think fractions or a factor/multiplier). If you give one flexed child `flex-grow: 1;` it will take up all the extra space; another element with `flex-grow: 2;` would then take twice as much of that space as the first one (the available space with 3 total units):
 
