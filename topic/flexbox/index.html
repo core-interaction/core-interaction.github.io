@@ -206,12 +206,12 @@
 			</header>
 
 			<article>
-				<p class="left"><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox"><em>Flexbox</em></a>, short for <em>flexible boxes</em><span class="mdash">—</span>which folks will often just shorten all the way to <em>flex</em>⁠<span class="mdash">—</span>is a later (mid-2010s, depending on how you count) addition to CSS. <em>Flex</em> was created to facilitate and allow CSS layouts that <a href="/topic/box-model/"><em>the box model</em></a> (with its <em>floats</em> and <em>position</em>) either made difficult, brittle, or even impossible. It is a <em><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">display</a></em> property.</p>
+				<p class="left"><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox"><em>Flexbox</em></a>, short for <em>flexible boxes</em><span class="mdash">—</span>which folks will often just shorten all the way to <em>flex</em>⁠<span class="mdash">—</span>is a later (mid-2010s, depending on how you count) addition to CSS. <em>Flex</em> was created to facilitate and allow CSS layouts that <a href="/topic/box-model/"><em>the box model</em></a> (with its <em>floats</em> and <em>position</em>) either made difficult, brittle, or even impossible. It is a <em><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">display</a></em> property.</p>
 
 				<ul class="no-marker icon-link right" rows="2">
 					<li>
 						<p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A complete guide to flexbox | CSS-Tricks</a> <br />
-							<em>This page is a classic! I’ve referenced it for years. This article probably bought <a href="https://chriscoyier.net">Chris Coyier</a> a house.</em>
+							<em>This page is a classic! It probably bought <a href="https://chriscoyier.net">Chris Coyier</a> a house.</em>
 						</p>
 					</li>
 					<li>
@@ -250,9 +250,9 @@
 
 				</figure>
 
-				<p class="half"><em>For rows:</em> the default, we <em>justify</em> left/right, <em>align</em> top/bottom.</p>
+				<p class="half"><em>For rows:</em> the default, we <em>justify</em> left/right, <em>align</em> top/bottom.</p>
 
-				<p class="half"><em>For columns:</em> perpendicular, we <em>justify</em> top/bottom, <em>align</em> left/right.</p>
+				<p class="half"><em>For columns:</em> perpendicular, we <em>justify</em> top/bottom, <em>align</em> left/right.</p>
 
 				<h3 id="shorthand">Shorthand?</h3>
 
@@ -298,7 +298,7 @@
 
 				<h3 id="flex-wrap"><code class="language-plaintext highlighter-rouge">flex-wrap</code></h3>
 
-				<p>Since flexbox is <em>one-dimensional</em>, by default it is going to try and cram everything into one line<span class="mdash">—</span>even when there is not enough room! But you can tell it <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap">to <em>wrap</em></a> onto additional lines by adding a <code class="language-plaintext highlighter-rouge">flex-wrap: wrap;</code> property (which behaves as <code class="language-plaintext highlighter-rouge">flex-wrap: nowrap;</code> by default):</p>
+				<p>Since flexbox is <em>one-dimensional</em>, by default it is going to try and cram everything into one <nobr>line<span class="mdash">—</span></nobr>even when there is not enough room! But you can tell it <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap">to <em>wrap</em></a> onto additional lines by adding a <code class="language-plaintext highlighter-rouge">flex-wrap: wrap;</code> property (which behaves as <code class="language-plaintext highlighter-rouge">flex-wrap: nowrap;</code> by default):</p>
 
 				<figure style="--height--max: 65rem">
 
@@ -324,7 +324,7 @@
 
 
 
-					<figcaption>You could do some weird layouts with these, but keep in mind the order is still only visual. I don’t think I have ever used these!</figcaption>
+					<figcaption>You could do some weird layouts with these, but keep in mind the order is still only visual.</figcaption>
 
 				</figure>
 
@@ -342,7 +342,7 @@
 
 
 
-					<figcaption>The <code class="language-plaintext highlighter-rouge">start</code> / <code class="language-plaintext highlighter-rouge">end</code> values <a href="https://csslayout.news/whats-the-difference-between-the-alignment-values-of-start-flex-start-and-self-start/">have some nuance</a> with different writing directions, but this rarely comes up.</figcaption>
+					<figcaption>The <code class="language-plaintext highlighter-rouge">start</code> / <code class="language-plaintext highlighter-rouge">end</code> values <a href="https://csslayout.news/whats-the-difference-between-the-alignment-values-of-start-flex-start-and-self-start/">have some nuance</a> with different writing directions, but this rarely comes up.</figcaption>
 
 				</figure>
 
@@ -426,7 +426,7 @@
 
 				<h2 id="item-child-properties">Item (child) properties</h2>
 
-				<p>Flexbox is <em>usually</em> applied on the parent/container. But once you’ve set <code class="language-plaintext highlighter-rouge">display: flex;</code> on an element, there are also some individual override properties that can be given to its children, <em>flex items</em>.</p>
+				<p>Flexbox is <em>usually</em> applied on the parent/container. But once you’ve set <code class="language-plaintext highlighter-rouge">display: flex;</code> on an element, there are also some individual override properties that can be given to its children, <em>flex items</em>.</p>
 
 				<h3 id="order"><code class="language-plaintext highlighter-rouge">order</code></h3>
 
@@ -440,7 +440,7 @@
 
 
 
-					<figcaption>With the last one, since the default is <code class="language-plaintext highlighter-rouge">order: 0;</code>, negative numbers move stuff up to the front!</figcaption>
+					<figcaption>With the last one, since the default is <code class="language-plaintext highlighter-rouge">order: 0;</code>, negative numbers move stuff up to the front!</figcaption>
 
 				</figure>
 
@@ -448,7 +448,7 @@
 
 				<h3 id="flex-grow-and-flex-shrink"><code class="language-plaintext highlighter-rouge">flex-grow</code> and <code class="language-plaintext highlighter-rouge">flex-shrink</code></h3>
 
-				<p>These tell the child items to… <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow">grow</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink">shrink</a>, if necessary<span class="mdash">—</span>defining the amount of available/remaining space in the container an element should take up. (I like to think of these as bento boxes.)</p>
+				<p>These tell the child items to… <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow">grow</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink">shrink</a>, if necessary<span class="mdash">—</span>defining the amount of available/remaining space in the container an element should take up. (I like to think of these as bento boxes.)</p>
 
 				<p>It takes a <em>unitless</em> proportional value (think fractions or a factor/multiplier). If you give one flexed child <code class="language-plaintext highlighter-rouge">flex-grow: 1;</code> it will take up all the extra space; another element with <code class="language-plaintext highlighter-rouge">flex-grow: 2;</code> would then take twice as much of that space as the first one (the available space with 3 total units):</p>
 
