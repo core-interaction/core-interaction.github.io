@@ -29,7 +29,7 @@ And let me tell you—being a web designer was a whole lot harder before *flex
 Flexbox is a *one-dimensional* layout system—meaning it is (usually) focused on arranging items either horizontally in rows, or vertically in columns. These are called the *axes*, and the one running in the direction of your flex items is your *main axis*. Perpendicular to this is your *cross axis*:
 
 
-{% include figure.html src='axes.svg' %}
+{% include figure.html src='axes.svg' height='100%' %}
 
 
 
@@ -37,7 +37,7 @@ Flexbox is a *one-dimensional* layout system—meaning it is (usually) focused 
 
 Flex also lets us position elements along the axes, in both directions&#8288;—in relation to the *start* or the *end* of the direction. For the main axis, you *justify*; for the cross axis, you *align*:
 
-{% include figure.html src='start-end.svg' %}
+{% include figure.html src='start-end.svg' height='100%' %}
 
 *For rows:* the default, we *justify* left/right, *align* top/bottom.
 {: .half }
