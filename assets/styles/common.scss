@@ -557,7 +557,8 @@ body {
 		}
 	}
 
-	li pre { padding: calc(var(--margin) / 4) } // Tighter in lists.
+	li pre,
+	dd pre { padding: calc(var(--margin) / 4) } // Tighter in lists.
 
 
 

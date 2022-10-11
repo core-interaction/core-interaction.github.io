@@ -80,18 +80,24 @@
 
 	// Lists.
 	ul,
-	ol {
+	ol { gap: var(--typography--between) }
+
+	dl { gap: var(--typography--leading-shoulder) }
+
+	ul,
+	ol,
+	dl {
 		@extend %type--layout;
 
 		display:               grid;
-		gap:                   var(--typography--between);
 		grid-template-columns: minmax(0, 1fr); // Since “auto” is the min otherwise.
 		list-style-position:   outside;
 
+		> dt,
+		> dd,
 		> li {
 			@extend %typography; // For paragraph-less lists.
 
-			display:       list-item;
 			margin-bottom: var(--typography--margin--bottom);
 			margin-top:    var(--typography--margin--top);
 			max-width:     60ch;
@@ -101,24 +107,10 @@
 			> h3,
 			> h4,
 			> p,
-			> div,
-			> blockquote {
-				--padding-left: 1ch;
-
-				~ * { --padding-left: 1ch } // For nested lists, below.
-			}
-
-			> h3,
-			> h4,
-			> p,
 			> div {
-				padding-left: var(--padding-left); // More space for paragraph lists.
-
 				&:first-child:before,
 				&:last-child:after { display: none }; // Since the `li` is a type element.
 			}
-
-			> blockquote { margin-left: var(--padding-left) } // Since these have internal padding.
 
 			> h3,
 			> h4,
@@ -138,12 +130,39 @@
 
 			&:last-child > *:last-child:not(._) { margin-bottom: initial }
 		}
+
+		> dt,
+		> li {
+			display: list-item;
+		}
+
+		> li {
+			> h3,
+			> h4,
+			> p,
+			> div,
+			> blockquote {
+				--padding-left: 1ch;
+
+				~ * { --padding-left: 1ch } // For nested lists, below.
+			}
+
+			> h3,
+			> h4,
+			> p,
+			> div { padding-left: var(--padding-left) } // More space for paragraph lists.
+
+			> blockquote { margin-left: var(--padding-left) } // Since these have internal padding.
+		}
+	}
+
+	ul,
+	dl {
+		list-style-type: '-';
+		padding-left:    calc(var(--padding-left, 0ch) + 1ch);
 	}
 
 	ul {
-		list-style-type: '-';
-		padding-left:    calc(var(--padding-left, 0ch) + 1ch);
-
 		> li { padding-left: 1ch }
 
 		&.no-marker {
@@ -191,6 +210,31 @@
 			}
 		}
 	}
+
+	dl {
+		--margin--top: var(--margin--vertical--2);
+
+		> dt {
+			font-style: italic;
+
+			&:not(:first-child) { margin-top: var(--typography--leading-shoulder) }
+		}
+
+		> dt,
+		> dd { padding-left: 2ch }
+
+		> dd {
+			> *:last-child:not(._):not(._) { margin-bottom: initial }
+		}
+
+		+ * {
+			--margin--top:           var(--margin--vertical--2);
+			--margin--top--previous: var(--margin--vertical--2);
+
+			+ * { --margin--top--previous: var(--margin--vertical--2) }
+		}
+	}
+
 
 
 
