@@ -15,7 +15,7 @@
 		<meta name="theme-color" content="#e42a1d">
 	</head>
 	<body class="example">
-		<section style="--split: 56%;">
+		<section style="--split: 66%;">
 			<aside></aside>
 
 
@@ -44,14 +44,18 @@
 
 					<figure class="highlight">
 						<pre><code class="language-scss" data-lang="scss"><span class="nt">section</span> <span class="p">{</span>
+	<span class="na">--columns</span><span class="p">:</span> <span class="m">4</span><span class="p">;</span>
+
 	<span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
-	<span class="na">grid-template-columns</span><span class="p">:</span> <span class="nf">repeat</span><span class="p">(</span><span class="m">4</span><span class="o">,</span> <span class="m">1fr</span><span class="p">);</span>
+	<span class="na">grid-template-columns</span><span class="p">:</span> <span class="nf">repeat</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">columns</span><span class="p">)</span><span class="o">,</span> <span class="m">1fr</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">400px</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nt">section</span> <span class="p">{</span>
-		<span class="na">grid-template-columns</span><span class="p">:</span> <span class="nf">repeat</span><span class="p">(</span><span class="m">6</span><span class="o">,</span> <span class="m">1fr</span><span class="p">);</span>
-	<span class="p">}</span>
+	<span class="nt">section</span> <span class="p">{</span> <span class="na">--columns</span><span class="p">:</span> <span class="m">6</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">600px</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nt">section</span> <span class="p">{</span> <span class="na">--columns</span><span class="p">:</span> <span class="m">8</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">}</span></code></pre>
 					</figure>
 
