@@ -4,7 +4,8 @@ section {
 	grid-auto-flow: dense;
 }
 
-div:nth-child(4) {
+div:nth-child(3),
+div:nth-child(6) {
 	grid-column: span 2;
 	grid-row: span 2;
 }
