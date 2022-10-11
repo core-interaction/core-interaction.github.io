@@ -45,9 +45,7 @@ And again like flex, there is also `display: inline-grid;` which behaves the sam
 
 Grid introduces us to some new vocabulary:
 
-![Borrowed from the [WebKit post](https://webkit.org/blog/7434/css-grid-layout-a-new-layout-module-for-the-web/).](grid-concepts.svg)
-
-Borrowed from the [WebKit post](https://webkit.org/blog/7434/css-grid-layout-a-new-layout-module-for-the-web/).
+{% include figure.html caption='Borrowed from the [WebKit post](https://webkit.org/blog/7434/css-grid-layout-a-new-layout-module-for-the-web/).' src='grid-concepts.svg' %}
 
 Line
 : The dividing lines that define the grid, vertical or horizontal. (Think *gutters*.)
