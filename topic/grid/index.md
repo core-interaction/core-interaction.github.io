@@ -169,7 +169,7 @@ So for many uses, you will only need to specify your column <nobr>structure—</
 
 By default, these *implicit grid* tracks are sized `auto` (to their content), but you can also specify their size—often [a *height*](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows) for the `grid-auto-rows`:
 
-{% include figure.html src='/example/grid-auto-row/demo' height='29rem' %}
+{% include figure.html src='/example/grid-auto-rows/demo' height='29rem' %}
 
 
 But `grid-auto-columns` only comes up if you force the columns to wrap with `grid-auto-flow: column;` as in the earlier example. Again, height is usually not our main constraint, with scrolling!
