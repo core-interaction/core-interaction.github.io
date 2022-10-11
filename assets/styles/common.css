@@ -33,8 +33,15 @@ nobr,
 }
 
 body > main > header > ul > li,
+body > main > article ul > dt,
+body > main > article ul > dd,
 body > main > article ul > li,
+body > main > article ol > dt,
+body > main > article ol > dd,
 body > main > article ol > li,
+body > main > article dl > dt,
+body > main > article dl > dd,
+body > main > article dl > li,
 body > main > article figure > aside,
 body > main > article figure > figcaption,
 body.index > main > nav aside > menu > li,
@@ -62,10 +69,18 @@ body > main > header > ul,
 body > main > article,
 body > main > article ul,
 body > main > article ol,
+body > main > article dl,
 body.index > main > nav aside > menu,
 body > main > header > ul > li,
+body > main > article ul > dt,
+body > main > article ul > dd,
 body > main > article ul > li,
+body > main > article ol > dt,
+body > main > article ol > dd,
 body > main > article ol > li,
+body > main > article dl > dt,
+body > main > article dl > dd,
+body > main > article dl > li,
 body > main > article figure > aside,
 body > main > article figure > figcaption,
 body.index > main > nav aside > menu > li,
@@ -91,8 +106,15 @@ td {
 }
 
 body > main > header > ul > li,
+body > main > article ul > dt,
+body > main > article ul > dd,
 body > main > article ul > li,
+body > main > article ol > dt,
+body > main > article ol > dd,
 body > main > article ol > li,
+body > main > article dl > dt,
+body > main > article dl > dd,
+body > main > article dl > li,
 body > main > article figure > aside,
 body > main > article figure > figcaption,
 body.index > main > nav aside > menu > li,
@@ -122,8 +144,15 @@ td {
 @supports (display: flow-root) {
 
 	body > main > header > ul > li,
+	body > main > article ul > dt,
+	body > main > article ul > dd,
 	body > main > article ul > li,
+	body > main > article ol > dt,
+	body > main > article ol > dd,
 	body > main > article ol > li,
+	body > main > article dl > dt,
+	body > main > article dl > dd,
+	body > main > article dl > li,
 	body > main > article figure > aside,
 	body > main > article figure > figcaption,
 	body.index > main > nav aside > menu > li,
@@ -143,8 +172,15 @@ td {
 }
 
 body > main > header > ul > li:before,
+body > main > article ul > dt:before,
+body > main > article ul > dd:before,
 body > main > article ul > li:before,
+body > main > article ol > dt:before,
+body > main > article ol > dd:before,
 body > main > article ol > li:before,
+body > main > article dl > dt:before,
+body > main > article dl > dd:before,
+body > main > article dl > li:before,
 body > main > article figure > aside:before,
 body > main > article figure > figcaption:before,
 body.index > main > nav aside > menu > li:before,
@@ -152,8 +188,15 @@ body pre code:before,
 body.example > section pre #files > ul li:before,
 body.example > section #files > ul pre li:before,
 body > main > header > ul > li:after,
+body > main > article ul > dt:after,
+body > main > article ul > dd:after,
 body > main > article ul > li:after,
+body > main > article ol > dt:after,
+body > main > article ol > dd:after,
 body > main > article ol > li:after,
+body > main > article dl > dt:after,
+body > main > article dl > dd:after,
+body > main > article dl > li:after,
 body > main > article figure > aside:after,
 body > main > article figure > figcaption:after,
 body.index > main > nav aside > menu > li:after,
@@ -182,8 +225,15 @@ td:after {
 }
 
 body > main > header > ul > li:before,
+body > main > article ul > dt:before,
+body > main > article ul > dd:before,
 body > main > article ul > li:before,
+body > main > article ol > dt:before,
+body > main > article ol > dd:before,
 body > main > article ol > li:before,
+body > main > article dl > dt:before,
+body > main > article dl > dd:before,
+body > main > article dl > li:before,
 body > main > article figure > aside:before,
 body > main > article figure > figcaption:before,
 body.index > main > nav aside > menu > li:before,
@@ -202,8 +252,15 @@ td:before {
 }
 
 body > main > header > ul > li:after,
+body > main > article ul > dt:after,
+body > main > article ul > dd:after,
 body > main > article ul > li:after,
+body > main > article ol > dt:after,
+body > main > article ol > dd:after,
 body > main > article ol > li:after,
+body > main > article dl > dt:after,
+body > main > article dl > dd:after,
+body > main > article dl > li:after,
 body > main > article figure > aside:after,
 body > main > article figure > figcaption:after,
 body.index > main > nav aside > menu > li:after,
@@ -232,6 +289,7 @@ body > main > header > ul,
 body > main > article,
 body > main > article ul,
 body > main > article ol,
+body > main > article dl,
 body.index > main > nav aside > menu {
 	--typography--cap: calc(var(--typography--cap-height) * 1em);
 	--typography--between: calc(var(--typography--font-size) * (var(--typography--leading) + var(--typography--shoulder) - 1));
@@ -1174,25 +1232,456 @@ body > main > article hr:after {
 
 body > main > article ul,
 body > main > article ol {
-	display: grid;
 	gap: var(--typography--between);
+}
+
+body > main > article dl {
+	gap: var(--typography--leading-shoulder);
+}
+
+body > main > article ul,
+body > main > article ol,
+body > main > article dl {
+	display: grid;
 	grid-template-columns: minmax(0, 1fr);
 	list-style-position: outside;
 }
 
+body > main > article ul > dt,
+body > main > article ul > dd,
 body > main > article ul > li,
-body > main > article ol > li {
-	display: list-item;
+body > main > article ol > dt,
+body > main > article ol > dd,
+body > main > article ol > li,
+body > main > article dl > dt,
+body > main > article dl > dd,
+body > main > article dl > li {
 	margin-bottom: var(--typography--margin--bottom);
 	margin-top: var(--typography--margin--top);
 	max-width: 60ch;
 }
 
+body > main > article ul > dt:before,
+body > main > article ul > dt:after,
+body > main > article ul > dd:before,
+body > main > article ul > dd:after,
 body > main > article ul > li:before,
 body > main > article ul > li:after,
+body > main > article ol > dt:before,
+body > main > article ol > dt:after,
+body > main > article ol > dd:before,
+body > main > article ol > dd:after,
 body > main > article ol > li:before,
-body > main > article ol > li:after {
+body > main > article ol > li:after,
+body > main > article dl > dt:before,
+body > main > article dl > dt:after,
+body > main > article dl > dd:before,
+body > main > article dl > dd:after,
+body > main > article dl > li:before,
+body > main > article dl > li:after {
 	display: none;
+}
+
+body > main > article ul > dt > h3:first-child:before,
+body > main > article ul > dt > h3:last-child:after,
+body > main > article ul > dt > h4:first-child:before,
+body > main > article ul > dt > h4:last-child:after,
+body > main > article ul > dt > p:first-child:before,
+body > main > article ul > dt > p:last-child:after,
+body > main > article ul > dt > div:first-child:before,
+body > main > article ul > dt > div:last-child:after,
+body > main > article ul > dd > h3:first-child:before,
+body > main > article ul > dd > h3:last-child:after,
+body > main > article ul > dd > h4:first-child:before,
+body > main > article ul > dd > h4:last-child:after,
+body > main > article ul > dd > p:first-child:before,
+body > main > article ul > dd > p:last-child:after,
+body > main > article ul > dd > div:first-child:before,
+body > main > article ul > dd > div:last-child:after,
+body > main > article ul > li > h3:first-child:before,
+body > main > article ul > li > h3:last-child:after,
+body > main > article ul > li > h4:first-child:before,
+body > main > article ul > li > h4:last-child:after,
+body > main > article ul > li > p:first-child:before,
+body > main > article ul > li > p:last-child:after,
+body > main > article ul > li > div:first-child:before,
+body > main > article ul > li > div:last-child:after,
+body > main > article ol > dt > h3:first-child:before,
+body > main > article ol > dt > h3:last-child:after,
+body > main > article ol > dt > h4:first-child:before,
+body > main > article ol > dt > h4:last-child:after,
+body > main > article ol > dt > p:first-child:before,
+body > main > article ol > dt > p:last-child:after,
+body > main > article ol > dt > div:first-child:before,
+body > main > article ol > dt > div:last-child:after,
+body > main > article ol > dd > h3:first-child:before,
+body > main > article ol > dd > h3:last-child:after,
+body > main > article ol > dd > h4:first-child:before,
+body > main > article ol > dd > h4:last-child:after,
+body > main > article ol > dd > p:first-child:before,
+body > main > article ol > dd > p:last-child:after,
+body > main > article ol > dd > div:first-child:before,
+body > main > article ol > dd > div:last-child:after,
+body > main > article ol > li > h3:first-child:before,
+body > main > article ol > li > h3:last-child:after,
+body > main > article ol > li > h4:first-child:before,
+body > main > article ol > li > h4:last-child:after,
+body > main > article ol > li > p:first-child:before,
+body > main > article ol > li > p:last-child:after,
+body > main > article ol > li > div:first-child:before,
+body > main > article ol > li > div:last-child:after,
+body > main > article dl > dt > h3:first-child:before,
+body > main > article dl > dt > h3:last-child:after,
+body > main > article dl > dt > h4:first-child:before,
+body > main > article dl > dt > h4:last-child:after,
+body > main > article dl > dt > p:first-child:before,
+body > main > article dl > dt > p:last-child:after,
+body > main > article dl > dt > div:first-child:before,
+body > main > article dl > dt > div:last-child:after,
+body > main > article dl > dd > h3:first-child:before,
+body > main > article dl > dd > h3:last-child:after,
+body > main > article dl > dd > h4:first-child:before,
+body > main > article dl > dd > h4:last-child:after,
+body > main > article dl > dd > p:first-child:before,
+body > main > article dl > dd > p:last-child:after,
+body > main > article dl > dd > div:first-child:before,
+body > main > article dl > dd > div:last-child:after,
+body > main > article dl > li > h3:first-child:before,
+body > main > article dl > li > h3:last-child:after,
+body > main > article dl > li > h4:first-child:before,
+body > main > article dl > li > h4:last-child:after,
+body > main > article dl > li > p:first-child:before,
+body > main > article dl > li > p:last-child:after,
+body > main > article dl > li > div:first-child:before,
+body > main > article dl > li > div:last-child:after {
+	display: none;
+}
+
+body > main > article ul > dt > h3:not(:first-child),
+body > main > article ul > dt > h4:not(:first-child),
+body > main > article ul > dt > p:not(:first-child),
+body > main > article ul > dt > h3 ~ ul:not(:first-child),
+body > main > article ul > dt > h4 ~ ul:not(:first-child),
+body > main > article ul > dt > p ~ ul:not(:first-child),
+body > main > article ul > dt > h3 ~ ol:not(:first-child),
+body > main > article ul > dt > h4 ~ ol:not(:first-child),
+body > main > article ul > dt > p ~ ol:not(:first-child),
+body > main > article ul > dt > div:not(:first-child),
+body > main > article ul > dt > blockquote:not(:first-child),
+body > main > article ul > dd > h3:not(:first-child),
+body > main > article ul > dd > h4:not(:first-child),
+body > main > article ul > dd > p:not(:first-child),
+body > main > article ul > dd > h3 ~ ul:not(:first-child),
+body > main > article ul > dd > h4 ~ ul:not(:first-child),
+body > main > article ul > dd > p ~ ul:not(:first-child),
+body > main > article ul > dd > h3 ~ ol:not(:first-child),
+body > main > article ul > dd > h4 ~ ol:not(:first-child),
+body > main > article ul > dd > p ~ ol:not(:first-child),
+body > main > article ul > dd > div:not(:first-child),
+body > main > article ul > dd > blockquote:not(:first-child),
+body > main > article ul > li > h3:not(:first-child),
+body > main > article ul > li > h4:not(:first-child),
+body > main > article ul > li > p:not(:first-child),
+body > main > article ul > li > h3 ~ ul:not(:first-child),
+body > main > article ul > li > h4 ~ ul:not(:first-child),
+body > main > article ul > li > p ~ ul:not(:first-child),
+body > main > article ul > li > h3 ~ ol:not(:first-child),
+body > main > article ul > li > h4 ~ ol:not(:first-child),
+body > main > article ul > li > p ~ ol:not(:first-child),
+body > main > article ul > li > div:not(:first-child),
+body > main > article ul > li > blockquote:not(:first-child),
+body > main > article ol > dt > h3:not(:first-child),
+body > main > article ol > dt > h4:not(:first-child),
+body > main > article ol > dt > p:not(:first-child),
+body > main > article ol > dt > h3 ~ ul:not(:first-child),
+body > main > article ol > dt > h4 ~ ul:not(:first-child),
+body > main > article ol > dt > p ~ ul:not(:first-child),
+body > main > article ol > dt > h3 ~ ol:not(:first-child),
+body > main > article ol > dt > h4 ~ ol:not(:first-child),
+body > main > article ol > dt > p ~ ol:not(:first-child),
+body > main > article ol > dt > div:not(:first-child),
+body > main > article ol > dt > blockquote:not(:first-child),
+body > main > article ol > dd > h3:not(:first-child),
+body > main > article ol > dd > h4:not(:first-child),
+body > main > article ol > dd > p:not(:first-child),
+body > main > article ol > dd > h3 ~ ul:not(:first-child),
+body > main > article ol > dd > h4 ~ ul:not(:first-child),
+body > main > article ol > dd > p ~ ul:not(:first-child),
+body > main > article ol > dd > h3 ~ ol:not(:first-child),
+body > main > article ol > dd > h4 ~ ol:not(:first-child),
+body > main > article ol > dd > p ~ ol:not(:first-child),
+body > main > article ol > dd > div:not(:first-child),
+body > main > article ol > dd > blockquote:not(:first-child),
+body > main > article ol > li > h3:not(:first-child),
+body > main > article ol > li > h4:not(:first-child),
+body > main > article ol > li > p:not(:first-child),
+body > main > article ol > li > h3 ~ ul:not(:first-child),
+body > main > article ol > li > h4 ~ ul:not(:first-child),
+body > main > article ol > li > p ~ ul:not(:first-child),
+body > main > article ol > li > h3 ~ ol:not(:first-child),
+body > main > article ol > li > h4 ~ ol:not(:first-child),
+body > main > article ol > li > p ~ ol:not(:first-child),
+body > main > article ol > li > div:not(:first-child),
+body > main > article ol > li > blockquote:not(:first-child),
+body > main > article dl > dt > h3:not(:first-child),
+body > main > article dl > dt > h4:not(:first-child),
+body > main > article dl > dt > p:not(:first-child),
+body > main > article dl > dt > h3 ~ ul:not(:first-child),
+body > main > article dl > dt > h4 ~ ul:not(:first-child),
+body > main > article dl > dt > p ~ ul:not(:first-child),
+body > main > article dl > dt > h3 ~ ol:not(:first-child),
+body > main > article dl > dt > h4 ~ ol:not(:first-child),
+body > main > article dl > dt > p ~ ol:not(:first-child),
+body > main > article dl > dt > div:not(:first-child),
+body > main > article dl > dt > blockquote:not(:first-child),
+body > main > article dl > dd > h3:not(:first-child),
+body > main > article dl > dd > h4:not(:first-child),
+body > main > article dl > dd > p:not(:first-child),
+body > main > article dl > dd > h3 ~ ul:not(:first-child),
+body > main > article dl > dd > h4 ~ ul:not(:first-child),
+body > main > article dl > dd > p ~ ul:not(:first-child),
+body > main > article dl > dd > h3 ~ ol:not(:first-child),
+body > main > article dl > dd > h4 ~ ol:not(:first-child),
+body > main > article dl > dd > p ~ ol:not(:first-child),
+body > main > article dl > dd > div:not(:first-child),
+body > main > article dl > dd > blockquote:not(:first-child),
+body > main > article dl > li > h3:not(:first-child),
+body > main > article dl > li > h4:not(:first-child),
+body > main > article dl > li > p:not(:first-child),
+body > main > article dl > li > h3 ~ ul:not(:first-child),
+body > main > article dl > li > h4 ~ ul:not(:first-child),
+body > main > article dl > li > p ~ ul:not(:first-child),
+body > main > article dl > li > h3 ~ ol:not(:first-child),
+body > main > article dl > li > h4 ~ ol:not(:first-child),
+body > main > article dl > li > p ~ ol:not(:first-child),
+body > main > article dl > li > div:not(:first-child),
+body > main > article dl > li > blockquote:not(:first-child) {
+	margin-top: var(--typography--leading-shoulder);
+}
+
+body > main > article ul > dt > h3:last-child,
+body > main > article ul > dt > h4:last-child,
+body > main > article ul > dt > p:last-child,
+body > main > article ul > dt > h3 ~ ul:last-child,
+body > main > article ul > dt > h4 ~ ul:last-child,
+body > main > article ul > dt > p ~ ul:last-child,
+body > main > article ul > dt > h3 ~ ol:last-child,
+body > main > article ul > dt > h4 ~ ol:last-child,
+body > main > article ul > dt > p ~ ol:last-child,
+body > main > article ul > dt > div:last-child,
+body > main > article ul > dt > blockquote:last-child,
+body > main > article ul > dd > h3:last-child,
+body > main > article ul > dd > h4:last-child,
+body > main > article ul > dd > p:last-child,
+body > main > article ul > dd > h3 ~ ul:last-child,
+body > main > article ul > dd > h4 ~ ul:last-child,
+body > main > article ul > dd > p ~ ul:last-child,
+body > main > article ul > dd > h3 ~ ol:last-child,
+body > main > article ul > dd > h4 ~ ol:last-child,
+body > main > article ul > dd > p ~ ol:last-child,
+body > main > article ul > dd > div:last-child,
+body > main > article ul > dd > blockquote:last-child,
+body > main > article ul > li > h3:last-child,
+body > main > article ul > li > h4:last-child,
+body > main > article ul > li > p:last-child,
+body > main > article ul > li > h3 ~ ul:last-child,
+body > main > article ul > li > h4 ~ ul:last-child,
+body > main > article ul > li > p ~ ul:last-child,
+body > main > article ul > li > h3 ~ ol:last-child,
+body > main > article ul > li > h4 ~ ol:last-child,
+body > main > article ul > li > p ~ ol:last-child,
+body > main > article ul > li > div:last-child,
+body > main > article ul > li > blockquote:last-child,
+body > main > article ol > dt > h3:last-child,
+body > main > article ol > dt > h4:last-child,
+body > main > article ol > dt > p:last-child,
+body > main > article ol > dt > h3 ~ ul:last-child,
+body > main > article ol > dt > h4 ~ ul:last-child,
+body > main > article ol > dt > p ~ ul:last-child,
+body > main > article ol > dt > h3 ~ ol:last-child,
+body > main > article ol > dt > h4 ~ ol:last-child,
+body > main > article ol > dt > p ~ ol:last-child,
+body > main > article ol > dt > div:last-child,
+body > main > article ol > dt > blockquote:last-child,
+body > main > article ol > dd > h3:last-child,
+body > main > article ol > dd > h4:last-child,
+body > main > article ol > dd > p:last-child,
+body > main > article ol > dd > h3 ~ ul:last-child,
+body > main > article ol > dd > h4 ~ ul:last-child,
+body > main > article ol > dd > p ~ ul:last-child,
+body > main > article ol > dd > h3 ~ ol:last-child,
+body > main > article ol > dd > h4 ~ ol:last-child,
+body > main > article ol > dd > p ~ ol:last-child,
+body > main > article ol > dd > div:last-child,
+body > main > article ol > dd > blockquote:last-child,
+body > main > article ol > li > h3:last-child,
+body > main > article ol > li > h4:last-child,
+body > main > article ol > li > p:last-child,
+body > main > article ol > li > h3 ~ ul:last-child,
+body > main > article ol > li > h4 ~ ul:last-child,
+body > main > article ol > li > p ~ ul:last-child,
+body > main > article ol > li > h3 ~ ol:last-child,
+body > main > article ol > li > h4 ~ ol:last-child,
+body > main > article ol > li > p ~ ol:last-child,
+body > main > article ol > li > div:last-child,
+body > main > article ol > li > blockquote:last-child,
+body > main > article dl > dt > h3:last-child,
+body > main > article dl > dt > h4:last-child,
+body > main > article dl > dt > p:last-child,
+body > main > article dl > dt > h3 ~ ul:last-child,
+body > main > article dl > dt > h4 ~ ul:last-child,
+body > main > article dl > dt > p ~ ul:last-child,
+body > main > article dl > dt > h3 ~ ol:last-child,
+body > main > article dl > dt > h4 ~ ol:last-child,
+body > main > article dl > dt > p ~ ol:last-child,
+body > main > article dl > dt > div:last-child,
+body > main > article dl > dt > blockquote:last-child,
+body > main > article dl > dd > h3:last-child,
+body > main > article dl > dd > h4:last-child,
+body > main > article dl > dd > p:last-child,
+body > main > article dl > dd > h3 ~ ul:last-child,
+body > main > article dl > dd > h4 ~ ul:last-child,
+body > main > article dl > dd > p ~ ul:last-child,
+body > main > article dl > dd > h3 ~ ol:last-child,
+body > main > article dl > dd > h4 ~ ol:last-child,
+body > main > article dl > dd > p ~ ol:last-child,
+body > main > article dl > dd > div:last-child,
+body > main > article dl > dd > blockquote:last-child,
+body > main > article dl > li > h3:last-child,
+body > main > article dl > li > h4:last-child,
+body > main > article dl > li > p:last-child,
+body > main > article dl > li > h3 ~ ul:last-child,
+body > main > article dl > li > h4 ~ ul:last-child,
+body > main > article dl > li > p ~ ul:last-child,
+body > main > article dl > li > h3 ~ ol:last-child,
+body > main > article dl > li > h4 ~ ol:last-child,
+body > main > article dl > li > p ~ ol:last-child,
+body > main > article dl > li > div:last-child,
+body > main > article dl > li > blockquote:last-child {
+	margin-bottom: calc(var(--typography--font-size) * var(--typography--leading));
+}
+
+body > main > article ul > dt > h3:not(:only-child):last-child,
+body > main > article ul > dt > h4:not(:only-child):last-child,
+body > main > article ul > dt > p:not(:only-child):last-child,
+body > main > article ul > dt > h3 ~ ul:not(:only-child):last-child,
+body > main > article ul > dt > h4 ~ ul:not(:only-child):last-child,
+body > main > article ul > dt > p ~ ul:not(:only-child):last-child,
+body > main > article ul > dt > h3 ~ ol:not(:only-child):last-child,
+body > main > article ul > dt > h4 ~ ol:not(:only-child):last-child,
+body > main > article ul > dt > p ~ ol:not(:only-child):last-child,
+body > main > article ul > dt > div:not(:only-child):last-child,
+body > main > article ul > dt > blockquote:not(:only-child):last-child,
+body > main > article ul > dd > h3:not(:only-child):last-child,
+body > main > article ul > dd > h4:not(:only-child):last-child,
+body > main > article ul > dd > p:not(:only-child):last-child,
+body > main > article ul > dd > h3 ~ ul:not(:only-child):last-child,
+body > main > article ul > dd > h4 ~ ul:not(:only-child):last-child,
+body > main > article ul > dd > p ~ ul:not(:only-child):last-child,
+body > main > article ul > dd > h3 ~ ol:not(:only-child):last-child,
+body > main > article ul > dd > h4 ~ ol:not(:only-child):last-child,
+body > main > article ul > dd > p ~ ol:not(:only-child):last-child,
+body > main > article ul > dd > div:not(:only-child):last-child,
+body > main > article ul > dd > blockquote:not(:only-child):last-child,
+body > main > article ul > li > h3:not(:only-child):last-child,
+body > main > article ul > li > h4:not(:only-child):last-child,
+body > main > article ul > li > p:not(:only-child):last-child,
+body > main > article ul > li > h3 ~ ul:not(:only-child):last-child,
+body > main > article ul > li > h4 ~ ul:not(:only-child):last-child,
+body > main > article ul > li > p ~ ul:not(:only-child):last-child,
+body > main > article ul > li > h3 ~ ol:not(:only-child):last-child,
+body > main > article ul > li > h4 ~ ol:not(:only-child):last-child,
+body > main > article ul > li > p ~ ol:not(:only-child):last-child,
+body > main > article ul > li > div:not(:only-child):last-child,
+body > main > article ul > li > blockquote:not(:only-child):last-child,
+body > main > article ol > dt > h3:not(:only-child):last-child,
+body > main > article ol > dt > h4:not(:only-child):last-child,
+body > main > article ol > dt > p:not(:only-child):last-child,
+body > main > article ol > dt > h3 ~ ul:not(:only-child):last-child,
+body > main > article ol > dt > h4 ~ ul:not(:only-child):last-child,
+body > main > article ol > dt > p ~ ul:not(:only-child):last-child,
+body > main > article ol > dt > h3 ~ ol:not(:only-child):last-child,
+body > main > article ol > dt > h4 ~ ol:not(:only-child):last-child,
+body > main > article ol > dt > p ~ ol:not(:only-child):last-child,
+body > main > article ol > dt > div:not(:only-child):last-child,
+body > main > article ol > dt > blockquote:not(:only-child):last-child,
+body > main > article ol > dd > h3:not(:only-child):last-child,
+body > main > article ol > dd > h4:not(:only-child):last-child,
+body > main > article ol > dd > p:not(:only-child):last-child,
+body > main > article ol > dd > h3 ~ ul:not(:only-child):last-child,
+body > main > article ol > dd > h4 ~ ul:not(:only-child):last-child,
+body > main > article ol > dd > p ~ ul:not(:only-child):last-child,
+body > main > article ol > dd > h3 ~ ol:not(:only-child):last-child,
+body > main > article ol > dd > h4 ~ ol:not(:only-child):last-child,
+body > main > article ol > dd > p ~ ol:not(:only-child):last-child,
+body > main > article ol > dd > div:not(:only-child):last-child,
+body > main > article ol > dd > blockquote:not(:only-child):last-child,
+body > main > article ol > li > h3:not(:only-child):last-child,
+body > main > article ol > li > h4:not(:only-child):last-child,
+body > main > article ol > li > p:not(:only-child):last-child,
+body > main > article ol > li > h3 ~ ul:not(:only-child):last-child,
+body > main > article ol > li > h4 ~ ul:not(:only-child):last-child,
+body > main > article ol > li > p ~ ul:not(:only-child):last-child,
+body > main > article ol > li > h3 ~ ol:not(:only-child):last-child,
+body > main > article ol > li > h4 ~ ol:not(:only-child):last-child,
+body > main > article ol > li > p ~ ol:not(:only-child):last-child,
+body > main > article ol > li > div:not(:only-child):last-child,
+body > main > article ol > li > blockquote:not(:only-child):last-child,
+body > main > article dl > dt > h3:not(:only-child):last-child,
+body > main > article dl > dt > h4:not(:only-child):last-child,
+body > main > article dl > dt > p:not(:only-child):last-child,
+body > main > article dl > dt > h3 ~ ul:not(:only-child):last-child,
+body > main > article dl > dt > h4 ~ ul:not(:only-child):last-child,
+body > main > article dl > dt > p ~ ul:not(:only-child):last-child,
+body > main > article dl > dt > h3 ~ ol:not(:only-child):last-child,
+body > main > article dl > dt > h4 ~ ol:not(:only-child):last-child,
+body > main > article dl > dt > p ~ ol:not(:only-child):last-child,
+body > main > article dl > dt > div:not(:only-child):last-child,
+body > main > article dl > dt > blockquote:not(:only-child):last-child,
+body > main > article dl > dd > h3:not(:only-child):last-child,
+body > main > article dl > dd > h4:not(:only-child):last-child,
+body > main > article dl > dd > p:not(:only-child):last-child,
+body > main > article dl > dd > h3 ~ ul:not(:only-child):last-child,
+body > main > article dl > dd > h4 ~ ul:not(:only-child):last-child,
+body > main > article dl > dd > p ~ ul:not(:only-child):last-child,
+body > main > article dl > dd > h3 ~ ol:not(:only-child):last-child,
+body > main > article dl > dd > h4 ~ ol:not(:only-child):last-child,
+body > main > article dl > dd > p ~ ol:not(:only-child):last-child,
+body > main > article dl > dd > div:not(:only-child):last-child,
+body > main > article dl > dd > blockquote:not(:only-child):last-child,
+body > main > article dl > li > h3:not(:only-child):last-child,
+body > main > article dl > li > h4:not(:only-child):last-child,
+body > main > article dl > li > p:not(:only-child):last-child,
+body > main > article dl > li > h3 ~ ul:not(:only-child):last-child,
+body > main > article dl > li > h4 ~ ul:not(:only-child):last-child,
+body > main > article dl > li > p ~ ul:not(:only-child):last-child,
+body > main > article dl > li > h3 ~ ol:not(:only-child):last-child,
+body > main > article dl > li > h4 ~ ol:not(:only-child):last-child,
+body > main > article dl > li > p ~ ol:not(:only-child):last-child,
+body > main > article dl > li > div:not(:only-child):last-child,
+body > main > article dl > li > blockquote:not(:only-child):last-child {
+	margin-bottom: calc(2 * var(--typography--font-size) * var(--typography--leading));
+}
+
+body > main > article ul > dt:last-child > *:last-child:not(._),
+body > main > article ul > dd:last-child > *:last-child:not(._),
+body > main > article ul > li:last-child > *:last-child:not(._),
+body > main > article ol > dt:last-child > *:last-child:not(._),
+body > main > article ol > dd:last-child > *:last-child:not(._),
+body > main > article ol > li:last-child > *:last-child:not(._),
+body > main > article dl > dt:last-child > *:last-child:not(._),
+body > main > article dl > dd:last-child > *:last-child:not(._),
+body > main > article dl > li:last-child > *:last-child:not(._) {
+	margin-bottom: initial;
+}
+
+body > main > article ul > dt,
+body > main > article ul > li,
+body > main > article ol > dt,
+body > main > article ol > li,
+body > main > article dl > dt,
+body > main > article dl > li {
+	display: list-item;
 }
 
 body > main > article ul > li > h3,
@@ -1204,7 +1693,12 @@ body > main > article ol > li > h3,
 body > main > article ol > li > h4,
 body > main > article ol > li > p,
 body > main > article ol > li > div,
-body > main > article ol > li > blockquote {
+body > main > article ol > li > blockquote,
+body > main > article dl > li > h3,
+body > main > article dl > li > h4,
+body > main > article dl > li > p,
+body > main > article dl > li > div,
+body > main > article dl > li > blockquote {
 	--padding-left: 1ch;
 }
 
@@ -1217,7 +1711,12 @@ body > main > article ol > li > h3 ~ *,
 body > main > article ol > li > h4 ~ *,
 body > main > article ol > li > p ~ *,
 body > main > article ol > li > div ~ *,
-body > main > article ol > li > blockquote ~ * {
+body > main > article ol > li > blockquote ~ *,
+body > main > article dl > li > h3 ~ *,
+body > main > article dl > li > h4 ~ *,
+body > main > article dl > li > p ~ *,
+body > main > article dl > li > div ~ *,
+body > main > article dl > li > blockquote ~ * {
 	--padding-left: 1ch;
 }
 
@@ -1228,115 +1727,22 @@ body > main > article ul > li > div,
 body > main > article ol > li > h3,
 body > main > article ol > li > h4,
 body > main > article ol > li > p,
-body > main > article ol > li > div {
+body > main > article ol > li > div,
+body > main > article dl > li > h3,
+body > main > article dl > li > h4,
+body > main > article dl > li > p,
+body > main > article dl > li > div {
 	padding-left: var(--padding-left);
 }
 
-body > main > article ul > li > h3:first-child:before,
-body > main > article ul > li > h3:last-child:after,
-body > main > article ul > li > h4:first-child:before,
-body > main > article ul > li > h4:last-child:after,
-body > main > article ul > li > p:first-child:before,
-body > main > article ul > li > p:last-child:after,
-body > main > article ul > li > div:first-child:before,
-body > main > article ul > li > div:last-child:after,
-body > main > article ol > li > h3:first-child:before,
-body > main > article ol > li > h3:last-child:after,
-body > main > article ol > li > h4:first-child:before,
-body > main > article ol > li > h4:last-child:after,
-body > main > article ol > li > p:first-child:before,
-body > main > article ol > li > p:last-child:after,
-body > main > article ol > li > div:first-child:before,
-body > main > article ol > li > div:last-child:after {
-	display: none;
-}
-
 body > main > article ul > li > blockquote,
-body > main > article ol > li > blockquote {
+body > main > article ol > li > blockquote,
+body > main > article dl > li > blockquote {
 	margin-left: var(--padding-left);
 }
 
-body > main > article ul > li > h3:not(:first-child),
-body > main > article ul > li > h4:not(:first-child),
-body > main > article ul > li > p:not(:first-child),
-body > main > article ul > li > h3 ~ ul:not(:first-child),
-body > main > article ul > li > h4 ~ ul:not(:first-child),
-body > main > article ul > li > p ~ ul:not(:first-child),
-body > main > article ul > li > h3 ~ ol:not(:first-child),
-body > main > article ul > li > h4 ~ ol:not(:first-child),
-body > main > article ul > li > p ~ ol:not(:first-child),
-body > main > article ul > li > div:not(:first-child),
-body > main > article ul > li > blockquote:not(:first-child),
-body > main > article ol > li > h3:not(:first-child),
-body > main > article ol > li > h4:not(:first-child),
-body > main > article ol > li > p:not(:first-child),
-body > main > article ol > li > h3 ~ ul:not(:first-child),
-body > main > article ol > li > h4 ~ ul:not(:first-child),
-body > main > article ol > li > p ~ ul:not(:first-child),
-body > main > article ol > li > h3 ~ ol:not(:first-child),
-body > main > article ol > li > h4 ~ ol:not(:first-child),
-body > main > article ol > li > p ~ ol:not(:first-child),
-body > main > article ol > li > div:not(:first-child),
-body > main > article ol > li > blockquote:not(:first-child) {
-	margin-top: var(--typography--leading-shoulder);
-}
-
-body > main > article ul > li > h3:last-child,
-body > main > article ul > li > h4:last-child,
-body > main > article ul > li > p:last-child,
-body > main > article ul > li > h3 ~ ul:last-child,
-body > main > article ul > li > h4 ~ ul:last-child,
-body > main > article ul > li > p ~ ul:last-child,
-body > main > article ul > li > h3 ~ ol:last-child,
-body > main > article ul > li > h4 ~ ol:last-child,
-body > main > article ul > li > p ~ ol:last-child,
-body > main > article ul > li > div:last-child,
-body > main > article ul > li > blockquote:last-child,
-body > main > article ol > li > h3:last-child,
-body > main > article ol > li > h4:last-child,
-body > main > article ol > li > p:last-child,
-body > main > article ol > li > h3 ~ ul:last-child,
-body > main > article ol > li > h4 ~ ul:last-child,
-body > main > article ol > li > p ~ ul:last-child,
-body > main > article ol > li > h3 ~ ol:last-child,
-body > main > article ol > li > h4 ~ ol:last-child,
-body > main > article ol > li > p ~ ol:last-child,
-body > main > article ol > li > div:last-child,
-body > main > article ol > li > blockquote:last-child {
-	margin-bottom: calc(var(--typography--font-size) * var(--typography--leading));
-}
-
-body > main > article ul > li > h3:not(:only-child):last-child,
-body > main > article ul > li > h4:not(:only-child):last-child,
-body > main > article ul > li > p:not(:only-child):last-child,
-body > main > article ul > li > h3 ~ ul:not(:only-child):last-child,
-body > main > article ul > li > h4 ~ ul:not(:only-child):last-child,
-body > main > article ul > li > p ~ ul:not(:only-child):last-child,
-body > main > article ul > li > h3 ~ ol:not(:only-child):last-child,
-body > main > article ul > li > h4 ~ ol:not(:only-child):last-child,
-body > main > article ul > li > p ~ ol:not(:only-child):last-child,
-body > main > article ul > li > div:not(:only-child):last-child,
-body > main > article ul > li > blockquote:not(:only-child):last-child,
-body > main > article ol > li > h3:not(:only-child):last-child,
-body > main > article ol > li > h4:not(:only-child):last-child,
-body > main > article ol > li > p:not(:only-child):last-child,
-body > main > article ol > li > h3 ~ ul:not(:only-child):last-child,
-body > main > article ol > li > h4 ~ ul:not(:only-child):last-child,
-body > main > article ol > li > p ~ ul:not(:only-child):last-child,
-body > main > article ol > li > h3 ~ ol:not(:only-child):last-child,
-body > main > article ol > li > h4 ~ ol:not(:only-child):last-child,
-body > main > article ol > li > p ~ ol:not(:only-child):last-child,
-body > main > article ol > li > div:not(:only-child):last-child,
-body > main > article ol > li > blockquote:not(:only-child):last-child {
-	margin-bottom: calc(2 * var(--typography--font-size) * var(--typography--leading));
-}
-
-body > main > article ul > li:last-child > *:last-child:not(._),
-body > main > article ol > li:last-child > *:last-child:not(._) {
-	margin-bottom: initial;
-}
-
-body > main > article ul {
+body > main > article ul,
+body > main > article dl {
 	list-style-type: "-";
 	padding-left: calc(var(--padding-left, 0ch) + 1ch);
 }
@@ -1396,6 +1802,36 @@ body > main > article ol > li:before {
 	visibility: visible;
 	left: 0;
 	top: calc(var(--typography--margin--top) * -1);
+}
+
+body > main > article dl {
+	--margin--top: var(--margin--vertical--2);
+}
+
+body > main > article dl > dt {
+	font-style: italic;
+}
+
+body > main > article dl > dt:not(:first-child) {
+	margin-top: var(--typography--leading-shoulder);
+}
+
+body > main > article dl > dt,
+body > main > article dl > dd {
+	padding-left: 2ch;
+}
+
+body > main > article dl > dd > *:last-child:not(._):not(._) {
+	margin-bottom: initial;
+}
+
+body > main > article dl + * {
+	--margin--top: var(--margin--vertical--2);
+	--margin--top--previous: var(--margin--vertical--2);
+}
+
+body > main > article dl + * + * {
+	--margin--top--previous: var(--margin--vertical--2);
 }
 
 body > main > article table {
@@ -3718,7 +4154,8 @@ body.example > section #files > ul pre li {
 	--typography--leading: 1.25;
 }
 
-body li pre {
+body li pre,
+body dd pre {
 	padding: calc(var(--margin) / 4);
 }
 
