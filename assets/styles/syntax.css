@@ -167,7 +167,9 @@
 .highlight .p ~ .m + .n + .n + .p,
 .highlight .p ~ .s1 + .p,
 .highlight .p + .m + .o + .n,
-.highlight .p + .m + .o + .n + .m + .p {
+.highlight .p + .m + .o + .n + .m + .p,
+.highlight .p + .n + .o + .nf,
+.highlight .p + .n + .o + .nf + .p {
   color: #74a800;
 }
 
