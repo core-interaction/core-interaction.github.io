@@ -24,20 +24,21 @@ published: false
 - [Flexbox vs. CSS Grid](https://www.youtube.com/watch?v=hs3piaN4b5I) \
 	*And also helps unpack when to use flex/grid.*
 
+- [Grid by Example](https://gridbyexample.com/examples/) \
+	*Loads of layout examples.*
+
 - [Grid Garden](https://cssgridgarden.com) \
 	*Like the Froggy game, but for grid.*
 {: .no-marker .icon-link .right rows="6" }
 
+(We had some of this two-dimensionality with [<nobr>flex-wrap</nobr>](/topic/flexbox/#flex-wrap), but grid offers much more control.)
+
+Grid is *a lot* like flex (this will be a running theme)—<wbr>a [*display*](https://developer.mozilla.org/en-US/docs/Web/CSS/display) property applied on a parent/<wbr>container element. This `display: grid;` tells its (immediate) children/<wbr>*grid items* how they should be laid out. Also like flex, there is `display: inline-grid;` which behaves the same internally—<wbr>but with the parent behaving as an inline element.
+
 Grid supplants many of the previous box model layout systems (like floats, margin-centering, etc.) and, like flex, works much closer to how we think about layouts *as designers*. It can get complicated, but makes most layouts (especially responsive ones) much, much easier to implement.
-
-*We had some of this two-dimensionality with [<nobr>flex-wrap</nobr>](/topic/flexbox/#flex-wrap), but grid offers much more control.*
-
-
-
-Grid is *a lot* like flex (this will be a running theme)—<wbr>a [*display*](https://developer.mozilla.org/en-US/docs/Web/CSS/display) property applied on a parent/<wbr>container element. This `display: grid;` tells its (immediate) children/<wbr>*grid items* how they should be laid out.
 {: .two-above }
 
-And again like flex, there is also `display: inline-grid;` which behaves the same internally—<wbr>but with the parent behaving as an inline element.
+There are many novel, powerful uses for *grid*—it is really the backbone of modern web layout. Let’s take a look.
 
 
 
@@ -45,7 +46,7 @@ And again like flex, there is also `display: inline-grid;` which behaves the sam
 
 Grid introduces us to some new vocabulary:
 
-{% include figure.html caption='Borrowed from the [WebKit post](https://webkit.org/blog/7434/css-grid-layout-a-new-layout-module-for-the-web/).' src='grid-concepts.svg' %}
+{% include figure.html caption='Borrowed from the WebKit post.' credit='https://webkit.org/blog/7434/css-grid-layout-a-new-layout-module-for-the-web/' src='grid-concepts.svg' %}
 
 Line
 : The dividing lines that define the grid, vertical or horizontal. (Think *gutters*.)
@@ -288,11 +289,11 @@ You can also control *item* placement in unnamed (and *implicit*) grid areas wit
 
 You can also leave off the *start line* if you just want to specify a `span`, regardless of where the item falls in the grid:
 
-{% include figure.html src='/example/grid-column-row-span/demo' caption='I’ve added `grid-auto-flow: dense;` to the container—allowing the fifth item to [scoot up](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow) “before” the bigger one.' height='32rem' %}
+{% include figure.html src='/example/grid-column-row-span/demo' caption='I’ve added `grid-auto-flow: dense;` to the container—allowing the fifth item to [scoot up](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow) “before” the bigger one.' height='32rem' %}
 
 And if you specify non-contiguous rows or columns, *grid* will create as many *implicit* tracks as it needs to accommodate them—even if they are empty:
 
-{% include figure.html src='/example/grid-column-row-implicit/demo' height='53rem' %}
+{% include figure.html src='/example/grid-column-row-implicit/demo' caption='Keep in mind that like `order` in flex, this arrangement is only visual! Keep your DOM in a logical, semantic sequence.' height='53rem' %}
 
 Keep in mind that with both `grid-area` and `grid-column` / `grid-row`, you are able to tell multiple *grid items* to land in the same *cell*—there isn’t any kind of fancy collision-proofing. If this is what you want, you can use `z-index` to specify which one is visually [in front](/topic/box-model/#depth)!
 
