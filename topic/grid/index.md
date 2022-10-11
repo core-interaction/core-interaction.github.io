@@ -194,11 +194,11 @@ But `grid-auto-columns` only comes up if you force the columns to wrap with `gri
 
 ### `justify-items`
 
-Also [like *flex*](/topic/flexbox/#justify-content), we can position items within the tracks—but now we have control over both axes and the overall placement. To start, `justify-items` positions all the *grid items* along their row axis.
+Also [like *flex*](/topic/flexbox/#justify-content) (there’s a pattern here), we can position items within the tracks—but now we have control over both axes and the overall placement. To start, `justify-items` positions all the *grid items* along their row axis.
 
 The terminology here is always a bit confusing, but think of it this way—in *grid*, the main axis is always the horizontal row. So *justify* always means left/right, and *align* always means top/bottom. Easier to remember than flex!
 
-{% include figure.html src='/example/grid-justify-items/demo' %}
+{% include figure.html src='/example/grid-justify-items/demo' height='70rem' %}
 
 
 
@@ -208,13 +208,9 @@ The terminology here is always a bit confusing, but think of it this way—in *
 
 And `align-items` directly corresponds to the [flex values](/topic/flexbox/#align-items), to position all the *items* vertically along their column axis.
 
-{% include figure.html src='/example/grid-align-items/demo' %}
+{% include figure.html src='/example/grid-align-items/demo' caption='Note that there isn’t any change on the last *implicit* row with the default `auto`/content height.' height='70rem' %}
 
-
-
-Note that there isn’t any change on the last *implicit* row with the default `auto`/content height.
-
-There are [also baseline align values](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items), but I don’t think I’ve ever seen them used in grid.
+There are [also baseline align values](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items), but I don’t think I’ve ever seen them used in grid—your layouts are often too nested/complicated for them to work.
 
 
 
