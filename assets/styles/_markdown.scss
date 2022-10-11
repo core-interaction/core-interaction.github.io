@@ -214,18 +214,10 @@
 	dl {
 		--margin--top: var(--margin--vertical--2);
 
-		> dt {
-			font-style: italic;
-
-			&:not(:first-child) { margin-top: var(--typography--leading-shoulder) }
-		}
+		> dt { font-style: italic; }
 
 		> dt,
 		> dd { padding-left: 2ch }
-
-		> dd {
-			> *:last-child:not(._):not(._) { margin-bottom: initial }
-		}
 
 		+ * {
 			--margin--top:           var(--margin--vertical--2);
