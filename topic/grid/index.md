@@ -153,7 +153,7 @@ Again, *grid* is a lot like *flex*—primarily properties that are applied on a�
 
 ### `grid-template-columns` / `grid-template-rows`
 
-Setting `display: grid;` won’t do much until you also declare some columns or rows, with *grid template*. You can specify `grid-template-columns`, `grid-template-rows`, or both. These properties are followed by a *track list* of the size for each track.
+Setting `display: grid;` won’t do much until you also declare some [columns](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns) or [rows](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows), with *grid template*. You can specify `grid-template-columns`, `grid-template-rows`, or both. These properties are followed by a *track list* of the size for each track.
 
 {% include figure.html src='/example/grid-template/demo' caption='Notice in the second example, the items do not *wrap* to a new column—because `grid-auto-flow: row;` is the default setting. The third example sets this to `column` to make it flow to a new one.' height='52rem' %}
 
@@ -173,10 +173,9 @@ The `repeat` function is very commonly used to make even-width grids. And of cou
 
 ### `grid-auto-columns` / `grid-auto-rows`
 
-By default, these *implicit grid* tracks are sized `auto` (to their content), but you can also specify their size—usually a *height* for the `grid-auto-rows`.
+By default, these *implicit grid* tracks are sized `auto` (to their content), but you can also specify their size—often [a *height*](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows) for the `grid-auto-rows`.
 
-{% include figure.html src='/example/grid-auto-row/demo' %}
-
+{% include figure.html src='/example/grid-auto-row/demo' height='29rem' %}
 
 
 But `grid-auto-columns` only comes up if you force the columns to wrap with `grid-auto-flow: column;` as in the earlier example. Again, height is usually not our main constraint, with scrolling!
@@ -187,7 +186,7 @@ But `grid-auto-columns` only comes up if you force the columns to wrap with `gri
 
 *Grid* also shares the `gap`, `column-gap`, and `row-gap` [properties with *flex*](/topic/flexbox/#gap-row-gap-and-column-gap)—to add gutters between the *tracks*. The syntax and behavior is the same!
 
-{% include figure.html src='/example/grid-gap/demo' %}
+{% include figure.html src='/example/grid-gap/demo' height='57rem' %}
 
 
 
