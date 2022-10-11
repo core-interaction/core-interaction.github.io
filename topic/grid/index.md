@@ -290,7 +290,7 @@ You can also control *item* placement in unnamed (and *implicit*) grid areas wit
 
 You can also leave off the *start line* if you just want to specify a `span`, regardless of where the item falls in the grid:
 
-{% include figure.html src='/example/grid-template-columns-span/demo' caption='I’ve added `grid-auto-flow: dense;` to the container—allowing the fifth item to [scoot up](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow) “before” the bigger one.' height='30rem' %}
+{% include figure.html src='/example/grid-column-row-span/demo' caption='I’ve added `grid-auto-flow: dense;` to the container—allowing the fifth item to [scoot up](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow) “before” the bigger one.' height='30rem' %}
 
 Keep in mind that with both `grid-area` and `grid-column` / `grid-row`, you are able to tell multiple *grid items* to land in the same *cell*—there isn’t any kind of fancy collision-proofing. If this is what you want, you can use `z-index` to specify which one is visually [in front](/topic/box-model/#depth)!
 
