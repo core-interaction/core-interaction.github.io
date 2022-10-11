@@ -227,15 +227,18 @@ If the total size of your grid is less than the container (because of your *expl
 
 ### Using repeat
 
-The `repeat` function is very commonly used to make even-width grids. And of course, they can be made responsive with [media queries](/topic/media-queries) and [CSS variables](/topic/responsive/#briefly-css-variables)!
+*Grid’s* `repeat` function is very commonly used to make even-width grids. And of course, they can be made responsive with [media queries](/topic/media-queries) and [CSS variables](/topic/responsive/#briefly-css-variables)!
 
 {% include figure.html src='/example/grid-template-columns-repeat/demo' caption='Notice that the *items* always stick to the grid structure—independent of their content—unlike our previous `flex-wrap` pseudo-grids.' height='38rem' %}
 
 *Flex* is [sometimes referred](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout) to in this way as *content-out*, while *grid* is a *layout-in* system.
 
 
+### `auto-fill` / `auto-fit`
 
-{% comment %} ADD  `auto-fill` / `auto-fit` EXAMPLE {% endcomment %}
+You can also use the `repeat` function without specifying an exact number of columns, instead using `auto-fill` or `auto-fit` to [automatically define](https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/) your columns—making a grid inherently responsive without any media queries! These are great for controlling an even-column layout without much overhead:
+
+{% include figure.html src='/example/grid-template-columns-repeat-auto/demo' caption='Drag the divider over to see the difference in `auto-fill` / `auto-fit` behaviors' height='53rem' %}
 
 
 
@@ -285,7 +288,7 @@ You can also control *item* placement in unnamed (and *implicit*) grid areas wit
 
 {% include figure.html src='/example/grid-column-row/demo' caption='Notice that we can leave off the *end line* if it doesn’t `span` multiple tracks, and also that you either add a `span` *or* a specific *end line* number.' height='48rem' %}
 
-You can also leave off the *start line* if you just want to specify a `span`:
+You can also leave off the *start line* if you just want to specify a `span`, regardless of where the item falls in the grid:
 
 {% include figure.html src='/example/grid-template-columns-span/demo' caption='I’ve added `grid-auto-flow: dense;` to the container—allowing the fifth item to [scoot up](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow) “before” the bigger one.' height='30rem' %}
 
