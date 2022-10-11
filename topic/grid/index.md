@@ -161,19 +161,11 @@ Again like *flex*, there is similar behavior on the horizontal/vertical *axes—
 
 So for many uses, you will only need to specify your column <nobr>structure—</nobr><wbr>leaving the rows to create themselves, as needed. This is called an *implicit grid* (vs. an *explicit grid* that we set/define).
 
-{% include figure.html src='/example/grid-template-columns/demo' %}
+{% include figure.html src='/example/grid-template-columns/demo' caption='The additional rows are automatically added, as needed. Note that they size vertically to their content.' height='20rem' %}
 
+The `repeat` function is very commonly used to make even-width grids. And of course, they can be made responsive with [media queries](/topic/media-queries) and [CSS variables](/topic/responsive/#briefly-css-variables)!
 
-
-The additional rows are automatically added, as needed. Note that they size vertically to the content.
-
-{% include figure.html src='/example/grid-template-columns-repeat/demo' %}
-
-
-
-The `repeat` function is very commonly used to make even-width grids. And of course, they can be made responsive with [media queries](/topic/media-queries)!
-
-Notice that the *items* always stick to the grid structure—independent of their content—unlike our previous `flex-wrap` pseudo-grids.
+{% include figure.html src='/example/grid-template-columns-repeat/demo' caption='Notice that the *items* always stick to the grid structure—independent of their content—unlike our previous `flex-wrap` pseudo-grids.' height='38rem' %}
 
 *Flex* is [sometimes referred](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout) to in this way as *content-out*, while *grid* is a *layout-in* system.
 
