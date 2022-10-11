@@ -18,24 +18,26 @@ published: false
 - [Basic concepts of grid layout | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout) \
 	*Back to MDN.*
 
-- [Grids | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids) \
-	*They’ve got multiple/overlapping introductions again, here.*
+- [Basics of CSS Grid](https://www.youtube.com/watch?v=FEnRpy9Xfes) \
+	*Web guru [Jen Simmons](https://jensimmons.com) breaks it down.*
+
+- [Flexbox vs. CSS Grid](https://www.youtube.com/watch?v=hs3piaN4b5I) \
+	*And also helps unpack when to use flex/grid.*
 
 - [Grid Garden](https://cssgridgarden.com) \
-	*Like the Froggy game,  but for grid.*
+	*Like the Froggy game, but for grid.*
 {: .no-marker .icon-link .right rows="6" }
 
 Grid supplants many of the previous box model layout systems (like floats, margin-centering, etc.) and, like flex, works much closer to how we think about layouts *as designers*. It can get complicated, but makes most layouts (especially responsive ones) much, much easier to implement.
 
-We had some of this two-dimensionality with [<nobr>flex-wrap</nobr>](/topic/flexbox/#flex-wrap), but grid offers much more control.
+*We had some of this two-dimensionality with [<nobr>flex-wrap</nobr>](/topic/flexbox/#flex-wrap), but grid offers much more control.*
 
 
 
-### Containers and items
+Grid is *a lot* like flex (this will be a running theme)—<wbr>a [*display*](https://developer.mozilla.org/en-US/docs/Web/CSS/display) property applied on a parent/<wbr>container element. This `display: grid;` tells its (immediate) children/<wbr>*grid items* how they should be laid out.
+{: .two-above }
 
-Grid is *a lot* like flex—a [*display*](https://developer.mozilla.org/en-US/docs/Web/CSS/display) property applied on a parent/container element. This `display: grid;` tells its (immediate) children/*grid* *items* how they should be laid out.
-
-And again like flex, there is also `display: inline-grid;` which behaves the same internally, but the parent behaves as an inline element.
+And again like flex, there is also `display: inline-grid;` which behaves the same internally—<wbr>but with the parent behaving as an inline element.
 
 
 
