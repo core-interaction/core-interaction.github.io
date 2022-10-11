@@ -43,79 +43,86 @@ And again like flex, there is also `display: inline-grid;` which behaves the sam
 
 ## Grid terminology
 
+Grid introduces us to some new vocabulary:
+
 ![Borrowed from the [WebKit post](https://webkit.org/blog/7434/css-grid-layout-a-new-layout-module-for-the-web/).](grid-concepts.svg)
 
 Borrowed from the [WebKit post](https://webkit.org/blog/7434/css-grid-layout-a-new-layout-module-for-the-web/).
 
-- *Line:* the dividing lines that define the grid, vertical or horizontal. (Think… *gutters*?)
+Line
+: The dividing lines that define the grid, vertical or horizontal. (Think *gutters*.)
 
-- *Track:* the horizontal rows or vertical columns between the tracks. (Think *rows* and *columns*.)
+Track
+: The horizontal or vertical space between the lines. (Think *rows* and *columns*.)
 
-- *Cell:* The intersection of a a horizontal and vertical track. This is different from a *grid item—*the cell is the spot/placement, the item is the actual element—since as you’ll see, you can position *items* in an arbitrary *cell*.
+Cell
+: The intersection of a horizontal and vertical track. This is different from a *grid item—*the cell is the spot/placement, the item is the actual element—since as you’ll see, you can position *items* in an arbitrary *cell*.
 
-- *Area:* You can combine one or more adjacent grid cells into a rectangular *area.* Often you give these a name, for convenience.
-
-
-
-## Some new units and functions
-
-
-
-Grid also introduces some specific new [length units](/topic/box-model/#and-their-units) and functions to use them.
-
-### The `fr` unit
-
-The new `fr` [length unit](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#the_fr_unit) represents a fraction of the available space in the grid container—usually, *width*. This is kind of like using *percentages*, except we no longer have to do the maths and any *padding* or *gap* (gutter) is accounted for. This is very handy; you’ll use it a lot.
-
-```scss
-grid-template-columns: 2fr 1fr;
-gap: 20px;
-```
+Area
+: You can combine one or more adjacent grid cells into a rectangular *area.* Often you give these a name, for convenience.
 
 
-### `min-content`
 
-The [intrinsic minimum width](https://developer.mozilla.org/en-US/docs/Web/CSS/min-content) of an element. With text, this is would be the longest single word.
-
-
-### `max-content`
-
-Same for [the maximum](https://developer.mozilla.org/en-US/docs/Web/CSS/max-content). With text, this is the whole sentence/line.
+## New units and functions
 
 
-### `fit-content`
 
-A [combo of the min/max](https://developer.mozilla.org/en-US/docs/Web/CSS/fit-content). Uses available space—but never less than `min-content` and never more than `max-content`.
+Grid also introduces some specific new [length units](/topic/box-model/#and-their-units) and functions to use them:
 
-*You can use these three values in grid properties, as we’ll see below—but they are also usable anywhere length units work—like `width`.*
+`fr`
 
+: This [new unit](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#the_fr_unit) represents a *fraction* of the available space in the grid container—usually, *width*. This is kind of like using *percentages*, except we no longer have to do the maths and any *padding* or *gap* (gutter) is already accounted for. This is very handy; you’ll use it a lot.
 
-### `minmax()`
+	```css
+.two-thirds-one-third {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+}
+	```
 
-A function that [defines a range](https://developer.mozilla.org/en-US/docs/Web/CSS/minmax) for a *track*, setting a minimum and maximum length together.
+`min-content`
+: The [intrinsic minimum width](https://developer.mozilla.org/en-US/docs/Web/CSS/min-content) of an element. With text, this is the longest single word.
 
-*These are really useful for setting reasonable limits on responsive grid designs!*
+`max-content`
+: Same for [the maximum](https://developer.mozilla.org/en-US/docs/Web/CSS/max-content). With text, this is the whole sentence/line.
 
-```css
-grid-template-columns: minmax(200px, 400px) 1fr;
-```
+`fit-content`
 
+: A [combo of the min/max](https://developer.mozilla.org/en-US/docs/Web/CSS/fit-content). Uses available space—but never less than `min-content` and never more than `max-content`.
+
+*You can use these three values in grid properties, as we’ll see <nobr>below—</nobr>but they are also usable anywhere length units work—like `width`.*
+
+`minmax()`
+
+: A function that [defines a range](https://developer.mozilla.org/en-US/docs/Web/CSS/minmax) for a *track*, setting a minimum and maximum length together. These are really useful for setting reasonable limits on responsive grid designs!
+
+	```css
+.flexible-sidebar {
+	display: grid;
+	grid-template-columns: minmax(200px, 400px) 1fr;
+}
+	```
 
 {% comment %} TODO: VISUAL {% endcomment %}
 
-### `repeat()`
 
-This function… [repeats a *track* list](https://developer.mozilla.org/en-US/docs/Web/CSS/repeat), so you don’t have to write it over and over.
+`repeat()`
 
-```css
-grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-```
+: This function [repeats a *track* list](https://developer.mozilla.org/en-US/docs/Web/CSS/repeat), so you don’t have to write it over and over.
 
-```css
-grid-template-columns: repeat(6, 1fr);
-```
+	```css
+.twelve-columns {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+ 
+.also-twelve-columns {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr); /* Much better. */
+}
+	```
 
-*Whenever you are writing code over and over, there is probably a shorter way!*
+*Whenever you are writing the same exact code over and over, there is probably a shorter way. [Don’t repeat yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)!*
 
 
 
