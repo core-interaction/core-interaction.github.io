@@ -163,12 +163,6 @@ So for many uses, you will only need to specify your column <nobr>structure—</
 
 {% include figure.html src='/example/grid-template-columns/demo' caption='The additional rows are automatically added, as needed. Note that they size vertically to their content.' height='20rem' %}
 
-The `repeat` function is very commonly used to make even-width grids. And of course, they can be made responsive with [media queries](/topic/media-queries) and [CSS variables](/topic/responsive/#briefly-css-variables)!
-
-{% include figure.html src='/example/grid-template-columns-repeat/demo' caption='Notice that the *items* always stick to the grid structure—independent of their content—unlike our previous `flex-wrap` pseudo-grids.' height='38rem' %}
-
-*Flex* is [sometimes referred](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout) to in this way as *content-out*, while *grid* is a *layout-in* system.
-
 
 
 ### `grid-auto-columns` / `grid-auto-rows`
@@ -231,6 +225,20 @@ If the total size of your grid is less than the container (because of your *expl
 
 
 
+### Using repeat
+
+The `repeat` function is very commonly used to make even-width grids. And of course, they can be made responsive with [media queries](/topic/media-queries) and [CSS variables](/topic/responsive/#briefly-css-variables)!
+
+{% include figure.html src='/example/grid-template-columns-repeat/demo' caption='Notice that the *items* always stick to the grid structure—independent of their content—unlike our previous `flex-wrap` pseudo-grids.' height='38rem' %}
+
+*Flex* is [sometimes referred](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout) to in this way as *content-out*, while *grid* is a *layout-in* system.
+
+
+
+{% comment %} ADD  `auto-fill` / `auto-fit` EXAMPLE {% endcomment %}
+
+
+
 ### `grid-template-areas`
 
 *Grid* is really useful for scaffolding out layouts, and sometimes it is helpful to give your [*grid areas* qualitative/descriptive names](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas) that reflect their usage. This also makes it possible for the *grid items* (children) to reference them, below.
@@ -290,7 +298,3 @@ Keep in mind that with both `grid-area` and `grid-column` / `grid-row`, you are 
 Again, just like flex—you can position individual *grid items* within their *tracks* using `justify-self` and `align-self`. The syntax is the same as [align in flex](/topic/flexbox/#align-self), except the `flex-start` and `flex-end` values are just `start` and `end`. (The default, as before, is `stretch`.)
 
 {% comment %} TODO: VISUAL {% endcomment %}
-
-
-
-{% comment %} ADD  `auto-fill` / `auto-fit` EXAMPLE {% endcomment %}
