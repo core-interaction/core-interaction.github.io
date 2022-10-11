@@ -100,8 +100,8 @@ A function that [defines a range](https://developer.mozilla.org/en-US/docs/Web/
 grid-template-columns: minmax(200px, 400px) 1fr;
 ```
 
-<!-- TODO: VISUAL -->
 
+{% comment %} TODO: VISUAL {% endcomment %}
 
 ### `repeat()`
 
@@ -213,7 +213,7 @@ There are [also baseline align values](https://developer.mozilla.org/en-US/docs/
 
 If the total size of your grid is less than the container (because of your *explicit* column or row sizes), you can set the *overall* justification and alignment within the container. Again, [this is just](/topic/flexbox/#justify-content) [like flex](/topic/flexbox/#align-items)! Same syntax, same behavior—you get the idea. Grid is like *Flex+*.
 
-<!-- TODO: VISUAL -->
+{% comment %} TODO: VISUAL {% endcomment %}
 
 
 
@@ -291,8 +291,8 @@ Keep in mind that with both `grid-area` and `grid-column` / `grid-row`, you are 
 
 Again, just like flex—you can position individual *grid items* within their *tracks* using `justify-self` and `align-self`. The syntax is the same as [align in flex](/topic/flexbox/#align-self), except the `flex-start` and `flex-end` values are just `start` and `end`. (The default, as before, is `stretch`.)
 
-<!-- TODO: VISUAL -->
+{% comment %} TODO: VISUAL {% endcomment %}
 
 
 
-<!-- ADD  `auto-fill` / `auto-fit` EXAMPLE -->
+{% comment %} ADD  `auto-fill` / `auto-fit` EXAMPLE {% endcomment %}
