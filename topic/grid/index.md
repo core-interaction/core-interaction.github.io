@@ -292,6 +292,10 @@ You can also leave off the *start line* if you just want to specify a `span`, r
 
 {% include figure.html src='/example/grid-column-row-span/demo' caption='I’ve added `grid-auto-flow: dense;` to the container—allowing the fifth item to [scoot up](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow) “before” the bigger one.' height='32rem' %}
 
+And if you specify non-contiguous rows or columns, *grid* will create as many *implicit* tracks as it needs to accommodate them—even if they are empty:
+
+{% include figure.html src='/example/grid-column-row-implicit/demo' height='53rem' %}
+
 Keep in mind that with both `grid-area` and `grid-column` / `grid-row`, you are able to tell multiple *grid items* to land in the same *cell*—there isn’t any kind of fancy collision-proofing. If this is what you want, you can use `z-index` to specify which one is visually [in front](/topic/box-model/#depth)!
 
 

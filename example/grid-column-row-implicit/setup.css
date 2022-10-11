@@ -1,0 +1,15 @@
+body {
+	font-family: sans-serif;
+	padding: 20px;
+}
+
+section {
+	background-color: gold;
+}
+
+div {
+	background-color: tomato;
+	border-bottom: 2px solid firebrick;
+	border-right: 2px solid firebrick;
+	padding: 5px;
+}

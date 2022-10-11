@@ -1,0 +1,21 @@
+section {
+	display: grid;
+	/* Give the implicit tracks a size. */
+	grid-auto-rows: 80px;
+	grid-auto-columns: 1fr;
+}
+
+div:nth-child(2) {
+	grid-column: 2;
+	grid-row: 4;
+}
+
+div:nth-child(3) {
+	grid-column: 5;
+	grid-row: 2;
+}
+
+div:last-child {
+	grid-column: 6;
+	grid-row: 6;
+}
