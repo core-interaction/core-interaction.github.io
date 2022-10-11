@@ -225,7 +225,7 @@ If the total size of your grid is less than the container (because of your *expl
 
 ### Using repeat
 
-*Grid’s* `repeat` function is very commonly used to make even-width grids. And of course, they can be made responsive with [media queries](/topic/media-queries) and [CSS variables](/topic/responsive/#briefly-css-variables)!
+*Grid’s* `repeat` function is very commonly used to make even-column grids. And of course, they can be made responsive with [media queries](/topic/media-queries) and [CSS variables](/topic/responsive/#briefly-css-variables)!
 
 {% include figure.html src='/example/grid-template-columns-repeat/demo' caption='Notice that the *items* always stick to the grid structure—independent of their content—unlike our previous `flex-wrap` pseudo-grids.' height='38rem' %}
 
