@@ -147,25 +147,19 @@ Grid also introduces some specific new [length units](/topic/box-model/#and-thei
 
 ## Container (parent) properties
 
+Again, *grid* is a lot like *flex*—primarily properties that are applied on a container/parent element.
+
 
 
 ### `grid-template-columns` / `grid-template-rows`
 
-Setting `display: grid;` won’t do much until you also declare some columns or rows, with *grid template*.
+Setting `display: grid;` won’t do much until you also declare some columns or rows, with *grid template*. You can specify `grid-template-columns`, `grid-template-rows`, or both. These properties are followed by a *track list* of the size for each track.
 
-You can specify `grid-template-columns`, `grid-template-rows`, or both. These properties are followed by a *track list* of the size for each track.
-
-*These don’t use commas to separate the values, for some reason. CSS!*
-
-{% include figure.html src='/example/grid-template/demo' %}
-
-
-
-Notice in the second example, the items do not *wrap* to a new column. This is because `grid-auto-flow: row;` is the default setting. The third example sets this to `column` to make it start a new one.
+{% include figure.html src='/example/grid-template/demo' caption='Notice in the second example, the items do not *wrap* to a new column—because `grid-auto-flow: row;` is the default setting. The third example sets this to `column` to make it flow to a new one.' height='52rem' %}
 
 Again like *flex*, there is similar behavior on the horizontal/vertical *axes—*with the defaults around horizontal/row based behavior since width is usually our constraint (with pages scrolling vertically).
 
-So for many uses, you will only need to specify your column structure—leaving the rows to create themselves, as needed. This is called an *implicit grid (*vs. the *explicit grid* that we set).
+So for many uses, you will only need to specify your column <nobr>structure—</nobr><wbr>leaving the rows to create themselves, as needed. This is called an *implicit grid* (vs. an *explicit grid* that we set/define).
 
 {% include figure.html src='/example/grid-template-columns/demo' %}
 
