@@ -1812,17 +1812,9 @@ body > main > article dl > dt {
 	font-style: italic;
 }
 
-body > main > article dl > dt:not(:first-child) {
-	margin-top: var(--typography--leading-shoulder);
-}
-
 body > main > article dl > dt,
 body > main > article dl > dd {
 	padding-left: 2ch;
-}
-
-body > main > article dl > dd > *:last-child:not(._):not(._) {
-	margin-bottom: initial;
 }
 
 body > main > article dl + * {

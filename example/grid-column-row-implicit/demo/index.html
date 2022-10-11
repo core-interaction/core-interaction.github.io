@@ -45,14 +45,24 @@
 					<figure class="highlight">
 						<pre><code class="language-scss" data-lang="scss"><span class="nt">section</span> <span class="p">{</span>
 	<span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
-	<span class="na">grid-template-columns</span><span class="p">:</span> <span class="nf">repeat</span><span class="p">(</span><span class="m">4</span><span class="o">,</span> <span class="m">1fr</span><span class="p">);</span>
-	<span class="na">grid-auto-flow</span><span class="p">:</span> <span class="n">dense</span><span class="p">;</span>
+	<span class="cm">/* Give the implicit tracks a size. */</span>
+	<span class="na">grid-auto-rows</span><span class="p">:</span> <span class="m">80px</span><span class="p">;</span>
+	<span class="na">grid-auto-columns</span><span class="p">:</span> <span class="m">1fr</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nt">div</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">3</span><span class="o">),</span>
-<span class="nt">div</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">6</span><span class="o">)</span> <span class="p">{</span>
-	<span class="nl">grid-column</span><span class="p">:</span> <span class="n">span</span> <span class="m">2</span><span class="p">;</span>
-	<span class="nl">grid-row</span><span class="p">:</span> <span class="n">span</span> <span class="m">2</span><span class="p">;</span>
+<span class="nt">div</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">2</span><span class="o">)</span> <span class="p">{</span>
+	<span class="nl">grid-column</span><span class="p">:</span> <span class="m">2</span><span class="p">;</span>
+	<span class="nl">grid-row</span><span class="p">:</span> <span class="m">4</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">3</span><span class="o">)</span> <span class="p">{</span>
+	<span class="nl">grid-column</span><span class="p">:</span> <span class="m">5</span><span class="p">;</span>
+	<span class="nl">grid-row</span><span class="p">:</span> <span class="m">2</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="nd">:last-child</span> <span class="p">{</span>
+	<span class="nl">grid-column</span><span class="p">:</span> <span class="m">6</span><span class="p">;</span>
+	<span class="nl">grid-row</span><span class="p">:</span> <span class="m">6</span><span class="p">;</span>
 <span class="p">}</span></code></pre>
 					</figure>
 
@@ -108,27 +118,6 @@
 			<span class="nt">&lt;/div&gt;</span>
 			<span class="nt">&lt;div&gt;</span>
 				<span class="nt">&lt;p&gt;</span>Item 4<span class="nt">&lt;/p&gt;</span>
-			<span class="nt">&lt;/div&gt;</span>
-			<span class="nt">&lt;div&gt;</span>
-				<span class="nt">&lt;p&gt;</span>Item 5<span class="nt">&lt;/p&gt;</span>
-			<span class="nt">&lt;/div&gt;</span>
-			<span class="nt">&lt;div&gt;</span>
-				<span class="nt">&lt;p&gt;</span>Item 6<span class="nt">&lt;/p&gt;</span>
-			<span class="nt">&lt;/div&gt;</span>
-			<span class="nt">&lt;div&gt;</span>
-				<span class="nt">&lt;p&gt;</span>Item 7 with more text<span class="nt">&lt;/p&gt;</span>
-			<span class="nt">&lt;/div&gt;</span>
-			<span class="nt">&lt;div&gt;</span>
-				<span class="nt">&lt;p&gt;</span>Item 8<span class="nt">&lt;/p&gt;</span>
-			<span class="nt">&lt;/div&gt;</span>
-			<span class="nt">&lt;div&gt;</span>
-				<span class="nt">&lt;p&gt;</span>Item 9 longer<span class="nt">&lt;/p&gt;</span>
-			<span class="nt">&lt;/div&gt;</span>
-			<span class="nt">&lt;div&gt;</span>
-				<span class="nt">&lt;p&gt;</span>Item 10<span class="nt">&lt;/p&gt;</span>
-			<span class="nt">&lt;/div&gt;</span>
-			<span class="nt">&lt;div&gt;</span>
-				<span class="nt">&lt;p&gt;</span>Item 11<span class="nt">&lt;/p&gt;</span>
 			<span class="nt">&lt;/div&gt;</span>
 		<span class="nt">&lt;/section&gt;</span>
 	<span class="nt">&lt;/body&gt;</span>
