@@ -2,7 +2,7 @@ section {
 	display: grid;
 }
 
-section:nth-child(1) {
+section:first-child {
 	grid-template-columns: 2fr 1fr;
 }
 
@@ -15,7 +15,7 @@ section:nth-child(3) {
 	grid-auto-flow: column;
 }
 
-section:nth-child(4) {
+section:last-child {
 	grid-template-columns: 2fr 1fr;
 	grid-template-rows: 2fr 1fr;
 }
