@@ -83,12 +83,34 @@ Grid also introduces some specific new [length units](/topic/box-model/#and-thei
 `min-content`
 : The [intrinsic minimum width](https://developer.mozilla.org/en-US/docs/Web/CSS/min-content) of an element. With text, this is the longest single word.
 
+	```css
+.narrow-sidebar {
+	display: grid;
+	grid-template-columns: 1fr min-content;
+}
+	```
+
 `max-content`
 : Same for [the maximum](https://developer.mozilla.org/en-US/docs/Web/CSS/max-content). With text, this is the whole sentence/line.
+
+	```css
+.wider-sidebar {
+	display: grid;
+	grid-template-columns: 1fr max-content;
+}
+	```
+
 
 `fit-content`
 
 : A [combo of the min/max](https://developer.mozilla.org/en-US/docs/Web/CSS/fit-content). Uses available space—but never less than `min-content` and never more than `max-content`.
+
+	```css
+.fit-sidebar {
+	display: grid;
+	grid-template-columns: 1fr fit-content;
+}
+	```
 
 *You can use these three values in grid properties, as we’ll see <nobr>below—</nobr>but they are also usable anywhere length units work—like `width`.*
 
@@ -99,12 +121,9 @@ Grid also introduces some specific new [length units](/topic/box-model/#and-thei
 	```css
 .flexible-sidebar {
 	display: grid;
-	grid-template-columns: minmax(200px, 400px) 1fr;
+	grid-template-columns: 1fr minmax(200px, 400px);
 }
 	```
-
-{% comment %} TODO: VISUAL {% endcomment %}
-
 
 `repeat()`
 
@@ -127,8 +146,6 @@ Grid also introduces some specific new [length units](/topic/box-model/#and-thei
 
 
 ## Container (parent) properties
-
-
 
 
 
