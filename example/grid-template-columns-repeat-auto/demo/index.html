@@ -15,7 +15,7 @@
 		<meta name="theme-color" content="#e42a1d">
 	</head>
 	<body class="example">
-		<section style="--split: 53%;">
+		<section style="--split: 72%;">
 			<aside></aside>
 
 
@@ -45,13 +45,21 @@
 					<figure class="highlight">
 						<pre><code class="language-scss" data-lang="scss"><span class="nt">section</span> <span class="p">{</span>
 	<span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
-	<span class="na">grid-template-columns</span><span class="p">:</span> <span class="nf">repeat</span><span class="p">(</span><span class="m">4</span><span class="o">,</span> <span class="m">1fr</span><span class="p">);</span>
-	<span class="na">grid-auto-flow</span><span class="p">:</span> <span class="n">dense</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nt">div</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">4</span><span class="o">)</span> <span class="p">{</span>
-	<span class="nl">grid-column</span><span class="p">:</span> <span class="n">span</span> <span class="m">2</span><span class="p">;</span>
-	<span class="nl">grid-row</span><span class="p">:</span> <span class="n">span</span> <span class="m">2</span><span class="p">;</span>
+<span class="nt">section</span><span class="nd">:first-child</span> <span class="p">{</span>
+	<span class="cm">/* Fill as many `100px` columns as possible. */</span>
+	<span class="na">grid-template-columns</span><span class="p">:</span> <span class="nf">repeat</span><span class="p">(</span><span class="n">auto-fill</span><span class="o">,</span> <span class="m">100px</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nt">section</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">2</span><span class="o">)</span> <span class="p">{</span>
+	<span class="cm">/* Add flexible `1fr` columns when larger than `100px`. */</span>
+	<span class="na">grid-template-columns</span><span class="p">:</span> <span class="nf">repeat</span><span class="p">(</span><span class="n">auto-fill</span><span class="o">,</span> <span class="nf">minmax</span><span class="p">(</span><span class="m">100px</span><span class="o">,</span> <span class="m">1fr</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="nt">section</span><span class="nd">:last-child</span> <span class="p">{</span>
+	<span class="cm">/* Same, but always fit them to the row! */</span>
+	<span class="na">grid-template-columns</span><span class="p">:</span> <span class="nf">repeat</span><span class="p">(</span><span class="n">auto-fit</span><span class="o">,</span> <span class="nf">minmax</span><span class="p">(</span><span class="m">100px</span><span class="o">,</span> <span class="m">1fr</span><span class="p">));</span>
 <span class="p">}</span></code></pre>
 					</figure>
 
@@ -69,6 +77,10 @@
 
 <span class="nt">section</span> <span class="p">{</span>
 	<span class="nl">background-color</span><span class="p">:</span> <span class="no">gold</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">section</span><span class="nd">:not</span><span class="o">(</span><span class="nd">:first-child</span><span class="o">)</span> <span class="p">{</span>
+	<span class="nl">margin-top</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nt">div</span> <span class="p">{</span>
@@ -111,23 +123,39 @@
 			<span class="nt">&lt;div&gt;</span>
 				<span class="nt">&lt;p&gt;</span>Item 5<span class="nt">&lt;/p&gt;</span>
 			<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/section&gt;</span>
+		<span class="nt">&lt;section&gt;</span>
 			<span class="nt">&lt;div&gt;</span>
-				<span class="nt">&lt;p&gt;</span>Item 6<span class="nt">&lt;/p&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 1<span class="nt">&lt;/p&gt;</span>
 			<span class="nt">&lt;/div&gt;</span>
 			<span class="nt">&lt;div&gt;</span>
-				<span class="nt">&lt;p&gt;</span>Item 7 with more text<span class="nt">&lt;/p&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 2 <span class="nt">&lt;br&gt;</span>with line <span class="nt">&lt;br&gt;</span>breaks<span class="nt">&lt;/p&gt;</span>
 			<span class="nt">&lt;/div&gt;</span>
 			<span class="nt">&lt;div&gt;</span>
-				<span class="nt">&lt;p&gt;</span>Item 8<span class="nt">&lt;/p&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 3 <span class="nt">&lt;br&gt;</span>also<span class="nt">&lt;/p&gt;</span>
 			<span class="nt">&lt;/div&gt;</span>
 			<span class="nt">&lt;div&gt;</span>
-				<span class="nt">&lt;p&gt;</span>Item 9 longer<span class="nt">&lt;/p&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 4<span class="nt">&lt;/p&gt;</span>
 			<span class="nt">&lt;/div&gt;</span>
 			<span class="nt">&lt;div&gt;</span>
-				<span class="nt">&lt;p&gt;</span>Item 10<span class="nt">&lt;/p&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 5<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/section&gt;</span>
+		<span class="nt">&lt;section&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 1<span class="nt">&lt;/p&gt;</span>
 			<span class="nt">&lt;/div&gt;</span>
 			<span class="nt">&lt;div&gt;</span>
-				<span class="nt">&lt;p&gt;</span>Item 11<span class="nt">&lt;/p&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 2 <span class="nt">&lt;br&gt;</span>with line <span class="nt">&lt;br&gt;</span>breaks<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 3 <span class="nt">&lt;br&gt;</span>also<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 4<span class="nt">&lt;/p&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div&gt;</span>
+				<span class="nt">&lt;p&gt;</span>Item 5<span class="nt">&lt;/p&gt;</span>
 			<span class="nt">&lt;/div&gt;</span>
 		<span class="nt">&lt;/section&gt;</span>
 	<span class="nt">&lt;/body&gt;</span>
