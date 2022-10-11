@@ -1,0 +1,26 @@
+section {
+	display: grid;
+	grid-auto-rows: 100px;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+div:first-child {
+	/* Defaults. */
+	justify-self: stretch;
+	align-self: stretch;
+}
+
+div:nth-child(2) {
+	justify-self: start;
+	align-self: start;
+}
+
+div:nth-child(3) {
+	justify-self: center;
+	align-self: center;
+}
+
+div:nth-child(4) {
+	justify-self: end;
+	align-self: end;
+}

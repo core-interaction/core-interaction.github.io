@@ -302,6 +302,7 @@ Keep in mind that with both `grid-area` and `grid-column` / `grid-row`, you are 
 
 ### `justify-self` / `align-self`
 
-Again, just like flex—you can position individual *grid items* within their *tracks* using `justify-self` and `align-self`. The syntax is the same as [align in flex](/topic/flexbox/#align-self), except the `flex-start` and `flex-end` values are just `start` and `end`. (The default, as before, is `stretch`.)
+Finally, just like flex—you can position individual *grid items* within their *tracks* using `justify-self` and `align-self`. The syntax is the same as [align in flex](/topic/flexbox/#align-self), again—but as with `justify-items` / `align-items` above, you don’t have to flip axes:
 
-{% comment %} TODO: VISUAL {% endcomment %}
+{% include figure.html src='/example/grid-justify-align-self/demo' caption='You can mix and match these justify/align values, of course.' height='62rem' %}
+
