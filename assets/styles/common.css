@@ -1812,6 +1812,10 @@ body > main > article dl > dt {
 	font-style: italic;
 }
 
+body > main > article dl > dt::marker {
+	font-style: normal;
+}
+
 body > main > article dl > dt,
 body > main > article dl > dd {
 	padding-left: 2ch;
