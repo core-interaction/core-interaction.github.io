@@ -214,7 +214,11 @@
 	dl {
 		--margin--top: var(--margin--vertical--2);
 
-		> dt { font-style: italic; }
+		> dt {
+			font-style: italic;
+
+			&::marker { font-style: normal }
+		}
 
 		> dt,
 		> dd { padding-left: 2ch }
@@ -226,7 +230,6 @@
 			+ * { --margin--top--previous: var(--margin--vertical--2) }
 		}
 	}
-
 
 
 
