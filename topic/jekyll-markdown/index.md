@@ -63,6 +63,8 @@ This software (written in [Ruby](https://www.ruby-lang.org/en/)) runs discrete *
 You can use Jekyll as a proper CMS/blogging-type platform, like Wordpress. It has support for all that stuff—[drafts/posts](https://jekyllrb.com/docs/posts/), [themes](https://jekyllthemes.io/), [authors](https://jekyllrb.com/docs/step-by-step/09-collections/), and so on. But we’re going to focus just on how it can make building our simple websites much easier.
 
 > We’ll primarily be using the [template repo](https://github.com/core-interaction/harmonic-collection) to go through the code, but we’ll cover some of the bigger concepts here.
+>
+> You’ll need to [install Jekyll](/week/8/#jekyll) on your machine, if you haven’t yet!
 {: .callout icon='🤚' }
 
 - Front-matter
