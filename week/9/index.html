@@ -10,7 +10,7 @@
 
 
 
-		<title>Week 5</title>
+		<title>Week 9</title>
 		<link href="/assets/styles/reset.css" rel="stylesheet">
 		<link href="/assets/styles/common.css" rel="stylesheet">
 		<link href="/assets/styles/syntax.css" rel="stylesheet">
@@ -61,7 +61,7 @@
 						<p>C1:I</p>
 					</a>
 					<p>
-						<strong>Week 5, September 27</strong>
+						<strong>Week 9, October 25</strong>
 						<select onchange="
 					this.parentElement.querySelector('strong').innerHTML = this.querySelector(`[value='${this.value}']`).text;
 					document.activeElement.blur();
@@ -121,7 +121,7 @@
 
 
 
-								<option selected disabled>Week 5, September 27</option>
+								<option value="/week/5/">Week 5, September 27</option>
 
 
 
@@ -169,7 +169,7 @@
 
 
 
-								<option value="/week/9/">Week 9, October 25</option>
+								<option selected disabled>Week 9, October 25</option>
 
 
 							</optgroup>
@@ -243,7 +243,7 @@
 				<section>
 
 					<p>
-						<a class="this" href="/week/9/">This week</a>
+						<a class="last" href="/week/8/">Last week</a>
 					</p>
 
 					<p><a href="#">Top</a></p>
@@ -262,43 +262,53 @@
 		<main>
 
 			<header>
-				<h1>Week 5</h1>
+				<h1>Week 9</h1>
 
-				<p>September 27</p>
+				<p>October 25</p>
 
 				<ul>
 					<li><a href="#reading-discussion">Reading discussion</a></li>
-					<li><a href="#responsive-design">Responsive design!</a></li>
-					<li><a href="#working-responsively">Working responsively</a></li>
+					<li><a href="#jekyll-liquid-and-markdown">Jekyll, Liquid, and Markdown!</a></li>
+					<li><a href="#lets-try-it-out">Let’s try it out</a></li>
 					<li><a href="#for-next-week">For next week</a></li>
-					<li><a href="#session-recording">Session recording</a></li>
 				</ul>
 			</header>
 
 			<article>
 				<h2 id="reading-discussion">Reading discussion</h2>
 
-				<p>Let’s talk through our last reading:</p>
+				<p>Let’s start by discussing our reading:</p>
 
-				<p class="icon-link two-below"><a href="https://docs.google.com/document/d/1Pn5Hcw9hXk6U6rb6ccFG1ROD6i-EfcSXlm8PX6Kcm9M/edit"><em>The Web’s Grain</em> responses</a></p>
+				<p class="icon-link two-below"><a href="https://docs.google.com/document/d/1nTweY_mL9g7GXOI8x56TfnTDz0b847qeIj0Hroil_QA"><em>A Software Design Manifesto</em> responses</a></p>
 
-				<p><em>Again, I’d like this to be a discussion and I want to hear from folks who haven’t participated yet. (In the interest of time, I’ll be looking at this week’s <a href="https://docs.google.com/spreadsheets/d/1vXYVnicRUHnczxPCSaqsmmflynnwP22zhES5jFMPKpw/">project entries</a> outside of class.)</em></p>
+				<p><em>Don’t make me call on you<span class="mdash">—</span>I don’t want to do it either! We’ll skip reviewing our entries as a group this week, to get into new content.</em></p>
 
-				<h2 id="responsive-design">Responsive design!</h2>
+				<h2 id="jekyll-liquid-and-markdown">Jekyll, Liquid, and Markdown!</h2>
 
-				<p>Today’s topic is <em>responsive design</em>, which hinges on the use of <em>media queries</em>:</p>
+				<p>We’ll discuss a few systems for working more easily with HTML:</p>
 
-				<p class="icon-link"><a href="/topic/responsive">Media queries</a></p>
+				<p class="icon-link"><a href="/topic/jekyll-liquid-markdown">Jekyll, Liquid, and Markdown</a></p>
 
-				<blockquote class="callout" icon="😴">
-					<p>We will break somewhere midway through the lecture, again.</p>
+				<blockquote class="callout" icon="🤯">
+					<p>Back to our standard mid-lecture break somewhere in here, as we do.</p>
 				</blockquote>
 
-				<h2 id="working-responsively">Working responsively</h2>
+				<h2 id="lets-try-it-out">Let’s try it out</h2>
 
-				<p>As a sort of demo/exercise today, we’re going to look at how to work on a responsive page with the <em>DevTools</em>:</p>
+				<p>We’ll be using the <a href="https://github.com/core-interaction/harmonic-collection">template repo</a> to explore Jekyll/Liquid/Markdown together. Here’s a little agenda:</p>
 
-				<p class="icon-link"><a href="/topic/inspector">DevTools (The Inspector)</a></p>
+				<ul>
+					<li>What is a <code class="language-plaintext highlighter-rouge">README.md</code>?</li>
+					<li>How about <code class="language-plaintext highlighter-rouge">.gitignore</code>?</li>
+					<li>Quickly, <em>the terminal</em></li>
+					<li>Build with <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve --watch</code></li>
+					<li>Go through <code class="language-plaintext highlighter-rouge">_config.yml</code> settings</li>
+					<li><em>Front-matter</em> to specify a layout</li>
+					<li>Nesting of layouts (for entries)</li>
+					<li><code class="language-plaintext highlighter-rouge">include</code> and entry-specific CSS (first entry)</li>
+					<li>Markdown parsing (second entry)</li>
+					<li>Structured data (third entry)</li>
+				</ul>
 
 				<hr />
 
@@ -306,12 +316,12 @@
 
 				<ul>
 					<li>
-						<p>Read through the whole <a href="/topic/responsive">media query</a> lecture above, as is custom. Our project entries from now on should be responsive!</p>
+						<p>Go through our Jekyll demo/exercise and the <a href="https://github.com/core-interaction/harmonic-collection">template repo</a>, getting it building on your machine. Kick the tires, as they say.</p>
 
-						<p><em>I expect to see media queries used, going forward. Let’s primarily focus on mobile and laptop<span class="mdash">—</span>I will be looking at ~ <code class="language-plaintext highlighter-rouge">375px</code> and ~ <code class="language-plaintext highlighter-rouge">1280px</code>.</em></p>
+						<p>Then consider using it for your projects! It will be some work to adapt (in software parlance, to <em>port</em> or <em>refactor</em>) your projects to this, but obviously will be easier to write structured, repeated HTML.</p>
 					</li>
 					<li>
-						<p>Complete a responsive fourth entry for your <a href="/project/harmonic"><em>Harmonic Collection</em></a> projects and add it to the doc:</p>
+						<p>Complete a seventh entry for your <a href="/project/harmonic"><em>Harmonic Collection</em></a> projects and add it to the doc, as is custom:</p>
 
 						<p class="icon-link"><a href="https://docs.google.com/spreadsheets/d/1vXYVnicRUHnczxPCSaqsmmflynnwP22zhES5jFMPKpw/"><em>Harmonic Collection</em> entries</a></p>
 					</li>
@@ -319,20 +329,6 @@
 
 
 
-
-				<h2 id="session-recording">Session recording</h2>
-
-				<figure markdown="0">
-
-					<div class="google">
-						<iframe allowfullscreen src="https://drive.google.com/file/d/1lwB8klh7giz3a9uTv4AnkB2KUbBFC1f8/preview"></iframe>
-					</div>
-					<aside></aside>
-
-
-				</figure>
-
-				<p class="icon-link" style="--margin--top: initial;"><a href="https://drive.google.com/file/d/1lwB8klh7giz3a9uTv4AnkB2KUbBFC1f8">Session recording</a></p>
 
 
 			</article>
