@@ -527,7 +527,7 @@ body {
 		color:       var(--color);
 		font-size:   var(--typography--size);
 		font-style:  normal;
-		white-space: pre;
+		white-space: var(--white-space, pre); // Allow override.
 	}
 
 	// Inline code.
