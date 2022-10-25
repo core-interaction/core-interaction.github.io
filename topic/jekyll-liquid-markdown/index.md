@@ -1,7 +1,6 @@
 ---
 title: Jekyll, Liquid, and Markdown
 order: 8
-published: false
 ---
 
 
@@ -81,7 +80,7 @@ title: This is the first entry
 ```
 {: .left }
 
-This is saved at the very top of your `.html` and `.md` files (more on this, below), in a data format called [YAML](https://en.wikipedia.org/wiki/YAML)—for *Yet Another Markup Language*. (So many languages, I know.) This data can then be accessed in your `layouts` and `includes` for consistent structure and formatting!
+This is saved at the very top of your `.html` and `.md` files (more on this, [below](#and-markdown)), in a data format called [YAML](https://en.wikipedia.org/wiki/YAML)—for *Yet Another Markup Language*. (So many languages, I know.) This data can then be accessed in your `layouts` and `includes` for consistent structure and formatting!
 
 *Note that `YAML` / `YML` uses spaces for indentation, even if the rest of the file uses tabs, and will break with tabs! I do this all the time.*
 
@@ -105,7 +104,7 @@ Jekyll’s *templates* are called [*layouts*](https://jekyllrb.com/docs/layouts/
 ```
 {% endraw %}
 
-A very simplified layout/template. These normally live under the `_layouts` directory in your Jekyll repo, as in our example. The double-handlebars are [*liquid*](#liquid-template-language) <nobr>syntax—</nobr>more on that, below. Note that {% raw %}`{{ content }}`{% endraw %} is a special variable, which renders the… content of the page being wrapped.
+A very simplified layout/template. These normally live under the `_layouts` directory in your Jekyll repo, as in our example. The double-handlebars are [*liquid*](#liquid-template-language) <nobr>syntax—</nobr>more on that, shortly. Note that {% raw %}`{{ content }}`{% endraw %} is a special variable, which renders the… content of the page being wrapped.
 
 ### Includes
 
