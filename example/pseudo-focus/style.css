@@ -1,0 +1,15 @@
+a {
+	color: green;
+}
+
+/* :focus is triggered always. */
+a:focus {
+	outline: none;
+}
+
+/* :focus-visible will only trigger on keyboard tab through */
+a:focus-visible {
+	outline: 0.1rem solid currentColor;
+	outline-offset: 0.2rem;
+	border-radius: 0.1rem;
+}

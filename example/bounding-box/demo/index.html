@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
+
+		<title>Demo</title>
+		<link href="/assets/styles/reset.css" rel="stylesheet">
+		<link href="/assets/styles/common.css" rel="stylesheet">
+		<link href="/assets/styles/syntax.css" rel="stylesheet">
+		<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
+		<link href="/assets/icons/touch.png" rel="apple-touch-icon">
+
+		<script src="/assets/scripts/example.js"></script>
+
+		<meta name="theme-color" content="#e42a1d">
+	</head>
+	<body class="example">
+		<section style="--split: 55%;">
+			<aside></aside>
+
+
+			<div id="files">
+				<ul>
+
+					<li tabindex=0 class="visible">
+						<p>style.css</p>
+					</li>
+
+					<li tabindex=0>
+						<p>setup.css</p>
+					</li>
+
+					<li tabindex=0>
+						<p>index.html</p>
+					</li>
+
+				</ul>
+			</div>
+
+			<div id="source">
+
+				<div class="visible">
+
+
+					<figure class="highlight">
+						<pre><code class="language-scss" data-lang="scss"><span class="nt">h2</span> <span class="p">{</span>
+	<span class="cm">/* Just to see things better. */</span>
+	<span class="nl">background-color</span><span class="p">:</span> <span class="nf">hsla</span><span class="p">(</span><span class="m">200</span><span class="o">,</span> <span class="m">100%</span><span class="o">,</span> <span class="m">50%</span><span class="o">,</span> <span class="m">33%</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.precise</span><span class="nd">:before</span><span class="o">,</span>
+<span class="nc">.precise</span><span class="nd">:after</span> <span class="p">{</span>
+	<span class="nl">content</span><span class="p">:</span> <span class="s1">''</span><span class="p">;</span> <span class="cm">/* Empty. */</span>
+	<span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+	<span class="nl">visibility</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.precise</span><span class="nd">:before</span> <span class="p">{</span> <span class="nl">margin-top</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">inset--top</span><span class="p">);</span> <span class="p">}</span>
+<span class="nc">.precise</span><span class="nd">:after</span> <span class="p">{</span> <span class="nl">margin-bottom</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">inset--bottom</span><span class="p">);</span> <span class="p">}</span>
+
+<span class="nc">.precise</span> <span class="p">{</span>
+	<span class="na">--inset--top</span><span class="p">:</span>    <span class="m">-0</span><span class="mi">.2em</span><span class="p">;</span> <span class="cm">/* Font-dependent! */</span>
+	<span class="na">--inset--bottom</span><span class="p">:</span> <span class="m">-0</span><span class="mi">.23em</span><span class="p">;</span>
+	<span class="na">--inset--left</span><span class="p">:</span>   <span class="m">-0</span><span class="mi">.07em</span><span class="p">;</span>
+	<span class="na">--inset--right</span><span class="p">:</span>  <span class="m">-0</span><span class="mi">.06em</span><span class="p">;</span>
+
+	<span class="nl">display</span><span class="p">:</span> <span class="n">flow-root</span><span class="p">;</span> <span class="cm">/* Cinch the height. */</span>
+	<span class="nl">margin-left</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">inset--left</span><span class="p">);</span>
+	<span class="nl">margin-right</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">inset--right</span><span class="p">);</span>
+	<span class="nl">width</span><span class="p">:</span> <span class="n">fit-content</span><span class="p">;</span> <span class="cm">/* Cinch the width. */</span>
+<span class="p">}</span></code></pre>
+					</figure>
+
+
+				</div>
+
+				<div>
+
+
+					<figure class="highlight">
+						<pre><code class="language-scss" data-lang="scss"><span class="nt">body</span> <span class="p">{</span>
+	<span class="na">--base</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+
+	<span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
+	<span class="nl">font-family</span><span class="p">:</span> <span class="s1">'Helvetica'</span><span class="o">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+	<span class="na">gap</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">base</span><span class="p">);</span>
+	<span class="nl">padding</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">base</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nt">section</span> <span class="p">{</span> <span class="nl">background-color</span><span class="p">:</span> <span class="no">gold</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="nt">h2</span> <span class="p">{</span> <span class="nl">font-size</span><span class="p">:</span> <span class="nf">calc</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">base</span><span class="p">)</span> <span class="o">*</span> <span class="m">3</span><span class="p">);</span> <span class="p">}</span></code></pre>
+					</figure>
+
+
+				</div>
+
+				<div>
+
+
+					<figure class="highlight">
+						<pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+	<span class="nt">&lt;head&gt;</span>
+		<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/styles/reset.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"setup.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"style.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/head&gt;</span>
+	<span class="nt">&lt;body&gt;</span>
+		<span class="nt">&lt;section&gt;</span>
+			<span class="nt">&lt;h2&gt;</span>Line/<span class="nt">&lt;wbr&gt;</span>bounding box<span class="nt">&lt;/h2&gt;</span>
+		<span class="nt">&lt;/section&gt;</span>
+		<span class="nt">&lt;section&gt;</span>
+			<span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"precise"</span><span class="nt">&gt;</span>Much better!<span class="nt">&lt;/h2&gt;</span>
+		<span class="nt">&lt;/section&gt;</span>
+	<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre>
+					</figure>
+
+
+				</div>
+
+				<nav>
+					<p><a class="external" href="#" target="_blank"></a></p>
+				</nav>
+			</div>
+			<nav>
+				<p><a class="external" href="../index.html" target="_blank"></a></p>
+			</nav>
+		</section>
+		<iframe src="../index.html"></iframe>
+
+	</body>
+</html>

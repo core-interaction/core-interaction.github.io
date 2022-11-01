@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
+
+		<title>Demo</title>
+		<link href="/assets/styles/reset.css" rel="stylesheet">
+		<link href="/assets/styles/common.css" rel="stylesheet">
+		<link href="/assets/styles/syntax.css" rel="stylesheet">
+		<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
+		<link href="/assets/icons/touch.png" rel="apple-touch-icon">
+
+		<script src="/assets/scripts/example.js"></script>
+
+		<meta name="theme-color" content="#e42a1d">
+	</head>
+	<body class="example">
+		<section style="--split: 66%;">
+			<aside></aside>
+
+
+			<div id="files">
+				<ul>
+
+					<li tabindex=0 class="visible">
+						<p>style.css</p>
+					</li>
+
+					<li tabindex=0>
+						<p>index.html</p>
+					</li>
+
+				</ul>
+			</div>
+
+			<div id="source">
+
+				<div class="visible">
+
+
+					<figure class="highlight">
+						<pre><code class="language-scss" data-lang="scss"><span class="nt">a</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="cm">/* :focus is triggered always. */</span>
+<span class="nt">a</span><span class="nd">:focus</span> <span class="p">{</span> <span class="nl">outline</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="cm">/* :focus-visible will only trigger on keyboard tab through */</span>
+<span class="nt">a</span><span class="nd">:focus-visible</span> <span class="p">{</span> 
+  <span class="nl">outline</span><span class="p">:</span> <span class="m">0</span><span class="mi">.1rem</span> <span class="nb">solid</span> <span class="n">currentColor</span><span class="p">;</span>
+  <span class="nl">outline-offset</span><span class="p">:</span> <span class="m">0</span><span class="mi">.2rem</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">0</span><span class="mi">.1rem</span><span class="p">;</span>
+<span class="p">}</span></code></pre>
+					</figure>
+
+
+				</div>
+
+				<div>
+
+
+					<figure class="highlight">
+						<pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+	<span class="nt">&lt;head&gt;</span>
+		<span class="nt">&lt;title&gt;</span>Pseudo-focus<span class="nt">&lt;/title&gt;</span>
+		<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"style.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/head&gt;</span>
+	<span class="nt">&lt;body&gt;</span>
+		<span class="nt">&lt;p&gt;</span>This is a paragraph with <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>a link<span class="nt">&lt;/a&gt;</span> in it.<span class="nt">&lt;/p&gt;</span>
+		<span class="nt">&lt;p&gt;</span>And another one with <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/topic/css"</span><span class="nt">&gt;</span>another link<span class="nt">&lt;/a&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+	<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre>
+					</figure>
+
+
+				</div>
+
+				<nav>
+					<p><a class="external" href="#" target="_blank"></a></p>
+				</nav>
+			</div>
+			<nav>
+				<p><a class="external" href="../index.html" target="_blank"></a></p>
+			</nav>
+		</section>
+		<iframe src="../index.html"></iframe>
+
+	</body>
+</html>
