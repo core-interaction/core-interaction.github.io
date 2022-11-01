@@ -1,5 +1,5 @@
 ---
-title: Jekyll, Liquid, and Markdown
+title: Jekyll, Liquid, and Markdown
 order: 8
 ---
 
