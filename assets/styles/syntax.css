@@ -186,7 +186,8 @@
 .highlight .cm + .o + .p,
 .highlight .cm + .o + .p ~ .p + .p,
 .highlight .nt + .nd + .o + .nt,
-.highlight .nv {
+.highlight .nv,
+.highlight .ni {
 	color: #ffa11f;
 }
 

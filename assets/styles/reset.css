@@ -3,9 +3,9 @@ html *:where(:not(audio, canvas, iframe, img, svg, video):not(svg *, symbol *)) 
 	display: revert;
 }
 
-*,
-*::before,
-*::after {
+html *,
+html *::before,
+html *::after {
 	box-sizing: border-box;
 }
 
