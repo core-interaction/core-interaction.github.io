@@ -1,6 +1,5 @@
 ---
 title: Additional, advanced CSS
-published: false
 order: 9
 ---
 
