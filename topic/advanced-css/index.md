@@ -6,7 +6,7 @@ order: 9
 
 
 
-Our HTML/CSS focus up to this point has been relatively broad, to start with the basics. Here we want to begin to sand down some of the rough edges, and introduce you to specific, advanced techniques you can use to refine and enliven your work—still with just CSS, no JavaScript (yet)!
+Our HTML/CSS focus up to this point has been relatively broad, to start with the basics. Here I want to begin to sand down some of the rough edges, and introduce you to specific, advanced techniques you can use to refine and enliven your work—still with just CSS, no JavaScript (yet)!
 {: .left }
 
 * [Overflowing content](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content) \
@@ -54,13 +54,13 @@ Let’s avoid it. We can use [pseudo-elements](/topic/css/#pseudo-elements), `:a
 
 {% include figure.html src='/example/bounding-box/demo' height='62rem' caption='Here we also move the text with `margin-left` and `margin-right`, though usually this adjustment is much more minor (to the point of ignoring).' %}
 
-*Eric and I will often call this tactic “negating the bounding box.”*
+*I will often call this tactic “negating the bounding box.”*
 
 
 
 ## Text ragging (sorta)
 
-We’ve gone on-and-on about how you can’t treat the web like print—always [perfectly ragging](/topic/typography/#ragging) your text for nice, smooth blocks. In modern (responsive) web design we don’t always know what our text will be, nor where it will wrap!
+You can’t treat the web like print—always [perfectly ragging](https://www.fonts.com/content/learning/fontology/level-2/text-typography/rags-widows-orphans) your text for nice, smooth blocks. In modern (responsive) web design we don’t always know what our text will be, nor where it will wrap!
 
 But we can do a handful of things to make for *better* ragging/wraps, given the unknowns—judiciously using `hyphens`/`&shy;`, `<wbr>`, `<nobr>`, and `&nbsp;` to *somehwat* control your line breaks.
 
@@ -80,13 +80,13 @@ Somewhat similar to `&shy;`, the [*wbr*](https://developer.mozilla.org/en-US/doc
 
 ### `<nobr>` and `&nbsp;`
 
-More often, you’ll want to keep certain words *together*—to avoid a [widow or orphan](/topic/typography/#widows-and-orphans), or to keep important/related text together—like in dates, *November 2*, or with  names like *Eric Li*.
+More often, you’ll want to keep certain words *together*—to avoid a [widow or orphan](https://www.fonts.com/content/learning/fontology/level-2/text-typography/rags-widows-orphans), or to keep important/related text together—like in dates, *November 2*, or with names like *Adrian Li*.
 
 You can wrap multiple words (or whole phrases) in an [*nobr*](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nobr) tag—keeping in mind that like `<em>` or `<strong>`, the default behavior is cleared by most [resets](/topic/css/#resets) (ours included)—so you have to restore the property in CSS. You can also use a manual `&nbsp;` entity between words:
 
 {% include figure.html src='/example/nobr-nbsp/demo' height='46rem' caption='On a Mac, you can insert an *encoded* `&nbsp;` with `⌥` (option)-spacebar. This works in many programs, not just your IDE! It’s harder to see, but easier to read.' %}
 
-Beyond these manual interventions, you [need JavaScript](https://github.com/adobe/balance-text) to [fully balance](https://www.ctrl.blog/entry/text-wrap-balance.html) your lines! (Which is a whole can of worms, ask Eric.)
+Beyond these manual interventions, you [need JavaScript](https://github.com/adobe/balance-text) to [fully balance](https://www.ctrl.blog/entry/text-wrap-balance.html) your lines! (Which is a whole can of worms.)
 
 
 
