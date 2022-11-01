@@ -134,6 +134,8 @@
 .highlight .p + .no,
 .highlight .p + .nb,
 .highlight .p + .n,
+.highlight .p + .n + .o + .n,
+.highlight .p + .n + .o + .n + .p,
 .highlight .p + .no + .p,
 .highlight .p + .nb + .p,
 .highlight .p + .n + .p,
@@ -183,7 +185,8 @@
 .highlight .cm + .o,
 .highlight .cm + .o + .p,
 .highlight .cm + .o + .p ~ .p + .p,
-.highlight .nt + .nd + .o + .nt {
+.highlight .nt + .nd + .o + .nt,
+.highlight .nv {
   color: #ffa11f;
 }
 
@@ -230,4 +233,8 @@
 
 .highlight .cm:first-child + .nt + .nd + .o + .nt { /* Don’t ask. */
   color: #ffa11f;
+}
+
+.highlight .k + .nt {
+  color: initial;
 }

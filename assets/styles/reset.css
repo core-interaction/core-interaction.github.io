@@ -1,4 +1,4 @@
-*:where(:not(audio, canvas, iframe, img, svg, video):not(svg *, symbol *)) {
+html *:where(:not(audio, canvas, iframe, img, svg, video):not(svg *, symbol *)) {
 	all:     unset;
 	display: revert;
 }
