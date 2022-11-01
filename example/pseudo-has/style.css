@@ -1,0 +1,7 @@
+/* By default, paragraphs are red. */
+p { color: red; }
+
+/* If the paragraph has an anchor in it, it becomes black. */
+p:has(a) { color: black; }
+
+

@@ -1,0 +1,7 @@
+/* Other styles are the same as before. */
+
+h2 {
+	left: 0;
+	position: sticky;
+	top: 0;
+}

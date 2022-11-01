@@ -1,0 +1,12 @@
+body {
+	--base: 20px;
+
+	display: grid;
+	font-family: 'Helvetica', sans-serif;
+	gap: var(--base);
+	padding: var(--base);
+}
+
+section { background-color: gold; }
+
+h2 { font-size: calc(var(--base) * 3); }

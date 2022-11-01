@@ -1,0 +1,26 @@
+h2 {
+	/* Just to see things better. */
+	background-color: hsla(200, 100%, 50%, 33%);
+}
+
+.precise:before,
+.precise:after {
+	content: ''; /* Empty. */
+	display: block;
+	visibility: hidden;
+}
+
+.precise:before { margin-top: var(--inset--top); }
+.precise:after { margin-bottom: var(--inset--bottom); }
+
+.precise {
+	--inset--top:    -0.2em; /* Font-dependent! */
+	--inset--bottom: -0.23em;
+	--inset--left:   -0.07em;
+	--inset--right:  -0.06em;
+
+	display: flow-root; /* Cinch the height. */
+	margin-left: var(--inset--left);
+	margin-right: var(--inset--right);
+	width: fit-content; /* Cinch the width. */
+}

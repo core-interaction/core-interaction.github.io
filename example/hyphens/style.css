@@ -1,0 +1,14 @@
+section:nth-child(1) {
+	-webkit-hyphens: none; /* Safari uses prefix. */
+	hyphens: none; /* Default. */
+}
+
+section:nth-child(2) {
+	-webkit-hyphens: auto; /* Safari uses prefix. */
+	hyphens: auto; /* Browser decides. */
+}
+
+section:nth-child(3) {
+	-webkit-hyphens: manual; /* Safari uses prefix. */
+	hyphens: manual; /* Specify with `&shy;` */
+}

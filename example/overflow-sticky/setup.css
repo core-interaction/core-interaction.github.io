@@ -1,0 +1,35 @@
+body {
+	--base: 20px;
+
+	display: grid;
+	font-family: 'Helvetica', sans-serif;
+	gap: var(--base);
+	padding: var(--base);
+}
+
+section {
+	background-color: gold;
+	padding: calc(var(--base) / 2);
+}
+
+h2 { font-size: calc(var(--base) * 3); }
+
+/* Limit the height. */
+section:not(:first-child) { height: calc(var(--base) * 7); }
+
+section:nth-child(2) {
+	overflow-x: hidden;
+	overflow-y: auto; /* Scroll vertically! */
+}
+
+section:nth-child(3) {
+	display: flex; /* Horizontal layout. */
+	gap: var(--base);
+	overflow-x: auto; /* Scroll horizontally! */
+	overflow-y: hidden;
+}
+
+section:nth-child(3) * {
+	flex-shrink: 0; /* Don’t shrink! */
+	width: 90%; /* Always peek the next block. */
+}
