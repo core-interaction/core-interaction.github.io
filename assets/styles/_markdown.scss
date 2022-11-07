@@ -190,6 +190,13 @@
 
 			ul { list-style-type: '+' }
 		}
+
+		> li { // Nested.
+			> ul:only-child,
+			> *:not(h3):not(h4):not(p) ~ ul {
+				margin-top: calc(-1 * var(--typography--margin--top));
+			}
+		}
 	}
 
 	ol {
