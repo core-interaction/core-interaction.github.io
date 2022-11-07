@@ -1785,6 +1785,11 @@ body > main > article ul ul ul {
 	list-style-type: "+";
 }
 
+body > main > article ul > li > ul:only-child,
+body > main > article ul > li > *:not(h3):not(h4):not(p) ~ ul {
+	margin-top: calc(-1 * var(--typography--margin--top));
+}
+
 body > main > article ol {
 	counter-reset: list;
 }
