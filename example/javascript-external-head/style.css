@@ -1,0 +1,22 @@
+html,
+body {
+	height: 100%;
+}
+
+body {
+	--base: 20px;
+
+	align-items: center;
+	display: flex;
+	font-family: sans-serif;
+	justify-content: center;
+	padding: var(--base);
+}
+
+button {
+	background-color: aquamarine;
+	border-radius: calc(var(--base) / 2);
+	cursor: pointer;
+	/* Show the Mickey-Mouse hand! */
+	padding: calc(var(--base) / 2);
+}
