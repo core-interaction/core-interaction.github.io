@@ -70,10 +70,10 @@ JS was first added directly like [*attributes*](/topic/html/#attributes) in HTM
 ```html
 <button onclick="alert('The button was clicked!');">Click here!</button>
 ```
-{: style="max-width: 72rem" }
+{: style="max-width: 76rem" }
 
 *Note the single quotes, when nested/inside doubles!*
-{: .one-above .two-below }
+{: .two-below style="margin-top: var(--typography--between);" }
 
 This works for very, very simple things, but—for many of the same reasons as inline CSS—is brittle and doesn’t scale with complexity or across multiple pages. Try writing a whole, elaborate function in there! No good.
 
@@ -94,7 +94,7 @@ Here the `onclick` is a shorthand for using [addEventListener](https://develope
 
 
 
-### Also, `<noscript>`
+### Oh also, `<noscript>`
 
 Some folks block/disable JavaScript—for performance or accessibility reasons, or to hide advertising/annoyances, [and so on](https://softwareengineering.stackexchange.com/questions/26179/why-do-people-disable-javascript). This is less and less common these days, since so many sites *completely rely* on JS. It isn’t always feasible to replicate your site behavior entirely *without* JS, but you can use a special [\<noscript> tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript) to show content only when scripting is turned off:
 
@@ -108,11 +108,17 @@ You can test this by [disabling JavaScript](https://developer.chrome.com/docs/de
 
 By far the most common, flexible way to include JavaScript is externally—again, like CSS. The difference here is that instead of a `<link>` element, we still use a (now empty) `<script>` tag, with the addition of a `src="filename.js"` attribute:
 
-{% include figure.html src='/example/javascript-external/demo' caption='I’ve never liked this empty-tag syntax. HTML/CSS/JS doesn’t always make sense!' height='34rem' %}
+```html
+<script src="script.js"></script>
+```
+{: style="max-width: 38rem;" }
 
-Same as the example above, but now in a nice, separate file. This will still run when the document gets to the `<script>`, as before. But we can do even better, moving the script up into our `<head>`, along with the other external files:
+*I’ve never liked this empty-tag syntax.*
+{: .two-below style="margin-top: var(--typography--between);" }
 
-{% include figure.html src='/example/javascript-external-head/demo' height='34rem' caption='Stays clean with long documents and lots of files.' %}
+Same JavaScript as the example above, but now moved over into a nice, separate file. This will still run when the document gets to the `<script>`, as before. But we can do even better, moving the script up into our `<head>`, along with the other external files:
+
+{% include figure.html src='/example/javascript-external/demo' height='34rem' caption='Stays readable/clean with long documents and lots of files.' %}
 
 Note that our JavaScript in `script.js` is now wrapped in an `addEventListener` for [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event). Without this, the script contents would run *before* the rest of the page has loaded, and it wouldn’t be able to “see” the element for the `querySelector`! External files need this (or a [load event](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event)) attached.
 
@@ -122,15 +128,17 @@ Note that our JavaScript in `script.js` is now wrapped in an `addEventListener` 
 
 
 
-Probably the most common thing you will use JS for—especially as we’re starting out—is simply to add or remove (toggle) a class from something when the user interacts with your page—such as clicking on a menu.
+Okay, time for a more practical example: probably the most common thing you will use JS for—especially as we’re starting out—is simply to add or remove (toggle) a class from something when the user interacts with your page (such as clicking on a menu).
 
-Like with our [transition](/topic/advanced-css/#transitions) examples last week, the element needs two states in your CSS: *with* the class and *without* the class. The JS interaction/event will switch between them, and our CSS `transition` will smooth out the in-between.
+Like with our [transition](/topic/advanced-css/#transitions) examples last week, the element needs two states in your CSS: *without* the class and then *with* the class. The JavaScript interaction/event will switch between them, and our CSS `transition` will smooth out the… transition.
 
-We’ll again use `addEventListener` and `querySelector` to listen for clicks, and then modify the [classList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) of a *different* element:
+We’ll again use `addEventListener` and `querySelector` to listen for clicks, but then modify the [classList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) of a *different* element:
 
 {% include figure.html src='/example/javascript-classlist/demo' height='28rem' caption='Note the [camelCase](https://en.wikipedia.org/wiki/Camel_case) variable names, which is the JavaScript convention. Longer, descriptive names will help as your code gets more complex.' %}
 
-The class can be toggled on any element in your HTML (or often, even just on `body`)! `querySelector` takes *any* CSS selector, even other classes. Also you an use `classList.add` and `classList.remove`, if you don’t want the back-and-forth of `classList.toggle`.
+The class can be toggled on any element in your HTML (or often, even just on `document.body` itself)! `querySelector` takes *any* CSS selector, even other classes. Also you an specifically use `classList.add` and `classList.remove`, if you don’t want the on-and-off behavior of `classList.toggle`.
+
+You can do many, many things with this basic “add a class” JS!
 
 
 

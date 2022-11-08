@@ -1,6 +1,9 @@
-// Set up a variable for our button!
-let button = document.querySelector('#example'); // Any CSS selector.
+// This waits until the browser parses the page.
+window.addEventListener('DOMContentLoaded', () => {
+	// Set up a variable for our button!
+	let button = document.querySelector('#example'); // Any CSS selector.
 
-button.onclick = () => { // Attach the click event.
-	alert('The button was clicked!'); // Pop an alert!
-};
+	button.onclick = () => { // Attach the click event.
+		alert('The button was clicked!'); // Pop an alert!
+	};
+});
