@@ -1,42 +1,15 @@
-html,
-body {
-	height: 100%;
-}
-
-body {
-	--base: 20px;
-
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	font-family: sans-serif;
-	justify-content: center;
-	padding: var(--base);
-	row-gap: var(--base);
-}
-
-/* Initial state, without the class. */
 section {
+	/* Initial state, without the class. */
 	background-color: gold;
+	padding: calc(var(--base) / 2);
 	transition: all 1s ease-in-out;
 	/* Transition everything. */
 	will-change: transform;
 	/* Improves the aliasing! */
 }
 
-/* When the class is applied with JS! */
 section.clicked {
+	/* When the class is applied with JS! */
 	background-color: aquamarine;
 	transform: rotate(-5deg);
-}
-
-section,
-button {
-	padding: calc(var(--base) / 2);
-}
-
-button {
-	background-color: deepskyblue;
-	border-radius: calc(var(--base) / 2);
-	cursor: pointer;
 }
