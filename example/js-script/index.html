@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="/assets/styles/reset.css" rel="stylesheet">
+		<link href="style.css" rel="stylesheet">
+	</head>
+	<body>
+		<button id="example">Click here!</button>
+		<script>
+			// Set up a variable for our button!
+			let button = document.querySelector("#example"); // Any CSS selector.
+
+			button.onclick = () => { // Attach the click event.
+				alert("Button was clicked!"); // Pop an alert!
+			};
+		</script>
+	</body>
+</html>
