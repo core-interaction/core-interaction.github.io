@@ -29,6 +29,10 @@ layout: default
 					{% highlight scss %}
 						{%- include_relative {{ file }} -%}
 					{% endhighlight %}
+				{% elsif file contains ".js" %}
+					{% highlight javascript %}
+						{%- include_relative {{ file }} -%}
+					{% endhighlight %}
 				{% elsif file contains ".html" %}
 					{% highlight html %}
 						{%- include_relative {{ file }} -%}
