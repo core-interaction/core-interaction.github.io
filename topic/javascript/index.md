@@ -168,9 +168,11 @@ Here I’ve also adjusted the [rootMargin](https://www.smashingmagazine.com/2021
 
 Alright, that is a lot. Like I’ve been saying—JavaScript is a *whole thing*. Here are some other tips, as you start to explore:
 
-- Using `alert("Your message")` for *telemetry*/*debugging* can quickly be pretty annoying—instead, you can use `console.log("Your message")` to show messages in the [DevTools console](/topic/inspector/#the-console). (In other languages, these are often, ironically, called *print*.)
+- Using `alert("Your message")` for *telemetry*/*debugging* can quickly be pretty annoying—instead, you can use `console.log("Your message")` to show messages in the [DevTools console](/topic/inspector/#the-console).
 
 	*Hit ⌘-⌥-J (command-option-J) on the Mac to go right there!*
+
+	*In other languages, these functions are often, ironically, called <em>print</em>.*
 
 - Like [HTML](/topic/html/#case-whitespace-tabs-line-breaks)/[CSS](/topic/css/#ergonomics), JS does not care about whitespace or tabbing. But it *is* [case-sensitive](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#basics)!
 
