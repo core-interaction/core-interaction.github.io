@@ -109,18 +109,16 @@ You can test this by [disabling JavaScript](https://developer.chrome.com/docs/de
 By far the most common, flexible way to include JavaScript is externally—again, like CSS. The difference here is that instead of a `<link>` element, we still use a (now empty) `<script>` tag, with the addition of a `src="filename.js"` attribute:
 
 ```html
-<script src="script.js"></script>
+<script defer src="script.js"></script>
 ```
-{: style="max-width: 38rem;" }
+{: style="max-width: 43rem;" }
 
-*I’ve never liked this empty-tag syntax.*
+*I’ve never liked this empty-tag syntax, what can you do.*
 {: .two-below style="margin-top: var(--typography--between);" }
 
-Same JavaScript as the example above, but now moved over into a nice, separate file. This will still run when the document gets to the `<script>`, as before. But we can do even better, moving the script up into our `<head>`, along with the other external files:
+Same JavaScript as the example above, but now moved over into a nice, separate file. This will still run when the document gets to the `<script>` (and in its place/order) as before, and the `defer` attribute allows it to “see” the HTML (not yet loaded) below it. We can then move the script up into our `<head>`, along with the other external files:
 
 {% include figure.html src='/example/javascript-external/demo' height='34rem' caption='Stays readable/clean with long documents and lots of files.' %}
-
-Note that our JavaScript in `script.js` is now wrapped in an `addEventListener` for [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event). Without this, the script contents would run *before* the rest of the page has loaded, and it wouldn’t be able to “see” the element for the `querySelector`! External files need this (or a [load event](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event)) attached.
 
 
 
@@ -134,7 +132,7 @@ Like with our [transition](/topic/advanced-css/#transitions) examples last week,
 
 We’ll again use `addEventListener` and `querySelector` to listen for clicks, but then modify the [classList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) of a *different* element:
 
-{% include figure.html src='/example/javascript-classlist/demo' height='32rem' caption='Note the [camelCase](https://en.wikipedia.org/wiki/Camel_case) variable names, which is the JavaScript convention. Longer, descriptive names will help as your code gets more complex.' %}
+{% include figure.html src='/example/javascript-classlist/demo' height='28rem' caption='Note the [camelCase](https://en.wikipedia.org/wiki/Camel_case) variable names, which is the JavaScript convention. Longer, descriptive names will help as your code gets more complex.' %}
 
 The class can be toggled on any element in your HTML (or often, even just on `document.body` itself)! `querySelector` takes *any* CSS selector, even other classes. Also you an specifically use `classList.add` and `classList.remove`, if you don’t want the on-and-off behavior from `classList.toggle`.
 
@@ -152,14 +150,14 @@ Again we’ll need two states in our CSS—defined with/without a class. But no
 
 This used to be unnecessarily hard in JavaScript, and was one of the things jQuery was created to help with. But now we can use [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to watch the element:
 
-{% include figure.html src='/example/javascript-intersection/demo' height='46rem' caption='Note the [if/else](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement, an example of [conditional logic](https://en.wikipedia.org/wiki/Conditional_(computer_programming))' %}
+{% include figure.html src='/example/javascript-intersection/demo' height='42rem' caption='Note the [if/else](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement, an example of [conditional logic](https://en.wikipedia.org/wiki/Conditional_(computer_programming))' %}
 
 
 
 You will often want to use this on multiple elements—and remember, when in code, [don’t repeat yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)! So we can use [querySelector*All*](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll) to select *multiple* elements, and then a [forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) loop to run the same class for each of them:
 {: .four-above }
 
-{% include figure.html src='/example/javascript-intersection-loop/demo' height='48rem' caption='Here I’ve also adjusted the [rootMargin](https://www.smashingmagazine.com/2021/07/dynamic-header-intersection-observer/#rootmargin) from the viewport/default, so the elements don’t transition immediately.' %}
+{% include figure.html src='/example/javascript-intersection-loop/demo' height='44rem' caption='Here I’ve also adjusted the [rootMargin](https://www.smashingmagazine.com/2021/07/dynamic-header-intersection-observer/#rootmargin) from the viewport/default, so the elements don’t transition immediately.' %}
 
 
 
@@ -167,7 +165,7 @@ You will often want to use this on multiple elements—and remember, when in co
 
 Alright, that is a lot. Like I’ve been saying—JavaScript is a *whole thing*. Here are some other tips, as you start to explore:
 
-- Using `alert("Your message")` for *telemetry*/*debugging* can quickly be pretty annoying—instead, you can use `console.log("Your message")` to show messages in the [DevTools console](/topic/inspector/#the-console).
+- Using `alert("Your message")` for *telemetry*/*debugging* can quickly be pretty annoying—instead, you can use `console.log("Your message")` to show messages in the [DevTools console](/topic/inspector/#the-console). The console will also show any JavaScript errors!
 
 	*Hit ⌘-⌥-J (command-option-J) on the Mac to go right there!*
 
