@@ -9,14 +9,20 @@ published: false
 JavaScript is the language/format for adding interactivity to a web page—based on actions or events from the user. Where do we even start with *JS*? (Everyone calls it JS.) It is so massive and often (trust me, I know) seems unapproachable. So we’ll go through a bit of background, and then look at some very practical examples you might want in your work.
 {: .left }
 
-* [JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript) \
+* [JavaScript basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics) \
 *There are <em>literally</em> millions of sites about JS, but let’s start with MDN.*
+
+* [JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript) \
+*More MDN.*
 
 * [Newest 'javascript' questions - Stack Overflow](https://stackoverflow.com/questions/tagged/javascript) \
 *Great resource for many things, but especially/<wbr>famously for JS. It’s like Reddit for code!*
 
 * [The Modern Javascript Tutorial](https://javascript.info) \
 *This reference goes very advanced/<wbr>in-depth.*
+
+* [Eloquent JavaScript](https://eloquentjavascript.net) \
+*Also goes deep.*
 {: .icon-link .no-marker .right rows="3" }
 
 Going back to our first analogy, JavaScript is the *muscles* of the web. Like [HTML](/topics/html) (the *bones*) and [CSS](/topics/css) (the *skin*), it is ultimately still just text that is parsed by our browsers. Like CSS, it can live within HTML documents, but is usually saved separately with the extension `.js`
