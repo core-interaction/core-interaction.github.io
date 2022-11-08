@@ -21,7 +21,7 @@ JavaScript is the language/format for adding interactivity to a web page—base
 
 Going back to our first analogy, JavaScript is the *muscles* of the web. Like [HTML](/topics/html) (the *bones*) and [CSS](/topics/css) (the *skin*), it is ultimately still just text that is parsed by our browsers. Like CSS, it can live within HTML documents, but is usually saved separately with the extension `.js`
 
-JavaScript was first created by [Brendan Eich](https://brendaneich.com/2008/04/popularity/) over just 10 days in 1995, and has been through a myriad of evolutions, paths, missteps, and enhancements [since then](https://en.wikipedia.org/wiki/JavaScript). It has nothing formally to do with *Java*, confusingly—other than being contemporaries and sort-of competitors (thus the name), if you remember from [*What Is Code?*](http://javascript.info). (Coffee-culture was big in the 90s!) JavaScript won the race, by every measure, and is ubiquitous on the modern web.
+JavaScript was first created by [Brendan Eich](https://brendaneich.com/2008/04/popularity/) over just 10 days in 1995, and has been through a myriad of evolutions, paths, missteps, and enhancements [since then](https://en.wikipedia.org/wiki/JavaScript). It has nothing formally to do with *Java*, confusingly—other than being contemporaries and sort-of competitors (thus the name), if you remember from [*What Is Code?*](http://javascript.info). (Coffee-culture was really big in the 90s!) JavaScript won the race, by every measure, and is ubiquitous on the modern web.
 
 > The idea was to make something that Web designers, people who may or may not have much programming training, could use to add a little bit of animation or a little bit of smarts to their Web forms and their Web pages.
 {: .quote }
@@ -131,7 +131,7 @@ The class can be toggled on any element in your HTML!
 
 
 
-## Watch for scrolling
+## Watching for scrolling
 
 
 
@@ -139,7 +139,7 @@ Another very common use for JavaScript is to do something when an element enter
 
 Again we’ll need two states in our CSS—defined with/without a class. But now we’ll use the user’s scrolling, instead of a click, to toggle the switch.
 
-This used to be unnecessarily hard in JavaScript, and was one of the things jQuery was created to help with. But now we can use [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to watch the element:
+This used to be unnecessarily hard in JavaScript, and was one of the things jQuery was created to help with. But now we can use [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to watch the element:
 
 *INTERSECTION OBSERVER EXAMPLE*
 
