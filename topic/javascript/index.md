@@ -136,7 +136,7 @@ We’ll again use `addEventListener` and `querySelector` to listen for clicks, b
 
 {% include figure.html src='/example/javascript-classlist/demo' height='32rem' caption='Note the [camelCase](https://en.wikipedia.org/wiki/Camel_case) variable names, which is the JavaScript convention. Longer, descriptive names will help as your code gets more complex.' %}
 
-The class can be toggled on any element in your HTML (or often, even just on `document.body` itself)! `querySelector` takes *any* CSS selector, even other classes. Also you an specifically use `classList.add` and `classList.remove`, if you don’t want the on-and-off behavior of `classList.toggle`.
+The class can be toggled on any element in your HTML (or often, even just on `document.body` itself)! `querySelector` takes *any* CSS selector, even other classes. Also you an specifically use `classList.add` and `classList.remove`, if you don’t want the on-and-off behavior from `classList.toggle`.
 
 You can do many, many things with this basic “add a class” JS!
 
@@ -152,7 +152,7 @@ Again we’ll need two states in our CSS—defined with/without a class. But no
 
 This used to be unnecessarily hard in JavaScript, and was one of the things jQuery was created to help with. But now we can use [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to watch the element:
 
-*INTERSECTION OBSERVER EXAMPLE*
+{% include figure.html src='/example/javascript-intersection/demo' height='44rem' caption='Note the [if/else](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement, an example of [conditional logic](https://en.wikipedia.org/wiki/Conditional_(computer_programming))' %}
 
 
 
