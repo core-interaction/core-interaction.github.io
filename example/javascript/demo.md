@@ -1,6 +1,6 @@
 ---
 order:
   - index.html
-  - style.css
+  - setup.css
 split: 84
 ---

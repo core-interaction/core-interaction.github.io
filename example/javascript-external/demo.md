@@ -2,6 +2,6 @@
 order:
   - index.html
   - script.js
-  - style.css
+  - setup.css
 split: 84
 ---

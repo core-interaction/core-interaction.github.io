@@ -134,7 +134,7 @@ Like with our [transition](/topic/advanced-css/#transitions) examples last week,
 
 We’ll again use `addEventListener` and `querySelector` to listen for clicks, but then modify the [classList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) of a *different* element:
 
-{% include figure.html src='/example/javascript-classlist/demo' height='28rem' caption='Note the [camelCase](https://en.wikipedia.org/wiki/Camel_case) variable names, which is the JavaScript convention. Longer, descriptive names will help as your code gets more complex.' %}
+{% include figure.html src='/example/javascript-classlist/demo' height='32rem' caption='Note the [camelCase](https://en.wikipedia.org/wiki/Camel_case) variable names, which is the JavaScript convention. Longer, descriptive names will help as your code gets more complex.' %}
 
 The class can be toggled on any element in your HTML (or often, even just on `document.body` itself)! `querySelector` takes *any* CSS selector, even other classes. Also you an specifically use `classList.add` and `classList.remove`, if you don’t want the on-and-off behavior of `classList.toggle`.
 
@@ -146,7 +146,7 @@ You can do many, many things with this basic “add a class” JS!
 
 
 
-Another very common use for JavaScript is to do something when an element enters or exits the viewport (scrolling into or out of view)—like fading or moving something in.
+Another very common use for JavaScript is to do something when an element enters or exits the viewport (scrolling into or out of view)—like fading or moving something in.
 
 Again we’ll need two states in our CSS—defined with/without a class. But now we’ll use the user’s scrolling, instead of a click, to toggle the switch.
 
@@ -160,7 +160,7 @@ You will often want to use this on multiple elements—and remember, when in co
 
 *IO QUERYSELECTORALL/FOREACH EXAMPLE*
 
-Here I’ve also adjusted the [rootMargin](https://www.smashingmagazine.com/2021/07/dynamic-header-intersection-observer/#rootmargin) from the viewport/default, so the elements don’t transition immediately.
+Here I’ve also adjusted the [rootMargin](https://www.smashingmagazine.com/2021/07/dynamic-header-intersection-observer/#rootmargin) from the viewport/default, so the elements don’t transition immediately.
 
 
 
