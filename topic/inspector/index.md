@@ -100,9 +100,6 @@ You can also use the *zoom* dropdown to approximate views *larger* than your cur
 
 The *Options* menu also has some handy tricks, like showing *rulers* or capturing *full-length screenshots*!
 
-*Importantly there is also the <em>Console</em> tab, but we’ll talk about that when we get into JavaScript, later.*
-{: .four-above }
-
 {% endcapture %}
 
 {% include aside.html content=aside %}
@@ -113,3 +110,25 @@ The *Options* menu also has some handy tricks, like showing *rulers* or capturin
 >
 >This is just a quicker preview, but isn’t always perfectly accurate&#8288;—and also won’t reflect any device-specific behaviors around scrolling or rotating. (I’m looking at you, [iOS Safari](https://bugs.webkit.org/show_bug.cgi?id=141832).)
 {: .callout icon="🤌" }
+
+
+
+## The Console
+
+The console is used to help you work with [JavaScript](/topic/javascript), by *logging* messages (and any errors) from your code as it runs. \
+\
+If your tools are already open, you can show the console (as a drawer) in *Options* ellipses, or as a whole panel to the right of *Elements*. \
+\
+*On the Mac, Hit ⌘-⌥-J (command-option-J) to go right there!*
+{: .left .one-above style="align-self: center;" }
+
+{% include figure.html src='customize.svg' class='right' %}
+
+{% include figure.html src='console.png' height='90vh' caption='The console as a drawer, at the bottom right.' %}
+
+This area will show any [messages logged](https://developer.chrome.com/docs/devtools/console/log/#javascript) from your JavaScript with `console.log()`.
+
+Warnings and errors (like missing files, or bad JS syntax) will also be shown here in yellow and red, respectively—usually with clickable line-numbers to the right, to take you right to the problem. You can clear the buffer (what is showing) with the little crossed circle.
+
+You can also evaluate JavaScript here directly, by typing (with some nice auto-completion) into the bottom of the console—like `console.log('Hello, world!')`. You can use this to test out parts of your code immediately, like with `document.querySelector('main')`. If it returns (shows) your element in response, your selector is working!
+

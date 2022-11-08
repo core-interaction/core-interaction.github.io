@@ -173,7 +173,7 @@ Alright, that is a lot. Like I’ve been saying—JavaScript is a *whole thing
 
 - Using `alert("Your message")` for *telemetry*/*debugging* can quickly be pretty annoying—instead, you can use `console.log("Your message")` to show messages in the [DevTools console](/topic/inspector/#the-console). The console will also show any JavaScript errors!
 
-	*Hit ⌘-⌥-J (command-option-J) on the Mac to go right there!*
+	*On the Mac, Hit ⌘-⌥-J (command-option-J) to go right there!*
 
 	*In other languages, these functions are often, ironically, called <em>print</em>.*
 
