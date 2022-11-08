@@ -25,7 +25,7 @@ Chrome has the most robust, best-in-class set of *DevTools*—though [Safari](ht
 *In Chrome, you can bring them up by right-clicking on any element/part of a page and clicking <em>Inspect</em>.*
 {: .two-above }
 
-*You can also hit `⌘-⌥-I`, on the Mac.*
+*You can also hit ⌘-⌥-I (command-option-I), on the Mac.*
 
 
 
@@ -52,7 +52,7 @@ The first button in the upper-left lets you mouse over on the page, and will th
 
 The second (more on this below) toggles the *Device toolbar*, “responsive mode.”
 
-Handy tip: `⌘-F` in here will let you search for elements or text by name/<wbr>class/<wbr>contents.
+Handy tip: ⌘-F in here will let you search for elements or text by name/<wbr>class/<wbr>contents.
 
 
 
@@ -92,7 +92,7 @@ First open the inspector, [as above](#elements-panel). Enter *device mode* with
 
 {% capture aside %}
 
-Be sure to *refresh* with `⌘-R` if the page doesn’t rescale correctly when you enter this mode! They somestimes don’t, depending on how they are built.
+Be sure to *refresh* with ⌘-R if the page doesn’t rescale correctly when you enter this mode! They somestimes don’t, depending on how they are built.
 
 Generally, use the *Responsive* dimensions mode that lets you type in specific pixel dimensions for width/height. Or you can use the divided bar underneath to quickly jump through common/ballpark widths.  And remember that you aren’t targeting devices&#8288;—you are looking for when your content *breaks*.
 
