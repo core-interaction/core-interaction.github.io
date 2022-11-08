@@ -1,7 +1,6 @@
 ---
 title: An intro to JavaScript
 order: 10
-published: false
 ---
 
 
