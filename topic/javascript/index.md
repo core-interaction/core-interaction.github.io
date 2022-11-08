@@ -68,7 +68,7 @@ JS was first added directly like [*attributes*](/topic/html/#attributes) in HTM
 
 
 ```html
-<button onclick="alert('Button was clicked!');">Click here!</button>
+<button onclick="alert('The button was clicked!');">Click here!</button>
 ```
 {: style="max-width: 72rem" }
 
@@ -112,7 +112,7 @@ By far the most common, flexible way to include JavaScript is externally—again
 
 Same as the example above, but now in a nice, separate file. This will still run when the document gets to the `<script>`, as before. But we can do even better, moving the script up into our `<head>`, along with the other external files:
 
-{% include figure.html src='/example/javascript-external-head/demo' height='34rem' caption='Much cleaner with long documents and lots of files.' %}
+{% include figure.html src='/example/javascript-external-head/demo' height='34rem' caption='Stays clean with long documents and lots of files.' %}
 
 Note that our JavaScript in `script.js` is now wrapped in an `addEventListener` for [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event). Without this, the script contents would run *before* the rest of the page has loaded, and it wouldn’t be able to “see” the element for the `querySelector`! External files need this (or a [load event](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event)) attached.
 

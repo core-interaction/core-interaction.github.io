@@ -4,6 +4,6 @@ window.addEventListener('DOMContentLoaded', () => {
 	let button = document.querySelector('#example'); // Any CSS selector.
 
 	button.onclick = () => { // Attach the click event.
-		alert('Button was clicked!'); // Pop an alert!
+		alert('The button was clicked!'); // Pop an alert!
 	};
 });
