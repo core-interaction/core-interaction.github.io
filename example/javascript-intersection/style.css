@@ -7,5 +7,5 @@ section { /* Initial state, without the class. */
 
 section.highlight { /* When the class is applied with JS! */
 	background-color: aquamarine;
-	transform: rotate(-5deg);
+	transform: rotate(5deg);
 }

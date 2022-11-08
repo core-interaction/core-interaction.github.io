@@ -152,15 +152,14 @@ Again we’ll need two states in our CSS—defined with/without a class. But no
 
 This used to be unnecessarily hard in JavaScript, and was one of the things jQuery was created to help with. But now we can use [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to watch the element:
 
-{% include figure.html src='/example/javascript-intersection/demo' height='44rem' caption='Note the [if/else](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement, an example of [conditional logic](https://en.wikipedia.org/wiki/Conditional_(computer_programming))' %}
+{% include figure.html src='/example/javascript-intersection/demo' height='46rem' caption='Note the [if/else](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement, an example of [conditional logic](https://en.wikipedia.org/wiki/Conditional_(computer_programming))' %}
 
 
 
 You will often want to use this on multiple elements—and remember, when in code, [don’t repeat yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)! So we can use [querySelector*All*](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll) to select *multiple* elements, and then a [forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) loop to run the same class for each of them:
+{: .four-above }
 
-*IO QUERYSELECTORALL/FOREACH EXAMPLE*
-
-Here I’ve also adjusted the [rootMargin](https://www.smashingmagazine.com/2021/07/dynamic-header-intersection-observer/#rootmargin) from the viewport/default, so the elements don’t transition immediately.
+{% include figure.html src='/example/javascript-intersection-loop/demo' height='48rem' caption='Here I’ve also adjusted the [rootMargin](https://www.smashingmagazine.com/2021/07/dynamic-header-intersection-observer/#rootmargin) from the viewport/default, so the elements don’t transition immediately.' %}
 
 
 

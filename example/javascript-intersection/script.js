@@ -5,6 +5,7 @@ window.addEventListener('DOMContentLoaded', () => { // Wait for parse.
 	// Set up an IntersectionObserver.
 	let sectionObserver = new IntersectionObserver(entries => {
 		let [entry] = entries; // Don’t worry about this, for now.
+
 		// When it is intersecting, apply the class; otherwise, remove it.
 		if (entry.isIntersecting) {
 			highlightBlock.classList.add(highlightClass);
