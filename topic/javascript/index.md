@@ -58,48 +58,47 @@ Very much [like CSS](/topics/css/#where-css-lives), JavaScript code can live in 
 
 1. *Inline* as attributes
 1. Via `<script>` elements within HTML documents
-1. As separate/external `*.js` files
+1. As separate/external `*.js` files *(the right way)*
 
 
 
 ### 1. Inline event handlers
 
-JS was first added directly like [*attributes*](/topic/html/#attributes) in HTML tags, just like CSS—but attached/listening for [specific events](https://www.w3schools.com/tags/ref_eventattributes.asp):
+JS was first added directly like [*attributes*](/topic/html/#attributes) in HTML tags, just like CSS—but attached/listening for [specific events](https://www.w3schools.com/tags/ref_eventattributes.asp):
 
-*INLINE ONCLICK/ALERT EXAMPLE*
 
-This works for very, very simple things, but—for many of the same reasons as inline CSS—is brittle and doesn’t scale with complexity or across multiple pages.
+```html
+<button onclick="alert('Button was clicked!');">Click here!</button>
+```
+{: style="max-width: 72rem" }
+
+*Note the single quotes, when nested/inside doubles!*
+{: .one-above .two-below }
+
+This works for very, very simple things, but—for many of the same reasons as inline CSS—is brittle and doesn’t scale with complexity or across multiple pages. Try writing a whole, elaborate function in there! No good.
 
 > You might see these in old examples/code, but don’t use these now! If you see them, it’s probably an indication the code is outdated.
-{: .callout icon='☝️' }
+{: .callout .two-above icon='☝️' }
 
 
 
 ### 2. `<script>` tags
 
-Again like CSS, JavaScript can be enclosed in a special [\<script> tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script). (These are also, somewhat confusingly, called *inline* scripts.) Anything inside the tag is executed right away, in the order/position they are in the HTML document:
+So again like CSS, JavaScript can be enclosed in its own special tag, the [\<script> element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script). (These are also, somewhat confusingly, called *inline* scripts.) Anything inside the tag should be written in JavaScript syntax and will be executed right away, in the order/position of the tag within the HTML document.
 
-*SCRIPT TAG ALERT EXAMPLE*
+Since this script isn’t directly *on* an element anymore (as above), we then have to identify the *target* element with [querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector), and then *attach* the [onclick event](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event) to it:
 
-Note the different `// comment syntax` for JS!
+{% include figure.html src='/example/js-script/demo' caption='Note the different `// comment syntax` for JS! And we had to add `cursor: pointer;` for the button in our CSS.' height='48rem' %}
 
-
-
-Since this script tag isn’t directly *on* an element anymore, we then have to use [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) to *attach* the event to our element, which we can *target* with [querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector):
-
-*SCRIPT TAG EVENT/TARGET EXAMPLE*
-
-Here we store (declare) the element as a [variable](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables), to keep our code readable! These are a bit like their [CSS counterparts](/topic/responsive/#briefly-css-variables).
+Here the `onclick` is a shorthand for using [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener). We also store (declare) the element here as a [variable](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables), to keep our code readable. These are a bit like their [CSS counterparts](/topic/responsive/#briefly-css-variables). Ergonomics!
 
 
 
-#### Also, `<noscript>`
+### Also, `<noscript>`
 
 Some folks block/disable JavaScript—for performance or accessibility reasons, or to hide advertising/annoyances, [and so on](https://softwareengineering.stackexchange.com/questions/26179/why-do-people-disable-javascript). This is less and less common these days, since so many sites *completely rely* on JS. It isn’t always feasible to replicate your site behavior entirely *without* JS, but you can use a special [\<noscript> tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript) to show content only when scripting is turned off:
 
-*NOSCRIPT FALLBACK EXAMPLE*
-
-
+<!-- NOSCRIPT FALLBACK EXAMPLE? -->
 
 You can test this by [disabling JavaScript](https://developer.chrome.com/docs/devtools/javascript/disable/) in your DevTools.
 
