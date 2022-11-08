@@ -49,7 +49,7 @@
 		<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
 		<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/assets/styles/reset.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
 		<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"setup.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
-		<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"script.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+		<span class="nt">&lt;script </span><span class="na">defer</span> <span class="na">src=</span><span class="s">"script.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 	<span class="nt">&lt;/head&gt;</span>
 	<span class="nt">&lt;body&gt;</span>
 		<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"example"</span><span class="nt">&gt;</span>Click here!<span class="nt">&lt;/button&gt;</span>
@@ -64,15 +64,12 @@
 
 
 					<figure class="highlight">
-						<pre><code class="language-javascript" data-lang="javascript"><span class="c1">// This waits until the browser parses the page.</span>
-<span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">DOMContentLoaded</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-	<span class="c1">// Set up a variable for our button!</span>
-	<span class="kd">let</span> <span class="nx">button</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#example</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// Any CSS selector.</span>
+						<pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Set up a variable for our button!</span>
+<span class="kd">let</span> <span class="nx">button</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#example</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// Any CSS selector.</span>
 
-	<span class="nx">button</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="c1">// Attach the click event.</span>
-		<span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">The button was clicked!</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// Pop an alert!</span>
-	<span class="p">};</span>
-<span class="p">});</span></code></pre>
+<span class="nx">button</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="c1">// Attach the click event.</span>
+	<span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">The button was clicked!</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// Pop an alert!</span>
+<span class="p">};</span></code></pre>
 					</figure>
 
 
