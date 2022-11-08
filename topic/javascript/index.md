@@ -88,7 +88,7 @@ So again like CSS, JavaScript can be enclosed in its own special tag, the [\<sc
 
 Since this script isn’t directly *on* an element anymore (as above), we then have to identify the *target* element with [querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector), and then *attach* the [onclick event](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event) to it:
 
-{% include figure.html src='/example/js-script/demo' caption='Note the different `// comment syntax` for JS! And we had to add `cursor: pointer;` for the button in our CSS.' height='48rem' %}
+{% include figure.html src='/example/javascript/demo' caption='Note the different `// comment syntax` for JS! And we had to add `cursor: pointer;` for the button in our CSS.' height='48rem' %}
 
 Here the `onclick` is a shorthand for using [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener). We also store (declare) the element here as a [variable](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables), to keep our code readable. These are a bit like their [CSS counterparts](/topic/responsive/#briefly-css-variables). Ergonomics!
 
@@ -104,13 +104,17 @@ You can test this by [disabling JavaScript](https://developer.chrome.com/docs/de
 
 
 
-### 3. External `*.js` files
+### 3. Separate/external `*.js` files
 
-By far the most common, flexible way to include JavaScript is externally—again, like CSS. The difference here is that instead of a `<link>` element, we still use a (now empty) `<style>` tag, with the addition of a `src="filename.js"` attribute:
+By far the most common, flexible way to include JavaScript is externally—again, like CSS. The difference here is that instead of a `<link>` element, we still use a (now empty) `<script>` tag, with the addition of a `src="filename.js"` attribute:
 
-*SCRIPT TAG EXAMPLE, MOVED TO FILE*
+{% include figure.html src='/example/javascript-external/demo' caption='I’ve never liked this empty-tag syntax. HTML/CSS/JS doesn’t always make sense!' height='34rem' %}
 
-I’ve never liked this syntax! HTML/CSS/JS doesn’t always make sense.
+Same as the example above, but now in a nice, separate file. This will still run when the document gets to the `<script>`, as before. But we can do even better, moving the script up into our `<head>`, along with the other external files:
+
+{% include figure.html src='/example/javascript-external-head/demo' height='34rem' caption='Much cleaner with long documents and lots of files.' %}
+
+Note that our JavaScript in `script.js` is now wrapped in an `addEventListener` for [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event). Without this, the script contents would run *before* the rest of the page has loaded, and it wouldn’t be able to “see” the element for the `querySelector`! External files need this (or a [load event](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event)) attached.
 
 
 
