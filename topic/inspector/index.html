@@ -264,6 +264,7 @@
 					<li><a href="#elements-panel">Elements panel</a></li>
 					<li><a href="#styles-pane">Styles pane</a></li>
 					<li><a href="#device-mode">Device mode</a></li>
+					<li><a href="#the-console">The Console</a></li>
 				</ul>
 			</header>
 
@@ -387,8 +388,6 @@
 
 					<p>The <em>Options</em> menu also has some handy tricks, like showing <em>rulers</em> or capturing <em>full-length screenshots</em>!</p>
 
-					<p class="four-above"><em>Importantly there is also the <em>Console</em> tab, but we’ll talk about that when we get into JavaScript, later.</em></p>
-
 
 
 				</aside>
@@ -398,6 +397,38 @@
 
 					<p>This is just a quicker preview, but isn’t always perfectly accurate⁠<span class="mdash">—</span>and also won’t reflect any device-specific behaviors around scrolling or rotating. (I’m looking at you, <a href="https://bugs.webkit.org/show_bug.cgi?id=141832">iOS Safari</a>.)</p>
 				</blockquote>
+
+				<h2 id="the-console">The Console</h2>
+
+				<p class="left one-above" style="align-self: center;">The console is used to help you work with <a href="/topic/javascript">JavaScript</a>, by <em>logging</em> messages (and any errors) from your code as it runs. <br />
+					<br />
+					If your tools are already open, you can show the console (as a drawer) in <em>Options</em> ellipses, or as a whole panel to the right of <em>Elements</em>. <br />
+					<br />
+					<em>On the Mac, Hit ⌘-⌥-J (command-option-J) to go right there!</em>
+				</p>
+
+				<figure class="right">
+
+					<img src="customize.svg" />
+
+
+				</figure>
+
+				<figure style="--height--max: 90vh">
+
+					<img src="console.png" />
+
+
+					<figcaption>The console as a drawer, at the bottom right.</figcaption>
+
+				</figure>
+
+				<p>This area will show any <a href="https://developer.chrome.com/docs/devtools/console/log/#javascript">messages logged</a> from your JavaScript with <code class="language-plaintext highlighter-rouge">console.log()</code>.</p>
+
+				<p>Warnings and errors (like missing files, or bad JS syntax) will also be shown here in yellow and red, respectively<span class="mdash">—</span>usually with clickable line-numbers to the right, to take you right to the problem. You can clear the buffer (what is showing) with the little crossed circle.</p>
+
+				<p>You can also evaluate JavaScript here directly, by typing (with some nice auto-completion) into the bottom of the console<span class="mdash">—</span>like <code class="language-plaintext highlighter-rouge">console.log('Hello, world!')</code>. You can use this to test out parts of your code immediately, like with <code class="language-plaintext highlighter-rouge">document.querySelector('main')</code>. If it returns (shows) your element in response, your selector is working!</p>
+
 
 
 			</article>
