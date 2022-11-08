@@ -1,0 +1,10 @@
+body {
+	--base: 20px;
+
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	font-family: sans-serif;
+	padding: var(--base);
+	row-gap: var(--base);
+}
