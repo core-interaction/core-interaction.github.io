@@ -1,0 +1,17 @@
+body {
+	font-family: sans-serif;
+}
+
+body,
+section {
+	padding: 20px;
+}
+
+section {
+	background-image: url("tim.jpg");
+	background-size: cover;
+}
+
+h1 {
+	font-size: 400%;
+}

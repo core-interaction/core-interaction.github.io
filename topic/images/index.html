@@ -299,6 +299,7 @@
 					<li><a href="#sizing-and-containers">Sizing and containers</a></li>
 					<li><a href="#object-fit">Object-fit</a></li>
 					<li><a href="#aspect-ratio">Aspect-ratio</a></li>
+					<li><a href="#background-image">Background-image</a></li>
 				</ul>
 			</header>
 
@@ -410,6 +411,28 @@
 					<figcaption>Note that without the <code class="language-plaintext highlighter-rouge">object-fit: cover;</code>, Tim would be distorted to the ratio!</figcaption>
 
 				</figure>
+
+				<h2 id="background-image">Background-image</h2>
+
+				<p>You can also use images as backgrounds on elements with the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-image">background-image</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size">background-size</a>, and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin">background-origin</a>
+					<nobr>properties<span class="mdash">—</span></nobr>particularly if you want to put something in front of them, like text.
+				</p>
+
+				<p>However this isn’t very semantic, as it blurs the content/<wbr />presentation boundaries<span class="mdash">—</span>since the image paths are moved into your CSS, and there is no <code class="language-plaintext highlighter-rouge">alt</code> attribute description for screen-readers. So you should <em>only</em> use this for contextual or decorative images<span class="mdash">—</span>not your actual content:</p>
+
+				<figure style="--height--max: 32rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/image-background/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>I wouldn’t use something like this as a background. Mind your legibility!</figcaption>
+
+				</figure>
+
+				<p>Think, “would this page make sense if I couldn’t see this image?” If the answer is “no”, then use an <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> with an <code class="language-plaintext highlighter-rouge">alt</code>, instead.</p>
 
 
 
