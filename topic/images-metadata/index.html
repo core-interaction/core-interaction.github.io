@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
+
+		<title>Images and metadata</title>
+		<link href="/assets/styles/reset.css" rel="stylesheet">
+		<link href="/assets/styles/common.css" rel="stylesheet">
+		<link href="/assets/styles/syntax.css" rel="stylesheet">
+		<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
+		<link href="/assets/icons/touch.png" rel="apple-touch-icon">
+
+		<script src="/assets/scripts/common.js"></script>
+
+		<meta name="theme-color" content="#e42a1d">
+	</head>
+	<body class="topic">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<nav>
+			<div>
+				<section>
+					<a href="/">
+						<p>C1:I</p>
+					</a>
+					<p>
+						<strong>Images and metadata</strong>
+						<select onchange="
+					this.parentElement.querySelector('strong').innerHTML = this.querySelector(`[value='${this.value}']`).text;
+					document.activeElement.blur();
+					window.open(this.value,'_self');
+					">
+
+
+							<optgroup label="Sessions">
+
+
+
+								<option value="/week/1/">Week 1, August 30</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/2/">Week 2, September 6</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/3/">Week 3, September 13</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/4/">Week 4, September 20</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/5/">Week 5, September 27</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/6/">Week 6, October 4</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/7/">Week 7, October 11</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/8/">Week 8, October 18</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/9/">Week 9, October 25</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/10/">Week 10, November 1</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/11/">Week 11, November 8</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/12/">Week 12, November 15</option>
+
+
+							</optgroup>
+
+
+
+							<optgroup label="Topics">
+
+
+
+								<option value="/topic/everything/">Everything is a web page</option>
+
+
+
+
+								<option value="/topic/html/">An intro to HTML</option>
+
+
+
+
+								<option value="/topic/css/">An intro to CSS</option>
+
+
+
+
+								<option value="/topic/box-model/">The box model</option>
+
+
+
+
+								<option value="/topic/responsive/">Media queries</option>
+
+
+
+
+								<option value="/topic/inspector/">DevTools (The Inspector)</option>
+
+
+
+
+								<option value="/topic/flexbox/">Finally, flexbox</option>
+
+
+
+
+								<option value="/topic/grid/">And (CSS) grid</option>
+
+
+
+
+								<option value="/topic/jekyll-liquid-markdown/">Jekyll, Liquid, and Markdown</option>
+
+
+
+
+								<option value="/topic/advanced-css/">Additional, advanced CSS</option>
+
+
+
+
+								<option value="/topic/javascript/">An intro to JavaScript</option>
+
+
+
+
+								<option selected disabled>Images and metadata</option>
+
+
+							</optgroup>
+
+
+
+							<optgroup label="Project">
+
+
+
+								<option value="/project/harmonic/">Harmonic Collection</option>
+
+
+							</optgroup>
+
+
+						</select>
+					</p>
+				</section>
+				<section>
+
+					<p>
+						<a class="this" href="/week/12/">This week</a>
+					</p>
+
+					<p><a href="#">Top</a></p>
+				</section>
+			</div>
+		</nav>
+
+
+		<main>
+
+			<header>
+				<h1>Images and metadata</h1>
+
+				<ul>
+					<li><a href="#images">Images</a></li>
+				</ul>
+			</header>
+
+			<article>
+				<h2 id="images">Images</h2>
+
+				<p class="left">We kind of breezed past this, so let’s look at some more specifics around using images on the web.</p>
+
+				<ul class="icon-link no-marker right">
+					<li>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML | MDN</a> <br />
+							<em>Pretty good overview.</em>
+						</p>
+					</li>
+					<li>
+						<p><a href="https://web.dev/choose-the-right-image-format/">Choose the right image format - web.dev</a> <br />
+							<em>Also discusses “High DPI” (HiDPI) screens.</em>
+						</p>
+					</li>
+				</ul>
+
+				<h3 id="formats">Formats!</h3>
+
+				<p>There are several commonly used image formats on the web, each with their own purpose:</p>
+
+				<dl>
+					<dt>.GIF <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format">(Graphics Interchange Format)</a></dt>
+					<dd>An early <a href="https://en.wikipedia.org/wiki/Raster_graphics">raster/bitmap</a> format, heavily compressed with reduced palettes. It survives now because it has animations! This is the only reason to use this format, nowadays. (I say GIF with a hard <em>G</em>, and I am right.)</dd>
+					<dt>.PNG <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics">(Portable Network Graphics)</a></dt>
+					<dd>Still raster/bitmap, but much better than GIFs (if you don’t need animation) as they are <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics#Advantages">lossless</a>. Use PNGs for illustrations and graphics<span class="mdash">—</span>things with large areas of repeated colors<span class="mdash">—</span>or where you need color accuracy.</dd>
+					<dt>.JPG / .JPEG <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics">(Joint Photographic [Experts] Group)</a></dt>
+					<dd>Raster/bitmap format that is good for photos. JPGs can compress photos down to much smaller file sizes, but the compression is <a href="https://en.wikipedia.org/wiki/JPEG#Effects_of_JPEG_compression">lossy</a>. Photos tend to hide these <em>compression artifacts</em> better than illustrations/graphics.</dd>
+					<dt>.SVG <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics">(Scaleable Vector Graphics)</a></dt>
+					<dd>Finally, a <a href="https://en.wikipedia.org/wiki/Vector_graphics">vector</a> format! SVGs should be used for any icons, logos, or illustrations. They store the vectors in code (a bit like HTML), and can be scaled cleanly for different sizes/resolutions.</dd>
+				</dl>
+
+				<h3 id="containers-and-sizing">Containers and sizing</h3>
+
+				<p>If you remember way back to our <a href="/topic/html/">HTML intro</a>, images are a special HTML element:</p>
+
+				<div style="max-width: 60rem;" class="language-html highlighter-rouge">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"tim.jpg"</span> <span class="na">alt=</span><span class="s">"Tim Berners-Lee at a computer."</span><span class="nt">&gt;</span>
+</code></pre>
+					</div>
+				</div>
+				<p class="four-below" style="margin-top: var(--typography--between);"><em>A JPG in the same folder as the HTML (relative path/URL). Always write an <code class="language-plaintext highlighter-rouge">alt</code> text for accessibility.</em></p>
+
+				<p>By default, images will scale to their <em>intrinsic</em> size<span class="mdash">—</span>the pixel dimensions<span class="mdash">—</span>and are <em>inline</em> elements.</p>
+
+				<figure style="--height--max: 36rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/image/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>This image file is 250 pixels wide. Note the extra space at the bottom, from <code class="language-plaintext highlighter-rouge">display: inline;</code></figcaption>
+
+				</figure>
+
+				<p>Most resets (like ours) include a <code class="language-plaintext highlighter-rouge">max-width: 100%</code> for <nobr>images<span class="mdash">—</span></nobr>otherwise they would poke out of their containers!</p>
+
+
+
+			</article>
+
+			<footer>
+				<div>
+					<section>
+						<a href="/">
+							<p>Core 1: Interaction, Fall 2022</p>
+						</a>
+					</section>
+					<section>
+						<p><a href="#">Top</a></p>
+					</section>
+				</div>
+			</footer>
+
+		</main>
+
+	</body>
+</html>

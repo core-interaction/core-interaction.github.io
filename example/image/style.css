@@ -1,0 +1,9 @@
+body {
+	--base: 20px;
+
+	padding: var(--base);
+}
+
+section {
+	background: gold;
+}
