@@ -296,7 +296,8 @@
 
 				<ul>
 					<li><a href="#image-formats">Image formats!</a></li>
-					<li><a href="#containers-and-sizing">Containers and sizing</a></li>
+					<li><a href="#sizing-and-containers">Sizing and containers</a></li>
+					<li><a href="#object-fit">Object-fit</a></li>
 				</ul>
 			</header>
 
@@ -322,18 +323,18 @@
 
 				<dl>
 					<dt>.GIF <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format">(Graphics Interchange Format)</a></dt>
-					<dd>An early <a href="https://en.wikipedia.org/wiki/Raster_graphics">raster/bitmap</a> format, heavily compressed with reduced palettes. It survives now because it has animations! This is the only reason to use this format, nowadays. (I say GIF with a hard <em>G</em>, and I am right.)</dd>
+					<dd>An early <a href="https://en.wikipedia.org/wiki/Raster_graphics">raster/bitmap</a> format, heavily compressed with reduced palettes. It survives now because it has animations! This is the only reason to use this format, nowadays. (I say GIF with a hard <em>G</em>, and I am right.)</dd>
 					<dt>.PNG <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics">(Portable Network Graphics)</a></dt>
 					<dd>Still raster/bitmap, but much better than GIFs (if you don’t need animation) as they are <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics#Advantages">lossless</a>. Use PNGs for illustrations and graphics<span class="mdash">—</span>things with large areas of repeated colors<span class="mdash">—</span>or where you need color accuracy.</dd>
 					<dt>.JPG / .JPEG <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics">(Joint Photographic [Experts] Group)</a></dt>
 					<dd>Raster/bitmap format that is good for photos. JPGs can compress photos down to much smaller file sizes, but the compression is <a href="https://en.wikipedia.org/wiki/JPEG#Effects_of_JPEG_compression">lossy</a>. Photos tend to hide these <em>compression artifacts</em> better than illustrations/graphics.</dd>
 					<dt>.SVG <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics">(Scaleable Vector Graphics)</a></dt>
-					<dd>Finally, a <a href="https://en.wikipedia.org/wiki/Vector_graphics">vector</a> format! SVGs should be used for any icons, logos, or illustrations. They store the vectors in code (a bit like HTML), and can be scaled cleanly for different sizes/resolutions.</dd>
+					<dd>Finally, a <a href="https://en.wikipedia.org/wiki/Vector_graphics">vector</a> format! SVGs should be used for any icons, logos, or illustrations. They store the vectors in code (a bit like HTML), and can be scaled cleanly for different sizes/resolutions.</dd>
 				</dl>
 
-				<h2 id="containers-and-sizing">Containers and sizing</h2>
+				<h2 id="sizing-and-containers">Sizing and containers</h2>
 
-				<p>If you remember way back to our <a href="/topic/html/">HTML intro</a>, images are a special HTML element:</p>
+				<p>If you remember way back to our <a href="/topic/html/">HTML intro</a>, images are a special HTML element:</p>
 
 				<div style="max-width: 60rem;" class="language-html highlighter-rouge">
 					<div class="highlight">
@@ -361,9 +362,9 @@
 
 				<p>This intrinsic/inline behavior is rarely what you <nobr>want<span class="mdash">—</span></nobr>more often your image will be sized <em>from</em> your design, not vice-versa. Also the image is sized to <a href="https://tomroth.com.au/dpr/">CSS pixels</a>, so it is blurry on <em>HiDPI</em> screens, which is most of us these days.</p>
 
-				<p>So usually you’ll want to set images to <code class="language-plaintext highlighter-rouge">display: block;</code>, and then control their size via CSS, like anything else<span class="mdash">—</span>ensuring your actual actual dimensions are roughly twice their displayed size:</p>
+				<p>So often you’ll want to set images to <code class="language-plaintext highlighter-rouge">display: block;</code>, and then control their size/positioning via CSS, just like any other elements. Make sure your actual actual image dimensions are roughly twice their displayed size, so nothing is blurry:</p>
 
-				<figure style="--height--max: 36rem">
+				<figure style="--height--max: 34rem">
 
 					<div class="example">
 						<iframe allowfullscreen="" src="/example/image-block/demo"></iframe>
@@ -372,6 +373,22 @@
 
 
 					<figcaption>This image file is 1600 pixels wide.</figcaption>
+
+				</figure>
+
+				<h2 id="object-fit">Object-fit</h2>
+
+				<p>CSS also added the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit">object-fit</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-position">object-position</a> properties for sizing images <em>within</em> their containers<span class="mdash">—</span>as if the image file is a child of <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code>. This is usually when setting an <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> to fill a container:</p>
+
+				<figure style="--height--max: 38rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/image-object-fit/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Note the height on the section, otherwise the container would still resize to the image. Adjust the divider to see the behavior!</figcaption>
 
 				</figure>
 

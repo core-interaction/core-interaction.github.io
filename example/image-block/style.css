@@ -1,9 +1,12 @@
-body {
+body,
+section {
 	padding: 20px;
 }
 
 section {
-	background: gold;
+	background-color: gold;
+	display: flex;
+	justify-content: center;
 }
 
 img {

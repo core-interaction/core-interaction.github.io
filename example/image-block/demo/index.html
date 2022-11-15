@@ -39,9 +39,13 @@
 
 
 					<figure class="highlight">
-						<pre><code class="language-scss" data-lang="scss"><span class="nt">body</span> <span class="p">{</span> <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span> <span class="p">}</span>
+						<pre><code class="language-scss" data-lang="scss"><span class="nt">body</span><span class="o">,</span> <span class="nt">section</span> <span class="p">{</span> <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span> <span class="p">}</span>
 
-<span class="nt">section</span> <span class="p">{</span> <span class="nl">background</span><span class="p">:</span> <span class="no">gold</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">section</span> <span class="p">{</span>
+	<span class="nl">background-color</span><span class="p">:</span> <span class="no">gold</span><span class="p">;</span>
+	<span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+	<span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+<span class="p">}</span>
 
 <span class="nt">img</span> <span class="p">{</span>
 	<span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
