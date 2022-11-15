@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
+
+
+
+
+
+
+
+
+		<title>Week 12</title>
+		<link href="/assets/styles/reset.css" rel="stylesheet">
+		<link href="/assets/styles/common.css" rel="stylesheet">
+		<link href="/assets/styles/syntax.css" rel="stylesheet">
+		<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
+		<link href="/assets/icons/touch.png" rel="apple-touch-icon">
+
+		<script src="/assets/scripts/common.js"></script>
+
+		<meta name="theme-color" content="#e42a1d">
+	</head>
+	<body class="week">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<nav>
+			<div>
+				<section>
+					<a href="/">
+						<p>C1:I</p>
+					</a>
+					<p>
+						<strong>Week 12, November 15</strong>
+						<select onchange="
+					this.parentElement.querySelector('strong').innerHTML = this.querySelector(`[value='${this.value}']`).text;
+					document.activeElement.blur();
+					window.open(this.value,'_self');
+					">
+
+
+							<optgroup label="Sessions">
+
+
+
+								<option value="/week/1/">Week 1, August 30</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/2/">Week 2, September 6</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/3/">Week 3, September 13</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/4/">Week 4, September 20</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/5/">Week 5, September 27</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/6/">Week 6, October 4</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/7/">Week 7, October 11</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/8/">Week 8, October 18</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/9/">Week 9, October 25</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/10/">Week 10, November 1</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/11/">Week 11, November 8</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option selected disabled>Week 12, November 15</option>
+
+
+							</optgroup>
+
+
+
+							<optgroup label="Topics">
+
+
+
+								<option value="/topic/everything/">Everything is a web page</option>
+
+
+
+
+								<option value="/topic/html/">An intro to HTML</option>
+
+
+
+
+								<option value="/topic/css/">An intro to CSS</option>
+
+
+
+
+								<option value="/topic/box-model/">The box model</option>
+
+
+
+
+								<option value="/topic/responsive/">Media queries</option>
+
+
+
+
+								<option value="/topic/inspector/">DevTools (The Inspector)</option>
+
+
+
+
+								<option value="/topic/flexbox/">Finally, flexbox</option>
+
+
+
+
+								<option value="/topic/grid/">And (CSS) grid</option>
+
+
+
+
+								<option value="/topic/jekyll-liquid-markdown/">Jekyll, Liquid, and Markdown</option>
+
+
+
+
+								<option value="/topic/advanced-css/">Additional, advanced CSS</option>
+
+
+
+
+								<option value="/topic/javascript/">An intro to JavaScript</option>
+
+
+							</optgroup>
+
+
+
+							<optgroup label="Project">
+
+
+
+								<option value="/project/harmonic/">Harmonic Collection</option>
+
+
+							</optgroup>
+
+
+						</select>
+					</p>
+				</section>
+				<section>
+
+					<p>
+						<a class="last" href="/week/11/">Last week</a>
+					</p>
+
+					<p><a href="#">Top</a></p>
+				</section>
+			</div>
+		</nav>
+
+
+
+
+
+
+
+
+
+		<main>
+
+			<header>
+				<h1>Week 12</h1>
+
+				<p>November 15</p>
+
+				<ul>
+					<li><a href="#update-on-the-strike">Update on the strike</a></li>
+					<li><a href="#harmonic-collection-review"><em>Harmonic Collection</em> review?</a></li>
+					<li><a href="#simplified-jekyll">Simplified Jekyll?</a></li>
+					<li><a href="#some-qa">Some Q/A?</a></li>
+					<li><a href="#for-next-week">For next week</a></li>
+				</ul>
+			</header>
+
+			<article>
+				<h2 id="update-on-the-strike">Update on the strike</h2>
+
+				<p>So I know there has been a lot of… let’s say <em>mixed</em> communication around this and where things are at. I’ll tell you what I know.</p>
+
+				<p>Our union contract expired on Sunday evening, and our members <a href="https://www.youarethenewschool.com/bargaining-blog/strike-vote-97-yes">voted <em>overwhelmingly</em></a> to authorize a strike. Our bargaining committee has given the school a deadline of today to make substantive progress towards <a href="https://docs.google.com/document/d/1WHLI69QzIsa12KfYM99eq6CdnwhwOx0qDE-wOhMWZGw">our proposals</a>, which they (so far) have not done.</p>
+
+				<p>We might even know by our class time, if they have<span class="mdash">—</span>but if they haven’t, a strike will begin tomorrow (Wednesday, 11/16).</p>
+
+				<p class="two-above">What will that look like, for us?</p>
+
+				<ul>
+					<li>
+						<p>Class tonight might be a little weird! But let’s talk about it and how you are feeling; I recognize the uncertainty and its presence looming over us.</p>
+					</li>
+					<li>
+						<p>If we are still on strike next week (11/22), I will not be teaching class<span class="mdash">—</span>neither in-person or remote. Same goes for any weeks after that, as long as we are on strike.</p>
+					</li>
+					<li>
+						<p>I will not be available for any (course-related) communication<span class="mdash">—</span>in Slack, Zoom, Canvas, email. Again, this is as long as we are on strike. It is even possible I will no longer have access to these tools.</p>
+					</li>
+					<li>
+						<p>You are still the best resource for each other<span class="mdash">—</span>both for your work, but also for all your ideas, questions, and concerns. Talk to each other. You are all in this, together.</p>
+					</li>
+					<li>
+						<p>I will not be reviewing your assignments (project entries) or offering any help/feedback<span class="mdash">—</span>but you can continue with them, in my absence. I hope we will still be able to review your final presentations, together, on December 6.</p>
+					</li>
+					<li>
+						<p>This will not negatively impact your grades, credits, graduation, visas, or scholarships. As much as this is up to me, with regards to this class, you will not be penalized in any way for this strike.</p>
+					</li>
+					<li>
+						<p>I will be on the picket line! (Likely right around/before our class times.) And you are welcome to join me and your other instructors. We’d love to see you.</p>
+					</li>
+				</ul>
+
+				<p class="two-above">Know that I don’t like any of this, either. I would prefer not to go on strike, and I know that this sentiment is shared strongly by my colleagues (your other instructors). But our <em>teaching conditions</em> are your <em>learning conditions</em><span class="mdash">—</span>and we don’t think they are sustainable, as it stands.</p>
+
+				<p class="two-above">I am hoping that we are all back together, soon.</p>
+
+				<p class="four-above two-below">Here are some links, with more information:</p>
+
+				<ul class="icon-link">
+					<li>
+						<p><a href="https://www.newschoolfreepress.com/2022/11/14/new-school-part-time-faculty-have-authorized-a-strike-everything-students-need-to-know/">New School part-time faculty to strike Wednesday if negotiations fail - The New School Free Press</a> <br />
+							<em>In the school paper.</em>
+						</p>
+					</li>
+					<li>
+						<p><a href="https://drive.google.com/file/d/1JdZRmqsw3B5iJwH7sgZT96yhPqJ51UPe/view">University Student Senate Letter of Support</a> <br />
+							<em>From your Student Senate.</em>
+						</p>
+					</li>
+					<li>
+						<p><a href="https://docs.google.com/document/d/1xGQtJOK1W52tBTyjy7KINwsiWfsFJBDaYSsKSq-MDkI/edit#heading=h.g7p22oev6bc4">Strike FAQ for Students</a> <br />
+							<em>From your Student-Faculty Solidarity group.</em>
+						</p>
+					</li>
+					<li>
+						<p><a href="https://linktr.ee/UAW7902">ACT-UAW Local 7902 “Linktree”</a> <br />
+							<em>From the union.</em>
+						</p>
+					</li>
+				</ul>
+
+				<h2 id="harmonic-collection-review"><em>Harmonic Collection</em> review?</h2>
+
+				<p>If we’re up for it, let’s look at some of your entries:</p>
+
+				<p class="icon-link"><a href="https://docs.google.com/spreadsheets/d/1vXYVnicRUHnczxPCSaqsmmflynnwP22zhES5jFMPKpw/"><em>Harmonic Collection</em> entries</a></p>
+
+				<blockquote class="callout" icon="😮‍💨">
+					<p>Let’s take a little break here, as we do. Phew.</p>
+				</blockquote>
+
+				<h2 id="simplified-jekyll">Simplified Jekyll?</h2>
+
+				<p>We didn’t have time to go through this, last week! I prepped a simplified/pared-down <a href="/topic/jekyll-liquid-markdown">Jekyll</a> template you could use for your projects.</p>
+
+				<p class="icon-link"><a href="https://github.com/core-interaction/harmonic-collection-empty">harmonic-collection-empty</a></p>
+
+				<h2 id="some-qa">Some Q/A?</h2>
+
+				<p>And then depending where we are with time (and how we are all feeling), let’s unpack the Q/A topics:</p>
+
+				<ul>
+					<li>
+						<p>Working with images</p>
+
+						<ul>
+							<li>Containers/sizing</li>
+							<li><code class="language-plaintext highlighter-rouge">object-fit</code> properties</li>
+							<li>GIF/PNG/JPG/SVGs</li>
+						</ul>
+					</li>
+					<li>
+						<p>Metadata, social images, favicons</p>
+					</li>
+				</ul>
+
+				<hr />
+
+				<h2 id="for-next-week">For next week</h2>
+
+				<ul>
+					<li>
+						<p>Cross your fingers.</p>
+					</li>
+					<li>
+						<p>Complete your tenth <a href="/project/harmonic"><em>Harmonic Collection</em></a> entry and add it to our doc:</p>
+
+						<p class="icon-link"><a href="https://docs.google.com/spreadsheets/d/1vXYVnicRUHnczxPCSaqsmmflynnwP22zhES5jFMPKpw/"><em>Harmonic Collection</em> entries</a></p>
+					</li>
+					<li>
+						<p>If you haven’t yet, add topics (or vote) for our question/answer sessions:</p>
+
+						<p class="icon-link"><a href="https://docs.google.com/document/d/1IdMqedbkML7rV0IDNJpoD7crETtXLkIEY8Y21U0AuBg">Question/answer topics</a></p>
+					</li>
+				</ul>
+
+				<p class="four-above">✊</p>
+
+
+
+
+			</article>
+
+			<footer>
+				<div>
+					<section>
+						<a href="/">
+							<p>Core 1: Interaction, Fall 2022</p>
+						</a>
+					</section>
+					<section>
+						<p><a href="#">Top</a></p>
+					</section>
+				</div>
+			</footer>
+
+		</main>
+
+	</body>
+</html>
