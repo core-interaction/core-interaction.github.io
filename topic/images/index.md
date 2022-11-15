@@ -71,12 +71,17 @@ So often you’ll want to set images to `display: block;`, and then control the
 CSS also added the [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit) and [object-position](https://developer.mozilla.org/en-US/docs/Web/CSS/object-position) properties for sizing images *within* their containers—as if the image file is a child of `<img>`. This is usually when setting an `<img>` to fill a container:
 
 {% include figure.html src='/example/image-object-fit/demo' height='38rem' caption='Note the height on the section, otherwise the container would still resize to the image. Adjust the divider to see the behavior!' %}
+
+
+
 {% comment %}
 - Working with images
 
 	- GIF/PNG/JPG/SVGs
 	- Containers/sizing
 	- `object-fit` properties
+	- aspect-ratio
+	- background-image
 	- `figure`/`figcaption`
 
 - Metadata, social images, favicons
