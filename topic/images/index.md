@@ -1,11 +1,7 @@
 ---
-title: Images and metadata
+title: Working with images
 order: 11
 ---
-
-
-
-## Images
 
 
 
@@ -21,7 +17,7 @@ We kind of breezed past this, so let’s look at some more specifics around usin
 
 
 
-### Formats!
+## Image formats!
 
 There are several commonly used image formats on the web, each with their own purpose:
 
@@ -38,7 +34,8 @@ There are several commonly used image formats on the web, each with their own 
 : Finally, a [vector](https://en.wikipedia.org/wiki/Vector_graphics) format! SVGs should be used for any icons, logos, or illustrations. They store the vectors in code (a bit like HTML), and can be scaled cleanly for different sizes/resolutions.
 
 
-### Containers and sizing
+
+## Containers and sizing
 
 
 
