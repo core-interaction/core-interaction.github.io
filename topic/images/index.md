@@ -15,7 +15,7 @@ We kind of breezed past this, so let’s look at some more specifics around usin
 	*Also discusses “High DPI” (HiDPI) screens.*
 {: .icon-link .no-marker .right rows="2" }
 
-Remember that images weren’t a part of the [early web](/topic/everything/#when-was-the-web-invented)—so like HTML and CSS, still feel somewhat “bolted on” and are still tricky to work with.
+Remember that images weren’t a part of the [early web](/topic/everything/#when-was-the-web-invented), and so like CSS, feel somewhat “bolted on” and are still somewhat tricky to work with. It has gotten better recently, though!
 
 
 
