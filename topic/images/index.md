@@ -74,6 +74,19 @@ CSS also added the [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS
 
 
 
+## Aspect-ratio
+
+
+
+Recently (just last year) CSS also added an [aspect-ratio property](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio), to control the width-to-height ratio of an element—maintaining this relationship as an element scales.
+
+This is not *just* for images (you can use it on anything!), but commonly comes up when using them:
+
+{% include figure.html src='/example/image-aspect-ratio/demo' height='32rem' caption='Note that without the `object-fit: cover;`, Tim would be distorted to the ratio!' %}
+
+
+
+
 {% comment %}
 - Working with images
 
