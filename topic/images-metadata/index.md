@@ -38,16 +38,34 @@ There are several commonly used image formats on the web, each with their own 
 : Finally, a [vector](https://en.wikipedia.org/wiki/Vector_graphics) format! SVGs should be used for any icons, logos, or illustrations. They store the vectors in code (a bit like HTML), and can be scaled cleanly for different sizes/resolutions.
 
 
+### Containers and sizing
 
 
 
+If you remember way back to our [HTML intro](/topic/html/), images are a special HTML element:
+
+```html
+<img src="tim.jpg" alt="Tim Berners-Lee at a computer.">
+```
+{: style="max-width: 60rem;" }
+*A JPG in the same folder as the HTML (relative path/URL). Always write an `alt` text for accessibility.*
+{: .four-below style="margin-top: var(--typography--between);" }
+
+
+
+By default, images will scale to their *intrinsic* size—the pixel dimensions—and are *inline* elements.
+
+{% include figure.html src='/example/image/demo' height='36rem' caption='This image file is 250 pixels wide. Note the extra space at the bottom, from `display: inline;`' %}
+
+Most resets (like ours) include a `max-width: 100%` for <nobr>images—</nobr>otherwise they would poke out of their containers!
 
 {% comment %}
 - Working with images
 
+	- GIF/PNG/JPG/SVGs
 	- Containers/sizing
 	- `object-fit` properties
-	- GIF/PNG/JPG/SVGs
+	- `figure`/`figcaption`
 
 - Metadata, social images, favicons
 {% endcomment %}
