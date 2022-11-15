@@ -5,3 +5,8 @@ body {
 section {
 	background: gold;
 }
+
+img {
+	display: block;
+	width: 60%;
+}

@@ -360,6 +360,22 @@
 
 				<p>Most resets (like ours) include a <code class="language-plaintext highlighter-rouge">max-width: 100%</code> for <nobr>images<span class="mdash">—</span></nobr>otherwise they would poke out of their containers!</p>
 
+				<p>This intrinsic/inline behavior is rarely what you <nobr>want<span class="mdash">—</span></nobr>more often your image will be sized <em>from</em> your design, not vice-versa. Also the image is sized to <a href="https://tomroth.com.au/dpr/">CSS pixels</a>, so it is blurry on <em>HiDPI</em> screens, which is most of us these days.</p>
+
+				<p>So usually you’ll want to set images to <code class="language-plaintext highlighter-rouge">display: block;</code>, and then control their size via CSS, like anything else<span class="mdash">—</span>ensuring your actual actual dimensions are roughly twice their displayed size:</p>
+
+				<figure style="--height--max: 36rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/image-block/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>This image file is 1600 pixels wide.</figcaption>
+
+				</figure>
+
 
 
 			</article>
