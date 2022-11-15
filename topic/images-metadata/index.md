@@ -59,6 +59,14 @@ By default, images will scale to their *intrinsic* size—the pixel dimensions�
 
 Most resets (like ours) include a `max-width: 100%` for <nobr>images—</nobr>otherwise they would poke out of their containers!
 
+This intrinsic/inline behavior is rarely what you <nobr>want—</nobr>more often your image will be sized *from* your design, not vice-versa. Also the image is sized to [CSS pixels](https://tomroth.com.au/dpr/), so it is blurry on *HiDPI* screens, which is most of us these days.
+
+So usually you’ll want to set images to `display: block;`, and then control their size via CSS, like anything else—ensuring your actual actual dimensions are roughly twice their displayed size:
+
+{% include figure.html src='/example/image-block/demo' height='36rem' caption='This image file is 1600 pixels wide.' %}
+
+
+
 {% comment %}
 - Working with images
 
