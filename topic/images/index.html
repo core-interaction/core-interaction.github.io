@@ -298,6 +298,7 @@
 					<li><a href="#image-formats">Image formats!</a></li>
 					<li><a href="#sizing-and-containers">Sizing and containers</a></li>
 					<li><a href="#object-fit">Object-fit</a></li>
+					<li><a href="#aspect-ratio">Aspect-ratio</a></li>
 				</ul>
 			</header>
 
@@ -389,6 +390,24 @@
 
 
 					<figcaption>Note the height on the section, otherwise the container would still resize to the image. Adjust the divider to see the behavior!</figcaption>
+
+				</figure>
+
+				<h2 id="aspect-ratio">Aspect-ratio</h2>
+
+				<p>Recently (just last year) CSS also added an <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio">aspect-ratio property</a>, to control the width-to-height ratio of an element<span class="mdash">—</span>maintaining this relationship as an element scales.</p>
+
+				<p>This is not <em>just</em> for images (you can use it on anything!), but commonly comes up when using them:</p>
+
+				<figure style="--height--max: 32rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/image-aspect-ratio/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Note that without the <code class="language-plaintext highlighter-rouge">object-fit: cover;</code>, Tim would be distorted to the ratio!</figcaption>
 
 				</figure>
 

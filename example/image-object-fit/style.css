@@ -11,7 +11,11 @@ section {
 img {
 	background-color: orange;
 	height: 100%;
+	/* Fill the parent. */
 	object-fit: contain;
+	/* Fit the image. */
 	object-position: left top;
+	/* Corner. */
 	width: 100%;
+	/* Fill the parent. */
 }
