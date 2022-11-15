@@ -86,6 +86,22 @@ This is not *just* for images (you can use it on anything!), but commonly comes
 
 
 
+## Background-image
+
+
+
+You can also use images as backgrounds on elements with the [background-image](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image), [background-size](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size), and [background-origin](https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin) <nobr>properties—</nobr>particularly if you want to put something in front of them, like text.
+
+However this isn’t very semantic, as it blurs the content/<wbr>presentation boundaries—since the image paths are moved into your CSS, and there is no `alt` attribute description for screen-readers. So you should *only* use this for contextual or decorative images—not your actual content:
+
+{% include figure.html src='/example/image-background/demo' height='32rem' caption='I wouldn’t use something like this as a background. Mind your legibility!' %}
+
+
+
+Think, “would this page make sense if I couldn’t see this image?” If the answer is “no”, then use an `<img>` with an `alt`, instead.
+
+
+
 {% comment %}
 - Working with images
 
