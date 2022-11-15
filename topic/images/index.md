@@ -86,7 +86,6 @@ This is not *just* for images (you can use it on anything!), but commonly comes
 
 
 
-
 {% comment %}
 - Working with images
 
