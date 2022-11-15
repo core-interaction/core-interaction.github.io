@@ -35,7 +35,7 @@ There are several commonly used image formats on the web, each with their own 
 
 
 
-## Containers and sizing
+## Sizing and containers
 
 
 
@@ -58,9 +58,9 @@ Most resets (like ours) include a `max-width: 100%` for <nobr>images—</nobr>o
 
 This intrinsic/inline behavior is rarely what you <nobr>want—</nobr>more often your image will be sized *from* your design, not vice-versa. Also the image is sized to [CSS pixels](https://tomroth.com.au/dpr/), so it is blurry on *HiDPI* screens, which is most of us these days.
 
-So usually you’ll want to set images to `display: block;`, and then control their size via CSS, like anything else—ensuring your actual actual dimensions are roughly twice their displayed size:
+So often you’ll want to set images to `display: block;`, and then control their size/positioning via CSS, just like any other elements. Make sure your actual actual image dimensions are roughly twice their displayed size, so nothing is blurry:
 
-{% include figure.html src='/example/image-block/demo' height='36rem' caption='This image file is 1600 pixels wide.' %}
+{% include figure.html src='/example/image-block/demo' height='34rem' caption='This image file is 1600 pixels wide.' %}
 
 
 
