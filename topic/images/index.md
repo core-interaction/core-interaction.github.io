@@ -22,7 +22,7 @@ We kind of breezed past this, so let’s look at some more specifics around usin
 There are several commonly used image formats on the web, each with their own purpose:
 
 .GIF [(Graphics Interchange Format)](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format)
-: An early [raster/bitmap](https://en.wikipedia.org/wiki/Raster_graphics) format, heavily compressed with reduced palettes. It survives now because it has animations! This is the only reason to use this format, nowadays. (I say GIF with a hard *G*, and I am right.)
+: An early [raster/bitmap](https://en.wikipedia.org/wiki/Raster_graphics) format, heavily compressed with reduced palettes. It survives now because it has animations! This is the only reason to use this format, nowadays. (I say GIF with a hard *G*, and I am right.)
 
 .PNG [(Portable Network Graphics)](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics)
 : Still raster/bitmap, but much better than GIFs (if you don’t need animation) as they are [lossless](https://en.wikipedia.org/wiki/Portable_Network_Graphics#Advantages). Use PNGs for illustrations and graphics—things with large areas of repeated colors—or where you need color accuracy.
@@ -31,7 +31,7 @@ There are several commonly used image formats on the web, each with their own 
 : Raster/bitmap format that is good for photos. JPGs can compress photos down to much smaller file sizes, but the compression is [lossy](https://en.wikipedia.org/wiki/JPEG#Effects_of_JPEG_compression). Photos tend to hide these *compression artifacts* better than illustrations/graphics.
 
 .SVG [(Scaleable Vector Graphics)](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics)
-: Finally, a [vector](https://en.wikipedia.org/wiki/Vector_graphics) format! SVGs should be used for any icons, logos, or illustrations. They store the vectors in code (a bit like HTML), and can be scaled cleanly for different sizes/resolutions.
+: Finally, a [vector](https://en.wikipedia.org/wiki/Vector_graphics) format! SVGs should be used for any icons, logos, or illustrations. They store the vectors in code (a bit like HTML), and can be scaled cleanly for different sizes/resolutions.
 
 
 
@@ -39,7 +39,7 @@ There are several commonly used image formats on the web, each with their own 
 
 
 
-If you remember way back to our [HTML intro](/topic/html/), images are a special HTML element:
+If you remember way back to our [HTML intro](/topic/html/), images are a special HTML element:
 
 ```html
 <img src="tim.jpg" alt="Tim Berners-Lee at a computer.">
@@ -64,6 +64,13 @@ So often you’ll want to set images to `display: block;`, and then control the
 
 
 
+## Object-fit
+
+
+
+CSS also added the [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit) and [object-position](https://developer.mozilla.org/en-US/docs/Web/CSS/object-position) properties for sizing images *within* their containers—as if the image file is a child of `<img>`. This is usually when setting an `<img>` to fill a container:
+
+{% include figure.html src='/example/image-object-fit/demo' height='38rem' caption='Note the height on the section, otherwise the container would still resize to the image. Adjust the divider to see the behavior!' %}
 {% comment %}
 - Working with images
 
