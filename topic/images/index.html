@@ -300,13 +300,14 @@
 					<li><a href="#object-fit">Object-fit</a></li>
 					<li><a href="#aspect-ratio">Aspect-ratio</a></li>
 					<li><a href="#background-image">Background-image</a></li>
+					<li><a href="#figure--figcaption">Figure / figcaption</a></li>
 				</ul>
 			</header>
 
 			<article>
 				<p class="left">We kind of breezed past this, so let’s look at some more specifics around using images on the web.</p>
 
-				<ul class="icon-link no-marker right">
+				<ul class="icon-link no-marker right" rows="2">
 					<li>
 						<p><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML | MDN</a> <br />
 							<em>Pretty good overview.</em>
@@ -319,6 +320,8 @@
 					</li>
 				</ul>
 
+				<p>Remember that images weren’t a part of the <a href="/topic/everything/#when-was-the-web-invented">early web</a><span class="mdash">—</span>so like HTML and CSS, still feel somewhat “bolted on” and are still tricky to work with.</p>
+
 				<h2 id="image-formats">Image formats!</h2>
 
 				<p>There are several commonly used image formats on the web, each with their own purpose:</p>
@@ -327,7 +330,7 @@
 					<dt>.GIF <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format">(Graphics Interchange Format)</a></dt>
 					<dd>An early <a href="https://en.wikipedia.org/wiki/Raster_graphics">raster/bitmap</a> format, heavily compressed with reduced palettes. It survives now because it has animations! This is the only reason to use this format, nowadays. (I say GIF with a hard <em>G</em>, and I am right.)</dd>
 					<dt>.PNG <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics">(Portable Network Graphics)</a></dt>
-					<dd>Still raster/bitmap, but much better than GIFs (if you don’t need animation) as they are <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics#Advantages">lossless</a>. Use PNGs for illustrations and graphics<span class="mdash">—</span>things with large areas of repeated colors<span class="mdash">—</span>or where you need color accuracy.</dd>
+					<dd>Still raster/bitmap, but much better than GIFs (if you don’t need animation) as they are <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics#Advantages">lossless</a>. Use PNGs for illustrations and graphics<span class="mdash">—</span>things with large areas of repeated colors<span class="mdash">—</span>or where you need color accuracy. (But many of these should be SVGs, below.)</dd>
 					<dt>.JPG / .JPEG <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics">(Joint Photographic [Experts] Group)</a></dt>
 					<dd>Raster/bitmap format that is good for photos. JPGs can compress photos down to much smaller file sizes, but the compression is <a href="https://en.wikipedia.org/wiki/JPEG#Effects_of_JPEG_compression">lossy</a>. Photos tend to hide these <em>compression artifacts</em> better than illustrations/graphics.</dd>
 					<dt>.SVG <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics">(Scaleable Vector Graphics)</a></dt>
@@ -418,7 +421,7 @@
 					<nobr>properties<span class="mdash">—</span></nobr>particularly if you want to put something in front of them, like text.
 				</p>
 
-				<p>However this isn’t very semantic, as it blurs the content/<wbr />presentation boundaries<span class="mdash">—</span>since the image paths are moved into your CSS, and there is no <code class="language-plaintext highlighter-rouge">alt</code> attribute description for screen-readers. So you should <em>only</em> use this for contextual or decorative images<span class="mdash">—</span>not your actual content:</p>
+				<p>However this isn’t very semantic, as it blurs the content/<wbr />presentation boundaries<span class="mdash">—</span>since the image paths are moved into your CSS, and there is no <code class="language-plaintext highlighter-rouge">alt</code> text description for screen-readers. So you should <em>only</em> use this for contextual or decorative images<span class="mdash">—</span>not your actual content:</p>
 
 				<figure style="--height--max: 32rem">
 
@@ -433,6 +436,24 @@
 				</figure>
 
 				<p>Think, “would this page make sense if I couldn’t see this image?” If the answer is “no”, then use an <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> with an <code class="language-plaintext highlighter-rouge">alt</code>, instead.</p>
+
+				<h2 id="figure--figcaption">Figure / figcaption</h2>
+
+				<p>Speaking of semantics<span class="mdash">—</span>HTML also has a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure">figure</a> element that you can use to associate an image (or other visual) with a visible <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption">figcaption</a> description or legend.</p>
+
+				<figure style="--height--max: 38rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/image-figure/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>These can also be used to group things like videos, illustrations, and diagrams with their captions.</figcaption>
+
+				</figure>
+
+				<p>These are good examples of a <a href="https://dceg.cancer.gov/about/diversity-inclusion/inclusivity-minute/2021/curb-cut-effect">“curb-cut” approach/<wbr />philosophy</a> towards accessibility<span class="mdash">—</span>your <code class="language-plaintext highlighter-rouge">alt</code> text description is useful for more than just folks using screen readers!</p>
 
 
 
