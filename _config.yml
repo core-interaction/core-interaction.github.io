@@ -23,6 +23,9 @@ defaults:
       path: ""
     values:
       layout: page
+collections:
+  topics:
+    output: true
 livereload: true
 permalink: /:basename/
 sass:
