@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
+
+		<title>An intro to JavaScript</title>
+		<link href="/assets/styles/reset.css" rel="stylesheet">
+		<link href="/assets/styles/common.css" rel="stylesheet">
+		<link href="/assets/styles/syntax.css" rel="stylesheet">
+		<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
+		<link href="/assets/icons/touch.png" rel="apple-touch-icon">
+
+		<script src="/assets/scripts/common.js"></script>
+
+		<meta name="theme-color" content="#e42a1d">
+	</head>
+	<body class="">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<nav>
+			<div>
+				<section>
+					<a href="/">
+						<p>C1:I</p>
+					</a>
+					<p>
+						<strong>An intro to JavaScript</strong>
+						<select onchange="
+					this.parentElement.querySelector('strong').innerHTML = this.querySelector(`[value='${this.value}']`).text;
+					document.activeElement.blur();
+					window.open(this.value,'_self');
+					">
+
+							<option disabled selected>An intro to JavaScript</option>
+
+
+							<optgroup label="Sessions">
+
+
+
+								<option value="/week/1/">Week 1, August 30</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/2/">Week 2, September 6</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/3/">Week 3, September 13</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/4/">Week 4, September 20</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/5/">Week 5, September 27</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/6/">Week 6, October 4</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/7/">Week 7, October 11</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/8/">Week 8, October 18</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/9/">Week 9, October 25</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/10/">Week 10, November 1</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/11/">Week 11, November 8</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/12/">Week 12, November 15</option>
+
+
+							</optgroup>
+
+
+
+							<optgroup label="Topics">
+
+
+
+								<option value="/topic/everything/">Everything is a web page</option>
+
+
+
+
+								<option value="/topic/html/">An intro to HTML</option>
+
+
+
+
+								<option value="/topic/css/">An intro to CSS</option>
+
+
+
+
+								<option value="/topic/box-model/">The box model</option>
+
+
+
+
+								<option value="/topic/responsive/">Media queries</option>
+
+
+
+
+								<option value="/topic/inspector/">DevTools (The Inspector)</option>
+
+
+
+
+								<option value="/topic/flexbox/">Finally, flexbox</option>
+
+
+
+
+								<option value="/topic/grid/">And (CSS) grid</option>
+
+
+
+
+								<option value="/topic/jekyll-liquid-markdown/">Jekyll, Liquid, and Markdown</option>
+
+
+
+
+								<option value="/topic/advanced-css/">Additional, advanced CSS</option>
+
+
+
+
+								<option value="/topic/javascript/">An intro to JavaScript</option>
+
+
+
+
+								<option value="/topic/images/">Working with images</option>
+
+
+							</optgroup>
+
+
+
+							<optgroup label="Project">
+
+
+
+								<option value="/project/harmonic/">Harmonic Collection</option>
+
+
+							</optgroup>
+
+
+						</select>
+					</p>
+				</section>
+				<section>
+
+					<p>
+						<a class="this" href="/week/12/">This week</a>
+					</p>
+
+					<p><a href="#">Top</a></p>
+				</section>
+			</div>
+		</nav>
+
+
+		<main>
+
+			<header>
+				<h1>An intro to JavaScript</h1>
+
+				<p>January 26</p>
+
+				<ul>
+					<li><a href="#librariesframeworks-vs-plainvanillajs">Libraries/frameworks vs. plain/vanilla JS</a></li>
+					<li><a href="#where-does-js-live">Where does JS live?</a></li>
+					<li><a href="#addingremoving-aclass">Adding/removing a class</a></li>
+					<li><a href="#watching-for-scrolling">Watching for scrolling</a></li>
+					<li><a href="#some-miscellaneous-tips">Some miscellaneous tips</a></li>
+				</ul>
+			</header>
+
+			<article>
+				<p class="left">JavaScript is the language/format for adding interactivity to a web page<span class="mdash">—</span>based on actions or events from the user. Where do we even start with <em>JS</em>? (Everyone calls it JS.) It is so massive and often (trust me, I know) seems unapproachable. So we’ll go through a bit of background, and then look at some very practical examples you might want in your work.</p>
+
+				<ul class="icon-link no-marker right" rows="3">
+					<li>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript basics</a> <br />
+							<em>There are <em>literally</em> millions of sites about JS, but let’s start with MDN.</em>
+						</p>
+					</li>
+					<li>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript">JavaScript | MDN</a> <br />
+							<em>More MDN.</em>
+						</p>
+					</li>
+					<li>
+						<p><a href="https://stackoverflow.com/questions/tagged/javascript">Newest ‘javascript’ questions - Stack Overflow</a> <br />
+							<em>Great resource for many things, but especially/<wbr />famously for JS. It’s like Reddit for code!</em>
+						</p>
+					</li>
+					<li>
+						<p><a href="https://javascript.info">The Modern Javascript Tutorial</a> <br />
+							<em>This reference goes very advanced/<wbr />in-depth.</em>
+						</p>
+					</li>
+					<li>
+						<p><a href="https://eloquentjavascript.net">Eloquent JavaScript</a> <br />
+							<em>Also goes deep.</em>
+						</p>
+					</li>
+				</ul>
+
+				<p>Going back to our first analogy, JavaScript is the <em>muscles</em> of the web. Like <a href="/topics/html">HTML</a> (the <em>bones</em>) and <a href="/topics/css">CSS</a> (the <em>skin</em>), it is ultimately still just text that is parsed by our browsers. Like CSS, it can live within HTML documents, but is usually saved separately with the extension <code class="language-plaintext highlighter-rouge">.js</code></p>
+
+				<p>JavaScript was first created by <a href="https://brendaneich.com/2008/04/popularity/">Brendan Eich</a> over just 10 days in 1995, and has been through a myriad of evolutions, paths, missteps, and enhancements <a href="https://en.wikipedia.org/wiki/JavaScript">since then</a>. It has nothing formally to do with <em>Java</em>, confusingly<span class="mdash">—</span>other than being contemporaries and sort-of competitors (thus the name), if you remember from <a href="http://javascript.info"><em>What Is Code?</em></a>. (Coffee-culture was really big in the 90s!) JavaScript won the race, by every measure, and is ubiquitous on the modern web.</p>
+
+				<blockquote class="quote">
+					<p>The idea was to make something that Web designers, people who may or may not have much programming training, could use to add a little bit of animation or a little bit of smarts to their Web forms and their Web pages.</p>
+				</blockquote>
+
+				<p><cite><a href="https://www.infoworld.com/article/2653798/javascript-creator-ponders-past--future.html">Brendan Eich</a></cite></p>
+
+				<p>Like HTML/CSS, JavaScript was a malleable, <em>interpreted</em> (not <a href="https://en.wikipedia.org/wiki/Compiled_language"><em>compiled</em></a>) language running in the browser<span class="mdash">—</span>meaning the source code could be seen by anyone, and anyone could borrow or modify it for their needs. And so as our computers<span class="mdash">—</span>and thus our browsers<span class="mdash">—</span>became faster and cheaper, JS was used for more and more things. Remember that now the tendrils of JavaScript <a href="/topic/everything/#its-increasingly-just-js-behind-the-scenes">are almost everywhere</a><span class="mdash">—</span>running headless on servers, rendering whole sites, talking to hardware, processing NASA images, and so on. It’s web technologies, all the way down.</p>
+
+				<blockquote class="quote">
+					<p>Any application that can be written in JavaScript, will eventually be written in JavaScript.</p>
+				</blockquote>
+
+				<p><cite><a href="https://blog.codinghorror.com/the-principle-of-least-power/">Jeff Atwood</a></cite></p>
+
+				<h2 id="librariesframeworks-vs-plainvanillajs">Libraries/frameworks vs. plain/vanilla JS</h2>
+
+				<p>You’ll often hear folks talk about <em>libraries</em> or <em>frameworks</em> in the context of JavaScript<span class="mdash">—</span>one of the ways it is malleable. These are collections of Javascript code with their own specific ideas, paradigms, and syntax, that expand upon what the language can do (or can do quickly or easily) on its own, <em>out of the box</em>.</p>
+
+				<p>Things like <a href="https://jquery.com">jQuery</a> (old-school, now), <a href="https://nodejs.org/en/">Node</a>, <a href="https://reactjs.org">React</a>, <a href="https://vuejs.org">Vue</a>, <a href="https://angular.io">Angular</a>, <a href="https://d3js.org">D3</a>, and <a href="https://p5js.org">p5</a> (to name some popular ones) are all written <em>in</em> and are interfaced <em>with</em> (controlled <em>by</em>) JavaScript as well. They are often created to do something JavaScript doesn’t yet support on its own (in/famously, <em>jQuery</em>) or with a niche use/focus (like data-visualization, with <em>D3</em>). There are many, many frameworks and libraries.</p>
+
+				<p>When you write JS without libraries, it is usually called <em>plain</em> or <em>vanilla</em> JavaScript. The language has evolved so much that we can do a lot, here, and this is where we’ll start. And while JS does many things, we’ll first just use it in the most simple way<span class="mdash">—</span>to make our web pages more interactive.</p>
+
+				<h2 id="where-does-js-live">Where does JS live?</h2>
+
+				<p>Very much <a href="/topics/css/#where-css-lives">like CSS</a>, JavaScript code can live in several places:</p>
+
+				<ol>
+					<li><em>Inline</em> as attributes</li>
+					<li>Via <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> elements within HTML documents</li>
+					<li>As separate/external <code class="language-plaintext highlighter-rouge">*.js</code> files <em>(the right way)</em></li>
+				</ol>
+
+				<h3 id="1-inline-event-handlers">1. Inline event handlers</h3>
+
+				<p>JS was first added directly like <a href="/topic/html/#attributes"><em>attributes</em></a> in HTML tags, just like CSS<span class="mdash">—</span>but attached/listening for <a href="https://www.w3schools.com/tags/ref_eventattributes.asp">specific events</a>:</p>
+
+				<div style="max-width: 76rem" class="language-html highlighter-rouge">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"alert('The button was clicked!');"</span><span class="nt">&gt;</span>Click here!<span class="nt">&lt;/button&gt;</span>
+</code></pre>
+					</div>
+				</div>
+
+				<p class="two-below" style="margin-top: var(--typography--between);"><em>Note the single quotes, when nested/inside doubles!</em></p>
+
+				<p>This works for very, very simple things, but<span class="mdash">—</span>for many of the same reasons as inline CSS<span class="mdash">—</span>is brittle and doesn’t scale with complexity or across multiple pages. Try writing a whole, elaborate function in there! No good.</p>
+
+				<blockquote class="callout two-above" icon="☝️">
+					<p>You might see these in old examples/code, but don’t use these now! If you see them, it’s probably an indication the code is outdated.</p>
+				</blockquote>
+
+				<h3 id="2-script-tags">2. <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> tags</h3>
+
+				<p>So again like CSS, JavaScript can be enclosed in its own special tag, the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">&lt;script&gt; element</a>. (These are also, somewhat confusingly, called <em>inline</em> scripts.) Anything inside the tag should be written in JavaScript syntax and will be executed right away, in the order/position of the tag within the HTML document.</p>
+
+				<p>Since this script isn’t directly <em>on</em> an element anymore (as above), we then have to identify the <em>target</em> element with <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">querySelector</a>, and then <em>attach</em> the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event">onclick event</a> to it:</p>
+
+				<figure style="--height--max: 48rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/javascript/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Note the different <code class="language-plaintext highlighter-rouge">// comment syntax</code> for JS! And we had to add <code class="language-plaintext highlighter-rouge">cursor: pointer;</code> for the button in our CSS.</figcaption>
+
+				</figure>
+
+				<p>Here the <code class="language-plaintext highlighter-rouge">onclick</code> is a shorthand for using <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a>. We also store (declare) the element here as a <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables">variable</a>, to keep our code readable. These are a bit like their <a href="/topic/responsive/#briefly-css-variables">CSS counterparts</a>. Ergonomics!</p>
+
+				<h3 id="oh-also-noscript">Oh also, <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code></h3>
+
+				<p>Some folks block/disable JavaScript<span class="mdash">—</span>for performance or accessibility reasons, or to hide advertising/annoyances, <a href="https://softwareengineering.stackexchange.com/questions/26179/why-do-people-disable-javascript">and so on</a>. This is less and less common these days, since so many sites <em>completely rely</em> on JS. It isn’t always feasible to replicate your site behavior entirely <em>without</em> JS, but you can use a special <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript">&lt;noscript&gt; tag</a> to show content only when scripting is turned off:</p>
+
+				<!-- NOSCRIPT FALLBACK EXAMPLE? -->
+
+				<p>You can test this by <a href="https://developer.chrome.com/docs/devtools/javascript/disable/">disabling JavaScript</a> in your DevTools.</p>
+
+				<h3 id="3-separateexternal-js-files">3. Separate/external <code class="language-plaintext highlighter-rouge">*.js</code> files</h3>
+
+				<p>By far the most common, flexible way to include JavaScript is externally<span class="mdash">—</span>again, like CSS. The difference here is that instead of a <code class="language-plaintext highlighter-rouge">&lt;link&gt;</code> element, we still use a (now empty) <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> tag, with the addition of a <code class="language-plaintext highlighter-rouge">src="filename.js"</code> attribute:</p>
+
+				<div style="max-width: 43rem;" class="language-html highlighter-rouge">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">defer</span> <span class="na">src=</span><span class="s">"script.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre>
+					</div>
+				</div>
+
+				<p class="two-below" style="margin-top: var(--typography--between);"><em>I’ve never liked this empty-tag syntax, what can you do.</em></p>
+
+				<p>Same JavaScript as the example above, but now moved over into a nice, separate file. This will still run when the document gets to the <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> (and in its place/order) as before, and the <code class="language-plaintext highlighter-rouge">defer</code> attribute allows it to “see” the HTML (not yet loaded) below it. We can then move the script up into our <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code>, along with the other external files:</p>
+
+				<figure style="--height--max: 34rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/javascript-external/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Stays readable/clean with long documents and lots of files.</figcaption>
+
+				</figure>
+
+				<h2 id="addingremoving-aclass">Adding/removing a class</h2>
+
+				<p>Okay, time for a more practical example: probably the most common thing you will use JS for<span class="mdash">—</span>especially as we’re starting out<span class="mdash">—</span>is simply to add or remove (toggle) a class from something when the user interacts with your page (such as clicking on a menu).</p>
+
+				<p>Like with our <a href="/topic/advanced-css/#transitions">transition</a> examples last week, the element needs two states in your CSS: <em>without</em> the class and then <em>with</em> the class. The JavaScript interaction/event will switch between them, and our CSS <code class="language-plaintext highlighter-rouge">transition</code> will smooth out the… transition.</p>
+
+				<p>We’ll again use <code class="language-plaintext highlighter-rouge">addEventListener</code> and <code class="language-plaintext highlighter-rouge">querySelector</code> to listen for clicks, but then modify the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList">classList</a> of a <em>different</em> element:</p>
+
+				<figure style="--height--max: 31rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/javascript-classlist/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Note the <a href="https://en.wikipedia.org/wiki/Camel_case">camelCase</a> variable names, which is the JavaScript convention. Longer, descriptive names will help as your code gets more complex.</figcaption>
+
+				</figure>
+
+				<p>The class can be toggled on any element in your HTML (or often, even just on <code class="language-plaintext highlighter-rouge">document.body</code> itself)! <code class="language-plaintext highlighter-rouge">querySelector</code> takes <em>any</em> CSS selector, even other classes. Also you an specifically use <code class="language-plaintext highlighter-rouge">classList.add</code> and <code class="language-plaintext highlighter-rouge">classList.remove</code>, if you don’t want the on-and-off behavior from <code class="language-plaintext highlighter-rouge">classList.toggle</code>.</p>
+
+				<p>You can do many, many things with this basic “add a class” JS!</p>
+
+				<h2 id="watching-for-scrolling">Watching for scrolling</h2>
+
+				<p>Another very common use for JavaScript is to do something when an element enters or exits the viewport (scrolling into or out of view)<span class="mdash">—</span>like fading or moving something in.</p>
+
+				<p>Again we’ll need two states in our CSS<span class="mdash">—</span>defined with/without a class. But now we’ll use the user’s scrolling, instead of a click, to toggle the switch.</p>
+
+				<p>This used to be unnecessarily hard in JavaScript, and was one of the things jQuery was created to help with. But now we can use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">IntersectionObserver</a> to watch the element:</p>
+
+				<figure style="--height--max: 42rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/javascript-intersection/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Note the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if/else</a> statement, an example of <a href="https://en.wikipedia.org/wiki/Conditional_(computer_programming)">conditional logic</a></figcaption>
+
+				</figure>
+
+				<p class="four-above">You will often want to use this on multiple elements<span class="mdash">—</span>and remember, when in code, <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">don’t repeat yourself</a>! So we can use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll">querySelector<em>All</em></a> to select <em>multiple</em> elements, and then a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach</a> loop to run the same class for each of them:</p>
+
+				<figure style="--height--max: 44rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/javascript-intersection-loop/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Here I’ve also adjusted the <a href="https://www.smashingmagazine.com/2021/07/dynamic-header-intersection-observer/#rootmargin">rootMargin</a> from the viewport/default, so the elements don’t transition immediately.</figcaption>
+
+				</figure>
+
+				<h2 id="some-miscellaneous-tips">Some miscellaneous tips</h2>
+
+				<p>Alright, that is a lot. Like I’ve been saying<span class="mdash">—</span>JavaScript is a <em>whole thing</em>. Here are some other tips, as you start to explore:</p>
+
+				<ul>
+					<li>
+						<p>Using <code class="language-plaintext highlighter-rouge">alert("Your message")</code> for <em>telemetry</em>/<em>debugging</em> can quickly be pretty annoying<span class="mdash">—</span>instead, you can use <code class="language-plaintext highlighter-rouge">console.log("Your message")</code> to show messages in the <a href="/topic/inspector/#the-console">DevTools console</a>. The console will also show any JavaScript errors!</p>
+
+						<p><em>On the Mac, Hit ⌘-⌥-J (command-option-J) to go right there!</em></p>
+
+						<p><em>In other languages, these functions are often, ironically, called <em>print</em>.</em></p>
+					</li>
+					<li>
+						<p>Like <a href="/topic/html/#case-whitespace-tabs-line-breaks">HTML</a>/<a href="/topic/css/#ergonomics">CSS</a>, JS does not care about whitespace or tabbing. But it <em>is</em> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#basics">case-sensitive</a>!</p>
+					</li>
+					<li>
+						<p>Search on <a href="https://stackoverflow.com/">Stack Overflow</a>! Someone has likely had your problem, before. Many people don’t really <em>know</em> JS (myself included)… so much as they really know SO.</p>
+					</li>
+					<li>
+						<p>Ignore any examples that have lots of dollar signs, like <code class="language-plaintext highlighter-rouge">$("something").else</code><span class="mdash">—</span>it means this is jQuery, and so is pretty outdated!</p>
+					</li>
+					<li>
+						<p>To quickly get recent/modern, <em>vanilla</em> JavaScript results, instead include <em>ES6</em> in your search<span class="mdash">—</span>this refers to a more recent, easier-to-use syntax.</p>
+					</li>
+					<li>
+						<p>If you see arrow functions <code class="language-plaintext highlighter-rouge">=&gt;</code>, it is a pretty good sign the answer recent.</p>
+					</li>
+					<li>
+						<p>You’ll see a lot of semicolons <code class="language-plaintext highlighter-rouge">;</code> but secretly you (almost never) actually need them.</p>
+					</li>
+				</ul>
+
+			</article>
+
+			<footer>
+				<div>
+					<section>
+						<a href="/">
+							<p>Core 1: Interaction, Fall 2022</p>
+						</a>
+					</section>
+					<section>
+						<p><a href="#">Top</a></p>
+					</section>
+				</div>
+			</footer>
+
+		</main>
+
+	</body>
+</html>

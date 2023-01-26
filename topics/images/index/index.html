@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
+
+		<title>Working with images</title>
+		<link href="/assets/styles/reset.css" rel="stylesheet">
+		<link href="/assets/styles/common.css" rel="stylesheet">
+		<link href="/assets/styles/syntax.css" rel="stylesheet">
+		<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
+		<link href="/assets/icons/touch.png" rel="apple-touch-icon">
+
+		<script src="/assets/scripts/common.js"></script>
+
+		<meta name="theme-color" content="#e42a1d">
+	</head>
+	<body class="">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<nav>
+			<div>
+				<section>
+					<a href="/">
+						<p>C1:I</p>
+					</a>
+					<p>
+						<strong>Working with images</strong>
+						<select onchange="
+					this.parentElement.querySelector('strong').innerHTML = this.querySelector(`[value='${this.value}']`).text;
+					document.activeElement.blur();
+					window.open(this.value,'_self');
+					">
+
+							<option disabled selected>Working with images</option>
+
+
+							<optgroup label="Sessions">
+
+
+
+								<option value="/week/1/">Week 1, August 30</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/2/">Week 2, September 6</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/3/">Week 3, September 13</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/4/">Week 4, September 20</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/5/">Week 5, September 27</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/6/">Week 6, October 4</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/7/">Week 7, October 11</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/8/">Week 8, October 18</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/9/">Week 9, October 25</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/10/">Week 10, November 1</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/11/">Week 11, November 8</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/12/">Week 12, November 15</option>
+
+
+							</optgroup>
+
+
+
+							<optgroup label="Topics">
+
+
+
+								<option value="/topic/everything/">Everything is a web page</option>
+
+
+
+
+								<option value="/topic/html/">An intro to HTML</option>
+
+
+
+
+								<option value="/topic/css/">An intro to CSS</option>
+
+
+
+
+								<option value="/topic/box-model/">The box model</option>
+
+
+
+
+								<option value="/topic/responsive/">Media queries</option>
+
+
+
+
+								<option value="/topic/inspector/">DevTools (The Inspector)</option>
+
+
+
+
+								<option value="/topic/flexbox/">Finally, flexbox</option>
+
+
+
+
+								<option value="/topic/grid/">And (CSS) grid</option>
+
+
+
+
+								<option value="/topic/jekyll-liquid-markdown/">Jekyll, Liquid, and Markdown</option>
+
+
+
+
+								<option value="/topic/advanced-css/">Additional, advanced CSS</option>
+
+
+
+
+								<option value="/topic/javascript/">An intro to JavaScript</option>
+
+
+
+
+								<option value="/topic/images/">Working with images</option>
+
+
+							</optgroup>
+
+
+
+							<optgroup label="Project">
+
+
+
+								<option value="/project/harmonic/">Harmonic Collection</option>
+
+
+							</optgroup>
+
+
+						</select>
+					</p>
+				</section>
+				<section>
+
+					<p>
+						<a class="this" href="/week/12/">This week</a>
+					</p>
+
+					<p><a href="#">Top</a></p>
+				</section>
+			</div>
+		</nav>
+
+
+		<main>
+
+			<header>
+				<h1>Working with images</h1>
+
+				<p>January 26</p>
+
+				<ul>
+					<li><a href="#image-formats">Image formats!</a></li>
+					<li><a href="#sizing-and-containers">Sizing and containers</a></li>
+					<li><a href="#object-fit">Object-fit</a></li>
+					<li><a href="#aspect-ratio">Aspect-ratio</a></li>
+					<li><a href="#background-image">Background-image</a></li>
+					<li><a href="#figure--figcaption">Figure / figcaption</a></li>
+				</ul>
+			</header>
+
+			<article>
+				<p class="left">We kind of breezed past this, so let’s look at some more specifics around using images on the web.</p>
+
+				<ul class="icon-link no-marker right" rows="2">
+					<li>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML | MDN</a> <br />
+							<em>Pretty good overview.</em>
+						</p>
+					</li>
+					<li>
+						<p><a href="https://web.dev/choose-the-right-image-format/">Choose the right image format - web.dev</a> <br />
+							<em>Also discusses “High DPI” (HiDPI) screens.</em>
+						</p>
+					</li>
+				</ul>
+
+				<p>Remember that images weren’t a part of the <a href="/topic/everything/#when-was-the-web-invented">early web</a>, and so like CSS, feel somewhat “bolted on” and are still somewhat tricky to work with. It has gotten better recently, though!</p>
+
+				<h2 id="image-formats">Image formats!</h2>
+
+				<p>There are several commonly used image formats on the web, each with their own purpose:</p>
+
+				<dl>
+					<dt>.GIF <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format">(Graphics Interchange Format)</a></dt>
+					<dd>An early <a href="https://en.wikipedia.org/wiki/Raster_graphics">raster/bitmap</a> format, heavily compressed with reduced palettes. It survives now because it has animations! This is the only reason to use this format, nowadays. (I say GIF with a hard <em>G</em>, and I am right.)</dd>
+					<dt>.PNG <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics">(Portable Network Graphics)</a></dt>
+					<dd>Still raster/bitmap, but much better than GIFs (if you don’t need animation) as they are <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics#Advantages">lossless</a>. Use PNGs for illustrations and graphics<span class="mdash">—</span>things with large areas of repeated colors<span class="mdash">—</span>or where you need color accuracy. (But many of these should be SVGs, below.)</dd>
+					<dt>.JPG / .JPEG <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics">(Joint Photographic [Experts] Group)</a></dt>
+					<dd>Raster/bitmap format that is good for photos. JPGs can compress photos down to much smaller file sizes, but the compression is <a href="https://en.wikipedia.org/wiki/JPEG#Effects_of_JPEG_compression">lossy</a>. Photos tend to hide these <em>compression artifacts</em> better than illustrations/graphics.</dd>
+					<dt>.SVG <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics">(Scaleable Vector Graphics)</a></dt>
+					<dd>Finally, a <a href="https://en.wikipedia.org/wiki/Vector_graphics">vector</a> format! SVGs should be used for any icons, logos, or illustrations. They store the vectors in code (a bit like HTML), and can be scaled cleanly for different sizes/resolutions.</dd>
+				</dl>
+
+				<h2 id="sizing-and-containers">Sizing and containers</h2>
+
+				<p>If you remember way back to our <a href="/topic/html/">HTML intro</a>, images are a special HTML element:</p>
+
+				<div style="max-width: 60rem;" class="language-html highlighter-rouge">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"tim.jpg"</span> <span class="na">alt=</span><span class="s">"Tim Berners-Lee at a computer."</span><span class="nt">&gt;</span>
+</code></pre>
+					</div>
+				</div>
+				<p class="four-below" style="margin-top: var(--typography--between);"><em>A JPG in the same folder as the HTML (relative path/URL). Always write an <code class="language-plaintext highlighter-rouge">alt</code> text for accessibility.</em></p>
+
+				<p>By default, images will scale to their <em>intrinsic</em> size<span class="mdash">—</span>the pixel dimensions<span class="mdash">—</span>and are <em>inline</em> elements.</p>
+
+				<figure style="--height--max: 36rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/image/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>This image file is 250 pixels wide. Note the extra space at the bottom, from <code class="language-plaintext highlighter-rouge">display: inline;</code></figcaption>
+
+				</figure>
+
+				<p>Most resets (like ours) include a <code class="language-plaintext highlighter-rouge">max-width: 100%</code> for <nobr>images<span class="mdash">—</span></nobr>otherwise they would poke out of their containers!</p>
+
+				<p>This intrinsic/inline behavior is rarely what you <nobr>want<span class="mdash">—</span></nobr>more often your image will be sized <em>from</em> your design, not vice-versa. Also the image is sized to <a href="https://tomroth.com.au/dpr/">CSS pixels</a>, so it is blurry on <em>HiDPI</em> screens, which is most of us these days.</p>
+
+				<p>So often you’ll want to set images to <code class="language-plaintext highlighter-rouge">display: block;</code>, and then control their size/positioning via CSS, just like any other elements. Make sure your actual actual image dimensions are roughly twice their displayed size, so nothing is blurry:</p>
+
+				<figure style="--height--max: 34rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/image-block/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>This image file is 1600 pixels wide.</figcaption>
+
+				</figure>
+
+				<h2 id="object-fit">Object-fit</h2>
+
+				<p>CSS also added the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit">object-fit</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-position">object-position</a> properties for sizing images <em>within</em> their containers<span class="mdash">—</span>as if the image file is a child of <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code>. This is usually when setting an <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> to fill a container:</p>
+
+				<figure style="--height--max: 38rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/image-object-fit/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Note the height on the section, otherwise the container would still resize to the image. Adjust the divider to see the behavior!</figcaption>
+
+				</figure>
+
+				<h2 id="aspect-ratio">Aspect-ratio</h2>
+
+				<p>Recently (just last year) CSS also added an <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio">aspect-ratio property</a>, to control the width-to-height ratio of an element<span class="mdash">—</span>maintaining this relationship as an element scales.</p>
+
+				<p>This is not <em>just</em> for images (you can use it on anything!), but commonly comes up when using them:</p>
+
+				<figure style="--height--max: 32rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/image-aspect-ratio/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Note that without the <code class="language-plaintext highlighter-rouge">object-fit: cover;</code>, Tim would be distorted to the ratio!</figcaption>
+
+				</figure>
+
+				<h2 id="background-image">Background-image</h2>
+
+				<p>You can also use images as backgrounds on elements with the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-image">background-image</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size">background-size</a>, and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin">background-origin</a>
+					<nobr>properties<span class="mdash">—</span></nobr>particularly if you want to put something in front of them, like text.
+				</p>
+
+				<p>However this isn’t very semantic, as it blurs the content/<wbr />presentation boundaries<span class="mdash">—</span>since the image paths are moved into your CSS, and there is no <code class="language-plaintext highlighter-rouge">alt</code> text description for screen-readers. So you should <em>only</em> use this for contextual or decorative images<span class="mdash">—</span>not your actual content:</p>
+
+				<figure style="--height--max: 32rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/image-background/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>I wouldn’t use something like this as a background. Mind your legibility!</figcaption>
+
+				</figure>
+
+				<p>Think, “would this page make sense if I couldn’t see this image?” If the answer is “no”, then use an <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> with an <code class="language-plaintext highlighter-rouge">alt</code>, instead.</p>
+
+				<h2 id="figure--figcaption">Figure / figcaption</h2>
+
+				<p>Speaking of semantics<span class="mdash">—</span>HTML also has a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure">figure</a> element that you can use to associate an image (or other visual) with a visible <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption">figcaption</a> description or legend.</p>
+
+				<figure style="--height--max: 38rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/image-figure/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>These can also be used to group things like videos, illustrations, and diagrams with their captions.</figcaption>
+
+				</figure>
+
+				<p>These are good examples of a <a href="https://dceg.cancer.gov/about/diversity-inclusion/inclusivity-minute/2021/curb-cut-effect">“curb-cut” approach/<wbr />philosophy</a> towards accessibility<span class="mdash">—</span>your <code class="language-plaintext highlighter-rouge">alt</code> text description is useful for more than just folks using screen readers!</p>
+
+
+			</article>
+
+			<footer>
+				<div>
+					<section>
+						<a href="/">
+							<p>Core 1: Interaction, Fall 2022</p>
+						</a>
+					</section>
+					<section>
+						<p><a href="#">Top</a></p>
+					</section>
+				</div>
+			</footer>
+
+		</main>
+
+	</body>
+</html>

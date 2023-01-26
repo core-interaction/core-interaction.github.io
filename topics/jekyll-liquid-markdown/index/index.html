@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
+
+		<title>Jekyll, Liquid, and Markdown</title>
+		<link href="/assets/styles/reset.css" rel="stylesheet">
+		<link href="/assets/styles/common.css" rel="stylesheet">
+		<link href="/assets/styles/syntax.css" rel="stylesheet">
+		<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
+		<link href="/assets/icons/touch.png" rel="apple-touch-icon">
+
+		<script src="/assets/scripts/common.js"></script>
+
+		<meta name="theme-color" content="#e42a1d">
+	</head>
+	<body class="">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<nav>
+			<div>
+				<section>
+					<a href="/">
+						<p>C1:I</p>
+					</a>
+					<p>
+						<strong>Jekyll, Liquid, and Markdown</strong>
+						<select onchange="
+					this.parentElement.querySelector('strong').innerHTML = this.querySelector(`[value='${this.value}']`).text;
+					document.activeElement.blur();
+					window.open(this.value,'_self');
+					">
+
+							<option disabled selected>Jekyll, Liquid, and Markdown</option>
+
+
+							<optgroup label="Sessions">
+
+
+
+								<option value="/week/1/">Week 1, August 30</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/2/">Week 2, September 6</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/3/">Week 3, September 13</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/4/">Week 4, September 20</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/5/">Week 5, September 27</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/6/">Week 6, October 4</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/7/">Week 7, October 11</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/8/">Week 8, October 18</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/9/">Week 9, October 25</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/10/">Week 10, November 1</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/11/">Week 11, November 8</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/12/">Week 12, November 15</option>
+
+
+							</optgroup>
+
+
+
+							<optgroup label="Topics">
+
+
+
+								<option value="/topic/everything/">Everything is a web page</option>
+
+
+
+
+								<option value="/topic/html/">An intro to HTML</option>
+
+
+
+
+								<option value="/topic/css/">An intro to CSS</option>
+
+
+
+
+								<option value="/topic/box-model/">The box model</option>
+
+
+
+
+								<option value="/topic/responsive/">Media queries</option>
+
+
+
+
+								<option value="/topic/inspector/">DevTools (The Inspector)</option>
+
+
+
+
+								<option value="/topic/flexbox/">Finally, flexbox</option>
+
+
+
+
+								<option value="/topic/grid/">And (CSS) grid</option>
+
+
+
+
+								<option value="/topic/jekyll-liquid-markdown/">Jekyll, Liquid, and Markdown</option>
+
+
+
+
+								<option value="/topic/advanced-css/">Additional, advanced CSS</option>
+
+
+
+
+								<option value="/topic/javascript/">An intro to JavaScript</option>
+
+
+
+
+								<option value="/topic/images/">Working with images</option>
+
+
+							</optgroup>
+
+
+
+							<optgroup label="Project">
+
+
+
+								<option value="/project/harmonic/">Harmonic Collection</option>
+
+
+							</optgroup>
+
+
+						</select>
+					</p>
+				</section>
+				<section>
+
+					<p>
+						<a class="this" href="/week/12/">This week</a>
+					</p>
+
+					<p><a href="#">Top</a></p>
+				</section>
+			</div>
+		</nav>
+
+
+		<main>
+
+			<header>
+				<h1>Jekyll, Liquid, and Markdown</h1>
+
+				<p>January 26</p>
+
+				<ul>
+					<li><a href="#first-what-is-a-cms">First, what is a CMS?</a></li>
+					<li><a href="#jekyll-and-static-site-generators">Jekyll and static site generators</a></li>
+					<li><a href="#liquid-template-language">Liquid template language</a></li>
+					<li><a href="#and-markdown">And Markdown!</a></li>
+				</ul>
+			</header>
+
+			<article>
+				<p class="left">We’re going to cover several topics here, under a sort of umbrella topic of <em>making it less annoying to work with HTML</em>.</p>
+
+				<ul class="no-marker icon-link right" rows="5">
+					<li>
+						<p><a href="https://jekyllrb.com">Jekyll - Simple, blog-aware, static sites</a> <br />
+							<em>We’ll be using Jekyll as our CMS/static site generator.</em>
+						</p>
+					</li>
+					<li>
+						<p><a href="https://www.youtube.com/watch?v=pxua_1vyFck&amp;list=PLLAZ4kZ9dFpOPV5C5Ay0pHaa0RJFhcmcB&amp;index=4">Creating a site | Jekyll</a> <br />
+							<em>Series of videos with a very chipper guy going through features.</em>
+						</p>
+					</li>
+					<li>
+						<p><a href="https://shopify.github.io/liquid/">Liquid template language</a> <br />
+							<em>The templating language/syntax that Jekyll uses.</em>
+						</p>
+					</li>
+					<li>
+						<p><a href="https://www.markdownguide.org/getting-started/">Getting Started | Markdown Guide</a> <br />
+							<em>The <em>lingua franca</em> markup language these days. Also, the site was <a href="https://github.com/mattcone/markdown-guide">made in Jekyll</a>!</em>
+						</p>
+					</li>
+				</ul>
+
+				<p>Everything you’ve been working on up to this point has been <em>hand-written</em>, meaning every line of code the browser renders is something you have typed (or copied/pasted), “by hand.”</p>
+
+				<p>This is how the web started, and is still (I think) the best way to learn the basics<span class="mdash">—</span>but it is rarely how modern web pages are actually put together anymore. At scale, hand-coding is quickly <a href="https://en.wikipedia.org/wiki/Software_brittleness"><em>brittle</em></a>, especially when you are iterating across many pages.</p>
+
+				<p>Instead, almost all websites use some form of <em>templating</em>, where one piece of HTML (in a single file) is used repeatedly<span class="mdash">—</span>either assembled by your computer or by the server<span class="mdash">—</span>across multiple web pages. Sometimes they are put together (we’ll say <em>compiled</em> or <em>built</em>) once; other times they are created every time someone goes to the page.</p>
+
+				<p>And as we’ve said before, when you are writing the same exact code over and over, there is probably a shorter way. <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">Don’t repeat yourself</a>!</p>
+
+				<h2 id="first-what-is-a-cms">First, what is a CMS?</h2>
+
+				<p class="left">You’ll often hear people talk about <a href="https://en.wikipedia.org/wiki/Content_management_system"><em>content management systems</em></a> (CMSes). These are software programs that, well… manage content.</p>
+
+				<p class="right" rows="2"><em>Most CMSes run on a server and use a <a href="https://en.wikipedia.org/wiki/Database">database</a> to store content, like <a href="https://wordpress.com">WordPress</a>, <a href="https://www.techradar.com/reviews/squarespace">Squarespace</a>, <a href="https://www.wix.com/">Wix</a>, <a href="https://webflow.com">Webflow</a>, <a href="https://cargo.site">Cargo</a>. There are many.</em></p>
+
+				<p>There are many reasons to use a CMS<span class="mdash">—</span>for our purposes we’ll use one to separate your <em>content</em> from your <em>templates</em> (in HTML) and <em>styles</em>. To some extent you can think of HTML as <em>an</em> expression of your content<span class="mdash">—</span>but your content is really the text, images, and links<span class="mdash">—</span>not the syntax of elements and tags. (Another expression could be a PDF, let’s say.)</p>
+
+				<h2 id="jekyll-and-static-site-generators">Jekyll and static site generators</h2>
+
+				<p class="left"><a href="https://jekyllrb.com">Jekyll</a> was created by Tom Preston-Werner <a href="https://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html">in 2008</a>, and started a trend towards a slightly nuanced/<wbr />different take on the CMS idea<span class="mdash">—</span><wbr />something called a <a href="https://www.cloudflare.com/learning/performance/static-site-generator/"><em>static site generator</em></a>.</p>
+
+				<p class="right" rows="2"><em>Other popular static site generators include <a href="https://gohugo.io">Hugo</a>, <a href="https://www.gatsbyjs.com">Gatsby</a>, <a href="https://nextjs.org">Next.js</a> (…sorta), <a href="https://jamstack.org/generators/nuxt/">Nuxt</a> (…also sorta), <a href="https://jamstack.org/generators/eleventy/">Eleventy</a>. Jekyll is the most popular, since it runs on GitHub.</em></p>
+
+				<p>This software (written in <a href="https://www.ruby-lang.org/en/">Ruby</a>) runs discrete <em>builds</em> on your machine (or on a server, GitHub’s in our use)<span class="mdash">—</span>cobbling together your different source content files and templates and outputting HTML, CSS, and JavaScript<span class="mdash">—</span>ultimately no different from if you wrote them by hand, as we have. But it can assemble them <em>for us</em>, reusing smaller parts.</p>
+
+				<p>You can use Jekyll as a proper CMS/blogging-type platform, like Wordpress. It has support for all that stuff<span class="mdash">—</span><a href="https://jekyllrb.com/docs/posts/">drafts/posts</a>, <a href="https://jekyllthemes.io/">themes</a>, <a href="https://jekyllrb.com/docs/step-by-step/09-collections/">authors</a>, and so on. But we’re going to focus just on how it can make building our simple websites much easier.</p>
+
+				<blockquote class="callout" icon="🤚">
+					<p>We’ll primarily be using the <a href="https://github.com/core-interaction/harmonic-collection">template repo</a> to go through the code, but we’ll cover some of the bigger concepts here.</p>
+
+					<p>You’ll need to <a href="/week/8/#jekyll">install Jekyll</a> on your machine, if you haven’t yet!</p>
+				</blockquote>
+
+				<h3 id="front-matter">Front-matter</h3>
+
+				<p>Jekyll uses a special text block at the start of files called <a href="https://jekyllrb.com/docs/front-matter/"><em>front matter</em></a> to specify layouts and other information about the page:</p>
+
+				<div class="language-markdown left highlighter-rouge">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">entry</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">This is the first entry</span>
+<span class="nn">---</span>
+
+<span class="c">&lt;!-- The rest of the file. --&gt;</span>
+</code></pre>
+					</div>
+				</div>
+
+				<p>This is saved at the very top of your <code class="language-plaintext highlighter-rouge">.html</code> and <code class="language-plaintext highlighter-rouge">.md</code> files (more on this, <a href="#and-markdown">below</a>), in a data format called <a href="https://en.wikipedia.org/wiki/YAML">YAML</a><span class="mdash">—</span>for <em>Yet Another Markup Language</em>. (So many languages, I know.) This data can then be accessed in your <code class="language-plaintext highlighter-rouge">layouts</code> and <code class="language-plaintext highlighter-rouge">includes</code> for consistent structure and formatting!</p>
+
+				<p><em>Note that <code class="language-plaintext highlighter-rouge">YAML</code> / <code class="language-plaintext highlighter-rouge">YML</code> uses spaces for indentation, even if the rest of the file uses tabs, and will break with tabs! I do this all the time.</em></p>
+
+				<h3 id="layouts">Layouts</h3>
+
+				<p>Jekyll’s <em>templates</em> are called <a href="https://jekyllrb.com/docs/layouts/"><em>layouts</em></a>. You can think of these as page <em>types</em> that your content will be inserted into:</p>
+
+				<div class="language-html highlighter-rouge">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+	<span class="nt">&lt;head&gt;</span>
+		<span class="nt">&lt;title&gt;</span>{{ page.title | default: site.title }}<span class="nt">&lt;/title&gt;</span>
+	<span class="nt">&lt;/head&gt;</span>
+	<span class="nt">&lt;body&gt;</span>
+		{{ content }}
+	<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+					</div>
+				</div>
+
+				<p>A very simplified layout/template. These normally live under the <code class="language-plaintext highlighter-rouge">_layouts</code> directory in your Jekyll repo, as in our example. The double-handlebars are <a href="#liquid-template-language"><em>liquid</em></a>
+					<nobr>syntax<span class="mdash">—</span></nobr>more on that, shortly. Note that <code class="language-plaintext highlighter-rouge">{{ content }}</code> is a special variable, which renders the… content of the page being wrapped.
+				</p>
+
+				<h3 id="includes">Includes</h3>
+
+				<p>Jekyll can also insert arbitrary, reused pieces of HTML within layouts or pages, called <a href="https://jekyllrb.com/docs/includes/"><em>includes</em></a>.</p>
+
+				<div class="language-liquid half highlighter-rouge">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>header.html<span class="w"> </span><span class="p">%}</span>
+</code></pre>
+					</div>
+				</div>
+
+				<p>(You’ll probably hear me call these <em>partials</em>, which is what they are called in some other languages.)</p>
+
+				<p>Jekyll will look for the referenced file (in this case, <code class="language-plaintext highlighter-rouge">header.html</code>) in the <code class="language-plaintext highlighter-rouge">_includes</code> directory in your repo, and then include/insert its contents. You can also pass content to an include, as a <a href="https://jekyllrb.com/docs/includes/#passing-parameters-to-includes"><em>parameter</em></a>:</p>
+
+				<div class="language-liquid highlighter-rouge">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>header.html<span class="w"> </span><span class="na">link</span><span class="o">=</span><span class="s2">"/topic/jekyll-liquid-markdown"</span><span class="w"> </span><span class="p">%}</span>
+</code></pre>
+					</div>
+				</div>
+
+				<p>The value of the parameter can be accessed (inserted) inside the <code class="language-plaintext highlighter-rouge">header.html</code> as <code class="language-plaintext highlighter-rouge">{{ include.link }}</code>.</p>
+
+				<h2 id="liquid-template-language">Liquid template language</h2>
+
+				<p>All this curly-bracket/handlebar/mustache syntax is the <a href="https://shopify.github.io/liquid/">Liquid template language</a>, which Jekyll uses to process templates and text.</p>
+
+				<p>In Liquid, you generally <em>output</em> (insert) content using two curly braces around it, like <code class="language-plaintext highlighter-rouge">{{ page.title }}</code>. If you see a <em>pipe</em> <code class="language-plaintext highlighter-rouge">|</code> after something, it means the text is being <em>filtered</em> (manipulated), like <code class="language-plaintext highlighter-rouge">{{ page.title | upcase }}</code>.</p>
+
+				<p>Logic statements are surrounded in a curly-brace-with-percentage-sign combination:</p>
+
+				<div class="language-liquid highlighter-rouge">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s2">"Harmonic"</span><span class="w"> </span><span class="p">%}</span>
+	&lt;!-- Do something for “Harmonic” titles. --&gt;
+<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
+</code></pre>
+					</div>
+				</div>
+
+				<p>Liquid is also used by <a href="https://www.shopify.com/"><em>Shopify</em></a>, a pretty widely-used e-commerce <nobr>platform<span class="mdash">—</span></nobr>so there are lots of examples online! Their <a href="https://shopify.dev/api/liquid">dev documentation</a> is also a good resource.</p>
+
+				<h2 id="and-markdown">And Markdown!</h2>
+
+				<p>Last but not least, Jekyll can use <a href="https://www.markdownguide.org/getting-started/">Markdown</a> for marking… up text. It has a special <em>syntax</em> that is <em>parsed</em> into basic HTML, instead of manually writing it all out by hand.</p>
+
+				<p>It’s used by <em>many, many</em> things now: <a href="https://support.google.com/chat/answer/7649118?hl=en">Google chats</a>, <a href="https://slack.com/help/articles/202288908-Format-your-messages">Slack</a>, <a href="https://www.reddit.com/wiki/markdown">Reddit</a>, <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">GitHub</a>, <a href="https://support.are.na/help/what-types-of-content-can-i-save-to-are-dot-na">Are.na</a>, <a href="https://www.notion.so/help/writing-and-editing-basics">Notion</a>, etc. Sometimes they have their own <em>flavors</em> that add special syntax, but the base stuff is the same. Often <a href="https://en.wikipedia.org/wiki/WYSIWYG">WYSIWYG</a> text editors are just adding Markdown syntax around things!</p>
+
+				<ul>
+					<li>It’s <strong>much easier</strong> to read the source.</li>
+					<li>It is usually much quicker to write.</li>
+					<li>Your changes (Git’s <code class="language-plaintext highlighter-rouge">diff</code>) are clear.</li>
+					<li>And overall it is less error-prone.</li>
+				</ul>
+
+				<p>…compared to writing all the elements/tags yourself! Markdown does have to be compiled/parsed out into HTML, but a lot of software does this behind the scenes.</p>
+
+				<blockquote class="callout two-above" icon="🤓">
+					<p>I <em>love</em> Markdown. If there is only one thing you take away from our class, let it be some fluency in <code class="language-plaintext highlighter-rouge">.md</code>. It’s the <a href="https://en.wikipedia.org/wiki/Lingua_franca">lingua franca</a> for basic text formatting.</p>
+				</blockquote>
+
+				<p>This very course site uses Markdown for our lectures and topics. Here is the section above with its corresponding parsed HTML output:</p>
+
+				<div style="max-height: 25vh; overflow: scroll; --white-space: pre-wrap;" class="language-markdown highlighter-rouge">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="gu">## And Markdown!</span>
+
+Last but not least, Jekyll can use <span class="p">[</span><span class="nv">Markdown</span><span class="p">](</span><span class="sx">https://www.markdownguide.org/getting-started/</span><span class="p">)</span> for marking… up text. It has a special <span class="ge">*syntax*</span> that is <span class="ge">*parsed*</span> into basic HTML, instead of manually writing it all out by hand.
+
+<span class="c">&lt;!-- Note the inline link. --&gt;</span>
+
+It’s used by <span class="ge">*many, many*</span> things now: <span class="p">[</span><span class="nv">Google chats</span><span class="p">][</span><span class="ss">chats</span><span class="p">]</span>, <span class="p">[</span><span class="nv">Slack</span><span class="p">][</span><span class="ss">slack</span><span class="p">]</span>, <span class="p">[</span><span class="nv">Reddit</span><span class="p">][</span><span class="ss">reddit</span><span class="p">]</span>, <span class="p">[</span><span class="nv">GitHub</span><span class="p">][</span><span class="ss">github</span><span class="p">]</span>, <span class="p">[</span><span class="nv">Are.na</span><span class="p">][</span><span class="ss">arena</span><span class="p">]</span>, <span class="p">[</span><span class="nv">Notion</span><span class="p">][</span><span class="ss">notion</span><span class="p">]</span>, etc. Sometimes they have their own <span class="ge">*flavors*</span> that add special syntax, but the base stuff is the same. Often <span class="p">[</span><span class="nv">WYSIWYG</span><span class="p">][</span><span class="ss">wysiwyg</span><span class="p">]</span> text editors are just adding Markdown syntax around things!
+
+<span class="c">&lt;!-- Compared to these “reference style” ones. --&gt;</span>
+
+<span class="p">[</span><span class="ss">chats</span><span class="p">]:</span> <span class="sx">https://support.google.com/chat/answer/7649118?hl=en</span>
+<span class="p">[</span><span class="ss">slack</span><span class="p">]:</span> <span class="sx">https://slack.com/help/articles/202288908-Format-your-messages</span>
+<span class="p">[</span><span class="ss">reddit</span><span class="p">]:</span> <span class="sx">https://www.reddit.com/wiki/markdown</span>
+<span class="p">[</span><span class="ss">github</span><span class="p">]:</span> <span class="sx">https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax</span>
+<span class="p">[</span><span class="ss">arena</span><span class="p">]:</span> <span class="sx">https://support.are.na/help/what-types-of-content-can-i-save-to-are-dot-na</span>
+<span class="p">[</span><span class="ss">notion</span><span class="p">]:</span> <span class="sx">https://www.notion.so/help/writing-and-editing-basics</span>
+<span class="p">[</span><span class="ss">wysiwyg</span><span class="p">]:</span> <span class="sx">https://en.wikipedia.org/wiki/WYSIWYG</span>
+<span class="p">
+-</span> It’s often <span class="gs">**much easier**</span> to read the source.
+<span class="p">-</span> It is usually much quicker to write.
+<span class="p">-</span> Your changes (Git’s <span class="sb">`diff`</span>) are clear.
+<span class="p">-</span> And overall it is less error-prone.
+
+…compared to writing all the elements/tags yourself! Markdown does have to be compiled/parsed out into HTML, but a lot of software does this behind the scenes.
+<span class="gt">
+&gt; I *love* Markdown. If there is only one thing you take away from our class, let it be some fluency in `.md`. It’s the [lingua franca](https://en.wikipedia.org/wiki/Lingua_franca) for basic text formatting.</span>
+</code></pre>
+					</div>
+				</div>
+
+				<div style="max-height: 25vh; overflow: scroll; --white-space: pre-wrap;" class="language-html highlighter-rouge">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"and-markdown"</span><span class="nt">&gt;</span>And Markdown!<span class="nt">&lt;/h2&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>Last but not least, Jekyll can use <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.markdownguide.org/getting-started/"</span><span class="nt">&gt;</span>Markdown<span class="nt">&lt;/a&gt;</span> for marking… up text. It<span class="ni">&amp;nbsp;</span>has a<span class="ni">&amp;nbsp;</span>special <span class="nt">&lt;em&gt;</span>syntax<span class="nt">&lt;/em&gt;</span> that is <span class="nt">&lt;em&gt;</span>parsed<span class="nt">&lt;/em&gt;</span> into basic HTML, instead of manually writing it all out by hand.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>It’s used by <span class="nt">&lt;em&gt;</span>many, many<span class="nt">&lt;/em&gt;</span> things now: <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://support.google.com/chat/answer/7649118?hl=en"</span><span class="nt">&gt;</span>Google chats<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://slack.com/help/articles/202288908-Format-your-messages"</span><span class="nt">&gt;</span>Slack<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.reddit.com/wiki/markdown"</span><span class="nt">&gt;</span>Reddit<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax"</span><span class="nt">&gt;</span>GitHub<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://support.are.na/help/what-types-of-content-can-i-save-to-are-dot-na"</span><span class="nt">&gt;</span>Are.na<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.notion.so/help/writing-and-editing-basics"</span><span class="nt">&gt;</span>Notion<span class="nt">&lt;/a&gt;</span>, etc. Sometimes they have their own <span class="nt">&lt;em&gt;</span>flavors<span class="nt">&lt;/em&gt;</span> that add special syntax, but the base stuff is the same. Often <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/WYSIWYG"</span><span class="nt">&gt;</span>WYSIWYG<span class="nt">&lt;/a&gt;</span> text editors are just adding Markdown syntax around things!<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;ul&gt;</span>
+	<span class="nt">&lt;li&gt;</span>It’s often <span class="nt">&lt;strong&gt;</span>much easier<span class="nt">&lt;/strong&gt;</span> to read the source.<span class="nt">&lt;/li&gt;</span>
+	<span class="nt">&lt;li&gt;</span>It is usually much quicker to write.<span class="nt">&lt;/li&gt;</span>
+	<span class="nt">&lt;li&gt;</span>Your changes (Git’s <span class="nt">&lt;code&gt;</span>diff<span class="nt">&lt;/code&gt;</span>) are clear.<span class="nt">&lt;/li&gt;</span>
+	<span class="nt">&lt;li&gt;</span>And overall it is less error-prone.<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>…compared to writing all the elements/tags yourself! Markdown does have to be compiled/parsed out into HTML, but a lot of software does this behind the scenes.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;blockquote&gt;</span>
+	<span class="nt">&lt;p&gt;</span>I <span class="nt">&lt;em&gt;</span>love<span class="nt">&lt;/em&gt;</span> Markdown. If there is only one thing you take away from our class, let it be some fluency in <span class="nt">&lt;code&gt;</span>.md<span class="nt">&lt;/code&gt;</span>. It’s the <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/Lingua_franca"</span><span class="nt">&gt;</span>lingua franca<span class="nt">&lt;/a&gt;</span> for basic text<span class="ni">&amp;nbsp;</span>formatting.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span>
+</code></pre>
+					</div>
+				</div>
+
+
+			</article>
+
+			<footer>
+				<div>
+					<section>
+						<a href="/">
+							<p>Core 1: Interaction, Fall 2022</p>
+						</a>
+					</section>
+					<section>
+						<p><a href="#">Top</a></p>
+					</section>
+				</div>
+			</footer>
+
+		</main>
+
+	</body>
+</html>

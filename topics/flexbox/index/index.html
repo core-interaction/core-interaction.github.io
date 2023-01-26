@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
+
+		<title>Finally, flexbox</title>
+		<link href="/assets/styles/reset.css" rel="stylesheet">
+		<link href="/assets/styles/common.css" rel="stylesheet">
+		<link href="/assets/styles/syntax.css" rel="stylesheet">
+		<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
+		<link href="/assets/icons/touch.png" rel="apple-touch-icon">
+
+		<script src="/assets/scripts/common.js"></script>
+
+		<meta name="theme-color" content="#e42a1d">
+	</head>
+	<body class="">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<nav>
+			<div>
+				<section>
+					<a href="/">
+						<p>C1:I</p>
+					</a>
+					<p>
+						<strong>Finally, flexbox</strong>
+						<select onchange="
+					this.parentElement.querySelector('strong').innerHTML = this.querySelector(`[value='${this.value}']`).text;
+					document.activeElement.blur();
+					window.open(this.value,'_self');
+					">
+
+							<option disabled selected>Finally, flexbox</option>
+
+
+							<optgroup label="Sessions">
+
+
+
+								<option value="/week/1/">Week 1, August 30</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/2/">Week 2, September 6</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/3/">Week 3, September 13</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/4/">Week 4, September 20</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/5/">Week 5, September 27</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/6/">Week 6, October 4</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/7/">Week 7, October 11</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/8/">Week 8, October 18</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/9/">Week 9, October 25</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/10/">Week 10, November 1</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/11/">Week 11, November 8</option>
+
+
+
+
+
+
+
+
+
+
+
+								<option value="/week/12/">Week 12, November 15</option>
+
+
+							</optgroup>
+
+
+
+							<optgroup label="Topics">
+
+
+
+								<option value="/topic/everything/">Everything is a web page</option>
+
+
+
+
+								<option value="/topic/html/">An intro to HTML</option>
+
+
+
+
+								<option value="/topic/css/">An intro to CSS</option>
+
+
+
+
+								<option value="/topic/box-model/">The box model</option>
+
+
+
+
+								<option value="/topic/responsive/">Media queries</option>
+
+
+
+
+								<option value="/topic/inspector/">DevTools (The Inspector)</option>
+
+
+
+
+								<option value="/topic/flexbox/">Finally, flexbox</option>
+
+
+
+
+								<option value="/topic/grid/">And (CSS) grid</option>
+
+
+
+
+								<option value="/topic/jekyll-liquid-markdown/">Jekyll, Liquid, and Markdown</option>
+
+
+
+
+								<option value="/topic/advanced-css/">Additional, advanced CSS</option>
+
+
+
+
+								<option value="/topic/javascript/">An intro to JavaScript</option>
+
+
+
+
+								<option value="/topic/images/">Working with images</option>
+
+
+							</optgroup>
+
+
+
+							<optgroup label="Project">
+
+
+
+								<option value="/project/harmonic/">Harmonic Collection</option>
+
+
+							</optgroup>
+
+
+						</select>
+					</p>
+				</section>
+				<section>
+
+					<p>
+						<a class="this" href="/week/12/">This week</a>
+					</p>
+
+					<p><a href="#">Top</a></p>
+				</section>
+			</div>
+		</nav>
+
+
+		<main>
+
+			<header>
+				<h1>Finally, flexbox</h1>
+
+				<p>January 26</p>
+
+				<ul>
+					<li><a href="#main-and-cross-axes"><em>Main</em> and <em>cross</em> axes</a></li>
+					<li><a href="#startend-justifyalign"><em>Start/end</em>, <em>justify/align</em></a></li>
+					<li><a href="#container-parent-properties">Container (parent) properties</a></li>
+					<li><a href="#item-child-properties">Item (child) properties</a></li>
+				</ul>
+			</header>
+
+			<article>
+				<p class="left"><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox"><em>Flexbox</em></a>, short for <em>flexible boxes</em><span class="mdash">—</span>which folks will often just shorten all the way to <em>flex</em>⁠<span class="mdash">—</span>is a later (mid-2010s, depending on how you count) addition to CSS. <em>Flex</em> was created to facilitate and allow CSS layouts that <a href="/topic/box-model/"><em>the box model</em></a> (with its <em>floats</em> and <em>position</em>) either made difficult, brittle, or even impossible. It is a <em><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">display</a></em> property.</p>
+
+				<ul class="no-marker icon-link right" rows="2">
+					<li>
+						<p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A complete guide to flexbox | CSS-Tricks</a> <br />
+							<em>This page is a classic! It probably bought <a href="https://chriscoyier.net">Chris Coyier</a> a house.</em>
+						</p>
+					</li>
+					<li>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic concepts of flexbox | MDN</a> <br />
+							<em>Can’t go wrong.</em>
+						</p>
+					</li>
+					<li>
+						<p><a href="https://flexboxfroggy.com/">Flexbox Froggy</a> <br />
+							<em>Lil’ game.</em>
+						</p>
+					</li>
+				</ul>
+
+				<p>And let me tell you<span class="mdash">—</span>being a web designer was a whole lot harder before <em>flex</em> came on the scene. (Hence the “Finally.”) Notice that we haven’t yet talked about vertical centering, for instance<span class="mdash">—</span>you don’t want to know. And you don’t have to worry about it! Flex encapsulates a lot of decent design paradigms in its system.</p>
+
+				<h2 id="main-and-cross-axes"><em>Main</em> and <em>cross</em> axes</h2>
+
+				<p>Flexbox is a <em>one-dimensional</em> layout system<span class="mdash">—</span>meaning it is (usually) focused on arranging items either horizontally in rows, or vertically in columns. These are called the <em>axes</em>, and the one running in the direction of your flex items is your <em>main axis</em>. Perpendicular to this is your <em>cross axis</em>:</p>
+
+				<figure style="--height--max: 100%">
+
+					<img src="axes.svg" />
+
+
+				</figure>
+
+				<h2 id="startend-justifyalign"><em>Start/end</em>, <em>justify/align</em></h2>
+
+				<p>Flex also lets us position elements along the axes, in both directions⁠<span class="mdash">—</span>in relation to the <em>start</em> or the <em>end</em> of the direction. For the main axis, you <em>justify</em>; for the cross axis, you <em>align</em>:</p>
+
+				<figure style="--height--max: 100%">
+
+					<img src="start-end.svg" />
+
+
+				</figure>
+
+				<p class="half"><em>For rows:</em> the default, we <em>justify</em> left/right, <em>align</em> top/bottom.</p>
+
+				<p class="half"><em>For columns:</em> perpendicular, we <em>justify</em> top/bottom, <em>align</em> left/right.</p>
+
+				<h3 id="shorthand">Shorthand?</h3>
+
+				<p>Like a lot of CSS, <em>flex</em> has <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex">shorthand</a> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-flow">properties</a>. But I would avoid them<span class="mdash">—</span>the system is hard enough to understand, and we aren’t being charged by the CSS line. This will be true when we get to <code class="language-plaintext highlighter-rouge">grid</code> as well<span class="mdash">—</span>often being a little bit more verbose in your code will make things easier to understand, especially starting out.</p>
+
+				<h2 id="container-parent-properties">Container (parent) properties</h2>
+
+				<p>Unlike most (…all?) of the CSS we’ve been introduced to, <em>flex</em> is applied on a <em>parent</em> element<span class="mdash">—</span>but actually adjusts the layout of the <em>children</em>. An element with <code class="language-plaintext highlighter-rouge">display: flex;</code> is really telling you what its kids are going to be doing.</p>
+
+				<p><em>There is also <code class="language-plaintext highlighter-rouge">display: inline-flex;</code> which behaves the same, but the parent behaves as an inline element while its children are flexing.</em></p>
+
+				<h3 id="flex-direction"><code class="language-plaintext highlighter-rouge">flex-direction</code></h3>
+
+				<p>After specifying an element as <em>flex</em>, we can set its main axis with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction">flex-direction</a>. By default (you don’t have to write it) this behaves as <code class="language-plaintext highlighter-rouge">flex-direction: row;</code>, so you’ll generally only be adding it when you want something going vertical<span class="mdash">—</span>with <code class="language-plaintext highlighter-rouge">flex-direction: column;</code> :</p>
+
+				<figure style="--height--max: 62rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/flex-direction/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>The first section is <code class="language-plaintext highlighter-rouge">display: block;</code> by default. Also note that I gave them all a <code class="language-plaintext highlighter-rouge">min-height</code>, to show start/end!</figcaption>
+
+				</figure>
+
+				<p>You can also combine these with a <em>reverse</em> option, which visually reorders the items along the <em>main axis</em>, flipping the <em>start</em> and <em>end</em>:</p>
+
+				<figure style="--height--max: 36rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/flex-direction-reverse/demo"></iframe>
+					</div>
+
+
+
+				</figure>
+
+				<blockquote class="callout" icon="🧐">
+					<p>Keep in mind that all flex reordering is only visual<span class="mdash">—</span>it does not change the order in the DOM. This means that keyboard navigation and screen readers still sequence through the items as they are in the HTML. So for good accessibility, keep in mind that semantic order!</p>
+				</blockquote>
+
+				<h3 id="flex-wrap"><code class="language-plaintext highlighter-rouge">flex-wrap</code></h3>
+
+				<p>Since flexbox is <em>one-dimensional</em>, by default it is going to try and cram everything into one <nobr>line<span class="mdash">—</span></nobr>even when there is not enough room! But you can tell it <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap">to <em>wrap</em></a> onto additional lines by adding a <code class="language-plaintext highlighter-rouge">flex-wrap: wrap;</code> property (which behaves as <code class="language-plaintext highlighter-rouge">flex-wrap: nowrap;</code> by default):</p>
+
+				<figure style="--height--max: 65rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/flex-wrap/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Without the height restriction, the last one would just grow taller, by default.</figcaption>
+
+				</figure>
+
+				<p>You can use this to make grids, and it is often sufficient. But but the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">more recent CSS grid</a> properties will give you more control! We’ll talk about <code class="language-plaintext highlighter-rouge">grid</code> soon.</p>
+
+				<p class="two-above">There is also a <em>reverse</em> option here, which will wrap items from <em>end</em> to <em>start</em>:</p>
+
+				<figure style="--height--max: 65rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/flex-wrap-reverse/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>You could do some weird layouts with these, but keep in mind the order is still only visual.</figcaption>
+
+				</figure>
+
+				<h3 id="justify-content"><code class="language-plaintext highlighter-rouge">justify-content</code></h3>
+
+				<p>Okay, so most of what we’ve seen here is somewhat possible using <em>floats</em> and <em>positioning<span class="mdash">—</span></em>though not at all easily and only when you know the size/count of your content.</p>
+
+				<p>But <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content">justify-content</a> is where flexbox starts to allow novel layouts, by dividing up the extra/available free space elements<span class="mdash">—</span>akin to <em>distribute</em> options in Figma/<wbr />Adobe applications. <code class="language-plaintext highlighter-rouge">justify-content</code> does this on our <em>main axis</em>:</p>
+
+				<figure style="--height--max: 67rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/flex-justify-content/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>The <code class="language-plaintext highlighter-rouge">start</code> / <code class="language-plaintext highlighter-rouge">end</code> values <a href="https://csslayout.news/whats-the-difference-between-the-alignment-values-of-start-flex-start-and-self-start/">have some nuance</a> with different writing directions, but this rarely comes up.</figcaption>
+
+				</figure>
+
+				<p>When our <em>main axis</em> is vertical, with <code class="language-plaintext highlighter-rouge">flex-direction: column;</code> :</p>
+
+				<figure style="--height--max: 78rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/flex-justify-content-column/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>These only works with the <code class="language-plaintext highlighter-rouge">height</code> to justify <em>within</em>⁠<span class="mdash">—</span><wbr />otherwise the container would cinch up to the content height, as usual.</figcaption>
+
+				</figure>
+
+				<h3 id="align-items"><code class="language-plaintext highlighter-rouge">align-items</code></h3>
+
+				<p>And then perpendicular to <em>justify</em> along the <em>main axis</em>, flexbox has <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items">align-items</a> to position elements along the <em>cross axis</em>. It has similar values:</p>
+
+				<figure style="--height--max: 66rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/flex-align-items/demo"></iframe>
+					</div>
+
+
+
+				</figure>
+
+				<figure style="--height--max: 69rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/flex-align-items-column/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>The <code class="language-plaintext highlighter-rouge">align-items: baseline;</code> wouldn’t do anything, here.</figcaption>
+
+				</figure>
+
+				<h3 id="align-content"><code class="language-plaintext highlighter-rouge">align-content</code></h3>
+
+				<p>When we have a flex element with <code class="language-plaintext highlighter-rouge">flex-wrap</code> set, we can also <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-content">position the <em>lines</em> within</a> the parent/container<span class="mdash">—</span>akin to <code class="language-plaintext highlighter-rouge">justify-content</code> with each line:</p>
+
+				<figure style="--height--max: 101rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/flex-align-content/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>These wouldn’t do anything without the <code class="language-plaintext highlighter-rouge">height</code> and the <code class="language-plaintext highlighter-rouge">flex-wrap</code>.</figcaption>
+
+				</figure>
+
+				<p>And <code class="language-plaintext highlighter-rouge">align-content</code> can also be used with a vertical / <code class="language-plaintext highlighter-rouge">flex-direction: column;</code> axis, not shown here. This doesn’t often come up, as you have to specify/know a height to force a column wrap.</p>
+
+				<h3 id="gap-row-gap-and-column-gap"><code class="language-plaintext highlighter-rouge">gap</code>, <code class="language-plaintext highlighter-rouge">row-gap</code>, and <code class="language-plaintext highlighter-rouge">column-gap</code></h3>
+
+				<p>While you could use <em>margin</em> to separate your flex children, it would apply to the items on the outer edges, too. (Hence all my <code class="language-plaintext highlighter-rouge">:not(:first-child)</code> selectors, in examples.) Flex recently gained support for intuitive <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/gap">gap properties</a>, which fix this problem<span class="mdash">—</span>by applying spacing only <em>between</em> children.</p>
+
+				<p>This is particularly helpful with dynamic, wrapping content and responsive designs<span class="mdash">—</span>where you won’t always know which element ends or starts a line (to take their margin off):</p>
+
+				<figure style="--height--max: 83rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/flex-gap/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Note the last one, <code class="language-plaintext highlighter-rouge">gap</code> are really <em>minimums</em> and only apply when there isn’t otherwise space.</figcaption>
+
+				</figure>
+
+				<p>Note that the <code class="language-plaintext highlighter-rouge">justify</code>, <code class="language-plaintext highlighter-rouge">align</code>, and <code class="language-plaintext highlighter-rouge">gap</code> properties are also shared (in name and behavior) with <code class="language-plaintext highlighter-rouge">display: grid;</code>, when we get there!</p>
+
+				<h2 id="item-child-properties">Item (child) properties</h2>
+
+				<p>Flexbox is <em>usually</em> applied on the parent/container. But once you’ve set <code class="language-plaintext highlighter-rouge">display: flex;</code> on an element, there are also some individual override properties that can be given to its children, <em>flex items</em>.</p>
+
+				<h3 id="order"><code class="language-plaintext highlighter-rouge">order</code></h3>
+
+				<p>Kind of like the <em>reverse</em> properties<span class="mdash">—</span>you can individually <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/order">apply an order</a> to a <em>flex item</em> (child). Items with the same/tied order (like everything with the default of <code class="language-plaintext highlighter-rouge">order: 0;</code>) will be displayed in their DOM/source order:</p>
+
+				<figure style="--height--max: 52rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/flex-order/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>With the last one, since the default is <code class="language-plaintext highlighter-rouge">order: 0;</code>, negative numbers move stuff up to the front!</figcaption>
+
+				</figure>
+
+				<p>Other order selectors (like <code class="language-plaintext highlighter-rouge">:first-child</code>) won’t be fooled by this reordering<span class="mdash">—</span>as you can see, I used them here. They still use the DOM order. And again, this change is only visual<span class="mdash">—</span>so don’t use it when screen reader/content sequence accessibility is a concern!</p>
+
+				<h3 id="flex-grow-and-flex-shrink"><code class="language-plaintext highlighter-rouge">flex-grow</code> and <code class="language-plaintext highlighter-rouge">flex-shrink</code></h3>
+
+				<p>These tell the child items to… <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow">grow</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink">shrink</a>, if necessary<span class="mdash">—</span>defining the amount of available/remaining space in the container an element should take up. (I like to think of these as bento boxes.)</p>
+
+				<p>It takes a <em>unitless</em> proportional value (think fractions or a factor/multiplier). If you give one flexed child <code class="language-plaintext highlighter-rouge">flex-grow: 1;</code> it will take up all the extra space; another element with <code class="language-plaintext highlighter-rouge">flex-grow: 2;</code> would then take twice as much of that space as the first one (the available space with 3 total units):</p>
+
+				<figure style="--height--max: 74rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/flex-grow-shrink/demo"></iframe>
+					</div>
+
+
+
+				</figure>
+
+				<p>And <code class="language-plaintext highlighter-rouge">flex-shrink</code> works the same way<span class="mdash">—</span>defining what proportion an element should shrink when forced to by the flex layout. The most use you’ll see of this is <code class="language-plaintext highlighter-rouge">flex-shrink: 0;</code>, which tells all the <em>other</em> items to shrink instead!</p>
+
+				<h3 id="flex-basis"><code class="language-plaintext highlighter-rouge">flex-basis</code></h3>
+
+				<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis"><em>Flex-basis</em></a> is a little like <em>width</em> and <em>height</em><span class="mdash">—</span>depending on your <em>main axis</em>. This property defines what the child item’s content box size should be before any remaining space is distributed. This defaults to <code class="language-plaintext highlighter-rouge">auto</code>, which falls back to any specified <code class="language-plaintext highlighter-rouge">width</code> or <code class="language-plaintext highlighter-rouge">height</code><span class="mdash">—</span>and if those aren’t present, will just use the size of the content.</p>
+
+				<p>You specify this <em>basis</em> with normal <a href="/topic/box-model/#and-their-units">length units</a> like <code class="language-plaintext highlighter-rouge">%</code> and <code class="language-plaintext highlighter-rouge">px</code> :</p>
+
+				<figure style="--height--max: 30rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/flex-basis/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>You are <a href="https://stackoverflow.com/a/34355447">usually fine</a> just specifying <code class="language-plaintext highlighter-rouge">width</code> / <code class="language-plaintext highlighter-rouge">height</code>.</figcaption>
+
+				</figure>
+
+				<h3 id="align-self"><code class="language-plaintext highlighter-rouge">align-self</code></h3>
+
+				<p>Finally, we have an individual override for an <a href="#align-items">align-items</a> property set on the parent<span class="mdash">—</span>which adjusts (with the same keywords/values) the alignment of the <em>specific</em> child item it is applied to”</p>
+
+				<figure style="--height--max: 60rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/flex-align-self/demo"></iframe>
+					</div>
+
+
+
+				</figure>
+
+				<blockquote class="callout" icon="😵‍💫">
+					<p>This is a lot of stuff! Flex can be tough to wrap one’s head around, but it is <em>so much better</em> than float and width and margin shenanigans. Much of what you look at on the web is laid out in flex (and its sort-of successor which I keep hinting at, <em>grid</em>).</p>
+				</blockquote>
+
+			</article>
+
+			<footer>
+				<div>
+					<section>
+						<a href="/">
+							<p>Core 1: Interaction, Fall 2022</p>
+						</a>
+					</section>
+					<section>
+						<p><a href="#">Top</a></p>
+					</section>
+				</div>
+			</footer>
+
+		</main>
+
+	</body>
+</html>
