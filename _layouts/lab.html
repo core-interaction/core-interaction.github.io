@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+
+
+<main>
+	{% if title %}
+		<header>
+			<h1>{{- title | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines -}}</h1>
+			{% include toc.html html=content h_max=2 %}
+		</header>
+	{% endif %}
+	<article>
+		{{ content | mdash_spans }}
+	</article>
+</main>

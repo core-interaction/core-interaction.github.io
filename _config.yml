@@ -25,11 +25,11 @@ defaults:
       layout: page
   - scope:
       path: ''
-      type: topics
+      type: lab
     values:
-      layout: default
+      layout: lab
 collections:
-  topics:
+  lab:
     output: true
     permalink: :collection/:path
 livereload: true
