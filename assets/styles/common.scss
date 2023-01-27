@@ -63,6 +63,25 @@
 		--color--highlight--reverse: hsl(0, 0%, 100%, 10%);
 	}
 
+
+
+	// Colors for the lab layout.
+	&.lab {
+		--color:             white;
+		--color--background: black;
+
+		--color--tint:  #222222;
+		--color--links: blue;
+
+		--color--code: #888888;
+
+		--color--highlight: hsl(0, 0%, 100%, 5%);
+
+		@include hover {
+			--color--highlight: hsl(0, 0%, 100%, 10%); // Denser to offset hover opacity.
+		}
+	}
+
 	@include breakpoint(320) { --typography--size: calc((16/375) * 100vw) }
 
 	@include breakpoint(768) {
@@ -134,6 +153,8 @@ body {
 	--margin--vertical--4: calc(var(--typography--between) + 4 * var(--typography--font-size) * var(--typography--leading));
 	--margin--vertical--6: calc(var(--typography--between) + 6 * var(--typography--font-size) * var(--typography--leading));
 	--margin--vertical--8: calc(var(--typography--between) + 8 * var(--typography--font-size) * var(--typography--leading));
+
+	background-color: var(--color--background);
 
 	// Basics.
 	h1,

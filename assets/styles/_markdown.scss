@@ -269,7 +269,13 @@
 			padding:          var(--padding);
 			position:         relative;
 
-			code { mix-blend-mode: multiply }
+			code {
+				mix-blend-mode: multiply;
+
+				@at-root {
+					.lab & { mix-blend-mode: screen }
+				}
+			 }
 
 			&[icon] {
 				padding-left: calc(2 * var(--padding) + 2ch);
@@ -298,6 +304,7 @@
 			}
 
 			&:before {
+				color:      var(--color);
 				content:    '| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | ';
 				font-style: normal;
 				left:       0;
