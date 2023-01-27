@@ -66,21 +66,7 @@
 
 
 	// Colors for the lab layout.
-	&.lab {
-		--color:             white;
-		--color--background: black;
-
-		--color--tint:  #222222;
-		--color--links: blue;
-
-		--color--code: #888888;
-
-		--color--highlight: hsl(0, 0%, 100%, 5%);
-
-		@include hover {
-			--color--highlight: hsl(0, 0%, 100%, 10%); // Denser to offset hover opacity.
-		}
-	}
+	&.lab { --color--links: blue  }
 
 	@include breakpoint(320) { --typography--size: calc((16/375) * 100vw) }
 
