@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
+
+		<title>An intro to CSS</title>
+		<link href="/assets/styles/reset.css" rel="stylesheet">
+		<link href="/assets/styles/common.css" rel="stylesheet">
+		<link href="/assets/styles/syntax.css" rel="stylesheet">
+		<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
+		<link href="/assets/icons/touch.png" rel="apple-touch-icon">
+
+		<script src="/assets/scripts/common.js"></script>
+
+		<meta name="theme-color" content="#e42a1d">
+	</head>
+	<body class="default">
+		<h2 class="no_toc" id="css-stands-for-cascading-stylesheets">CSS stands for <em>Cascading Style Sheets</em></h2>
+
+		<p class="left">CSS is the standard language/format for styling web pages, which specifies what the page’s HTML will look like in the browser.</p>
+
+		<ul class="icon-link no-marker right" rows="5">
+			<li>
+				<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS | MDN</a> <br />
+					<em>MDN, as is custom.</em>
+				</p>
+			</li>
+			<li>
+				<p><a href="https://www.youtube.com/watch?v=BUZIaTHm_oE">Basics of CSS</a> <br />
+					<em>Another ASMR introduction from Laurel.</em>
+				</p>
+			</li>
+			<li>
+				<p><a href="https://web.dev/learn/css/">Google’s web.dev CSS course</a> <br />
+					<em>Different order from ours, but pretty good.</em>
+				</p>
+			</li>
+			<li>
+				<p><a href="https://htmlcolorcodes.com/">HTML Color Codes</a> <br />
+					<em>Too many ads, but some nice tools for color.</em>
+				</p>
+			</li>
+			<li>
+				<p><a href="https://fonts.google.com">Google Fonts</a> <br />
+					<em>We’ll use this for free font families.</em>
+				</p>
+			</li>
+			<li>
+				<p><a href="https://wakamaifondue.com">Wakamai Fondue</a> <br />
+					<em>“What can my font do?”</em>
+				</p>
+			</li>
+		</ul>
+
+		<p>In our ongoing analogy, CSS is the <em>skin</em> of the web. <a href="/topics/html">Just like HTML</a>, at its most basic it is still just text, in a file, on a computer. It can live inside HTML documents themselves, but is more commonly seen on its own with the extension <code class="language-plaintext highlighter-rouge">.css</code></p>
+
+		<p>CSS came after HTML, first proposed by <a href="https://www.w3.org/Style/CSS20/history.html">Håkon Wium Lie</a> in 1994—who was working with our friend Tim Berners-Lee at CERN and wanted more control over the presentation of web pages. (Tim was <em>against</em> the idea, thinking it should be up to each user.) It’s had three major revisions that have grown the vocabulary:</p>
+
+		<ul>
+			<li>CSS 1, 1996</li>
+			<li>CSS 2, 1998</li>
+			<li>CSS 3, 1999</li>
+		</ul>
+
+		<p><em>For the past decade or so, features have been added incrementally by browsers “within” the CSS 3 “standard”. That’s how it goes, these days.</em></p>
+
+		<blockquote class="quote">
+			<p>The change in relationship between generator and consumer of information is going to take some getting used to. […] That said, I’ll comment that style sheets constitute a wormhole into unspeakable universes. People start thinking they’ll just set up a little file in SGML or something else, and soon it grows [uncontrollable].</p>
+		</blockquote>
+
+		<p><cite><a href="http://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-94q4.messages/0279.html">James D. Mason</a></cite></p>
+
+		<h2 id="where-css-lives">Where CSS lives</h2>
+
+		<p>Before we get into CSS itself, let’s talk about how it is incorporated with HTML. There are three ways it can be added:</p>
+
+		<ol>
+			<li><em>Inline</em> on HTML tags themselves</li>
+			<li>Via <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code> elements in HTML documents</li>
+			<li>As separate/external files via <code class="language-plaintext highlighter-rouge">&lt;link&gt;</code> elements</li>
+		</ol>
+
+		<h3 id="1-inline-with-style">1. Inline with <code class="language-plaintext highlighter-rouge">style=</code></h3>
+
+		<p>This is the original and most straightforward way to add styles, directly as <a href="/topic/html/#attributes"><em>attributes</em></a> in HTML tags:</p>
+
+		<div class="language-html left highlighter-rouge">
+			<div class="highlight">
+				<pre class="highlight"><code><span class="nt">&lt;p</span> <span class="na">style=</span><span class="s">"color: red;"</span><span class="nt">&gt;</span>This text will be red!<span class="nt">&lt;/p&gt;</span>
+</code></pre>
+			</div>
+		</div>
+
+		<p>Seams obvious. However this has some downsides—imagine you want to style all of your paragraphs in the same way, and with multiple properties:</p>
+
+		<div class="language-html highlighter-rouge">
+			<div class="highlight">
+				<pre class="highlight"><code><span class="nt">&lt;p</span> <span class="na">style=</span><span class="s">"color: red; font-family: sans-serif;"</span><span class="nt">&gt;</span>This text will be red!<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">style=</span><span class="s">"color: red; font-family: sans-serif;"</span><span class="nt">&gt;</span>I’d also like this to be red.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">style=</span><span class="s">"color: red; font-family: sans-serif;"</span><span class="nt">&gt;</span>And they are all sans-serif, too.<span class="nt">&lt;/p&gt;</span>
+</code></pre>
+			</div>
+		</div>
+
+		<p>It makes it hard to read, and hard to change and maintain—you’d have to update every single instance. (In software, we’d refer to this as <em>brittle</em>—meaning it is easy to break.)</p>
+
+		<h3 id="2-along-comes-style">2. Along comes <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code></h3>
+
+		<p>So the next way that was added to the standard was using a special HTML element, <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code>, that wraps blocks of CSS that then apply to an entire document. They go up in the <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> of our <a href="/topic/html/#the-basic-document">HTML documents</a>:</p>
+
+		<div class="language-html half highlighter-rouge">
+			<div class="highlight">
+				<pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+	<span class="nt">&lt;head&gt;</span>
+		<span class="nt">&lt;title&gt;</span>Page title<span class="nt">&lt;/title&gt;</span>
+		<span class="nt">&lt;style&gt;</span>
+			<span class="nt">p</span> <span class="p">{</span>
+				<span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+				<span class="nl">font-family</span><span class="p">:</span> <span class="nb">sans-serif</span><span class="p">;</span>
+			<span class="p">}</span>
+		<span class="nt">&lt;/style&gt;</span>
+	<span class="nt">&lt;/head&gt;</span>
+	<span class="nt">&lt;body&gt;</span>
+		<span class="nt">&lt;p&gt;</span>This is a paragraph.<span class="nt">&lt;/p&gt;</span>
+		<span class="nt">&lt;p&gt;</span>This is another paragraph.<span class="nt">&lt;/p&gt;</span>
+		<span class="nt">&lt;p&gt;</span>This is third paragraph.<span class="nt">&lt;/p&gt;</span>
+	<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+			</div>
+		</div>
+
+		<p>The rules are written written with selectors—more on those, below. But importantly, we can now control the color of all the paragraphs easily, at once.</p>
+
+		<h3 id="3-external-with-link">3. External with <code class="language-plaintext highlighter-rouge">&lt;link&gt;</code></h3>
+
+		<p>So this is already much better, allowing us to style whole pages easily and consistently. But what about when we have <em>multiple</em> pages? If you wanted a whole site to use the same styles, you’d have to duplicate the <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code> tag over and over, updated it everywhere whenever you changes. Still brittle. So along comes the <code class="language-plaintext highlighter-rouge">&lt;link&gt;</code> element:</p>
+
+		<div class="language-html left highlighter-rouge">
+			<div class="highlight">
+				<pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+	<span class="nt">&lt;head&gt;</span>
+		<span class="nt">&lt;title&gt;</span>Page title<span class="nt">&lt;/title&gt;</span>
+		<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"style.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/head&gt;</span>
+	<span class="nt">&lt;body&gt;</span>
+		<span class="nt">&lt;p&gt;</span>This is a paragraph.<span class="nt">&lt;/p&gt;</span>
+		<span class="nt">&lt;p&gt;</span>This is another paragraph.<span class="nt">&lt;/p&gt;</span>
+		<span class="nt">&lt;p&gt;</span>This is third paragraph.<span class="nt">&lt;/p&gt;</span>
+	<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+			</div>
+		</div>
+
+		<p>And then in a separate <code class="language-plaintext highlighter-rouge">style.css</code> file (in this case, in the same directory as our HTML file), we can have the same rules as before—no need for the outside wrapping <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code> tag:</p>
+
+		<div class="language-css half highlighter-rouge">
+			<div class="highlight">
+				<pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span>
+	<span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+	<span class="nl">font-family</span><span class="p">:</span> <span class="nb">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+			</div>
+		</div>
+
+		<p>This will apply to any page that we add the <code class="language-plaintext highlighter-rouge">&lt;link&gt;</code> to, and updating the styles will now change the color of the paragraphs in our <em>entire web site</em>.</p>
+
+		<p>We’ll talk more about <em><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">specificity</a></em> later, but it is worth noting that the <em>inline</em> approach will usually take precedent over other methods—under the “closest, then lowest” logic.</p>
+
+		<h2 id="css-rules">CSS rules</h2>
+
+		<p>Even though it is used to style HTML elements, the syntax of CSS is very different. CSS <em>rules</em> are made up of <em>selectors</em>, used to target certain elements, and then the <em>declarations</em> that you want to apply to them:</p>
+
+		<figure>
+
+			<img src="rule.svg" />
+
+
+		</figure>
+
+		<p>The curly brackets <code class="language-plaintext highlighter-rouge">{</code> <code class="language-plaintext highlighter-rouge">}</code> (also known as <em>mustaches</em> or <em>handlebars</em>, for their shape) enclose all the declarations you want to apply to a given selector. These <em>declarations</em> are in turn made up of <em>properties</em> and <em>values</em>.</p>
+
+		<p>Properties are always separated from their corresponding values by a colon <code class="language-plaintext highlighter-rouge">:</code>, and each declaration line has to end in a semicolon <code class="language-plaintext highlighter-rouge">;</code>. (It’s just how it is.) Also, there are no spaces between values and their units (like <code class="language-plaintext highlighter-rouge">20px</code>)!</p>
+
+		<p>There are <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">many, many CSS properties</a>. (Here is a shorter <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference">“common” list</a>.) We’ll go through some in our exercise, but look through these to become more familiar.</p>
+
+		<h3 id="ergonomics">Ergonomics</h3>
+
+		<p>Just <a href="/topic/html/#case-whitespace-tabs-line-breaks">like HTML</a>, CSS does not care about capitalization, extra white space, or line breaks. Folks generally use tabs/indenting to indicate hierarchy, but again it is just whatever makes it easier for you!</p>
+
+		<div class="language-css half highlighter-rouge">
+			<div class="highlight">
+				<pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span>
+	<span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* Is the same as… */</span>
+
+<span class="nt">p</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="p">}</span>
+</code></pre>
+			</div>
+		</div>
+
+		<p>I generally “single-line” rules when there is only one property declared, as I find it easier to read.</p>
+
+		<p><em>Capitalization <em>does</em> matter when using IDs or classes as selectors, which have to match the HTML to target correctly. Like with HTML, it’s easiest just to be consistent and stick to lowercase.</em></p>
+
+		<h2 id="basic-selectors">Basic selectors</h2>
+
+		<p>Selectors are used to <em>target</em> certain HTML elements within the page. These can get pretty complicated, but we’ll look at the three simplest and most common methods to start:</p>
+
+		<ol>
+			<li>Elements</li>
+			<li>Classes</li>
+			<li>IDs</li>
+		</ol>
+
+		<h3 id="1-by-element-type">1. By element type</h3>
+
+		<p>If you want to change the styles for all instances of a given HTML element, you drop the <code class="language-plaintext highlighter-rouge">&lt;</code> <code class="language-plaintext highlighter-rouge">&gt;</code> from the tag for an element selector. These are called <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors"><em>type selectors</em></a>:</p>
+
+		<figure style="--height--max: 33rem">
+
+			<div class="example">
+				<iframe allowfullscreen="" src="/example/element/demo"></iframe>
+			</div>
+
+
+
+			<figcaption>Note that CSS has different <code class="language-plaintext highlighter-rouge">/* comment syntax */</code>, too.</figcaption>
+
+		</figure>
+
+		<h3 id="2-with-aclass">2. With a class</h3>
+
+		<p>But maybe you don’t want to style all of the paragraphs. You can then use a <code class="language-plaintext highlighter-rouge">class</code> to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors">target specific instances</a>. They are added as an <em><a href="/topic/html/#attributes">attribute</a></em> on the element you want to target:</p>
+
+		<figure style="--height--max: 43rem">
+
+			<div class="example">
+				<iframe allowfullscreen="" src="/example/class/demo"></iframe>
+			</div>
+
+
+
+		</figure>
+
+		<p>The <em>value</em> here is our class name, which we write in CSS by prefixing with a <code class="language-plaintext highlighter-rouge">.</code> as with <code class="language-plaintext highlighter-rouge">.highlight</code> and <code class="language-plaintext highlighter-rouge">.faded</code>.</p>
+
+		<p>You can use these over and over, on any kind of element. And individual elements can have <em>multiple</em> classes, too. (We’ll talk about how conflicting rules are handled, below.) Class names can be whatever you want—there are whole methodologies about what to call these things. They are the most common way to target things in CSS.</p>
+
+		<h3 id="3-with-an-id">3. With an ID</h3>
+
+		<p>You can also use an <code class="language-plaintext highlighter-rouge">id</code>, which is a kind of <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id">special attribute</a> that can only be used <em>once</em> in an HTML document. These are useful thus useful for targeting singular things—like your navigation, the document title, specific headings, etc:</p>
+
+		<figure style="--height--max: 35rem">
+
+			<div class="example">
+				<iframe allowfullscreen="" src="/example/id/demo"></iframe>
+			</div>
+
+
+
+		</figure>
+
+		<p>These are prefixed by <code class="language-plaintext highlighter-rouge">#</code> in CSS, as with <code class="language-plaintext highlighter-rouge">#title</code> and <code class="language-plaintext highlighter-rouge">#introduction</code>. They can also be used as <a href="/topic/html/#attributes">link destinations</a>.</p>
+
+		<h2 id="fancy-selectors"><em>Fancy</em> selectors</h2>
+
+		<h3 id="combinations-and-groups">Combinations and groups</h3>
+
+		<p>You can use combinations of the above <em>elements</em>, <em>classes</em>, and <em>IDs</em> to be even more specific—however, this likely means you just need to rethink your HTML structure. (We’ll unpack <em>specificity</em>, below.) More commonly, you might apply declarations to multiple selectors, called <em>group selectors</em>, with a comma-delineated <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list">selector list</a>:</p>
+
+		<figure style="--height--max: 35rem">
+
+			<div class="example">
+				<iframe allowfullscreen="" src="/example/group/demo"></iframe>
+			</div>
+
+
+
+		</figure>
+
+		<h3 id="with-specific-attributes">With specific attributes</h3>
+
+		<p>You can use the various <a href="topic/html/#attributes">attributes</a> as selectors, too. These are usually very similar to using <em>classes</em>, but can help you <a href="https://css-tricks.com/attribute-selectors/">differentiate things</a> like internal and external links, for example:</p>
+
+		<figure style="--height--max: 27rem">
+
+			<div class="example">
+				<iframe allowfullscreen="" src="/example/attribute/demo"></iframe>
+			</div>
+
+
+
+		</figure>
+
+		<h3 id="pseudo-classes">Pseudo-classes</h3>
+
+		<p>These are <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">special selectors</a>, added to <code class="language-plaintext highlighter-rouge">element</code>, <code class="language-plaintext highlighter-rouge">class</code>, or <code class="language-plaintext highlighter-rouge">id</code> which target unique <em>states</em> or <em>instances</em> of HTML elements. You’ll often see these used to target <a href="https://web.dev/learn/css/pseudo-classes/#historic-states">link states</a>:</p>
+
+		<figure style="--height--max: 33rem">
+
+			<div class="example">
+				<iframe allowfullscreen="" src="/example/pseudo-link/demo"></iframe>
+			</div>
+
+
+
+			<figcaption><code class="language-plaintext highlighter-rouge">:hover</code> also works on any element, not just links!</figcaption>
+
+		</figure>
+
+		<p>Other common examples have to do with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes">counts and positions</a>:</p>
+
+		<figure style="--height--max: 39rem">
+
+			<div class="example">
+				<iframe allowfullscreen="" src="/example/pseudo-child/demo"></iframe>
+			</div>
+
+
+
+		</figure>
+
+		<h3 id="pseudo-elements">Pseudo-elements</h3>
+
+		<p>Slightly different the various <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">pseudo-<em>elements</em></a>, which let you style a particular <em>part</em> of an element. You’ll most often see these as <code class="language-plaintext highlighter-rouge">:before</code> and <code class="language-plaintext highlighter-rouge">:after</code>, which let us insert things around text.</p>
+
+		<figure style="--height--max: 46rem">
+
+			<div class="example">
+				<iframe allowfullscreen="" src="/example/pseudo-element/demo"></iframe>
+			</div>
+
+
+
+		</figure>
+
+		<h3 id="finally-combinators">Finally, combinators</h3>
+
+		<p>Last, you will often want to target something based on its relationship to other elements—its <em>siblings</em> or its <em>parents</em>. For this, CSS has <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators"><em>combinators</em></a>, which let you relate all the various selectors we’ve learned about here together.</p>
+
+		<figure style="--height--max: 47rem">
+
+			<div class="example">
+				<iframe allowfullscreen="" src="/example/combinator/demo"></iframe>
+			</div>
+
+
+
+		</figure>
+
+		<p>Importantly, combinators can only “see” elements <em>before</em> and <em>above</em> themselves—meaning their <em>previous <em>(older?)</em> siblings</em> or their <em>parents</em>. This directionality somewhat corresponds with the <em>cascade</em>, which we’ll talk about shortly.</p>
+
+		<h3 id="has-will-change-this"><code class="language-plaintext highlighter-rouge">:has()</code> will change this!</h3>
+
+		<p>For many, many years folks have wanted a “parent selector” in CSS—meaning a way to apply a style to a parent/container based on one of its children. This was not possible before, as we mentioned above.</p>
+
+		<p>CSS has <a href="https://webkit.org/blog/13096/css-has-pseudo-class/">finally added</a> the <code class="language-plaintext highlighter-rouge">:has()</code> pseudo-class, just in the past few weeks! It will allow us to write much simpler, logical styles:</p>
+
+		<div class="language-css half highlighter-rouge">
+			<div class="highlight">
+				<pre class="highlight"><code><span class="nt">div</span><span class="nd">:has</span><span class="o">(</span><span class="nt">p</span><span class="o">)</span> <span class="p">{</span> <span class="nl">background-color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="p">}</span>
+</code></pre>
+			</div>
+		</div>
+
+		<p>Safari and Chrome both <em>just</em> <a href="https://caniuse.com/css-has">added support</a>, so this should be safe to use in the coming months.</p>
+
+		<h2 id="specificity">Specificity</h2>
+
+		<p>The first three targeting methods (<code class="language-plaintext highlighter-rouge">element</code>, <code class="language-plaintext highlighter-rouge">.class</code>, <code class="language-plaintext highlighter-rouge">#id</code>) are listed in increasing order of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity"><em>specificity</em></a>, meaning that a class trumps an element rule, and an ID trumps a class. IDs are thus <em>more specific</em> than classes, which are <em>more specific</em> than element selectors. (And you shouldn’t really use them, but inline styles beat them all.) Take this example:</p>
+
+		<figure style="--height--max: 30rem">
+
+			<div class="example">
+				<iframe allowfullscreen="" src="/example/specificity/demo"></iframe>
+			</div>
+
+
+
+		</figure>
+
+		<p>You could write a <em>long</em> book (and many people have) about CSS specificity—the myriad of ways that some CSS rules take precedent over others. It is often one the more frustrating parts (especially when working with legacy code that is poorly considered). Suffice it to say <em>it’s complicated</em>. The easiest way to avoid specificity problems is generally to stay at the same level throughout your HTML, usually by just using classes throughout.</p>
+
+		<h2 id="oh-right-the-cascade">Oh right, the cascade</h2>
+
+		<p>We haven’t even talked about that first <em>C</em>! Remember, it stands for <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade"><em>cascading</em></a>. This means that when there is a tie (like two classes applying the same property), the <em>lowest</em> rule wins—literally the one further down within a CSS document, or within a style tag. If you have multiple CSS documents with <code class="language-plaintext highlighter-rouge">&lt;link&gt;</code> element, the lower linked document will take precedence.</p>
+
+		<figure style="--height--max: 19rem">
+
+			<div class="example">
+				<iframe allowfullscreen="" src="/example/cascade/demo"></iframe>
+			</div>
+
+
+
+		</figure>
+
+		<h2 id="and-inheritance">And inheritance</h2>
+
+		<p>To add even more confusion, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance">some CSS properties</a> set on a parent also apply to their children—such as <code class="language-plaintext highlighter-rouge">color</code> or <code class="language-plaintext highlighter-rouge">font-family</code>. Most spacing/layout properties, like <code class="language-plaintext highlighter-rouge">width</code> and <code class="language-plaintext highlighter-rouge">margin</code> do not. (More on those, next week.)</p>
+
+		<p>This allows you to quickly set some properties globally, without having many brittle/redundant rules, as we did before:</p>
+
+		<figure style="--height--max: 31rem">
+
+			<div class="example">
+				<iframe allowfullscreen="" src="/example/inheritance/demo"></iframe>
+			</div>
+
+
+
+			<figcaption>All the children inherit the <code class="language-plaintext highlighter-rouge">body</code> styles. Ah, finally, <code class="language-plaintext highlighter-rouge">sans-serif</code>.</figcaption>
+
+		</figure>
+
+		<h2 id="color-and-type-properties">Color and type properties</h2>
+
+		<p>Alright, so all this has been about <em>targeting</em> elements—what about actually styling them? Let’s introduce a few quick <em>properties</em> to get us started.</p>
+
+		<h3 id="color">Color!</h3>
+
+		<p>Besides the basic examples above, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value"><em>color</em></a> can be specified in a few different ways:</p>
+
+		<figure style="--height--max: 62rem">
+
+			<div class="example">
+				<iframe allowfullscreen="" src="/example/color/demo"></iframe>
+			</div>
+
+
+
+			<figcaption>There are <a href="https://htmlcolorcodes.com/color-names/">147 <em>named</em></a> CSS colors! <code class="language-plaintext highlighter-rouge">tomato</code> is a favorite.</figcaption>
+
+		</figure>
+
+		<p>Named colors are quick to work with when you know a few, but <code class="language-plaintext highlighter-rouge">hsla</code> offers a more intuitive way to adjust and work with colors.</p>
+
+		<p>These can also all be applied to <code class="language-plaintext highlighter-rouge">background-color</code> (and <code class="language-plaintext highlighter-rouge">border</code>, but we’ll talk about that next week).</p>
+
+		<h3 id="fonts">Fonts!</h3>
+
+		<p>Then perhaps most importantly, you’ll always be customizing your <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals">typography</a>. Remember, the web is text <em>all the way down</em>:</p>
+
+		<figure style="--height--max: 63rem">
+
+			<div class="example">
+				<iframe allowfullscreen="" src="/example/font-family/demo"></iframe>
+			</div>
+
+
+
+			<figcaption>With great power comes great responsibility.</figcaption>
+
+		</figure>
+
+		<p>Web font licensing is a <em>Whole Big Thing</em>—so let’s start out by making use of <a href="https://fonts.google.com">Google Fonts</a>, which offers many <em>open-source</em> typefaces nicely packaged for web use. You can select <em>families</em> and <em>weights</em> there to easily include in your pages, as in the example above.</p>
+
+		<h3 id="other-type-properties">Other type properties!</h3>
+
+		<p>Once you’ve got a <code class="language-plaintext highlighter-rouge">font-family</code> in, there are additional properties to control the typography:</p>
+
+		<figure style="--height--max: 85rem">
+
+			<div class="example">
+				<iframe allowfullscreen="" src="/example/font/demo"></iframe>
+			</div>
+
+
+
+			<figcaption>For now, you can just specify units in <code class="language-plaintext highlighter-rouge">px</code> to match Figma. We’ll talk about other <em>absolute</em> and <em>relative</em> units soon.</figcaption>
+
+		</figure>
+
+		<h2 id="resets">Resets</h2>
+
+		<p>As we talked about <a href="/topic/html/#user-agent-styles">last week</a>, browsers have their own, built-in way that they display HTML elements. These <em>user-agent styles</em> are specific, somewhat, to each platform and each browser. This is the “look” we have been seeing when we write plain HTML without any CSS—usually Times New Roman, with blue links, and small spacing between elements.</p>
+
+		<p>Often, when you are working towards your own design, you will find yourself fighting against these built-in styles. Many designers/front-end folk instead start with <a href="https://meyerweb.com/eric/tools/css/reset/"><em>resets</em></a>—a semi-standard collection of CSS rules that “zero out” the browser’s built-in styles. This means you have to write everything yourself, but you have more control and aren’t building on unknown foundations. And things should be (more) consistent, across browsers and platforms.</p>
+
+		<p>Here is a <a href="https://elad2412.github.io/the-new-css-reset/">simple, modern one</a> for your <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code>:</p>
+
+		<div class="language-html highlighter-rouge">
+			<div class="highlight">
+				<pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://core-interaction.github.io/assets/styles/reset.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+</code></pre>
+			</div>
+		</div>
+
+		<p><em>This is what we use here for our course site!</em></p>
+
+		<blockquote class="quote">
+			<p>The author of HTML documents has no influence over the presentation. Indeed, if conflicts arise the user should have the last word, but one should also allow the author to attach style hints. The last point has especially been a source of much frustration among professions that are used to be in control of paper-based publishing. This proposal tries to soften the tension between the author and the reader.</p>
+		</blockquote>
+
+		<p><cite><a href="https://www.w3.org/People/howcome/p/cascade.html">Håkon Wium Lie</a></cite></p>
+
+
+	</body>
+</html>

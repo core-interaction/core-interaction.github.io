@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
+
+		<title>DevTools (The Inspector)</title>
+		<link href="/assets/styles/reset.css" rel="stylesheet">
+		<link href="/assets/styles/common.css" rel="stylesheet">
+		<link href="/assets/styles/syntax.css" rel="stylesheet">
+		<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
+		<link href="/assets/icons/touch.png" rel="apple-touch-icon">
+
+		<script src="/assets/scripts/common.js"></script>
+
+		<meta name="theme-color" content="#e42a1d">
+	</head>
+	<body class="default">
+		<blockquote class="callout" icon="🔌">
+			<p>When working locally, you’ll also want to install the <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a> plugin, for quick/auto reloading in the browser! If you prefer this within the VS Code/IDE window, you can use <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server">Live Preview</a>, instead.</p>
+		</blockquote>
+
+		<p class="left">I am definitely a “Safari guy” for my daily driver browser. But for dev work, <a href="https://www.google.com/chrome">Chrome</a> is the best in town. (They are all kind of differently bad, in different ways.)</p>
+
+		<p class="icon-link right"><a href="https://developer.chrome.com/docs/devtools/">Chrome DevTools</a> <br />
+			<em>We’ll be using Chrome’s developer tools.</em>
+		</p>
+
+		<p class="left">Chrome has the most robust, best-in-class set of <em>DevTools</em>—though <a href="https://developer.apple.com/safari/tools/">Safari</a> and <a href="https://developer.mozilla.org/en-US/docs/Tools">Firefox</a> have their own versions, too. You’ll often hear people (me) call it the “Web Inspector” or just “The Inspector”. It’s going to be your best (Web) friend, showing you everything that the browser has <em>parsed</em> to display the page.</p>
+
+		<figure class="right" rows="3">
+
+			<img src="right-click.png" />
+
+
+		</figure>
+
+		<p class="two-above"><em>In Chrome, you can bring them up by right-clicking on any element/part of a page and clicking <em>Inspect</em>.</em></p>
+
+		<p><em>You can also hit ⌘-⌥-I (command-option-I), on the Mac.</em></p>
+
+		<p class="four-above">You’ll see the tools on the right side of the page. Depending on how big your screen is, they might be laid out a bit differently—but the basics are the same:</p>
+
+		<figure style="--height--max: 90vh">
+
+			<img src="dev-tools.png" />
+
+
+		</figure>
+
+		<p class="left one-above" style="align-self: center;">You can also undock the tools out into a separate window—often easier on a laptop/<wbr />small screen.</p>
+
+		<figure class="right">
+
+			<img src="customize.svg" />
+
+
+		</figure>
+
+		<h2 id="elements-panel">Elements panel</h2>
+
+		<p class="left-narrow">The top part of the tools is <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">the DOM</a>⁠—you can expand/collapse all the nested HTML <em>elements</em> on the opened page.</p>
+
+		<figure class="right" rows="4">
+
+			<img src="elements.svg" />
+
+
+		</figure>
+
+		<p>The first button in the upper-left lets you mouse over on the page, and will then show you that element nested/<wbr />hierarchically within the DOM.</p>
+
+		<p>The second (more on this below) toggles the <em>Device toolbar</em>, “responsive mode.”</p>
+
+		<p>Handy tip: ⌘-F in here will let you search for elements or text by name/<wbr />class/<wbr />contents.</p>
+
+		<h2 id="styles-pane">Styles pane</h2>
+
+		<p class="left-narrow">The middle area is for the styles. It shows whatever <em>CSS properties</em> apply to the element you have selected above, in <em>the DOM</em>/elements panel.</p>
+
+		<figure class="right" rows="4">
+
+			<img src="styles.svg" />
+
+
+		</figure>
+
+		<p>These are ordered with the <a href="/topic/css/#specificity">most-specific</a> at the top, with any cascading/<wbr />conflicting rules crossed out, as you go down.</p>
+
+		<p>On the right, you can see the sum <em>Computed</em> (or <em>rendered</em>) values of all the rules that apply—regardless of where they come from. These represent <em>exactly</em> what the browser is showing to you for the selected element.</p>
+
+		<p>In both areas, you can type specific CSS properties/values into the <code class="language-plaintext highlighter-rouge">Filter</code> box to quickly narrow things down.</p>
+
+		<p class="four-above">You can make changes in the <em>Elements</em> or <em>Styles</em> areas, and the changes will be immediately visible on the page as if you had edited the source files. It’s useful to try things out quickly (or diagnose problems/<wbr />conflicts).</p>
+
+		<blockquote class="callout two-above" icon="🚨">
+			<p>Keep in mind these changes are temporary—any edits in the <em>DevTools</em> will be lost when you leave or reload the page! They are just for you.</p>
+		</blockquote>
+
+		<h2 id="device-mode">Device mode</h2>
+
+		<p>First open the inspector, <a href="#elements-panel">as above</a>. Enter <em>device mode</em> with the little phone/tablet icon, in the upper left of the DevTools:</p>
+
+		<figure style="--height--max: 90vh">
+
+			<img src="device.png" />
+
+
+		</figure>
+
+		<figure>
+
+			<img src="device-bar.svg" />
+
+
+		</figure>
+
+		<figure class="left-narrow">
+
+			<img src="responsive.png" />
+
+
+			<figcaption>These devices <em>don’t</em> have accurate heights—they don’t account for the web browser’s own interface, so they are all too tall!</figcaption>
+
+		</figure>
+
+		<aside>
+
+
+			<p>Be sure to <em>refresh</em> with ⌘-R if the page doesn’t rescale correctly when you enter this mode! They somestimes don’t, depending on how they are built.</p>
+
+			<p>Generally, use the <em>Responsive</em> dimensions mode that lets you type in specific pixel dimensions for width/height. Or you can use the divided bar underneath to quickly jump through common/ballpark widths. And remember that you aren’t targeting devices⁠—you are looking for when your content <em>breaks</em>.</p>
+
+			<p>You can also use the <em>zoom</em> dropdown to approximate views <em>larger</em> than your current screen! This is great for developing on a laptop. It won’t be precise, but it’s better than nothing.</p>
+
+			<p>The <em>Options</em> menu also has some handy tricks, like showing <em>rulers</em> or capturing <em>full-length screenshots</em>!</p>
+
+
+
+		</aside>
+
+		<blockquote class="callout" icon="🤌">
+			<p>Always check your work on the real thing, as much as possible!</p>
+
+			<p>This is just a quicker preview, but isn’t always perfectly accurate⁠—and also won’t reflect any device-specific behaviors around scrolling or rotating. (I’m looking at you, <a href="https://bugs.webkit.org/show_bug.cgi?id=141832">iOS Safari</a>.)</p>
+		</blockquote>
+
+		<h2 id="the-console">The Console</h2>
+
+		<p class="left one-above" style="align-self: center;">The console is used to help you work with <a href="/topic/javascript">JavaScript</a>, by <em>logging</em> messages (and any errors) from your code as it runs. <br />
+			<br />
+			If your tools are already open, you can show the console (as a drawer) in <em>Options</em> ellipses, or as a whole panel to the right of <em>Elements</em>. <br />
+			<br />
+			<em>On the Mac, Hit ⌘-⌥-J (command-option-J) to go right there!</em>
+		</p>
+
+		<figure class="right">
+
+			<img src="customize.svg" />
+
+
+		</figure>
+
+		<figure style="--height--max: 90vh">
+
+			<img src="console.png" />
+
+
+			<figcaption>The console as a drawer, at the bottom right.</figcaption>
+
+		</figure>
+
+		<p>This area will show any <a href="https://developer.chrome.com/docs/devtools/console/log/#javascript">messages logged</a> from your JavaScript with <code class="language-plaintext highlighter-rouge">console.log()</code>.</p>
+
+		<p>Warnings and errors (like missing files, or bad JS syntax) will also be shown here in yellow and red, respectively—usually with clickable line-numbers to the right, to take you right to the problem. You can clear the buffer (what is showing) with the little crossed circle.</p>
+
+		<p>You can also evaluate JavaScript here directly, by typing (with some nice auto-completion) into the bottom of the console—like <code class="language-plaintext highlighter-rouge">console.log('Hello, world!')</code>. You can use this to test out parts of your code immediately, like with <code class="language-plaintext highlighter-rouge">document.querySelector('main')</code>. If it returns (shows) your element in response, your selector is working!</p>
+
+
+	</body>
+</html>
