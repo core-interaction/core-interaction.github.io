@@ -889,6 +889,21 @@ body.example > section #files > ul li {
 	}
 }
 
+:root.lab {
+	--color: white;
+	--color--background: black;
+	--color--tint: #222222;
+	--color--links: blue;
+	--color--code: #888888;
+	--color--highlight: hsl(0, 0%, 100%, 5%);
+}
+
+@media (any-hover: hover) {
+	:root.lab:hover {
+		--color--highlight: hsl(0, 0%, 100%, 10%);
+	}
+}
+
 @media (max-width: 23.375em) {
 	:root {
 		--typography--size: calc((16/375) * 100vw);
@@ -956,6 +971,7 @@ body {
 	--margin--vertical--4: calc(var(--typography--between) + 4 * var(--typography--font-size) * var(--typography--leading));
 	--margin--vertical--6: calc(var(--typography--between) + 6 * var(--typography--font-size) * var(--typography--leading));
 	--margin--vertical--8: calc(var(--typography--between) + 8 * var(--typography--font-size) * var(--typography--leading));
+	background-color: var(--color--background);
 }
 
 body h1,
@@ -1875,6 +1891,12 @@ body.example > section #files > ul body > main > article blockquote.callout li {
 	mix-blend-mode: multiply;
 }
 
+.lab body > main > article blockquote.callout code,
+.lab body > main > article blockquote.callout body.example > section #files > ul li,
+body.example > section #files > ul .lab body > main > article blockquote.callout li {
+	mix-blend-mode: screen;
+}
+
 body > main > article blockquote.callout[icon] {
 	padding-left: calc(2 * var(--padding) + 2ch);
 }
@@ -1904,6 +1926,7 @@ body > main > article blockquote:not(.callout) {
 }
 
 body > main > article blockquote:not(.callout):before {
+	color: var(--color);
 	content: "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | ";
 	font-style: normal;
 	left: 0;

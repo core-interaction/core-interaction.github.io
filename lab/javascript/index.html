@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="lab">
 	<head>
 		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
 
@@ -12,7 +12,9 @@
 
 		<script src="/assets/scripts/common.js"></script>
 
-		<meta name="theme-color" content="#e42a1d">
+
+		<meta name="theme-color" content="#000000">
+
 	</head>
 	<body class="lab">
 		<main>
@@ -58,7 +60,7 @@
 
 				<p><cite><a href="https://www.infoworld.com/article/2653798/javascript-creator-ponders-past--future.html">Brendan Eich</a></cite></p>
 
-				<p>Like HTML/CSS, JavaScript was a malleable, <em>interpreted</em> (not <a href="https://en.wikipedia.org/wiki/Compiled_language"><em>compiled</em></a>) language running in the browser<span class="mdash">—</span>meaning the source code could be seen by anyone, and anyone could borrow or modify it for their needs. And so as our computers<span class="mdash">—</span>and thus our browsers<span class="mdash">—</span>became faster and cheaper, JS was used for more and more things. Remember that now the tendrils of JavaScript <a href="/topic/everything/#its-increasingly-just-js-behind-the-scenes">are almost everywhere</a><span class="mdash">—</span>running headless on servers, rendering whole sites, talking to hardware, processing NASA images, and so on. It’s web technologies, all the way down.</p>
+				<p>Like HTML/CSS, JavaScript was a malleable, <em>interpreted</em> (not <a href="https://en.wikipedia.org/wiki/Compiled_language"><em>compiled</em></a>) language running in the browser<span class="mdash">—</span>meaning the source code could be seen by anyone, and anyone could borrow or modify it for their needs. And so as our computers<span class="mdash">—</span>and thus our browsers<span class="mdash">—</span>became faster and cheaper, JS was used for more and more things. Remember that now the tendrils of JavaScript <a href="/lab/everything/#its-increasingly-just-js-behind-the-scenes">are almost everywhere</a><span class="mdash">—</span>running headless on servers, rendering whole sites, talking to hardware, processing NASA images, and so on. It’s web technologies, all the way down.</p>
 
 				<blockquote class="quote">
 					<p>Any application that can be written in JavaScript, will eventually be written in JavaScript.</p>
@@ -86,7 +88,7 @@
 
 				<h3 id="1-inline-event-handlers">1. Inline event handlers</h3>
 
-				<p>JS was first added directly like <a href="/topic/html/#attributes"><em>attributes</em></a> in HTML tags, just like CSS<span class="mdash">—</span>but attached/listening for <a href="https://www.w3schools.com/tags/ref_eventattributes.asp">specific events</a>:</p>
+				<p>JS was first added directly like <a href="/lab/html/#attributes"><em>attributes</em></a> in HTML tags, just like CSS<span class="mdash">—</span>but attached/listening for <a href="https://www.w3schools.com/tags/ref_eventattributes.asp">specific events</a>:</p>
 
 				<div style="max-width: 76rem" class="language-html highlighter-rouge">
 					<div class="highlight">
@@ -121,7 +123,7 @@
 
 				</figure>
 
-				<p>Here the <code class="language-plaintext highlighter-rouge">onclick</code> is a shorthand for using <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a>. We also store (declare) the element here as a <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables">variable</a>, to keep our code readable. These are a bit like their <a href="/topic/responsive/#briefly-css-variables">CSS counterparts</a>. Ergonomics!</p>
+				<p>Here the <code class="language-plaintext highlighter-rouge">onclick</code> is a shorthand for using <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a>. We also store (declare) the element here as a <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables">variable</a>, to keep our code readable. These are a bit like their <a href="/lab/responsive/#briefly-css-variables">CSS counterparts</a>. Ergonomics!</p>
 
 				<h3 id="oh-also-noscript">Oh also, <code class="language-plaintext highlighter-rouge">&lt;noscript&gt;</code></h3>
 
@@ -162,7 +164,7 @@
 
 				<p>Okay, time for a more practical example: probably the most common thing you will use JS for<span class="mdash">—</span>especially as we’re starting out<span class="mdash">—</span>is simply to add or remove (toggle) a class from something when the user interacts with your page (such as clicking on a menu).</p>
 
-				<p>Like with our <a href="/topic/advanced-css/#transitions">transition</a> examples last week, the element needs two states in your CSS: <em>without</em> the class and then <em>with</em> the class. The JavaScript interaction/event will switch between them, and our CSS <code class="language-plaintext highlighter-rouge">transition</code> will smooth out the… transition.</p>
+				<p>Like with our <a href="/lab/advanced-css/#transitions">transition</a> examples last week, the element needs two states in your CSS: <em>without</em> the class and then <em>with</em> the class. The JavaScript interaction/event will switch between them, and our CSS <code class="language-plaintext highlighter-rouge">transition</code> will smooth out the… transition.</p>
 
 				<p>We’ll again use <code class="language-plaintext highlighter-rouge">addEventListener</code> and <code class="language-plaintext highlighter-rouge">querySelector</code> to listen for clicks, but then modify the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList">classList</a> of a <em>different</em> element:</p>
 
@@ -222,14 +224,14 @@
 
 				<ul>
 					<li>
-						<p>Using <code class="language-plaintext highlighter-rouge">alert("Your message")</code> for <em>telemetry</em>/<em>debugging</em> can quickly be pretty annoying<span class="mdash">—</span>instead, you can use <code class="language-plaintext highlighter-rouge">console.log("Your message")</code> to show messages in the <a href="/topic/inspector/#the-console">DevTools console</a>. The console will also show any JavaScript errors!</p>
+						<p>Using <code class="language-plaintext highlighter-rouge">alert("Your message")</code> for <em>telemetry</em>/<em>debugging</em> can quickly be pretty annoying<span class="mdash">—</span>instead, you can use <code class="language-plaintext highlighter-rouge">console.log("Your message")</code> to show messages in the <a href="/lab/inspector/#the-console">DevTools console</a>. The console will also show any JavaScript errors!</p>
 
 						<p><em>On the Mac, Hit ⌘-⌥-J (command-option-J) to go right there!</em></p>
 
 						<p><em>In other languages, these functions are often, ironically, called <em>print</em>.</em></p>
 					</li>
 					<li>
-						<p>Like <a href="/topic/html/#case-whitespace-tabs-line-breaks">HTML</a>/<a href="/topic/css/#ergonomics">CSS</a>, JS does not care about whitespace or tabbing. But it <em>is</em> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#basics">case-sensitive</a>!</p>
+						<p>Like <a href="/lab/html/#case-whitespace-tabs-line-breaks">HTML</a>/<a href="/lab/css/#ergonomics">CSS</a>, JS does not care about whitespace or tabbing. But it <em>is</em> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#basics">case-sensitive</a>!</p>
 					</li>
 					<li>
 						<p>Search on <a href="https://stackoverflow.com/">Stack Overflow</a>! Someone has likely had your problem, before. Many people don’t really <em>know</em> JS (myself included)… so much as they really know SO.</p>

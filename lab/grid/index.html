@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="lab">
 	<head>
 		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
 
@@ -12,13 +12,15 @@
 
 		<script src="/assets/scripts/common.js"></script>
 
-		<meta name="theme-color" content="#e42a1d">
+
+		<meta name="theme-color" content="#000000">
+
 	</head>
 	<body class="lab">
 		<main>
 
 			<article>
-				<p class="left"><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids#line-based_placement">CSS grid layout</a> (from here on, just <em>grid</em>) is another, even more recent addition to CSS, continuing on from <a href="/topic/flexbox/"><em>flexbox</em></a>. While flex is a <em>one-dimensional</em> layout system<span class="mdash">—</span>focused on horizontal <em>or</em> vertical arrangements<span class="mdash">—</span>grid is <em>two-dimensional</em> system, integrating the two directions together.</p>
+				<p class="left"><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids#line-based_placement">CSS grid layout</a> (from here on, just <em>grid</em>) is another, even more recent addition to CSS, continuing on from <a href="/lab/flexbox/"><em>flexbox</em></a>. While flex is a <em>one-dimensional</em> layout system<span class="mdash">—</span>focused on horizontal <em>or</em> vertical arrangements<span class="mdash">—</span>grid is <em>two-dimensional</em> system, integrating the two directions together.</p>
 
 				<ul class="no-marker icon-link right" rows="6">
 					<li>
@@ -58,7 +60,7 @@
 					</li>
 				</ul>
 
-				<p>(We had some of this two-dimensionality with <a href="/topic/flexbox/#flex-wrap">
+				<p>(We had some of this two-dimensionality with <a href="/lab/flexbox/#flex-wrap">
 						<nobr>flex-wrap</nobr>
 					</a>, but grid offers much more control.)</p>
 
@@ -96,7 +98,7 @@
 
 				<h2 id="new-units-and-functions">New units and functions</h2>
 
-				<p>Grid also introduces some specific new <a href="/topic/box-model/#and-their-units">length units</a> and functions to use them:</p>
+				<p>Grid also introduces some specific new <a href="/lab/box-model/#and-their-units">length units</a> and functions to use them:</p>
 
 				<dl>
 					<dt><code class="language-plaintext highlighter-rouge">fr</code></dt>
@@ -249,7 +251,7 @@
 
 				<h3 id="gap--column-gap--row-gap"><code class="language-plaintext highlighter-rouge">gap</code> / <code class="language-plaintext highlighter-rouge">column-gap</code> / <code class="language-plaintext highlighter-rouge">row-gap</code></h3>
 
-				<p><em>Grid</em> also shares the <code class="language-plaintext highlighter-rouge">gap</code>, <code class="language-plaintext highlighter-rouge">column-gap</code>, and <code class="language-plaintext highlighter-rouge">row-gap</code> <a href="/topic/flexbox/#gap-row-gap-and-column-gap">properties with <em>flex</em></a><span class="mdash">—</span>to add gutters between the <em>tracks</em>. The syntax and behavior is the same!</p>
+				<p><em>Grid</em> also shares the <code class="language-plaintext highlighter-rouge">gap</code>, <code class="language-plaintext highlighter-rouge">column-gap</code>, and <code class="language-plaintext highlighter-rouge">row-gap</code> <a href="/lab/flexbox/#gap-row-gap-and-column-gap">properties with <em>flex</em></a><span class="mdash">—</span>to add gutters between the <em>tracks</em>. The syntax and behavior is the same!</p>
 
 				<figure style="--height--max: 57rem">
 
@@ -263,7 +265,7 @@
 
 				<h3 id="justify-items"><code class="language-plaintext highlighter-rouge">justify-items</code></h3>
 
-				<p>Also <a href="/topic/flexbox/#justify-content">like <em>flex</em></a> (there’s a pattern here), we can position items within the tracks<span class="mdash">—</span>but now we have control over both axes and the overall placement. To start, <code class="language-plaintext highlighter-rouge">justify-items</code> positions all the <em>grid items</em> along their row axis.</p>
+				<p>Also <a href="/lab/flexbox/#justify-content">like <em>flex</em></a> (there’s a pattern here), we can position items within the tracks<span class="mdash">—</span>but now we have control over both axes and the overall placement. To start, <code class="language-plaintext highlighter-rouge">justify-items</code> positions all the <em>grid items</em> along their row axis.</p>
 
 				<p>The terminology here is always a bit confusing, but think of it this way<span class="mdash">—</span>in <em>grid</em>, the main axis is always the horizontal row. So <em>justify</em> always means left/right, and <em>align</em> always means top/bottom. Easier to remember than flex!</p>
 
@@ -279,7 +281,7 @@
 
 				<h3 id="align-items"><code class="language-plaintext highlighter-rouge">align-items</code></h3>
 
-				<p>And <code class="language-plaintext highlighter-rouge">align-items</code> directly corresponds to the <a href="/topic/flexbox/#align-items">flex values</a>, to position all the <em>items</em> vertically along their column axis:</p>
+				<p>And <code class="language-plaintext highlighter-rouge">align-items</code> directly corresponds to the <a href="/lab/flexbox/#align-items">flex values</a>, to position all the <em>items</em> vertically along their column axis:</p>
 
 				<figure style="--height--max: 70rem">
 
@@ -297,7 +299,7 @@
 
 				<h3 id="justify-content--align-content"><code class="language-plaintext highlighter-rouge">justify-content</code> / <code class="language-plaintext highlighter-rouge">align-content</code></h3>
 
-				<p>If the total size of your grid is less than the container (because of your <em>explicit</em> column or row sizes), you can set the <em>overall</em> justification and alignment within the container. Again, <a href="/topic/flexbox/#justify-content">this is just</a> <a href="/topic/flexbox/#align-items">like flex</a>! Same syntax, same behavior<span class="mdash">—</span>you get the idea. Grid is like <em>Flex+</em>.</p>
+				<p>If the total size of your grid is less than the container (because of your <em>explicit</em> column or row sizes), you can set the <em>overall</em> justification and alignment within the container. Again, <a href="/lab/flexbox/#justify-content">this is just</a> <a href="/lab/flexbox/#align-items">like flex</a>! Same syntax, same behavior<span class="mdash">—</span>you get the idea. Grid is like <em>Flex+</em>.</p>
 
 				<h3 id="shorthand">Shorthand?</h3>
 
@@ -309,7 +311,7 @@
 
 				<h3 id="using-repeat">Using repeat</h3>
 
-				<p><em>Grid’s</em> <code class="language-plaintext highlighter-rouge">repeat</code> function is very commonly used to make even-column grids. And of course, they can be made responsive with <a href="/topic/media-queries">media queries</a> and <a href="/topic/responsive/#briefly-css-variables">CSS variables</a>!</p>
+				<p><em>Grid’s</em> <code class="language-plaintext highlighter-rouge">repeat</code> function is very commonly used to make even-column grids. And of course, they can be made responsive with <a href="/lab/media-queries">media queries</a> and <a href="/lab/responsive/#briefly-css-variables">CSS variables</a>!</p>
 
 				<figure style="--height--max: 38rem">
 
@@ -427,11 +429,11 @@
 
 				</figure>
 
-				<p>Keep in mind that with both <code class="language-plaintext highlighter-rouge">grid-area</code> and <code class="language-plaintext highlighter-rouge">grid-column</code> / <code class="language-plaintext highlighter-rouge">grid-row</code>, you are able to tell multiple <em>grid items</em> to land in the same <em>cell</em><span class="mdash">—</span>there isn’t any kind of fancy collision-proofing. If this is what you want, you can use <code class="language-plaintext highlighter-rouge">z-index</code> to specify which one is visually <a href="/topic/box-model/#depth">in front</a>!</p>
+				<p>Keep in mind that with both <code class="language-plaintext highlighter-rouge">grid-area</code> and <code class="language-plaintext highlighter-rouge">grid-column</code> / <code class="language-plaintext highlighter-rouge">grid-row</code>, you are able to tell multiple <em>grid items</em> to land in the same <em>cell</em><span class="mdash">—</span>there isn’t any kind of fancy collision-proofing. If this is what you want, you can use <code class="language-plaintext highlighter-rouge">z-index</code> to specify which one is visually <a href="/lab/box-model/#depth">in front</a>!</p>
 
 				<h3 id="justify-self--align-self"><code class="language-plaintext highlighter-rouge">justify-self</code> / <code class="language-plaintext highlighter-rouge">align-self</code></h3>
 
-				<p>Finally, just like flex<span class="mdash">—</span>you can position individual <em>grid items</em> within their <em>tracks</em> using <code class="language-plaintext highlighter-rouge">justify-self</code> and <code class="language-plaintext highlighter-rouge">align-self</code>. The syntax is the same as <a href="/topic/flexbox/#align-self">align in flex</a>, again<span class="mdash">—</span>but as with <code class="language-plaintext highlighter-rouge">justify-items</code> / <code class="language-plaintext highlighter-rouge">align-items</code> above, you don’t have to flip axes:</p>
+				<p>Finally, just like flex<span class="mdash">—</span>you can position individual <em>grid items</em> within their <em>tracks</em> using <code class="language-plaintext highlighter-rouge">justify-self</code> and <code class="language-plaintext highlighter-rouge">align-self</code>. The syntax is the same as <a href="/lab/flexbox/#align-self">align in flex</a>, again<span class="mdash">—</span>but as with <code class="language-plaintext highlighter-rouge">justify-items</code> / <code class="language-plaintext highlighter-rouge">align-items</code> above, you don’t have to flip axes:</p>
 
 				<figure style="--height--max: 62rem">
 

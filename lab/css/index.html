@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="lab">
 	<head>
 		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
 
@@ -12,7 +12,9 @@
 
 		<script src="/assets/scripts/common.js"></script>
 
-		<meta name="theme-color" content="#e42a1d">
+
+		<meta name="theme-color" content="#000000">
+
 	</head>
 	<body class="lab">
 		<main>
@@ -85,7 +87,7 @@
 
 				<h3 id="1-inline-with-style">1. Inline with <code class="language-plaintext highlighter-rouge">style=</code></h3>
 
-				<p>This is the original and most straightforward way to add styles, directly as <a href="/topic/html/#attributes"><em>attributes</em></a> in HTML tags:</p>
+				<p>This is the original and most straightforward way to add styles, directly as <a href="/lab/html/#attributes"><em>attributes</em></a> in HTML tags:</p>
 
 				<div class="language-html left highlighter-rouge">
 					<div class="highlight">
@@ -109,7 +111,7 @@
 
 				<h3 id="2-along-comes-style">2. Along comes <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code></h3>
 
-				<p>So the next way that was added to the standard was using a special HTML element, <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code>, that wraps blocks of CSS that then apply to an entire document. They go up in the <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> of our <a href="/topic/html/#the-basic-document">HTML documents</a>:</p>
+				<p>So the next way that was added to the standard was using a special HTML element, <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code>, that wraps blocks of CSS that then apply to an entire document. They go up in the <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> of our <a href="/lab/html/#the-basic-document">HTML documents</a>:</p>
 
 				<div class="language-html half highlighter-rouge">
 					<div class="highlight">
@@ -193,7 +195,7 @@
 
 				<h3 id="ergonomics">Ergonomics</h3>
 
-				<p>Just <a href="/topic/html/#case-whitespace-tabs-line-breaks">like HTML</a>, CSS does not care about capitalization, extra white space, or line breaks. Folks generally use tabs/indenting to indicate hierarchy, but again it is just whatever makes it easier for you!</p>
+				<p>Just <a href="/lab/html/#case-whitespace-tabs-line-breaks">like HTML</a>, CSS does not care about capitalization, extra white space, or line breaks. Folks generally use tabs/indenting to indicate hierarchy, but again it is just whatever makes it easier for you!</p>
 
 				<div class="language-css half highlighter-rouge">
 					<div class="highlight">
@@ -240,7 +242,7 @@
 
 				<h3 id="2-with-aclass">2. With a class</h3>
 
-				<p>But maybe you don’t want to style all of the paragraphs. You can then use a <code class="language-plaintext highlighter-rouge">class</code> to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors">target specific instances</a>. They are added as an <em><a href="/topic/html/#attributes">attribute</a></em> on the element you want to target:</p>
+				<p>But maybe you don’t want to style all of the paragraphs. You can then use a <code class="language-plaintext highlighter-rouge">class</code> to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors">target specific instances</a>. They are added as an <em><a href="/lab/html/#attributes">attribute</a></em> on the element you want to target:</p>
 
 				<figure style="--height--max: 43rem">
 
@@ -270,7 +272,7 @@
 
 				</figure>
 
-				<p>These are prefixed by <code class="language-plaintext highlighter-rouge">#</code> in CSS, as with <code class="language-plaintext highlighter-rouge">#title</code> and <code class="language-plaintext highlighter-rouge">#introduction</code>. They can also be used as <a href="/topic/html/#attributes">link destinations</a>.</p>
+				<p>These are prefixed by <code class="language-plaintext highlighter-rouge">#</code> in CSS, as with <code class="language-plaintext highlighter-rouge">#title</code> and <code class="language-plaintext highlighter-rouge">#introduction</code>. They can also be used as <a href="/lab/html/#attributes">link destinations</a>.</p>
 
 				<h2 id="fancy-selectors"><em>Fancy</em> selectors</h2>
 
@@ -483,7 +485,7 @@
 
 				<h2 id="resets">Resets</h2>
 
-				<p>As we talked about <a href="/topic/html/#user-agent-styles">last week</a>, browsers have their own, built-in way that they display HTML elements. These <em>user-agent styles</em> are specific, somewhat, to each platform and each browser. This is the “look” we have been seeing when we write plain HTML without any CSS<span class="mdash">—</span>usually Times New Roman, with blue links, and small spacing between elements.</p>
+				<p>As we talked about <a href="/lab/html/#user-agent-styles">last week</a>, browsers have their own, built-in way that they display HTML elements. These <em>user-agent styles</em> are specific, somewhat, to each platform and each browser. This is the “look” we have been seeing when we write plain HTML without any CSS<span class="mdash">—</span>usually Times New Roman, with blue links, and small spacing between elements.</p>
 
 				<p>Often, when you are working towards your own design, you will find yourself fighting against these built-in styles. Many designers/front-end folk instead start with <a href="https://meyerweb.com/eric/tools/css/reset/"><em>resets</em></a><span class="mdash">—</span>a semi-standard collection of CSS rules that “zero out” the browser’s built-in styles. This means you have to write everything yourself, but you have more control and aren’t building on unknown foundations. And things should be (more) consistent, across browsers and platforms.</p>
 
@@ -496,7 +498,7 @@
 					</div>
 				</div>
 
-				<p><em>This is what we use here for our course site!</em></p>
+				<p><em>This is what we use on here!</em></p>
 
 				<blockquote class="quote">
 					<p>The author of HTML documents has no influence over the presentation. Indeed, if conflicts arise the user should have the last word, but one should also allow the author to attach style hints. The last point has especially been a source of much frustration among professions that are used to be in control of paper-based publishing. This proposal tries to soften the tension between the author and the reader.</p>

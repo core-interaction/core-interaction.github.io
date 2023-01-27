@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="lab">
 	<head>
 		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
 
@@ -12,7 +12,9 @@
 
 		<script src="/assets/scripts/common.js"></script>
 
-		<meta name="theme-color" content="#e42a1d">
+
+		<meta name="theme-color" content="#000000">
+
 	</head>
 	<body class="lab">
 		<main>
@@ -147,7 +149,7 @@
 
 				<p>These are colloquially called <em>media queries</em>, and they allow us to check if screen is a certain width or resolution (or other features, which we’ll get to)<span class="mdash">—</span>and then apply selective CSS only in that scenario. These let site layouts <em>respond</em> intentionally to different devices, for the first time.</p>
 
-				<p>Practically, these are blocks of CSS<span class="mdash">—</span>a little bit like <a href="/topic/css/#basic-selectors"><em>selectors</em></a> that contain other selectors<span class="mdash">—</span>but which only apply conditionally when the test/criteria is met.</p>
+				<p>Practically, these are blocks of CSS<span class="mdash">—</span>a little bit like <a href="/lab/css/#basic-selectors"><em>selectors</em></a> that contain other selectors<span class="mdash">—</span>but which only apply conditionally when the test/criteria is met.</p>
 
 				<div class="language-css highlighter-rouge">
 					<div class="highlight">
@@ -160,7 +162,7 @@
 					</div>
 				</div>
 
-				<p>These blocks are like any other CSS<span class="mdash">—</span>if there are multiple conditions that are met, or there is a tie between properties<span class="mdash">—</span>the rules <a href="/topic/css/#oh-right-the-cascade">cascade</a> down and the lowest/last one takes precedent.</p>
+				<p>These blocks are like any other CSS<span class="mdash">—</span>if there are multiple conditions that are met, or there is a tie between properties<span class="mdash">—</span>the rules <a href="/lab/css/#oh-right-the-cascade">cascade</a> down and the lowest/last one takes precedent.</p>
 
 				<h2 id="width-based-breakpoints">Width-based <em>breakpoints</em></h2>
 
@@ -203,7 +205,7 @@
 
 				</figure>
 
-				<p class="four-above">This width rule/test/criteria uses the same syntax as <a href="/topic/box-model/#and-their-units">length properties</a>, meaning you can use <code class="language-plaintext highlighter-rouge">min-width</code>, <code class="language-plaintext highlighter-rouge">width</code>, and <code class="language-plaintext highlighter-rouge">max-width</code>.</p>
+				<p class="four-above">This width rule/test/criteria uses the same syntax as <a href="/lab/box-model/#and-their-units">length properties</a>, meaning you can use <code class="language-plaintext highlighter-rouge">min-width</code>, <code class="language-plaintext highlighter-rouge">width</code>, and <code class="language-plaintext highlighter-rouge">max-width</code>.</p>
 
 				<figure style="--height--max: 36rem">
 
@@ -241,7 +243,7 @@
 
 				<p>You can also be less specific about your width/height and instead use <code class="language-plaintext highlighter-rouge">orientation</code><span class="mdash">—</span>like when you rotate your phone. The queries use the wonderfully tenacious names/values of <code class="language-plaintext highlighter-rouge">portrait</code> or <code class="language-plaintext highlighter-rouge">landscape</code>.</p>
 
-				<p><em>(Everything was a painting before it was a photograph or a <a href="/topic/everything">web page</a>.)</em></p>
+				<p><em>(Everything was a painting before it was a photograph or a <a href="/lab/everything">web page</a>.)</em></p>
 
 				<figure style="--height--max: 31rem">
 
@@ -271,7 +273,7 @@
 
 				</figure>
 
-				<p class="four-above">You can also use comma-separated queries (like <a href="/topic/css/#fancy-selectors"><em>selector lists</em></a>) to apply <em>or</em> logic<span class="mdash">—</span>setting the same styles for different scenarios.</p>
+				<p class="four-above">You can also use comma-separated queries (like <a href="/lab/css/#fancy-selectors"><em>selector lists</em></a>) to apply <em>or</em> logic<span class="mdash">—</span>setting the same styles for different scenarios.</p>
 
 				<figure style="--height--max: 25rem">
 
@@ -348,7 +350,7 @@
 					</div>
 				</div>
 
-				<p class="four-above">You can use these as values for <em>any</em> <a href="/topic/css/#css-rules">CSS property</a><span class="mdash">—</span>colors, spacing, etc.<span class="mdash">—</span>anything you use multiple times and want to be consistent, or want to easily change.</p>
+				<p class="four-above">You can use these as values for <em>any</em> <a href="/lab/css/#css-rules">CSS property</a><span class="mdash">—</span>colors, spacing, etc.<span class="mdash">—</span>anything you use multiple times and want to be consistent, or want to easily change.</p>
 
 				<figure style="--height--max: 70rem">
 

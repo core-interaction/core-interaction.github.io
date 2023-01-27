@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="lab">
 	<head>
 		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
 
@@ -12,7 +12,9 @@
 
 		<script src="/assets/scripts/common.js"></script>
 
-		<meta name="theme-color" content="#e42a1d">
+
+		<meta name="theme-color" content="#000000">
+
 	</head>
 	<body class="lab">
 		<main>
@@ -87,7 +89,7 @@
 
 				<p>It is based on the <code class="language-plaintext highlighter-rouge">font-family</code>, the <code class="language-plaintext highlighter-rouge">font-size</code>, and the <code class="language-plaintext highlighter-rouge">line-height</code>, which basically means it is different all the time<span class="mdash">—</span>and different from Adobe/Figma to HTML. This makes it difficult to position type precisely<span class="mdash">—</span>especially at large, expressive sizes like your headings! It’s always annoying, and you’ll often be adding/subtracting your spacing (<code class="language-plaintext highlighter-rouge">margin</code> or <code class="language-plaintext highlighter-rouge">padding</code>) to account for it, if you want to line everything up <em>just right</em>, optically.</p>
 
-				<p>Let’s avoid it. We can use <a href="/topic/css/#pseudo-elements">pseudo-elements</a>, <code class="language-plaintext highlighter-rouge">:after</code> / <code class="language-plaintext highlighter-rouge">:before</code><span class="mdash">—</span>which are entirely created by CSS, not in your DOM<span class="mdash">—</span>to negate this (vertical) space with negative margin. By doing this on the pseudo elements, we can still position the parent element normally, otherwise!</p>
+				<p>Let’s avoid it. We can use <a href="/lab/css/#pseudo-elements">pseudo-elements</a>, <code class="language-plaintext highlighter-rouge">:after</code> / <code class="language-plaintext highlighter-rouge">:before</code><span class="mdash">—</span>which are entirely created by CSS, not in your DOM<span class="mdash">—</span>to negate this (vertical) space with negative margin. By doing this on the pseudo elements, we can still position the parent element normally, otherwise!</p>
 
 				<figure style="--height--max: 62rem">
 
@@ -141,7 +143,7 @@
 
 				<p>More often, you’ll want to keep certain words <em>together</em><span class="mdash">—</span>to avoid a <a href="https://www.fonts.com/content/learning/fontology/level-2/text-typography/rags-widows-orphans">widow or orphan</a>, or to keep important/related text together<span class="mdash">—</span>like in dates, <em>November 2</em>, or with names like <em>Adrian Li</em>.</p>
 
-				<p>You can wrap multiple words (or whole phrases) in an <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nobr"><em>nobr</em></a> tag<span class="mdash">—</span>keeping in mind that like <code class="language-plaintext highlighter-rouge">&lt;em&gt;</code> or <code class="language-plaintext highlighter-rouge">&lt;strong&gt;</code>, the default behavior is cleared by most <a href="/topic/css/#resets">resets</a> (ours included)<span class="mdash">—</span>so you have to restore the property in CSS. You can also use a manual <code class="language-plaintext highlighter-rouge">&amp;nbsp;</code> entity between words:</p>
+				<p>You can wrap multiple words (or whole phrases) in an <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nobr"><em>nobr</em></a> tag<span class="mdash">—</span>keeping in mind that like <code class="language-plaintext highlighter-rouge">&lt;em&gt;</code> or <code class="language-plaintext highlighter-rouge">&lt;strong&gt;</code>, the default behavior is cleared by most <a href="/lab/css/#resets">resets</a> (ours included)<span class="mdash">—</span>so you have to restore the property in CSS. You can also use a manual <code class="language-plaintext highlighter-rouge">&amp;nbsp;</code> entity between words:</p>
 
 				<figure style="--height--max: 46rem">
 
@@ -267,7 +269,7 @@
 
 				<p class="right">Sometimes the shorthand here is easier than discrete properties, where you have to maintain the same order across all of them. It’s all the same to the computer!</p>
 
-				<p class="two-above">Often, CSS transitions will be used <em>with</em> JavaScript adding/removing classes, to make a state change less abrupt. For now, we’ll use <a href="/topic/css/#pseudo-classes">pseudo-classes</a> to demonstrate:</p>
+				<p class="two-above">Often, CSS transitions will be used <em>with</em> JavaScript adding/removing classes, to make a state change less abrupt. For now, we’ll use <a href="/lab/css/#pseudo-classes">pseudo-classes</a> to demonstrate:</p>
 
 				<figure style="--height--max: 32rem">
 
