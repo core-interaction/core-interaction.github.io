@@ -890,18 +890,7 @@ body.example > section #files > ul li {
 }
 
 :root.lab {
-	--color: white;
-	--color--background: black;
-	--color--tint: #222222;
 	--color--links: blue;
-	--color--code: #888888;
-	--color--highlight: hsl(0, 0%, 100%, 5%);
-}
-
-@media (any-hover: hover) {
-	:root.lab:hover {
-		--color--highlight: hsl(0, 0%, 100%, 10%);
-	}
 }
 
 @media (max-width: 23.375em) {
