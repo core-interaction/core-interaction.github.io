@@ -12,6 +12,6 @@ layout: default
 		</header>
 	{% endif %}
 	<article>
-		{{ content | mdash_spans }}
+		{{ content | mdash_spans | replace: '/topic/', '/lab/' }}
 	</article>
 </main>
