@@ -20,12 +20,18 @@ defaults:
     values:
       layout: example
   - scope:
-      path: ""
+      path: ''
     values:
       layout: page
+  - scope:
+      path: ''
+      type: topics
+    values:
+      layout: default
 collections:
   topics:
     output: true
+    permalink: :collection/:path
 livereload: true
 permalink: /:basename/
 sass:
