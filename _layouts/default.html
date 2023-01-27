@@ -8,8 +8,6 @@
 		<link href="/assets/styles/reset.css" rel="stylesheet">
 		<link href="/assets/styles/common.css" rel="stylesheet">
 		<link href="/assets/styles/syntax.css" rel="stylesheet">
-		<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
-		<link href="/assets/icons/touch.png" rel="apple-touch-icon">
 		{% if page.layout == 'example' %}
 			<script src="/assets/scripts/example.js"></script>
 		{% else %}
@@ -17,7 +15,11 @@
 		{% endif %}
 		{% if page.layout == 'lab' %}
 			<meta name="theme-color" content="#000000">
+			<link href="/assets/icons/blue.png" rel="icon" sizes="64x64" type="image/x-icon">
+			<link href="/assets/icons/blue.png" rel="apple-touch-icon">
 		{% else %}
+			<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
+			<link href="/assets/icons/touch.png" rel="apple-touch-icon">
 			<meta name="theme-color" content="#e42a1d">
 		{% endif %}
 	</head>
