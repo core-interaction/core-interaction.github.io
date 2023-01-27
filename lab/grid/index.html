@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
+
+		<title>And (CSS) grid</title>
+		<link href="/assets/styles/reset.css" rel="stylesheet">
+		<link href="/assets/styles/common.css" rel="stylesheet">
+		<link href="/assets/styles/syntax.css" rel="stylesheet">
+		<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
+		<link href="/assets/icons/touch.png" rel="apple-touch-icon">
+
+		<script src="/assets/scripts/common.js"></script>
+
+		<meta name="theme-color" content="#e42a1d">
+	</head>
+	<body class="lab">
+		<main>
+
+			<article>
+				<p class="left"><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids#line-based_placement">CSS grid layout</a> (from here on, just <em>grid</em>) is another, even more recent addition to CSS, continuing on from <a href="/topic/flexbox/"><em>flexbox</em></a>. While flex is a <em>one-dimensional</em> layout system<span class="mdash">—</span>focused on horizontal <em>or</em> vertical arrangements<span class="mdash">—</span>grid is <em>two-dimensional</em> system, integrating the two directions together.</p>
+
+				<ul class="no-marker icon-link right" rows="6">
+					<li>
+						<p><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">A complete guide to grid | CSS-Tricks</a> <br />
+							<em>The <em>grid</em> version of the <em>flexbox</em> classic.</em>
+						</p>
+					</li>
+					<li>
+						<p><a href="https://webkit.org/blog/7434/css-grid-layout-a-new-layout-module-for-the-web/">CSS Grid Layout: A New Layout Module for the Web</a> <br />
+							<em>WebKit (Safari’s) overview/introduction, from 2017.</em>
+						</p>
+					</li>
+					<li>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basic concepts of grid layout | MDN</a> <br />
+							<em>Back to MDN.</em>
+						</p>
+					</li>
+					<li>
+						<p><a href="https://www.youtube.com/watch?v=FEnRpy9Xfes">Basics of CSS Grid</a> <br />
+							<em>Web guru <a href="https://jensimmons.com">Jen Simmons</a> breaks it down.</em>
+						</p>
+					</li>
+					<li>
+						<p><a href="https://www.youtube.com/watch?v=hs3piaN4b5I">Flexbox vs. CSS Grid</a> <br />
+							<em>And also helps unpack when to use flex/grid.</em>
+						</p>
+					</li>
+					<li>
+						<p><a href="https://gridbyexample.com/examples/">Grid by Example</a> <br />
+							<em>Loads of layout examples.</em>
+						</p>
+					</li>
+					<li>
+						<p><a href="https://cssgridgarden.com">Grid Garden</a> <br />
+							<em>Like the Froggy game, but for grid.</em>
+						</p>
+					</li>
+				</ul>
+
+				<p>(We had some of this two-dimensionality with <a href="/topic/flexbox/#flex-wrap">
+						<nobr>flex-wrap</nobr>
+					</a>, but grid offers much more control.)</p>
+
+				<p>Grid is <em>a lot</em> like flex (this will be a running theme)<span class="mdash">—</span><wbr />a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display"><em>display</em></a> property applied on a parent/<wbr />container element. This <code class="language-plaintext highlighter-rouge">display: grid;</code> tells its (immediate) children/<wbr /><em>grid items</em> how they should be laid out. Also like flex, there is <code class="language-plaintext highlighter-rouge">display: inline-grid;</code> which behaves the same internally<span class="mdash">—</span><wbr />but with the parent behaving as an inline element.</p>
+
+				<p class="two-above">Grid supplants many of the previous box model layout systems (like floats, margin-centering, etc.) and, like flex, works much closer to how we think about layouts <em>as designers</em>. It can get complicated, but makes most layouts (especially responsive ones) much, much easier to implement.</p>
+
+				<p>There are many novel, powerful uses for <em>grid</em><span class="mdash">—</span>it is really the backbone of modern web layout. Let’s take a look.</p>
+
+				<h2 id="grid-terminology">Grid terminology</h2>
+
+				<p>Grid introduces us to some new vocabulary:</p>
+
+				<figure>
+
+					<img src="grid-concepts.svg" />
+
+
+					<figcaption>Borrowed from the WebKit post.<cite>
+							<a href="https://webkit.org/blog/7434/css-grid-layout-a-new-layout-module-for-the-web/"></a>
+						</cite></figcaption>
+
+				</figure>
+
+				<dl>
+					<dt>Line</dt>
+					<dd>The dividing lines that define the grid, vertical or horizontal. (Think <em>gutters</em>.)</dd>
+					<dt>Track</dt>
+					<dd>The horizontal or vertical space between the lines. (Think <em>rows</em> and <em>columns</em>.)</dd>
+					<dt>Cell</dt>
+					<dd>The intersection of a horizontal and vertical track. This is different from a <em>grid item<span class="mdash">—</span></em>the cell is the spot/placement, the item is the actual element<span class="mdash">—</span>since as you’ll see, you can position <em>items</em> in an arbitrary <em>cell</em>.</dd>
+					<dt>Area</dt>
+					<dd>You can combine one or more adjacent grid cells into a rectangular <em>area.</em> Often you give these a name, for convenience.</dd>
+				</dl>
+
+				<h2 id="new-units-and-functions">New units and functions</h2>
+
+				<p>Grid also introduces some specific new <a href="/topic/box-model/#and-their-units">length units</a> and functions to use them:</p>
+
+				<dl>
+					<dt><code class="language-plaintext highlighter-rouge">fr</code></dt>
+					<dd>
+						<p>This <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#the_fr_unit">new unit</a> represents a <em>fraction</em> of the available space in the grid container<span class="mdash">—</span>usually, <em>width</em>. This is kind of like using <em>percentages</em>, except we no longer have to do the maths and any <em>padding</em> or <em>gap</em> (gutter) is already accounted for. This is very handy; you’ll use it a lot.</p>
+
+						<div class="language-css highlighter-rouge">
+							<div class="highlight">
+								<pre class="highlight"><code><span class="nc">.two-thirds-one-third</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
+  <span class="py">grid-template-columns</span><span class="p">:</span> <span class="m">2</span><span class="n">fr</span> <span class="m">1</span><span class="n">fr</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+							</div>
+						</div>
+					</dd>
+					<dt><code class="language-plaintext highlighter-rouge">min-content</code></dt>
+					<dd>The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/min-content">intrinsic minimum width</a> of an element. With text, this is the longest single word.
+
+						<div class="language-css highlighter-rouge">
+							<div class="highlight">
+								<pre class="highlight"><code><span class="nc">.narrow-sidebar</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
+  <span class="py">grid-template-columns</span><span class="p">:</span> <span class="m">1</span><span class="n">fr</span> <span class="n">min-content</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+							</div>
+						</div>
+					</dd>
+					<dt><code class="language-plaintext highlighter-rouge">max-content</code></dt>
+					<dd>Same for <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/max-content">the maximum</a>. With text, this is the whole sentence/line.
+
+						<div class="language-css highlighter-rouge">
+							<div class="highlight">
+								<pre class="highlight"><code><span class="nc">.wider-sidebar</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
+  <span class="py">grid-template-columns</span><span class="p">:</span> <span class="m">1</span><span class="n">fr</span> <span class="n">max-content</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+							</div>
+						</div>
+					</dd>
+					<dt><code class="language-plaintext highlighter-rouge">fit-content</code></dt>
+					<dd>
+						<p>A <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/fit-content">combo of the min/max</a>. Uses available space<span class="mdash">—</span>but never less than <code class="language-plaintext highlighter-rouge">min-content</code> and never more than <code class="language-plaintext highlighter-rouge">max-content</code>.</p>
+
+						<div class="language-css highlighter-rouge">
+							<div class="highlight">
+								<pre class="highlight"><code><span class="nc">.fit-sidebar</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
+  <span class="py">grid-template-columns</span><span class="p">:</span> <span class="m">1</span><span class="n">fr</span> <span class="n">fit-content</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+							</div>
+						</div>
+					</dd>
+				</dl>
+
+				<p><em>You can use these three values in grid properties, as we’ll see <nobr>below<span class="mdash">—</span></nobr>but they are also usable anywhere length units work<span class="mdash">—</span>like <code class="language-plaintext highlighter-rouge">width</code>.</em></p>
+
+				<dl>
+					<dt><code class="language-plaintext highlighter-rouge">minmax()</code></dt>
+					<dd>
+						<p>A function that <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/minmax">defines a range</a> for a <em>track</em>, setting a minimum and maximum length together. These are really useful for setting reasonable limits on responsive grid designs!</p>
+
+						<div class="language-css highlighter-rouge">
+							<div class="highlight">
+								<pre class="highlight"><code><span class="nc">.flexible-sidebar</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
+  <span class="py">grid-template-columns</span><span class="p">:</span> <span class="m">1</span><span class="n">fr</span> <span class="n">minmax</span><span class="p">(</span><span class="m">200px</span><span class="p">,</span> <span class="m">400px</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+							</div>
+						</div>
+					</dd>
+					<dt><code class="language-plaintext highlighter-rouge">repeat()</code></dt>
+					<dd>
+						<p>This function <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/repeat">repeats a <em>track</em> list</a>, so you don’t have to write it over and over.</p>
+
+						<div class="language-css highlighter-rouge">
+							<div class="highlight">
+								<pre class="highlight"><code><span class="nc">.twelve-columns</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
+  <span class="py">grid-template-columns</span><span class="p">:</span> <span class="m">1</span><span class="n">fr</span> <span class="m">1</span><span class="n">fr</span> <span class="m">1</span><span class="n">fr</span> <span class="m">1</span><span class="n">fr</span> <span class="m">1</span><span class="n">fr</span> <span class="m">1</span><span class="n">fr</span> <span class="m">1</span><span class="n">fr</span> <span class="m">1</span><span class="n">fr</span> <span class="m">1</span><span class="n">fr</span> <span class="m">1</span><span class="n">fr</span> <span class="m">1</span><span class="n">fr</span> <span class="m">1</span><span class="n">fr</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="err"> </span>
+<span class="nc">.also-twelve-columns</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
+  <span class="py">grid-template-columns</span><span class="p">:</span> <span class="nb">repeat</span><span class="p">(</span><span class="m">12</span><span class="p">,</span> <span class="m">1</span><span class="n">fr</span><span class="p">);</span> <span class="c">/* Much better. */</span>
+<span class="p">}</span>
+</code></pre>
+							</div>
+						</div>
+					</dd>
+				</dl>
+
+				<p><em>Whenever you are writing the same exact code over and over, there is probably a shorter way. <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">Don’t repeat yourself</a>!</em></p>
+
+				<h2 id="container-parent-properties">Container (parent) properties</h2>
+
+				<p>Again, <em>grid</em> is a lot like <em>flex</em><span class="mdash">—</span>primarily properties that are applied on a container/parent element.</p>
+
+				<h3 id="grid-template-columns--grid-template-rows"><code class="language-plaintext highlighter-rouge">grid-template-columns</code> / <code class="language-plaintext highlighter-rouge">grid-template-rows</code></h3>
+
+				<p>Setting <code class="language-plaintext highlighter-rouge">display: grid;</code> won’t do much until you also declare some <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns">columns</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows">rows</a>, with <em>grid template</em>. You can specify <code class="language-plaintext highlighter-rouge">grid-template-columns</code>, <code class="language-plaintext highlighter-rouge">grid-template-rows</code>, or both. These properties are followed by a <em>track list</em> of the size for each track:</p>
+
+				<figure style="--height--max: 52rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/grid-template/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Notice in the second example, the items do not <em>wrap</em> to a new column<span class="mdash">—</span>because <code class="language-plaintext highlighter-rouge">grid-auto-flow: row;</code> is the default setting. The third example sets this to <code class="language-plaintext highlighter-rouge">column</code> to make it flow to a new one.</figcaption>
+
+				</figure>
+
+				<p>Again like <em>flex</em>, there is similar behavior on the horizontal/vertical <em>axes<span class="mdash">—</span></em>with the defaults around horizontal/row based behavior since width is usually our constraint (with pages scrolling vertically).</p>
+
+				<p>So for many uses, you will only need to specify your column <nobr>structure<span class="mdash">—</span></nobr><wbr />leaving the rows to create themselves, as needed. This is called an <em>implicit grid</em> (vs. an <em>explicit grid</em> that we set/define):</p>
+
+				<figure style="--height--max: 20rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/grid-template-columns/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>The additional rows are automatically added, as needed. Note that they size vertically to their content.</figcaption>
+
+				</figure>
+
+				<h3 id="grid-auto-columns--grid-auto-rows"><code class="language-plaintext highlighter-rouge">grid-auto-columns</code> / <code class="language-plaintext highlighter-rouge">grid-auto-rows</code></h3>
+
+				<p>By default, these <em>implicit grid</em> tracks are sized <code class="language-plaintext highlighter-rouge">auto</code> (to their content), but you can also specify their size<span class="mdash">—</span>often <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows">a <em>height</em></a> for the <code class="language-plaintext highlighter-rouge">grid-auto-rows</code>:</p>
+
+				<figure style="--height--max: 29rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/grid-auto-rows/demo"></iframe>
+					</div>
+
+
+
+				</figure>
+
+				<p>But <code class="language-plaintext highlighter-rouge">grid-auto-columns</code> only comes up if you force the columns to wrap with <code class="language-plaintext highlighter-rouge">grid-auto-flow: column;</code> as in the earlier example. Again, height is usually not our main constraint, with scrolling!</p>
+
+				<h3 id="gap--column-gap--row-gap"><code class="language-plaintext highlighter-rouge">gap</code> / <code class="language-plaintext highlighter-rouge">column-gap</code> / <code class="language-plaintext highlighter-rouge">row-gap</code></h3>
+
+				<p><em>Grid</em> also shares the <code class="language-plaintext highlighter-rouge">gap</code>, <code class="language-plaintext highlighter-rouge">column-gap</code>, and <code class="language-plaintext highlighter-rouge">row-gap</code> <a href="/topic/flexbox/#gap-row-gap-and-column-gap">properties with <em>flex</em></a><span class="mdash">—</span>to add gutters between the <em>tracks</em>. The syntax and behavior is the same!</p>
+
+				<figure style="--height--max: 57rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/grid-gap/demo"></iframe>
+					</div>
+
+
+
+				</figure>
+
+				<h3 id="justify-items"><code class="language-plaintext highlighter-rouge">justify-items</code></h3>
+
+				<p>Also <a href="/topic/flexbox/#justify-content">like <em>flex</em></a> (there’s a pattern here), we can position items within the tracks<span class="mdash">—</span>but now we have control over both axes and the overall placement. To start, <code class="language-plaintext highlighter-rouge">justify-items</code> positions all the <em>grid items</em> along their row axis.</p>
+
+				<p>The terminology here is always a bit confusing, but think of it this way<span class="mdash">—</span>in <em>grid</em>, the main axis is always the horizontal row. So <em>justify</em> always means left/right, and <em>align</em> always means top/bottom. Easier to remember than flex!</p>
+
+				<figure style="--height--max: 70rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/grid-justify-items/demo"></iframe>
+					</div>
+
+
+
+				</figure>
+
+				<h3 id="align-items"><code class="language-plaintext highlighter-rouge">align-items</code></h3>
+
+				<p>And <code class="language-plaintext highlighter-rouge">align-items</code> directly corresponds to the <a href="/topic/flexbox/#align-items">flex values</a>, to position all the <em>items</em> vertically along their column axis:</p>
+
+				<figure style="--height--max: 70rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/grid-align-items/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Note that there isn’t any change on the last <em>implicit</em> row with the default <code class="language-plaintext highlighter-rouge">auto</code>/content height.</figcaption>
+
+				</figure>
+
+				<p>There are <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items">also baseline align values</a>, but I don’t think I’ve ever seen them used in grid<span class="mdash">—</span>your layouts are often too nested/complicated for them to work.</p>
+
+				<h3 id="justify-content--align-content"><code class="language-plaintext highlighter-rouge">justify-content</code> / <code class="language-plaintext highlighter-rouge">align-content</code></h3>
+
+				<p>If the total size of your grid is less than the container (because of your <em>explicit</em> column or row sizes), you can set the <em>overall</em> justification and alignment within the container. Again, <a href="/topic/flexbox/#justify-content">this is just</a> <a href="/topic/flexbox/#align-items">like flex</a>! Same syntax, same behavior<span class="mdash">—</span>you get the idea. Grid is like <em>Flex+</em>.</p>
+
+				<h3 id="shorthand">Shorthand?</h3>
+
+				<p><em>Grid</em> also has <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid">shorthand properties</a> for many of these, like <code class="language-plaintext highlighter-rouge">grid</code>, <code class="language-plaintext highlighter-rouge">grid-template</code>, <code class="language-plaintext highlighter-rouge">place-items</code>, and <code class="language-plaintext highlighter-rouge">place-content</code>. However, grid is complicated enough as it is! The shorthands really obfuscate the behavior, and aren’t worth the tighter syntax.</p>
+
+				<blockquote class="callout" icon="🤨">
+					<p>Okay, so this is mostly like flex! To the point where you can use them interchangeably for some layouts. You get it. But now let’s look at where grid offers more specific and powerful control.</p>
+				</blockquote>
+
+				<h3 id="using-repeat">Using repeat</h3>
+
+				<p><em>Grid’s</em> <code class="language-plaintext highlighter-rouge">repeat</code> function is very commonly used to make even-column grids. And of course, they can be made responsive with <a href="/topic/media-queries">media queries</a> and <a href="/topic/responsive/#briefly-css-variables">CSS variables</a>!</p>
+
+				<figure style="--height--max: 38rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/grid-template-columns-repeat/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Notice that the <em>items</em> always stick to the grid structure<span class="mdash">—</span>independent of their content<span class="mdash">—</span>unlike our previous <code class="language-plaintext highlighter-rouge">flex-wrap</code> pseudo-grids.</figcaption>
+
+				</figure>
+
+				<p><em>Flex</em> is <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">sometimes referred</a> to in this way as <em>content-out</em>, while <em>grid</em> is a <em>layout-in</em> system.</p>
+
+				<h3 id="auto-fill--auto-fit"><code class="language-plaintext highlighter-rouge">auto-fill</code> / <code class="language-plaintext highlighter-rouge">auto-fit</code></h3>
+
+				<p>You can also use the <code class="language-plaintext highlighter-rouge">repeat</code> function without specifying an exact number of columns, instead using <code class="language-plaintext highlighter-rouge">auto-fill</code> or <code class="language-plaintext highlighter-rouge">auto-fit</code> to <a href="https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/">automatically define</a> your columns<span class="mdash">—</span>making a grid inherently responsive without any media queries! These are great for controlling an even-column layout without much overhead:</p>
+
+				<figure style="--height--max: 53rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/grid-template-columns-repeat-auto/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Drag the divider over to see the difference in <code class="language-plaintext highlighter-rouge">auto-fill</code> / <code class="language-plaintext highlighter-rouge">auto-fit</code> behaviors</figcaption>
+
+				</figure>
+
+				<h3 id="grid-template-areas"><code class="language-plaintext highlighter-rouge">grid-template-areas</code></h3>
+
+				<p><em>Grid</em> is really useful for scaffolding out layouts, and sometimes it is helpful to give your <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas"><em>grid areas</em> qualitative/descriptive names</a> that reflect their usage. This also makes it possible for the <em>grid items</em> (children) to reference them, below.</p>
+
+				<p>This is done with a bit of <a href="https://en.wikipedia.org/wiki/ASCII_art">ASCII art</a> to reflect the layout! Repeating the name of a <em>grid area</em> makes the content span those cells. The syntax itself then provides an ergonomic visualization of the grid structure (for us humans):</p>
+
+				<div class="language-css half highlighter-rouge">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="nt">section</span> <span class="p">{</span>
+	<span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
+	<span class="py">grid-template-columns</span><span class="p">:</span> <span class="m">2</span><span class="n">fr</span> <span class="m">1</span><span class="n">fr</span><span class="p">;</span>
+	<span class="py">grid-template-areas</span><span class="p">:</span>
+		<span class="s1">"header header "</span>
+		<span class="s1">"main   sidebar"</span>
+		<span class="s1">"footer sidebar"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+					</div>
+				</div>
+
+				<p>You can also <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows#syntax">name grid lines</a> with <code class="language-plaintext highlighter-rouge">[linename] length</code> syntax, but I’ve never found this very useful.</p>
+
+				<h2 id="item-child-properties">Item (child) properties</h2>
+
+				<p>You can really start to see the power of <em>grid</em> when you use these properties on the individual <em>grid items</em> (children) within the containers. While the container (parent) properties usually make for uniform layouts, item (child) properties allow for unique structures.</p>
+
+				<h3 id="grid-area"><code class="language-plaintext highlighter-rouge">grid-area</code></h3>
+
+				<p>If you’ve defined <code class="language-plaintext highlighter-rouge">grid-template-areas</code> (as <a href="#grid-template-areas">above</a>), you can then assign individual children to these areas:</p>
+
+				<figure style="--height--max: 66rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/grid-area/demo"></iframe>
+					</div>
+
+
+
+				</figure>
+
+				<p>This is the <a href="https://en.wikipedia.org/wiki/Holy_grail_(web_design)">kind of common layout</a> that was unnecessarily hard before grid!</p>
+
+				<h3 id="grid-column--grid-row"><code class="language-plaintext highlighter-rouge">grid-column</code> / <code class="language-plaintext highlighter-rouge">grid-row</code></h3>
+
+				<p>You can also control <em>item</em> placement in unnamed (and <em>implicit</em>) grid areas with the <code class="language-plaintext highlighter-rouge">grid-column</code> and <code class="language-plaintext highlighter-rouge">grid-row</code> properties. These take two values, divided with a <code class="language-plaintext highlighter-rouge">/</code> (because CSS is inconsistent), which specify the <em>start line</em> and <em>end line</em>. (These are technically <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column">shorthand</a> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row">properties</a>, but I’ll allow it<span class="mdash">—</span>they are easier to read!) There is also a <code class="language-plaintext highlighter-rouge">span</code> value for bridging across tracks:</p>
+
+				<figure style="--height--max: 48rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/grid-column-row/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Notice that we can leave off the <em>end line</em> if it doesn’t <code class="language-plaintext highlighter-rouge">span</code> multiple tracks, and also that you either add a <code class="language-plaintext highlighter-rouge">span</code> <em>or</em> a specific <em>end line</em> number.</figcaption>
+
+				</figure>
+
+				<p>You can also leave off the <em>start line</em> if you just want to specify a <code class="language-plaintext highlighter-rouge">span</code>, regardless of where the item falls in the grid:</p>
+
+				<figure style="--height--max: 32rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/grid-column-row-span/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>I’ve added <code class="language-plaintext highlighter-rouge">grid-auto-flow: dense;</code> to the container<span class="mdash">—</span>allowing the fifth item to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow">scoot up</a> “before” the bigger one.</figcaption>
+
+				</figure>
+
+				<p>And if you specify non-contiguous rows or columns, <em>grid</em> will create as many <em>implicit</em> tracks as it needs to accommodate them<span class="mdash">—</span>even if they are empty:</p>
+
+				<figure style="--height--max: 53rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/grid-column-row-implicit/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Keep in mind that like <code class="language-plaintext highlighter-rouge">order</code> in flex, this arrangement is only visual! Keep your DOM in a logical, semantic sequence.</figcaption>
+
+				</figure>
+
+				<p>Keep in mind that with both <code class="language-plaintext highlighter-rouge">grid-area</code> and <code class="language-plaintext highlighter-rouge">grid-column</code> / <code class="language-plaintext highlighter-rouge">grid-row</code>, you are able to tell multiple <em>grid items</em> to land in the same <em>cell</em><span class="mdash">—</span>there isn’t any kind of fancy collision-proofing. If this is what you want, you can use <code class="language-plaintext highlighter-rouge">z-index</code> to specify which one is visually <a href="/topic/box-model/#depth">in front</a>!</p>
+
+				<h3 id="justify-self--align-self"><code class="language-plaintext highlighter-rouge">justify-self</code> / <code class="language-plaintext highlighter-rouge">align-self</code></h3>
+
+				<p>Finally, just like flex<span class="mdash">—</span>you can position individual <em>grid items</em> within their <em>tracks</em> using <code class="language-plaintext highlighter-rouge">justify-self</code> and <code class="language-plaintext highlighter-rouge">align-self</code>. The syntax is the same as <a href="/topic/flexbox/#align-self">align in flex</a>, again<span class="mdash">—</span>but as with <code class="language-plaintext highlighter-rouge">justify-items</code> / <code class="language-plaintext highlighter-rouge">align-items</code> above, you don’t have to flip axes:</p>
+
+				<figure style="--height--max: 62rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/grid-justify-align-self/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>You can mix and match these justify/align values, of course.</figcaption>
+
+				</figure>
+
+
+			</article>
+		</main>
+
+	</body>
+</html>

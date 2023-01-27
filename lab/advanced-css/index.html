@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
+
+		<title>Additional, advanced CSS</title>
+		<link href="/assets/styles/reset.css" rel="stylesheet">
+		<link href="/assets/styles/common.css" rel="stylesheet">
+		<link href="/assets/styles/syntax.css" rel="stylesheet">
+		<link href="/assets/icons/favicon.ico" rel="icon" sizes="64x64" type="image/x-icon">
+		<link href="/assets/icons/touch.png" rel="apple-touch-icon">
+
+		<script src="/assets/scripts/common.js"></script>
+
+		<meta name="theme-color" content="#e42a1d">
+	</head>
+	<body class="lab">
+		<main>
+
+			<article>
+				<p class="left">Our HTML/CSS focus up to this point has been relatively broad, to start with the basics. Here I want to begin to sand down some of the rough edges, and introduce you to specific, advanced techniques you can use to refine and enliven your work<span class="mdash">—</span>still with just CSS, no JavaScript (yet)!</p>
+
+				<ul class="icon-link no-marker right" rows="3">
+					<li>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content">Overflowing content</a> <br />
+							<em>There are going to be a lot of MDNs, here.</em>
+						</p>
+					</li>
+					<li>
+						<p><a href="https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align">Font metrics, line-height and vertical-align</a> <br />
+							<em>A deep-dive on type positioning.</em>
+						</p>
+					</li>
+					<li>
+						<p><a href="https://css-tricks.com/almanac/selectors/a/after-and-before/">CSS Tricks :before and :after</a> <br />
+							<em>Another great CSS Tricks article.</em>
+						</p>
+					</li>
+					<li>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">CSS Transforms | MDN</a> <br />
+							<em>Back to MDN.</em>
+						</p>
+					</li>
+					<li>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS Transitions | MDN</a></p>
+					</li>
+					<li>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">CSS Animations | MDN</a></p>
+					</li>
+				</ul>
+
+				<p>A good pattern to follow in web development is to let each technology do what it does best<span class="mdash">—</span>using HTML for semantic meaning, CSS to handle how we form a page, and JavaScript to introduce interaction. But much of what you’ll use JavaScript for, to start, is simply adding or removing classes<span class="mdash">—</span>and ahead of that, there is still a lot we can do in CSS. Let’s look at some examples.</p>
+
+				<h2 id="overflows-and-scrolling">Overflows and scrolling</h2>
+
+				<p>An <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow"><em>overflow</em></a> in CSS happens when there is too much content to fit in a container<span class="mdash">—</span>usually because you have manually constrained its <code class="language-plaintext highlighter-rouge">height</code> or <code class="language-plaintext highlighter-rouge">width</code>. (By default, the browser will try to show you everything!)</p>
+
+				<p>We can use this behavior <em>intentionally</em> to crop our content or create scrolling areas:</p>
+
+				<figure style="--height--max: 96rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/overflow/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Some of you have already discovered this!</figcaption>
+
+				</figure>
+
+				<p>Importantly, this creates a new <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context"><em>stacking context</em></a><span class="mdash">—</span>which means things with <code class="language-plaintext highlighter-rouge">position</code> (and some other properties) will now use the overflow container as their reference/origin:</p>
+
+				<figure style="--height--max: 31rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/overflow-sticky/demo"></iframe>
+					</div>
+
+
+
+				</figure>
+
+				<h2 id="precise-text-positioning">Precise text positioning</h2>
+
+				<p>HTML renders a lot of extra space around text elements, called the <a href="https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align"><em>line box</em></a> (or, in design software parlance, the <em>bounding box</em>).</p>
+
+				<p>It is based on the <code class="language-plaintext highlighter-rouge">font-family</code>, the <code class="language-plaintext highlighter-rouge">font-size</code>, and the <code class="language-plaintext highlighter-rouge">line-height</code>, which basically means it is different all the time<span class="mdash">—</span>and different from Adobe/Figma to HTML. This makes it difficult to position type precisely<span class="mdash">—</span>especially at large, expressive sizes like your headings! It’s always annoying, and you’ll often be adding/subtracting your spacing (<code class="language-plaintext highlighter-rouge">margin</code> or <code class="language-plaintext highlighter-rouge">padding</code>) to account for it, if you want to line everything up <em>just right</em>, optically.</p>
+
+				<p>Let’s avoid it. We can use <a href="/topic/css/#pseudo-elements">pseudo-elements</a>, <code class="language-plaintext highlighter-rouge">:after</code> / <code class="language-plaintext highlighter-rouge">:before</code><span class="mdash">—</span>which are entirely created by CSS, not in your DOM<span class="mdash">—</span>to negate this (vertical) space with negative margin. By doing this on the pseudo elements, we can still position the parent element normally, otherwise!</p>
+
+				<figure style="--height--max: 62rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/bounding-box/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Here we also move the text with <code class="language-plaintext highlighter-rouge">margin-left</code> and <code class="language-plaintext highlighter-rouge">margin-right</code>, though usually this adjustment is much more minor (to the point of ignoring).</figcaption>
+
+				</figure>
+
+				<p><em>I will often call this tactic “negating the bounding box.”</em></p>
+
+				<h2 id="text-ragging-sorta">Text ragging (sorta)</h2>
+
+				<p>You can’t treat the web like print<span class="mdash">—</span>always <a href="https://www.fonts.com/content/learning/fontology/level-2/text-typography/rags-widows-orphans">perfectly ragging</a> your text for nice, smooth blocks. In modern (responsive) web design we don’t always know what our text will be, nor where it will wrap!</p>
+
+				<p>But we can do a handful of things to make for <em>better</em> ragging/wraps, given the unknowns<span class="mdash">—</span>judiciously using <code class="language-plaintext highlighter-rouge">hyphens</code>/<code class="language-plaintext highlighter-rouge">&amp;shy;</code>, <code class="language-plaintext highlighter-rouge">&lt;wbr&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;nobr&gt;</code>, and <code class="language-plaintext highlighter-rouge">&amp;nbsp;</code> to <em>somehwat</em> control your line breaks.</p>
+
+				<h3 id="hyphens--shy-and-wbr"><code class="language-plaintext highlighter-rouge">hyphens</code> / <code class="language-plaintext highlighter-rouge">&amp;shy;</code> and <code class="language-plaintext highlighter-rouge">&lt;wbr&gt;</code></h3>
+
+				<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens">hyphens</a> property allows long, multi-syllable words to be <a href="https://en.wikipedia.org/wiki/Hyphen#Justification_and_line-wrapping">hyphenated</a> when they wrap across multiple lines. This can be done automatically by the browser, or by manually inserting <code class="language-plaintext highlighter-rouge">&amp;shy;</code> (for <a href="https://en.wikipedia.org/wiki/Soft_hyphen"><em>soft hyphen</em></a>) as an <a href="https://developer.mozilla.org/en-US/docs/Glossary/Entity">HTML entity</a>:</p>
+
+				<figure style="--height--max: 44rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/hyphens/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Note <code class="language-plaintext highlighter-rouge">&lt;html lang="en"&gt;</code> is needed for Chrome<span class="mdash">—</span>as the <code class="language-plaintext highlighter-rouge">auto</code> property works from each browser’s different, internal (and usually, only English) dictionary<span class="mdash">—</span>so this all has somewhat limited utility/reliability.</figcaption>
+
+				</figure>
+
+				<p>Somewhat similar to <code class="language-plaintext highlighter-rouge">&amp;shy;</code>, the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr"><em>wbr</em></a> is a (void/empty) HTML element that denotes a <em>word break</em> opportunity. (A bit like an optional <code class="language-plaintext highlighter-rouge">&lt;br&gt;</code>!) You can use these to control where single long word will wrap, <em>without</em> a hyphen:</p>
+
+				<figure style="--height--max: 45rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/wbr/demo"></iframe>
+					</div>
+
+
+
+				</figure>
+
+				<h3 id="nobr-and-nbsp"><code class="language-plaintext highlighter-rouge">&lt;nobr&gt;</code> and <code class="language-plaintext highlighter-rouge">&amp;nbsp;</code></h3>
+
+				<p>More often, you’ll want to keep certain words <em>together</em><span class="mdash">—</span>to avoid a <a href="https://www.fonts.com/content/learning/fontology/level-2/text-typography/rags-widows-orphans">widow or orphan</a>, or to keep important/related text together<span class="mdash">—</span>like in dates, <em>November 2</em>, or with names like <em>Adrian Li</em>.</p>
+
+				<p>You can wrap multiple words (or whole phrases) in an <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nobr"><em>nobr</em></a> tag<span class="mdash">—</span>keeping in mind that like <code class="language-plaintext highlighter-rouge">&lt;em&gt;</code> or <code class="language-plaintext highlighter-rouge">&lt;strong&gt;</code>, the default behavior is cleared by most <a href="/topic/css/#resets">resets</a> (ours included)<span class="mdash">—</span>so you have to restore the property in CSS. You can also use a manual <code class="language-plaintext highlighter-rouge">&amp;nbsp;</code> entity between words:</p>
+
+				<figure style="--height--max: 46rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/nobr-nbsp/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>On a Mac, you can insert an <em>encoded</em> <code class="language-plaintext highlighter-rouge">&amp;nbsp;</code> with <code class="language-plaintext highlighter-rouge">⌥</code> (option)-spacebar. This works in many programs, not just your IDE! It’s harder to see, but easier to read.</figcaption>
+
+				</figure>
+
+				<p>Beyond these manual interventions, you <a href="https://github.com/adobe/balance-text">need JavaScript</a> to <a href="https://www.ctrl.blog/entry/text-wrap-balance.html">fully balance</a> your lines! (Which is a whole can of worms.)</p>
+
+				<blockquote class="callout" icon="📕">
+					<p>When in doubt, <a href="https://readings.design/PDF/the_elements_of_typographic_style.pdf"><em>The Elements of Typographic Style</em></a> has many of the answers you need about where to break text apart or keep it together! But also, as Bringhurst says, <em>“read the text before designing it.”</em> Put yourself in the mind of your reader!</p>
+
+					<p>These strategies only work if you can manually edit your text content, which is not always feasible. Do it when you can, and give more attention to your headings, then your body copy, etc.</p>
+				</blockquote>
+
+				<h2 id="transforms">Transforms!</h2>
+
+				<p>Beyond our standard sizing and layout afforded by CSS, you can also <em>visually</em> manipulate elements using CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transforms</a><span class="mdash">—</span>scaling, skewing, translating, or rotating elements <em>after</em> they are laid out in the DOM. It’s like grabbing the “corner handles” in Adobe/Figma!</p>
+
+				<dl>
+					<dt><code class="language-plaintext highlighter-rouge">scale()</code> / <code class="language-plaintext highlighter-rouge">scaleX()</code> / <code class="language-plaintext highlighter-rouge">scaleY()</code> / <code class="language-plaintext highlighter-rouge">scaleZ()</code> / <code class="language-plaintext highlighter-rouge">scale3d()</code></dt>
+					<dd>Change the displayed size of the element<span class="mdash">—</span>as if it is an image.</dd>
+					<dt><code class="language-plaintext highlighter-rouge">skew()</code> / <code class="language-plaintext highlighter-rouge">skewX()</code> / <code class="language-plaintext highlighter-rouge">skewY()</code></dt>
+					<dd>Tilt an element to the left or right, like turning a rectangle into a parallelogram.</dd>
+					<dt><code class="language-plaintext highlighter-rouge">translate()</code> / <code class="language-plaintext highlighter-rouge">translateX()</code> / <code class="language-plaintext highlighter-rouge">translateY()</code> / <code class="language-plaintext highlighter-rouge">translate3d()</code></dt>
+					<dd>Move an element left/right and up/down, and also in three-dimensional space.</dd>
+					<dt><code class="language-plaintext highlighter-rouge">rotate()</code> / <code class="language-plaintext highlighter-rouge">rotate3d()</code></dt>
+					<dd>Rotate the element.</dd>
+					<dt><code class="language-plaintext highlighter-rouge">perspective()</code></dt>
+					<dd>Doesn’t affect the element itself, sets the distance between the user and the <nobr>three-dimensional</nobr> plane.</dd>
+				</dl>
+
+				<p>The units for these are all a bit different; <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function">MDN is your friend</a> here, as usual. You can apply single or multiple transforms, which are written <em>space-separated</em> and applied one after the other:</p>
+
+				<div class="language-css half highlighter-rouge">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="nc">.rotated</span> <span class="p">{</span>
+  <span class="nl">transform</span><span class="p">:</span> <span class="n">rotate</span><span class="p">(</span><span class="m">-5deg</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+					</div>
+				</div>
+
+				<div class="language-css half highlighter-rouge">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="nc">.rotated-and-scaled</span> <span class="p">{</span>
+  <span class="nl">transform</span><span class="p">:</span> <span class="n">rotate</span><span class="p">(</span><span class="m">-5deg</span><span class="p">)</span> <span class="n">scale</span><span class="p">(</span><span class="m">120%</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+					</div>
+				</div>
+
+				<p>Keep in mind that these transformations are applied <em>after</em> the rest of the CSS is parsed, and thus treat your element a bit like an image. And like <code class="language-plaintext highlighter-rouge">overflow</code>, above, <code class="language-plaintext highlighter-rouge">transform</code> also creates a new <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context"><em>stacking context</em></a> for its children.</p>
+
+				<figure style="--height--max: 44rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/transform/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Note how the elements <em>don’t</em> take up more space in the document flow/layout<span class="mdash">—</span>but they <em>do</em> cause an overflow!</figcaption>
+
+				</figure>
+
+				<p>You shouldn’t use <code class="language-plaintext highlighter-rouge">transform</code> for layout, per se<span class="mdash">—</span>as in, don’t use <code class="language-plaintext highlighter-rouge">translate</code> when <code class="language-plaintext highlighter-rouge">margin</code>, <code class="language-plaintext highlighter-rouge">padding</code>, <code class="language-plaintext highlighter-rouge">flex</code>, or <code class="language-plaintext highlighter-rouge">grid</code> is appropriate. (This is bad practice, and usually very brittle.) Use <code class="language-plaintext highlighter-rouge">transform</code> for what they <em>can’t</em> accomplish!</p>
+
+				<h2 id="transitions">Transitions!</h2>
+
+				<p>CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">transitions</a> allow us to more seamlessly move between CSS property values. Instead of having a property take effect <em>immediately</em> when a pseudo-class class is applied (or later<span class="mdash">—</span>with <nobr>JS<span class="mdash">—</span></nobr><wbr />a proper class), we can tell a CSS property to <em>transition</em> from one value to another over a given amount of time (<code class="language-plaintext highlighter-rouge">duration</code>), and with a specific acceleration (<code class="language-plaintext highlighter-rouge">timing-function</code>), or a delay. Motion can quickly get very complex!</p>
+
+				<p class="two-above">You’ll often see a <code class="language-plaintext highlighter-rouge">transition</code> in shorthand:</p>
+
+				<div class="language-css half one-above highlighter-rouge">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="nc">.some-cool-transition</span> <span class="p">{</span>
+  <span class="nl">transition</span><span class="p">:</span> <span class="n">all</span> <span class="m">2s</span> <span class="m">1s</span> <span class="n">linear</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+					</div>
+				</div>
+
+				<div class="language-css half highlighter-rouge">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="nc">.some-cool-transition</span> <span class="p">{</span>
+  <span class="nl">transition-delay</span><span class="p">:</span> <span class="m">1s</span><span class="p">;</span>
+  <span class="nl">transition-duration</span><span class="p">:</span> <span class="m">2s</span><span class="p">;</span>
+  <span class="nl">transition-property</span><span class="p">:</span> <span class="n">all</span><span class="p">;</span>
+  <span class="nl">transition-timing-function</span><span class="p">:</span> <span class="n">linear</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+					</div>
+				</div>
+
+				<p class="one-below">You can also control how different properties of an element transition independently, with a <em>comma-separated</em> list:</p>
+
+				<div class="language-css highlighter-rouge">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="nc">.some-cool-transition</span> <span class="p">{</span>
+  <span class="nl">transition</span><span class="p">:</span> <span class="n">background-color</span> <span class="m">2s</span> <span class="n">linear</span><span class="p">,</span> <span class="n">transform</span> <span class="m">1s</span> <span class="n">ease-in-out</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+					</div>
+				</div>
+
+				<div class="language-css left one-above highlighter-rouge">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="nc">.some-cool-transition</span> <span class="p">{</span>
+  <span class="nl">transition-duration</span><span class="p">:</span> <span class="m">2s</span><span class="p">,</span> <span class="m">1s</span><span class="p">;</span>
+  <span class="nl">transition-property</span><span class="p">:</span> <span class="n">background-color</span><span class="p">,</span> <span class="n">transform</span><span class="p">;</span>
+  <span class="nl">transition-timing-function</span><span class="p">:</span> <span class="n">linear</span><span class="p">,</span> <span class="n">ease-in-out</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+					</div>
+				</div>
+
+				<p class="right">Sometimes the shorthand here is easier than discrete properties, where you have to maintain the same order across all of them. It’s all the same to the computer!</p>
+
+				<p class="two-above">Often, CSS transitions will be used <em>with</em> JavaScript adding/removing classes, to make a state change less abrupt. For now, we’ll use <a href="/topic/css/#pseudo-classes">pseudo-classes</a> to demonstrate:</p>
+
+				<figure style="--height--max: 32rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/transition/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>You can get even more control over the easing with a <a href="https://easings.net">custom curve function</a>.</figcaption>
+
+				</figure>
+
+				<p>Essentially <em>any</em> CSS property can be transitioned<span class="mdash">—</span>but keep in mind that changes that cause a <em>reflow</em> (re-triggering <em>layout</em>, sometimes called <em>paint</em>) <a href="https://web.dev/animations-guide/#triggers">are slow</a> and can make your page feel glitchy<span class="mdash">—</span>especially when you start having many of them. Each in-between state causes the browser to re-render your entire document! So stick to changes of <code class="language-plaintext highlighter-rouge">color</code>, <code class="language-plaintext highlighter-rouge">opacity</code>, and <code class="language-plaintext highlighter-rouge">transform</code> for the smoothest performance.</p>
+
+				<h2 id="and-animations">And animations!</h2>
+
+				<p>Sometimes, transitioning a property from one value to another isn’t enough<span class="mdash">—</span>you may need more complicated (or repeating) motion behavior. CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">animations</a> allow precise state sequencing with <code class="language-plaintext highlighter-rouge">@keyframes</code> (akin to… <em>keyframes</em> or a timeline in other software contexts).</p>
+
+				<p>To create a keyframe animation, we define an element’s initial state in CSS<span class="mdash">—</span>then an <code class="language-plaintext highlighter-rouge">animation</code> property, which includes timing and behavior, as well as an animation name (something that you make up). Again, you’ll often see these in shorthand:</p>
+
+				<div class="language-css half one-above highlighter-rouge">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="nt">section</span> <span class="p">{</span>
+  <span class="nl">animation</span><span class="p">:</span> <span class="n">blinking</span> <span class="m">3s</span> <span class="n">infinite</span> <span class="n">ease-in-out</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+					</div>
+				</div>
+
+				<div class="language-css half highlighter-rouge">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="nt">section</span> <span class="p">{</span>
+  <span class="nl">animation-duration</span><span class="p">:</span> <span class="m">3s</span><span class="p">;</span>
+  <span class="nl">animation-iteration-count</span><span class="p">:</span> <span class="n">infinite</span><span class="p">;</span>
+  <span class="nl">animation-name</span><span class="p">:</span> <span class="n">blinking</span><span class="p">;</span>
+  <span class="nl">animation-timing-function</span><span class="p">:</span> <span class="n">ease-in-out</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+					</div>
+				</div>
+
+				<p>Importantly, we then define the actual keyframes of an animation in a separate <em>at-rule</em>. Each <em>keyframe</em> is specified with a percentage of the animation’s duration, and can specify multiple properties<span class="mdash">—</span>a bit like <em>selectors</em> for the time:</p>
+
+				<figure style="--height--max: 50rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/animation/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>Don’t go overboard! A little animation goes a long way.</figcaption>
+
+				</figure>
+
+
+			</article>
+		</main>
+
+	</body>
+</html>
