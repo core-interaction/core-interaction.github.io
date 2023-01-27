@@ -174,7 +174,7 @@ It’s used by *many, many* things now: [Google chats][chats], [Slack][slack], [
 > I *love* Markdown. If there is only one thing you take away from our class, let it be some fluency in `.md`. It’s the [lingua franca](https://en.wikipedia.org/wiki/Lingua_franca) for basic text formatting.
 {: .callout .two-above icon='🤓' }
 
-This very course site uses Markdown for our lectures and topics. Here is the section above with its corresponding parsed HTML output:
+This very site uses Markdown for our lectures and topics. Here is the section above with its corresponding parsed HTML output:
 
 
 

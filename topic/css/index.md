@@ -382,7 +382,7 @@ Here is a [simple, modern one](https://elad2412.github.io/the-new-css-reset/) fo
 <link href="https://core-interaction.github.io/assets/styles/reset.css" rel="stylesheet">
 ```
 
-*This is what we use here for our course site!*
+*This is what we use on here!*
 
 
 
