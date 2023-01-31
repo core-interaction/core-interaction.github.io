@@ -2,4 +2,10 @@
 	--color--links: blue;
 
 
+	// Headers on the landing/list.
+	.half h2.no_toc {
+		padding-bottom: var(--margin--vertical);
+
+		&:after { display: none }
+	}
 }
