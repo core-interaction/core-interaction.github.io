@@ -65,9 +65,6 @@
 
 
 
-	// Colors for the lab layout.
-	&.lab { --color--links: blue  }
-
 	@include breakpoint(320) { --typography--size: calc((16/375) * 100vw) }
 
 	@include breakpoint(768) {
@@ -95,6 +92,11 @@
 			--margin:           4.8rem;
 		}
 	}
+
+
+
+	// Lab layout stuff.
+	@import 'lab';
 }
 
 
