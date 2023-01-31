@@ -7,6 +7,8 @@ title: Examples
 {% assign examples = site.pages | where: "layout", "example"  | sort: "path" %}
 <ul class="icon-link">
 	{% for example in examples %}
-		<li><a href="{{ example.url | relative_url | remove: '.html' }}">{{ example.dir | remove: '/example/' | remove: '/demo/' }}</a>
+		<li>
+			<a href="{{ example.url | relative_url | remove: '.html' }}">{{ example.dir | remove: '/example/' | remove: '/demo/' }}</a>
+		</li>
 	{% endfor %}
 </ul>
