@@ -889,10 +889,6 @@ body.example > section #files > ul li {
 	}
 }
 
-:root.lab {
-	--color--links: blue;
-}
-
 @media (max-width: 23.375em) {
 	:root {
 		--typography--size: calc((16/375) * 100vw);
@@ -925,6 +921,18 @@ body.example > section #files > ul li {
 		--typography--size: 1.8rem;
 		--margin: 4.8rem;
 	}
+}
+
+:root.lab {
+	--color--links: blue;
+}
+
+:root.lab .half h2.no_toc {
+	padding-bottom: var(--margin--vertical);
+}
+
+:root.lab .half h2.no_toc:after {
+	display: none;
 }
 
 body > main,
