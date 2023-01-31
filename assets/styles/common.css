@@ -927,11 +927,15 @@ body.example > section #files > ul li {
 	--color--links: blue;
 }
 
-:root.lab .half h2.no_toc {
+:root.lab .landing .half {
+	align-self: start;
+}
+
+:root.lab .landing .half h2.no_toc {
 	padding-bottom: var(--margin--vertical);
 }
 
-:root.lab .half h2.no_toc:after {
+:root.lab .landing .half h2.no_toc:after {
 	display: none;
 }
 
