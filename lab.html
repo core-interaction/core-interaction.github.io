@@ -16,3 +16,15 @@ layout: lab
 		{% endfor %}
 	</ul>
 </section>
+
+<section class="half">
+	{% assign examples = site.pages | where: "layout", "example" | sort: "path" %}
+	<h2 class="no_toc">Examples</h2>
+	<ul class="icon-link no-marker">
+		{% for example in examples %}
+			<li>
+				<a href="{{ example.url | relative_url | remove: '.html' }}">{{ example.dir | remove: '/example/' | remove: '/demo/' }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+</section>
