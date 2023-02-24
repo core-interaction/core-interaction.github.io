@@ -1892,12 +1892,6 @@ body.example > section #files > ul body > main > article blockquote.callout li {
 	mix-blend-mode: multiply;
 }
 
-.lab body > main > article blockquote.callout code,
-.lab body > main > article blockquote.callout body.example > section #files > ul li,
-body.example > section #files > ul .lab body > main > article blockquote.callout li {
-	mix-blend-mode: screen;
-}
-
 body > main > article blockquote.callout[icon] {
 	padding-left: calc(2 * var(--padding) + 2ch);
 }
