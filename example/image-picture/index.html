@@ -7,10 +7,11 @@
 	</head>
 	<body>
 		<section>
-			<img src="tim.jpg" alt="Tim Berners-Lee at a computer.">
-		</section>
-		<section>
-			<img src="tim.jpg" alt="Tim Berners-Lee at a computer.">
+			<picture>
+				<source media="(max-width: 428px)" srcset="tim.jpg">
+				<source media="(max-width: 640px)" srcset="tim--md.jpg">
+				<img alt="Tim Berners-Lee at a computer." src="tim--lg.jpg">
+			</picture>
 		</section>
 	</body>
 </html>

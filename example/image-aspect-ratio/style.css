@@ -9,7 +9,7 @@ section {
 
 img {
 	aspect-ratio: 1 / 1;
-	/* Width / height */
+	/* Width / height. */
 	object-fit: cover;
 	width: 60%;
 }

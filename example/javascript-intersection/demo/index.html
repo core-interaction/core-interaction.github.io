@@ -57,7 +57,7 @@
 <span class="kd">let</span> <span class="nx">highlightBlock</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">section:nth-child(4)</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="c1">// Set up an IntersectionObserver.</span>
-<span class="kd">let</span> <span class="nx">sectionObserver</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IntersectionObserver</span><span class="p">(</span><span class="nx">entries</span> <span class="o">=&gt;</span> <span class="p">{</span>
+<span class="kd">let</span> <span class="nx">sectionObserver</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IntersectionObserver</span><span class="p">((</span><span class="nx">entries</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
 	<span class="kd">let</span> <span class="p">[</span><span class="nx">entry</span><span class="p">]</span> <span class="o">=</span> <span class="nx">entries</span><span class="p">;</span> <span class="c1">// Don’t worry about this, for now.</span>
 
 	<span class="c1">// When it is intersecting, apply the class; otherwise, remove it.</span>

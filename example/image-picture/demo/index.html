@@ -21,7 +21,7 @@
 				example
 			
 			">
-		<section style="--split: 54%;">
+		<section style="--split: 78%;">
 			<aside></aside>
 
 
@@ -29,11 +29,11 @@
 				<ul>
 
 					<li tabindex=0 class="visible">
-						<p>style.css</p>
+						<p>index.html</p>
 					</li>
 
 					<li tabindex=0>
-						<p>index.html</p>
+						<p>style.css</p>
 					</li>
 
 				</ul>
@@ -42,24 +42,6 @@
 			<div id="source">
 
 				<div class="visible">
-
-
-					<figure class="highlight">
-						<pre><code class="language-scss" data-lang="scss"><span class="nt">body</span><span class="o">,</span> <span class="nt">section</span> <span class="p">{</span> <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">section</span> <span class="p">{</span> <span class="nl">background-color</span><span class="p">:</span> <span class="no">gold</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">img</span> <span class="p">{</span>
-	<span class="na">aspect-ratio</span><span class="p">:</span> <span class="m">1</span> <span class="o">/</span> <span class="m">1</span><span class="p">;</span> <span class="cm">/* Width / height. */</span>
-	<span class="nl">object-fit</span><span class="p">:</span> <span class="n">cover</span><span class="p">;</span>
-	<span class="nl">width</span><span class="p">:</span> <span class="m">60%</span><span class="p">;</span>
-<span class="p">}</span></code></pre>
-					</figure>
-
-
-				</div>
-
-				<div>
 
 
 					<figure class="highlight">
@@ -72,10 +54,26 @@
 	<span class="nt">&lt;/head&gt;</span>
 	<span class="nt">&lt;body&gt;</span>
 		<span class="nt">&lt;section&gt;</span>
-			<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"tim.jpg"</span> <span class="na">alt=</span><span class="s">"Tim Berners-Lee at a computer."</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;picture&gt;</span>
+				<span class="nt">&lt;source</span> <span class="na">media=</span><span class="s">"(max-width: 428px)"</span> <span class="na">srcset=</span><span class="s">"tim.jpg"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;source</span> <span class="na">media=</span><span class="s">"(max-width: 640px)"</span> <span class="na">srcset=</span><span class="s">"tim--md.jpg"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Tim Berners-Lee at a computer."</span> <span class="na">src=</span><span class="s">"tim--lg.jpg"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;/picture&gt;</span>
 		<span class="nt">&lt;/section&gt;</span>
 	<span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span></code></pre>
+					</figure>
+
+
+				</div>
+
+				<div>
+
+
+					<figure class="highlight">
+						<pre><code class="language-scss" data-lang="scss"><span class="nt">body</span><span class="o">,</span> <span class="nt">section</span> <span class="p">{</span> <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="nt">section</span> <span class="p">{</span> <span class="nl">background-color</span><span class="p">:</span> <span class="no">gold</span><span class="p">;</span> <span class="p">}</span></code></pre>
 					</figure>
 
 

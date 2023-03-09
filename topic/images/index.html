@@ -307,6 +307,7 @@
 					<li><a href="#aspect-ratio">Aspect-ratio</a></li>
 					<li><a href="#background-image">Background-image</a></li>
 					<li><a href="#figure--figcaption">Figure / figcaption</a></li>
+					<li><a href="#picture-source-andresponsiveimages">Picture, source, and responsive images</a></li>
 				</ul>
 			</header>
 
@@ -326,26 +327,60 @@
 					</li>
 				</ul>
 
-				<p>Remember that images weren’t a part of the <a href="/topic/everything/#when-was-the-web-invented">early web</a>, and so like CSS, feel somewhat “bolted on” and are still somewhat tricky to work with. It has gotten better recently, though!</p>
+				<p>Remember that images weren’t a part of the <a href="/topic/everything/#when-was-the-web-invented">early web</a>, and so like CSS, feel somewhat “bolted on” and are still somewhat tricky to work with. It has gotten much better recently, though!</p>
+
+				<blockquote class="quote">
+					<p>I’d like to propose a new, optional HTML tag:</p>
+
+					<p>IMG</p>
+
+					<p>Required argument is SRC=″url″.</p>
+
+					<p>This names a bitmap or pixmap file for the browser to attempt to pull over the network and interpret as an image, to be embedded in the text at the point of the tag’s occurrence. An example is:</p>
+
+					<p>&lt;IMG SRC=″file://foobar.com/foo/bar/blargh.xbm″&gt;</p>
+				</blockquote>
+
+				<p><cite><a href="http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html">Marc Andreessen</a></cite></p>
+
+				<p class="two-above">(I DON’T KNOW IF WE TOLD YOU BUT HTML <a href="https://www.w3.org/TR/html40/struct/global.html">USED TO SHOUT</a>.)</p>
 
 				<h2 id="image-formats">Image formats!</h2>
 
 				<p>There are several commonly used image formats on the web, each with their own purpose:</p>
 
 				<dl>
-					<dt>.GIF <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format">(Graphics Interchange Format)</a></dt>
-					<dd>An early <a href="https://en.wikipedia.org/wiki/Raster_graphics">raster/bitmap</a> format, heavily compressed with reduced palettes. It survives now because it has animations! This is the only reason to use this format, nowadays. (I say GIF with a hard <em>G</em>, and I am right.)</dd>
-					<dt>.PNG <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics">(Portable Network Graphics)</a></dt>
-					<dd>Still raster/bitmap, but much better than GIFs (if you don’t need animation) as they are <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics#Advantages">lossless</a>. Use PNGs for illustrations and graphics<span class="mdash">—</span>things with large areas of repeated colors<span class="mdash">—</span>or where you need color accuracy. (But many of these should be SVGs, below.)</dd>
-					<dt>.JPG / .JPEG <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics">(Joint Photographic [Experts] Group)</a></dt>
-					<dd>Raster/bitmap format that is good for photos. JPGs can compress photos down to much smaller file sizes, but the compression is <a href="https://en.wikipedia.org/wiki/JPEG#Effects_of_JPEG_compression">lossy</a>. Photos tend to hide these <em>compression artifacts</em> better than illustrations/graphics.</dd>
-					<dt>.SVG <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics">(Scaleable Vector Graphics)</a></dt>
-					<dd>Finally, a <a href="https://en.wikipedia.org/wiki/Vector_graphics">vector</a> format! SVGs should be used for any icons, logos, or illustrations. They store the vectors in code (a bit like HTML), and can be scaled cleanly for different sizes/resolutions.</dd>
+					<dt><code class="language-plaintext highlighter-rouge">.GIF</code> <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format">(Graphics Interchange Format)</a></dt>
+					<dd>An early <a href="https://en.wikipedia.org/wiki/Raster_graphics">raster/bitmap format</a>, heavily compressed with reduced palettes. It survives now because it does animations! This is the only reason to use this format, nowadays.</dd>
+					<dd>
+						<p>GIF compression is primitive and so they can quickly have <em>huge</em> file-sizes<span class="mdash">—</span>and can still slow down computers (downloading and rendering) even now. Be careful with these.</p>
+					</dd>
+					<dd>
+						<p>I say <em>GIF</em> with a hard <em>G</em> (as in <em>gift</em>), and I am your instructor and am right.</p>
+					</dd>
+					<dt><code class="language-plaintext highlighter-rouge">.JPG</code> / <code class="language-plaintext highlighter-rouge">.JPEG</code> <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics">(Joint Photographic [Experts] Group)</a></dt>
+					<dd>Ancient-but-timeless raster/bitmap format that is good for photos. JPGs can compress images down to much smaller file sizes with adjustable, lossy <a href="https://en.wikipedia.org/wiki/JPEG#Effects_of_JPEG_compression">compression ratios</a>.</dd>
+					<dd>
+						<p>The busyness of photos tends to hide the resulting <em>compression artifacts</em> better than simple illustrations/graphics, so JPG lives on as a common, widely-used image format.</p>
+					</dd>
+					<dt><code class="language-plaintext highlighter-rouge">.PNG</code> <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics">(Portable Network Graphics)</a></dt>
+					<dd>Still raster/bitmap, but much better than GIFs (if you don’t need animation) as they can use <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics#Advantages">lossless compression</a> and have alpha-channel transparency.</dd>
+					<dd>
+						<p>Use PNGs for illustrations and graphics<span class="mdash">—</span>things with large areas of repeated colors<span class="mdash">—</span>or where you need exact color accuracy. (But many of these should be SVGs, up next.)</p>
+					</dd>
+					<dt><code class="language-plaintext highlighter-rouge">.SVG</code> <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics">(Scaleable Vector Graphics)</a></dt>
+					<dd>Finally, a <a href="https://en.wikipedia.org/wiki/Vector_graphics">vector format</a>! SVGs should be used for any icons, logos, or illustrations<span class="mdash">—</span>provided you have access to the original source artwork for the vectors (shapes).</dd>
+					<dd>
+						<p>They store the vectors in code (a bit like HTML, we’ll see), and can be scaled cleanly for different sizes/resolutions. You can also target them with CSS, if they are <em>inlined</em> (embedded) into your DOM.</p>
+					</dd>
+					<dd>
+						<p>When targeting (or editing) SVG contents, note they have <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes">slightly different syntax</a> than HTML CSS<span class="mdash">—</span>using <code class="language-plaintext highlighter-rouge">fill</code> and <code class="language-plaintext highlighter-rouge">stroke</code> instead of <code class="language-plaintext highlighter-rouge">color</code> and <code class="language-plaintext highlighter-rouge">border</code>, for example. Also remember that <code class="language-plaintext highlighter-rouge">width</code> and <code class="language-plaintext highlighter-rouge">height</code> attributes will fix the SVG size (just like <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code>); use the <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox">viewBox attribute</a> if you want them to scale.</p>
+					</dd>
 				</dl>
 
 				<h2 id="sizing-and-containers">Sizing and containers</h2>
 
-				<p>If you remember way back to our <a href="/topic/html/">HTML intro</a>, images are a special HTML element:</p>
+				<p>If you remember way back to our <a href="/topic/html/">HTML intro</a>, images are a special HTML element:</p>
 
 				<div style="max-width: 60rem;" class="language-html highlighter-rouge">
 					<div class="highlight">
@@ -353,9 +388,9 @@
 </code></pre>
 					</div>
 				</div>
-				<p class="four-below" style="margin-top: var(--typography--between);"><em>A JPG in the same folder as the HTML (relative path/URL). Always write an <code class="language-plaintext highlighter-rouge">alt</code> text for accessibility.</em></p>
+				<p class="four-below" style="margin-top: var(--typography--between);"><em>A JPG in the same folder as the HTML (relative path/URL). Always write an <code class="language-plaintext highlighter-rouge">alt</code> text for accessibility.</em></p>
 
-				<p>By default, images will scale to their <em>intrinsic</em> size<span class="mdash">—</span>the pixel dimensions<span class="mdash">—</span>and are <em>inline</em> elements.</p>
+				<p>By default, images will scale to their <em>intrinsic</em> size<span class="mdash">—</span>the (<em>1x</em>) pixel dimensions<span class="mdash">—</span>and are <em>inline</em> elements:</p>
 
 				<figure style="--height--max: 36rem">
 
@@ -369,11 +404,23 @@
 
 				</figure>
 
-				<p>Most resets (like ours) include a <code class="language-plaintext highlighter-rouge">max-width: 100%</code> for <nobr>images<span class="mdash">—</span></nobr>otherwise they would poke out of their containers!</p>
+				<p>Most <a href="/topic/css/#resets">resets (like ours)</a> include a <code class="language-plaintext highlighter-rouge">max-width: 100%</code> for <nobr>images<span class="mdash">—</span></nobr>otherwise they would poke out of their containers!</p>
 
-				<p>This intrinsic/inline behavior is rarely what you <nobr>want<span class="mdash">—</span></nobr>more often your image will be sized <em>from</em> your design, not vice-versa. Also the image is sized to <a href="https://tomroth.com.au/dpr/">CSS pixels</a>, so it is blurry on <em>HiDPI</em> screens, which is most of us these days.</p>
+				<p>This intrinsic/inline behavior is rarely what you <nobr>want<span class="mdash">—</span></nobr>more often your image should be sized <em>from</em> your design, not vice-versa. Also by default the image is scaled to <a href="https://tomroth.com.au/dpr/">CSS pixels</a>, so it is blurry on modern <em>HiDPI</em> (a.k.a. <a href="https://en.wikipedia.org/wiki/Retina_display"><em>retina</em></a>, <em>2x</em>, <em>3x</em>) screens<span class="mdash">—</span>which is most of us, these days.</p>
 
-				<p>So often you’ll want to set images to <code class="language-plaintext highlighter-rouge">display: block;</code>, and then control their size/positioning via CSS, just like any other elements. Make sure your actual actual image dimensions are roughly twice their displayed size, so nothing is blurry:</p>
+				<p class="two-above">In the past, you would manually set an image size within your HTML via special <code class="language-plaintext highlighter-rouge">width</code> and <code class="language-plaintext highlighter-rouge">height</code> attributes:</p>
+
+				<div class="language-html one-above highlighter-rouge" style="max-width: 86rem;">
+					<div class="highlight">
+						<pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"tim.jpg"</span> <span class="na">alt=</span><span class="s">"Tim Berners-Lee at a computer."</span> <span class="na">width=</span><span class="s">"230"</span> <span class="na">height=</span><span class="s">"150"</span><span class="nt">&gt;</span>
+</code></pre>
+					</div>
+				</div>
+				<p style="margin-top: var(--typography--between);"><em>No units, even.</em></p>
+
+				<p>But this forces the image into a fixed size, which doesn’t work well in our modern, responsive, many-device-width context. We don’t do this much anymore.</p>
+
+				<p class="two-above">So often you’ll want to set images to <code class="language-plaintext highlighter-rouge">display: block;</code>, and then control their size/positioning via CSS, just like any other elements. Make sure your actual actual image dimensions are (at least) roughly twice their displayed, <em>CSS pixel</em> size, so nothing is blurry:</p>
 
 				<figure style="--height--max: 34rem">
 
@@ -383,15 +430,15 @@
 
 
 
-					<figcaption>This image file is 1600 pixels wide.</figcaption>
+					<figcaption>This image file is 1600 pixels wide. Drag that divider.</figcaption>
 
 				</figure>
 
 				<h2 id="object-fit">Object-fit</h2>
 
-				<p>CSS also added the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit">object-fit</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-position">object-position</a> properties for sizing images <em>within</em> their containers<span class="mdash">—</span>as if the image file is a child of <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code>. This is usually when setting an <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> to fill a container:</p>
+				<p>CSS also added the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit">object-fit</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-position">object-position</a> properties for sizing images <em>within</em> their containers<span class="mdash">—</span>as if the image file is a child of <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code>. This is usually when setting an <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> to fill a container:</p>
 
-				<figure style="--height--max: 38rem">
+				<figure style="--height--max: 59rem">
 
 					<div class="example">
 						<iframe allowfullscreen="" src="/example/image-object-fit/demo"></iframe>
@@ -399,17 +446,17 @@
 
 
 
-					<figcaption>Note the height on the section, otherwise the container would still resize to the image. Adjust the divider to see the behavior!</figcaption>
+					<figcaption>Note the height on the section, otherwise the container would still resize to the image. Adjust the divider to see the behavior!</figcaption>
 
 				</figure>
 
 				<h2 id="aspect-ratio">Aspect-ratio</h2>
 
-				<p>Recently (just last year) CSS also added an <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio">aspect-ratio property</a>, to control the width-to-height ratio of an element<span class="mdash">—</span>maintaining this relationship as an element scales.</p>
+				<p>Recently (just last year) CSS also added an <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio">aspect-ratio property</a>, to control the width-to-height ratio of an element<span class="mdash">—</span>maintaining this relationship as an element scales. (This used to be <a href="https://css-tricks.com/aspect-ratio-boxes/">unnecessarily hard</a> to achieve. CSS heights are always weird!)</p>
 
-				<p>This is not <em>just</em> for images (you can use it on anything!), but commonly comes up when using them:</p>
+				<p>This is not <em>just</em> for images (you can use it on anything!), but commonly comes up when using them:</p>
 
-				<figure style="--height--max: 32rem">
+				<figure style="--height--max: 30rem">
 
 					<div class="example">
 						<iframe allowfullscreen="" src="/example/image-aspect-ratio/demo"></iframe>
@@ -417,14 +464,16 @@
 
 
 
-					<figcaption>Note that without the <code class="language-plaintext highlighter-rouge">object-fit: cover;</code>, Tim would be distorted to the ratio!</figcaption>
+					<figcaption>Note that without the <code class="language-plaintext highlighter-rouge">object-fit: cover;</code>, Tim would be distorted to the ratio! Don’t distort Tim (or generally, most images) unless you really mean to.</figcaption>
 
 				</figure>
 
 				<h2 id="background-image">Background-image</h2>
 
-				<p>You can also use images as backgrounds on elements with the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-image">background-image</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size">background-size</a>, and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin">background-origin</a>
-					<nobr>properties<span class="mdash">—</span></nobr>particularly if you want to put something in front of them, like text.
+				<p>You can also use images as backgrounds on elements with the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-image">background-image</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size">
+						<nobr>background-size</nobr>
+					</a>, and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin">background-origin</a>
+					<nobr>properties<span class="mdash">—</span></nobr>particularly if you want to put something in front of them, like text.
 				</p>
 
 				<p>However this isn’t very semantic, as it blurs the content/<wbr />presentation boundaries<span class="mdash">—</span>since the image paths are moved into your CSS, and there is no <code class="language-plaintext highlighter-rouge">alt</code> text description for screen-readers. So you should <em>only</em> use this for contextual or decorative images<span class="mdash">—</span>not your actual content:</p>
@@ -441,11 +490,13 @@
 
 				</figure>
 
-				<p>Think, “would this page make sense if I couldn’t see this image?” If the answer is “no”, then use an <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> with an <code class="language-plaintext highlighter-rouge">alt</code>, instead.</p>
+				<blockquote class="callout" icon="🤔">
+					<p>Think, “would this page make sense if I couldn’t see this image?” If the answer is “no,” then use an <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> with an <code class="language-plaintext highlighter-rouge">alt</code>, instead. Use the <code class="language-plaintext highlighter-rouge">alt</code> text to convey the meaning.</p>
+				</blockquote>
 
 				<h2 id="figure--figcaption">Figure / figcaption</h2>
 
-				<p>Speaking of semantics<span class="mdash">—</span>HTML also has a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure">figure</a> element that you can use to associate an image (or other visual) with a visible <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption">figcaption</a> description or legend.</p>
+				<p>Speaking of semantics<span class="mdash">—</span>HTML also has a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure">figure</a> element that you can use to associate an image (or other visual) with a visible <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption">figcaption</a> description or legend. These containers formally link the meaning/context of the elements together.</p>
 
 				<figure style="--height--max: 38rem">
 
@@ -455,12 +506,44 @@
 
 
 
-					<figcaption>These can also be used to group things like videos, illustrations, and diagrams with their captions.</figcaption>
+					<figcaption>These can also be used to group things like videos, illustrations, and diagrams with their captions.</figcaption>
 
 				</figure>
 
-				<p>These are good examples of a <a href="https://dceg.cancer.gov/about/diversity-inclusion/inclusivity-minute/2021/curb-cut-effect">“curb-cut” approach/<wbr />philosophy</a> towards accessibility<span class="mdash">—</span>your <code class="language-plaintext highlighter-rouge">alt</code> text description is useful for more than just folks using screen readers!</p>
+				<blockquote class="callout" icon="🤝">
+					<p>Including visible captions/descriptions is a good example of the <a href="https://dceg.cancer.gov/about/diversity-inclusion/inclusivity-minute/2021/curb-cut-effect">“curb-cut” approach/<wbr />philosophy</a> towards accessibility<span class="mdash">—</span>your <code class="language-plaintext highlighter-rouge">alt</code> text description could be useful for more than just folks using screen readers! Strive for this broad benefit in all your accessibility work.</p>
+				</blockquote>
 
+				<h2 id="picture-source-andresponsiveimages">Picture, source, and responsive images</h2>
+
+				<p>With regards to their layout, you make images responsive in the same way you make all your page structure responsive<span class="mdash">—</span>by writing <a href="/topic/responsive/#mobile-first-design"><em>mobile-first</em></a> front-end for their containers. You can change their flow, size, shape, and so-on.</p>
+
+				<p>But images introduce some additional considerations, going across breakpoints. You might want to serve/<wbr />show different images at different sizes<span class="mdash">—</span>whether for dimensional (file-size, bandwidth, performance) or art-direction (scale, crop) reasons. The exact same image <code class="language-plaintext highlighter-rouge">src</code> file is <em>rarely</em> ideal at both <code class="language-plaintext highlighter-rouge">375px</code> and <code class="language-plaintext highlighter-rouge">2560px</code>.</p>
+
+				<p>Our venerable <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> element added some control for this with the addition of the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset">srcset </a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes">sizes</a> attributes. But I think it is much easier, at least ergonomically, to skip right into using the modern <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture">picture element</a>.</p>
+
+				<p>The <code class="language-plaintext highlighter-rouge">&lt;picture&gt;</code> element is a wrapper/<wbr />container for an <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code>, giving it alternate <code class="language-plaintext highlighter-rouge">&lt;source&gt;</code> tags that offer different image files for different scenarios. They use <a href="/topic/responsive/#media-queries">media-query-like</a> syntax to change what image is loaded and displayed:</p>
+
+				<figure style="--height--max: 50rem">
+
+					<div class="example">
+						<iframe allowfullscreen="" src="/example/image-picture/demo"></iframe>
+					</div>
+
+
+
+					<figcaption>This is all in the HTML; there is no (relevant) CSS. Adjust the divider to see the swaps!</figcaption>
+
+				</figure>
+
+				<p>Note that you still include the <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> as a <em>fallback</em><span class="mdash">—</span>put your largest size there. I find it helpful to follow the same <em>mobile-first</em> philosophy here as you do in the rest of your code<span class="mdash">—</span>putting your smaller images first, and your larger lower. You can have as many <code class="language-plaintext highlighter-rouge">&lt;source&gt;</code> elements as you need<span class="mdash">—</span>for image sizing or content.</p>
+
+				<blockquote class="callout" icon="🤌">
+					<p>Responsive images (like the rest of this) can get <a href="https://web.dev/learn/design/picture-element/">very complicated</a>, very quickly<span class="mdash">—</span>so always start with the basics (and mobile) first, like in the example here.</p>
+				</blockquote>
+
+				<!-- Talk about file-sizes? -->
+				<!-- How you make images? -->
 
 
 			</article>
