@@ -2,13 +2,23 @@ body, section { padding: 20px; }
 
 section {
 	background-color: gold;
-	height: 66vh;
+	height: 40vh;
 }
+
+section:not(:first-child) { margin-top: 20px;}
 
 img {
 	background-color: orange;
 	height: 100%; /* Fill the parent. */
+	width: 100%;
+}
+
+section:first-child img {
 	object-fit: contain; /* Fit the image. */
 	object-position: left top; /* Corner. */
-	width: 100%; /* Fill the parent. */
+}
+
+section:last-child img {
+	object-fit: cover; /* Cover the parent. */
+	object-position: right center; /* Side. */
 }

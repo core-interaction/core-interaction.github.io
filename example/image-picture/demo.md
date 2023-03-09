@@ -1,6 +1,6 @@
 ---
 order:
-  - style.css
   - index.html
-split: 54
+  - style.css
+split: 78
 ---
