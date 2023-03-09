@@ -3,7 +3,7 @@ let highlightBlocks = document.querySelectorAll('section'); // All.
 
 // Loop through the list, doing this `forEach` one.
 highlightBlocks.forEach((block) => {
-	let sectionObserver = new IntersectionObserver(entries => {
+	let sectionObserver = new IntersectionObserver((entries) => {
 		let [entry] = entries;
 
 		// This is a "ternary" operator——a condensed if/else.
