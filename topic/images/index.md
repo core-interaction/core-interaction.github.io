@@ -40,30 +40,30 @@ Remember that images weren’t a part of the [early web](/topic/everything/#wh
 
 There are several commonly used image formats on the web, each with their own purpose:
 
-`.GIF` [(Graphics Interchange Format)](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format)
+{: .icon-link style="display: flex; align-items: center; gap: 1em; font-style: normal;"} <img height=100 width=100 src="tim.gif"> `.GIF` [Graphics Interchange Format](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format)
 : An early [raster/bitmap format](https://en.wikipedia.org/wiki/Raster_graphics), heavily compressed with reduced palettes. It survives now because it does animations! This is the only reason to use this format, nowadays.
 
 : GIF compression is primitive and so they can quickly have *huge* file-sizes—and can still slow down computers (downloading and rendering) even now. Be careful with these.
 
 : I say *GIF* with a hard *G* (as in *gift*), and I am your instructor and am right.
 
-`.JPG` / `.JPEG` [(Joint Photographic [Experts] Group)](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics)
+{: .icon-link style="display: flex; align-items: center; gap: 1em; font-style: normal;"} <img height=100 width=100 src="tim.jpg"> `.JPG` / `.JPEG` [Joint Photographic [Experts] Group](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics)
 : Ancient-but-timeless raster/bitmap format that is good for photos. JPGs can compress images down to much smaller file sizes with adjustable, lossy [compression ratios](https://en.wikipedia.org/wiki/JPEG#Effects_of_JPEG_compression).
 
 : The busyness of photos tends to hide the resulting *compression artifacts* better than simple illustrations/graphics, so JPG lives on as a common, widely-used image format.
 
-`.PNG` [(Portable Network Graphics)](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics)
+{: .icon-link style="display: flex; align-items: center; gap: 1em; font-style: normal;"} <img height=100 width=100 src="tim.png"> `.PNG` [Portable Network Graphics](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics)
 : Still raster/bitmap, but much better than GIFs (if you don’t need animation) as they can use [lossless compression](https://en.wikipedia.org/wiki/Portable_Network_Graphics#Advantages) and have alpha-channel transparency.
 
 : Use PNGs for illustrations and graphics—things with large areas of repeated colors—or where you need exact color accuracy. (But many of these should be SVGs, up next.)
 
-`.SVG` [(Scaleable Vector Graphics)](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics)
+{: .icon-link style="display: flex; align-items: center; gap: 1em; font-style: normal;"} <img height=100 width=100 src="tim.svg"> `.SVG` [Scaleable Vector Graphics](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics)
 : Finally, a [vector format](https://en.wikipedia.org/wiki/Vector_graphics)! SVGs should be used for any icons, logos, or illustrations—provided you have access to the original source artwork for the vectors (shapes).
 
 : They store the vectors in code (a bit like HTML, we’ll see), and can be scaled cleanly for different sizes/resolutions. You can also target them with CSS, if they are *inlined* (embedded) into your DOM.
 
 : When targeting (or editing) SVG contents, note they have [slightly different syntax](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes) than HTML CSS—using `fill` and `stroke` instead of `color` and `border`, for example. Also remember that `width` and `height` attributes will fix the SVG size (just like `<img>`); use the [viewBox attribute](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox) if you want them to scale.
-
+{: style="margin-left: -1em;"}
 
 
 ## Sizing and containers
