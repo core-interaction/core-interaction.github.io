@@ -76,8 +76,8 @@
 
 				<p>There are several commonly used image formats on the web, each with their own purpose:</p>
 
-				<dl>
-					<dt><code class="language-plaintext highlighter-rouge">.GIF</code> <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format">(Graphics Interchange Format)</a></dt>
+				<dl style="margin-left: -1em;">
+					<dt class="icon-link" style="display: flex; align-items: center; gap: 1em; font-style: normal;"><img height="100" width="100" src="tim.gif" /> <code class="language-plaintext highlighter-rouge">.GIF</code> <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format">Graphics Interchange Format</a></dt>
 					<dd>An early <a href="https://en.wikipedia.org/wiki/Raster_graphics">raster/bitmap format</a>, heavily compressed with reduced palettes. It survives now because it does animations! This is the only reason to use this format, nowadays.</dd>
 					<dd>
 						<p>GIF compression is primitive and so they can quickly have <em>huge</em> file-sizes<span class="mdash">—</span>and can still slow down computers (downloading and rendering) even now. Be careful with these.</p>
@@ -85,17 +85,17 @@
 					<dd>
 						<p>I say <em>GIF</em> with a hard <em>G</em> (as in <em>gift</em>), and I am your instructor and am right.</p>
 					</dd>
-					<dt><code class="language-plaintext highlighter-rouge">.JPG</code> / <code class="language-plaintext highlighter-rouge">.JPEG</code> <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics">(Joint Photographic [Experts] Group)</a></dt>
+					<dt class="icon-link" style="display: flex; align-items: center; gap: 1em; font-style: normal;"><img height="100" width="100" src="tim.jpg" /> <code class="language-plaintext highlighter-rouge">.JPG</code> / <code class="language-plaintext highlighter-rouge">.JPEG</code> <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics">Joint Photographic [Experts] Group</a></dt>
 					<dd>Ancient-but-timeless raster/bitmap format that is good for photos. JPGs can compress images down to much smaller file sizes with adjustable, lossy <a href="https://en.wikipedia.org/wiki/JPEG#Effects_of_JPEG_compression">compression ratios</a>.</dd>
 					<dd>
 						<p>The busyness of photos tends to hide the resulting <em>compression artifacts</em> better than simple illustrations/graphics, so JPG lives on as a common, widely-used image format.</p>
 					</dd>
-					<dt><code class="language-plaintext highlighter-rouge">.PNG</code> <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics">(Portable Network Graphics)</a></dt>
+					<dt class="icon-link" style="display: flex; align-items: center; gap: 1em; font-style: normal;"><img height="100" width="100" src="tim.png" /> <code class="language-plaintext highlighter-rouge">.PNG</code> <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics">Portable Network Graphics</a></dt>
 					<dd>Still raster/bitmap, but much better than GIFs (if you don’t need animation) as they can use <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics#Advantages">lossless compression</a> and have alpha-channel transparency.</dd>
 					<dd>
 						<p>Use PNGs for illustrations and graphics<span class="mdash">—</span>things with large areas of repeated colors<span class="mdash">—</span>or where you need exact color accuracy. (But many of these should be SVGs, up next.)</p>
 					</dd>
-					<dt><code class="language-plaintext highlighter-rouge">.SVG</code> <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics">(Scaleable Vector Graphics)</a></dt>
+					<dt class="icon-link" style="display: flex; align-items: center; gap: 1em; font-style: normal;"><img height="100" width="100" src="tim.svg" /> <code class="language-plaintext highlighter-rouge">.SVG</code> <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics">Scaleable Vector Graphics</a></dt>
 					<dd>Finally, a <a href="https://en.wikipedia.org/wiki/Vector_graphics">vector format</a>! SVGs should be used for any icons, logos, or illustrations<span class="mdash">—</span>provided you have access to the original source artwork for the vectors (shapes).</dd>
 					<dd>
 						<p>They store the vectors in code (a bit like HTML, we’ll see), and can be scaled cleanly for different sizes/resolutions. You can also target them with CSS, if they are <em>inlined</em> (embedded) into your DOM.</p>
