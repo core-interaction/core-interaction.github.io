@@ -46,7 +46,7 @@ There are several commonly used image formats on the web, each with their own 
 
 : I say *GIF* with a hard *G* (as in *gift*), and I am your instructor and am right.
 
-{: .icon-link style="display: flex; align-items: center; gap: 1em; font-style: normal; max-width: initial;"} <img height=100 width=100 src="tim.jpg"> `.JPG` / `.JPEG` [Joint Photographic [Experts] Group](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics)
+{: .icon-link style="display: flex; align-items: center; gap: 1em; font-style: normal; max-width: initial;"} <img height=100 width=100 src="tim.jpg"> `.JPG` / `.JPEG` [Joint Photographic [Experts] Group](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image)
 : Ancient-but-timeless raster/bitmap format that is good for photos. JPGs can compress images down to much smaller file sizes with adjustable, lossy [compression ratios](https://en.wikipedia.org/wiki/JPEG#Effects_of_JPEG_compression).
 
 : The busyness of photos tends to hide the resulting *compression artifacts* better than simple illustrations/<wbr>graphics, so JPG lives on as a common, widely-used image format.
