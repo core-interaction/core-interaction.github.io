@@ -70,25 +70,23 @@
 
 				<p><cite><a href="http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html">Marc Andreessen</a></cite></p>
 
-				<p class="two-above">(I DON’T KNOW IF WE TOLD YOU BUT HTML <a href="https://www.w3.org/TR/html40/struct/global.html">USED TO SHOUT</a>.)</p>
+				<p class="two-above">(I DON’T KNOW IF I TOLD YOU BUT HTML <a href="https://www.w3.org/TR/html40/struct/global.html">USED TO SHOUT</a>.)</p>
 
 				<h2 id="image-formats">Image formats!</h2>
 
 				<p>There are several commonly used image formats on the web, each with their own purpose:</p>
 
-				<dl style="margin-left: -1em;">
+				<dl style="margin-left: -3ch;">
 					<dt class="icon-link" style="display: flex; align-items: center; gap: 1em; font-style: normal;"><img height="100" width="100" src="tim.gif" /> <code class="language-plaintext highlighter-rouge">.GIF</code> <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format">Graphics Interchange Format</a></dt>
-					<dd>An early <a href="https://en.wikipedia.org/wiki/Raster_graphics">raster/bitmap format</a>, heavily compressed with reduced palettes. It survives now because it does animations! This is the only reason to use this format, nowadays.</dd>
-					<dd>
-						<p>GIF compression is primitive and so they can quickly have <em>huge</em> file-sizes<span class="mdash">—</span>and can still slow down computers (downloading and rendering) even now. Be careful with these.</p>
-					</dd>
+					<dd>An early <a href="https://en.wikipedia.org/wiki/Raster_graphics">raster/bitmap format</a>, heavily compressed with reduced palettes. It survives now because it does animations! This is the only reason to use this format, nowadays.</dd>
+					<dd>GIF compression is primitive and so they can quickly have <em>huge</em> file-sizes<span class="mdash">—</span>and can still slow down computers (downloading and rendering) even now. Be careful with these.</dd>
 					<dd>
 						<p>I say <em>GIF</em> with a hard <em>G</em> (as in <em>gift</em>), and I am your instructor and am right.</p>
 					</dd>
-					<dt class="icon-link" style="display: flex; align-items: center; gap: 1em; font-style: normal;"><img height="100" width="100" src="tim.jpg" /> <code class="language-plaintext highlighter-rouge">.JPG</code> / <code class="language-plaintext highlighter-rouge">.JPEG</code> <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics">Joint Photographic [Experts] Group</a></dt>
+					<dt class="icon-link" style="display: flex; align-items: center; gap: 1em; font-style: normal; max-width: initial;"><img height="100" width="100" src="tim.jpg" /> <code class="language-plaintext highlighter-rouge">.JPG</code> / <code class="language-plaintext highlighter-rouge">.JPEG</code> <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics">Joint Photographic [Experts] Group</a></dt>
 					<dd>Ancient-but-timeless raster/bitmap format that is good for photos. JPGs can compress images down to much smaller file sizes with adjustable, lossy <a href="https://en.wikipedia.org/wiki/JPEG#Effects_of_JPEG_compression">compression ratios</a>.</dd>
 					<dd>
-						<p>The busyness of photos tends to hide the resulting <em>compression artifacts</em> better than simple illustrations/graphics, so JPG lives on as a common, widely-used image format.</p>
+						<p>The busyness of photos tends to hide the resulting <em>compression artifacts</em> better than simple illustrations/<wbr />graphics, so JPG lives on as a common, widely-used image format.</p>
 					</dd>
 					<dt class="icon-link" style="display: flex; align-items: center; gap: 1em; font-style: normal;"><img height="100" width="100" src="tim.png" /> <code class="language-plaintext highlighter-rouge">.PNG</code> <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics">Portable Network Graphics</a></dt>
 					<dd>Still raster/bitmap, but much better than GIFs (if you don’t need animation) as they can use <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics#Advantages">lossless compression</a> and have alpha-channel transparency.</dd>
@@ -97,12 +95,8 @@
 					</dd>
 					<dt class="icon-link" style="display: flex; align-items: center; gap: 1em; font-style: normal;"><img height="100" width="100" src="tim.svg" /> <code class="language-plaintext highlighter-rouge">.SVG</code> <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics">Scaleable Vector Graphics</a></dt>
 					<dd>Finally, a <a href="https://en.wikipedia.org/wiki/Vector_graphics">vector format</a>! SVGs should be used for any icons, logos, or illustrations<span class="mdash">—</span>provided you have access to the original source artwork for the vectors (shapes).</dd>
-					<dd>
-						<p>They store the vectors in code (a bit like HTML, we’ll see), and can be scaled cleanly for different sizes/resolutions. You can also target them with CSS, if they are <em>inlined</em> (embedded) into your DOM.</p>
-					</dd>
-					<dd>
-						<p>When targeting (or editing) SVG contents, note they have <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes">slightly different syntax</a> than HTML CSS<span class="mdash">—</span>using <code class="language-plaintext highlighter-rouge">fill</code> and <code class="language-plaintext highlighter-rouge">stroke</code> instead of <code class="language-plaintext highlighter-rouge">color</code> and <code class="language-plaintext highlighter-rouge">border</code>, for example. Also remember that <code class="language-plaintext highlighter-rouge">width</code> and <code class="language-plaintext highlighter-rouge">height</code> attributes will fix the SVG size (just like <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code>); use the <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox">viewBox attribute</a> if you want them to scale.</p>
-					</dd>
+					<dd>They store the vectors in code (a bit like HTML, we’ll see), and can be scaled cleanly for different sizes/<wbr />resolutions. You can also target them with CSS, if they are <em>inlined</em> (embedded) into your DOM.</dd>
+					<dd>When targeting (or editing) SVG contents, note they have <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes">slightly different syntax</a> than HTML CSS<span class="mdash">—</span>using <code class="language-plaintext highlighter-rouge">fill</code> and <code class="language-plaintext highlighter-rouge">stroke</code> instead of <code class="language-plaintext highlighter-rouge">color</code> and <code class="language-plaintext highlighter-rouge">border</code>, for example. Also remember that <code class="language-plaintext highlighter-rouge">width</code> and <code class="language-plaintext highlighter-rouge">height</code> attributes will fix the SVG size (just like <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code>); use the <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox">viewBox attribute</a> if you want them to scale.</dd>
 				</dl>
 
 				<h2 id="sizing-and-containers">Sizing and containers</h2>
