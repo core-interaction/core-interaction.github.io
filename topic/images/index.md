@@ -178,5 +178,6 @@ Note that you still include the `<img>` as a *fallback*—put your largest siz
 
 
 
+<!-- More about SVGs -->
 <!-- Talk about file-sizes? -->
 <!-- How you make images? -->
