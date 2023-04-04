@@ -1,5 +1,6 @@
 <figure markdown="0"
 	{%- if include.class %} class="{{ include.class }}"{% endif -%}
+	{%- if include.style %} style="{{ include.style }}"{% endif -%}
 	{%- if include.rows %} rows="{{ include.rows }}"{% endif -%}
 	{%- if include.width or include.height or include.aspect-ratio %}
 		style="
