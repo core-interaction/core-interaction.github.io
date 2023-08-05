@@ -16,7 +16,7 @@ jobs:
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 3.1.0
+        ruby-version: 3.2.2
     - name: Install and Build Jekyll
       uses: limjh16/jekyll-action-ts@v2
       with:
