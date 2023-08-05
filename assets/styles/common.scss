@@ -528,6 +528,18 @@ body {
 
 
 
+	&.redirect {
+		@extend .class;
+
+		> main > article:before {
+			color:      var(--color);
+			content:    'Redirecting…';
+			font-style: italic;
+		}
+	}
+
+
+
 	// Code!
 	code {
 		--color:            var(--color--code);

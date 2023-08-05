@@ -7,7 +7,7 @@ layout: default
 {% include nav.html %} {% comment %} Don’t reorder this or the titles will be wonky. {% endcomment %}
 {% include auto_title.html %}
 <main>
-	{% if title %}
+	{% if title and page.redirect == nil %}
 		<header>
 			<h1>{{- title | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines -}}</h1>
 			{% if date %}

@@ -22,10 +22,15 @@
 			<link href="/assets/icons/touch.png" rel="apple-touch-icon">
 			<meta name="theme-color" content="#e42a1d">
 		{% endif %}
+		{% if page.redirect %}
+			<meta content="0;URL='{{ page.redirect }}'" http-equiv="refresh">
+		{% endif %}
 	</head>
 	<body
 		class="
-			{% if page.layout == 'lab' %}
+			{% if page.redirect %}
+				redirect
+			{% elsif page.layout == 'lab' %}
 				{% if page.name %}
 					landing
 				{% else %}
