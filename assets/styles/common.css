@@ -311,6 +311,7 @@ body > main > article details > summary > p:after,
 body > main > footer > div > section:last-child > p > a:after,
 body.index > main > nav aside > menu > li > a:after,
 body.class > main > article > p > button:after,
+body.redirect > main > article > p > button:after,
 body.example > section nav a.external:after,
 body > nav > div > section:last-child > p > a.external:not(._):after,
 body > main > header > address > div > p > a.external:not(._):after,
@@ -324,6 +325,7 @@ body > main > article details > summary > p.external:not(._):after,
 body > main > footer > div > section:last-child > p > a.external:not(._):after,
 body.index > main > nav aside > menu > li > a.external:not(._):after,
 body.class > main > article > p > button.external:not(._):after,
+body.redirect > main > article > p > button.external:not(._):after,
 body.example > section nav a.external:not(._):after,
 body > nav > div > section:last-child > p > a[href*=".pdf"]:after,
 body > main > header > address > div > p > a[href*=".pdf"]:after,
@@ -337,6 +339,7 @@ body > main > article details > summary > p[href*=".pdf"]:after,
 body > main > footer > div > section:last-child > p > a[href*=".pdf"]:after,
 body.index > main > nav aside > menu > li > a[href*=".pdf"]:after,
 body.class > main > article > p > button[href*=".pdf"]:after,
+body.redirect > main > article > p > button[href*=".pdf"]:after,
 body.example > section nav a[href*=".pdf"].external:after,
 body > nav > div > section:last-child > p > a[href="#"]:after,
 body > main > header > address > div > p > a[href="#"]:after,
@@ -350,6 +353,7 @@ body > main > article details > summary > p[href="#"]:after,
 body > main > footer > div > section:last-child > p > a[href="#"]:after,
 body.index > main > nav aside > menu > li > a[href="#"]:after,
 body.class > main > article > p > button[href="#"]:after,
+body.redirect > main > article > p > button[href="#"]:after,
 body.example > section nav a[href="#"].external:after,
 body > nav > div > section:last-child > p > a.copy:after,
 body > main > header > address > div > p > a.copy:after,
@@ -363,6 +367,7 @@ body > main > article details > summary > p.copy:after,
 body > main > footer > div > section:last-child > p > a.copy:after,
 body.index > main > nav aside > menu > li > a.copy:after,
 body.class > main > article > p > button.copy:after,
+body.redirect > main > article > p > button.copy:after,
 body.example > section nav a.copy.external:after,
 body > nav > div > section:last-child > p > a.last:after,
 body > main > header > address > div > p > a.last:after,
@@ -376,6 +381,7 @@ body > main > article details > summary > p.last:after,
 body > main > footer > div > section:last-child > p > a.last:after,
 body.index > main > nav aside > menu > li > a.last:after,
 body.class > main > article > p > button.last:after,
+body.redirect > main > article > p > button.last:after,
 body.example > section nav a.last.external:after,
 body > nav > div > section:last-child > p > a.shuffle:after,
 body > main > header > address > div > p > a.shuffle:after,
@@ -389,6 +395,7 @@ body > main > article details > summary > p.shuffle:after,
 body > main > footer > div > section:last-child > p > a.shuffle:after,
 body.index > main > nav aside > menu > li > a.shuffle:after,
 body.class > main > article > p > button.shuffle:after,
+body.redirect > main > article > p > button.shuffle:after,
 body.example > section nav a.shuffle.external:after,
 body > nav > div > section:last-child > p > a.this:after,
 body > main > header > address > div > p > a.this:after,
@@ -402,6 +409,7 @@ body > main > article details > summary > p.this:after,
 body > main > footer > div > section:last-child > p > a.this:after,
 body.index > main > nav aside > menu > li > a.this:after,
 body.class > main > article > p > button.this:after,
+body.redirect > main > article > p > button.this:after,
 body.example > section nav a.this.external:after {
 	--typography--shoulder: calc(1 - var(--typography--cap-height));
 	--typography--shoulder--top: calc(var(--typography--shoulder) - var(--typography--shoulder--bottom));
@@ -419,6 +427,7 @@ body > main > article details > summary > p[href*=".pdf"]:after,
 body > main > footer > div > section:last-child > p > a[href*=".pdf"]:after,
 body.index > main > nav aside > menu > li > a[href*=".pdf"]:after,
 body.class > main > article > p > button[href*=".pdf"]:after,
+body.redirect > main > article > p > button[href*=".pdf"]:after,
 body.example > section nav a[href*=".pdf"].external:after,
 body > nav > div > section:last-child > p > a[href="#"]:after,
 body > main > header > address > div > p > a[href="#"]:after,
@@ -432,6 +441,7 @@ body > main > article details > summary > p[href="#"]:after,
 body > main > footer > div > section:last-child > p > a[href="#"]:after,
 body.index > main > nav aside > menu > li > a[href="#"]:after,
 body.class > main > article > p > button[href="#"]:after,
+body.redirect > main > article > p > button[href="#"]:after,
 body.example > section nav a[href="#"].external:after,
 body > nav > div > section:last-child > p > a.copy:after,
 body > main > header > address > div > p > a.copy:after,
@@ -445,6 +455,7 @@ body > main > article details > summary > p.copy:after,
 body > main > footer > div > section:last-child > p > a.copy:after,
 body.index > main > nav aside > menu > li > a.copy:after,
 body.class > main > article > p > button.copy:after,
+body.redirect > main > article > p > button.copy:after,
 body.example > section nav a.copy.external:after,
 body > nav > div > section:last-child > p > a.last:after,
 body > main > header > address > div > p > a.last:after,
@@ -458,6 +469,7 @@ body > main > article details > summary > p.last:after,
 body > main > footer > div > section:last-child > p > a.last:after,
 body.index > main > nav aside > menu > li > a.last:after,
 body.class > main > article > p > button.last:after,
+body.redirect > main > article > p > button.last:after,
 body.example > section nav a.last.external:after,
 body > nav > div > section:last-child > p > a.shuffle:after,
 body > main > header > address > div > p > a.shuffle:after,
@@ -471,6 +483,7 @@ body > main > article details > summary > p.shuffle:after,
 body > main > footer > div > section:last-child > p > a.shuffle:after,
 body.index > main > nav aside > menu > li > a.shuffle:after,
 body.class > main > article > p > button.shuffle:after,
+body.redirect > main > article > p > button.shuffle:after,
 body.example > section nav a.shuffle.external:after,
 body > nav > div > section:last-child > p > a.this:after,
 body > main > header > address > div > p > a.this:after,
@@ -484,6 +497,7 @@ body > main > article details > summary > p.this:after,
 body > main > footer > div > section:last-child > p > a.this:after,
 body.index > main > nav aside > menu > li > a.this:after,
 body.class > main > article > p > button.this:after,
+body.redirect > main > article > p > button.this:after,
 body.example > section nav a.this.external:after {
 	--typography--cap-height: 0.705;
 	--typography--x-height: 0.508;
@@ -505,6 +519,7 @@ body > main > article details > summary > p:after,
 body > main > footer > div > section:last-child > p > a:after,
 body.index > main > nav aside > menu > li > a:after,
 body.class > main > article > p > button:after,
+body.redirect > main > article > p > button:after,
 body.example > section nav a.external:after,
 body > nav > div > section:last-child > p > a.external:not(._):after,
 body > main > header > address > div > p > a.external:not(._):after,
@@ -518,6 +533,7 @@ body > main > article details > summary > p.external:not(._):after,
 body > main > footer > div > section:last-child > p > a.external:not(._):after,
 body.index > main > nav aside > menu > li > a.external:not(._):after,
 body.class > main > article > p > button.external:not(._):after,
+body.redirect > main > article > p > button.external:not(._):after,
 body.example > section nav a.external:not(._):after {
 	--typography--cap-height: 0.705;
 	--typography--x-height: 0.526;
@@ -537,6 +553,7 @@ body > main > article details > summary > p[href*=".pdf"]:after,
 body > main > footer > div > section:last-child > p > a[href*=".pdf"]:after,
 body.index > main > nav aside > menu > li > a[href*=".pdf"]:after,
 body.class > main > article > p > button[href*=".pdf"]:after,
+body.redirect > main > article > p > button[href*=".pdf"]:after,
 body.example > section nav a[href*=".pdf"].external:after,
 body > nav > div > section:last-child > p > a[href="#"]:after,
 body > main > header > address > div > p > a[href="#"]:after,
@@ -550,6 +567,7 @@ body > main > article details > summary > p[href="#"]:after,
 body > main > footer > div > section:last-child > p > a[href="#"]:after,
 body.index > main > nav aside > menu > li > a[href="#"]:after,
 body.class > main > article > p > button[href="#"]:after,
+body.redirect > main > article > p > button[href="#"]:after,
 body.example > section nav a[href="#"].external:after,
 body > nav > div > section:last-child > p > a.copy:after,
 body > main > header > address > div > p > a.copy:after,
@@ -563,6 +581,7 @@ body > main > article details > summary > p.copy:after,
 body > main > footer > div > section:last-child > p > a.copy:after,
 body.index > main > nav aside > menu > li > a.copy:after,
 body.class > main > article > p > button.copy:after,
+body.redirect > main > article > p > button.copy:after,
 body.example > section nav a.copy.external:after,
 body > nav > div > section:last-child > p > a.last:after,
 body > main > header > address > div > p > a.last:after,
@@ -576,6 +595,7 @@ body > main > article details > summary > p.last:after,
 body > main > footer > div > section:last-child > p > a.last:after,
 body.index > main > nav aside > menu > li > a.last:after,
 body.class > main > article > p > button.last:after,
+body.redirect > main > article > p > button.last:after,
 body.example > section nav a.last.external:after,
 body > nav > div > section:last-child > p > a.shuffle:after,
 body > main > header > address > div > p > a.shuffle:after,
@@ -589,6 +609,7 @@ body > main > article details > summary > p.shuffle:after,
 body > main > footer > div > section:last-child > p > a.shuffle:after,
 body.index > main > nav aside > menu > li > a.shuffle:after,
 body.class > main > article > p > button.shuffle:after,
+body.redirect > main > article > p > button.shuffle:after,
 body.example > section nav a.shuffle.external:after,
 body > nav > div > section:last-child > p > a.this:after,
 body > main > header > address > div > p > a.this:after,
@@ -602,6 +623,7 @@ body > main > article details > summary > p.this:after,
 body > main > footer > div > section:last-child > p > a.this:after,
 body.index > main > nav aside > menu > li > a.this:after,
 body.class > main > article > p > button.this:after,
+body.redirect > main > article > p > button.this:after,
 body.example > section nav a.this.external:after {
 	--typography--weight: 300;
 	--typography--inset--left: -0.065;
@@ -624,6 +646,7 @@ body > main > article details > summary > p:after,
 body > main > footer > div > section:last-child > p > a:after,
 body.index > main > nav aside > menu > li > a:after,
 body.class > main > article > p > button:after,
+body.redirect > main > article > p > button:after,
 body.example > section nav a.external:after,
 body > nav > div > section:last-child > p > a.external:not(._):after,
 body > main > header > address > div > p > a.external:not(._):after,
@@ -637,6 +660,7 @@ body > main > article details > summary > p.external:not(._):after,
 body > main > footer > div > section:last-child > p > a.external:not(._):after,
 body.index > main > nav aside > menu > li > a.external:not(._):after,
 body.class > main > article > p > button.external:not(._):after,
+body.redirect > main > article > p > button.external:not(._):after,
 body.example > section nav a.external:not(._):after {
 	--typography--weight: 300;
 	--typography--inset--left: -0.058;
@@ -678,6 +702,7 @@ body > main > article details > summary > p,
 body > main > footer > div > section:last-child > p > a,
 body.index > main > nav aside > menu > li > a,
 body.class > main > article > p > button,
+body.redirect > main > article > p > button,
 body.example > section nav a.external {
 	text-decoration: initial;
 	text-shadow: initial;
@@ -704,6 +729,7 @@ body > main > article details > summary > p:focus:focus-visible:not(:disabled),
 body > main > footer > div > section:last-child > p > a:focus:focus-visible:not(:disabled),
 body.index > main > nav aside > menu > li > a:focus:focus-visible:not(:disabled),
 body.class > main > article > p > button:focus:focus-visible:not(:disabled),
+body.redirect > main > article > p > button:focus:focus-visible:not(:disabled),
 body.example > section nav a.external:focus:focus-visible:not(:disabled),
 body > nav > div > section:first-child > a:focus:focus-visible:not(:disabled),
 body > main > article details > summary:focus:focus-visible:not(:disabled),
@@ -729,6 +755,7 @@ body > main > article details > summary > p,
 body > main > footer > div > section:last-child > p > a,
 body.index > main > nav aside > menu > li > a,
 body.class > main > article > p > button,
+body.redirect > main > article > p > button,
 body.example > section nav a.external,
 body > nav > div > section:first-child > a,
 body > main > article details > summary,
@@ -753,6 +780,7 @@ body > main > article details > summary > p:active,
 body > main > footer > div > section:last-child > p > a:active,
 body.index > main > nav aside > menu > li > a:active,
 body.class > main > article > p > button:active,
+body.redirect > main > article > p > button:active,
 body.example > section nav a.external:active,
 body > nav > div > section:first-child > a:active,
 body > main > article details > summary:active,
@@ -776,6 +804,7 @@ body > main > article details > summary > p:focus,
 body > main > footer > div > section:last-child > p > a:focus,
 body.index > main > nav aside > menu > li > a:focus,
 body.class > main > article > p > button:focus,
+body.redirect > main > article > p > button:focus,
 body.example > section nav a.external:focus,
 body > nav > div > section:first-child > a:focus,
 body > main > article details > summary:focus,
@@ -799,6 +828,7 @@ body.example > section #files > ul li:focus {
 	body > main > footer > div > section:last-child > p > a:hover,
 	body.index > main > nav aside > menu > li > a:hover,
 	body.class > main > article > p > button:hover,
+	body.redirect > main > article > p > button:hover,
 	body.example > section nav a.external:hover,
 	body > nav > div > section:first-child > a:hover,
 	body > main > article details > summary:hover,
@@ -830,6 +860,7 @@ body > main > article details > summary > p,
 body > main > footer > div > section:last-child > p > a,
 body.index > main > nav aside > menu > li > a,
 body.class > main > article > p > button,
+body.redirect > main > article > p > button,
 body.example > section nav a.external {
 	border-bottom-width: calc(var(--link--enlargement) / 2);
 	border-color: transparent;
@@ -950,6 +981,7 @@ body > nav > div {
 }
 
 body.class,
+body.redirect,
 body.index,
 body.scrolled > nav {
 	--color--code--background: var(--color--tint--reverse);
@@ -960,6 +992,7 @@ body.scrolled > nav {
 }
 
 body.class > *,
+body.redirect > *,
 body.index > *,
 body.scrolled > nav > * {
 	--color: var(--color--background--parent);
@@ -4071,13 +4104,13 @@ body > main > footer > div {
 	margin-top: var(--margin--vertical);
 }
 
-body.scrolled > nav > div > section:last-child > p:first-child {
+> body.scrolled > nav > div > section:last-child > p:first-child {
 	opacity: 0;
 	transition-delay: 0ms, calc(var(--color--transition) / 2);
 	visibility: hidden;
 }
 
-body.scrolled > nav > div > section:last-child > p:last-child {
+> body.scrolled > nav > div > section:last-child > p:last-child {
 	transition-delay: calc(var(--color--transition) / 2), 0ms;
 	opacity: 1;
 	visibility: visible;
@@ -4110,11 +4143,13 @@ body.index > main > nav aside > menu {
 	}
 }
 
-body.class > main > article > p {
+body.class > main > article > p,
+body.redirect > main > article > p {
 	grid-column: 1/span 2;
 }
 
-body.class > main > article > ul {
+body.class > main > article > ul,
+body.redirect > main > article > ul {
 	--groups: 2;
 	column-gap: var(--margin);
 	display: grid;
@@ -4126,15 +4161,24 @@ body.class > main > article > ul {
 }
 
 @media (min-width: 35.5em) {
-	body.class > main > article > ul {
+
+	body.class > main > article > ul,
+	body.redirect > main > article > ul {
 		--margin--top: 0rem;
 		grid-column: 3/span 4;
 	}
 }
 
-body.class > main > article > ul > li {
+body.class > main > article > ul > li,
+body.redirect > main > article > ul > li {
 	display: block;
 	padding: initial;
+}
+
+body.redirect > main > article:before {
+	color: var(--color);
+	content: "Redirecting…";
+	font-style: italic;
 }
 
 body code,
@@ -4368,6 +4412,7 @@ body > main > article details > summary > p,
 body > main > footer > div > section:last-child > p > a,
 body.index > main > nav aside > menu > li > a,
 body.class > main > article > p > button,
+body.redirect > main > article > p > button,
 body.example > section nav a.external {
 	--color: var(--link--color);
 	--icon--gap: 1ch;
@@ -4391,6 +4436,7 @@ body > main > article details > summary > p:after,
 body > main > footer > div > section:last-child > p > a:after,
 body.index > main > nav aside > menu > li > a:after,
 body.class > main > article > p > button:after,
+body.redirect > main > article > p > button:after,
 body.example > section nav a.external:after {
 	content: var(--icon);
 	display: inline-block;
@@ -4413,6 +4459,7 @@ body > main > article details > summary > p:empty,
 body > main > footer > div > section:last-child > p > a:empty,
 body.index > main > nav aside > menu > li > a:empty,
 body.class > main > article > p > button:empty,
+body.redirect > main > article > p > button:empty,
 body.example > section nav a.external:empty {
 	border-right-width: var(--link--enlargement);
 	width: fit-content;
@@ -4430,6 +4477,7 @@ body > main > article details > summary > p:empty:after,
 body > main > footer > div > section:last-child > p > a:empty:after,
 body.index > main > nav aside > menu > li > a:empty:after,
 body.class > main > article > p > button:empty:after,
+body.redirect > main > article > p > button:empty:after,
 body.example > section nav a.external:empty:after {
 	margin-left: initial;
 	margin-right: initial;
@@ -4447,6 +4495,7 @@ body > main > article details > summary > p[href^="/"],
 body > main > footer > div > section:last-child > p > a[href^="/"],
 body.index > main > nav aside > menu > li > a[href^="/"],
 body.class > main > article > p > button[href^="/"],
+body.redirect > main > article > p > button[href^="/"],
 body.example > section nav a[href^="/"].external {
 	--icon: "→";
 }
@@ -4463,6 +4512,7 @@ body > main > article details > summary > p[href^=http],
 body > main > footer > div > section:last-child > p > a[href^=http],
 body.index > main > nav aside > menu > li > a[href^=http],
 body.class > main > article > p > button[href^=http],
+body.redirect > main > article > p > button[href^=http],
 body.example > section nav a[href^=http].external {
 	--icon: "↗";
 	--icon--shift: 0.3rem;
@@ -4480,6 +4530,7 @@ body > main > article details > summary > p[href^="#"],
 body > main > footer > div > section:last-child > p > a[href^="#"],
 body.index > main > nav aside > menu > li > a[href^="#"],
 body.class > main > article > p > button[href^="#"],
+body.redirect > main > article > p > button[href^="#"],
 body.example > section nav a[href^="#"].external {
 	--icon: "↓";
 }
@@ -4496,6 +4547,7 @@ body > main > article details > summary > p[href*=".pdf"],
 body > main > footer > div > section:last-child > p > a[href*=".pdf"],
 body.index > main > nav aside > menu > li > a[href*=".pdf"],
 body.class > main > article > p > button[href*=".pdf"],
+body.redirect > main > article > p > button[href*=".pdf"],
 body.example > section nav a[href*=".pdf"].external,
 body > nav > div > section:last-child > p > a[href="#"],
 body > main > header > address > div > p > a[href="#"],
@@ -4509,6 +4561,7 @@ body > main > article details > summary > p[href="#"],
 body > main > footer > div > section:last-child > p > a[href="#"],
 body.index > main > nav aside > menu > li > a[href="#"],
 body.class > main > article > p > button[href="#"],
+body.redirect > main > article > p > button[href="#"],
 body.example > section nav a[href="#"].external,
 body > nav > div > section:last-child > p > a.copy,
 body > main > header > address > div > p > a.copy,
@@ -4522,6 +4575,7 @@ body > main > article details > summary > p.copy,
 body > main > footer > div > section:last-child > p > a.copy,
 body.index > main > nav aside > menu > li > a.copy,
 body.class > main > article > p > button.copy,
+body.redirect > main > article > p > button.copy,
 body.example > section nav a.copy.external,
 body > nav > div > section:last-child > p > a.last,
 body > main > header > address > div > p > a.last,
@@ -4535,6 +4589,7 @@ body > main > article details > summary > p.last,
 body > main > footer > div > section:last-child > p > a.last,
 body.index > main > nav aside > menu > li > a.last,
 body.class > main > article > p > button.last,
+body.redirect > main > article > p > button.last,
 body.example > section nav a.last.external,
 body > nav > div > section:last-child > p > a.shuffle,
 body > main > header > address > div > p > a.shuffle,
@@ -4548,6 +4603,7 @@ body > main > article details > summary > p.shuffle,
 body > main > footer > div > section:last-child > p > a.shuffle,
 body.index > main > nav aside > menu > li > a.shuffle,
 body.class > main > article > p > button.shuffle,
+body.redirect > main > article > p > button.shuffle,
 body.example > section nav a.shuffle.external,
 body > nav > div > section:last-child > p > a.this,
 body > main > header > address > div > p > a.this,
@@ -4561,6 +4617,7 @@ body > main > article details > summary > p.this,
 body > main > footer > div > section:last-child > p > a.this,
 body.index > main > nav aside > menu > li > a.this,
 body.class > main > article > p > button.this,
+body.redirect > main > article > p > button.this,
 body.example > section nav a.this.external {
 	--icon--scale: 1;
 	--icon--shift: 0em;
@@ -4578,6 +4635,7 @@ body > main > article details > summary > p[href*=".pdf"],
 body > main > footer > div > section:last-child > p > a[href*=".pdf"],
 body.index > main > nav aside > menu > li > a[href*=".pdf"],
 body.class > main > article > p > button[href*=".pdf"],
+body.redirect > main > article > p > button[href*=".pdf"],
 body.example > section nav a[href*=".pdf"].external {
 	--icon: "⤓";
 	--icon--shift: 0.05em;
@@ -4595,6 +4653,7 @@ body > main > article details > summary > p[href="#"],
 body > main > footer > div > section:last-child > p > a[href="#"],
 body.index > main > nav aside > menu > li > a[href="#"],
 body.class > main > article > p > button[href="#"],
+body.redirect > main > article > p > button[href="#"],
 body.example > section nav a[href="#"].external {
 	--icon: "⤒";
 	--icon--width: 1.1ch;
@@ -4612,6 +4671,7 @@ body > main > article details > summary > p.copy,
 body > main > footer > div > section:last-child > p > a.copy,
 body.index > main > nav aside > menu > li > a.copy,
 body.class > main > article > p > button.copy,
+body.redirect > main > article > p > button.copy,
 body.example > section nav a.copy.external {
 	--icon: "⊕";
 	--icon--width: 2ch;
@@ -4631,6 +4691,7 @@ body > main > article details > summary > p.last,
 body > main > footer > div > section:last-child > p > a.last,
 body.index > main > nav aside > menu > li > a.last,
 body.class > main > article > p > button.last,
+body.redirect > main > article > p > button.last,
 body.example > section nav a.last.external {
 	--icon: "↺";
 }
@@ -4647,6 +4708,7 @@ body > main > article details > summary > p.shuffle,
 body > main > footer > div > section:last-child > p > a.shuffle,
 body.index > main > nav aside > menu > li > a.shuffle,
 body.class > main > article > p > button.shuffle,
+body.redirect > main > article > p > button.shuffle,
 body.example > section nav a.shuffle.external {
 	--icon: "⇅";
 	--icon--width: 2ch;
@@ -4664,6 +4726,7 @@ body > main > article details > summary > p.this,
 body > main > footer > div > section:last-child > p > a.this,
 body.index > main > nav aside > menu > li > a.this,
 body.class > main > article > p > button.this,
+body.redirect > main > article > p > button.this,
 body.example > section nav a.this.external {
 	--icon: "⤴";
 }
@@ -4680,6 +4743,7 @@ body > main > article details > summary > p.external:not(._),
 body > main > footer > div > section:last-child > p > a.external:not(._),
 body.index > main > nav aside > menu > li > a.external:not(._),
 body.class > main > article > p > button.external:not(._),
+body.redirect > main > article > p > button.external:not(._),
 body.example > section nav a.external:not(._) {
 	--icon: "↗";
 	--icon--scale: 1.1;
